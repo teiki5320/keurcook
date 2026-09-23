@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { toMini } from "@/components/nuage/mini";
-import { ShopRing } from "@/components/nuage/ShopRing";
-import { ProductListing } from "@/components/shop/ProductListing";
+import { BoutiqueBrowser } from "@/components/shop/BoutiqueBrowser";
 import { getCatalog } from "@/lib/data/catalog";
+import { getGammes } from "@/lib/data/gammes";
 
 export const metadata: Metadata = {
   title: "Boutique CBD",
@@ -12,18 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default async function ShopPage() {
-  const { products } = await getCatalog();
-  // Produits rangés gamme par gamme : en glissant, on passe d'une gamme à la suivante.
-  const ring = [...products]
-    .sort((a, b) => a.category.position - b.category.position || Number(b.featured) - Number(a.featured))
-    .map(toMini);
-
+  const [gammes, { products }] = await Promise.all([getGammes(), getCatalog()]);
   return (
-    <>
-      <ShopRing products={ring} />
-      <div id="produits" className="container-page relative scroll-mt-24 pt-2 pb-16">
-        <ProductListing action="/boutique" hideCategoryFilters defaultQuery={ring[0] ? { categorie: ring[0].categorySlug } : undefined} />
-      </div>
-    </>
+    <BoutiqueBrowser
+      gammes={gammes.map(({ key, name, description, image, products }) => ({ key, name, description, image, products }))}
+      allProducts={products}
+    />
   );
 }

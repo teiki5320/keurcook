@@ -5,17 +5,11 @@ import { NuageBackdrop } from "@/components/nuage/NuageBackdrop";
 import { NuageHeader, type NavItem } from "@/components/nuage/NuageHeader";
 import { PageTransitionProvider } from "@/components/nuage/PageTransition";
 import { CartProvider } from "@/lib/cart/cart-context";
-import { getCatalog } from "@/lib/data/catalog";
 
-export default async function ShopLayout({ children }: { children: React.ReactNode }) {
-  const { categories } = await getCatalog();
+export default function ShopLayout({ children }: { children: React.ReactNode }) {
   const nav: NavItem[] = [
     { href: "/", label: "Accueil" },
     { href: "/boutique", label: "Boutique" },
-    ...categories
-      .filter((c) => c.kind === "cbd")
-      .map((c) => ({ href: `/categorie/${c.slug}`, label: c.name, secondary: ["infusions", "cosmetiques"].includes(c.slug) })),
-    { href: "/accessoires", label: "Accessoires" },
   ];
 
   return (

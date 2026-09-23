@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Coverflow } from "@/components/nuage/Coverflow";
+import { withBasePath } from "@/lib/paths";
 import { TLink } from "@/components/nuage/PageTransition";
 import { siteConfig } from "@/lib/config";
 import { getGammes } from "@/lib/data/gammes";
@@ -20,33 +20,59 @@ const WORDS = ["Fleur", "Résine", "Huile", "Infusion"];
 
 export default async function HomePage() {
   const gammes = await getGammes();
-  const cards = gammes.map((g) => ({
-    key: g.key,
-    title: g.name,
-    eyebrow: `${g.products.length} ${g.key === "accessoires" ? "article" : "variété"}${g.products.length > 1 ? "s" : ""}`,
-    image: g.image,
-    href: g.href,
-    cloudMix: g.cloudMix,
-  }));
-
   const jsonLd = { "@context": "https://schema.org", "@type": "OnlineStore", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <section className="pt-24 pb-10 lg:pt-28">
-        <div className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,56px)]">
-          <h1 className="uppercase leading-[.9]" style={{ ...anton, fontSize: "clamp(44px,7vw,110px)" }}>
-            Une plante<span className="text-[#ff7a3d]">.</span>
-            <br />
-            <span className="text-[#ff7a3d]">Mille nuances.</span>
-          </h1>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#fbeee2]/70 sm:text-base">
-            Chanvre français, THC ≤ 0,3 %, certificat d&apos;analyse pour chaque produit. Choisissez une gamme.
-          </p>
+      {/* Vitrine : message + nuage 3D ; l'achat se fait dans la boutique. */}
+      <section className="flex min-h-[88dvh] items-center pt-24 pb-10">
+        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-6 px-[clamp(20px,4vw,56px)] lg:grid-cols-2">
+          <div>
+            <h1 className="uppercase leading-[.9]" style={{ ...anton, fontSize: "clamp(52px,8vw,120px)" }}>
+              Une plante<span className="text-[#ff7a3d]">.</span>
+              <br />
+              <span className="text-[#ff7a3d]">Mille nuances.</span>
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-[#fbeee2]/75">
+              Fleurs, résines, huiles, infusions et cosmétiques issus de chanvre cultivé en France. THC ≤ 0,3 %, certificat
+              d&apos;analyse pour chaque produit.
+            </p>
+            <TLink href="/boutique" label="La boutique" className="mt-8 inline-flex rounded-full bg-[#ff7a3d] px-8 py-4 text-base font-bold text-[#140a07] transition hover:bg-[#ffc46b]">
+              Entrer dans la boutique →
+            </TLink>
+          </div>
+          <div data-cloud="" data-mix="0" aria-hidden className="relative mx-auto aspect-square w-full max-w-[min(260px,32vh)] sm:max-w-[min(520px,60vh)]">
+            <div className="absolute inset-[4%] rounded-full border border-dashed border-[#ffc46b]/30 [animation:nuage-spin_60s_linear_infinite]" />
+          </div>
         </div>
-        <div className="mt-4">
-          <Coverflow items={cards} cloud hint="Glissez pour parcourir les gammes · touchez la carte pour l'ouvrir" />
+      </section>
+
+      {/* Aperçu des gammes : chaque vignette ouvre la boutique sur la bonne gamme. */}
+      <section aria-labelledby="gammes" className="px-[clamp(20px,4vw,56px)] pb-16">
+        <div className="mx-auto max-w-[1320px]">
+          <h2 id="gammes" className="mb-5 uppercase" style={{ ...anton, fontSize: "clamp(36px,4.5vw,64px)" }}>
+            Nos gammes<span className="text-[#ff7a3d]">.</span>
+          </h2>
+          <ul className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-6">
+            {gammes.map((g) => (
+              <li key={g.key}>
+                <TLink href={g.href} label={g.name} className="group relative block aspect-[3/4] overflow-hidden rounded-3xl border border-[#fbeee2]/10 bg-[#211209]">
+                  {g.image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={withBasePath(g.image)} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  )}
+                  <span className="absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-4 pt-14">
+                    <span className="block text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">
+                      {g.products.length} {g.key === "accessoires" ? "article" : "variété"}
+                      {g.products.length > 1 ? "s" : ""}
+                    </span>
+                    <span className="mt-1 block text-2xl leading-none uppercase" style={anton}>{g.name}</span>
+                  </span>
+                </TLink>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

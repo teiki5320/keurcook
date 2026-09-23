@@ -8,15 +8,6 @@ import type { CategoryKind, Product, ProductWithCategory } from "./types";
 
 export type SortKey = "featured" | "newest" | "price-asc" | "price-desc" | "cbd-desc" | "name";
 
-export const SORT_OPTIONS: Array<{ value: SortKey; label: string }> = [
-  { value: "featured", label: "Mis en avant" },
-  { value: "newest", label: "Nouveautés" },
-  { value: "price-asc", label: "Prix croissant" },
-  { value: "price-desc", label: "Prix décroissant" },
-  { value: "cbd-desc", label: "Taux de CBD" },
-  { value: "name", label: "Nom (A → Z)" },
-];
-
 export interface CatalogFilters {
   q?: string;
   category?: string;
@@ -67,42 +58,4 @@ export function filterProducts(products: ProductWithCategory[], f: CatalogFilter
     name: (a, b) => a.name.localeCompare(b.name, "fr"),
   };
   return result.sort(sorters[f.sort ?? "featured"]);
-}
-
-/** Lit les filtres depuis les paramètres d'URL. */
-export function parseFilters(sp: Record<string, string | string[] | undefined>): CatalogFilters {
-  const str = (k: string) => {
-    const v = sp[k];
-    const s = Array.isArray(v) ? v[0] : v;
-    return s && s.trim() ? s.trim() : undefined;
-  };
-  const n = (k: string) => {
-    const s = str(k);
-    const v = s === undefined ? NaN : Number(s.replace(",", "."));
-    return Number.isFinite(v) ? v : undefined;
-  };
-  const kind = str("type");
-  const sort = str("tri") as SortKey | undefined;
-  return {
-    q: str("q"),
-    category: str("categorie"),
-    kind: kind === "cbd" || kind === "accessoire" ? kind : undefined,
-    region: str("region"),
-    minPrice: n("prixMin"),
-    maxPrice: n("prixMax"),
-    minCbd: n("cbdMin"),
-    inStock: str("dispo") === "1",
-    sort: SORT_OPTIONS.some((o) => o.value === sort) ? sort : undefined,
-  };
-}
-
-export function listRegions(products: Product[]) {
-  return [...new Set(products.map((p) => p.originRegion).filter((r): r is string => Boolean(r)))].sort(
-    (a, b) => a.localeCompare(b, "fr"),
-  );
-}
-
-/** Lit les filtres depuis un URLSearchParams (navigateur). */
-export function filtersFromSearchParams(params: URLSearchParams): CatalogFilters {
-  return parseFilters(Object.fromEntries(params.entries()));
 }

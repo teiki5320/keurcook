@@ -5,10 +5,10 @@ import { siteConfig } from "@/lib/config";
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const { categories, products } = await getCatalog();
+  const { products } = await getCatalog();
   const base = siteConfig.url;
   const now = new Date();
-  const staticPages = ["", "/boutique", "/accessoires", "/avertissements", "/cgv", "/mentions-legales", "/confidentialite"].map((path) => ({
+  const staticPages = ["", "/boutique", "/avertissements", "/cgv", "/mentions-legales", "/confidentialite"].map((path) => ({
     url: `${base}${path}`,
     lastModified: now,
     changeFrequency: path === "" || path === "/boutique" ? ("daily" as const) : ("yearly" as const),
@@ -16,12 +16,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
   return [
     ...staticPages,
-    ...categories.map((c) => ({
-      url: `${base}/categorie/${c.slug}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    })),
     ...products.map((p) => ({
       url: `${base}/produit/${p.slug}`,
       lastModified: new Date(p.createdAt),

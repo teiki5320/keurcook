@@ -27,7 +27,7 @@ export async function getGammes(): Promise<Gamme[]> {
       return {
         key: c.slug,
         name: c.name,
-        href: `/categorie/${c.slug}`,
+        href: `/boutique?gamme=${c.slug}`,
         description: c.description,
         products: items,
         image: imageOf(items),
@@ -40,11 +40,16 @@ export async function getGammes(): Promise<Gamme[]> {
     {
       key: "accessoires",
       name: "Accessoires",
-      href: "/accessoires",
+      href: "/boutique?gamme=accessoires",
       description: "Grinders, vaporisateurs, feuilles et boîtes de conservation, sélectionnés pour leur qualité et leur durabilité.",
       products: accessories,
       image: imageOf(accessories),
       cloudMix: 3,
     },
   ].filter((g) => g.products.length > 0);
+}
+
+/** Clé de gamme d'un produit : sa catégorie CBD, ou « accessoires ». */
+export function gammeKeyOf(p: ProductWithCategory) {
+  return p.category.kind === "accessoire" ? "accessoires" : p.category.slug;
 }

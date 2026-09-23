@@ -28,6 +28,7 @@ export function Coverflow({
   hint,
   onActiveChange,
   onOpen,
+  activeIndex,
 }: {
   items: CoverflowItem[];
   cloud?: boolean;
@@ -36,18 +37,21 @@ export function Coverflow({
   onActiveChange?: (index: number) => void;
   /** Remplace l'ouverture du lien quand on touche la carte centrale. */
   onOpen?: (item: CoverflowItem) => void;
+  /** Carte centrale imposée de l'extérieur (mode contrôlé, ex. suivie dans l'URL). */
+  activeIndex?: number;
 }) {
   const n = items.length;
-  const [active, setActive] = useState(0);
-  useEffect(() => {
-    onActiveChange?.(active);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active]);
+  const [inner, setInner] = useState(0);
+  const active = activeIndex ?? inner;
+  const setActive = (i: number) => {
+    if (i === active) return;
+    if (activeIndex === undefined) setInner(i);
+    onActiveChange?.(i);
+  };
   const navigate = usePageTransition();
   const loop = n >= 3;
 
-  const go = (d: number) =>
-    setActive((a) => (loop ? (((a + d) % n) + n) % n : Math.min(n - 1, Math.max(0, a + d))));
+  const go = (d: number) => setActive(loop ? (((active + d) % n) + n) % n : Math.min(n - 1, Math.max(0, active + d)));
   const swipe = useSwipe(() => go(1), () => go(-1));
   const router = useRouter();
   const open = (it: CoverflowItem) => (onOpen ? onOpen(it) : navigate ? navigate(it.href, it.title) : router.push(it.href));

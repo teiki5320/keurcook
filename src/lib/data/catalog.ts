@@ -49,11 +49,6 @@ export const getCatalog = cache(async (): Promise<Catalog> => {
   };
 });
 
-export async function getCategoryBySlug(slug: string) {
-  const { categories } = await getCatalog();
-  return categories.find((c) => c.slug === slug) ?? null;
-}
-
 export async function getProductBySlug(slug: string) {
   const { products } = await getCatalog();
   return products.find((p) => p.slug === slug) ?? null;
