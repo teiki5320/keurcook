@@ -80,7 +80,13 @@ export function NuageCloud() {
     let raf = 0, explode = 0, mx = 0, my = 0;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    // Sans WebGL (vieux appareil, mode économie…), on se passe simplement du nuage.
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    } catch {
+      return;
+    }
     const PR = Math.min(2, window.devicePixelRatio);
     renderer.setPixelRatio(PR);
     renderer.setSize(window.innerWidth, window.innerHeight);

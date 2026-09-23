@@ -56,9 +56,6 @@ html:not([data-age="ok"]) body {
 @utility btn-secondary {
   @apply btn border border-forest-700/25 bg-white text-forest-800 hover:border-forest-700/60;
 }
-@utility btn-accent {
-  @apply btn bg-terracotta text-white hover:bg-terracotta-dark;
-}
 @utility input {
   @apply w-full rounded-xl border border-sage-300 bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-forest-600 focus:ring-2 focus:ring-forest-600/20 focus:outline-none;
 }

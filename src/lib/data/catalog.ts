@@ -59,11 +59,6 @@ export async function getProductBySlug(slug: string) {
   return products.find((p) => p.slug === slug) ?? null;
 }
 
-export async function getFeaturedProducts(limit = 8) {
-  const { products } = await getCatalog();
-  return products.filter((p) => p.featured).slice(0, limit);
-}
-
 export async function getRelatedProducts(product: ProductWithCategory, limit = 4) {
   const { products } = await getCatalog();
   return products

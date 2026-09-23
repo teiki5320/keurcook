@@ -98,8 +98,9 @@ export function HomeCarousel({ slides }: { slides: Slide[] }) {
                             type="button"
                             tabIndex={i === active ? 0 : -1}
                             onClick={() => addMini(p)}
-                            aria-label={`Ajouter ${p.name} au panier`}
-                            className="h-[34px] w-[34px] shrink-0 rounded-full bg-[#ff7a3d] text-lg font-bold text-[#140a07] active:scale-90"
+                            disabled={p.variant.stock <= 0}
+                            aria-label={p.variant.stock > 0 ? `Ajouter ${p.name} (${p.variant.label}) au panier` : `${p.name} : rupture de stock`}
+                            className="h-[34px] w-[34px] shrink-0 rounded-full bg-[#ff7a3d] text-lg font-bold text-[#140a07] active:scale-90 disabled:cursor-not-allowed disabled:opacity-30"
                           >
                             +
                           </button>

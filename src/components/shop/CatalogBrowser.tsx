@@ -49,7 +49,7 @@ function CatalogView({ products, categories, action, lockedCategory, showHeading
 
   return (
     <>
-      {showHeading && <h1 className="mb-8 font-display text-4xl text-forest-900">{heading}</h1>}
+      {showHeading && <h2 className="mb-8 font-display text-4xl text-forest-900">{heading}</h2>}
       <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
         <FiltersPanel
           key={params.toString()}

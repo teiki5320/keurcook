@@ -36,13 +36,16 @@ export function AgeGate({ siteName }: { siteName: string }) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="age-gate-title"
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-forest-900/85 p-4 backdrop-blur-md"
+      className="nuage-theme fixed inset-0 z-[100] flex items-center justify-center bg-[#0d0604]/90 p-4 backdrop-blur-md"
     >
-      <div className="w-full max-w-md rounded-3xl bg-cream p-7 text-center shadow-2xl sm:p-9">
+      <div className="w-full max-w-md rounded-3xl border border-[#ff7a3d]/40 bg-cream p-7 text-center shadow-2xl sm:p-9" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-forest-700 text-cream">
           <Leaf className="h-7 w-7" aria-hidden />
         </div>
-        <p className="font-display text-2xl text-forest-800">{siteName}</p>
+        <p className="font-display text-3xl text-forest-800">
+          {siteName}
+          <span className="text-[#ff7a3d]">.</span>
+        </p>
         {refused ? (
           <>
             <h2 id="age-gate-title" className="mt-4 text-lg font-semibold">Accès refusé</h2>

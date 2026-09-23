@@ -17,7 +17,9 @@ export interface MiniProduct {
 }
 
 export function toMini(p: ProductWithCategory): MiniProduct {
-  const v = [...p.variants].sort((a, b) => a.priceCents - b.priceCents)[0];
+  const byPrice = [...p.variants].sort((a, b) => a.priceCents - b.priceCents);
+  // Ajout rapide : format le moins cher encore disponible (sinon le moins cher, affiché en rupture).
+  const v = byPrice.find((x) => x.stock > 0) ?? byPrice[0];
   return {
     id: p.id,
     slug: p.slug,

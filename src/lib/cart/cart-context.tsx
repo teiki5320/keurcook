@@ -64,6 +64,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [lines, ready]);
 
   const add = useCallback<CartContextValue["add"]>((line, quantity) => {
+    if (line.maxStock <= 0 || quantity <= 0) return;
     setLines((prev) => {
       const existing = prev.find((l) => l.variantId === line.variantId);
       if (existing) {

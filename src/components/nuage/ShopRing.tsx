@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
 import { withBasePath } from "@/lib/paths";
 import type { MiniProduct } from "./mini";
 import { TLink } from "./PageTransition";
@@ -13,12 +14,32 @@ interface Props {
 
 const RADIUS = 400;
 
+/** Pastille active d'après l'URL (?categorie=… ou ?type=accessoire). */
+function chipFromParams(params: URLSearchParams) {
+  if (params.get("type") === "accessoire") return "accessoires";
+  return params.get("categorie") ?? "tout";
+}
+
 /** Boutique : cartes produits en anneau 3D autour du nuage. */
-export function ShopRing({ products, categories }: Props) {
+export function ShopRing(props: Props) {
+  return (
+    <Suspense fallback={<ShopRingView {...props} activeChip="tout" />}>
+      <ShopRingWithParams {...props} />
+    </Suspense>
+  );
+}
+
+function ShopRingWithParams(props: Props) {
+  const params = useSearchParams();
+  return <ShopRingView {...props} activeChip={chipFromParams(new URLSearchParams(params.toString()))} />;
+}
+
+function ShopRingView({ products, categories, activeChip }: Props & { activeChip: string }) {
   const n = products.length;
   const ang = 360 / Math.max(1, n);
   const [spin, setSpin] = useState(0);
-  const [cat, setCat] = useState("tout");
+  const router = useRouter();
+  const cat = activeChip;
   const addMini = useAddMini();
   const idx = ((spin % n) + n) % n;
   const cur = products[idx];
@@ -32,6 +53,8 @@ export function ShopRing({ products, categories }: Props) {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      if (e.altKey || e.ctrlKey || e.metaKey || t?.closest("input, select, textarea, [contenteditable='true']")) return;
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
     };
@@ -40,7 +63,10 @@ export function ShopRing({ products, categories }: Props) {
   }, []);
 
   if (!cur) return null;
-  const chips = [{ slug: "tout", name: "Tout" }, ...categories];
+  const chips = [{ slug: "tout", name: "Tout" }, ...categories, { slug: "accessoires", name: "Accessoires" }];
+  // Les pastilles filtrent la liste des produits sous l'anneau (via l'URL).
+  const chipHref = (slug: string) =>
+    slug === "tout" ? "/boutique" : slug === "accessoires" ? "/boutique?type=accessoire" : `/boutique?categorie=${slug}`;
 
   return (
     <section className="overflow-hidden pt-28 pb-12">
@@ -53,8 +79,9 @@ export function ShopRing({ products, categories }: Props) {
             <button
               key={c.slug}
               type="button"
+              aria-pressed={cat === c.slug}
               onClick={() => {
-                setCat(c.slug);
+                router.replace(chipHref(c.slug), { scroll: false });
                 if (c.slug !== "tout") {
                   const i = products.findIndex((p) => p.categorySlug === c.slug);
                   if (i >= 0) goTo(i);
@@ -113,8 +140,13 @@ export function ShopRing({ products, categories }: Props) {
             <div className="truncate text-base font-bold text-[#fbeee2]">{cur.name}</div>
             <div className="text-[13px] text-[#fbeee2]/60">{cur.region} · CBD {cur.cbd} · THC {cur.thc}</div>
           </TLink>
-          <button type="button" onClick={() => addMini(cur)} className="shrink-0 rounded-full bg-[#ff7a3d] px-[18px] py-3 text-sm font-bold whitespace-nowrap text-[#140a07] transition hover:bg-[#ffc46b]">
-            {priceLabel(cur)} · Ajouter
+          <button
+            type="button"
+            onClick={() => addMini(cur)}
+            disabled={cur.variant.stock <= 0}
+            className="shrink-0 rounded-full bg-[#ff7a3d] px-[18px] py-3 text-sm font-bold whitespace-nowrap text-[#140a07] transition hover:bg-[#ffc46b] disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            {cur.variant.stock > 0 ? `${priceLabel(cur)} · Ajouter` : "Rupture de stock"}
           </button>
         </div>
         <button type="button" onClick={() => step(1)} aria-label="Produit suivant" className="h-[54px] w-[54px] rounded-full border border-[#fbeee2]/20 text-xl transition hover:border-[#ff7a3d] hover:text-[#ff7a3d]">→</button>

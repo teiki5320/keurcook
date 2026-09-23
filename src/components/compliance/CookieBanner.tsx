@@ -77,9 +77,9 @@ export function CookieBanner() {
       role="dialog"
       aria-live="polite"
       aria-label="Gestion des cookies"
-      className="fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-4"
+      className="nuage-theme fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-4"
     >
-      <div className="mx-auto max-w-3xl rounded-2xl border border-sage-200 bg-white p-5 shadow-xl">
+      <div className="mx-auto max-w-3xl rounded-2xl border border-sage-300 bg-white p-5 shadow-xl" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         <p className="font-semibold text-forest-800">Votre vie privée</p>
         <p className="mt-1.5 text-sm text-muted">
           Nous utilisons des cookies strictement nécessaires au fonctionnement du site (panier, vérification d&apos;âge,
@@ -90,19 +90,19 @@ export function CookieBanner() {
         {custom && (
           <div className="mt-4 space-y-3 rounded-xl bg-sage-50 p-4 text-sm">
             <label className="flex items-start gap-3">
-              <input type="checkbox" checked disabled className="mt-1" />
+              <input type="checkbox" checked disabled className="mt-1 accent-[#ff7a3d]" />
               <span>
                 <strong>Nécessaires</strong> — toujours actifs : panier, vérification d&apos;âge, choix cookies, connexion admin.
               </span>
             </label>
             <label className="flex items-start gap-3">
-              <input type="checkbox" checked={analytics} onChange={(e) => setAnalytics(e.target.checked)} className="mt-1" />
+              <input type="checkbox" checked={analytics} onChange={(e) => setAnalytics(e.target.checked)} className="mt-1 accent-[#ff7a3d]" />
               <span>
                 <strong>Mesure d&apos;audience</strong> — statistiques de fréquentation anonymisées.
               </span>
             </label>
             <label className="flex items-start gap-3">
-              <input type="checkbox" checked={marketing} onChange={(e) => setMarketing(e.target.checked)} className="mt-1" />
+              <input type="checkbox" checked={marketing} onChange={(e) => setMarketing(e.target.checked)} className="mt-1 accent-[#ff7a3d]" />
               <span>
                 <strong>Marketing</strong> — personnalisation des offres.
               </span>

@@ -1,12 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Anton, Fraunces, Inter, Manrope } from "next/font/google";
 import { AgeGate, ageGateScript } from "@/components/compliance/AgeGate";
 import { CookieBanner } from "@/components/compliance/CookieBanner";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
+import "./nuage.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], display: "swap" });
+// Polices du thème « Braise » (boutique, vérification d'âge, bannière cookies).
+const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton", display: "swap" });
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -25,7 +29,6 @@ export const metadata: Metadata = {
     url: siteConfig.url,
   },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: "/" },
   formatDetection: { telephone: false },
 };
 
@@ -37,7 +40,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className={`${inter.variable} ${fraunces.variable} antialiased`} suppressHydrationWarning>
+    <html lang="fr" className={`${inter.variable} ${fraunces.variable} ${anton.variable} ${manrope.variable} antialiased`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: ageGateScript }} />
       </head>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HomeCarousel, type Slide } from "@/components/nuage/HomeCarousel";
 import { toMini } from "@/components/nuage/mini";
 import { TLink } from "@/components/nuage/PageTransition";
@@ -5,6 +6,15 @@ import { siteConfig } from "@/lib/config";
 import { getCatalog } from "@/lib/data/catalog";
 
 export const revalidate = 300;
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
+
+const PROMISES = [
+  { title: "Origine France", text: "Région de culture et producteur indiqués sur chaque fiche." },
+  { title: "Analysé en laboratoire", text: "Certificat d'analyse PDF téléchargeable pour chaque produit CBD." },
+  { title: "THC ≤ 0,3 %", text: "Conforme à la réglementation française (arrêté du 30 décembre 2021)." },
+  { title: "Interdit aux mineurs", text: "Vente réservée aux personnes de 18 ans et plus." },
+];
 
 const anton = { fontFamily: "var(--font-anton), sans-serif", fontWeight: 400 } as const;
 const WORDS = ["Fleur", "Résine", "Huile", "Infusion"];
@@ -44,6 +54,28 @@ export default async function HomePage() {
           )}
         </div>
       </div>
+
+      <section aria-labelledby="engagements" className="bg-[#140a07] px-[clamp(20px,4vw,56px)] pt-20">
+        <div className="mx-auto max-w-[1320px]">
+          <h2 id="engagements" className="sr-only">Nos engagements</h2>
+          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {PROMISES.map((p) => (
+              <li key={p.title} className="rounded-3xl border border-[#fbeee2]/10 bg-[#211209] p-6">
+                <p className="text-2xl uppercase text-[#ffc46b]" style={anton}>{p.title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[#fbeee2]/70">{p.text}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 max-w-3xl text-xs leading-relaxed text-[#fbeee2]/55">
+            Nos produits ne sont pas des médicaments. Déconseillés aux femmes enceintes ou allaitantes. Le THC, même à
+            faible dose, peut être détecté lors d&apos;un dépistage salivaire : ne prenez pas le volant après
+            consommation.{" "}
+            <TLink href="/avertissements" label="Conformité" className="underline underline-offset-2 hover:text-[#ff7a3d]">
+              Notre démarche de conformité
+            </TLink>
+          </p>
+        </div>
+      </section>
 
       <section className="bg-[#140a07] px-[clamp(20px,4vw,56px)] py-24">
         <div className="mx-auto flex max-w-[1320px] flex-wrap items-end justify-between gap-8">

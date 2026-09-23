@@ -17,6 +17,15 @@ const CLIP: Record<Phase, string> = {
 
 const explode = (v: number) => window.dispatchEvent(new CustomEvent("nuage:explode", { detail: v }));
 
+/** Durées (ms) : fermeture de l'iris avant navigation, puis réouverture. */
+const COVER_MS = 450;
+const REVEAL_MS = 550;
+
+const samePath = (a: string, b: string) => {
+  const norm = (p: string) => (p.split(/[?#]/)[0].replace(/\/+$/, "") || "/");
+  return norm(a) === norm(b);
+};
+
 /** Transition « iris » orange entre les pages, avec dispersion du nuage. */
 export function PageTransitionProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -32,21 +41,25 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
     window.scrollTo(0, 0);
     explode(0);
     setPhase("out");
-    timers.current.push(window.setTimeout(() => setPhase("idle"), 900));
+    timers.current.push(window.setTimeout(() => setPhase("idle"), REVEAL_MS));
   }, []);
 
   const navigate = useCallback<Navigate>(
     (href, lbl) => {
       if (pending.current) return;
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { router.push(href); return; }
+      // Même page (ex. changement de filtre) ou mouvement réduit : navigation directe, sans rideau.
+      if (samePath(href, pathname) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        router.push(href);
+        return;
+      }
       pending.current = true;
       setLabel(lbl ?? "");
       setPhase("in");
       explode(1);
-      timers.current.push(window.setTimeout(() => router.push(href), 850));
+      timers.current.push(window.setTimeout(() => router.push(href), COVER_MS));
       timers.current.push(window.setTimeout(finish, 2600)); // filet de sécurité (même page, requête lente)
     },
-    [router, finish],
+    [router, finish, pathname],
   );
 
   useEffect(() => {
@@ -61,7 +74,7 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 z-[90] flex items-center justify-center bg-[#ff7a3d]"
-        style={{ clipPath: CLIP[phase], transition: phase === "idle" ? "none" : "clip-path .8s cubic-bezier(.76,0,.24,1)" }}
+        style={{ clipPath: CLIP[phase], transition: phase === "idle" ? "none" : "clip-path .45s cubic-bezier(.76,0,.24,1)" }}
       >
         <span
           className="uppercase text-[#140a07]"
@@ -69,7 +82,7 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
             fontFamily: "var(--font-anton), sans-serif",
             fontSize: "clamp(64px,11vw,190px)",
             transform: `scale(${phase === "in" ? 1 : phase === "out" ? 1.25 : 0.8})`,
-            transition: "transform 1.1s cubic-bezier(.16,1,.3,1)",
+            transition: "transform .7s cubic-bezier(.16,1,.3,1)",
           }}
         >
           {label}
