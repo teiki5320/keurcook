@@ -44,3 +44,4 @@ next-env.d.ts
 
 # export statique GitHub Pages
 /.static-export-stash/
+.nuage-backup/

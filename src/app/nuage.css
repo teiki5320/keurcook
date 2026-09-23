@@ -1,0 +1,8 @@
+/* Thème « Nuage · Braise » — animations utilisées par src/components/nuage */
+@keyframes nuage-spin { to { transform: rotate(360deg); } }
+@keyframes nuage-marq { to { transform: translateX(-50%); } }
+@keyframes nuage-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="nuage-"], [style*="nuage-"] { animation: none !important; }
+}
