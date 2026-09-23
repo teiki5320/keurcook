@@ -1,0 +1,44 @@
+/**
+ * Configuration générale de la boutique.
+ * Les valeurs sensibles ou propres à l'entreprise se règlent via les
+ * variables d'environnement (voir .env.example).
+ */
+export const siteConfig = {
+  name: process.env.NEXT_PUBLIC_SITE_NAME || "Alohash",
+  tagline: "CBD français, cultivé avec soin",
+  description:
+    "Boutique en ligne de CBD français : fleurs, résines, huiles, infusions et cosmétiques issus de producteurs français, avec certificat d'analyse pour chaque produit. THC ≤ 0,3 %. Interdit aux mineurs.",
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
+  locale: "fr_FR",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@example.fr",
+};
+
+/** Informations légales de l'éditeur, affichées dans les mentions légales / CGV. */
+export const legalConfig = {
+  companyName: process.env.NEXT_PUBLIC_LEGAL_COMPANY_NAME || "[Raison sociale]",
+  legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "[Forme juridique — ex. SAS au capital de X €]",
+  address: process.env.NEXT_PUBLIC_LEGAL_ADDRESS || "[Adresse du siège social]",
+  siret: process.env.NEXT_PUBLIC_LEGAL_SIRET || "[Numéro SIRET]",
+  rcs: process.env.NEXT_PUBLIC_LEGAL_RCS || "[RCS Ville + numéro]",
+  vat: process.env.NEXT_PUBLIC_LEGAL_VAT || "[N° TVA intracommunautaire]",
+  director: process.env.NEXT_PUBLIC_LEGAL_DIRECTOR || "[Nom du directeur de la publication]",
+  phone: process.env.NEXT_PUBLIC_LEGAL_PHONE || "[Téléphone]",
+  mediator: process.env.NEXT_PUBLIC_LEGAL_MEDIATOR || "[Nom et coordonnées du médiateur de la consommation]",
+  host:
+    process.env.NEXT_PUBLIC_LEGAL_HOST ||
+    "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com",
+};
+
+/** Règles de livraison (France métropolitaine). */
+export const shippingConfig = {
+  flatRateCents: Number(process.env.SHIPPING_FLAT_RATE_CENTS ?? 490),
+  freeThresholdCents: Number(process.env.SHIPPING_FREE_THRESHOLD_CENTS ?? 5000),
+  countries: [{ code: "FR", label: "France métropolitaine" }],
+};
+
+export const LEGAL_THC_MAX = 0.3;
+
+export function computeShipping(subtotalCents: number): number {
+  if (subtotalCents <= 0) return 0;
+  return subtotalCents >= shippingConfig.freeThresholdCents ? 0 : shippingConfig.flatRateCents;
+}

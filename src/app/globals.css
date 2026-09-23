@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f6f3ea;
+  --color-sand: #e9e2cf;
+  --color-ink: #1f2a22;
+  --color-muted: #5d6858;
+  --color-sage-50: #f3f5ee;
+  --color-sage-100: #e7ebdd;
+  --color-sage-200: #d3dbc4;
+  --color-sage-300: #b5c29f;
+  --color-forest-500: #4f7358;
+  --color-forest-600: #3d5e46;
+  --color-forest-700: #2f4a37;
+  --color-forest-800: #243a2b;
+  --color-forest-900: #1b2c20;
+  --color-terracotta: #b8613b;
+  --color-terracotta-dark: #9a4d2c;
+  --color-amber-soft: #f4e3c3;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --radius-card: 1.25rem;
+}
+
+html {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* --- Vérification d'âge : le script en <head> pose data-age="ok" si déjà validée. */
+html[data-age="ok"] #age-gate {
+  display: none;
+}
+html:not([data-age="ok"]) body {
+  overflow: hidden;
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest-600 disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-forest-700 text-cream hover:bg-forest-800;
+}
+@utility btn-secondary {
+  @apply btn border border-forest-700/25 bg-white text-forest-800 hover:border-forest-700/60;
+}
+@utility btn-accent {
+  @apply btn bg-terracotta text-white hover:bg-terracotta-dark;
+}
+@utility input {
+  @apply w-full rounded-xl border border-sage-300 bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-forest-600 focus:ring-2 focus:ring-forest-600/20 focus:outline-none;
+}
+@utility label {
+  @apply mb-1.5 block text-sm font-medium text-ink;
+}
+@utility card {
+  @apply rounded-[var(--radius-card)] border border-sage-200 bg-white;
+}
+@utility prose-legal {
+  @apply max-w-3xl text-[15px] leading-relaxed text-ink/90;
+  & h2 {
+    @apply mt-10 mb-3 font-display text-2xl text-forest-800;
+  }
+  & h3 {
+    @apply mt-6 mb-2 font-semibold text-forest-800;
+  }
+  & p,
+  & ul {
+    @apply mb-4;
+  }
+  & ul {
+    @apply list-disc space-y-1 pl-6;
+  }
+  & a {
+    @apply text-forest-700 underline underline-offset-2;
+  }
+}

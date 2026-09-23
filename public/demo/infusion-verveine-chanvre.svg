@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Infusion Verveine & Chanvre">
+  <defs><radialGradient id="g" cx="35%" cy="30%" r="85%"><stop offset="0" stop-color="#e9efdc"/><stop offset="1" stop-color="#c9d8ad"/></radialGradient></defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <g fill="#56733f" opacity=".07"><ellipse cx="330" cy="70" rx="14" ry="44" transform="rotate(25 330 70)"/><ellipse cx="60" cy="340" rx="12" ry="38" transform="rotate(-30 60 340)"/></g>
+  <ellipse cx="200" cy="335" rx="110" ry="14" fill="#56733f" opacity=".12"/>
+  <path d="M120 190 h150 v40 a75 75 0 0 1 -150 0z" fill="#56733f"/><path d="M270 205 a28 28 0 0 1 0 56" stroke="#56733f" stroke-width="12" fill="none"/>
+      <ellipse cx="195" cy="320" rx="100" ry="12" fill="#56733f" opacity=".35"/>
+      <g stroke="#56733f" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"><path d="M165 170 c-10 -20 10 -30 0 -50"/><path d="M200 170 c-10 -20 10 -30 0 -50"/><path d="M235 170 c-10 -20 10 -30 0 -50"/></g>
+  <text x="200" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" letter-spacing="2" fill="#56733f" opacity=".55">VISUEL DE DÉMONSTRATION</text>
+</svg>

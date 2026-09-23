@@ -1,0 +1,7 @@
+# Déploiement Netlify (le runtime Next.js est détecté automatiquement)
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
