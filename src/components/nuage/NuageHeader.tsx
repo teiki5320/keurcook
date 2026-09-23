@@ -47,7 +47,7 @@ function SearchBox({ onDone, autoFocus }: { onDone?: () => void; autoFocus?: boo
   );
 }
 
-export function NuageHeader({ notice, nav }: { notice?: string | null; nav: NavItem[] }) {
+export function NuageHeader({ nav }: { nav: NavItem[] }) {
   const pathname = normalizePath(usePathname());
   const { count, ready } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -75,13 +75,9 @@ export function NuageHeader({ notice, nav }: { notice?: string | null; nav: NavI
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href.split("?")[0]) && !href.includes("?"));
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div className="bg-[#ffc46b] px-4 py-1 text-center text-[11px] leading-snug font-medium text-[#140a07] sm:text-xs">
-        <strong>Interdit aux mineurs</strong> · THC ≤ 0,3 % · Certificat d&apos;analyse pour chaque produit
-        {notice && <span className="block sm:inline"> — {notice}</span>}
-      </div>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#fbeee2]/8 bg-[#140a07]/85 backdrop-blur-md">
 
-      <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-3 bg-gradient-to-b from-[#140a07]/85 to-transparent px-[clamp(16px,4vw,56px)] py-4">
+      <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-3 px-[clamp(16px,4vw,56px)] py-3">
         <TLink href="/" label="Alohash." className="shrink-0 text-[26px] tracking-[.02em] text-[#fbeee2]" style={anton}>
           ALOHASH<span className="text-[#ff7a3d]">.</span>
         </TLink>

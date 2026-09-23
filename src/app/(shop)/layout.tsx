@@ -6,16 +6,8 @@ import { NuageHeader, type NavItem } from "@/components/nuage/NuageHeader";
 import { PageTransitionProvider } from "@/components/nuage/PageTransition";
 import { CartProvider } from "@/lib/cart/cart-context";
 import { getCatalog } from "@/lib/data/catalog";
-import { isStaticExport } from "@/lib/paths";
-import { isSupabaseConfigured } from "@/lib/supabase/env";
 
 export default async function ShopLayout({ children }: { children: React.ReactNode }) {
-  const notice = isStaticExport
-    ? "Démo : produits fictifs, commande désactivée."
-    : !isSupabaseConfigured
-      ? "Mode démo : Supabase non configuré (données en mémoire)."
-      : null;
-
   const { categories } = await getCatalog();
   const nav: NavItem[] = [
     { href: "/", label: "Accueil" },
@@ -42,7 +34,7 @@ export default async function ShopLayout({ children }: { children: React.ReactNo
             }}
           />
           <NuageBackdrop />
-          <NuageHeader notice={notice} nav={nav} />
+          <NuageHeader nav={nav} />
           <main id="contenu" className="relative z-[2] flex-1">
             <ContentShell>{children}</ContentShell>
           </main>

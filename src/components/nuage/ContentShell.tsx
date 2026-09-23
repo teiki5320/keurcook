@@ -9,5 +9,5 @@ import { isImmersive } from "./immersive";
  */
 export function ContentShell({ children }: { children: React.ReactNode }) {
   if (isImmersive(usePathname())) return <>{children}</>;
-  return <div className="relative pt-32 pb-10">{children}</div>;
+  return <div className="relative pt-24 pb-10">{children}</div>;
 }

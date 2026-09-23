@@ -39,7 +39,7 @@ export function HomeCarousel({ slides }: { slides: Slide[] }) {
   const cur = slides[active];
 
   return (
-    <section className="flex items-center pt-28 pb-10 lg:min-h-dvh lg:pt-24">
+    <section className="flex items-center pt-20 pb-10 lg:min-h-dvh lg:pt-24">
       <div className="mx-auto grid w-full max-w-[1320px] items-center gap-2 sm:gap-[clamp(20px,3vw,48px)] px-[clamp(20px,4vw,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
         {/* Mobile : nuage réduit pour garder les cartes visibles sans défiler. */}
         <div data-cloud="" data-mix={cur.mix} className="relative aspect-square w-full max-w-[min(230px,30vh)] justify-self-center sm:max-w-[min(600px,70vh)]">

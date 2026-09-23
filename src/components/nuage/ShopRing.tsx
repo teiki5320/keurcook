@@ -4,8 +4,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { withBasePath } from "@/lib/paths";
 import type { MiniProduct } from "./mini";
-import { TLink } from "./PageTransition";
-import { anton, priceLabel, useAddMini, useSwipe } from "./shared";
+import { usePageTransition } from "./PageTransition";
+import { anton, useSwipe } from "./shared";
 
 interface Props {
   products: MiniProduct[];
@@ -40,7 +40,7 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
   const [spin, setSpin] = useState(0);
   const router = useRouter();
   const cat = activeChip;
-  const addMini = useAddMini();
+  const navigate = usePageTransition();
   const swipe = useSwipe(() => setSpin((s) => s + 1), () => setSpin((s) => s - 1));
   const idx = ((spin % n) + n) % n;
   const cur = products[idx];
@@ -70,7 +70,7 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
     slug === "tout" ? "/boutique" : slug === "accessoires" ? "/boutique?type=accessoire" : `/boutique?categorie=${slug}`;
 
   return (
-    <section className="overflow-hidden pt-36 pb-12 sm:pt-32">
+    <section className="overflow-hidden pt-24 pb-12 sm:pt-28">
       <div className="mx-auto flex max-w-[1320px] flex-wrap items-end justify-between gap-5 px-[clamp(20px,4vw,56px)]">
         <h1 className="uppercase leading-[.88]" style={{ ...anton, fontSize: "clamp(60px,8vw,130px)" }}>
           La boutique<span className="text-[#ff7a3d]">.</span>
@@ -114,7 +114,13 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
             return (
               <div
                 key={p.id}
-                onClick={() => !active && goTo(i)}
+                onClick={() => (active ? navigate?.(`/produit/${p.slug}`, p.name.split(" ")[0]) : goTo(i))}
+                role={active ? "link" : undefined}
+                aria-label={active ? `Voir ${p.name}` : undefined}
+                tabIndex={active ? 0 : -1}
+                onKeyDown={(e) => {
+                  if (active && e.key === "Enter") navigate?.(`/produit/${p.slug}`, p.name.split(" ")[0]);
+                }}
                 className="absolute cursor-pointer [backface-visibility:hidden]"
                 style={{
                   left: -120, top: -170, width: 240, height: 340,
@@ -139,24 +145,7 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
         </div>
       </div>
 
-      <div className="mx-auto mt-2.5 flex max-w-[640px] items-center gap-2.5 px-[clamp(12px,4vw,56px)] sm:gap-[18px]">
-        <button type="button" onClick={() => step(-1)} aria-label="Produit précédent" className="h-12 w-12 shrink-0 rounded-full border border-[#fbeee2]/20 text-xl transition hover:border-[#ff7a3d] hover:text-[#ff7a3d] sm:h-[54px] sm:w-[54px]">←</button>
-        <div className="flex min-w-0 flex-1 flex-col items-center gap-2.5 rounded-[26px] border border-[#fbeee2]/12 bg-[#fbeee2]/6 px-4 py-3 text-center backdrop-blur-md sm:flex-row sm:justify-between sm:gap-4 sm:rounded-full sm:py-3 sm:pr-3 sm:pl-6 sm:text-left">
-          <TLink href={`/produit/${cur.slug}`} label={cur.name.split(" ")[0]} className="min-w-0 max-w-full">
-            <div className="truncate text-base font-bold text-[#fbeee2]">{cur.name}</div>
-            <div className="truncate text-[13px] text-[#fbeee2]/60">{cur.region} · CBD {cur.cbd} · THC {cur.thc}</div>
-          </TLink>
-          <button
-            type="button"
-            onClick={() => addMini(cur)}
-            disabled={cur.variant.stock <= 0}
-            className="w-full shrink-0 rounded-full bg-[#ff7a3d] px-[18px] py-3 text-sm font-bold whitespace-nowrap text-[#140a07] transition hover:bg-[#ffc46b] disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
-          >
-            {cur.variant.stock > 0 ? `${priceLabel(cur)} · Ajouter` : "Rupture de stock"}
-          </button>
-        </div>
-        <button type="button" onClick={() => step(1)} aria-label="Produit suivant" className="h-12 w-12 shrink-0 rounded-full border border-[#fbeee2]/20 text-xl transition hover:border-[#ff7a3d] hover:text-[#ff7a3d] sm:h-[54px] sm:w-[54px]">→</button>
-      </div>
+      <p className="mt-3 text-center text-xs text-[#fbeee2]/45">Glissez pour parcourir · touchez la carte pour la découvrir</p>
     </section>
   );
 }
