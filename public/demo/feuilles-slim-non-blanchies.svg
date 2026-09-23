@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Feuilles slim non blanchies + filtres">
-  <defs><radialGradient id="g" cx="35%" cy="30%" r="85%"><stop offset="0" stop-color="#f3efe4"/><stop offset="1" stop-color="#ddd3bb"/></radialGradient></defs>
-  <rect width="400" height="400" fill="url(#g)"/>
-  <g fill="#7d6d4d" opacity=".07"><ellipse cx="330" cy="70" rx="14" ry="44" transform="rotate(25 330 70)"/><ellipse cx="60" cy="340" rx="12" ry="38" transform="rotate(-30 60 340)"/></g>
-  <ellipse cx="200" cy="335" rx="110" ry="14" fill="#7d6d4d" opacity=".12"/>
-  <g transform="rotate(-8 200 200)"><rect x="110" y="150" width="190" height="120" rx="10" fill="#7d6d4d"/><rect x="118" y="140" width="190" height="120" rx="10" fill="#fbf8f0" stroke="#7d6d4d" stroke-width="3"/>
-      <text x="213" y="210" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#7d6d4d">SLIM</text></g>
-  <text x="200" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" letter-spacing="2" fill="#7d6d4d" opacity=".55">VISUEL DE DÉMONSTRATION</text>
-</svg>

@@ -291,27 +291,13 @@ const seeds: ProductSeed[] = [
   },
 ];
 
-/** Produits disposant d'une photo réaliste (public/products/<slug>.webp). */
-const PHOTOS = new Set([
-  "fleur-amnesia-du-luberon",
-  "fleur-gorilla-des-cevennes",
-  "fleur-harlequin-d-alsace",
-  "resine-pollen-de-bretagne",
-  "resine-ice-o-lator-des-alpes",
-  "huile-cbd-10-spectre-complet",
-  "huile-cbd-20-spectre-large",
-  "infusion-verveine-chanvre",
-  "baume-corps-chanvre-lavande",
-  "grinder-aluminium-4-parties",
-]);
-
 export const demoProducts: Product[] = seeds.map((seed, index) => {
   const productId = id("2", index + 1);
   const category = demoCategories.find((c) => c.id === seed.categoryId)!;
   return {
     ...seed,
     id: productId,
-    images: [PHOTOS.has(seed.slug) ? `/products/${seed.slug}.webp` : `/demo/${seed.slug}.svg`],
+    images: [`/products/${seed.slug}.webp`],
     coaUrl: category.kind === "cbd" ? `/coa/${seed.slug}.pdf` : null,
     isActive: true,
     createdAt: new Date(Date.UTC(2026, 0, 1 + index)).toISOString(),

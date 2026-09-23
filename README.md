@@ -164,7 +164,7 @@ Enfin, mettez `NEXT_PUBLIC_SITE_URL` à jour avec le domaine définitif et, dans
 | `npm run build:pages` | Build de la vitrine statique GitHub Pages (dossier `out/`, sous-dossier `/alohash/`) |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Vérification TypeScript |
-| `npm run demo:assets` | Régénère les visuels SVG et certificats PDF de démo (`public/demo`, `public/coa`) |
+| `npm run demo:assets` | Régénère les certificats PDF de démo (`public/coa`) |
 | `npm run db:seed-sql` | Régénère `supabase/seed.sql` depuis `src/lib/demo/catalog.ts` |
 
 ## Structure
@@ -190,4 +190,4 @@ supabase/
 - Les prix et les stocks sont **toujours recalculés en base** (`place_order`, transaction avec verrouillage des lignes) : le navigateur n'envoie que des identifiants de variantes et des quantités.
 - RLS activée sur toutes les tables : catalogue public en lecture, commandes invisibles hors admin ; écriture réservée à `is_admin()`.
 - La page de confirmation n'est accessible qu'avec le numéro de commande **et** un jeton aléatoire.
-- Les producteurs, certificats et visuels de démo sont **fictifs** : remplacez-les avant la mise en production.
+- Les producteurs et certificats de démo sont **fictifs**, et les photos produit (`public/products/*.webp`) sont **générées par IA** : remplacez-les par les vrais produits et leurs photos avant la mise en production.

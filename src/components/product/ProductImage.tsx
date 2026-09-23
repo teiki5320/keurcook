@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { withBasePath } from "@/lib/paths";
 
-/** Image produit : les SVG de démonstration ne passent pas par l'optimiseur. */
+/** Image produit (les éventuels SVG ne passent pas par l'optimiseur d'images). */
 export function ProductImage({
   src,
   alt,
