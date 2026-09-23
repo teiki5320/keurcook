@@ -10,20 +10,25 @@ interface Props {
   filters: CatalogFilters;
   categories: Category[];
   regions: string[];
-  /** Masque le choix de catégorie (pages catégorie). */
+  /** Masque le choix de catégorie (pages catégorie, boutique à carrousel). */
   lockedCategory?: boolean;
+  /** Paramètres conservés tels quels à l'envoi du formulaire (ex. gamme choisie). */
+  hiddenParams?: Record<string, string>;
 }
 
 /**
  * Filtres en simple formulaire GET : fonctionnent sans JavaScript et
  * produisent des URL partageables / indexables.
  */
-export function Filters({ action, filters, categories, regions, lockedCategory }: Props) {
+export function Filters({ action, filters, categories, regions, lockedCategory, hiddenParams }: Props) {
   const showCbdFilters = !filters.kind || filters.kind === "cbd";
   return (
     <form action={withBasePath(action)} method="get" className="space-y-5 text-sm">
       {filters.q && <input type="hidden" name="q" value={filters.q} />}
       {filters.sort && <input type="hidden" name="tri" value={filters.sort} />}
+      {Object.entries(hiddenParams ?? {}).map(([k, v]) => (
+        <input key={k} type="hidden" name={k} value={v} />
+      ))}
 
       {!lockedCategory && (
         <>
@@ -95,7 +100,10 @@ export function Filters({ action, filters, categories, regions, lockedCategory }
         <button type="submit" className="btn-primary flex-1">
           Filtrer
         </button>
-        <Link href={action} className="btn-secondary">
+        <Link
+          href={hiddenParams && Object.keys(hiddenParams).length ? `${action}?${new URLSearchParams(hiddenParams).toString()}` : action}
+          className="btn-secondary"
+        >
           Réinitialiser
         </Link>
       </div>

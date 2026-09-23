@@ -11,11 +11,15 @@ import { CatalogBrowser } from "./CatalogBrowser";
 export async function ProductListing({
   action,
   lockedCategory,
-  showHeading,
+  hideCategoryFilters,
+  defaultQuery,
 }: {
   action: string;
   lockedCategory?: { slug: string; kind: CategoryKind };
-  showHeading?: boolean;
+  /** Masque « Univers » et « Catégorie » (la boutique filtre via son carrousel). */
+  hideCategoryFilters?: boolean;
+  /** Filtre appliqué quand l'URL n'en précise aucun (ni catégorie, ni type, ni recherche). */
+  defaultQuery?: Record<string, string>;
 }) {
   const { products, categories } = await getCatalog();
   return (
@@ -24,7 +28,8 @@ export async function ProductListing({
       categories={categories}
       action={action}
       lockedCategory={lockedCategory}
-      showHeading={showHeading}
+      hideCategoryFilters={hideCategoryFilters}
+      defaultQuery={defaultQuery}
     />
   );
 }

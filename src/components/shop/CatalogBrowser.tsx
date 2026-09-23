@@ -13,8 +13,12 @@ interface Props {
   categories: Category[];
   action: string;
   lockedCategory?: { slug: string; kind: CategoryKind };
-  showHeading?: boolean;
+  hideCategoryFilters?: boolean;
+  defaultQuery?: Record<string, string>;
 }
+
+const pick = (p: URLSearchParams, keys: string[]) =>
+  Object.fromEntries(keys.filter((k) => p.get(k)).map((k) => [k, p.get(k)!]));
 
 export function CatalogBrowser(props: Props) {
   // Avant lecture des paramètres d'URL (rendu statique), on affiche tout le catalogue.
@@ -30,7 +34,18 @@ function CatalogWithParams(props: Props) {
   return <CatalogView {...props} params={new URLSearchParams(params.toString())} />;
 }
 
-function CatalogView({ products, categories, action, lockedCategory, showHeading, params }: Props & { params: URLSearchParams }) {
+/** Applique le filtre par défaut si l'URL ne désigne ni catégorie, ni type, ni recherche. */
+function withDefaults(params: URLSearchParams, defaults?: Record<string, string>) {
+  if (!defaults || ["categorie", "type", "q"].some((k) => params.has(k))) return params;
+  const merged = new URLSearchParams(params);
+  Object.entries(defaults).forEach(([k, v]) => merged.set(k, v));
+  return merged;
+}
+
+function CatalogView({ products, categories, action, lockedCategory, hideCategoryFilters, defaultQuery, params: urlParams }: Props & { params: URLSearchParams }) {
+  const params = withDefaults(urlParams, defaultQuery);
+  const keep = hideCategoryFilters ? pick(params, ["categorie", "type"]) : {};
+  const resetHref = Object.keys(keep).length ? `${action}?${new URLSearchParams(keep).toString()}` : action;
   const parsed = filtersFromSearchParams(params);
   const filters = lockedCategory ? { ...parsed, category: lockedCategory.slug, kind: lockedCategory.kind } : parsed;
   const scope = lockedCategory ? products.filter((p) => p.category.slug === lockedCategory.slug) : products;
@@ -39,17 +54,9 @@ function CatalogView({ products, categories, action, lockedCategory, showHeading
   const visibleCategories = filters.kind ? categories.filter((c) => c.kind === filters.kind) : categories;
   const rawParams = Object.fromEntries(params.entries());
 
-  const heading = filters.q
-    ? "Résultats de recherche"
-    : filters.kind === "accessoire"
-      ? "Accessoires"
-      : filters.kind === "cbd"
-        ? "Produits CBD"
-        : "Toute la boutique";
 
   return (
     <>
-      {showHeading && <h2 className="mb-8 font-display text-4xl text-forest-900">{heading}</h2>}
       <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
         <FiltersPanel
           key={params.toString()}
@@ -57,7 +64,8 @@ function CatalogView({ products, categories, action, lockedCategory, showHeading
           filters={filters}
           categories={visibleCategories}
           regions={regions}
-          lockedCategory={Boolean(lockedCategory)}
+          lockedCategory={Boolean(lockedCategory) || hideCategoryFilters}
+          hiddenParams={hideCategoryFilters ? keep : undefined}
         />
         <div>
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
@@ -77,7 +85,7 @@ function CatalogView({ products, categories, action, lockedCategory, showHeading
             <div className="card p-10 text-center">
               <p className="font-display text-xl text-forest-900">Aucun produit ne correspond à votre recherche.</p>
               <p className="mt-2 text-sm text-muted">Essayez d&apos;élargir vos filtres.</p>
-              <Link href={action} className="btn-secondary mt-5">
+              <Link href={resetHref} className="btn-secondary mt-5">
                 Réinitialiser les filtres
               </Link>
             </div>
