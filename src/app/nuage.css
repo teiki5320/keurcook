@@ -1,7 +1,48 @@
-/* Thème « Nuage · Braise » — animations utilisées par src/components/nuage */
+/* Thème « Nuage · Braise » — animations + remappage sombre des couleurs du site */
 @keyframes nuage-spin { to { transform: rotate(360deg); } }
 @keyframes nuage-marq { to { transform: translateX(-50%); } }
 @keyframes nuage-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/*
+ * Les pages existantes (catégories, fiche produit, panier, commande, légales)
+ * utilisent les couleurs Tailwind du thème clair. On les redéfinit ici pour
+ * qu'elles adoptent le thème sombre sans toucher à leur code.
+ */
+.nuage-theme {
+  --color-cream: #140a07;
+  --color-sand: #2a1810;
+  --color-ink: #fbeee2;
+  --color-muted: #bfa99a;
+  --color-white: #211209;
+  --color-sage-50: #1c100b;
+  --color-sage-100: #26160e;
+  --color-sage-200: #3a2418;
+  --color-sage-300: #5a3a28;
+  --color-forest-500: #ffc46b;
+  --color-forest-600: #ff7a3d;
+  --color-forest-700: #ff7a3d;
+  --color-forest-800: #fbeee2;
+  --color-forest-900: #fbeee2;
+  --color-terracotta: #ff7a3d;
+  --color-terracotta-dark: #ffc46b;
+  --color-amber-soft: #3a2418;
+  --font-display: var(--font-anton), sans-serif;
+  --font-sans: var(--font-manrope), sans-serif;
+  color: #fbeee2;
+}
+.nuage-theme .font-display { letter-spacing: 0.01em; text-transform: uppercase; font-weight: 400; }
+.nuage-theme input, .nuage-theme select, .nuage-theme textarea { color-scheme: dark; }
+
+/* Pied de page : fond sombre, textes clairs */
+.nuage-footer {
+  --color-forest-900: #0d0604;
+  --color-forest-800: #0d0604;
+  --color-sage-100: #d9c6b8;
+  --color-sage-200: #bfa99a;
+  --color-cream: #fbeee2;
+  --color-white: #ffc46b;
+  --color-amber-soft: #ffc46b;
+}
 
 @media (prefers-reduced-motion: reduce) {
   [class*="nuage-"], [style*="nuage-"] { animation: none !important; }

@@ -19,10 +19,8 @@ export default async function ShopPage() {
   return (
     <>
       <ShopRing products={ring} categories={cbd.map((c) => ({ slug: c.slug, name: c.name }))} />
-      <div className="relative mx-3 mb-10 overflow-hidden rounded-[32px] bg-cream text-ink sm:mx-6 xl:mx-auto xl:max-w-[1280px]">
-        <div className="container-page py-10">
-          <ProductListing action="/boutique" showHeading />
-        </div>
+      <div className="container-page relative pt-6 pb-16">
+        <ProductListing action="/boutique" showHeading />
       </div>
     </>
   );

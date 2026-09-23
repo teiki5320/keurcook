@@ -23,7 +23,7 @@ export default function ShopLayout({ children }: { children: React.ReactNode }) 
     <CartProvider>
       <PageTransitionProvider>
         <div
-          className={`${anton.variable} ${manrope.variable} relative flex min-h-dvh flex-col text-[#fbeee2]`}
+          className={`${anton.variable} ${manrope.variable} nuage-theme relative flex min-h-dvh flex-col text-[#fbeee2]`}
           style={{ fontFamily: "var(--font-manrope), sans-serif", background: "#140a07" }}
         >
           <div
@@ -39,7 +39,7 @@ export default function ShopLayout({ children }: { children: React.ReactNode }) 
           <main id="contenu" className="relative z-[2] flex-1">
             <ContentShell>{children}</ContentShell>
           </main>
-          <div className="relative z-[2] overflow-hidden rounded-t-[32px] bg-cream text-ink">
+          <div className="nuage-footer relative z-[2] border-t border-[#fbeee2]/10">
             <Footer />
           </div>
         </div>

@@ -2,19 +2,16 @@
 
 import { usePathname } from "next/navigation";
 
-/** Pages « immersives » affichées directement sur le fond sombre. */
+/** Pages « immersives » : elles gèrent elles-mêmes leur espacement sous l'en-tête. */
 const IMMERSIVE = ["/", "/boutique"];
 
 /**
- * Les autres pages (fiche produit, panier, commande, pages légales…) gardent
- * leur mise en page d'origine, posées sur une feuille claire au-dessus du nuage.
+ * Les autres pages (catégories, fiche produit, panier, commande, pages légales)
+ * gardent leur structure ; le thème sombre leur est appliqué via nuage.css.
  */
 export function ContentShell({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+  const raw = usePathname() || "/";
+  const pathname = raw.length > 1 ? raw.replace(/\/+$/, "") : raw; // GitHub Pages : trailingSlash
   if (IMMERSIVE.includes(pathname)) return <>{children}</>;
-  return (
-    <div className="relative mx-3 mt-24 mb-10 overflow-hidden rounded-[32px] bg-cream text-ink shadow-[0_40px_120px_-40px_rgba(0,0,0,.8)] sm:mx-6 xl:mx-auto xl:max-w-[1280px]">
-      {children}
-    </div>
-  );
+  return <div className="relative pt-24 pb-10">{children}</div>;
 }

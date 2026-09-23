@@ -12,7 +12,8 @@ const NAV = [
 ];
 
 export function NuageHeader({ notice }: { notice?: string | null }) {
-  const pathname = usePathname();
+  const raw = usePathname() || "/";
+  const pathname = raw.length > 1 ? raw.replace(/\/+$/, "") : raw;
   const { count, ready } = useCart();
   return (
     <header className="fixed inset-x-0 top-0 z-50">
