@@ -12,8 +12,7 @@ export interface Slide {
   desc: string;
   href: string;
   cta: string;
-  form: string;
-  /** Forme du nuage : 0 feuille, 1 résine, 2 huile. */
+  /** Silhouette du nuage : 0 feuille, 1 résine, 2 huile. */
   mix: number;
   items: MiniProduct[];
 }
@@ -45,9 +44,6 @@ export function HomeCarousel({ slides }: { slides: Slide[] }) {
         {/* Mobile : nuage réduit pour garder les cartes visibles sans défiler. */}
         <div data-cloud="" data-mix={cur.mix} className="relative aspect-square w-full max-w-[min(230px,30vh)] justify-self-center sm:max-w-[min(600px,70vh)]">
           <div className="absolute inset-[4%] rounded-full border border-dashed border-[#ffc46b]/30 [animation:nuage-spin_60s_linear_infinite]" />
-          <span className="absolute top-[8%] -left-16 rounded-full sm:left-0 border border-[#fbeee2]/10 bg-[#140a07]/60 px-3.5 py-2 text-[13px] font-semibold backdrop-blur-md">
-            Forme · <span className="text-[#ff7a3d]">{cur.form}</span>
-          </span>
         </div>
 
         <div>
@@ -94,19 +90,19 @@ export function HomeCarousel({ slides }: { slides: Slide[] }) {
                     <div className="flex-1" />
                     <div className="grid gap-2">
                       {s.items.map((p) => (
-                        <div key={p.id} className="flex items-center gap-3 rounded-2xl border border-[#fbeee2]/10 bg-[#fbeee2]/5 py-2 pr-2 pl-3.5">
+                        <div key={p.id} className="flex items-center gap-2 rounded-2xl border border-[#fbeee2]/10 bg-[#fbeee2]/5 py-2 pr-2 pl-3 sm:gap-3 sm:pl-3.5">
                           <div className="min-w-0 flex-1">
                             <div className="truncate text-sm font-bold">{p.name}</div>
                             <div className="text-xs text-[#fbeee2]/55">{p.region} · CBD {p.cbd}</div>
                           </div>
-                          <span className="text-[17px]" style={anton}>{priceLabel(p)}</span>
+                          <span className="shrink-0 text-[15px] sm:text-[17px]" style={anton}>{priceLabel(p)}</span>
                           <button
                             type="button"
                             tabIndex={i === active ? 0 : -1}
                             onClick={() => addMini(p)}
                             disabled={p.variant.stock <= 0}
                             aria-label={p.variant.stock > 0 ? `Ajouter ${p.name} (${p.variant.label}) au panier` : `${p.name} : rupture de stock`}
-                            className="h-[34px] w-[34px] shrink-0 rounded-full bg-[#ff7a3d] text-lg font-bold text-[#140a07] active:scale-90 disabled:cursor-not-allowed disabled:opacity-30"
+                            className="h-[30px] w-[30px] shrink-0 rounded-full sm:h-[34px] sm:w-[34px] bg-[#ff7a3d] text-lg font-bold text-[#140a07] active:scale-90 disabled:cursor-not-allowed disabled:opacity-30"
                           >
                             +
                           </button>
