@@ -62,7 +62,7 @@ const seeds: ProductSeed[] = [
     producer: "Les Champs de Lure (fictif)",
     tags: ["plein champ", "agrumes"],
     featured: true,
-    variants: [["2 g", 1400, 40], ["5 g", 3000, 25], ["10 g", 5500, 12]],
+    variants: [["3 g", 1900, 40], ["5 g", 3000, 25], ["10 g", 5500, 12]],
   },
   {
     slug: "fleur-gorilla-des-cevennes",
@@ -77,7 +77,7 @@ const seeds: ProductSeed[] = [
     producer: "Serres du Mont Aigoual (fictif)",
     tags: ["sous serre", "boisé"],
     featured: true,
-    variants: [["2 g", 1600, 30], ["5 g", 3500, 20], ["10 g", 6400, 8]],
+    variants: [["3 g", 2200, 30], ["5 g", 3500, 20], ["10 g", 6400, 8]],
   },
   {
     slug: "fleur-harlequin-d-alsace",
@@ -92,7 +92,7 @@ const seeds: ProductSeed[] = [
     producer: "Ferme du Haut-Koenigsbourg (fictif)",
     tags: ["indoor", "fruité"],
     featured: false,
-    variants: [["2 g", 1300, 50], ["5 g", 2900, 30]],
+    variants: [["3 g", 1800, 50], ["5 g", 2900, 30], ["10 g", 5200, 15]],
   },
   {
     slug: "resine-pollen-de-bretagne",

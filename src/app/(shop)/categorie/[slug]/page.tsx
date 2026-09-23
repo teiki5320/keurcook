@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Coverflow } from "@/components/nuage/Coverflow";
-import { ProductListing } from "@/components/shop/ProductListing";
-import { productCards } from "@/lib/data/gammes";
+import { GammeBrowser } from "@/components/nuage/GammeBrowser";
 import { getCatalog, getCategoryBySlug } from "@/lib/data/catalog";
 
 export async function generateStaticParams() {
@@ -40,13 +38,7 @@ export default async function CategoryPage({ params }: PageProps<"/categorie/[sl
       </nav>
       <h1 className="font-display text-4xl text-forest-900">{category.name}</h1>
       <p className="mt-2 max-w-2xl text-muted">{category.description}</p>
-      <div className="-mx-4 mt-2 mb-8 sm:-mx-6 lg:-mx-8">
-        <Coverflow items={productCards(items)} />
-      </div>
-      <h2 className="mb-6 font-display text-3xl text-forest-900">
-        {category.kind === "cbd" ? "Toutes les variétés" : "Tous les articles"}
-      </h2>
-      <ProductListing action={`/categorie/${category.slug}`} lockedCategory={{ slug: category.slug, kind: category.kind }} />
+      <GammeBrowser products={items} noun={category.kind === "cbd" ? "variété" : "référence"} />
     </div>
   );
 }

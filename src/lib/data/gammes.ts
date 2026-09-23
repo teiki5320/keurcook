@@ -48,14 +48,3 @@ export async function getGammes(): Promise<Gamme[]> {
     },
   ].filter((g) => g.products.length > 0);
 }
-
-/** Cartes du carrousel pour les produits d'une gamme. */
-export function productCards(items: ProductWithCategory[]) {
-  return items.map((p) => ({
-    key: p.id,
-    title: p.name,
-    eyebrow: p.category.kind === "cbd" ? `${p.originRegion ?? "France"}` : p.category.name,
-    image: p.images[0] ?? null,
-    href: `/produit/${p.slug}`,
-  }));
-}

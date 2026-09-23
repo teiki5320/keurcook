@@ -22,9 +22,27 @@ export interface CoverflowItem {
  * Glisser (doigt ou souris), flèches du clavier ou toucher une voisine pour changer de carte ;
  * toucher la carte centrale ouvre son lien.
  */
-export function Coverflow({ items, cloud = false, hint }: { items: CoverflowItem[]; cloud?: boolean; hint?: string }) {
+export function Coverflow({
+  items,
+  cloud = false,
+  hint,
+  onActiveChange,
+  onOpen,
+}: {
+  items: CoverflowItem[];
+  cloud?: boolean;
+  hint?: string;
+  /** Appelé quand la carte centrale change (index). */
+  onActiveChange?: (index: number) => void;
+  /** Remplace l'ouverture du lien quand on touche la carte centrale. */
+  onOpen?: (item: CoverflowItem) => void;
+}) {
   const n = items.length;
   const [active, setActive] = useState(0);
+  useEffect(() => {
+    onActiveChange?.(active);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [active]);
   const navigate = usePageTransition();
   const loop = n >= 3;
 
@@ -32,7 +50,7 @@ export function Coverflow({ items, cloud = false, hint }: { items: CoverflowItem
     setActive((a) => (loop ? (((a + d) % n) + n) % n : Math.min(n - 1, Math.max(0, a + d))));
   const swipe = useSwipe(() => go(1), () => go(-1));
   const router = useRouter();
-  const open = (it: CoverflowItem) => (navigate ? navigate(it.href, it.title) : router.push(it.href));
+  const open = (it: CoverflowItem) => (onOpen ? onOpen(it) : navigate ? navigate(it.href, it.title) : router.push(it.href));
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
