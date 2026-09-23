@@ -15,7 +15,7 @@ export default async function ShopLayout({ children }: { children: React.ReactNo
     ...categories
       .filter((c) => c.kind === "cbd")
       .map((c) => ({ href: `/categorie/${c.slug}`, label: c.name, secondary: ["infusions", "cosmetiques"].includes(c.slug) })),
-    { href: "/boutique?type=accessoire", label: "Accessoires" },
+    { href: "/accessoires", label: "Accessoires" },
   ];
 
   return (

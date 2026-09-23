@@ -19,7 +19,7 @@ export function Footer() {
           <p className="font-semibold text-cream">Boutique</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li><Link href="/boutique?type=cbd" className="hover:text-white">Produits CBD</Link></li>
-            <li><Link href="/boutique?type=accessoire" className="hover:text-white">Accessoires</Link></li>
+            <li><Link href="/accessoires" className="hover:text-white">Accessoires</Link></li>
             <li><Link href="/boutique?tri=newest" className="hover:text-white">Nouveautés</Link></li>
             <li><Link href="/panier" className="hover:text-white">Panier</Link></li>
           </ul>

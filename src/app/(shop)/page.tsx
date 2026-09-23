@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { HomeCarousel, type Slide } from "@/components/nuage/HomeCarousel";
-import { toMini } from "@/components/nuage/mini";
+import { Coverflow } from "@/components/nuage/Coverflow";
 import { TLink } from "@/components/nuage/PageTransition";
 import { siteConfig } from "@/lib/config";
-import { getCatalog } from "@/lib/data/catalog";
+import { getGammes } from "@/lib/data/gammes";
 
 export const revalidate = 300;
 
@@ -20,31 +19,36 @@ const anton = { fontFamily: "var(--font-anton), sans-serif", fontWeight: 400 } a
 const WORDS = ["Fleur", "Résine", "Huile", "Infusion"];
 
 export default async function HomePage() {
-  const { products } = await getCatalog();
-  const of = (slug: string) => products.filter((p) => p.category.slug === slug).map(toMini).slice(0, 2);
-  const refs = (slug: string) => {
-    const n = products.filter((p) => p.category.slug === slug).length;
-    return `${n} RÉFÉRENCE${n > 1 ? "S" : ""}`;
-  };
-  const featured = products.filter((p) => p.featured && p.category.kind === "cbd").map(toMini).slice(0, 2);
-
-  const slides: Slide[] = [
-    {
-      eyebrow: "CBD FRANÇAIS", title: "Une plante.", title2: "Mille nuances.", mix: 0,
-      desc: "Fleur, résine, huile : le même chanvre français, transformé par des producteurs de nos régions. THC ≤ 0,3 %, certificat pour chaque produit.",
-      href: "/boutique", cta: "Toute la boutique", items: featured,
-    },
-    { eyebrow: refs("fleurs"), title: "La", title2: "fleur", mix: 0, desc: "Fleurs de chanvre françaises, séchées et affinées lentement.", href: "/categorie/fleurs", cta: "Voir les fleurs", items: of("fleurs") },
-    { eyebrow: refs("resines"), title: "La", title2: "résine", mix: 1, desc: "Résines obtenues par tamisage à sec ou pression, selon des méthodes artisanales.", href: "/categorie/resines", cta: "Voir les résines", items: of("resines") },
-    { eyebrow: refs("huiles"), title: "L'", title2: "huile", mix: 2, desc: "Huiles de chanvre à spectre complet ou large, en flacon compte-gouttes.", href: "/categorie/huiles", cta: "Voir les huiles", items: of("huiles") },
-  ];
+  const gammes = await getGammes();
+  const cards = gammes.map((g) => ({
+    key: g.key,
+    title: g.name,
+    eyebrow: `${g.products.length} ${g.key === "accessoires" ? "article" : "variété"}${g.products.length > 1 ? "s" : ""}`,
+    image: g.image,
+    href: g.href,
+    cloudMix: g.cloudMix,
+  }));
 
   const jsonLd = { "@context": "https://schema.org", "@type": "OnlineStore", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <HomeCarousel slides={slides} />
+      <section className="pt-24 pb-10 lg:pt-28">
+        <div className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,56px)]">
+          <h1 className="uppercase leading-[.9]" style={{ ...anton, fontSize: "clamp(44px,7vw,110px)" }}>
+            Une plante<span className="text-[#ff7a3d]">.</span>
+            <br />
+            <span className="text-[#ff7a3d]">Mille nuances.</span>
+          </h1>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#fbeee2]/70 sm:text-base">
+            Chanvre français, THC ≤ 0,3 %, certificat d&apos;analyse pour chaque produit. Choisissez une gamme.
+          </p>
+        </div>
+        <div className="mt-4">
+          <Coverflow items={cards} cloud hint="Glissez pour parcourir les gammes · touchez la carte pour l'ouvrir" />
+        </div>
+      </section>
 
       <div className="overflow-hidden border-y border-[#fbeee2]/8 bg-[#140a07] py-6">
         <div className="flex w-max gap-12 whitespace-nowrap uppercase [animation:nuage-marq_36s_linear_infinite]" style={{ ...anton, fontSize: "clamp(40px,6vw,88px)" }}>
