@@ -7,6 +7,7 @@ import { join } from "node:path";
 import { demoCategories, demoProducts } from "../src/lib/demo/catalog";
 
 const root = join(__dirname, "..", "public");
+const xml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 mkdirSync(join(root, "demo"), { recursive: true });
 mkdirSync(join(root, "coa"), { recursive: true });
 
@@ -67,7 +68,7 @@ function illustration(slug: string, c: string, seed: number): string {
 demoProducts.forEach((p, index) => {
   const category = demoCategories.find((c) => c.id === p.categoryId)!;
   const [bg1, bg2, ink] = palettes[category.slug] ?? palettes.fleurs;
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="${p.name}">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="${xml(p.name)}">
   <defs><radialGradient id="g" cx="35%" cy="30%" r="85%"><stop offset="0" stop-color="${bg1}"/><stop offset="1" stop-color="${bg2}"/></radialGradient></defs>
   <rect width="400" height="400" fill="url(#g)"/>
   <g fill="${ink}" opacity=".07"><ellipse cx="330" cy="70" rx="14" ry="44" transform="rotate(25 330 70)"/><ellipse cx="60" cy="340" rx="12" ry="38" transform="rotate(-30 60 340)"/></g>

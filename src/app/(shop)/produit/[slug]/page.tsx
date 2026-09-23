@@ -7,7 +7,9 @@ import { AddToCart } from "@/components/product/AddToCart";
 import { ProductGrid } from "@/components/product/ProductCard";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { RateBadges } from "@/components/product/RateBadges";
-import { getCatalog, getProductBySlug, getRelatedProducts, minPriceCents, totalStock } from "@/lib/data/catalog";
+import { minPriceCents, totalStock } from "@/lib/catalog-utils";
+import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
+import { withBasePath } from "@/lib/paths";
 import { siteConfig } from "@/lib/config";
 import { formatRate } from "@/lib/format";
 
@@ -110,7 +112,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
               </div>
               <div className="col-span-2 border-t border-sage-200 pt-4">
                 {product.coaUrl ? (
-                  <a href={product.coaUrl} target="_blank" rel="noopener" download className="btn-secondary w-full sm:w-auto">
+                  <a href={withBasePath(product.coaUrl)} target="_blank" rel="noopener" download className="btn-secondary w-full sm:w-auto">
                     <FileDown className="h-4 w-4" aria-hidden /> Télécharger le certificat d&apos;analyse (PDF)
                   </a>
                 ) : (

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SlidersHorizontal } from "lucide-react";
-import { SORT_OPTIONS, type CatalogFilters } from "@/lib/data/catalog";
+import { SORT_OPTIONS, type CatalogFilters } from "@/lib/catalog-utils";
+import { withBasePath } from "@/lib/paths";
 import type { Category } from "@/lib/types";
 import { AutoSubmitSelect } from "./AutoSubmitSelect";
 
@@ -20,7 +21,7 @@ interface Props {
 export function Filters({ action, filters, categories, regions, lockedCategory }: Props) {
   const showCbdFilters = !filters.kind || filters.kind === "cbd";
   return (
-    <form action={action} method="get" className="space-y-5 text-sm">
+    <form action={withBasePath(action)} method="get" className="space-y-5 text-sm">
       {filters.q && <input type="hidden" name="q" value={filters.q} />}
       {filters.sort && <input type="hidden" name="tri" value={filters.sort} />}
 

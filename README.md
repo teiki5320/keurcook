@@ -6,6 +6,16 @@ Site e-commerce en français pour vendre du CBD français (fleurs, résines, hui
 
 ---
 
+## Voir le site en ligne
+
+👉 **https://teiki5320.github.io/alohash/**
+
+C'est une **vitrine de démonstration statique**, publiée automatiquement sur GitHub Pages à chaque push sur `main` (workflow `.github/workflows/pages.yml`). Catalogue, filtres, recherche, fiches produit, certificats PDF, panier, vérification d'âge et bannière cookies fonctionnent ; les produits sont ceux de démo. GitHub Pages n'ayant pas de serveur, **la commande en ligne, les emails et l'espace admin y sont désactivés** : ils fonctionnent sur la version complète (Vercel ou Netlify + Supabase, voir « Déploiement »).
+
+Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie dans `out/`, servie sous `/alohash/`).
+
+---
+
 ## Fonctionnalités
 
 | Côté boutique | Côté admin (`/admin`) |
@@ -112,7 +122,11 @@ Le tunnel de commande, la redirection et le passage automatique en « Payée » 
 
 ## Déploiement
 
-### Vercel (recommandé)
+### GitHub Pages (vitrine statique)
+
+Automatique à chaque push sur `main`. Réglage unique : **Settings → Pages → Source : « GitHub Actions »**. Le script `scripts/build-pages.mjs` active `output: "export"` + `basePath`, met temporairement de côté les parties serveur (admin, API, confirmation de commande) et remplace le formulaire de commande par un avis.
+
+### Vercel (recommandé pour la boutique réelle)
 
 1. Poussez le dépôt sur GitHub, puis **Add New → Project** sur [vercel.com](https://vercel.com) et importez-le (framework détecté automatiquement).
 2. Ajoutez toutes les variables de `.env.example` dans **Settings → Environment Variables** (avec `NEXT_PUBLIC_SITE_URL=https://votre-domaine.fr`).
@@ -147,6 +161,7 @@ Enfin, mettez `NEXT_PUBLIC_SITE_URL` à jour avec le domaine définitif et, dans
 | --- | --- |
 | `npm run dev` | Serveur de développement |
 | `npm run build` / `npm start` | Build et serveur de production |
+| `npm run build:pages` | Build de la vitrine statique GitHub Pages (dossier `out/`, sous-dossier `/alohash/`) |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Vérification TypeScript |
 | `npm run demo:assets` | Régénère les visuels SVG et certificats PDF de démo (`public/demo`, `public/coa`) |

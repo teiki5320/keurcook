@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/paths";
 
 /** Image produit : les SVG de démonstration ne passent pas par l'optimiseur. */
 export function ProductImage({
@@ -19,7 +20,7 @@ export function ProductImage({
   }
   return (
     <Image
-      src={src}
+      src={withBasePath(src)}
       alt={alt}
       fill
       sizes={sizes}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { minPriceCents, totalStock } from "@/lib/data/catalog";
+import { minPriceCents, totalStock } from "@/lib/catalog-utils";
 import { formatPrice } from "@/lib/format";
 import type { ProductWithCategory } from "@/lib/types";
 import { ProductImage } from "./ProductImage";

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { flattenParams, ProductListing } from "@/components/shop/ProductListing";
-import { getCatalog, getCategoryBySlug, parseFilters } from "@/lib/data/catalog";
+import { ProductListing } from "@/components/shop/ProductListing";
+import { getCatalog, getCategoryBySlug } from "@/lib/data/catalog";
 
 export async function generateStaticParams() {
   const { categories } = await getCatalog();
@@ -20,12 +20,10 @@ export async function generateMetadata({ params }: PageProps<"/categorie/[slug]"
   };
 }
 
-export default async function CategoryPage({ params, searchParams }: PageProps<"/categorie/[slug]">) {
+export default async function CategoryPage({ params }: PageProps<"/categorie/[slug]">) {
   const { slug } = await params;
   const category = await getCategoryBySlug(slug);
   if (!category) notFound();
-  const sp = await searchParams;
-  const filters = { ...parseFilters(sp), category: category.slug, kind: category.kind };
 
   return (
     <div className="container-page py-10">
@@ -38,7 +36,7 @@ export default async function CategoryPage({ params, searchParams }: PageProps<"
       </nav>
       <h1 className="font-display text-4xl text-forest-900">{category.name}</h1>
       <p className="mt-2 mb-8 max-w-2xl text-muted">{category.description}</p>
-      <ProductListing action={`/categorie/${category.slug}`} filters={filters} rawParams={flattenParams(sp)} lockedCategory />
+      <ProductListing action={`/categorie/${category.slug}`} lockedCategory={{ slug: category.slug, kind: category.kind }} />
     </div>
   );
 }

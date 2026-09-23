@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { legalConfig, shippingConfig, siteConfig } from "@/lib/config";
@@ -101,7 +102,7 @@ export default function TermsPage() {
       <h2>Article 11 — Données personnelles</h2>
       <p>
         Les données collectées lors de la commande sont traitées conformément à notre{" "}
-        <a href="/confidentialite">politique de confidentialité</a>.
+        <Link href="/confidentialite">politique de confidentialité</Link>.
       </p>
 
       <h2>Article 12 — Litiges et médiation</h2>

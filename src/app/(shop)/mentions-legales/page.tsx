@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { legalConfig, siteConfig } from "@/lib/config";
@@ -55,8 +56,8 @@ export default function LegalNoticePage() {
 
       <h2>Données personnelles</h2>
       <p>
-        Le traitement des données personnelles est décrit dans notre <a href="/confidentialite">politique de
-        confidentialité</a>.
+        Le traitement des données personnelles est décrit dans notre <Link href="/confidentialite">politique de
+        confidentialité</Link>.
       </p>
 
       <h2>Médiation de la consommation</h2>
