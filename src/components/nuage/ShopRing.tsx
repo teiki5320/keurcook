@@ -5,7 +5,7 @@ import { Suspense, useEffect, useState } from "react";
 import { withBasePath } from "@/lib/paths";
 import type { MiniProduct } from "./mini";
 import { TLink } from "./PageTransition";
-import { anton, priceLabel, useAddMini } from "./shared";
+import { anton, priceLabel, useAddMini, useSwipe } from "./shared";
 
 interface Props {
   products: MiniProduct[];
@@ -41,6 +41,7 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
   const router = useRouter();
   const cat = activeChip;
   const addMini = useAddMini();
+  const swipe = useSwipe(() => setSpin((s) => s + 1), () => setSpin((s) => s - 1));
   const idx = ((spin % n) + n) % n;
   const cur = products[idx];
 
@@ -69,7 +70,7 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
     slug === "tout" ? "/boutique" : slug === "accessoires" ? "/boutique?type=accessoire" : `/boutique?categorie=${slug}`;
 
   return (
-    <section className="overflow-hidden pt-28 pb-12">
+    <section className="overflow-hidden pt-36 pb-12 sm:pt-32">
       <div className="mx-auto flex max-w-[1320px] flex-wrap items-end justify-between gap-5 px-[clamp(20px,4vw,56px)]">
         <h1 className="uppercase leading-[.88]" style={{ ...anton, fontSize: "clamp(60px,8vw,130px)" }}>
           La boutique<span className="text-[#ff7a3d]">.</span>
@@ -96,7 +97,12 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
         </div>
       </div>
 
-      <div className="relative mt-2.5 [perspective:1600px]" style={{ height: "clamp(360px,48vh,520px)" }}>
+      <div
+        {...swipe}
+        onDragStart={(e) => e.preventDefault()}
+        className="relative mt-2.5 cursor-grab select-none [perspective:1600px] active:cursor-grabbing"
+        style={{ ...swipe.style, height: "clamp(360px,48vh,520px)" }}
+      >
         <div data-cloud="" data-mix="3" data-shape="ring" className="absolute top-1/2 left-1/2 aspect-square -translate-x-1/2 -translate-y-1/2" style={{ width: "min(640px,90vw)" }} />
         <div
           className="absolute top-1/2 left-1/2 h-0 w-0 [transform-style:preserve-3d]"
@@ -120,7 +126,7 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
                 <div className="relative h-full w-full overflow-hidden rounded-[26px] bg-[#281610] shadow-[0_30px_60px_-20px_rgba(0,0,0,.6)]" style={{ border: `1px solid ${active ? "#ff7a3d" : "rgba(251,238,226,.12)"}` }}>
                   {p.image && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={withBasePath(p.image)} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                    <img src={withBasePath(p.image)} alt="" draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
                   )}
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-4 pt-16">
                     <div className="text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{p.category}</div>
@@ -133,23 +139,23 @@ function ShopRingView({ products, categories, activeChip }: Props & { activeChip
         </div>
       </div>
 
-      <div className="mx-auto mt-2.5 flex max-w-[1320px] flex-wrap items-center justify-center gap-[18px] px-[clamp(20px,4vw,56px)]">
-        <button type="button" onClick={() => step(-1)} aria-label="Produit précédent" className="h-[54px] w-[54px] rounded-full border border-[#fbeee2]/20 text-xl transition hover:border-[#ff7a3d] hover:text-[#ff7a3d]">←</button>
-        <div className="flex min-w-[min(100%,440px)] items-center justify-between gap-4 rounded-full border border-[#fbeee2]/12 bg-[#fbeee2]/6 py-3 pr-3 pl-6 backdrop-blur-md">
-          <TLink href={`/produit/${cur.slug}`} label={cur.name.split(" ")[0]} className="min-w-0">
+      <div className="mx-auto mt-2.5 flex max-w-[640px] items-center gap-2.5 px-[clamp(12px,4vw,56px)] sm:gap-[18px]">
+        <button type="button" onClick={() => step(-1)} aria-label="Produit précédent" className="h-12 w-12 shrink-0 rounded-full border border-[#fbeee2]/20 text-xl transition hover:border-[#ff7a3d] hover:text-[#ff7a3d] sm:h-[54px] sm:w-[54px]">←</button>
+        <div className="flex min-w-0 flex-1 flex-col items-center gap-2.5 rounded-[26px] border border-[#fbeee2]/12 bg-[#fbeee2]/6 px-4 py-3 text-center backdrop-blur-md sm:flex-row sm:justify-between sm:gap-4 sm:rounded-full sm:py-3 sm:pr-3 sm:pl-6 sm:text-left">
+          <TLink href={`/produit/${cur.slug}`} label={cur.name.split(" ")[0]} className="min-w-0 max-w-full">
             <div className="truncate text-base font-bold text-[#fbeee2]">{cur.name}</div>
-            <div className="text-[13px] text-[#fbeee2]/60">{cur.region} · CBD {cur.cbd} · THC {cur.thc}</div>
+            <div className="truncate text-[13px] text-[#fbeee2]/60">{cur.region} · CBD {cur.cbd} · THC {cur.thc}</div>
           </TLink>
           <button
             type="button"
             onClick={() => addMini(cur)}
             disabled={cur.variant.stock <= 0}
-            className="shrink-0 rounded-full bg-[#ff7a3d] px-[18px] py-3 text-sm font-bold whitespace-nowrap text-[#140a07] transition hover:bg-[#ffc46b] disabled:cursor-not-allowed disabled:opacity-40"
+            className="w-full shrink-0 rounded-full bg-[#ff7a3d] px-[18px] py-3 text-sm font-bold whitespace-nowrap text-[#140a07] transition hover:bg-[#ffc46b] disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
           >
             {cur.variant.stock > 0 ? `${priceLabel(cur)} · Ajouter` : "Rupture de stock"}
           </button>
         </div>
-        <button type="button" onClick={() => step(1)} aria-label="Produit suivant" className="h-[54px] w-[54px] rounded-full border border-[#fbeee2]/20 text-xl transition hover:border-[#ff7a3d] hover:text-[#ff7a3d]">→</button>
+        <button type="button" onClick={() => step(1)} aria-label="Produit suivant" className="h-12 w-12 shrink-0 rounded-full border border-[#fbeee2]/20 text-xl transition hover:border-[#ff7a3d] hover:text-[#ff7a3d] sm:h-[54px] sm:w-[54px]">→</button>
       </div>
     </section>
   );

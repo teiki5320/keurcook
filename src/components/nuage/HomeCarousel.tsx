@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import type { MiniProduct } from "./mini";
 import { TLink } from "./PageTransition";
-import { anton, priceLabel, useAddMini } from "./shared";
+import { anton, priceLabel, useAddMini, useSwipe } from "./shared";
 
 export interface Slide {
   eyebrow: string;
@@ -36,20 +36,26 @@ export function HomeCarousel({ slides }: { slides: Slide[] }) {
   }, [hold, n]);
 
   const pick = (i: number) => { setHold(true); setActive(((i % n) + n) % n); };
+  const swipe = useSwipe(() => pick(active + 1), () => pick(active - 1));
   const cur = slides[active];
 
   return (
-    <section className="flex min-h-dvh items-center pt-24 pb-10">
-      <div className="mx-auto grid w-full max-w-[1320px] items-center gap-[clamp(20px,3vw,48px)] px-[clamp(20px,4vw,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
-        <div data-cloud="" data-mix={cur.mix} className="relative aspect-square w-full justify-self-center" style={{ maxWidth: "min(600px,70vh)" }}>
+    <section className="flex items-center pt-28 pb-10 lg:min-h-dvh lg:pt-24">
+      <div className="mx-auto grid w-full max-w-[1320px] items-center gap-2 sm:gap-[clamp(20px,3vw,48px)] px-[clamp(20px,4vw,56px)] [grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))]">
+        {/* Mobile : nuage réduit pour garder les cartes visibles sans défiler. */}
+        <div data-cloud="" data-mix={cur.mix} className="relative aspect-square w-full max-w-[min(230px,30vh)] justify-self-center sm:max-w-[min(600px,70vh)]">
           <div className="absolute inset-[4%] rounded-full border border-dashed border-[#ffc46b]/30 [animation:nuage-spin_60s_linear_infinite]" />
-          <span className="absolute top-[8%] left-0 rounded-full border border-[#fbeee2]/10 bg-[#140a07]/60 px-3.5 py-2 text-[13px] font-semibold backdrop-blur-md">
+          <span className="absolute top-[8%] -left-16 rounded-full sm:left-0 border border-[#fbeee2]/10 bg-[#140a07]/60 px-3.5 py-2 text-[13px] font-semibold backdrop-blur-md">
             Forme · <span className="text-[#ff7a3d]">{cur.form}</span>
           </span>
         </div>
 
         <div>
-          <div className="relative -mx-5 overflow-hidden px-5 [perspective:1600px]" style={{ height: "min(520px, calc(100dvh - 200px))", minHeight: 380 }}>
+          <div
+            {...swipe}
+            className="relative -mx-5 overflow-hidden px-5 select-none [perspective:1600px]"
+            style={{ ...swipe.style, height: "min(520px, calc(100dvh - 200px))", minHeight: 380 }}
+          >
             {slides.map((s, i) => {
               let o = i - active;
               if (o > n / 2) o -= n;
