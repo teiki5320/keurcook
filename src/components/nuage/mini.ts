@@ -8,6 +8,7 @@ export interface MiniProduct {
   name: string;
   category: string;
   categorySlug: string;
+  kind: "cbd" | "accessoire";
   region: string;
   cbd: string;
   thc: string;
@@ -26,6 +27,7 @@ export function toMini(p: ProductWithCategory): MiniProduct {
     name: p.name,
     category: p.category.name,
     categorySlug: p.category.slug,
+    kind: p.category.kind,
     region: p.originRegion ?? p.category.name,
     cbd: formatRate(p.cbdRate),
     thc: formatRate(p.thcRate),

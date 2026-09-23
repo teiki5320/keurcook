@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ShopRing, type RingGroup } from "@/components/nuage/ShopRing";
+import { toMini } from "@/components/nuage/mini";
+import { ShopRing } from "@/components/nuage/ShopRing";
 import { ProductListing } from "@/components/shop/ProductListing";
 import { getCatalog } from "@/lib/data/catalog";
 
@@ -11,28 +12,17 @@ export const metadata: Metadata = {
 };
 
 export default async function ShopPage() {
-  const { products, categories } = await getCatalog();
-  const inCats = (slugs: string[]) => products.filter((p) => slugs.includes(p.category.slug));
-
-  // Une carte par gamme CBD, plus une carte « Accessoires » qui regroupe tous les accessoires.
-  const accessorySlugs = categories.filter((c) => c.kind === "accessoire").map((c) => c.slug);
-  const groups: RingGroup[] = [
-    ...categories
-      .filter((c) => c.kind === "cbd")
-      .map((c) => ({ key: c.slug, name: c.name, slugs: [c.slug], query: { categorie: c.slug } })),
-    { key: "accessoires", name: "Accessoires", slugs: accessorySlugs, query: { type: "accessoire" } },
-  ]
-    .map((g) => {
-      const items = inCats(g.slugs);
-      return { ...g, count: items.length, image: items.find((p) => p.featured)?.images[0] ?? items[0]?.images[0] ?? null };
-    })
-    .filter((g) => g.count > 0);
+  const { products } = await getCatalog();
+  // Produits rangés gamme par gamme : en glissant, on passe d'une gamme à la suivante.
+  const ring = [...products]
+    .sort((a, b) => a.category.position - b.category.position || Number(b.featured) - Number(a.featured))
+    .map(toMini);
 
   return (
     <>
-      <ShopRing groups={groups} />
+      <ShopRing products={ring} />
       <div id="produits" className="container-page relative scroll-mt-24 pt-2 pb-16">
-        <ProductListing action="/boutique" hideCategoryFilters defaultQuery={groups[0]?.query} />
+        <ProductListing action="/boutique" hideCategoryFilters defaultQuery={ring[0] ? { categorie: ring[0].categorySlug } : undefined} />
       </div>
     </>
   );
