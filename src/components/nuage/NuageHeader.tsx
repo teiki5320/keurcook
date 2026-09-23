@@ -75,6 +75,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href.split("?")[0]) && !href.includes("?"));
 
   return (
+    <>
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#fbeee2]/8 bg-[#140a07]/85 backdrop-blur-md">
 
       <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-3 px-[clamp(16px,4vw,56px)] py-3">
@@ -137,6 +138,8 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
         </div>
       )}
 
+    </header>
+      {/* Hors de <header> : son flou d'arrière-plan enfermerait le menu dans l'en-tête. */}
       {menuOpen && (
         <div className="fixed inset-0 z-[60] overflow-y-auto bg-[#140a07]/97 backdrop-blur-md lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
           <div className="flex items-center justify-between px-5 py-4">
@@ -173,6 +176,6 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }
