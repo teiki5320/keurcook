@@ -7,6 +7,7 @@ import { z } from "zod";
 import { siteConfig, LEGAL_THC_MAX } from "@/lib/config";
 import { findHealthClaims } from "@/lib/compliance";
 import { adminGetOrder, requireAdmin } from "@/lib/data/admin";
+import { isUuid, pgError } from "@/lib/db/client";
 import { orderUrl } from "@/lib/data/orders";
 import { sendEmailSafe } from "@/lib/email/sender";
 import { orderStatusEmail } from "@/lib/email/templates";
@@ -46,24 +47,6 @@ export async function logoutAction() {
   redirect("/admin/login");
 }
 
-// -------------------------------------------------------------- Fichiers
-
-/**
- * Prépare l'envoi d'une image ou d'un certificat : le serveur (admin vérifié)
- * délivre une URL signée à usage unique, le navigateur y envoie le fichier.
- */
-export async function createUploadUrlAction(bucket: "product-images" | "certificates", fileName: string) {
-  const { supabase } = await requireAdmin();
-  if (bucket !== "product-images" && bucket !== "certificates") throw new Error("Dossier inconnu.");
-  const ext = fileName.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") || "bin";
-  const base = fileName.replace(/\.[^.]+$/, "").normalize("NFD").replace(/[^\w-]+/g, "-").slice(0, 40);
-  const path = `${new Date().toISOString().slice(0, 10)}/${crypto.randomUUID().slice(0, 8)}-${base}.${ext}`;
-  const { data, error } = await supabase.storage.from(bucket).createSignedUploadUrl(path);
-  if (error || !data) throw new Error(error?.message ?? "Envoi impossible.");
-  const publicUrl = supabase.storage.from(bucket).getPublicUrl(path).data.publicUrl;
-  return { path, token: data.token, publicUrl };
-}
-
 // -------------------------------------------------------------- Produits
 
 const variantSchema = z.object({
@@ -101,7 +84,7 @@ function numOrNull(v: FormDataEntryValue | null) {
 }
 
 export async function saveProductAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const { supabase } = await requireAdmin();
+  const { sql } = await requireAdmin();
 
   let variants: unknown;
   let images: unknown;
@@ -148,62 +131,56 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
       error: `Allégation de santé interdite détectée (${claims.join(", ")}). Reformulez le texte : aucune promesse thérapeutique ou médicale n'est autorisée.`,
     };
   }
-  const { data: category } = await supabase.from("categories").select("kind").eq("id", p.categoryId).single();
-  if (category?.kind === "cbd" && p.isActive) {
+  const [category] = await sql.query("select kind from categories where id = $1", [p.categoryId]);
+  if (!category) return { error: "Catégorie introuvable." };
+  if (category.kind === "cbd" && p.isActive) {
     if (p.thcRate === null) return { error: "Le taux de THC est obligatoire pour publier un produit CBD." };
     if (p.cbdRate === null) return { error: "Le taux de CBD est obligatoire pour publier un produit CBD." };
     if (!p.coaUrl) return { error: "Le certificat d'analyse (PDF) est obligatoire pour publier un produit CBD." };
     if (!p.originRegion || !p.producer) return { error: "La région d'origine et le producteur sont obligatoires pour un produit CBD." };
   }
 
-  const row = {
-    name: p.name,
-    slug: slugify(p.slug || p.name),
-    category_id: p.categoryId,
-    short_description: p.shortDescription,
-    description: p.description,
-    cbd_rate: p.cbdRate,
-    thc_rate: p.thcRate,
-    origin_region: p.originRegion,
-    producer: p.producer,
-    images: p.images,
-    coa_url: p.coaUrl,
-    tags: p.tags,
-    is_active: p.isActive,
-    featured: p.featured,
-  };
+  const productId = p.id && isUuid(p.id) ? p.id : crypto.randomUUID();
+  const keptIds = p.variants.map((v) => v.id).filter((id): id is string => Boolean(id && isUuid(id)));
 
-  let productId = p.id;
-  if (productId) {
-    const { error } = await supabase.from("products").update(row).eq("id", productId);
-    if (error) return { error: error.code === "23505" ? "Ce slug est déjà utilisé." : error.message };
-  } else {
-    const { data, error } = await supabase.from("products").insert(row).select("id").single();
-    if (error) return { error: error.code === "23505" ? "Ce slug est déjà utilisé." : error.message };
-    productId = data.id as string;
-  }
-
-  // --- Variantes : mise à jour, création, suppression
-  const { data: existing } = await supabase.from("product_variants").select("id").eq("product_id", productId);
-  const keptIds = new Set(p.variants.map((v) => v.id).filter(Boolean));
-  const toDelete = (existing ?? []).map((v) => v.id as string).filter((id) => !keptIds.has(id));
-  if (toDelete.length) {
-    const { error } = await supabase.from("product_variants").delete().in("id", toDelete);
-    if (error) return { error: error.message };
-  }
-  for (const [position, v] of p.variants.entries()) {
-    const vrow = {
-      product_id: productId,
-      label: v.label,
-      price_cents: v.priceCents,
-      stock: v.stock,
-      sku: v.sku || null,
-      position,
-    };
-    const { error } = v.id
-      ? await supabase.from("product_variants").update(vrow).eq("id", v.id)
-      : await supabase.from("product_variants").insert(vrow);
-    if (error) return { error: error.code === "23505" ? `Référence (SKU) déjà utilisée : ${v.sku}` : error.message };
+  // Produit + variantes enregistrés en une seule transaction : tout ou rien.
+  try {
+    await sql.transaction([
+      sql.query(
+        `insert into products (id, name, slug, category_id, short_description, description, cbd_rate, thc_rate,
+           origin_region, producer, images, coa_url, tags, is_active, featured)
+         values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+         on conflict (id) do update set
+           name = excluded.name, slug = excluded.slug, category_id = excluded.category_id,
+           short_description = excluded.short_description, description = excluded.description,
+           cbd_rate = excluded.cbd_rate, thc_rate = excluded.thc_rate, origin_region = excluded.origin_region,
+           producer = excluded.producer, images = excluded.images, coa_url = excluded.coa_url, tags = excluded.tags,
+           is_active = excluded.is_active, featured = excluded.featured`,
+        [
+          productId, p.name, slugify(p.slug || p.name), p.categoryId, p.shortDescription, p.description,
+          p.cbdRate, p.thcRate, p.originRegion, p.producer, p.images, p.coaUrl, p.tags, p.isActive, p.featured,
+        ],
+      ),
+      // Variantes retirées du formulaire.
+      sql.query("delete from product_variants where product_id = $1 and not (id = any($2::uuid[]))", [productId, keptIds]),
+      ...p.variants.map((v, position) =>
+        v.id && isUuid(v.id)
+          ? sql.query(
+              "update product_variants set label = $3, price_cents = $4, stock = $5, sku = $6, position = $7 where id = $1 and product_id = $2",
+              [v.id, productId, v.label, v.priceCents, v.stock, v.sku || null, position],
+            )
+          : sql.query(
+              "insert into product_variants (product_id, label, price_cents, stock, sku, position) values ($1, $2, $3, $4, $5, $6)",
+              [productId, v.label, v.priceCents, v.stock, v.sku || null, position],
+            ),
+      ),
+    ]);
+  } catch (e) {
+    const err = pgError(e);
+    if (err.code === "23505") {
+      return { error: err.constraint?.includes("sku") ? "Une référence (SKU) est déjà utilisée par un autre produit." : "Ce slug est déjà utilisé." };
+    }
+    return { error: err.message };
   }
 
   revalidatePath("/", "layout");
@@ -212,9 +189,9 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
 }
 
 export async function deleteProductAction(formData: FormData) {
-  const { supabase } = await requireAdmin();
+  const { sql } = await requireAdmin();
   const id = String(formData.get("id") ?? "");
-  await supabase.from("products").delete().eq("id", id);
+  if (isUuid(id)) await sql.query("delete from products where id = $1", [id]);
   revalidatePath("/", "layout");
   redirect("/admin/produits");
 }
@@ -222,17 +199,17 @@ export async function deleteProductAction(formData: FormData) {
 // ---------------------------------------------------------------- Stocks
 
 export async function updateStockAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const { supabase } = await requireAdmin();
+  const { sql } = await requireAdmin();
   const updates: Array<{ id: string; stock: number }> = [];
   for (const [key, value] of formData.entries()) {
     if (!key.startsWith("stock:")) continue;
     const stock = Number(value);
     if (!Number.isInteger(stock) || stock < 0) return { error: "Les stocks doivent être des entiers positifs." };
-    updates.push({ id: key.slice(6), stock });
+    const id = key.slice(6);
+    if (isUuid(id)) updates.push({ id, stock });
   }
-  for (const u of updates) {
-    const { error } = await supabase.from("product_variants").update({ stock: u.stock }).eq("id", u.id);
-    if (error) return { error: error.message };
+  if (updates.length) {
+    await sql.transaction(updates.map((u) => sql.query("update product_variants set stock = $2 where id = $1", [u.id, u.stock])));
   }
   revalidatePath("/", "layout");
   return { success: `${updates.length} stock(s) mis à jour.` };
@@ -243,7 +220,7 @@ export async function updateStockAction(_prev: ActionState, formData: FormData):
 const STATUSES: OrderStatus[] = ["pending_payment", "paid", "preparing", "shipped", "delivered", "cancelled"];
 
 export async function updateOrderAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const { supabase } = await requireAdmin();
+  const { sql } = await requireAdmin();
   const id = String(formData.get("id") ?? "");
   const status = String(formData.get("status") ?? "") as OrderStatus;
   const tracking = String(formData.get("trackingNumber") ?? "").trim() || null;
@@ -254,15 +231,16 @@ export async function updateOrderAction(_prev: ActionState, formData: FormData):
   if (!before) return { error: "Commande introuvable." };
 
   if (status === "cancelled" && before.status !== "cancelled") {
-    const { error } = await supabase.rpc("cancel_order", { p_order_id: id });
-    if (error) return { error: error.message };
-    await supabase.from("orders").update({ tracking_number: tracking }).eq("id", id);
+    // Annulation + remise en stock (fonction SQL cancel_order), dans la même transaction.
+    await sql.transaction([
+      sql.query("select cancel_order($1)", [id]),
+      sql.query("update orders set tracking_number = $2 where id = $1", [id, tracking]),
+    ]);
   } else {
     if (before.status === "cancelled" && status !== "cancelled") {
       return { error: "Une commande annulée ne peut pas être réactivée (le stock a été remis en vente)." };
     }
-    const { error } = await supabase.from("orders").update({ status, tracking_number: tracking }).eq("id", id);
-    if (error) return { error: error.message };
+    await sql.query("update orders set status = $2, tracking_number = $3 where id = $1", [id, status, tracking]);
   }
 
   const after = await adminGetOrder(id);

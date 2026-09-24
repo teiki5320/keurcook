@@ -2,20 +2,12 @@ import type { NextConfig } from "next";
 
 /**
  * Deux modes de build :
- *  - par défaut : application complète (Vercel / Netlify + Supabase) ;
+ *  - par défaut : application complète (Vercel + base Neon + Vercel Blob) ;
  *  - STATIC_EXPORT=1 : vitrine statique pour GitHub Pages (dossier out/),
  *    servie sous NEXT_PUBLIC_BASE_PATH (ex. /alohash). Voir scripts/build-pages.mjs.
  */
 const isStaticExport = process.env.STATIC_EXPORT === "1";
 const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
-
-const supabaseHost = (() => {
-  try {
-    return process.env.NEXT_PUBLIC_SUPABASE_URL ? new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).hostname : null;
-  } catch {
-    return null;
-  }
-})();
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -41,9 +33,8 @@ const nextConfig: NextConfig = isStaticExport
   : {
       poweredByHeader: false,
       images: {
-        remotePatterns: supabaseHost
-          ? [{ protocol: "https", hostname: supabaseHost, pathname: "/storage/v1/object/public/**" }]
-          : [],
+        // Photos envoyées depuis l'admin (Vercel Blob).
+        remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
       },
       async headers() {
         return [{ source: "/:path*", headers: securityHeaders }];

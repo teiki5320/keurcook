@@ -3,7 +3,7 @@ import { demoProducts } from "./catalog";
 import type { Order } from "../types";
 
 /**
- * Stockage en mémoire utilisé en mode démo (sans Supabase).
+ * Stockage en mémoire utilisé en mode démo (sans base de données).
  * Les données sont perdues au redémarrage du serveur : c'est volontaire.
  */
 const globalStore = globalThis as unknown as {

@@ -1,9 +1,8 @@
 import "server-only";
 import { cache } from "react";
 import { demoCategories, demoProducts } from "../demo/catalog";
-import { isSupabaseConfigured } from "../supabase/env";
-import { createPublicClient } from "../supabase/public";
-import { mapCategory, mapProduct } from "../supabase/mappers";
+import { getSql, isDbConfigured, PRODUCT_SELECT } from "../db/client";
+import { mapCategory, mapProduct } from "../db/mappers";
 import type { Category, Product, ProductWithCategory } from "../types";
 
 export interface Catalog {
@@ -15,26 +14,20 @@ export interface Catalog {
  * Charge le catalogue actif (catégories + produits + variantes).
  * Le catalogue d'une boutique CBD reste modeste (quelques centaines de
  * références) : on le charge en une requête puis on filtre en mémoire, ce
- * qui garde un comportement identique en mode démo et avec Supabase.
+ * qui garde un comportement identique en mode démo et avec la base de données.
  */
 export const getCatalog = cache(async (): Promise<Catalog> => {
   let categories: Category[];
   let products: Product[];
 
-  if (isSupabaseConfigured) {
-    const supabase = createPublicClient();
+  if (isDbConfigured) {
+    const sql = getSql();
     const [cats, prods] = await Promise.all([
-      supabase.from("categories").select("*").order("position"),
-      supabase
-        .from("products")
-        .select("*, product_variants(*)")
-        .eq("is_active", true)
-        .order("created_at", { ascending: false }),
+      sql.query("select * from categories order by position"),
+      sql.query(`${PRODUCT_SELECT} where p.is_active order by p.created_at desc`),
     ]);
-    if (cats.error) throw new Error(`Supabase (categories) : ${cats.error.message}`);
-    if (prods.error) throw new Error(`Supabase (products) : ${prods.error.message}`);
-    categories = cats.data.map(mapCategory);
-    products = prods.data.map(mapProduct);
+    categories = cats.map(mapCategory);
+    products = prods.map(mapProduct);
   } else {
     categories = demoCategories;
     products = demoProducts.filter((p) => p.isActive);

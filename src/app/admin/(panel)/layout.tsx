@@ -1,11 +1,11 @@
-import { SupabaseRequired } from "@/components/admin/SupabaseRequired";
+import { DatabaseRequired } from "@/components/admin/DatabaseRequired";
 import { AdminNav } from "@/components/admin/AdminNav";
 import { isAdminPasswordConfigured } from "@/lib/admin-session";
 import { requireAdmin } from "@/lib/data/admin";
-import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { isDbConfigured } from "@/lib/db/client";
 
 export default async function PanelLayout({ children }: { children: React.ReactNode }) {
-  if (!isSupabaseConfigured || !isAdminPasswordConfigured()) return <SupabaseRequired />;
+  if (!isDbConfigured || !isAdminPasswordConfigured()) return <DatabaseRequired />;
   await requireAdmin();
   return (
     <div className="lg:flex">

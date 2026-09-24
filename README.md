@@ -2,7 +2,7 @@
 
 Site e-commerce en français pour vendre du CBD français (fleurs, résines, huiles, infusions, cosmétiques) et des accessoires (grinders, vaporisateurs, feuilles, boîtes de conservation).
 
-**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Supabase (base de données, stockage des images et certificats) · Nodemailer (SMTP).
+**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Neon (base de données PostgreSQL) · Vercel Blob (images et certificats) · Nodemailer (SMTP).
 
 ---
 
@@ -10,7 +10,7 @@ Site e-commerce en français pour vendre du CBD français (fleurs, résines, hui
 
 👉 **https://teiki5320.github.io/alohash/**
 
-C'est une **vitrine de démonstration statique**, publiée automatiquement sur GitHub Pages à chaque push sur `main` (workflow `.github/workflows/pages.yml`). Boutique par gammes, tri, recherche, fiches produit, certificats PDF, panier, vérification d'âge et bannière cookies fonctionnent ; les produits sont ceux de démo. GitHub Pages n'ayant pas de serveur, **la commande en ligne, les emails et l'espace admin y sont désactivés** : ils fonctionnent sur la version complète (Vercel ou Netlify + Supabase, voir « Déploiement »).
+C'est une **vitrine de démonstration statique**, publiée automatiquement sur GitHub Pages à chaque push sur `main` (workflow `.github/workflows/pages.yml`). Boutique par gammes, tri, recherche, fiches produit, certificats PDF, panier, vérification d'âge et bannière cookies fonctionnent ; les produits sont ceux de démo. GitHub Pages n'ayant pas de serveur, **la commande en ligne, les emails et l'espace admin y sont désactivés** : ils fonctionnent sur la version complète (Vercel + Neon + Vercel Blob, voir « Installation complète »).
 
 Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie dans `out/`, servie sous `/alohash/`).
 
@@ -50,20 +50,22 @@ npm install
 npm run dev
 ```
 
-Ouvrez http://localhost:3000. **Sans configuration Supabase, le site tourne en mode démo** : les 16 produits de démonstration (10 CBD + 6 accessoires) sont chargés depuis `src/lib/demo/catalog.ts`, les commandes et les stocks sont gardés en mémoire (perdus au redémarrage) et les emails sont affichés dans la console. L'admin n'est pas disponible dans ce mode.
+Ouvrez http://localhost:3000. **Sans `DATABASE_URL`, le site tourne en mode démo** : les 16 produits de démonstration (10 CBD + 6 accessoires) sont chargés depuis `src/lib/demo/catalog.ts`, les commandes et les stocks sont gardés en mémoire (perdus au redémarrage) et les emails sont affichés dans la console. L'admin n'est pas disponible dans ce mode.
 
 ---
 
-## Installation complète avec Supabase
+## Installation complète (Vercel + Neon + Vercel Blob)
 
-### 1. Créer le projet
+### 1. Créer le projet Vercel, la base et le stockage
 
-1. Créez un projet sur [supabase.com](https://supabase.com) (région **UE**, ex. Paris `eu-west-3` ou Francfort, pour le RGPD).
-2. Dans **SQL Editor**, exécutez dans l'ordre :
-   - `supabase/migrations/0001_schema.sql` — tables, RLS, fonctions `place_order` / `cancel_order`, buckets de stockage ;
-   - `supabase/seed.sql` — les données de démo (facultatif).
+1. Sur [vercel.com](https://vercel.com) : **Add New → Project**, importez le dépôt GitHub (framework détecté automatiquement). Chaque push sur `main` redéploie le site.
+2. Dans le projet : **Storage → Create Database → Neon** (région **Francfort `eu-central-1`**, pour le RGPD), puis **Connect** au projet. La variable `DATABASE_URL` est ajoutée automatiquement.
+3. Toujours dans **Storage** : **Create → Blob** (accès public), puis **Connect**. La variable `BLOB_READ_WRITE_TOKEN` est ajoutée automatiquement.
+4. Installez le schéma de la base, au choix :
+   - depuis Vercel : **Storage → la base Neon → Open in Neon → SQL Editor**, collez `db/schema.sql` puis (facultatif) `db/seed.sql` et exécutez ;
+   - en local : `npx vercel link`, `npx vercel env pull .env.local`, puis `npm run db:setup` (schéma seul) ou `npm run db:setup -- --seed` (schéma + produits de démo).
 
-   Avec la CLI Supabase : `supabase link --project-ref <ref>` puis `supabase db push` et `psql … -f supabase/seed.sql`.
+   Les deux scripts sont rejouables sans perte de données.
 
 ### 2. Variables d'environnement
 
@@ -71,14 +73,14 @@ Ouvrez http://localhost:3000. **Sans configuration Supabase, le site tourne en m
 cp .env.example .env.local
 ```
 
-Renseignez au minimum `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` et `SUPABASE_SERVICE_ROLE_KEY` (Project Settings → API).
+Sur Vercel, ajoutez les autres variables dans **Settings → Environment Variables**. En local, `npx vercel env pull .env.local` récupère `DATABASE_URL` et `BLOB_READ_WRITE_TOKEN`.
 
 | Variable | Rôle |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens des emails) |
 | `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom de la boutique, email de contact |
-| `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Accès public Supabase (catalogue) |
-| `SUPABASE_SERVICE_ROLE_KEY` | **Secret serveur** : création des commandes, page de confirmation, opérations admin |
+| `DATABASE_URL` | **Secret serveur** : connexion à la base Neon (catalogue, commandes, admin) |
+| `BLOB_READ_WRITE_TOKEN` | **Secret serveur** : envoi des photos et certificats depuis l'admin (Vercel Blob) |
 | `ADMIN_PASSWORD` | **Secret** : mot de passe de l'espace admin |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASSWORD`, `EMAIL_FROM` | Envoi des emails |
 | `ADMIN_NOTIFICATION_EMAIL` | Reçoit chaque nouvelle commande |
@@ -92,7 +94,7 @@ Renseignez au minimum `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY
 1. Définissez `ADMIN_PASSWORD` (mot de passe long et unique) dans les variables d'environnement.
 2. Connectez-vous sur `/admin/login` avec ce mot de passe.
 
-Les opérations admin passent uniquement par le serveur (clé `SUPABASE_SERVICE_ROLE_KEY`). Changer `ADMIN_PASSWORD` déconnecte toutes les sessions. Aucun compte Supabase Auth n'est nécessaire : désactivez les inscriptions publiques (**Authentication → Sign In / Providers → Allow new users to sign up** : off).
+Les opérations admin passent uniquement par le serveur : la base n'est jamais accessible depuis le navigateur. Les photos et certificats partent directement du navigateur vers Vercel Blob, avec un jeton à usage unique délivré par `/admin/upload` à l'admin connecté. Changer `ADMIN_PASSWORD` déconnecte toutes les sessions.
 
 ### 4. Emails
 
@@ -120,32 +122,24 @@ Le tunnel de commande, la redirection et le passage automatique en « Payée » 
 
 Automatique à chaque push sur `main`. Réglage unique : **Settings → Pages → Source : « GitHub Actions »**. Le script `scripts/build-pages.mjs` active `output: "export"` + `basePath`, met temporairement de côté les parties serveur (admin, API, confirmation de commande) et remplace le formulaire de commande par un avis.
 
-### Vercel (recommandé pour la boutique réelle)
+### Vercel (boutique réelle)
 
-1. Poussez le dépôt sur GitHub, puis **Add New → Project** sur [vercel.com](https://vercel.com) et importez-le (framework détecté automatiquement).
-2. Ajoutez toutes les variables de `.env.example` dans **Settings → Environment Variables** (avec `NEXT_PUBLIC_SITE_URL=https://votre-domaine.fr`).
-3. Déployez.
-
-### Netlify
-
-1. **Add new site → Import an existing project**, choisissez le dépôt. `netlify.toml` est fourni (le runtime Next.js est installé automatiquement).
-2. Ajoutez les variables d'environnement (**Site configuration → Environment variables**), dont `NEXT_PUBLIC_LEGAL_HOST` avec les coordonnées de Netlify.
-3. Déployez.
+Voir « Installation complète » ci-dessus. Pensez à `NEXT_PUBLIC_SITE_URL=https://votre-domaine.fr` dans les variables d'environnement.
 
 > Vérifiez les conditions d'utilisation de l'hébergeur concernant les produits à base de CBD avant la mise en ligne.
 
 ### Nom de domaine IONOS
 
-Dans Vercel (**Settings → Domains**) ou Netlify (**Domain management**), ajoutez `votre-domaine.fr` et `www.votre-domaine.fr`, puis dans IONOS (**Domaines & SSL → votre domaine → DNS**) :
+Dans Vercel (**Settings → Domains**), ajoutez `votre-domaine.fr` et `www.votre-domaine.fr`, puis dans IONOS (**Domaines & SSL → votre domaine → DNS**) :
 
-| Type | Nom d'hôte | Valeur Vercel | Valeur Netlify |
-| --- | --- | --- | --- |
-| A | `@` | `76.76.21.21` | `75.2.60.5` |
-| CNAME | `www` | `cname.vercel-dns.com` | `<votre-site>.netlify.app` |
+| Type | Nom d'hôte | Valeur |
+| --- | --- | --- |
+| A | `@` | `76.76.21.21` |
+| CNAME | `www` | `cname.vercel-dns.com` |
 
-Supprimez au préalable les enregistrements A / AAAA / CNAME par défaut d'IONOS sur `@` et `www` (conservez les MX si vous utilisez la messagerie IONOS). Les valeurs exactes sont affichées par l'hébergeur lors de l'ajout du domaine : elles font foi. Le certificat HTTPS est généré automatiquement après propagation (de quelques minutes à 24 h).
+Supprimez au préalable les enregistrements A / AAAA / CNAME par défaut d'IONOS sur `@` et `www` (conservez les MX si vous utilisez la messagerie IONOS). Les valeurs exactes sont affichées par Vercel lors de l'ajout du domaine : elles font foi. Le certificat HTTPS est généré automatiquement après propagation (de quelques minutes à 24 h).
 
-Enfin, mettez `NEXT_PUBLIC_SITE_URL` à jour avec le domaine définitif et, dans Supabase, **Authentication → URL Configuration → Site URL**.
+Enfin, mettez `NEXT_PUBLIC_SITE_URL` à jour avec le domaine définitif.
 
 ---
 
@@ -159,7 +153,8 @@ Enfin, mettez `NEXT_PUBLIC_SITE_URL` à jour avec le domaine définitif et, dans
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Vérification TypeScript |
 | `npm run demo:assets` | Régénère les certificats PDF de démo (`public/coa`) |
-| `npm run db:seed-sql` | Régénère `supabase/seed.sql` depuis `src/lib/demo/catalog.ts` |
+| `npm run db:setup` | Installe le schéma (`db/schema.sql`) sur la base `DATABASE_URL` ; `-- --seed` ajoute les produits de démo |
+| `npm run db:seed-sql` | Régénère `db/seed.sql` depuis `src/lib/demo/catalog.ts` |
 
 ## Structure
 
@@ -167,22 +162,23 @@ Enfin, mettez `NEXT_PUBLIC_SITE_URL` à jour avec le domaine définitif et, dans
 src/
   app/(shop)/          boutique : accueil, boutique (?gamme= / ?q=), produit, panier, commande, pages légales
                        (categorie/ et accessoires/ : redirections des anciennes adresses)
-  app/admin/           espace admin (login + (panel) protégé)
+  app/admin/           espace admin (login + (panel) protégé, upload/ = jetons d'envoi Vercel Blob)
   app/api/payments/    webhooks des prestataires de paiement
   components/          UI (compliance/, layout/, nuage/ = thème et carrousels, product/, shop/, admin/)
-  lib/data/            accès aux données (catalogue, commandes, admin) — Supabase ou démo
+  lib/data/            accès aux données (catalogue, commandes, admin) — base Neon ou démo
+  lib/db/              client SQL Neon, requêtes communes, conversion des lignes
   lib/payments/        couche PaymentProvider
   lib/email/           envoi SMTP + gabarits
   lib/compliance.ts    détection des allégations de santé
   proxy.ts             protection de /admin (cookie de session admin)
-supabase/
-  migrations/          schéma SQL, RLS, fonctions
+db/
+  schema.sql           schéma SQL, fonctions place_order / cancel_order
   seed.sql             données de démo
 ```
 
 ### Sécurité
 
 - Les prix et les stocks sont **toujours recalculés en base** (`place_order`, transaction avec verrouillage des lignes) : le navigateur n'envoie que des identifiants de variantes et des quantités.
-- RLS activée sur toutes les tables : catalogue public en lecture, commandes invisibles hors admin ; écriture réservée à `is_admin()`.
+- La base n'est jamais exposée au navigateur : toutes les requêtes passent par le serveur (`DATABASE_URL` est un secret serveur), et les écritures admin exigent la session admin.
 - La page de confirmation n'est accessible qu'avec le numéro de commande **et** un jeton aléatoire.
 - Les producteurs et certificats de démo sont **fictifs**, et les photos produit (`public/products/*.webp`, une vue principale + un gros plan `-2` par produit) sont **générées par IA** : remplacez-les par les vrais produits et leurs photos avant la mise en production.

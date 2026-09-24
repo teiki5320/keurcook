@@ -2,72 +2,71 @@ import "server-only";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { ADMIN_COOKIE, verifyAdminToken } from "../admin-session";
-import { createServiceClient } from "../supabase/admin";
-import { mapCategory, mapOrder, mapProduct } from "../supabase/mappers";
+import { getSql, isUuid, ORDER_SELECT, PRODUCT_SELECT } from "../db/client";
+import { mapCategory, mapOrder, mapProduct } from "../db/mappers";
 import type { OrderStatus } from "../types";
 
 /**
  * Vérifie que la session admin (cookie signé) est valide, puis renvoie le
- * client "service_role" : les écritures admin passent côté serveur uniquement.
+ * client SQL : les écritures admin passent côté serveur uniquement.
  */
 export async function requireAdmin() {
   const cookieStore = await cookies();
   if (!verifyAdminToken(cookieStore.get(ADMIN_COOKIE)?.value)) redirect("/admin/login");
-  return { supabase: createServiceClient() };
+  return { sql: getSql() };
 }
 
 export async function adminListCategories() {
-  const { supabase } = await requireAdmin();
-  const { data, error } = await supabase.from("categories").select("*").order("position");
-  if (error) throw error;
-  return data.map(mapCategory);
+  const { sql } = await requireAdmin();
+  const rows = await sql.query("select * from categories order by position");
+  return rows.map(mapCategory);
 }
 
 export async function adminListProducts() {
-  const { supabase } = await requireAdmin();
-  const { data, error } = await supabase
-    .from("products")
-    .select("*, product_variants(*)")
-    .order("created_at", { ascending: false });
-  if (error) throw error;
-  return data.map(mapProduct);
+  const { sql } = await requireAdmin();
+  const rows = await sql.query(`${PRODUCT_SELECT} order by p.created_at desc`);
+  return rows.map(mapProduct);
 }
 
 export async function adminGetProduct(id: string) {
-  const { supabase } = await requireAdmin();
-  const { data } = await supabase.from("products").select("*, product_variants(*)").eq("id", id).maybeSingle();
-  return data ? mapProduct(data) : null;
+  const { sql } = await requireAdmin();
+  if (!isUuid(id)) return null;
+  const rows = await sql.query(`${PRODUCT_SELECT} where p.id = $1`, [id]);
+  return rows[0] ? mapProduct(rows[0]) : null;
 }
 
 export async function adminListOrders(status?: OrderStatus) {
-  const { supabase } = await requireAdmin();
-  let query = supabase.from("orders").select("*, order_items(*)").order("created_at", { ascending: false }).limit(200);
-  if (status) query = query.eq("status", status);
-  const { data, error } = await query;
-  if (error) throw error;
-  return data.map(mapOrder);
+  const { sql } = await requireAdmin();
+  const rows = status
+    ? await sql.query(`${ORDER_SELECT} where o.status = $1 order by o.created_at desc limit 200`, [status])
+    : await sql.query(`${ORDER_SELECT} order by o.created_at desc limit 200`);
+  return rows.map(mapOrder);
 }
 
 export async function adminGetOrder(id: string) {
-  const { supabase } = await requireAdmin();
-  const { data } = await supabase.from("orders").select("*, order_items(*)").eq("id", id).maybeSingle();
-  return data ? mapOrder(data) : null;
+  const { sql } = await requireAdmin();
+  if (!isUuid(id)) return null;
+  const rows = await sql.query(`${ORDER_SELECT} where o.id = $1`, [id]);
+  return rows[0] ? mapOrder(rows[0]) : null;
 }
 
 export async function adminDashboardStats() {
-  const { supabase } = await requireAdmin();
-  const [pending, toShip, products, lowStock, recent] = await Promise.all([
-    supabase.from("orders").select("id", { count: "exact", head: true }).eq("status", "pending_payment"),
-    supabase.from("orders").select("id", { count: "exact", head: true }).in("status", ["paid", "preparing"]),
-    supabase.from("products").select("id", { count: "exact", head: true }).eq("is_active", true),
-    supabase.from("product_variants").select("id", { count: "exact", head: true }).lte("stock", 5),
-    supabase.from("orders").select("*, order_items(*)").order("created_at", { ascending: false }).limit(5),
+  const { sql } = await requireAdmin();
+  const [counts, recent] = await Promise.all([
+    sql.query(`
+      select
+        (select count(*) from orders where status = 'pending_payment')::int as pending,
+        (select count(*) from orders where status in ('paid', 'preparing'))::int as to_ship,
+        (select count(*) from products where is_active)::int as products,
+        (select count(*) from product_variants where stock <= 5)::int as low_stock`),
+    sql.query(`${ORDER_SELECT} order by o.created_at desc limit 5`),
   ]);
+  const c = counts[0];
   return {
-    pendingPayment: pending.count ?? 0,
-    toShip: toShip.count ?? 0,
-    activeProducts: products.count ?? 0,
-    lowStock: lowStock.count ?? 0,
-    recentOrders: (recent.data ?? []).map(mapOrder),
+    pendingPayment: c.pending,
+    toShip: c.to_ship,
+    activeProducts: c.products,
+    lowStock: c.low_stock,
+    recentOrders: recent.map(mapOrder),
   };
 }

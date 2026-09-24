@@ -1,28 +1,10 @@
 -- =====================================================================
--- Alohash — schéma de base de données (Supabase / PostgreSQL)
--- À exécuter dans l'éditeur SQL de Supabase ou via `supabase db push`.
+-- Alohash — schéma de base de données (PostgreSQL, hébergé chez Neon)
+-- Installation : `npm run db:setup` (voir README), ou copier-coller dans
+-- l'éditeur SQL de Neon. Le script est rejouable sans perte de données.
 -- =====================================================================
 
 create extension if not exists "pgcrypto";
-
--- ---------------------------------------------------------------------
--- Administrateurs : un utilisateur Supabase Auth présent dans cette table
--- a accès à l'espace /admin.
--- ---------------------------------------------------------------------
-create table if not exists public.admins (
-  user_id uuid primary key references auth.users (id) on delete cascade,
-  created_at timestamptz not null default now()
-);
-
-create or replace function public.is_admin()
-returns boolean
-language sql
-stable
-security definer
-set search_path = public
-as $$
-  select exists (select 1 from public.admins where user_id = auth.uid());
-$$;
 
 -- ---------------------------------------------------------------------
 -- Catalogue
@@ -136,7 +118,7 @@ create sequence if not exists public.order_number_seq start 1001;
 -- place_order : création atomique d'une commande.
 -- Vérifie les prix et les stocks côté base (on ne fait jamais confiance
 -- aux prix envoyés par le navigateur), décrémente le stock et renvoie
--- la commande. Appelée uniquement côté serveur avec la clé service_role.
+-- la commande. Appelée uniquement côté serveur (src/lib/data/orders.ts).
 -- ---------------------------------------------------------------------
 create or replace function public.place_order(
   p_customer jsonb,
@@ -146,7 +128,6 @@ create or replace function public.place_order(
 )
 returns jsonb
 language plpgsql
-security definer
 set search_path = public
 as $$
 declare
@@ -238,86 +219,16 @@ begin
 end;
 $$;
 
-revoke all on function public.place_order(jsonb, jsonb, text, jsonb) from public, anon, authenticated;
-grant execute on function public.place_order(jsonb, jsonb, text, jsonb) to service_role;
-
--- ---------------------------------------------------------------------
--- Row Level Security
--- ---------------------------------------------------------------------
-alter table public.admins enable row level security;
-alter table public.categories enable row level security;
-alter table public.products enable row level security;
-alter table public.product_variants enable row level security;
-alter table public.orders enable row level security;
-alter table public.order_items enable row level security;
-
--- Admins : un utilisateur peut vérifier s'il est admin.
-drop policy if exists "admins_self_read" on public.admins;
-create policy "admins_self_read" on public.admins for select using (user_id = auth.uid());
-
--- Catalogue : lecture publique des éléments actifs, écriture admin.
-drop policy if exists "categories_public_read" on public.categories;
-create policy "categories_public_read" on public.categories for select using (true);
-drop policy if exists "categories_admin_write" on public.categories;
-create policy "categories_admin_write" on public.categories for all using (public.is_admin()) with check (public.is_admin());
-
-drop policy if exists "products_public_read" on public.products;
-create policy "products_public_read" on public.products for select using (is_active or public.is_admin());
-drop policy if exists "products_admin_write" on public.products;
-create policy "products_admin_write" on public.products for all using (public.is_admin()) with check (public.is_admin());
-
-drop policy if exists "variants_public_read" on public.product_variants;
-create policy "variants_public_read" on public.product_variants for select using (
-  exists (select 1 from public.products p where p.id = product_id and (p.is_active or public.is_admin()))
-);
-drop policy if exists "variants_admin_write" on public.product_variants;
-create policy "variants_admin_write" on public.product_variants for all using (public.is_admin()) with check (public.is_admin());
-
--- Commandes : jamais lisibles publiquement. Création via place_order (service_role).
-drop policy if exists "orders_admin_all" on public.orders;
-create policy "orders_admin_all" on public.orders for all using (public.is_admin()) with check (public.is_admin());
-drop policy if exists "order_items_admin_all" on public.order_items;
-create policy "order_items_admin_all" on public.order_items for all using (public.is_admin()) with check (public.is_admin());
-
--- ---------------------------------------------------------------------
--- Stockage : images produits et certificats d'analyse (lecture publique,
--- écriture réservée aux admins).
--- ---------------------------------------------------------------------
-insert into storage.buckets (id, name, public)
-values ('product-images', 'product-images', true), ('certificates', 'certificates', true)
-on conflict (id) do nothing;
-
-drop policy if exists "catalog_files_public_read" on storage.objects;
-create policy "catalog_files_public_read" on storage.objects for select
-  using (bucket_id in ('product-images', 'certificates'));
-
-drop policy if exists "catalog_files_admin_insert" on storage.objects;
-create policy "catalog_files_admin_insert" on storage.objects for insert
-  with check (bucket_id in ('product-images', 'certificates') and public.is_admin());
-
-drop policy if exists "catalog_files_admin_update" on storage.objects;
-create policy "catalog_files_admin_update" on storage.objects for update
-  using (bucket_id in ('product-images', 'certificates') and public.is_admin());
-
-drop policy if exists "catalog_files_admin_delete" on storage.objects;
-create policy "catalog_files_admin_delete" on storage.objects for delete
-  using (bucket_id in ('product-images', 'certificates') and public.is_admin());
-
 -- ---------------------------------------------------------------------
 -- cancel_order : annule une commande et remet les produits en stock.
--- Réservée aux administrateurs.
+-- Appelée uniquement depuis l'admin (session vérifiée côté serveur).
 -- ---------------------------------------------------------------------
 create or replace function public.cancel_order(p_order_id uuid)
 returns void
 language plpgsql
-security definer
 set search_path = public
 as $$
 begin
-  if not public.is_admin() then
-    raise exception 'FORBIDDEN';
-  end if;
-
   update public.orders set status = 'cancelled'
    where id = p_order_id and status <> 'cancelled';
   if not found then
@@ -335,6 +246,3 @@ begin
    where v.id = i.variant_id;
 end;
 $$;
-
-revoke all on function public.cancel_order(uuid) from public, anon;
-grant execute on function public.cancel_order(uuid) to authenticated;

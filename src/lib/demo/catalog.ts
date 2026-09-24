@@ -2,8 +2,8 @@
  * Données de démonstration : 10 produits CBD + 6 accessoires.
  *
  * Elles servent :
- *  - de catalogue de secours quand Supabase n'est pas configuré (mode démo) ;
- *  - de source pour générer `supabase/seed.sql` (npm run db:seed-sql).
+ *  - de catalogue de secours quand la base de données n'est pas configurée (mode démo) ;
+ *  - de source pour générer `db/seed.sql` (npm run db:seed-sql).
  *
  * Producteurs, certificats et références sont FICTIFS. Les textes ne
  * contiennent volontairement aucune allégation thérapeutique ou médicale.

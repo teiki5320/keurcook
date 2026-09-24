@@ -84,7 +84,7 @@ export function CartView({ flatRateCents, freeThresholdCents }: { flatRateCents:
               </button>
               <p role="note" className="mt-3 rounded-2xl border border-[#ffc46b]/40 bg-[#ffc46b]/10 p-3 text-xs text-[#ffc46b]">
                 Site de démonstration : la commande en ligne n&apos;est pas active sur cette version. Elle fonctionne
-                sur la version complète du site (avec Supabase).
+                sur la version complète du site.
               </p>
             </>
           ) : (

@@ -2,9 +2,8 @@ import "server-only";
 import { randomBytes, randomUUID } from "node:crypto";
 import { computeShipping, shippingConfig } from "../config";
 import { demoOrders, findDemoVariant, nextDemoOrderNumber } from "../demo/store";
-import { isSupabaseConfigured } from "../supabase/env";
-import { createServiceClient } from "../supabase/admin";
-import { mapOrder } from "../supabase/mappers";
+import { getSql, isDbConfigured, isUuid, ORDER_SELECT, pgError } from "../db/client";
+import { mapOrder } from "../db/mappers";
 import type { CartLineInput, CustomerInput, Order } from "../types";
 
 export class OrderError extends Error {}
@@ -40,30 +39,35 @@ export async function placeOrder(
   const lines = mergeLines(rawLines);
   if (lines.length === 0) throw new OrderError("Votre panier est vide.");
 
-  if (isSupabaseConfigured) {
-    const supabase = createServiceClient();
-    const { data, error } = await supabase.rpc("place_order", {
-      p_customer: {
-        email: customer.email,
-        first_name: customer.firstName,
-        last_name: customer.lastName,
-        phone: customer.phone ?? "",
-        address_line1: customer.addressLine1,
-        address_line2: customer.addressLine2 ?? "",
-        postal_code: customer.postalCode,
-        city: customer.city,
-        country: customer.country,
-        notes: customer.notes ?? "",
-      },
-      p_items: lines.map((l) => ({ variant_id: l.variantId, quantity: l.quantity })),
-      p_payment_provider: paymentProvider,
-      p_shipping_rules: {
-        flat_rate_cents: shippingConfig.flatRateCents,
-        free_threshold_cents: shippingConfig.freeThresholdCents,
-      },
-    });
-    if (error) throw new OrderError(translateDbError(error.message));
-    const order = await getOrderById((data as { id: string }).id);
+  if (isDbConfigured) {
+    const customerJson = {
+      email: customer.email,
+      first_name: customer.firstName,
+      last_name: customer.lastName,
+      phone: customer.phone ?? "",
+      address_line1: customer.addressLine1,
+      address_line2: customer.addressLine2 ?? "",
+      postal_code: customer.postalCode,
+      city: customer.city,
+      country: customer.country,
+      notes: customer.notes ?? "",
+    };
+    let id: string;
+    try {
+      const rows = await getSql().query("select (place_order($1::jsonb, $2::jsonb, $3, $4::jsonb)) ->> 'id' as id", [
+        JSON.stringify(customerJson),
+        JSON.stringify(lines.map((l) => ({ variant_id: l.variantId, quantity: l.quantity }))),
+        paymentProvider,
+        JSON.stringify({
+          flat_rate_cents: shippingConfig.flatRateCents,
+          free_threshold_cents: shippingConfig.freeThresholdCents,
+        }),
+      ]);
+      id = rows[0].id;
+    } catch (e) {
+      throw new OrderError(translateDbError(pgError(e).message));
+    }
+    const order = await getOrderById(id);
     if (!order) throw new OrderError("Commande introuvable après création.");
     return order;
   }
@@ -118,47 +122,38 @@ export async function placeOrder(
 }
 
 async function getOrderById(id: string): Promise<Order | null> {
-  if (!isSupabaseConfigured) return demoOrders.get(id) ?? null;
-  const supabase = createServiceClient();
-  const { data } = await supabase.from("orders").select("*, order_items(*)").eq("id", id).maybeSingle();
-  return data ? mapOrder(data) : null;
+  if (!isDbConfigured) return demoOrders.get(id) ?? null;
+  if (!isUuid(id)) return null;
+  const rows = await getSql().query(`${ORDER_SELECT} where o.id = $1`, [id]);
+  return rows[0] ? mapOrder(rows[0]) : null;
 }
 
 /** Lecture publique d'une commande : nécessite le numéro ET le jeton d'accès. */
 export async function getOrderForCustomer(orderNumber: string, token: string): Promise<Order | null> {
   if (!orderNumber || !token) return null;
-  if (!isSupabaseConfigured) {
+  if (!isDbConfigured) {
     const order = [...demoOrders.values()].find((o) => o.orderNumber === orderNumber);
     return order && order.accessToken === token ? order : null;
   }
-  const supabase = createServiceClient();
-  const { data } = await supabase
-    .from("orders")
-    .select("*, order_items(*)")
-    .eq("order_number", orderNumber)
-    .eq("access_token", token)
-    .maybeSingle();
-  return data ? mapOrder(data) : null;
+  const rows = await getSql().query(`${ORDER_SELECT} where o.order_number = $1 and o.access_token = $2`, [orderNumber, token]);
+  return rows[0] ? mapOrder(rows[0]) : null;
 }
 
 /** Marque une commande comme payée (webhook d'un prestataire). */
 export async function markOrderPaid(orderNumber: string, reference?: string): Promise<Order | null> {
-  if (!isSupabaseConfigured) {
+  if (!isDbConfigured) {
     const order = [...demoOrders.values()].find((o) => o.orderNumber === orderNumber);
     if (!order) return null;
     if (order.status === "pending_payment") order.status = "paid";
     if (reference) order.paymentReference = reference;
     return order;
   }
-  const supabase = createServiceClient();
-  const { data } = await supabase
-    .from("orders")
-    .update({ status: "paid", ...(reference ? { payment_reference: reference } : {}) })
-    .eq("order_number", orderNumber)
-    .eq("status", "pending_payment")
-    .select("*, order_items(*)")
-    .maybeSingle();
-  return data ? mapOrder(data) : null;
+  const rows = await getSql().query(
+    `update orders set status = 'paid', payment_reference = coalesce($2, payment_reference)
+      where order_number = $1 and status = 'pending_payment' returning id`,
+    [orderNumber, reference ?? null],
+  );
+  return rows[0] ? getOrderById(rows[0].id) : null;
 }
 
 export function orderUrl(order: Pick<Order, "orderNumber" | "accessToken">, baseUrl: string) {

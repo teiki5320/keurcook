@@ -2,9 +2,9 @@
 
 import { startTransition, useActionState, useState } from "react";
 import { FileDown, Plus, Trash2, Upload } from "lucide-react";
-import { createUploadUrlAction, saveProductAction, type ActionState } from "@/app/admin/actions";
+import { upload } from "@vercel/blob/client";
+import { saveProductAction, type ActionState } from "@/app/admin/actions";
 import { ProductImage } from "@/components/product/ProductImage";
-import { createBrowserSupabase } from "@/lib/supabase/browser";
 import type { Category, Product } from "@/lib/types";
 
 interface VariantDraft {
@@ -15,13 +15,16 @@ interface VariantDraft {
   sku: string;
 }
 
-async function uploadFile(bucket: "product-images" | "certificates", file: File) {
-  const { path, token, publicUrl } = await createUploadUrlAction(bucket, file.name);
-  const { error } = await createBrowserSupabase()
-    .storage.from(bucket)
-    .uploadToSignedUrl(path, token, file, { cacheControl: "31536000", contentType: file.type || undefined });
-  if (error) throw new Error(error.message);
-  return publicUrl;
+/** Envoie le fichier directement vers Vercel Blob (jeton délivré par /admin/upload). */
+async function uploadFile(folder: "product-images" | "certificates", file: File) {
+  const ext = file.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") || "bin";
+  const base = file.name.replace(/\.[^.]+$/, "").normalize("NFD").replace(/[^\w-]+/g, "-").slice(0, 40) || "fichier";
+  const blob = await upload(`${folder}/${base}.${ext}`, file, {
+    access: "public",
+    handleUploadUrl: "/admin/upload",
+    contentType: file.type || undefined,
+  });
+  return blob.url;
 }
 
 export function ProductForm({ categories, product }: { categories: Category[]; product?: Product }) {

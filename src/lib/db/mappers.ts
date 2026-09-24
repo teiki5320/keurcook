@@ -5,6 +5,8 @@ import type { Category, Order, OrderItem, Product, Variant } from "../types";
 type Row = Record<string, any>;
 
 const num = (v: unknown) => (v === null || v === undefined ? null : Number(v));
+/** Le pilote renvoie des objets Date, les colonnes JSON des chaînes ISO. */
+const iso = (v: unknown) => (v instanceof Date ? v.toISOString() : String(v));
 
 export function mapCategory(r: Row): Category {
   return {
@@ -46,7 +48,7 @@ export function mapProduct(r: Row): Product {
     tags: r.tags ?? [],
     isActive: r.is_active,
     featured: r.featured,
-    createdAt: r.created_at,
+    createdAt: iso(r.created_at),
     variants: ((r.product_variants ?? []) as Row[])
       .map(mapVariant)
       .sort((a, b) => a.position - b.position),
@@ -87,7 +89,7 @@ export function mapOrder(r: Row): Order {
     shippingCents: r.shipping_cents,
     totalCents: r.total_cents,
     trackingNumber: r.tracking_number ?? null,
-    createdAt: r.created_at,
+    createdAt: iso(r.created_at),
     items: ((r.order_items ?? []) as Row[]).map(mapOrderItem),
   };
 }

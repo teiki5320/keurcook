@@ -1,14 +1,14 @@
 import { Leaf } from "lucide-react";
-import { SupabaseRequired } from "@/components/admin/SupabaseRequired";
+import { DatabaseRequired } from "@/components/admin/DatabaseRequired";
 import { LoginForm } from "@/components/admin/LoginForm";
 import { isAdminPasswordConfigured } from "@/lib/admin-session";
-import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { isDbConfigured } from "@/lib/db/client";
 import { siteConfig } from "@/lib/config";
 
 export const metadata = { title: "Connexion" };
 
 export default function LoginPage() {
-  if (!isSupabaseConfigured || !isAdminPasswordConfigured()) return <SupabaseRequired />;
+  if (!isDbConfigured || !isAdminPasswordConfigured()) return <DatabaseRequired />;
   return (
     <div className="flex min-h-dvh items-center justify-center px-4">
       <div className="card w-full max-w-sm p-7">

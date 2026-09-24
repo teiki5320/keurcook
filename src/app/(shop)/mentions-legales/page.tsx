@@ -30,9 +30,8 @@ export default function LegalNoticePage() {
       <h2>Hébergement</h2>
       <p>{l.host}</p>
       <p>
-        Base de données et stockage des fichiers : Supabase Inc., 970 Toa Payoh North #07-04, Singapour 318992 —
-        supabase.com (données hébergées dans la région choisie lors de la création du projet, de préférence
-        dans l&apos;Union européenne).
+        Base de données : Neon (neon.com), service fourni via Vercel. Stockage des fichiers (photos, certificats) :
+        Vercel Blob, Vercel Inc. Les données sont hébergées dans l&apos;Union européenne (région de Francfort).
       </p>
 
       <h2>Activité réglementée</h2>

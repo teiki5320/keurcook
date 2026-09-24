@@ -1,5 +1,5 @@
 /**
- * Génère supabase/seed.sql à partir des données de démo (src/lib/demo/catalog.ts).
+ * Génère db/seed.sql à partir des données de démo (src/lib/demo/catalog.ts).
  * Usage : npm run db:seed-sql
  */
 import { writeFileSync } from "node:fs";
@@ -38,5 +38,5 @@ const out: string[] = [
   "",
 ];
 
-writeFileSync(join(__dirname, "..", "supabase", "seed.sql"), out.join("\n"));
-console.log("supabase/seed.sql généré.");
+writeFileSync(join(__dirname, "..", "db", "seed.sql"), out.join("\n"));
+console.log("db/seed.sql généré.");

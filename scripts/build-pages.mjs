@@ -46,9 +46,8 @@ try {
     STATIC_EXPORT: "1",
     NEXT_PUBLIC_BASE_PATH: process.env.NEXT_PUBLIC_BASE_PATH ?? "/alohash",
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? "https://teiki5320.github.io/alohash",
-    // La vitrine utilise toujours les données de démo, jamais Supabase.
-    NEXT_PUBLIC_SUPABASE_URL: "",
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: "",
+    // La vitrine utilise toujours les données de démo, jamais la base de données.
+    DATABASE_URL: "",
   };
   const result = spawnSync("npx", ["next", "build"], { cwd: root, env, stdio: "inherit" });
   status = result.status ?? 1;

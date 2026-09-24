@@ -17,7 +17,7 @@ export function CheckoutForm(_props: {
       <p className="mt-3 text-sm text-muted">
         Cette version du site est une vitrine statique hébergée sur GitHub Pages : elle ne peut pas enregistrer de
         commande. La commande en ligne, les emails et l&apos;espace admin fonctionnent sur la version complète
-        (Vercel ou Netlify + Supabase).
+        (hébergée sur Vercel).
       </p>
       <Link href="/panier" className="btn-secondary mt-6">
         Retour au panier
