@@ -16,13 +16,13 @@ export const siteConfig = {
     "Boutique en ligne de CBD français : fleurs, résines, huiles, infusions et cosmétiques issus de producteurs français, avec certificat d'analyse pour chaque produit. THC ≤ 0,3 %. Interdit aux mineurs.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
   locale: "fr_FR",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@example.fr",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@alohash.fr",
 };
 
 /** Informations légales de l'éditeur (annuaire-entreprises.data.gouv.fr), affichées dans les mentions légales / CGV. */
 export const legalConfig = {
   companyName: process.env.NEXT_PUBLIC_LEGAL_COMPANY_NAME || "ALOHASH",
-  legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "SAS (société par actions simplifiée) au capital de [montant] €",
+  legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "SAS (société par actions simplifiée) au capital de 200 €",
   address: process.env.NEXT_PUBLIC_LEGAL_ADDRESS || "La Petite Sigonnière, 85190 Maché, France",
   siret: process.env.NEXT_PUBLIC_LEGAL_SIRET || "938 522 596 00015",
   rcs: process.env.NEXT_PUBLIC_LEGAL_RCS || "RCS La Roche-sur-Yon 938 522 596",

@@ -16,7 +16,7 @@ export interface EmailMessage {
  */
 export async function sendEmail(message: EmailMessage): Promise<void> {
   const host = process.env.SMTP_HOST;
-  const from = process.env.EMAIL_FROM || "Alohash <no-reply@example.fr>";
+  const from = process.env.EMAIL_FROM || "Alohash <contact@alohash.fr>";
 
   if (!host) {
     console.info(
