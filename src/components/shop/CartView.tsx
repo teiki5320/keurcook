@@ -5,6 +5,7 @@ import { Minus, Plus, Trash2 } from "lucide-react";
 import { ProductImage } from "@/components/product/ProductImage";
 import { useCart } from "@/lib/cart/cart-context";
 import { formatPrice } from "@/lib/format";
+import { isStaticExport } from "@/lib/paths";
 import { CartSummary } from "./CartSummary";
 
 export function CartView({ flatRateCents, freeThresholdCents }: { flatRateCents: number; freeThresholdCents: number }) {
@@ -76,9 +77,21 @@ export function CartView({ flatRateCents, freeThresholdCents }: { flatRateCents:
       </ul>
       <div className="space-y-4">
         <CartSummary subtotalCents={subtotalCents} flatRateCents={flatRateCents} freeThresholdCents={freeThresholdCents}>
-          <Link href="/commande" className="btn-primary mt-2 w-full py-3">
-            Passer commande
-          </Link>
+          {isStaticExport ? (
+            <>
+              <button type="button" disabled className="btn-primary mt-2 w-full py-3">
+                Passer commande
+              </button>
+              <p role="note" className="mt-3 rounded-2xl border border-[#ffc46b]/40 bg-[#ffc46b]/10 p-3 text-xs text-[#ffc46b]">
+                Site de démonstration : la commande en ligne n&apos;est pas active sur cette version. Elle fonctionne
+                sur la version complète du site (avec Supabase).
+              </p>
+            </>
+          ) : (
+            <Link href="/commande" className="btn-primary mt-2 w-full py-3">
+              Passer commande
+            </Link>
+          )}
         </CartSummary>
         <p className="text-xs text-muted">
           Vente réservée aux personnes majeures. Les prix et disponibilités sont vérifiés lors de la validation de la commande.

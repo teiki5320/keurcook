@@ -1,6 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import { ContentShell } from "@/components/nuage/ContentShell";
-import { CartToast } from "@/components/nuage/CartToast";
+import { CartDrawer } from "@/components/nuage/CartDrawer";
 import { NuageBackdrop } from "@/components/nuage/NuageBackdrop";
 import { NuageHeader, type NavItem } from "@/components/nuage/NuageHeader";
 import { PageTransitionProvider } from "@/components/nuage/PageTransition";
@@ -35,7 +35,7 @@ export default function ShopLayout({ children }: { children: React.ReactNode }) 
           <div className="nuage-footer relative z-[2] border-t border-[#fbeee2]/10">
             <Footer />
           </div>
-          <CartToast />
+          <CartDrawer />
         </div>
       </PageTransitionProvider>
     </CartProvider>

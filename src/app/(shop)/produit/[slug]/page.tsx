@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import { FileDown, FlaskConical, MapPin, Tractor } from "lucide-react";
 import { UsageWarnings } from "@/components/compliance/Warnings";
 import { AddToCart } from "@/components/product/AddToCart";
-import { ProductGrid } from "@/components/product/ProductCard";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { RateBadges } from "@/components/product/RateBadges";
+import { VarietyCard } from "@/components/shop/VarietyCard";
 import { minPriceCents, totalStock } from "@/lib/catalog-utils";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
 import { withBasePath } from "@/lib/paths";
@@ -148,7 +148,11 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
       {related.length > 0 && (
         <section className="mt-16">
           <h2 className="mb-6 font-display text-2xl text-forest-900">Vous aimerez aussi</h2>
-          <ProductGrid products={related} />
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
+            {related.map((p) => (
+              <VarietyCard key={p.id} product={p} />
+            ))}
+          </div>
         </section>
       )}
     </div>

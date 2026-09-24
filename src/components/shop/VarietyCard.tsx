@@ -2,23 +2,15 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { MapPin } from "lucide-react";
+import { Heart, MapPin } from "lucide-react";
 import { CART_ADDED_EVENT } from "@/components/nuage/shared";
 import { ProductImage } from "@/components/product/ProductImage";
 import { RateBadges } from "@/components/product/RateBadges";
 import { useCart } from "@/lib/cart/cart-context";
-import { formatPrice } from "@/lib/format";
-import type { ProductWithCategory, Variant } from "@/lib/types";
+import { formatPrice, pricePerGram } from "@/lib/format";
+import type { ProductWithCategory } from "@/lib/types";
 
-/** Prix au gramme quand le format est exprimé en grammes (« 5 g » → 6,00 € / g). */
-function perGram(v: Variant) {
-  const m = v.label.match(/^(\d+(?:[.,]\d+)?)\s*g$/i);
-  if (!m) return null;
-  const grams = Number(m[1].replace(",", "."));
-  return grams > 0 ? `${formatPrice(Math.round(v.priceCents / grams))} / g` : null;
-}
-
-/** Carte d'une variété : photo, infos, choix du format (3 g · 5 g · 10 g…) et ajout au panier. */
+/** Carte produit : photo, infos, choix du format (3 g · 5 g · 10 g…) et ajout au panier. */
 export function VarietyCard({ product, priority }: { product: ProductWithCategory; priority?: boolean }) {
   const { add } = useCart();
   const firstAvailable = product.variants.find((v) => v.stock > 0) ?? product.variants[0];
@@ -26,7 +18,7 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
   const variant = product.variants.find((v) => v.id === variantId) ?? firstAvailable;
   if (!variant) return null;
   const out = variant.stock <= 0;
-  const unit = perGram(variant);
+  const unit = pricePerGram(variant.label, variant.priceCents);
 
   const onAdd = () => {
     if (out) return;
@@ -59,6 +51,11 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
         <span className="absolute top-3 left-3 rounded-full bg-cream/95 px-2.5 py-0.5 text-[11px] font-semibold text-forest-800">
           {product.category.name}
         </span>
+        {product.featured && (
+          <span className="absolute bottom-3 left-3 inline-flex items-center gap-1 rounded-full bg-[#ff7a3d] px-2.5 py-0.5 text-[11px] font-bold text-[#140a07]">
+            <Heart className="h-3 w-3 fill-current" aria-hidden /> Coup de cœur
+          </span>
+        )}
       </Link>
       <div className="flex flex-1 flex-col gap-2 p-3.5 sm:p-4">
         <h3 className="font-display text-base leading-snug text-forest-900 sm:text-lg">

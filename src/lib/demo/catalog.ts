@@ -297,7 +297,7 @@ export const demoProducts: Product[] = seeds.map((seed, index) => {
   return {
     ...seed,
     id: productId,
-    images: [`/products/${seed.slug}.webp`],
+    images: [`/products/${seed.slug}.webp`, `/products/${seed.slug}-2.webp`],
     coaUrl: category.kind === "cbd" ? `/coa/${seed.slug}.pdf` : null,
     isActive: true,
     createdAt: new Date(Date.UTC(2026, 0, 1 + index)).toISOString(),

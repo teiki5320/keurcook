@@ -50,7 +50,7 @@ export default function PrivacyPage() {
       <h2>Destinataires et sous-traitants</h2>
       <p>
         Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site
-        (Vercel ou Netlify), base de données (Supabase), envoi d&apos;emails (prestataire SMTP), transporteur. Lorsque des
+        ({legalConfig.hostName}), base de données (Supabase), envoi d&apos;emails (prestataire SMTP), transporteur. Lorsque des
         données sont transférées hors de l&apos;Union européenne, ce transfert est encadré par des clauses contractuelles
         types de la Commission européenne.
       </p>

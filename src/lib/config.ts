@@ -3,6 +3,12 @@
  * Les valeurs sensibles ou propres à l'entreprise se règlent via les
  * variables d'environnement (voir .env.example).
  */
+import { isStaticExport } from "./paths";
+
+/** Hébergeur par défaut : GitHub Pages pour la démo statique, Vercel sinon. */
+const defaultHost = isStaticExport
+  ? { name: "GitHub Pages", full: "GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — pages.github.com" }
+  : { name: "Vercel", full: "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com" };
 export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME || "Alohash",
   tagline: "CBD français, cultivé avec soin",
@@ -24,9 +30,8 @@ export const legalConfig = {
   director: process.env.NEXT_PUBLIC_LEGAL_DIRECTOR || "[Nom du directeur de la publication]",
   phone: process.env.NEXT_PUBLIC_LEGAL_PHONE || "[Téléphone]",
   mediator: process.env.NEXT_PUBLIC_LEGAL_MEDIATOR || "[Nom et coordonnées du médiateur de la consommation]",
-  host:
-    process.env.NEXT_PUBLIC_LEGAL_HOST ||
-    "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com",
+  host: process.env.NEXT_PUBLIC_LEGAL_HOST || defaultHost.full,
+  hostName: process.env.NEXT_PUBLIC_LEGAL_HOST_NAME || defaultHost.name,
 };
 
 /** Règles de livraison (France métropolitaine). */

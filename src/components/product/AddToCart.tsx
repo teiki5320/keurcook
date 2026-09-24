@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-import { Check, Minus, Plus, ShoppingBag } from "lucide-react";
+import { Minus, Plus, ShoppingBag } from "lucide-react";
+import { CART_ADDED_EVENT } from "@/components/nuage/shared";
 import { useCart } from "@/lib/cart/cart-context";
-import { formatPrice } from "@/lib/format";
+import { formatPrice, pricePerGram } from "@/lib/format";
 import type { Variant } from "@/lib/types";
 
 interface Props {
@@ -17,11 +17,11 @@ export function AddToCart({ product, variants }: Props) {
   const firstAvailable = variants.find((v) => v.stock > 0) ?? variants[0];
   const [variantId, setVariantId] = useState(firstAvailable?.id);
   const [qty, setQty] = useState(1);
-  const [added, setAdded] = useState(false);
   const variant = variants.find((v) => v.id === variantId) ?? firstAvailable;
 
   if (!variant) return null;
   const outOfStock = variant.stock <= 0;
+  const unit = pricePerGram(variant.label, variant.priceCents);
 
   function onAdd() {
     if (!variant || outOfStock) return;
@@ -38,13 +38,16 @@ export function AddToCart({ product, variants }: Props) {
       },
       qty,
     );
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2500);
+    // Ouvre le mini-panier latéral.
+    window.dispatchEvent(new CustomEvent(CART_ADDED_EVENT, { detail: `${product.name} (${variant.label})${qty > 1 ? ` × ${qty}` : ""}` }));
   }
 
   return (
     <div className="space-y-5">
-      <p className="text-3xl font-semibold text-forest-900">{formatPrice(variant.priceCents)}</p>
+      <p className="text-3xl font-semibold text-forest-900">
+        {formatPrice(variant.priceCents)}
+        {unit && <span className="ml-2 text-base font-normal text-muted">soit {unit}</span>}
+      </p>
 
       {variants.length > 1 && (
         <fieldset>
@@ -100,15 +103,10 @@ export function AddToCart({ product, variants }: Props) {
           </button>
         </div>
         <button type="button" onClick={onAdd} disabled={outOfStock} className="btn-primary h-11 flex-1">
-          {added ? <Check className="h-4 w-4" /> : <ShoppingBag className="h-4 w-4" />}
-          {added ? "Ajouté au panier" : "Ajouter au panier"}
+          <ShoppingBag className="h-4 w-4" />
+          Ajouter au panier
         </button>
       </div>
-      {added && (
-        <Link href="/panier" className="block text-sm font-medium text-forest-700 underline underline-offset-2">
-          Voir le panier et commander →
-        </Link>
-      )}
     </div>
   );
 }

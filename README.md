@@ -10,7 +10,7 @@ Site e-commerce en français pour vendre du CBD français (fleurs, résines, hui
 
 👉 **https://teiki5320.github.io/alohash/**
 
-C'est une **vitrine de démonstration statique**, publiée automatiquement sur GitHub Pages à chaque push sur `main` (workflow `.github/workflows/pages.yml`). Catalogue, filtres, recherche, fiches produit, certificats PDF, panier, vérification d'âge et bannière cookies fonctionnent ; les produits sont ceux de démo. GitHub Pages n'ayant pas de serveur, **la commande en ligne, les emails et l'espace admin y sont désactivés** : ils fonctionnent sur la version complète (Vercel ou Netlify + Supabase, voir « Déploiement »).
+C'est une **vitrine de démonstration statique**, publiée automatiquement sur GitHub Pages à chaque push sur `main` (workflow `.github/workflows/pages.yml`). Boutique par gammes, tri, recherche, fiches produit, certificats PDF, panier, vérification d'âge et bannière cookies fonctionnent ; les produits sont ceux de démo. GitHub Pages n'ayant pas de serveur, **la commande en ligne, les emails et l'espace admin y sont désactivés** : ils fonctionnent sur la version complète (Vercel ou Netlify + Supabase, voir « Déploiement »).
 
 Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie dans `out/`, servie sous `/alohash/`).
 
@@ -20,10 +20,10 @@ Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie 
 
 | Côté boutique | Côté admin (`/admin`) |
 | --- | --- |
-| Accueil, catégories, fiche produit | Connexion Supabase Auth, accès réservé aux comptes de la table `admins` |
-| Filtres (univers, catégorie, région, prix, taux de CBD, stock) + tri | Produits : création / édition, variantes, photos, certificat PDF, mise en avant |
+| Accueil vitrine (gammes), boutique en une page : carrousel des gammes, produits de la gamme au centre, « Tout voir » | Connexion Supabase Auth, accès réservé aux comptes de la table `admins` |
+| Tri (mis en avant, prix, taux de CBD), badge « Coup de cœur », prix au gramme | Produits : création / édition, variantes, photos, certificat PDF, mise en avant |
 | Recherche plein texte (insensible aux accents) | Stocks : édition en masse, filtre « stock bas » |
-| Panier (stockage local), commande, page de confirmation | Commandes : filtres par statut, détail, changement de statut, n° de suivi, email au client |
+| Mini-panier latéral après ajout, panier (stockage local), commande, page de confirmation | Commandes : filtres par statut, détail, changement de statut, n° de suivi, email au client |
 | Paiement par virement via une couche `PaymentProvider` | Annulation → remise en stock automatique |
 | Emails de confirmation (client + notification admin) | Tableau de bord (à encaisser, à expédier, stocks bas) |
 
@@ -171,10 +171,11 @@ Enfin, mettez `NEXT_PUBLIC_SITE_URL` à jour avec le domaine définitif et, dans
 
 ```
 src/
-  app/(shop)/          boutique : accueil, boutique, catégorie, produit, panier, commande, pages légales
+  app/(shop)/          boutique : accueil, boutique (?gamme= / ?q=), produit, panier, commande, pages légales
+                       (categorie/ et accessoires/ : redirections des anciennes adresses)
   app/admin/           espace admin (login + (panel) protégé)
   app/api/payments/    webhooks des prestataires de paiement
-  components/          UI (compliance/, layout/, product/, shop/, admin/)
+  components/          UI (compliance/, layout/, nuage/ = thème et carrousels, product/, shop/, admin/)
   lib/data/            accès aux données (catalogue, commandes, admin) — Supabase ou démo
   lib/payments/        couche PaymentProvider
   lib/email/           envoi SMTP + gabarits
@@ -190,4 +191,4 @@ supabase/
 - Les prix et les stocks sont **toujours recalculés en base** (`place_order`, transaction avec verrouillage des lignes) : le navigateur n'envoie que des identifiants de variantes et des quantités.
 - RLS activée sur toutes les tables : catalogue public en lecture, commandes invisibles hors admin ; écriture réservée à `is_admin()`.
 - La page de confirmation n'est accessible qu'avec le numéro de commande **et** un jeton aléatoire.
-- Les producteurs et certificats de démo sont **fictifs**, et les photos produit (`public/products/*.webp`) sont **générées par IA** : remplacez-les par les vrais produits et leurs photos avant la mise en production.
+- Les producteurs et certificats de démo sont **fictifs**, et les photos produit (`public/products/*.webp`, une vue principale + un gros plan `-2` par produit) sont **générées par IA** : remplacez-les par les vrais produits et leurs photos avant la mise en production.

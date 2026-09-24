@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, Search, X } from "lucide-react";
 import { useCart } from "@/lib/cart/cart-context";
 import { normalizePath } from "./immersive";
@@ -10,8 +10,6 @@ import { TLink } from "./PageTransition";
 export interface NavItem {
   href: string;
   label: string;
-  /** Masqué dans la barre des écrans moyens (reste dans le menu mobile). */
-  secondary?: boolean;
 }
 
 const anton = { fontFamily: "var(--font-anton), sans-serif" } as const;
@@ -52,7 +50,6 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
   const { count, ready } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
 
   // Ferme menu et recherche à chaque changement de page.
   useEffect(() => {
@@ -92,7 +89,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
                 href={item.href}
                 label={item.label}
                 aria-current={active ? "page" : undefined}
-                className={`rounded-full px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition ${item.secondary ? "hidden xl:inline-flex" : ""}`}
+                className="rounded-full px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition"
                 style={active ? { background: "#fbeee2", color: "#140a07" } : { color: "#fbeee2" }}
               >
                 {item.label}
@@ -133,7 +130,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
       </div>
 
       {searchOpen && (
-        <div ref={searchRef} className="mx-auto max-w-xl px-4 pb-3">
+        <div className="mx-auto max-w-xl px-4 pb-3">
           <SearchBox autoFocus onDone={() => setSearchOpen(false)} />
         </div>
       )}

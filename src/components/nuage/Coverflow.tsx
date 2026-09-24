@@ -26,13 +26,17 @@ export function Coverflow({
   items,
   cloud = false,
   hint,
+  hintMouse,
   onActiveChange,
   onOpen,
   activeIndex,
 }: {
   items: CoverflowItem[];
   cloud?: boolean;
+  /** Aide affichée sur écran tactile… */
   hint?: string;
+  /** … et avec une souris / un pavé tactile. */
+  hintMouse?: string;
   /** Appelé quand la carte centrale change (index). */
   onActiveChange?: (index: number) => void;
   /** Remplace l'ouverture du lien quand on touche la carte centrale. */
@@ -152,7 +156,12 @@ export function Coverflow({
           ))}
         </div>
       )}
-      <p className="mt-3 text-center text-xs text-[#fbeee2]/45">{hint ?? "Glissez pour parcourir · touchez la carte pour l'ouvrir"}</p>
+      <p className="mt-3 text-center text-xs text-[#fbeee2]/45">
+        <span className="pointer-fine:hidden">{hint ?? "Glissez pour parcourir · touchez la carte pour l'ouvrir"}</span>
+        <span className="hidden pointer-fine:inline">
+          {hintMouse ?? "Cliquez sur une carte voisine ou glissez pour parcourir · cliquez la carte centrale pour l'ouvrir"}
+        </span>
+      </p>
     </div>
   );
 }

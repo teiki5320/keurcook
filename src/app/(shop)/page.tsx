@@ -3,6 +3,7 @@ import { withBasePath } from "@/lib/paths";
 import { TLink } from "@/components/nuage/PageTransition";
 import { siteConfig } from "@/lib/config";
 import { getGammes } from "@/lib/data/gammes";
+import { unitWord } from "@/lib/gamme-words";
 
 export const revalidate = 300;
 
@@ -64,8 +65,7 @@ export default async function HomePage() {
                   )}
                   <span className="absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-4 pt-14">
                     <span className="block text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">
-                      {g.products.length} {g.key === "accessoires" ? "article" : "variété"}
-                      {g.products.length > 1 ? "s" : ""}
+                      {unitWord(g.key, g.products.length)}
                     </span>
                     <span className="mt-1 block text-2xl leading-none uppercase" style={anton}>{g.name}</span>
                   </span>
@@ -118,8 +118,12 @@ export default async function HomePage() {
             <br />
             <span className="text-[#ff7a3d]">du champ au bocal.</span>
           </h2>
-          <TLink href="/boutique" label="La boutique" className="rounded-full bg-[#ff7a3d] px-8 py-5 text-base font-bold text-[#140a07] transition hover:bg-[#ffc46b]">
-            Entrer dans la boutique →
+          <TLink
+            href="/boutique?gamme=tout"
+            label="Tout le catalogue"
+            className="rounded-full border border-[#ff7a3d] px-8 py-5 text-base font-bold text-[#ff7a3d] transition hover:bg-[#ff7a3d] hover:text-[#140a07]"
+          >
+            Voir tout le catalogue →
           </TLink>
         </div>
       </section>
