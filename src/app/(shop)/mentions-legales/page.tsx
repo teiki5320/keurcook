@@ -22,9 +22,9 @@ export default function LegalNoticePage() {
         <li>Siège social : {l.address}</li>
         <li>SIRET : {l.siret} — {l.rcs}</li>
         <li>TVA intracommunautaire : {l.vat}</li>
-        <li>Téléphone : {l.phone}</li>
+        {l.phone && <li>Téléphone : {l.phone}</li>}
         <li>Email : <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a></li>
-        <li>Directeur de la publication : {l.director}</li>
+        {l.director && <li>Directeur de la publication : {l.director}</li>}
       </ul>
 
       <h2>Hébergement</h2>
