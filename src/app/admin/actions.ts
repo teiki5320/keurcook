@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { siteConfig, LEGAL_THC_MAX } from "@/lib/config";
@@ -11,7 +11,7 @@ import { orderUrl } from "@/lib/data/orders";
 import { sendEmailSafe } from "@/lib/email/sender";
 import { orderStatusEmail } from "@/lib/email/templates";
 import { slugify } from "@/lib/format";
-import { createSessionClient } from "@/lib/supabase/server";
+import { ADMIN_COOKIE, ADMIN_SESSION_SECONDS, checkAdminPassword, createAdminToken } from "@/lib/admin-session";
 import type { OrderStatus } from "@/lib/types";
 
 export interface ActionState {
@@ -22,19 +22,46 @@ export interface ActionState {
 // ------------------------------------------------------------------ Auth
 
 export async function loginAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const email = String(formData.get("email") ?? "").trim();
   const password = String(formData.get("password") ?? "");
-  if (!email || !password) return { error: "Email et mot de passe requis." };
-  const supabase = await createSessionClient();
-  const { error } = await supabase.auth.signInWithPassword({ email, password });
-  if (error) return { error: "Identifiants incorrects." };
+  if (!password) return { error: "Mot de passe requis." };
+  if (!checkAdminPassword(password)) {
+    // Ralentit les essais en série.
+    await new Promise((r) => setTimeout(r, 1000));
+    return { error: "Mot de passe incorrect." };
+  }
+  const cookieStore = await cookies();
+  cookieStore.set(ADMIN_COOKIE, createAdminToken(), {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    path: "/admin",
+    maxAge: ADMIN_SESSION_SECONDS,
+  });
   redirect("/admin");
 }
 
 export async function logoutAction() {
-  const supabase = await createSessionClient();
-  await supabase.auth.signOut();
+  const cookieStore = await cookies();
+  cookieStore.delete({ name: ADMIN_COOKIE, path: "/admin" });
   redirect("/admin/login");
+}
+
+// -------------------------------------------------------------- Fichiers
+
+/**
+ * Prépare l'envoi d'une image ou d'un certificat : le serveur (admin vérifié)
+ * délivre une URL signée à usage unique, le navigateur y envoie le fichier.
+ */
+export async function createUploadUrlAction(bucket: "product-images" | "certificates", fileName: string) {
+  const { supabase } = await requireAdmin();
+  if (bucket !== "product-images" && bucket !== "certificates") throw new Error("Dossier inconnu.");
+  const ext = fileName.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") || "bin";
+  const base = fileName.replace(/\.[^.]+$/, "").normalize("NFD").replace(/[^\w-]+/g, "-").slice(0, 40);
+  const path = `${new Date().toISOString().slice(0, 10)}/${crypto.randomUUID().slice(0, 8)}-${base}.${ext}`;
+  const { data, error } = await supabase.storage.from(bucket).createSignedUploadUrl(path);
+  if (error || !data) throw new Error(error?.message ?? "Envoi impossible.");
+  const publicUrl = supabase.storage.from(bucket).getPublicUrl(path).data.publicUrl;
+  return { path, token: data.token, publicUrl };
 }
 
 // -------------------------------------------------------------- Produits

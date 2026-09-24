@@ -2,7 +2,7 @@
 
 Site e-commerce en français pour vendre du CBD français (fleurs, résines, huiles, infusions, cosmétiques) et des accessoires (grinders, vaporisateurs, feuilles, boîtes de conservation).
 
-**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Supabase (base de données, authentification admin, stockage des images et certificats) · Nodemailer (SMTP).
+**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Supabase (base de données, stockage des images et certificats) · Nodemailer (SMTP).
 
 ---
 
@@ -20,7 +20,7 @@ Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie 
 
 | Côté boutique | Côté admin (`/admin`) |
 | --- | --- |
-| Accueil vitrine (gammes), boutique en une page : carrousel des gammes, produits de la gamme au centre, « Tout voir » | Connexion Supabase Auth, accès réservé aux comptes de la table `admins` |
+| Accueil vitrine (gammes), boutique en une page : carrousel des gammes, produits de la gamme au centre, « Tout voir » | Connexion par mot de passe unique (`ADMIN_PASSWORD`), session par cookie signé valable 7 jours |
 | Tri (mis en avant, prix, taux de CBD), badge « Coup de cœur », prix au gramme | Produits : création / édition, variantes, photos, certificat PDF, mise en avant |
 | Recherche plein texte (insensible aux accents) | Stocks : édition en masse, filtre « stock bas » |
 | Mini-panier latéral après ajout, panier (stockage local), commande, page de confirmation | Commandes : filtres par statut, détail, changement de statut, n° de suivi, email au client |
@@ -77,8 +77,9 @@ Renseignez au minimum `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens des emails) |
 | `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom de la boutique, email de contact |
-| `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Accès public Supabase (catalogue, auth admin) |
-| `SUPABASE_SERVICE_ROLE_KEY` | **Secret serveur** : création des commandes, lecture de la page de confirmation |
+| `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Accès public Supabase (catalogue) |
+| `SUPABASE_SERVICE_ROLE_KEY` | **Secret serveur** : création des commandes, page de confirmation, opérations admin |
+| `ADMIN_PASSWORD` | **Secret** : mot de passe de l'espace admin |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASSWORD`, `EMAIL_FROM` | Envoi des emails |
 | `ADMIN_NOTIFICATION_EMAIL` | Reçoit chaque nouvelle commande |
 | `PAYMENT_PROVIDERS` | Moyens de paiement actifs (`bank_transfer` par défaut) |
@@ -86,19 +87,12 @@ Renseignez au minimum `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY
 | `SHIPPING_FLAT_RATE_CENTS`, `SHIPPING_FREE_THRESHOLD_CENTS` | Frais de port et seuil de gratuité |
 | `NEXT_PUBLIC_LEGAL_*` | Informations des mentions légales et CGV |
 
-### 3. Créer un administrateur
+### 3. Accès administrateur
 
-1. **Authentication → Users → Add user** : créez un compte email + mot de passe (cochez *Auto confirm*).
-2. Dans le SQL Editor :
+1. Définissez `ADMIN_PASSWORD` (mot de passe long et unique) dans les variables d'environnement.
+2. Connectez-vous sur `/admin/login` avec ce mot de passe.
 
-   ```sql
-   insert into public.admins (user_id)
-   select id from auth.users where email = 'vous@votre-domaine.fr';
-   ```
-
-3. Connectez-vous sur `/admin/login`.
-
-Désactivez les inscriptions publiques (**Authentication → Sign In / Providers → Allow new users to sign up** : off) : seul l'admin a besoin d'un compte.
+Les opérations admin passent uniquement par le serveur (clé `SUPABASE_SERVICE_ROLE_KEY`). Changer `ADMIN_PASSWORD` déconnecte toutes les sessions. Aucun compte Supabase Auth n'est nécessaire : désactivez les inscriptions publiques (**Authentication → Sign In / Providers → Allow new users to sign up** : off).
 
 ### 4. Emails
 
@@ -180,7 +174,7 @@ src/
   lib/payments/        couche PaymentProvider
   lib/email/           envoi SMTP + gabarits
   lib/compliance.ts    détection des allégations de santé
-  proxy.ts             protection de /admin (session Supabase)
+  proxy.ts             protection de /admin (cookie de session admin)
 supabase/
   migrations/          schéma SQL, RLS, fonctions
   seed.sql             données de démo

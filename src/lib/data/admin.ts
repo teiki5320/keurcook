@@ -1,23 +1,19 @@
 import "server-only";
 import { redirect } from "next/navigation";
-import { createSessionClient } from "../supabase/server";
+import { cookies } from "next/headers";
+import { ADMIN_COOKIE, verifyAdminToken } from "../admin-session";
+import { createServiceClient } from "../supabase/admin";
 import { mapCategory, mapOrder, mapProduct } from "../supabase/mappers";
 import type { OrderStatus } from "../types";
 
 /**
- * Vérifie que l'utilisateur connecté est administrateur.
- * Toutes les requêtes admin passent par le client de session : la RLS
- * (fonction is_admin()) protège les données même en cas d'oubli applicatif.
+ * Vérifie que la session admin (cookie signé) est valide, puis renvoie le
+ * client "service_role" : les écritures admin passent côté serveur uniquement.
  */
 export async function requireAdmin() {
-  const supabase = await createSessionClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) redirect("/admin/login");
-  const { data: admin } = await supabase.from("admins").select("user_id").eq("user_id", user.id).maybeSingle();
-  if (!admin) redirect("/admin/login?erreur=acces");
-  return { supabase, user };
+  const cookieStore = await cookies();
+  if (!verifyAdminToken(cookieStore.get(ADMIN_COOKIE)?.value)) redirect("/admin/login");
+  return { supabase: createServiceClient() };
 }
 
 export async function adminListCategories() {

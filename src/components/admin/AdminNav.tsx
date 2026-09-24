@@ -12,7 +12,7 @@ const links = [
   { href: "/admin/commandes", label: "Commandes", icon: ClipboardList },
 ];
 
-export function AdminNav({ email }: { email: string }) {
+export function AdminNav() {
   const pathname = usePathname();
   return (
     <aside className="border-b border-sage-200 bg-forest-900 text-sage-100 lg:sticky lg:top-0 lg:h-dvh lg:w-60 lg:shrink-0 lg:border-r lg:border-b-0">
@@ -20,7 +20,6 @@ export function AdminNav({ email }: { email: string }) {
         <Link href="/admin" className="flex items-center gap-2 font-display text-xl text-cream">
           <Leaf className="h-5 w-5" aria-hidden /> Admin
         </Link>
-        <p className="hidden truncate text-xs text-sage-200/70 lg:mt-1 lg:block">{email}</p>
       </div>
       <nav className="flex gap-1 overflow-x-auto px-3 pb-3 lg:flex-col lg:px-3">
         {links.map(({ href, label, icon: Icon }) => {

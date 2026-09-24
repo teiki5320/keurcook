@@ -2,7 +2,7 @@
 
 import { startTransition, useActionState, useState } from "react";
 import { FileDown, Plus, Trash2, Upload } from "lucide-react";
-import { saveProductAction, type ActionState } from "@/app/admin/actions";
+import { createUploadUrlAction, saveProductAction, type ActionState } from "@/app/admin/actions";
 import { ProductImage } from "@/components/product/ProductImage";
 import { createBrowserSupabase } from "@/lib/supabase/browser";
 import type { Category, Product } from "@/lib/types";
@@ -16,17 +16,12 @@ interface VariantDraft {
 }
 
 async function uploadFile(bucket: "product-images" | "certificates", file: File) {
-  const supabase = createBrowserSupabase();
-  const ext = file.name.split(".").pop()?.toLowerCase() ?? "bin";
-  const base = file.name.replace(/\.[^.]+$/, "").normalize("NFD").replace(/[^\w-]+/g, "-").slice(0, 40);
-  const path = `${new Date().toISOString().slice(0, 10)}/${crypto.randomUUID().slice(0, 8)}-${base}.${ext}`;
-  const { error } = await supabase.storage.from(bucket).upload(path, file, {
-    cacheControl: "31536000",
-    contentType: file.type || undefined,
-    upsert: false,
-  });
+  const { path, token, publicUrl } = await createUploadUrlAction(bucket, file.name);
+  const { error } = await createBrowserSupabase()
+    .storage.from(bucket)
+    .uploadToSignedUrl(path, token, file, { cacheControl: "31536000", contentType: file.type || undefined });
   if (error) throw new Error(error.message);
-  return supabase.storage.from(bucket).getPublicUrl(path).data.publicUrl;
+  return publicUrl;
 }
 
 export function ProductForm({ categories, product }: { categories: Category[]; product?: Product }) {
