@@ -63,8 +63,7 @@ export default function LegalNoticePage() {
       <h2>Médiation de la consommation</h2>
       <p>
         Conformément à l&apos;article L. 612-1 du code de la consommation, le consommateur peut recourir gratuitement au
-        médiateur de la consommation suivant : {l.mediator}. Plateforme européenne de règlement en ligne des litiges :
-        https://ec.europa.eu/consumers/odr.
+        médiateur de la consommation suivant : {l.mediator}.
       </p>
     </LegalPage>
   );

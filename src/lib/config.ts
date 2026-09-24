@@ -29,7 +29,7 @@ export const legalConfig = {
   vat: process.env.NEXT_PUBLIC_LEGAL_VAT || "FR16 938 522 596",
   director: process.env.NEXT_PUBLIC_LEGAL_DIRECTOR || "",
   phone: process.env.NEXT_PUBLIC_LEGAL_PHONE || "",
-  mediator: process.env.NEXT_PUBLIC_LEGAL_MEDIATOR || "[Nom et coordonnées du médiateur de la consommation]",
+  mediator: process.env.NEXT_PUBLIC_LEGAL_MEDIATOR || "CM2C (Centre de la Médiation de la Consommation de Conciliateurs de Justice), 49 rue de Ponthieu, 75008 Paris — saisine en ligne : https://www.cm2c.net/declarer-un-litige.php",
   host: process.env.NEXT_PUBLIC_LEGAL_HOST || defaultHost.full,
   hostName: process.env.NEXT_PUBLIC_LEGAL_HOST_NAME || defaultHost.name,
 };
