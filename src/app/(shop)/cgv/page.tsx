@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Conditions générales de vente", al
 export default function TermsPage() {
   const l = legalConfig;
   return (
-    <LegalPage title="Conditions générales de vente" updated="23 septembre 2026">
+    <LegalPage title="Conditions générales de vente" updated="24 septembre 2026">
       <h2>Article 1 — Objet et champ d&apos;application</h2>
       <p>
         Les présentes conditions générales de vente (CGV) régissent les ventes conclues à distance sur le site{" "}

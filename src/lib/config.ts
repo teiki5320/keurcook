@@ -19,14 +19,14 @@ export const siteConfig = {
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@example.fr",
 };
 
-/** Informations légales de l'éditeur, affichées dans les mentions légales / CGV. */
+/** Informations légales de l'éditeur (annuaire-entreprises.data.gouv.fr), affichées dans les mentions légales / CGV. */
 export const legalConfig = {
-  companyName: process.env.NEXT_PUBLIC_LEGAL_COMPANY_NAME || "[Raison sociale]",
-  legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "[Forme juridique — ex. SAS au capital de X €]",
-  address: process.env.NEXT_PUBLIC_LEGAL_ADDRESS || "[Adresse du siège social]",
-  siret: process.env.NEXT_PUBLIC_LEGAL_SIRET || "[Numéro SIRET]",
-  rcs: process.env.NEXT_PUBLIC_LEGAL_RCS || "[RCS Ville + numéro]",
-  vat: process.env.NEXT_PUBLIC_LEGAL_VAT || "[N° TVA intracommunautaire]",
+  companyName: process.env.NEXT_PUBLIC_LEGAL_COMPANY_NAME || "ALOHASH",
+  legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "SAS (société par actions simplifiée) au capital de [montant] €",
+  address: process.env.NEXT_PUBLIC_LEGAL_ADDRESS || "La Petite Sigonnière, 85190 Maché, France",
+  siret: process.env.NEXT_PUBLIC_LEGAL_SIRET || "938 522 596 00015",
+  rcs: process.env.NEXT_PUBLIC_LEGAL_RCS || "RCS La Roche-sur-Yon 938 522 596",
+  vat: process.env.NEXT_PUBLIC_LEGAL_VAT || "FR16 938 522 596",
   director: process.env.NEXT_PUBLIC_LEGAL_DIRECTOR || "[Nom du directeur de la publication]",
   phone: process.env.NEXT_PUBLIC_LEGAL_PHONE || "[Téléphone]",
   mediator: process.env.NEXT_PUBLIC_LEGAL_MEDIATOR || "[Nom et coordonnées du médiateur de la consommation]",

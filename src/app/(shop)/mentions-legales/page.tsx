@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Mentions légales", alternates: { ca
 export default function LegalNoticePage() {
   const l = legalConfig;
   return (
-    <LegalPage title="Mentions légales" updated="23 septembre 2026">
+    <LegalPage title="Mentions légales" updated="24 septembre 2026">
       <p>
         Conformément aux articles 6-III et 19 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l&apos;économie
         numérique (LCEN), les informations suivantes sont portées à la connaissance des utilisateurs du site{" "}
