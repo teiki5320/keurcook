@@ -35,4 +35,4 @@ Les deux versions sont republiées automatiquement à chaque push sur `main`.
 5. Remplacer les produits de démo par les vrais produits : photos et certificats d'analyse ajoutés dans le dépôt (`public/products`, `public/coa`), pas par l'envoi depuis l'admin.
 6. Désactiver le mode maintenance pour ouvrir la boutique.
 7. Déclarer le site dans Google Search Console et choisir un outil de mesure d'audience.
-8. Brancher un prestataire de paiement par carte acceptant le CBD.
+8. Paiement par carte : tester avec la carte de test Stripe, obtenir l'accord de Stripe pour le CBD, puis passer aux clés réelles (nouveau webhook et nouvelles clés).

@@ -58,11 +58,13 @@ Généré le 25 septembre 2026 par un scan du dépôt. Pour mettre à jour : rel
 
 ### 6. Paiement
 
-- **Rôle** : virement bancaire seul (`src/lib/payments/providers/bank-transfer.ts`) ; l'admin passe la commande en « payée » à réception. Webhook prévu pour un futur prestataire de carte : `/api/payments/<id>/webhook`.
-- **Console** : banque de la société.
-- **Identifiants publics** : coordonnées bancaires via `PAYMENT_BANK_*`. Non renseignées : le site affiche des valeurs d'exemple.
-- **Secrets** : aucun pour le virement ; ceux d'un futur prestataire iront dans les variables Vercel.
-- **Coût** : à vérifier.
+- **Rôle** : deux moyens de paiement (`src/lib/payments/`), choisis par `PAYMENT_PROVIDERS` :
+  - **Stripe Checkout** (`providers/stripe.ts`) : page de paiement hébergée par Stripe (carte, Apple Pay, Google Pay…), confirmation automatique par webhook `/api/payments/stripe/webhook` et au retour du client ; session expirée ou refusée = commande annulée et stock remis en vente ;
+  - **virement bancaire** (`providers/bank-transfer.ts`) : l'admin passe la commande en « payée » à réception.
+- **Console** : https://dashboard.stripe.com (compte en mode test) ; banque de la société pour le virement.
+- **Identifiants publics** : destination webhook Stripe `https://www.alohash.fr/api/payments/stripe/webhook` (4 événements `checkout.session.*`) ; coordonnées bancaires via `PAYMENT_BANK_*` (non renseignées : valeurs d'exemple).
+- **Secrets** : `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` (variables Vercel, clés de test) ; `PAYMENT_PROVIDERS` dans Vercel.
+- **Coût** : commissions Stripe par transaction, à vérifier dans la console. Stripe classe le CBD en activité « restreinte » : accord de Stripe à obtenir avant les clés réelles.
 
 ### 7. Domaine
 

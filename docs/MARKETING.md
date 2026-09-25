@@ -21,7 +21,7 @@ Vente directe en ligne de produits physiques. Frais de port par défaut : 4,90 �
 | 1. Lancement | Gestion des stocks et des commandes dans l'admin | ✅ |
 | 1. Lancement | E-mails de confirmation de commande | ⬜ (code prêt, SMTP non configuré) |
 | 1. Lancement | Vrais produits, photos et certificats d'analyse | ⬜ |
-| 2. Conversion | Paiement par carte (prestataire acceptant le CBD) | ⬜ (emplacement prévu : `src/lib/payments/providers/_template.ts`) |
+| 2. Conversion | Paiement par carte, Apple Pay, Google Pay (Stripe Checkout) | ✅ en mode test (accord de Stripe pour le CBD à obtenir avant les clés réelles) |
 | 2. Conversion | Livraison offerte au-delà d'un seuil | ✅ |
 | 2. Conversion | Mise en avant « Coup de cœur » et tri | ✅ |
 | 3. Fidélisation | Codes promo, programme de fidélité | ⬜ (absent du code) |
@@ -64,4 +64,5 @@ Aucune date n'est fixée dans le dépôt. Ordre prévu :
 - ⬜ Configurer le SMTP pour les e-mails de commande
 - ✅ Nom de domaine www.alohash.fr relié, `NEXT_PUBLIC_SITE_URL` renseignée
 - ⬜ Choisir un outil de mesure d'audience respectueux du consentement
-- ⬜ Trouver un prestataire de paiement par carte qui accepte le CBD
+- ✅ Paiement par carte branché (Stripe, mode test)
+- ⬜ Obtenir l'accord de Stripe pour l'activité CBD, puis passer aux clés réelles
