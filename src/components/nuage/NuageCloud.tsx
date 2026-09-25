@@ -111,7 +111,9 @@ export function NuageCloud() {
     const onMove = (e: MouseEvent) => { mx = e.clientX / window.innerWidth - 0.5; my = e.clientY / window.innerHeight - 0.5; };
     const onExplode = (e: Event) => { explode = Number((e as CustomEvent<number>).detail) || 0; };
     window.addEventListener("resize", onResize);
-    window.addEventListener("mousemove", onMove);
+    // Écran tactile : pas d'effet de souris (un toucher laisserait un « trou » dans le nuage).
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (finePointer) window.addEventListener("mousemove", onMove);
     window.addEventListener("nuage:explode", onExplode);
 
     const clock = new THREE.Clock();
@@ -145,13 +147,16 @@ export function NuageCloud() {
         tg.al = bd < H * 0.9 ? (ring ? 0.7 : 1) : 0.15;
         still = a.dataset.still !== undefined && bd < H * 0.9;
       }
+      // Sur une carte immobile, position et taille collent à l'ancre (sinon, au défilement,
+      // le nuage traîne derrière les points des pays) ; ailleurs, elles glissent en douceur.
       (Object.keys(tg) as (keyof typeof tg)[]).forEach((k) => {
-        cur[k] += (tg[k] - cur[k]) * (k === "ex" ? 0.06 : k === "mix" ? 0.08 : 0.1);
+        const rate = k === "ex" ? 0.06 : k === "mix" ? 0.08 : k === "al" ? 0.1 : still ? 1 : 0.1;
+        cur[k] += (tg[k] - cur[k]) * rate;
       });
       sm.x += (mx - sm.x) * 0.08; sm.y += (my - sm.y) * 0.08;
 
       const ringView = cur.mix > 2.5 ? 0.9 : 0;
-      cloud.position.set(cur.x, cur.y + Math.sin(t * 0.8) * 0.05, 0);
+      cloud.position.set(cur.x, cur.y + (still ? 0 : Math.sin(t * 0.8) * 0.05), 0);
       cloud.scale.setScalar(Math.max(0.2, cur.s));
       // Rotation continue, sauf sur une carte « immobile » : on revient alors de face (tour complet le plus proche).
       const dt = Math.min(0.1, t - last); last = t;
@@ -159,7 +164,7 @@ export function NuageCloud() {
       else spin += dt * 0.12;
       const wobble = still ? 0.15 : 1;
       cloud.rotation.set((sm.y * 0.35 + ringView) * wobble, spin + sm.x * 0.6 * wobble, 0);
-      uni.uMouse.value.set((sm.x * 2 * hw - cur.x) / cur.s, (-sm.y * 2 * hh - cur.y) / cur.s, 0);
+      if (finePointer) uni.uMouse.value.set((sm.x * 2 * hw - cur.x) / cur.s, (-sm.y * 2 * hh - cur.y) / cur.s, 0);
       uni.uMix.value = cur.mix; uni.uTime.value = t; uni.uExplode.value = cur.ex; uni.uAlpha.value = cur.al;
       renderer.render(scene, camera);
     };

@@ -18,17 +18,18 @@ const WORDS = ["Ndolé", "Mafé", "Yassa", "Thiéboudienne", "Pondu", "Suya", "D
 
 export default async function HomePage() {
   const [groups, countries, gammes] = await Promise.all([getRecipeGroups(), getCountriesWithRecipes(), getGammes()]);
-  const total = groups.reduce((n, g) => n + g.recipes.length, 0);
   const jsonLd = { "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Accroche + carte de l'Afrique en particules : un clic sur un pays ouvre ses recettes. */}
-      <section className="flex min-h-[92dvh] items-center pt-24 pb-10">
-        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-6 px-[clamp(20px,4vw,56px)] lg:grid-cols-2">
+      <section className="flex min-h-[92dvh] items-center pt-20 pb-10 lg:pt-24">
+        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-4 px-[clamp(20px,4vw,56px)] lg:grid-cols-2 lg:gap-6">
+          {/* Sur téléphone, la carte passe en premier : c'est elle qu'on voit en arrivant. */}
+          <CountryMap countries={countries} className="order-first mx-auto max-w-[min(92vw,52vh)] lg:order-last lg:max-w-[min(600px,72vh)]" />
           <div>
-            <h1 className="uppercase leading-[.9]" style={{ ...anton, fontSize: "clamp(52px,8vw,120px)" }}>
+            <h1 className="uppercase leading-[.9]" style={{ ...anton, fontSize: "clamp(44px,8vw,120px)" }}>
               Tout un continent<span className="text-[#ff7a3d]">.</span>
               <br />
               <span className="text-[#ff7a3d]">Dans l&apos;assiette.</span>
@@ -37,26 +38,8 @@ export default async function HomePage() {
               Les grands plats d&apos;Afrique expliqués pas à pas, et les produits rares pour les réussir chez vous :
               poivre de Penja, soumbala, fonio, feuilles de ndolé…
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <TLink href="/recettes" label="Les recettes" className="inline-flex rounded-full bg-[#ff7a3d] px-8 py-4 text-base font-bold text-[#140a07] transition hover:bg-[#ffc46b]">
-                Voir les {total} recettes →
-              </TLink>
-              <TLink href="/boutique" label="Produits rares" className="inline-flex rounded-full border border-[#fbeee2]/25 px-8 py-4 text-base font-bold text-[#fbeee2] transition hover:border-[#ff7a3d]">
-                Produits rares
-              </TLink>
-            </div>
-            <p className="mt-8 text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">Cuisiner par pays</p>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {countries.map((c) => (
-                <li key={c.code}>
-                  <TLink href={`/pays/${c.slug}`} label={c.name} className="inline-flex rounded-full border border-[#fbeee2]/15 px-3.5 py-1.5 text-sm text-[#fbeee2]/85 transition hover:border-[#ff7a3d] hover:text-[#fbeee2]">
-                    {c.name}
-                  </TLink>
-                </li>
-              ))}
-            </ul>
+            <p className="mt-4 text-sm text-[#ffc46b]">Touchez un pays sur la carte pour découvrir ses recettes.</p>
           </div>
-          <CountryMap countries={countries} className="mx-auto max-w-[min(340px,40vh)] sm:max-w-[min(600px,72vh)]" />
         </div>
       </section>
 
