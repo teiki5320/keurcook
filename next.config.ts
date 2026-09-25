@@ -25,8 +25,10 @@ const nextConfig: NextConfig = isStaticExport
       env: { NEXT_PUBLIC_STATIC_EXPORT: "1", NEXT_PUBLIC_BASE_PATH: basePath },
       turbopack: {
         resolveAlias: {
-          // Pas de Server Actions en statique : le formulaire de commande est remplacé par un avis.
+          // Pas de Server Actions en statique : commande, avis et newsletter sont remplacés par un message.
           "@/components/shop/CheckoutForm": "./src/components/shop/StaticCheckoutNotice.tsx",
+          "@/components/community/ReviewForm": "./src/components/community/StaticReviewForm.tsx",
+          "@/components/community/NewsletterForm": "./src/components/community/StaticNewsletterForm.tsx",
         },
       },
     }

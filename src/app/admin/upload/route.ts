@@ -3,10 +3,10 @@ import { handleUploadPresigned, type HandleUploadPresignedBody } from "@vercel/b
 import { cookies } from "next/headers";
 import { ADMIN_COOKIE, verifyAdminToken } from "@/lib/admin-session";
 
-/** Types de fichiers acceptés par dossier (photos produit, certificats d'analyse). */
+/** Types de fichiers acceptés par dossier (photos des produits et des recettes). */
 const FOLDERS: Record<string, string[]> = {
   "product-images": ["image/jpeg", "image/png", "image/webp", "image/avif"],
-  certificates: ["application/pdf"],
+  "recipe-images": ["image/jpeg", "image/png", "image/webp", "image/avif"],
 };
 
 const MAX_BYTES = 15 * 1024 * 1024;

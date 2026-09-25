@@ -4,11 +4,6 @@ export function formatPrice(cents: number): string {
   return euro.format(cents / 100);
 }
 
-export function formatRate(rate: number | null | undefined): string {
-  if (rate === null || rate === undefined) return "—";
-  return `${rate.toLocaleString("fr-FR", { maximumFractionDigits: 3 })} %`;
-}
-
 export function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("fr-FR", {
     day: "2-digit",

@@ -1,6 +1,8 @@
 /**
  * Garde-fou éditorial : détecte les termes pouvant constituer une allégation
- * thérapeutique ou de santé, interdite pour les produits CBD en France.
+ * thérapeutique ou de santé. Pour les denrées alimentaires, seules les
+ * allégations autorisées par le règlement (CE) n° 1924/2006 sont permises :
+ * on les refuse toutes par prudence.
  * Utilisé à l'enregistrement d'un produit dans l'admin.
  * Liste non exhaustive : elle ne remplace pas une relecture humaine.
  */

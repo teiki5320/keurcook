@@ -1,5 +1,5 @@
-/** Mot adapté à la gamme : « variété » (fleurs, résines), « article » (accessoires), « produit » (le reste). */
-export function unitWord(gammeKey: string | null | undefined, count: number) {
-  const word = gammeKey === "fleurs" || gammeKey === "resines" ? "variété" : gammeKey === "accessoires" ? "article" : "produit";
-  return `${count} ${word}${count > 1 ? "s" : ""}`;
-}
+/** « 1 produit », « 3 produits ». */
+export const unitWord = (count: number) => `${count} produit${count > 1 ? "s" : ""}`;
+
+/** « 1 recette », « 3 recettes ». */
+export const recipeWord = (count: number) => `${count} recette${count > 1 ? "s" : ""}`;

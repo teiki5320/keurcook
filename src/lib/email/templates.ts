@@ -8,7 +8,7 @@ const esc = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 const WARNING =
-  "Produits réservés aux personnes majeures. Taux de THC inférieur ou égal à 0,3 %. Ces produits ne sont pas des médicaments. Déconseillés aux femmes enceintes ou allaitantes.";
+  "Denrées alimentaires : consultez la liste des ingrédients et des allergènes sur l'emballage de chaque produit.";
 
 function layout(title: string, body: string) {
   return `<!doctype html>

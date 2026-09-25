@@ -12,7 +12,7 @@ export interface Catalog {
 
 /**
  * Charge le catalogue actif (catégories + produits + variantes).
- * Le catalogue d'une boutique CBD reste modeste (quelques centaines de
+ * Le catalogue d'une épicerie fine reste modeste (quelques centaines de
  * références) : on le charge en une requête puis on filtre en mémoire, ce
  * qui garde un comportement identique en mode démo et avec la base de données.
  */
@@ -51,6 +51,6 @@ export async function getRelatedProducts(product: ProductWithCategory, limit = 4
   const { products } = await getCatalog();
   return products
     .filter((p) => p.id !== product.id && p.categoryId === product.categoryId)
-    .concat(products.filter((p) => p.id !== product.id && p.categoryId !== product.categoryId && p.category.kind === product.category.kind))
+    .concat(products.filter((p) => p.id !== product.id && p.categoryId !== product.categoryId))
     .slice(0, limit);
 }

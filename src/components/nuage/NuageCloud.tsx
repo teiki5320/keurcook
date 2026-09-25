@@ -2,13 +2,15 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { africaPoint } from "./africa-map";
 
 /**
  * Nuage de particules 3D (fond fixe de tout le site).
  * Il se place automatiquement sur l'élément [data-cloud] le plus proche du
  * centre de l'écran et prend la forme indiquée par son attribut data-mix :
- * 0 = feuille, 1 = résine, 2 = goutte d'huile, 3 = anneau (boutique).
+ * 0 = carte de l'Afrique, 1 = sphère, 2 = goutte, 3 = anneau (boutique, recettes).
  * data-shape="ring" : l'échelle suit la largeur de l'ancre au lieu de sa hauteur.
+ * data-still : le nuage cesse de tourner et reste de face (carte cliquable).
  * L'événement window "nuage:explode" (detail 0 ou 1) disperse les particules
  * pendant les transitions de page.
  */
@@ -41,23 +43,10 @@ function buildTargets(N: number) {
   const rnd = (a: number, b: number) => a + Math.random() * (b - a);
   const T = [0, 1, 2, 3].map(() => new Float32Array(N * 3));
   const rand = new Float32Array(N);
-  const lens = [1, 1.4, 1.75, 2.05, 1.75, 1.4, 1];
-  const angs = [-1.45, -0.98, -0.5, 0, 0.5, 0.98, 1.45];
-  const tot = lens.reduce((a, b) => a + b, 0);
   for (let i = 0; i < N; i++) {
     rand[i] = Math.random();
-    let x: number, y: number, z: number;
-    if (Math.random() < 0.05) {
-      x = rnd(-0.02, 0.02); y = rnd(-1.7, 0); z = rnd(-0.02, 0.02);
-    } else {
-      let r = Math.random() * tot, k = 0;
-      while (r > lens[k]) { r -= lens[k]; k++; }
-      const L = lens[k], t = Math.random(), u = Math.random() * 2 - 1;
-      const w = L * 0.14 * Math.pow(Math.sin(Math.PI * t), 0.85) * (1 - 0.4 * t);
-      const lx = u * w * (1 + 0.12 * Math.sin(t * 60)), ly = t * L, a = angs[k];
-      x = lx * Math.cos(a) - ly * Math.sin(a); y = lx * Math.sin(a) + ly * Math.cos(a); z = u * u * 0.15 + rnd(-0.04, 0.04);
-    }
-    T[0].set([x * 1.05, (y - 0.35) * 1.05, z], i * 3);
+    const [x, y] = africaPoint();
+    T[0].set([x, y, rnd(-0.06, 0.06)], i * 3);
     let dx = rnd(-1, 1), dy = rnd(-1, 1), dz = rnd(-1, 1);
     const dl = Math.hypot(dx, dy, dz) || 1; dx /= dl; dy /= dl; dz /= dl;
     const rr = (1.35 + 0.22 * Math.sin(dx * 5) * Math.cos(dy * 4) + 0.12 * Math.sin(dz * 9)) * (Math.random() < 0.8 ? 1 : Math.cbrt(Math.random()));
@@ -128,6 +117,7 @@ export function NuageCloud() {
     const clock = new THREE.Clock();
     const cur = { x: 2, y: 0, s: 1, mix: 0, ex: 1, al: 1 };
     const sm = { x: 0, y: 0 };
+    let spin = 0, last = 0;
 
     const loop = () => {
       raf = requestAnimationFrame(loop);
@@ -144,6 +134,7 @@ export function NuageCloud() {
       });
 
       const tg = { x: hw * 0.55, y: 0, s: 1, mix: 0, ex: explode, al: 0.25 };
+      let still = false;
       if (best && bestEl) {
         const r = best as DOMRect, a = bestEl as HTMLElement;
         const ring = a.dataset.shape === "ring";
@@ -152,6 +143,7 @@ export function NuageCloud() {
         tg.s = ring ? (r.width / W) * 2 * hw / 5.8 : (r.height / H) * 2 * hh / 3.7;
         tg.mix = parseFloat(a.dataset.mix ?? "0") || 0;
         tg.al = bd < H * 0.9 ? (ring ? 0.7 : 1) : 0.15;
+        still = a.dataset.still !== undefined && bd < H * 0.9;
       }
       (Object.keys(tg) as (keyof typeof tg)[]).forEach((k) => {
         cur[k] += (tg[k] - cur[k]) * (k === "ex" ? 0.06 : k === "mix" ? 0.08 : 0.1);
@@ -161,7 +153,12 @@ export function NuageCloud() {
       const ringView = cur.mix > 2.5 ? 0.9 : 0;
       cloud.position.set(cur.x, cur.y + Math.sin(t * 0.8) * 0.05, 0);
       cloud.scale.setScalar(Math.max(0.2, cur.s));
-      cloud.rotation.set(sm.y * 0.35 + ringView, t * 0.12 + sm.x * 0.6, 0);
+      // Rotation continue, sauf sur une carte « immobile » : on revient alors de face (tour complet le plus proche).
+      const dt = Math.min(0.1, t - last); last = t;
+      if (still) spin += (Math.round(spin / (Math.PI * 2)) * Math.PI * 2 - spin) * 0.06;
+      else spin += dt * 0.12;
+      const wobble = still ? 0.15 : 1;
+      cloud.rotation.set((sm.y * 0.35 + ringView) * wobble, spin + sm.x * 0.6 * wobble, 0);
       uni.uMouse.value.set((sm.x * 2 * hw - cur.x) / cur.s, (-sm.y * 2 * hh - cur.y) / cur.s, 0);
       uni.uMix.value = cur.mix; uni.uTime.value = t; uni.uExplode.value = cur.ex; uni.uAlpha.value = cur.al;
       renderer.render(scene, camera);

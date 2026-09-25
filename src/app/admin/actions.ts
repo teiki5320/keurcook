@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { siteConfig, LEGAL_THC_MAX } from "@/lib/config";
+import { siteConfig } from "@/lib/config";
 import { findHealthClaims } from "@/lib/compliance";
 import { adminGetOrder, requireAdmin } from "@/lib/data/admin";
 import { isUuid, pgError } from "@/lib/db/client";
@@ -64,24 +64,19 @@ const productSchema = z.object({
   categoryId: z.uuid("Catégorie requise."),
   shortDescription: z.string().trim().max(300),
   description: z.string().trim().max(10000),
-  cbdRate: z.number().min(0).max(100).nullable(),
-  thcRate: z.number().min(0).max(LEGAL_THC_MAX, `Le taux de THC doit être inférieur ou égal à ${LEGAL_THC_MAX} %.`).nullable(),
-  originRegion: z.string().trim().nullable(),
-  producer: z.string().trim().nullable(),
+  originCountry: z.string().trim().max(100).nullable(),
+  originRegion: z.string().trim().max(100).nullable(),
+  producer: z.string().trim().max(200).nullable(),
   images: z.array(z.string().min(1)).max(10),
-  coaUrl: z.string().trim().nullable(),
+  composition: z.string().trim().max(2000).nullable(),
+  allergens: z.array(z.string().max(60)).max(14),
+  usageTips: z.string().trim().max(2000).nullable(),
+  conservation: z.string().trim().max(500).nullable(),
   tags: z.array(z.string()),
   isActive: z.boolean(),
   featured: z.boolean(),
   variants: z.array(variantSchema).min(1, "Au moins une variante (poids / contenance) est requise."),
 });
-
-function numOrNull(v: FormDataEntryValue | null) {
-  const s = String(v ?? "").trim().replace(",", ".");
-  if (!s) return null;
-  const n = Number(s);
-  return Number.isFinite(n) ? n : NaN;
-}
 
 export async function saveProductAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
   const { sql } = await requireAdmin();
@@ -107,12 +102,17 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
     categoryId: formData.get("categoryId"),
     shortDescription: formData.get("shortDescription") ?? "",
     description: formData.get("description") ?? "",
-    cbdRate: numOrNull(formData.get("cbdRate")),
-    thcRate: numOrNull(formData.get("thcRate")),
+    originCountry: str("originCountry"),
     originRegion: str("originRegion"),
     producer: str("producer"),
     images,
-    coaUrl: str("coaUrl"),
+    composition: str("composition"),
+    allergens: String(formData.get("allergens") ?? "")
+      .split(",")
+      .map((t) => t.trim().toLowerCase())
+      .filter(Boolean),
+    usageTips: str("usageTips"),
+    conservation: str("conservation"),
     tags: String(formData.get("tags") ?? "")
       .split(",")
       .map((t) => t.trim())
@@ -125,20 +125,15 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
   const p = parsed.data;
 
   // --- Règles de conformité
-  const claims = findHealthClaims(p.name, p.shortDescription, p.description);
+  const claims = findHealthClaims(p.name, p.shortDescription, p.description, p.usageTips);
   if (claims.length) {
     return {
       error: `Allégation de santé interdite détectée (${claims.join(", ")}). Reformulez le texte : aucune promesse thérapeutique ou médicale n'est autorisée.`,
     };
   }
-  const [category] = await sql.query("select kind from categories where id = $1", [p.categoryId]);
+  const [category] = await sql.query("select id from categories where id = $1", [p.categoryId]);
   if (!category) return { error: "Catégorie introuvable." };
-  if (category.kind === "cbd" && p.isActive) {
-    if (p.thcRate === null) return { error: "Le taux de THC est obligatoire pour publier un produit CBD." };
-    if (p.cbdRate === null) return { error: "Le taux de CBD est obligatoire pour publier un produit CBD." };
-    if (!p.coaUrl) return { error: "Le certificat d'analyse (PDF) est obligatoire pour publier un produit CBD." };
-    if (!p.originRegion || !p.producer) return { error: "La région d'origine et le producteur sont obligatoires pour un produit CBD." };
-  }
+  if (p.isActive && !p.composition) return { error: "La liste des ingrédients est obligatoire pour publier un produit alimentaire." };
 
   const productId = p.id && isUuid(p.id) ? p.id : crypto.randomUUID();
   const keptIds = p.variants.map((v) => v.id).filter((id): id is string => Boolean(id && isUuid(id)));
@@ -147,18 +142,20 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
   try {
     await sql.transaction([
       sql.query(
-        `insert into products (id, name, slug, category_id, short_description, description, cbd_rate, thc_rate,
-           origin_region, producer, images, coa_url, tags, is_active, featured)
-         values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)
+        `insert into products (id, name, slug, category_id, short_description, description, origin_country,
+           origin_region, producer, images, composition, allergens, usage_tips, conservation, tags, is_active, featured)
+         values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)
          on conflict (id) do update set
            name = excluded.name, slug = excluded.slug, category_id = excluded.category_id,
            short_description = excluded.short_description, description = excluded.description,
-           cbd_rate = excluded.cbd_rate, thc_rate = excluded.thc_rate, origin_region = excluded.origin_region,
-           producer = excluded.producer, images = excluded.images, coa_url = excluded.coa_url, tags = excluded.tags,
+           origin_country = excluded.origin_country, origin_region = excluded.origin_region,
+           producer = excluded.producer, images = excluded.images, composition = excluded.composition,
+           allergens = excluded.allergens, usage_tips = excluded.usage_tips, conservation = excluded.conservation, tags = excluded.tags,
            is_active = excluded.is_active, featured = excluded.featured`,
         [
           productId, p.name, slugify(p.slug || p.name), p.categoryId, p.shortDescription, p.description,
-          p.cbdRate, p.thcRate, p.originRegion, p.producer, p.images, p.coaUrl, p.tags, p.isActive, p.featured,
+          p.originCountry, p.originRegion, p.producer, p.images, p.composition, p.allergens, p.usageTips, p.conservation,
+          p.tags, p.isActive, p.featured,
         ],
       ),
       // Variantes retirées du formulaire.
@@ -268,5 +265,160 @@ export async function setMaintenanceAction(_prev: ActionState, formData: FormDat
     [JSON.stringify({ enabled, message })],
   );
   revalidatePath("/", "layout");
-  return { success: enabled ? "Mode maintenance activé : la boutique affiche l'écran de maintenance." : "Boutique rouverte." };
+  return { success: enabled ? "Mode maintenance activé : le site affiche l'écran de maintenance." : "Site rouvert." };
+}
+
+// -------------------------------------------------------------- Recettes
+
+const COURSES = ["mijotes", "grillades", "riz-cereales", "accompagnements", "douceurs"] as const;
+
+const recipeSchema = z.object({
+  id: z.string().optional(),
+  name: z.string().trim().min(2, "Nom requis.").max(120),
+  slug: z.string().trim().optional(),
+  countryCode: z.string().trim().min(2, "Pays requis.").max(3),
+  region: z.string().trim().max(120).nullable(),
+  course: z.enum(COURSES, { error: "Type de plat invalide." }),
+  shortDescription: z.string().trim().max(300),
+  story: z.string().trim().max(10000),
+  image: z.string().trim().max(500).nullable(),
+  prepMinutes: z.number().int().min(0).max(10000),
+  cookMinutes: z.number().int().min(0).max(10000),
+  servings: z.number().int().min(1, "Au moins une personne.").max(50),
+  difficulty: z.number().int().min(1).max(3),
+  ingredients: z
+    .array(
+      z.object({
+        quantity: z.number().min(0).nullable(),
+        unit: z.string().trim().max(30).nullable(),
+        name: z.string().trim().min(1, "Chaque ingrédient doit avoir un nom.").max(200),
+        productSlug: z.string().trim().max(200).nullable(),
+      }),
+    )
+    .min(1, "Ajoutez au moins un ingrédient.")
+    .max(60),
+  steps: z
+    .array(z.object({ text: z.string().trim().min(1, "Une étape est vide.").max(3000), image: z.string().trim().max(500).nullable() }))
+    .min(1, "Ajoutez au moins une étape.")
+    .max(40),
+  tips: z.array(z.string().max(1000)).max(20),
+  tags: z.array(z.string().max(60)).max(20),
+  featured: z.boolean(),
+  isPublished: z.boolean(),
+});
+
+const lines = (v: FormDataEntryValue | null) =>
+  String(v ?? "")
+    .split("\n")
+    .map((t) => t.trim())
+    .filter(Boolean);
+
+export async function saveRecipeAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const { sql } = await requireAdmin();
+  let ingredients: unknown;
+  let steps: unknown;
+  try {
+    ingredients = JSON.parse(String(formData.get("ingredients") ?? "[]"));
+    steps = JSON.parse(String(formData.get("steps") ?? "[]"));
+  } catch {
+    return { error: "Données du formulaire invalides." };
+  }
+  const str = (k: string) => String(formData.get(k) ?? "").trim() || null;
+  const int = (k: string) => Number.parseInt(String(formData.get(k) ?? ""), 10) || 0;
+
+  const parsed = recipeSchema.safeParse({
+    id: str("id") ?? undefined,
+    name: formData.get("name"),
+    slug: str("slug") ?? undefined,
+    countryCode: formData.get("countryCode"),
+    region: str("region"),
+    course: formData.get("course"),
+    shortDescription: formData.get("shortDescription") ?? "",
+    story: formData.get("story") ?? "",
+    image: str("image"),
+    prepMinutes: int("prepMinutes"),
+    cookMinutes: int("cookMinutes"),
+    servings: int("servings"),
+    difficulty: int("difficulty") || 1,
+    ingredients,
+    steps,
+    tips: lines(formData.get("tips")),
+    tags: String(formData.get("tags") ?? "")
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean),
+    featured: formData.get("featured") === "on",
+    isPublished: formData.get("isPublished") === "on",
+  });
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "Formulaire invalide." };
+  const r = parsed.data;
+
+  const claims = findHealthClaims(r.name, r.shortDescription, r.story, ...r.steps.map((s) => s.text), ...r.tips);
+  if (claims.length) {
+    return { error: `Allégation de santé détectée (${claims.join(", ")}). Reformulez : aucune promesse de santé ou de bienfait n'est autorisée.` };
+  }
+
+  const recipeId = r.id && isUuid(r.id) ? r.id : crypto.randomUUID();
+  try {
+    await sql.query(
+      `insert into recipes (id, slug, name, country_code, region, course, short_description, story, image, prep_minutes,
+         cook_minutes, servings, difficulty, ingredients, steps, tips, tags, featured, is_published)
+       values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14::jsonb, $15::jsonb, $16, $17, $18, $19)
+       on conflict (id) do update set
+         slug = excluded.slug, name = excluded.name, country_code = excluded.country_code, region = excluded.region,
+         course = excluded.course, short_description = excluded.short_description, story = excluded.story,
+         image = excluded.image, prep_minutes = excluded.prep_minutes, cook_minutes = excluded.cook_minutes,
+         servings = excluded.servings, difficulty = excluded.difficulty, ingredients = excluded.ingredients,
+         steps = excluded.steps, tips = excluded.tips, tags = excluded.tags, featured = excluded.featured,
+         is_published = excluded.is_published`,
+      [
+        recipeId, slugify(r.slug || r.name), r.name, r.countryCode, r.region, r.course, r.shortDescription, r.story, r.image,
+        r.prepMinutes, r.cookMinutes, r.servings, r.difficulty, JSON.stringify(r.ingredients), JSON.stringify(r.steps),
+        r.tips, r.tags, r.featured, r.isPublished,
+      ],
+    );
+  } catch (e) {
+    const err = pgError(e);
+    return { error: err.code === "23505" ? "Ce slug (adresse de la recette) est déjà utilisé." : err.message };
+  }
+
+  revalidatePath("/", "layout");
+  if (!r.id) redirect(`/admin/recettes/${recipeId}?cree=1`);
+  return { success: "Recette enregistrée." };
+}
+
+export async function deleteRecipeAction(formData: FormData) {
+  const { sql } = await requireAdmin();
+  const id = String(formData.get("id") ?? "");
+  if (isUuid(id)) await sql.query("delete from recipes where id = $1", [id]);
+  revalidatePath("/", "layout");
+  redirect("/admin/recettes");
+}
+
+// ------------------------------------------------------------------ Avis
+
+export async function setReviewStatusAction(formData: FormData) {
+  const { sql } = await requireAdmin();
+  const id = String(formData.get("id") ?? "");
+  const status = String(formData.get("status") ?? "");
+  if (isUuid(id) && ["pending", "approved", "rejected"].includes(status)) {
+    await sql.query("update recipe_reviews set status = $2 where id = $1", [id, status]);
+  }
+  revalidatePath("/", "layout");
+}
+
+export async function deleteReviewAction(formData: FormData) {
+  const { sql } = await requireAdmin();
+  const id = String(formData.get("id") ?? "");
+  if (isUuid(id)) await sql.query("delete from recipe_reviews where id = $1", [id]);
+  revalidatePath("/", "layout");
+}
+
+// ------------------------------------------------------------ Newsletter
+
+export async function deleteSubscriberAction(formData: FormData) {
+  const { sql } = await requireAdmin();
+  const id = String(formData.get("id") ?? "");
+  if (isUuid(id)) await sql.query("delete from newsletter_subscribers where id = $1", [id]);
+  revalidatePath("/admin/newsletter");
 }

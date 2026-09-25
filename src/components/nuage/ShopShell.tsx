@@ -8,10 +8,13 @@ import { PageTransitionProvider } from "./PageTransition";
 
 const nav: NavItem[] = [
   { href: "/", label: "Accueil" },
+  { href: "/recettes", label: "Recettes" },
+  { href: "/pays", label: "Pays" },
   { href: "/boutique", label: "Boutique" },
+  { href: "/favoris", label: "Favoris" },
 ];
 
-/** Habillage « Braise » de la boutique (fond, menu, pied de page, mini-panier). Partagé avec la page 404. */
+/** Habillage « Braise » du site (fond, menu, pied de page, mini-panier). Partagé avec la page 404. */
 export function ShopShell({ children }: { children: React.ReactNode }) {
   return (
     <CartProvider>

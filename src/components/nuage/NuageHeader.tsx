@@ -24,12 +24,12 @@ function SearchBox({ onDone, autoFocus }: { onDone?: () => void; autoFocus?: boo
       onSubmit={(e) => {
         e.preventDefault();
         const term = q.trim();
-        router.push(term ? `/boutique?q=${encodeURIComponent(term)}` : "/boutique");
+        router.push(term ? `/recettes?q=${encodeURIComponent(term)}` : "/recettes");
         onDone?.();
       }}
     >
       <label htmlFor={autoFocus ? "search-top" : "search-menu"} className="sr-only">
-        Rechercher un produit
+        Rechercher une recette ou un ingrédient
       </label>
       <input
         id={autoFocus ? "search-top" : "search-menu"}
@@ -37,7 +37,7 @@ function SearchBox({ onDone, autoFocus }: { onDone?: () => void; autoFocus?: boo
         value={q}
         autoFocus={autoFocus}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="Rechercher une fleur, une huile, un grinder…"
+        placeholder="Un plat, un pays, un ingrédient (fonio, arachide…)"
         className="w-full rounded-full border border-[#fbeee2]/15 bg-[#140a07]/80 py-3 pr-4 pl-11 text-sm text-[#fbeee2] placeholder:text-[#fbeee2]/45 focus:border-[#ff7a3d] focus:outline-none"
       />
       <Search className="pointer-events-none absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-[#fbeee2]/50" aria-hidden />

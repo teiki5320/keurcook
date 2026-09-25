@@ -5,7 +5,7 @@ import { useRef } from "react";
 /** Événement écouté par <CartDrawer> pour ouvrir le mini-panier après un ajout. */
 export const CART_ADDED_EVENT = "alohash:cart-added";
 
-export const anton: React.CSSProperties = { fontFamily: "var(--font-anton), sans-serif", fontWeight: 400 };
+export { anton } from "./typography";
 
 /**
  * Glissement horizontal (doigt ou souris) pour les carrousels.

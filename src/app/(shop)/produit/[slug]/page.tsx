@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { FileDown, FlaskConical, MapPin, Tractor } from "lucide-react";
-import { UsageWarnings } from "@/components/compliance/Warnings";
+import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
 import { AddToCart } from "@/components/product/AddToCart";
 import { ProductGallery } from "@/components/product/ProductGallery";
-import { RateBadges } from "@/components/product/RateBadges";
+import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { minPriceCents, totalStock } from "@/lib/catalog-utils";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
-import { withBasePath } from "@/lib/paths";
+import { getRecipesUsingProduct } from "@/lib/data/recipes";
 import { siteConfig } from "@/lib/config";
-import { formatRate } from "@/lib/format";
 
 export const revalidate = 300;
 
@@ -27,7 +25,7 @@ export async function generateMetadata({ params }: PageProps<"/produit/[slug]">)
   const image = product.images[0];
   return {
     title: product.name,
-    description: `${product.shortDescription}${product.category.kind === "cbd" ? ` CBD ${formatRate(product.cbdRate)}, THC ${formatRate(product.thcRate)}.` : ""}`,
+    description: `${product.shortDescription}${product.originCountry ? ` Origine : ${product.originCountry}.` : ""}`,
     alternates: { canonical: `/produit/${product.slug}` },
     openGraph: {
       title: product.name,
@@ -41,8 +39,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) notFound();
-  const related = await getRelatedProducts(product);
-  const isCbd = product.category.kind === "cbd";
+  const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -52,6 +49,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
     image: product.images.map((i) => (i.startsWith("http") ? i : `${siteConfig.url}${i}`)),
     category: product.category.name,
     brand: product.producer ?? siteConfig.name,
+    countryOfOrigin: product.originCountry ?? undefined,
     sku: product.variants[0]?.sku ?? undefined,
     offers: {
       "@type": "AggregateOffer",
@@ -68,7 +66,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-muted">
         <Link href="/" className="hover:underline">Accueil</Link> /{" "}
-        <Link href={`/boutique?gamme=${product.category.kind === "accessoire" ? "accessoires" : product.category.slug}`} className="hover:underline">{product.category.name}</Link> /{" "}
+        <Link href={`/boutique?gamme=${product.category.slug}`} className="hover:underline">{product.category.name}</Link> /{" "}
         <span className="text-ink">{product.name}</span>
       </nav>
 
@@ -79,9 +77,6 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
           <p className="text-sm font-semibold tracking-wide text-terracotta uppercase">{product.category.name}</p>
           <h1 className="mt-2 font-display text-3xl leading-tight text-forest-900 sm:text-4xl">{product.name}</h1>
           <p className="mt-3 text-muted">{product.shortDescription}</p>
-          <div className="mt-4">
-            <RateBadges product={product} size="md" />
-          </div>
 
           <div className="mt-6">
             <AddToCart
@@ -90,46 +85,34 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
             />
           </div>
 
-          {isCbd && (
-            <dl className="card mt-8 grid grid-cols-2 gap-x-4 gap-y-4 p-5 text-sm">
-              <div>
-                <dt className="text-muted">Taux de CBD</dt>
-                <dd className="mt-0.5 text-lg font-semibold text-forest-900">{formatRate(product.cbdRate)}</dd>
+          <dl className="card mt-8 grid grid-cols-2 gap-x-4 gap-y-4 p-5 text-sm">
+            <div>
+              <dt className="flex items-center gap-1 text-muted"><MapPin className="h-3.5 w-3.5" aria-hidden /> Origine</dt>
+              <dd className="mt-0.5 font-medium">{[product.originCountry, product.originRegion].filter(Boolean).join(" — ") || "—"}</dd>
+            </div>
+            <div>
+              <dt className="flex items-center gap-1 text-muted"><Tractor className="h-3.5 w-3.5" aria-hidden /> Producteur</dt>
+              <dd className="mt-0.5 font-medium">{product.producer ?? "—"}</dd>
+            </div>
+            {product.composition && (
+              <div className="col-span-2">
+                <dt className="text-muted">Ingrédients</dt>
+                <dd className="mt-0.5">{product.composition}</dd>
               </div>
-              <div>
-                <dt className="text-muted">Taux de THC</dt>
-                <dd className="mt-0.5 text-lg font-semibold text-forest-900">
-                  {formatRate(product.thcRate)} <span className="text-xs font-normal text-muted">(limite légale 0,3 %)</span>
-                </dd>
-              </div>
-              <div>
-                <dt className="flex items-center gap-1 text-muted"><MapPin className="h-3.5 w-3.5" aria-hidden /> Origine</dt>
-                <dd className="mt-0.5 font-medium">France{product.originRegion ? ` — ${product.originRegion}` : ""}</dd>
-              </div>
-              <div>
-                <dt className="flex items-center gap-1 text-muted"><Tractor className="h-3.5 w-3.5" aria-hidden /> Producteur</dt>
-                <dd className="mt-0.5 font-medium">{product.producer ?? "—"}</dd>
-              </div>
+            )}
+            <div className="col-span-2">
+              <dt className="flex items-center gap-1 text-muted"><AlertTriangle className="h-3.5 w-3.5" aria-hidden /> Allergènes</dt>
+              <dd className="mt-0.5">
+                {product.allergens.length ? <strong className="font-semibold text-[#ffc46b]">{product.allergens.join(", ")}</strong> : "Aucun allergène majeur déclaré."}
+              </dd>
+            </div>
+            {product.conservation && (
               <div className="col-span-2 border-t border-sage-200 pt-4">
-                {product.coaUrl ? (
-                  <a href={withBasePath(product.coaUrl)} target="_blank" rel="noopener" download className="btn-secondary w-full sm:w-auto">
-                    <FileDown className="h-4 w-4" aria-hidden /> Télécharger le certificat d&apos;analyse (PDF)
-                  </a>
-                ) : (
-                  <p className="flex items-center gap-2 text-muted">
-                    <FlaskConical className="h-4 w-4" aria-hidden /> Certificat d&apos;analyse disponible sur demande.
-                  </p>
-                )}
+                <dt className="flex items-center gap-1 text-muted"><Package className="h-3.5 w-3.5" aria-hidden /> Conservation</dt>
+                <dd className="mt-0.5">{product.conservation} Date de durabilité minimale indiquée sur l&apos;emballage.</dd>
               </div>
-            </dl>
-          )}
-
-          {!isCbd && product.originRegion && (
-            <p className="mt-6 flex items-center gap-2 text-sm text-muted">
-              <MapPin className="h-4 w-4" aria-hidden /> Fabriqué en France — {product.originRegion}
-              {product.producer ? ` (${product.producer})` : ""}
-            </p>
-          )}
+            )}
+          </dl>
         </div>
       </div>
 
@@ -142,8 +125,26 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
             ))}
           </div>
         </section>
-        {isCbd && <UsageWarnings />}
+        {product.usageTips && (
+          <aside className="card h-fit p-5">
+            <h2 className="font-display text-xl">En cuisine</h2>
+            <p className="mt-2 text-sm leading-relaxed">{product.usageTips}</p>
+          </aside>
+        )}
       </div>
+
+      {recipes.length > 0 && (
+        <section className="mt-16">
+          <h2 className="mb-6 font-display text-2xl text-forest-900">Utilisé dans ces recettes</h2>
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {recipes.map((r) => (
+              <li key={r.id}>
+                <RecipeCard recipe={r} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {related.length > 0 && (
         <section className="mt-16">

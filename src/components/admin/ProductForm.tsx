@@ -1,7 +1,7 @@
 "use client";
 
 import { startTransition, useActionState, useState } from "react";
-import { FileDown, Plus, Trash2, Upload } from "lucide-react";
+import { Plus, Trash2, Upload } from "lucide-react";
 import { uploadPresigned } from "@vercel/blob/client";
 import { saveProductAction, type ActionState } from "@/app/admin/actions";
 import { ProductImage } from "@/components/product/ProductImage";
@@ -16,7 +16,7 @@ interface VariantDraft {
 }
 
 /** Envoie le fichier directement vers Vercel Blob (URL présignée délivrée par /admin/upload). */
-async function uploadFile(folder: "product-images" | "certificates", file: File) {
+async function uploadFile(folder: "product-images", file: File) {
   const ext = file.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") || "bin";
   const base = file.name.replace(/\.[^.]+$/, "").normalize("NFD").replace(/[^\w-]+/g, "-").slice(0, 40) || "fichier";
   // Nom unique (le jeton d'envoi est limité à ce chemin exact).
@@ -32,7 +32,6 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
   const [state, action, pending] = useActionState<ActionState, FormData>(saveProductAction, {});
   const [categoryId, setCategoryId] = useState(product?.categoryId ?? categories[0]?.id ?? "");
   const [images, setImages] = useState<string[]>(product?.images ?? []);
-  const [coaUrl, setCoaUrl] = useState(product?.coaUrl ?? "");
   const [uploading, setUploading] = useState<string | null>(null);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [variants, setVariants] = useState<VariantDraft[]>(
@@ -44,8 +43,6 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
       sku: v.sku ?? "",
     })) ?? [{ label: "", price: "", stock: "0", sku: "" }],
   );
-
-  const isCbd = categories.find((c) => c.id === categoryId)?.kind === "cbd";
 
   const variantsJson = JSON.stringify(
     variants.map((v) => ({
@@ -71,24 +68,6 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
     }
   }
 
-  async function onCoa(files: FileList | null) {
-    const file = files?.[0];
-    if (!file) return;
-    if (file.type !== "application/pdf") {
-      setUploadError("Le certificat doit être un fichier PDF.");
-      return;
-    }
-    setUploading("coa");
-    setUploadError(null);
-    try {
-      setCoaUrl(await uploadFile("certificates", file));
-    } catch (e) {
-      setUploadError(`Échec de l'envoi : ${(e as Error).message}`);
-    } finally {
-      setUploading(null);
-    }
-  }
-
   const updateVariant = (i: number, patch: Partial<VariantDraft>) =>
     setVariants((prev) => prev.map((v, idx) => (idx === i ? { ...v, ...patch } : v)));
 
@@ -106,7 +85,6 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
       {product && <input type="hidden" name="id" value={product.id} />}
       <input type="hidden" name="variants" value={variantsJson} />
       <input type="hidden" name="images" value={JSON.stringify(images)} />
-      <input type="hidden" name="coaUrl" value={coaUrl} />
 
       <div className="space-y-6">
         <section className="card space-y-4 p-5">
@@ -125,7 +103,6 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
               <select id="categoryId" name="categoryId" value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className="input">
                 {categories.map((c) => (
                   <option key={c.id} value={c.id}>
-                    {c.kind === "cbd" ? "CBD — " : "Accessoire — "}
                     {c.name}
                   </option>
                 ))}
@@ -240,46 +217,38 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
         </section>
 
         <section className="card space-y-4 p-5">
-          <h2 className="font-semibold">{isCbd ? "Conformité CBD" : "Origine (facultatif)"}</h2>
-          {isCbd && (
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="label" htmlFor="cbdRate">Taux CBD (%)</label>
-                <input id="cbdRate" name="cbdRate" inputMode="decimal" defaultValue={product?.cbdRate ?? ""} className="input" />
-              </div>
-              <div>
-                <label className="label" htmlFor="thcRate">Taux THC (%)</label>
-                <input id="thcRate" name="thcRate" inputMode="decimal" defaultValue={product?.thcRate ?? ""} className="input" />
-                <p className="mt-1 text-xs text-muted">Max. 0,3 %</p>
-              </div>
+          <h2 className="font-semibold">Origine & étiquetage</h2>
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="label" htmlFor="originCountry">Pays d&apos;origine</label>
+              <input id="originCountry" name="originCountry" defaultValue={product?.originCountry ?? ""} placeholder="Cameroun, Sénégal…" className="input" />
             </div>
-          )}
-          <div>
-            <label className="label" htmlFor="originRegion">Région d&apos;origine (France)</label>
-            <input id="originRegion" name="originRegion" defaultValue={product?.originRegion ?? ""} placeholder="Occitanie, Bretagne…" className="input" />
+            <div>
+              <label className="label" htmlFor="originRegion">Région</label>
+              <input id="originRegion" name="originRegion" defaultValue={product?.originRegion ?? ""} className="input" />
+            </div>
           </div>
           <div>
             <label className="label" htmlFor="producer">Producteur</label>
             <input id="producer" name="producer" defaultValue={product?.producer ?? ""} className="input" />
           </div>
-          {isCbd && (
-            <div>
-              <p className="label">Certificat d&apos;analyse (PDF)</p>
-              {coaUrl ? (
-                <div className="flex items-center justify-between gap-2 rounded-xl bg-sage-50 p-3 text-sm">
-                  <a href={coaUrl} target="_blank" rel="noopener" className="flex items-center gap-1 truncate text-forest-700 underline">
-                    <FileDown className="h-4 w-4 shrink-0" aria-hidden /> Voir le certificat
-                  </a>
-                  <button type="button" onClick={() => setCoaUrl("")} className="text-xs text-terracotta-dark">Retirer</button>
-                </div>
-              ) : (
-                <label className="flex cursor-pointer items-center justify-center gap-2 rounded-xl border-2 border-dashed border-sage-300 p-4 text-sm text-muted hover:border-forest-600">
-                  <Upload className="h-4 w-4" aria-hidden /> {uploading === "coa" ? "Envoi…" : "Téléverser le PDF"}
-                  <input type="file" accept="application/pdf" className="sr-only" onChange={(e) => onCoa(e.target.files)} />
-                </label>
-              )}
-            </div>
-          )}
+          <div>
+            <label className="label" htmlFor="composition">Ingrédients</label>
+            <textarea id="composition" name="composition" defaultValue={product?.composition ?? ""} rows={2} className="input" />
+          </div>
+          <div>
+            <label className="label" htmlFor="allergens">Allergènes (séparés par des virgules)</label>
+            <input id="allergens" name="allergens" defaultValue={product?.allergens.join(", ") ?? ""} placeholder="arachide, poisson…" className="input" />
+            <p className="mt-1 text-xs text-muted">Laisser vide si aucun allergène majeur.</p>
+          </div>
+          <div>
+            <label className="label" htmlFor="usageTips">En cuisine (conseils)</label>
+            <textarea id="usageTips" name="usageTips" defaultValue={product?.usageTips ?? ""} rows={2} className="input" />
+          </div>
+          <div>
+            <label className="label" htmlFor="conservation">Conservation</label>
+            <input id="conservation" name="conservation" defaultValue={product?.conservation ?? ""} className="input" />
+          </div>
         </section>
 
         {uploadError && <p role="alert" className="rounded-xl bg-terracotta/10 p-3 text-sm text-terracotta-dark">{uploadError}</p>}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Plus } from "lucide-react";
 import { ProductImage } from "@/components/product/ProductImage";
 import { adminListCategories, adminListProducts } from "@/lib/data/admin";
-import { formatPrice, formatRate } from "@/lib/format";
+import { formatPrice } from "@/lib/format";
 
 export const metadata = { title: "Produits" };
 
@@ -23,7 +23,7 @@ export default async function AdminProductsPage() {
             <tr>
               <th className="p-3">Produit</th>
               <th className="p-3">Catégorie</th>
-              <th className="p-3">CBD / THC</th>
+              <th className="p-3">Origine</th>
               <th className="p-3">Prix</th>
               <th className="p-3">Stock</th>
               <th className="p-3">Statut</th>
@@ -45,8 +45,7 @@ export default async function AdminProductsPage() {
                   </td>
                   <td className="p-3 text-muted">{catName.get(p.categoryId)}</td>
                   <td className="p-3">
-                    {p.cbdRate !== null ? `${formatRate(p.cbdRate)} / ${formatRate(p.thcRate)}` : "—"}
-                    {p.cbdRate !== null && !p.coaUrl && <span className="ml-1 text-xs text-terracotta-dark">(sans COA)</span>}
+                    {p.originCountry ?? "—"}
                   </td>
                   <td className="p-3">{prices.length ? formatPrice(Math.min(...prices)) : "—"}</td>
                   <td className={`p-3 ${stock <= 5 ? "font-semibold text-terracotta-dark" : ""}`}>{stock}</td>

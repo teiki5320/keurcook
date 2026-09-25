@@ -8,10 +8,10 @@ export interface MaintenanceSettings {
 }
 
 export const DEFAULT_MAINTENANCE_MESSAGE =
-  "La boutique fait une courte pause pour préparer la suite. Revenez très bientôt.";
+  "Nous mijotons de nouvelles recettes et remplissons l'épicerie de produits rares. Revenez très vite !";
 
 /**
- * Mode maintenance : quand il est actif, toutes les pages de la boutique
+ * Mode maintenance : quand il est actif, toutes les pages du site
  * affichent l'écran de maintenance et les commandes sont refusées.
  * En mode démo (sans base), le site n'est jamais en maintenance.
  */

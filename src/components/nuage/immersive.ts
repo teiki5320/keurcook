@@ -1,5 +1,5 @@
 /** Pages « immersives » : nuage 3D en fond, espacement géré par la page elle-même. */
-export const IMMERSIVE_PATHS = ["/", "/boutique"];
+export const IMMERSIVE_PATHS = ["/", "/boutique", "/recettes"];
 
 /** Normalise le chemin (GitHub Pages ajoute un « / » final). */
 export function normalizePath(raw: string | null) {

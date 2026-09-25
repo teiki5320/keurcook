@@ -30,8 +30,13 @@ export default function PrivacyPage() {
           légale.
         </li>
         <li>
-          <strong>Vérification de l&apos;âge</strong> : simple déclaration (cookie « ah_age ») et attestation lors de la
-          commande. Base légale : obligation légale (interdiction de vente aux mineurs).
+          <strong>Avis sur les recettes</strong> : prénom, note et commentaire, publiés après relecture. Base légale :
+          consentement (dépôt volontaire de l&apos;avis).
+        </li>
+        <li>
+          <strong>Newsletter</strong> : adresse e-mail et date de consentement, pour l&apos;envoi de la « recette de la
+          semaine ». Base légale : consentement, retirable à tout moment en écrivant à l&apos;adresse de contact ou via le
+          lien de désinscription de chaque e-mail.
         </li>
         <li>
           <strong>Sécurité de l&apos;espace d&apos;administration</strong> : identifiants de connexion des
@@ -44,13 +49,14 @@ export default function PrivacyPage() {
       <ul>
         <li>Données de commande : 3 ans à compter de la dernière commande à des fins de relation client.</li>
         <li>Pièces comptables : 10 ans (article L. 123-22 du code de commerce).</li>
-        <li>Cookie de vérification d&apos;âge : 30 jours. Choix en matière de cookies : 6 mois.</li>
+        <li>Newsletter : jusqu&apos;à la désinscription, puis 3 ans sans ouverture ni clic. Avis : tant que la recette est publiée.</li>
+        <li>Choix en matière de cookies : 6 mois.</li>
       </ul>
 
       <h2>Destinataires et sous-traitants</h2>
       <p>
         Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site
-        ({legalConfig.hostName}), base de données (Neon), stockage des images (Vercel Blob), envoi d&apos;emails (prestataire SMTP), transporteur. Lorsque des
+        ({legalConfig.hostName}), base de données (Neon), envoi d&apos;emails (prestataire SMTP), transporteur. Lorsque des
         données sont transférées hors de l&apos;Union européenne, ce transfert est encadré par des clauses contractuelles
         types de la Commission européenne.
       </p>
@@ -66,7 +72,7 @@ export default function PrivacyPage() {
       <h2 id="cookies">Cookies</h2>
       <p>Le site utilise les cookies et stockages locaux suivants :</p>
       <ul>
-        <li><strong>ah_age</strong> (nécessaire) — mémorise la confirmation de majorité, 30 jours.</li>
+        <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté.</li>
         <li><strong>ah_consent</strong> (nécessaire) — mémorise vos choix en matière de cookies, 6 mois.</li>
         <li><strong>Panier</strong> (stockage local, nécessaire) — conserve le contenu de votre panier.</li>
         <li><strong>sb-*</strong> (nécessaire) — session de l&apos;espace d&apos;administration uniquement.</li>

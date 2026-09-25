@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+/** L'admin reprend le thème sombre « Braise » du site (couleurs remappées par nuage.css). */
 export default function AdminRootLayout({ children }: { children: React.ReactNode }) {
-  return <div className="min-h-dvh bg-sage-50">{children}</div>;
+  return (
+    <div className="nuage-theme min-h-dvh text-[#fbeee2]" style={{ fontFamily: "var(--font-manrope), sans-serif", background: "#140a07" }}>
+      {children}
+    </div>
+  );
 }

@@ -16,7 +16,7 @@ export default async function LegacyCategoryPage({ params }: PageProps<"/categor
   const { slug } = await params;
   const { categories } = await getCatalog();
   const category = categories.find((c) => c.slug === slug);
-  const to = `/boutique?gamme=${!category ? "tout" : category.kind === "accessoire" ? "accessoires" : category.slug}`;
+  const to = `/boutique?gamme=${category?.slug ?? "tout"}`;
   if (!isStaticExport) permanentRedirect(to);
   return <LegacyRedirect to={to} />;
 }

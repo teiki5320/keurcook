@@ -137,11 +137,6 @@ export function CheckoutForm({ paymentOptions, flatRateCents, freeThresholdCents
         <CartSummary subtotalCents={subtotalCents} flatRateCents={flatRateCents} freeThresholdCents={freeThresholdCents}>
           <div className="space-y-3 border-t border-sage-200 pt-3">
             <label className="flex items-start gap-2">
-              <input type="checkbox" name="isAdult" required defaultChecked={v.isAdult === "on"} className="mt-0.5 h-4 w-4 accent-forest-700" />
-              <span>Je certifie avoir <strong>18 ans ou plus</strong>.</span>
-            </label>
-            {fe.isAdult && <p className="text-xs text-terracotta-dark">{fe.isAdult}</p>}
-            <label className="flex items-start gap-2">
               <input type="checkbox" name="acceptTerms" required defaultChecked={v.acceptTerms === "on"} className="mt-0.5 h-4 w-4 accent-forest-700" />
               <span>
                 J&apos;ai lu et j&apos;accepte les{" "}

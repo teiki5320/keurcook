@@ -94,7 +94,7 @@ export function CartView({ flatRateCents, freeThresholdCents }: { flatRateCents:
           )}
         </CartSummary>
         <p className="text-xs text-muted">
-          Vente réservée aux personnes majeures. Les prix et disponibilités sont vérifiés lors de la validation de la commande.
+          Les prix et disponibilités sont vérifiés lors de la validation de la commande.
         </p>
       </div>
     </div>

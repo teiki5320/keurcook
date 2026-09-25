@@ -4,9 +4,9 @@ import { getCatalog } from "@/lib/data/catalog";
 import { getGammes } from "@/lib/data/gammes";
 
 export const metadata: Metadata = {
-  title: "Boutique CBD",
+  title: "Épicerie de produits africains rares",
   description:
-    "Fleurs, résines, huiles, infusions, cosmétiques CBD français et accessoires. THC ≤ 0,3 %, certificat d'analyse pour chaque produit.",
+    "Épices, céréales anciennes, feuilles séchées, poissons fumés et huiles : les produits africains rares pour réussir nos recettes.",
   alternates: { canonical: "/boutique" },
 };
 

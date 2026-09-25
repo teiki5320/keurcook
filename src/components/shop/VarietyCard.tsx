@@ -5,12 +5,11 @@ import { useState } from "react";
 import { Heart, MapPin } from "lucide-react";
 import { CART_ADDED_EVENT } from "@/components/nuage/shared";
 import { ProductImage } from "@/components/product/ProductImage";
-import { RateBadges } from "@/components/product/RateBadges";
 import { useCart } from "@/lib/cart/cart-context";
 import { formatPrice, pricePerGram } from "@/lib/format";
 import type { ProductWithCategory } from "@/lib/types";
 
-/** Carte produit : photo, infos, choix du format (3 g · 5 g · 10 g…) et ajout au panier. */
+/** Carte produit : photo, origine, choix du format (100 g · 250 g…) et ajout au panier. */
 export function VarietyCard({ product, priority }: { product: ProductWithCategory; priority?: boolean }) {
   const { add } = useCart();
   const firstAvailable = product.variants.find((v) => v.stock > 0) ?? product.variants[0];
@@ -63,12 +62,11 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
             {product.name}
           </Link>
         </h3>
-        {product.originRegion && (
+        {(product.originCountry || product.originRegion) && (
           <p className="flex items-center gap-1 text-xs text-muted">
-            <MapPin className="h-3.5 w-3.5 shrink-0" aria-hidden /> {product.originRegion}
+            <MapPin className="h-3.5 w-3.5 shrink-0" aria-hidden /> {[product.originCountry, product.originRegion].filter(Boolean).join(" · ")}
           </p>
         )}
-        <RateBadges product={product} />
 
         {product.variants.length > 1 && (
           <div className="mt-1 flex flex-wrap gap-1.5" role="radiogroup" aria-label={`Format de ${product.name}`}>

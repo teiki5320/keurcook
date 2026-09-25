@@ -36,7 +36,7 @@ export interface WebhookResult {
 /**
  * Couche d'abstraction de paiement.
  *
- * Pour brancher un prestataire (acceptant l'activité CBD), il suffit de créer
+ * Pour brancher un prestataire , il suffit de créer
  * une classe qui implémente cette interface dans `providers/`, puis de
  * l'ajouter au registre (`registry.ts`). Voir `providers/_template.ts`.
  */

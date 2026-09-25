@@ -13,7 +13,6 @@ create table if not exists public.categories (
   id uuid primary key default gen_random_uuid(),
   slug text not null unique,
   name text not null,
-  kind text not null check (kind in ('cbd', 'accessoire')),
   description text not null default '',
   position int not null default 0
 );
@@ -25,14 +24,15 @@ create table if not exists public.products (
   category_id uuid not null references public.categories (id) on delete restrict,
   short_description text not null default '',
   description text not null default '',
-  -- Taux exprimés en pourcentage (ex : 12.5 = 12,5 %). Null pour les accessoires.
-  cbd_rate numeric(5, 2) check (cbd_rate is null or (cbd_rate >= 0 and cbd_rate <= 100)),
-  -- Conformité : THC ≤ 0,3 % imposé au niveau de la base.
-  thc_rate numeric(5, 3) check (thc_rate is null or (thc_rate >= 0 and thc_rate <= 0.3)),
+  origin_country text,
   origin_region text,
   producer text,
   images text[] not null default '{}',
-  coa_url text,
+  -- Étiquetage alimentaire (règlement INCO) : ingrédients, allergènes, conservation.
+  composition text,
+  allergens text[] not null default '{}',
+  usage_tips text,
+  conservation text,
   tags text[] not null default '{}',
   is_active boolean not null default true,
   featured boolean not null default false,
@@ -41,6 +41,18 @@ create table if not exists public.products (
 );
 
 create index if not exists products_category_idx on public.products (category_id);
+
+-- Mise à niveau d'une base créée pour l'ancienne boutique (CBD) : colonnes alimentaires,
+-- suppression des champs CBD. Sans effet sur une base neuve.
+alter table public.products add column if not exists origin_country text;
+alter table public.products add column if not exists composition text;
+alter table public.products add column if not exists allergens text[] not null default '{}';
+alter table public.products add column if not exists usage_tips text;
+alter table public.products add column if not exists conservation text;
+alter table public.products drop column if exists cbd_rate;
+alter table public.products drop column if exists thc_rate;
+alter table public.products drop column if exists coa_url;
+alter table public.categories drop column if exists kind;
 
 create table if not exists public.product_variants (
   id uuid primary key default gen_random_uuid(),
@@ -255,3 +267,59 @@ create table if not exists public.settings (
   value jsonb not null,
   updated_at timestamptz not null default now()
 );
+
+-- ---------------------------------------------------------------------
+-- Recettes
+-- Ingrédients : [{ quantity, unit, name, productSlug }] ; étapes : [{ text, image }].
+-- ---------------------------------------------------------------------
+create table if not exists public.recipes (
+  id uuid primary key default gen_random_uuid(),
+  slug text not null unique,
+  name text not null,
+  country_code text not null,
+  region text,
+  course text not null check (course in ('mijotes', 'grillades', 'riz-cereales', 'accompagnements', 'douceurs')),
+  short_description text not null default '',
+  story text not null default '',
+  image text,
+  prep_minutes int not null default 0 check (prep_minutes >= 0),
+  cook_minutes int not null default 0 check (cook_minutes >= 0),
+  servings int not null default 4 check (servings between 1 and 50),
+  difficulty int not null default 1 check (difficulty between 1 and 3),
+  ingredients jsonb not null default '[]',
+  steps jsonb not null default '[]',
+  tips text[] not null default '{}',
+  tags text[] not null default '{}',
+  featured boolean not null default false,
+  is_published boolean not null default true,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+drop trigger if exists recipes_touch on public.recipes;
+create trigger recipes_touch before update on public.recipes
+for each row execute function public.touch_updated_at();
+
+-- Avis des visiteurs : publiés seulement après validation dans l'admin.
+create table if not exists public.recipe_reviews (
+  id uuid primary key default gen_random_uuid(),
+  recipe_id uuid not null references public.recipes (id) on delete cascade,
+  author_name text not null,
+  rating int not null check (rating between 1 and 5),
+  comment text not null default '',
+  status text not null default 'pending' check (status in ('pending', 'approved', 'rejected')),
+  created_at timestamptz not null default now()
+);
+
+create index if not exists recipe_reviews_recipe_idx on public.recipe_reviews (recipe_id, status);
+
+-- Inscrits à la newsletter (consentement explicite, désinscription possible).
+create table if not exists public.newsletter_subscribers (
+  id uuid primary key default gen_random_uuid(),
+  email text not null,
+  consent_at timestamptz not null default now(),
+  unsubscribed_at timestamptz,
+  created_at timestamptz not null default now()
+);
+
+create unique index if not exists newsletter_subscribers_email_idx on public.newsletter_subscribers (lower(email));

@@ -18,28 +18,24 @@ export default function TermsPage() {
       <p>
         Les présentes conditions générales de vente (CGV) régissent les ventes conclues à distance sur le site{" "}
         {siteConfig.url} entre {l.companyName}, {l.legalForm}, dont le siège est situé {l.address}, immatriculée sous le
-        numéro {l.siret} (ci-après « le Vendeur ») et toute personne physique majeure agissant en qualité de
+        numéro {l.siret} (ci-après « le Vendeur ») et toute personne physique agissant en qualité de
         consommateur (ci-après « le Client »). Toute commande implique l&apos;acceptation sans réserve des présentes CGV.
       </p>
 
-      <h2>Article 2 — Conditions d&apos;accès : vente interdite aux mineurs</h2>
+      <h2>Article 2 — Capacité</h2>
       <p>
-        La vente des produits proposés sur le site est <strong>strictement réservée aux personnes âgées de 18 ans et
-        plus</strong>. En validant sa commande, le Client certifie être majeur. Le Vendeur se réserve le droit de
-        demander un justificatif d&apos;âge et d&apos;annuler toute commande en cas de doute.
+        Le Client déclare avoir la pleine capacité juridique pour passer commande. Les recettes publiées sur le site sont
+        consultables librement et gratuitement ; seules les commandes de produits sont régies par les présentes CGV.
       </p>
 
       <h2>Article 3 — Produits</h2>
       <p>
-        Les produits à base de chanvre commercialisés sont issus de variétés autorisées et présentent une teneur en THC
-        inférieure ou égale à 0,3 %, attestée par un certificat d&apos;analyse consultable sur chaque fiche produit. Les
-        produits ne sont pas des médicaments et ne font l&apos;objet d&apos;aucune allégation thérapeutique. Les
-        photographies sont non contractuelles. Le Client est invité à lire l&apos;étiquetage et les avertissements
-        figurant sur chaque produit.
+        Les produits commercialisés sont des denrées alimentaires. Leur dénomination, la liste des ingrédients, les
+        allergènes, l&apos;origine et les conditions de conservation figurent sur chaque fiche produit et sur
+        l&apos;emballage ; la date de durabilité minimale (DDM) est indiquée sur l&apos;emballage de chaque lot. Les
+        photographies sont non contractuelles. Le Client est invité à lire l&apos;étiquetage avant consommation.
       </p>
-      <p>
-        Il appartient au Client de s&apos;assurer que la détention et l&apos;usage des produits sont autorisés dans le
-        pays de livraison. Les livraisons sont limitées à la France métropolitaine.
+      <p>Les livraisons sont limitées à la France métropolitaine.
       </p>
 
       <h2>Article 4 — Prix</h2>
@@ -53,7 +49,7 @@ export default function TermsPage() {
       <h2>Article 5 — Commande</h2>
       <p>
         Le Client sélectionne les produits, vérifie le contenu de son panier, renseigne ses coordonnées, choisit son moyen
-        de paiement, certifie être majeur, accepte les présentes CGV, puis valide sa commande avec obligation de
+        de paiement, accepte les présentes CGV, puis valide sa commande avec obligation de
         paiement. Un email de confirmation récapitulant la commande lui est adressé. Le Vendeur se réserve le droit de
         refuser toute commande anormale ou passée de mauvaise foi.
       </p>

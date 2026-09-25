@@ -36,14 +36,6 @@ body {
   font-family: var(--font-sans);
 }
 
-/* --- Vérification d'âge : le script en <head> pose data-age="ok" si déjà validée. */
-html[data-age="ok"] #age-gate {
-  display: none;
-}
-html:not([data-age="ok"]) body {
-  overflow: hidden;
-}
-
 @utility container-page {
   @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
 }

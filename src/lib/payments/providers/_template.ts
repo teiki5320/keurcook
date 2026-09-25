@@ -1,7 +1,7 @@
 /**
  * MODÈLE — prestataire de paiement par redirection (non enregistré).
  *
- * Étapes pour brancher un prestataire acceptant le CBD :
+ * Étapes pour brancher un autre prestataire de paiement :
  *  1. Copier ce fichier (ex. `providers/mon-psp.ts`) et implémenter les appels API.
  *  2. Ajouter les clés dans les variables d'environnement.
  *  3. Enregistrer l'instance dans `payments/registry.ts`.

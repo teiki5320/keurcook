@@ -2,12 +2,12 @@ import { ORDER_STATUS_LABELS } from "@/lib/format";
 import type { OrderStatus } from "@/lib/types";
 
 const styles: Record<OrderStatus, string> = {
-  pending_payment: "bg-amber-soft text-terracotta-dark",
-  paid: "bg-sage-200 text-forest-800",
-  preparing: "bg-sky-100 text-sky-800",
-  shipped: "bg-indigo-100 text-indigo-800",
-  delivered: "bg-forest-700 text-cream",
-  cancelled: "bg-zinc-200 text-zinc-600",
+  pending_payment: "bg-[#ffc46b]/15 text-[#ffc46b]",
+  paid: "bg-[#ff7a3d]/20 text-[#ff7a3d]",
+  preparing: "bg-sky-400/15 text-sky-300",
+  shipped: "bg-indigo-400/15 text-indigo-300",
+  delivered: "bg-emerald-400/15 text-emerald-300",
+  cancelled: "bg-[#fbeee2]/10 text-[#fbeee2]/60",
 };
 
 export function StatusBadge({ status }: { status: OrderStatus }) {

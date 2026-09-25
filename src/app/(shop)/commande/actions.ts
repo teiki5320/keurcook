@@ -19,7 +19,7 @@ export interface CheckoutState {
   values?: Record<string, string>;
 }
 
-const TEXT_FIELDS = ["email", "firstName", "lastName", "phone", "addressLine1", "addressLine2", "postalCode", "city", "notes", "paymentProvider", "isAdult", "acceptTerms"];
+const TEXT_FIELDS = ["email", "firstName", "lastName", "phone", "addressLine1", "addressLine2", "postalCode", "city", "notes", "paymentProvider", "acceptTerms"];
 
 const schema = z.object({
   email: z.email("Adresse email invalide."),
@@ -38,7 +38,6 @@ const schema = z.object({
   country: z.literal("FR"),
   notes: z.string().trim().max(500).optional(),
   paymentProvider: z.string().min(1, "Choisissez un moyen de paiement."),
-  isAdult: z.literal("on", { error: "Vous devez certifier être majeur." }),
   acceptTerms: z.literal("on", { error: "Vous devez accepter les conditions générales de vente." }),
   lines: z
     .array(z.object({ variantId: z.uuid(), quantity: z.number().int().min(1).max(99) }))
@@ -85,7 +84,6 @@ export async function placeOrderAction(_prev: CheckoutState, formData: FormData)
     country: formData.get("country") ?? "FR",
     notes: opt("notes"),
     paymentProvider: formData.get("paymentProvider"),
-    isAdult: formData.get("isAdult"),
     acceptTerms: formData.get("acceptTerms"),
     lines,
   });

@@ -30,20 +30,16 @@ export default function LegalNoticePage() {
       <h2>Hébergement</h2>
       <p>{l.host}</p>
       <p>
-        Base de données : Neon (neon.com), service fourni via Vercel. Stockage des fichiers (photos, certificats) :
-        Vercel Blob, Vercel Inc. Les données sont hébergées dans l&apos;Union européenne (région de Francfort).
+        Base de données : Neon (neon.com), service fourni via Vercel. Les données sont hébergées dans l&apos;Union
+        européenne (région de Francfort).
       </p>
 
-      <h2>Activité réglementée</h2>
+      <h2>Denrées alimentaires</h2>
       <p>
-        Le site commercialise des produits issus de variétés de chanvre (Cannabis sativa L.) inscrites au catalogue
-        commun des variétés des espèces de plantes agricoles, dont la teneur en delta-9-tétrahydrocannabinol (THC)
-        n&apos;est pas supérieure à 0,3 %, conformément à l&apos;arrêté du 30 décembre 2021 portant application de
-        l&apos;article R. 5132-86 du code de la santé publique.
-      </p>
-      <p>
-        La vente est <strong>strictement interdite aux mineurs</strong>. Les produits proposés ne sont pas des
-        médicaments ; aucune allégation thérapeutique n&apos;est formulée.
+        Le site publie des recettes de cuisine et commercialise des denrées alimentaires. La liste des ingrédients, les
+        allergènes et les conditions de conservation de chaque produit figurent sur sa fiche et sur son emballage,
+        conformément au règlement (UE) n° 1169/2011 concernant l&apos;information des consommateurs sur les denrées
+        alimentaires. Aucune allégation de santé n&apos;est formulée.
       </p>
 
       <h2>Propriété intellectuelle</h2>

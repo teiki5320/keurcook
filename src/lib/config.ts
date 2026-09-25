@@ -11,9 +11,9 @@ const defaultHost = isStaticExport
   : { name: "Vercel", full: "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com" };
 export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME || "Alohash",
-  tagline: "CBD français, cultivé avec soin",
+  tagline: "Recettes africaines & produits rares",
   description:
-    "Boutique en ligne de CBD français : fleurs, résines, huiles, infusions et cosmétiques issus de producteurs français, avec certificat d'analyse pour chaque produit. THC ≤ 0,3 %. Interdit aux mineurs.",
+    "Recettes de plats africains expliquées pas à pas (ndolé, mafé, thiéboudienne, poulet yassa…) et épicerie en ligne de produits africains rares : épices, céréales anciennes, feuilles séchées, poissons fumés.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
   locale: "fr_FR",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@alohash.fr",
@@ -40,8 +40,6 @@ export const shippingConfig = {
   freeThresholdCents: Number(process.env.SHIPPING_FREE_THRESHOLD_CENTS ?? 5000),
   countries: [{ code: "FR", label: "France métropolitaine" }],
 };
-
-export const LEGAL_THC_MAX = 0.3;
 
 export function computeShipping(subtotalCents: number): number {
   if (subtotalCents <= 0) return 0;

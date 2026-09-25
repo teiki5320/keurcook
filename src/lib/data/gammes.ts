@@ -9,19 +9,14 @@ export interface Gamme {
   description: string;
   products: ProductWithCategory[];
   image: string | null;
-  /** Silhouette du nuage 3D de l'accueil pour cette gamme. */
-  cloudMix: number;
 }
-
-const CLOUD_MIX: Record<string, number> = { fleurs: 0, resines: 1, huiles: 2, infusions: 0, cosmetiques: 2 };
 
 const imageOf = (items: ProductWithCategory[]) => items.find((p) => p.featured)?.images[0] ?? items[0]?.images[0] ?? null;
 
-/** Gammes présentées sur l'accueil : chaque catégorie CBD + une gamme « Accessoires ». */
+/** Gammes de la boutique : une par catégorie qui contient au moins un produit. */
 export async function getGammes(): Promise<Gamme[]> {
   const { categories, products } = await getCatalog();
-  const cbd = categories
-    .filter((c) => c.kind === "cbd")
+  return categories
     .map((c) => {
       const items = products.filter((p) => p.categoryId === c.id);
       return {
@@ -31,25 +26,7 @@ export async function getGammes(): Promise<Gamme[]> {
         description: c.description,
         products: items,
         image: imageOf(items),
-        cloudMix: CLOUD_MIX[c.slug] ?? 3,
       };
-    });
-  const accessories = products.filter((p) => p.category.kind === "accessoire");
-  return [
-    ...cbd,
-    {
-      key: "accessoires",
-      name: "Accessoires",
-      href: "/boutique?gamme=accessoires",
-      description: "Grinders, vaporisateurs, feuilles et boîtes de conservation, sélectionnés pour leur qualité et leur durabilité.",
-      products: accessories,
-      image: imageOf(accessories),
-      cloudMix: 3,
-    },
-  ].filter((g) => g.products.length > 0);
-}
-
-/** Clé de gamme d'un produit : sa catégorie CBD, ou « accessoires ». */
-export function gammeKeyOf(p: ProductWithCategory) {
-  return p.category.kind === "accessoire" ? "accessoires" : p.category.slug;
+    })
+    .filter((g) => g.products.length > 0);
 }

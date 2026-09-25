@@ -54,13 +54,13 @@ function BoutiqueView({ gammes, allProducts, gammeKey, query }: Props & { gammeK
 
   const base = query || showAll ? allProducts : (gamme?.products ?? []);
   const list = filterProducts(base, { q: query, sort });
-  const eyebrow = query ? "Recherche" : showAll ? `${list.length} produits` : unitWord(gamme?.key, list.length);
+  const eyebrow = query ? "Recherche" : showAll ? `${list.length} produits` : unitWord(list.length);
   const title = query ? `« ${query} »` : showAll ? "Toute la boutique" : gamme?.name;
 
   const cards = gammes.map((g) => ({
     key: g.key,
     title: g.name,
-    eyebrow: unitWord(g.key, g.products.length),
+    eyebrow: unitWord(g.products.length),
     image: g.image,
     href: `/boutique?gamme=${g.key}`,
     // Nuage en anneau : un halo autour des cartes (une silhouette serait cachée derrière).
