@@ -82,7 +82,7 @@ export function CookieBanner() {
       <div className="mx-auto max-w-3xl rounded-2xl border border-sage-300 bg-white p-5 shadow-xl" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         <p className="font-semibold text-forest-800">Votre vie privée</p>
         <p className="mt-1.5 text-sm text-muted">
-          Nous utilisons des cookies strictement nécessaires au fonctionnement du site (panier, vérification d&apos;âge,
+          Nous utilisons des cookies strictement nécessaires au fonctionnement du site (panier, favoris,
           session). Avec votre accord, nous pourrions utiliser des cookies de mesure d&apos;audience et marketing. Vous
           pouvez modifier votre choix à tout moment. <Link href="/confidentialite#cookies" className="underline">En savoir plus</Link>
         </p>
@@ -92,7 +92,7 @@ export function CookieBanner() {
             <label className="flex items-start gap-3">
               <input type="checkbox" checked disabled className="mt-1 accent-[#ff7a3d]" />
               <span>
-                <strong>Nécessaires</strong> — toujours actifs : panier, vérification d&apos;âge, choix cookies, connexion admin.
+                <strong>Nécessaires</strong> — toujours actifs : panier, favoris, choix cookies, connexion admin.
               </span>
             </label>
             <label className="flex items-start gap-3">
