@@ -17,7 +17,7 @@ import { africaPoint } from "./africa-map";
 
 const VERT = /* glsl */ `
 attribute vec3 t0; attribute vec3 t1; attribute vec3 t2; attribute vec3 t3; attribute float aRand;
-uniform float uMix, uTime, uExplode, uPR; uniform vec3 uMouse; varying vec3 vCol; varying float vA;
+uniform float uMix, uTime, uExplode, uPR, uForce; uniform vec3 uMouse; varying vec3 vCol; varying float vA;
 void main(){
   float m = uMix; float d = aRand * .35;
   vec3 p = mix(t0, t1, smoothstep(0. + d, .65 + d, m));
@@ -25,7 +25,7 @@ void main(){
   p = mix(p, t3, smoothstep(2. + d, 2.65 + d, m));
   p += .035 * sin(uTime * 1.4 + aRand * 6.283 + p.yzx * 3.);
   p += normalize(p + vec3(.001)) * uExplode * (0.6 + aRand * 3.5);
-  vec3 dm = p - uMouse; float f = smoothstep(1.3, 0., length(dm.xy)); p += normalize(dm + vec3(.001)) * f * .55;
+  vec3 dm = p - uMouse; float f = smoothstep(1.3, 0., length(dm.xy)); p += normalize(dm + vec3(.001)) * f * .55 * uForce;
   vec4 mv = modelViewMatrix * vec4(p, 1.);
   gl_Position = projectionMatrix * mv;
   gl_PointSize = (1.4 + aRand * 2.2) * uPR * (9. / -mv.z);
@@ -94,7 +94,7 @@ export function NuageCloud() {
     geo.setAttribute("aRand", new THREE.BufferAttribute(rand, 1));
     const uni = {
       uMix: { value: 0 }, uTime: { value: 0 }, uExplode: { value: 1 },
-      uMouse: { value: new THREE.Vector3(99, 99, 0) }, uPR: { value: PR }, uAlpha: { value: 1 },
+      uMouse: { value: new THREE.Vector3(99, 99, 0) }, uForce: { value: 1 }, uPR: { value: PR }, uAlpha: { value: 1 },
     };
     const mat = new THREE.ShaderMaterial({
       uniforms: uni, vertexShader: VERT, fragmentShader: FRAG,
@@ -111,9 +111,18 @@ export function NuageCloud() {
     const onMove = (e: MouseEvent) => { mx = e.clientX / window.innerWidth - 0.5; my = e.clientY / window.innerHeight - 0.5; };
     const onExplode = (e: Event) => { explode = Number((e as CustomEvent<number>).detail) || 0; };
     window.addEventListener("resize", onResize);
-    // Écran tactile : pas d'effet de souris (un toucher laisserait un « trou » dans le nuage).
+    // Souris : les particules fuient le curseur en permanence. Écran tactile : seulement
+    // pendant que le doigt touche ou glisse, puis elles reviennent en douceur.
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    let touching = false, tx = 0, ty = 0, force = finePointer ? 1 : 0;
+    const onTouch = (e: PointerEvent) => {
+      if (e.pointerType === "mouse") return;
+      if (e.type === "pointerup" || e.type === "pointercancel") { touching = false; return; }
+      touching = true;
+      tx = e.clientX / window.innerWidth - 0.5; ty = e.clientY / window.innerHeight - 0.5;
+    };
     if (finePointer) window.addEventListener("mousemove", onMove);
+    else for (const t of ["pointerdown", "pointermove", "pointerup", "pointercancel"]) window.addEventListener(t, onTouch as EventListener, { passive: true });
     window.addEventListener("nuage:explode", onExplode);
 
     const clock = new THREE.Clock();
@@ -165,6 +174,12 @@ export function NuageCloud() {
       const wobble = still ? 0.15 : 1;
       cloud.rotation.set((sm.y * 0.35 + ringView) * wobble, spin + sm.x * 0.6 * wobble, 0);
       if (finePointer) uni.uMouse.value.set((sm.x * 2 * hw - cur.x) / cur.s, (-sm.y * 2 * hh - cur.y) / cur.s, 0);
+      else {
+        // Le point de contact suit le doigt ; au relâchement, il reste en place et la force retombe.
+        if (touching) uni.uMouse.value.set((tx * 2 * hw - cur.x) / cur.s, (-ty * 2 * hh - cur.y) / cur.s, 0);
+        force += ((touching ? 1 : 0) - force) * (touching ? 0.25 : 0.06);
+      }
+      uni.uForce.value = force;
       uni.uMix.value = cur.mix; uni.uTime.value = t; uni.uExplode.value = cur.ex; uni.uAlpha.value = cur.al;
       renderer.render(scene, camera);
     };
@@ -174,6 +189,7 @@ export function NuageCloud() {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
       window.removeEventListener("mousemove", onMove);
+      for (const t of ["pointerdown", "pointermove", "pointerup", "pointercancel"]) window.removeEventListener(t, onTouch as EventListener);
       window.removeEventListener("nuage:explode", onExplode);
       geo.dispose(); mat.dispose(); renderer.dispose();
       renderer.domElement.remove();
