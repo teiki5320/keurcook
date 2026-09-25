@@ -28,8 +28,8 @@ Généré le 25 septembre 2026 par un scan du dépôt. Pour mettre à jour : rel
 
 - **Rôle** : héberge la boutique complète ; redéploie à chaque push sur `main` (dépôt relié au projet).
 - **Console** : https://vercel.com, projet `alohash`, équipe `teiki5320-2617s-projects`.
-- **Identifiants publics** : URL de production https://alohash.vercel.app.
-- **Secrets** : dans les variables d'environnement du projet Vercel (Settings → Environment Variables) : `DATABASE_URL`, `ADMIN_PASSWORD`. Liste complète des variables attendues : `.env.example`.
+- **Identifiants publics** : https://www.alohash.fr (domaine principal) et https://alohash.vercel.app.
+- **Secrets** : dans les variables d'environnement du projet Vercel (Environment Variables) : `DATABASE_URL`, `ADMIN_PASSWORD`. Variable publique : `NEXT_PUBLIC_SITE_URL`. Liste complète des variables attendues : `.env.example`.
 - **Coût** : plan Hobby (gratuit). Les conditions de Vercel réservent Hobby à un usage non commercial : à vérifier dans la console avant l'ouverture de la boutique (plan Pro probablement nécessaire).
 
 ### 3. Neon (base de données PostgreSQL)
@@ -66,11 +66,11 @@ Généré le 25 septembre 2026 par un scan du dépôt. Pour mettre à jour : rel
 
 ### 7. Domaine
 
-- **Rôle** : adresse définitive de la boutique.
-- **Console** : aucun domaine personnalisé relié au projet Vercel pour l'instant. Procédure DNS (IONOS) décrite dans le README.
-- **Identifiants publics** : l'adresse `contact@alohash.fr` est affichée sur le site ; propriété du domaine `alohash.fr` à vérifier.
-- **Secrets** : aucun.
-- **Coût** : à vérifier dans la console du registraire.
+- **Rôle** : adresse de la boutique, `www.alohash.fr` (principale) ; `alohash.fr` redirige vers `www`.
+- **Console** : IONOS (Domaines & SSL → alohash.fr → DNS) et Vercel (projet alohash → Domains).
+- **Identifiants publics** : A `@` et CNAME `www` pointés vers Vercel ; messagerie IONOS (MX, SPF, DKIM, DMARC) sur le même domaine, adresse `contact@alohash.fr`.
+- **Secrets** : aucun dans le dépôt (accès au compte IONOS hors dépôt).
+- **Coût** : à vérifier dans la console IONOS.
 
 ### 8. Médiation de la consommation
 
