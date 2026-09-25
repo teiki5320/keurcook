@@ -6,10 +6,9 @@ import { after } from "next/server";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { siteConfig } from "@/lib/config";
-import { OrderError, orderUrl, placeOrder } from "@/lib/data/orders";
+import { cancelUnpaidOrder, OrderError, orderUrl, placeOrder } from "@/lib/data/orders";
 import { getMaintenance } from "@/lib/data/settings";
-import { sendEmailSafe } from "@/lib/email/sender";
-import { adminNewOrderEmail, orderConfirmationEmail } from "@/lib/email/templates";
+import { sendNewOrderEmails } from "@/lib/email/order-emails";
 import { getPaymentProvider, getPaymentProviders } from "@/lib/payments/registry";
 
 export interface CheckoutState {
@@ -117,20 +116,23 @@ export async function placeOrderAction(_prev: CheckoutState, formData: FormData)
 
   const baseUrl = await getBaseUrl();
   const confirmationUrl = orderUrl(order, baseUrl);
-  const payment = await provider.initiatePayment(order, {
-    returnUrl: confirmationUrl,
-    cancelUrl: `${baseUrl}/panier`,
-  });
+  let payment;
+  try {
+    payment = await provider.initiatePayment(order, {
+      returnUrl: confirmationUrl,
+      cancelUrl: `${baseUrl}/panier`,
+    });
+  } catch (e) {
+    // Paiement impossible à démarrer : on annule la commande pour remettre le stock en vente.
+    console.error("[paiement]", e);
+    await cancelUnpaidOrder(order.orderNumber);
+    revalidatePath("/", "layout");
+    return { error: "Le paiement n'a pas pu être lancé. Merci de réessayer ou de choisir un autre moyen de paiement.", values };
+  }
 
   // Les emails partent après l'envoi de la réponse : le client n'attend pas le SMTP.
-  after(async () => {
-    const confirmation = orderConfirmationEmail(order, provider.getInstructions?.(order) ?? null, confirmationUrl);
-    await sendEmailSafe({ to: order.email, ...confirmation });
-    const adminEmail = process.env.ADMIN_NOTIFICATION_EMAIL;
-    if (adminEmail) {
-      await sendEmailSafe({ to: adminEmail, replyTo: order.email, ...adminNewOrderEmail(order, `${baseUrl}/admin/commandes/${order.id}`) });
-    }
-  });
+  // Paiement en ligne : ils partiront une fois le paiement confirmé (webhook ou retour client).
+  if (payment.status !== "redirect") after(() => sendNewOrderEmails(order, baseUrl));
 
   // Le stock a changé : on rafraîchit les pages du catalogue.
   revalidatePath("/", "layout");

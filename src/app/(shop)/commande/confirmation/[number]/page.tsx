@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { ClearCart } from "@/components/shop/ClearCart";
-import { getOrderForCustomer } from "@/lib/data/orders";
+import { siteConfig } from "@/lib/config";
+import { getOrderForCustomer, markOrderPaid } from "@/lib/data/orders";
+import { sendNewOrderEmails } from "@/lib/email/order-emails";
 import { formatDate, formatPrice, ORDER_STATUS_LABELS } from "@/lib/format";
 import { getPaymentProvider } from "@/lib/payments/registry";
 
@@ -11,12 +13,25 @@ export const metadata: Metadata = { title: "Confirmation de commande", robots: {
 
 export default async function ConfirmationPage({ params, searchParams }: PageProps<"/commande/confirmation/[number]">) {
   const { number } = await params;
-  const { t } = await searchParams;
-  const order = await getOrderForCustomer(decodeURIComponent(number), typeof t === "string" ? t : "");
+  const query = await searchParams;
+  const token = typeof query.t === "string" ? query.t : "";
+  let order = await getOrderForCustomer(decodeURIComponent(number), token);
   if (!order) notFound();
 
+  // Retour depuis la page de paiement en ligne : on confirme sans attendre le webhook.
+  const provider = getPaymentProvider(order.paymentProvider);
+  if (order.status === "pending_payment" && provider?.confirmReturn) {
+    const params = Object.fromEntries(Object.entries(query).map(([k, v]) => [k, typeof v === "string" ? v : undefined]));
+    const result = await provider.confirmReturn(order, params).catch(() => null);
+    const paid = result?.status === "paid" ? await markOrderPaid(result.orderNumber, result.reference) : null;
+    if (paid) {
+      order = paid;
+      await sendNewOrderEmails(paid, siteConfig.url);
+    }
+  }
+
   const instructions =
-    order.status === "pending_payment" ? getPaymentProvider(order.paymentProvider)?.getInstructions?.(order) ?? null : null;
+    order.status === "pending_payment" ? provider?.getInstructions?.(order) ?? null : null;
 
   return (
     <div className="container-page max-w-3xl py-10">

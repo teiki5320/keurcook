@@ -156,6 +156,22 @@ export async function markOrderPaid(orderNumber: string, reference?: string): Pr
   return rows[0] ? getOrderById(rows[0].id) : null;
 }
 
+/**
+ * Paiement en ligne abandonné ou refusé : la commande encore « en attente de
+ * paiement » est annulée et son stock remis en vente.
+ */
+export async function cancelUnpaidOrder(orderNumber: string): Promise<void> {
+  if (!isDbConfigured) {
+    const order = [...demoOrders.values()].find((o) => o.orderNumber === orderNumber);
+    if (order?.status === "pending_payment") order.status = "cancelled";
+    return;
+  }
+  await getSql().query(
+    "select cancel_order(id) from orders where order_number = $1 and status = 'pending_payment'",
+    [orderNumber],
+  );
+}
+
 export function orderUrl(order: Pick<Order, "orderNumber" | "accessToken">, baseUrl: string) {
   return `${baseUrl}/commande/confirmation/${encodeURIComponent(order.orderNumber)}?t=${order.accessToken}`;
 }

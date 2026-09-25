@@ -62,4 +62,10 @@ export interface PaymentProvider {
    * (route `/api/payments/[provider]/webhook`). Doit vérifier la signature.
    */
   handleWebhook?(request: Request): Promise<WebhookResult | null>;
+
+  /**
+   * Retour du client sur la page de confirmation (paramètres de l'URL) :
+   * permet de confirmer le paiement sans attendre le webhook.
+   */
+  confirmReturn?(order: Order, params: Record<string, string | undefined>): Promise<WebhookResult | null>;
 }

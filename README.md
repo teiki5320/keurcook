@@ -103,6 +103,17 @@ N'importe quel serveur SMTP convient. Avec une boîte mail **IONOS** : `SMTP_HOS
 
 ---
 
+## Paiement par carte (Stripe)
+
+`src/lib/payments/providers/stripe.ts` : Stripe Checkout (page hébergée par Stripe : carte, Apple Pay, Google Pay…). Le client est redirigé vers Stripe, puis revient sur la page de confirmation ; la commande passe en « Payée » automatiquement (webhook, et vérification au retour du client). Une session expirée (1 h) ou un paiement refusé annule la commande et remet le stock en vente. Les emails de commande partent une fois le paiement confirmé.
+
+1. Stripe (mode test d'abord) → **Développeurs → Clés API** : clé secrète → variable `STRIPE_SECRET_KEY` (Vercel, type Secret).
+2. **Développeurs → Webhooks → Ajouter une destination** : URL `https://www.alohash.fr/api/payments/stripe/webhook`, événements `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed`, `checkout.session.expired` ; secret de signature → `STRIPE_WEBHOOK_SECRET`.
+3. `PAYMENT_PROVIDERS=stripe,bank_transfer`, puis redéployer.
+4. Moyens proposés : **Paramètres → Moyens de paiement** dans Stripe.
+
+⚠️ Stripe classe le CBD en activité « restreinte » : déclarer l'activité et obtenir l'accord de Stripe avant de passer en clés réelles (`sk_live_…`).
+
 ## Paiement : ajouter un prestataire
 
 Le paiement passe par l'interface `PaymentProvider` (`src/lib/payments/types.ts`). Le seul prestataire actif est `BankTransferProvider` (virement / paiement à la commande) : la commande est créée « en attente de paiement », l'admin la passe en « Payée » à réception du virement.
