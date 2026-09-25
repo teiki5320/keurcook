@@ -60,7 +60,7 @@ Ouvrez http://localhost:3000. **Sans `DATABASE_URL`, le site tourne en mode dém
 
 1. Sur [vercel.com](https://vercel.com) : **Add New → Project**, importez le dépôt GitHub (framework détecté automatiquement). Chaque push sur `main` redéploie le site.
 2. Dans le projet : **Storage → Create Database → Neon** (région **Francfort `eu-central-1`**, pour le RGPD), puis **Connect** au projet. La variable `DATABASE_URL` est ajoutée automatiquement.
-3. Toujours dans **Storage** : **Create → Blob** (accès public), puis **Connect**. La variable `BLOB_READ_WRITE_TOKEN` est ajoutée automatiquement.
+3. Toujours dans **Storage** : **Create → Blob** en accès **Public** (les photos doivent être visibles de tous), puis **Connect**. Les variables `BLOB_STORE_ID` et `BLOB_WEBHOOK_PUBLIC_KEY` sont ajoutées automatiquement ; sur Vercel, l'accès au stockage se fait ensuite sans clé secrète (OIDC).
 4. Installez le schéma de la base, au choix :
    - depuis Vercel : **Storage → la base Neon → Open in Neon → SQL Editor**, collez `db/schema.sql` puis (facultatif) `db/seed.sql` et exécutez ;
    - en local : `npx vercel link`, `npx vercel env pull .env.local`, puis `npm run db:setup` (schéma seul) ou `npm run db:setup -- --seed` (schéma + produits de démo).
@@ -73,14 +73,14 @@ Ouvrez http://localhost:3000. **Sans `DATABASE_URL`, le site tourne en mode dém
 cp .env.example .env.local
 ```
 
-Sur Vercel, ajoutez les autres variables dans **Settings → Environment Variables**. En local, `npx vercel env pull .env.local` récupère `DATABASE_URL` et `BLOB_READ_WRITE_TOKEN`.
+Sur Vercel, ajoutez les autres variables dans **Settings → Environment Variables**. En local, `npx vercel env pull .env.local` récupère `DATABASE_URL` et les variables Blob.
 
 | Variable | Rôle |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens des emails) |
 | `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom de la boutique, email de contact |
 | `DATABASE_URL` | **Secret serveur** : connexion à la base Neon (catalogue, commandes, admin) |
-| `BLOB_READ_WRITE_TOKEN` | **Secret serveur** : envoi des photos et certificats depuis l'admin (Vercel Blob) |
+| `BLOB_STORE_ID`, `BLOB_WEBHOOK_PUBLIC_KEY` | Stockage Vercel Blob (photos et certificats), ajoutées par Vercel ; hors Vercel, utiliser `BLOB_READ_WRITE_TOKEN` |
 | `ADMIN_PASSWORD` | **Secret** : mot de passe de l'espace admin |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASSWORD`, `EMAIL_FROM` | Envoi des emails |
 | `ADMIN_NOTIFICATION_EMAIL` | Reçoit chaque nouvelle commande |
@@ -94,7 +94,7 @@ Sur Vercel, ajoutez les autres variables dans **Settings → Environment Variabl
 1. Définissez `ADMIN_PASSWORD` (mot de passe long et unique) dans les variables d'environnement.
 2. Connectez-vous sur `/admin/login` avec ce mot de passe.
 
-Les opérations admin passent uniquement par le serveur : la base n'est jamais accessible depuis le navigateur. Les photos et certificats partent directement du navigateur vers Vercel Blob, avec un jeton à usage unique délivré par `/admin/upload` à l'admin connecté. Changer `ADMIN_PASSWORD` déconnecte toutes les sessions.
+Les opérations admin passent uniquement par le serveur : la base n'est jamais accessible depuis le navigateur. Les photos et certificats partent directement du navigateur vers Vercel Blob, avec une URL d'envoi présignée (10 minutes, un seul fichier) délivrée par `/admin/upload` à l'admin connecté. Changer `ADMIN_PASSWORD` déconnecte toutes les sessions.
 
 ### 4. Emails
 

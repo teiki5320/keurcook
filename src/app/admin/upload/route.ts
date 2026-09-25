@@ -1,4 +1,5 @@
-import { handleUpload, type HandleUploadBody } from "@vercel/blob/client";
+import { issueSignedToken } from "@vercel/blob";
+import { handleUploadPresigned, type HandleUploadPresignedBody } from "@vercel/blob/client";
 import { cookies } from "next/headers";
 import { ADMIN_COOKIE, verifyAdminToken } from "@/lib/admin-session";
 
@@ -8,29 +9,38 @@ const FOLDERS: Record<string, string[]> = {
   certificates: ["application/pdf"],
 };
 
+const MAX_BYTES = 15 * 1024 * 1024;
+
 /**
- * Délivre au navigateur un jeton d'envoi à usage unique vers Vercel Blob.
- * Réservé à l'admin connecté : le fichier part ensuite directement du
- * navigateur vers Vercel Blob, sans passer par le serveur.
+ * Délivre au navigateur une URL d'envoi présignée (usage unique, 10 minutes)
+ * vers Vercel Blob. Réservé à l'admin connecté : le fichier part ensuite
+ * directement du navigateur vers Vercel Blob, sans passer par le serveur.
+ * Sur Vercel, l'accès au stockage se fait par OIDC (BLOB_STORE_ID), ou à
+ * défaut par BLOB_READ_WRITE_TOKEN.
  */
 export async function POST(request: Request) {
   const cookieStore = await cookies();
   if (!verifyAdminToken(cookieStore.get(ADMIN_COOKIE)?.value)) {
     return Response.json({ error: "Non autorisé." }, { status: 401 });
   }
-  const body = (await request.json()) as HandleUploadBody;
+  const body = (await request.json()) as HandleUploadPresignedBody;
   try {
-    const result = await handleUpload({
+    const result = await handleUploadPresigned({
       body,
       request,
-      onBeforeGenerateToken: async (pathname) => {
+      getSignedToken: async (pathname) => {
         const allowed = FOLDERS[pathname.split("/")[0]];
         if (!allowed) throw new Error("Dossier inconnu.");
-        return {
+        const token = await issueSignedToken({
+          pathname,
+          operations: ["put"],
           allowedContentTypes: allowed,
-          maximumSizeInBytes: 15 * 1024 * 1024,
-          addRandomSuffix: true,
-          cacheControlMaxAge: 31536000,
+          maximumSizeInBytes: MAX_BYTES,
+          validUntil: Date.now() + 10 * 60 * 1000,
+        });
+        return {
+          token,
+          urlOptions: { allowedContentTypes: allowed, maximumSizeInBytes: MAX_BYTES, cacheControlMaxAge: 31536000 },
         };
       },
     });

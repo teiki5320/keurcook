@@ -2,7 +2,7 @@
 
 import { startTransition, useActionState, useState } from "react";
 import { FileDown, Plus, Trash2, Upload } from "lucide-react";
-import { upload } from "@vercel/blob/client";
+import { uploadPresigned } from "@vercel/blob/client";
 import { saveProductAction, type ActionState } from "@/app/admin/actions";
 import { ProductImage } from "@/components/product/ProductImage";
 import type { Category, Product } from "@/lib/types";
@@ -15,11 +15,12 @@ interface VariantDraft {
   sku: string;
 }
 
-/** Envoie le fichier directement vers Vercel Blob (jeton délivré par /admin/upload). */
+/** Envoie le fichier directement vers Vercel Blob (URL présignée délivrée par /admin/upload). */
 async function uploadFile(folder: "product-images" | "certificates", file: File) {
   const ext = file.name.split(".").pop()?.toLowerCase().replace(/[^a-z0-9]/g, "") || "bin";
   const base = file.name.replace(/\.[^.]+$/, "").normalize("NFD").replace(/[^\w-]+/g, "-").slice(0, 40) || "fichier";
-  const blob = await upload(`${folder}/${base}.${ext}`, file, {
+  // Nom unique (le jeton d'envoi est limité à ce chemin exact).
+  const blob = await uploadPresigned(`${folder}/${crypto.randomUUID().slice(0, 8)}-${base}.${ext}`, file, {
     access: "public",
     handleUploadUrl: "/admin/upload",
     contentType: file.type || undefined,
