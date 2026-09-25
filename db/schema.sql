@@ -246,3 +246,12 @@ begin
    where v.id = i.variant_id;
 end;
 $$;
+
+-- ---------------------------------------------------------------------
+-- Réglages du site (clé → valeur JSON). Ex. : maintenance.
+-- ---------------------------------------------------------------------
+create table if not exists public.settings (
+  key text primary key,
+  value jsonb not null,
+  updated_at timestamptz not null default now()
+);

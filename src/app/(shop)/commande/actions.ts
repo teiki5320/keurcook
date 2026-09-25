@@ -7,6 +7,7 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { siteConfig } from "@/lib/config";
 import { OrderError, orderUrl, placeOrder } from "@/lib/data/orders";
+import { getMaintenance } from "@/lib/data/settings";
 import { sendEmailSafe } from "@/lib/email/sender";
 import { adminNewOrderEmail, orderConfirmationEmail } from "@/lib/email/templates";
 import { getPaymentProvider, getPaymentProviders } from "@/lib/payments/registry";
@@ -59,6 +60,7 @@ export async function placeOrderAction(_prev: CheckoutState, formData: FormData)
 
   // Pot de miel anti-robots : ce champ est invisible pour les humains.
   if (formData.get("website")) return { error: "Requête invalide." };
+  if ((await getMaintenance()).enabled) return { error: "La boutique est en maintenance : les commandes sont suspendues.", values };
 
   let lines: unknown = [];
   try {

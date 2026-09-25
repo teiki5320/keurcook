@@ -26,6 +26,7 @@ Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie 
 | Mini-panier latéral après ajout, panier (stockage local), commande, page de confirmation | Commandes : filtres par statut, détail, changement de statut, n° de suivi, email au client |
 | Paiement par virement via une couche `PaymentProvider` | Annulation → remise en stock automatique |
 | Emails de confirmation (client + notification admin) | Tableau de bord (à encaisser, à expédier, stocks bas) |
+|  | Mode maintenance : un interrupteur met la boutique en pause (écran « Maintenance » avec la feuille animée, commandes suspendues) |
 
 ### Conformité France
 

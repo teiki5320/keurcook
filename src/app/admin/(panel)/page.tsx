@@ -1,12 +1,14 @@
 import Link from "next/link";
+import { MaintenanceForm } from "@/components/admin/MaintenanceForm";
 import { StatusBadge } from "@/components/admin/StatusBadge";
 import { adminDashboardStats } from "@/lib/data/admin";
+import { getMaintenance } from "@/lib/data/settings";
 import { formatDateTime, formatPrice } from "@/lib/format";
 
 export const metadata = { title: "Tableau de bord" };
 
 export default async function AdminDashboard() {
-  const s = await adminDashboardStats();
+  const [s, maintenance] = await Promise.all([adminDashboardStats(), getMaintenance()]);
   const tiles = [
     { label: "En attente de paiement", value: s.pendingPayment, href: "/admin/commandes?statut=pending_payment" },
     { label: "À préparer / expédier", value: s.toShip, href: "/admin/commandes?statut=paid" },
@@ -16,6 +18,11 @@ export default async function AdminDashboard() {
   return (
     <div>
       <h1 className="font-display text-3xl text-forest-900">Tableau de bord</h1>
+      {maintenance.enabled && (
+        <p role="status" className="mt-4 rounded-xl border border-terracotta bg-terracotta/10 p-3 text-sm">
+          La boutique est actuellement <strong>en maintenance</strong>.
+        </p>
+      )}
       <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {tiles.map((t) => (
           <Link key={t.label} href={t.href} className="card p-5 transition hover:shadow-md">
@@ -47,6 +54,7 @@ export default async function AdminDashboard() {
           </ul>
         )}
       </section>
+      <MaintenanceForm current={maintenance} />
     </div>
   );
 }

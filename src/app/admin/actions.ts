@@ -255,3 +255,18 @@ export async function updateOrderAction(_prev: ActionState, formData: FormData):
   revalidatePath("/", "layout");
   return { success: notify && after?.status !== before.status ? "Commande mise à jour, client notifié." : "Commande mise à jour." };
 }
+
+// ----------------------------------------------------------- Maintenance
+
+export async function setMaintenanceAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const { sql } = await requireAdmin();
+  const enabled = formData.get("enabled") === "on";
+  const message = String(formData.get("message") ?? "").trim().slice(0, 500);
+  await sql.query(
+    `insert into settings (key, value, updated_at) values ('maintenance', $1::jsonb, now())
+     on conflict (key) do update set value = excluded.value, updated_at = now()`,
+    [JSON.stringify({ enabled, message })],
+  );
+  revalidatePath("/", "layout");
+  return { success: enabled ? "Mode maintenance activé : la boutique affiche l'écran de maintenance." : "Boutique rouverte." };
+}
