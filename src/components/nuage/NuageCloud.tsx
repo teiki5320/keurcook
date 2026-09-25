@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { africaPoint } from "./africa-map";
+import { africaPoint, countryPoints } from "./africa-map";
 
 /**
  * Nuage de particules 3D (fond fixe de tout le site).
@@ -10,19 +10,23 @@ import { africaPoint } from "./africa-map";
  * centre de l'écran et prend la forme indiquée par son attribut data-mix :
  * 0 = carte de l'Afrique, 1 = sphère, 2 = goutte, 3 = anneau (boutique, recettes).
  * data-shape="ring" : l'échelle suit la largeur de l'ancre au lieu de sa hauteur.
- * data-still : le nuage cesse de tourner et reste de face (carte cliquable).
+ * data-still : le nuage cesse de tourner et reste de face (carte, pays).
+ * data-country="SN" : le nuage prend la forme de ce pays (transformation animée d'un pays à l'autre).
  * L'événement window "nuage:explode" (detail 0 ou 1) disperse les particules
  * pendant les transitions de page.
  */
 
 const VERT = /* glsl */ `
-attribute vec3 t0; attribute vec3 t1; attribute vec3 t2; attribute vec3 t3; attribute float aRand;
-uniform float uMix, uTime, uExplode, uPR, uForce; uniform vec3 uMouse; varying vec3 vCol; varying float vA;
+attribute vec3 t0; attribute vec3 t1; attribute vec3 t2; attribute vec3 t3; attribute vec3 tA; attribute vec3 tB; attribute float aRand;
+uniform float uMix, uTime, uExplode, uPR, uForce, uCountry, uMorph; uniform vec3 uMouse; varying vec3 vCol; varying float vA;
 void main(){
   float m = uMix; float d = aRand * .35;
   vec3 p = mix(t0, t1, smoothstep(0. + d, .65 + d, m));
   p = mix(p, t2, smoothstep(1. + d, 1.65 + d, m));
   p = mix(p, t3, smoothstep(2. + d, 2.65 + d, m));
+  // Forme d'un pays : passage de A (forme précédente) à B (pays demandé), en léger décalé.
+  vec3 shp = mix(tA, tB, smoothstep(d * .8, .72 + d * .8, uMorph));
+  p = mix(p, shp, smoothstep(d * .8, .72 + d * .8, uCountry));
   p += .035 * sin(uTime * 1.4 + aRand * 6.283 + p.yzx * 3.);
   p += normalize(p + vec3(.001)) * uExplode * (0.6 + aRand * 3.5);
   vec3 dm = p - uMouse; float f = smoothstep(1.3, 0., length(dm.xy)); p += normalize(dm + vec3(.001)) * f * .55 * uForce;
@@ -92,9 +96,16 @@ export function NuageCloud() {
     geo.setAttribute("position", new THREE.BufferAttribute(T[0].slice(), 3));
     T.forEach((a, i) => geo.setAttribute("t" + i, new THREE.BufferAttribute(a, 3)));
     geo.setAttribute("aRand", new THREE.BufferAttribute(rand, 1));
+    // Formes de pays : A = forme de départ, B = pays affiché.
+    const shapeA = new THREE.BufferAttribute(T[0].slice(), 3);
+    const shapeB = new THREE.BufferAttribute(T[0].slice(), 3);
+    geo.setAttribute("tA", shapeA);
+    geo.setAttribute("tB", shapeB);
+    const shapes = new Map<string, Float32Array>();
+    let shownCountry: string | null = null;
     const uni = {
       uMix: { value: 0 }, uTime: { value: 0 }, uExplode: { value: 1 },
-      uMouse: { value: new THREE.Vector3(99, 99, 0) }, uForce: { value: 1 }, uPR: { value: PR }, uAlpha: { value: 1 },
+      uMouse: { value: new THREE.Vector3(99, 99, 0) }, uForce: { value: 1 }, uCountry: { value: 0 }, uMorph: { value: 1 }, uPR: { value: PR }, uAlpha: { value: 1 },
     };
     const mat = new THREE.ShaderMaterial({
       uniforms: uni, vertexShader: VERT, fragmentShader: FRAG,
@@ -128,6 +139,8 @@ export function NuageCloud() {
     const clock = new THREE.Clock();
     const cur = { x: 2, y: 0, s: 1, mix: 0, ex: 1, al: 1 };
     const sm = { x: 0, y: 0 };
+    const shape = { country: 0, morph: 1 };
+    let lastAnchor: HTMLElement | null = null, settle = 0;
     let spin = 0, last = 0;
 
     const loop = () => {
@@ -145,7 +158,7 @@ export function NuageCloud() {
       });
 
       const tg = { x: hw * 0.55, y: 0, s: 1, mix: 0, ex: explode, al: 0.25 };
-      let still = false;
+      let still = false, wantCountry = false;
       if (best && bestEl) {
         const r = best as DOMRect, a = bestEl as HTMLElement;
         const ring = a.dataset.shape === "ring";
@@ -155,13 +168,37 @@ export function NuageCloud() {
         tg.mix = parseFloat(a.dataset.mix ?? "0") || 0;
         tg.al = bd < H * 0.9 ? (ring ? 0.7 : 1) : 0.15;
         still = a.dataset.still !== undefined && bd < H * 0.9;
+        if (a !== lastAnchor) { lastAnchor = a; settle = 1; }
+        const code = bd < H * 0.9 ? a.dataset.country : undefined;
+        if (code && code !== shownCountry) {
+          let pts = shapes.get(code);
+          if (!pts) {
+            pts = countryPoints(code, N) ?? undefined;
+            if (pts) shapes.set(code, pts);
+          }
+          if (pts) {
+            // Point de départ = forme actuellement affichée (pays précédent, ou Afrique).
+            const from = shownCountry && shape.country > 0.5 ? (shapeB.array as Float32Array) : T[0];
+            (shapeA.array as Float32Array).set(from);
+            (shapeB.array as Float32Array).set(pts);
+            shapeA.needsUpdate = shapeB.needsUpdate = true;
+            shownCountry = code;
+            shape.morph = shape.country > 0.5 ? 0 : 1;
+          }
+        }
+        wantCountry = Boolean(code && shownCountry === code);
       }
       // Sur une carte immobile, position et taille collent à l'ancre (sinon, au défilement,
       // le nuage traîne derrière les points des pays) ; ailleurs, elles glissent en douceur.
       (Object.keys(tg) as (keyof typeof tg)[]).forEach((k) => {
-        const rate = k === "ex" ? 0.06 : k === "mix" ? 0.08 : k === "al" ? 0.1 : still ? 1 : 0.1;
+        // En changeant d'ancre (carte → carrousel des pays), on glisse d'abord en douceur.
+        const rate = k === "ex" ? 0.06 : k === "mix" ? 0.08 : k === "al" ? 0.1 : still ? 1 - settle * 0.9 : 0.1;
         cur[k] += (tg[k] - cur[k]) * rate;
       });
+      settle *= 0.94;
+      shape.country += ((wantCountry ? 1 : 0) - shape.country) * 0.06;
+      shape.morph += (1 - shape.morph) * 0.05;
+      uni.uCountry.value = shape.country; uni.uMorph.value = shape.morph;
       sm.x += (mx - sm.x) * 0.08; sm.y += (my - sm.y) * 0.08;
 
       const ringView = cur.mix > 2.5 ? 0.9 : 0;

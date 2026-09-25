@@ -2,6 +2,7 @@
  * Carte de l'Afrique du nuage de particules (forme data-mix="0").
  * Sans dépendance à Three.js : les points des pays de l'accueil utilisent la même projection.
  */
+import { COUNTRY_SHAPES } from "./country-shapes";
 
 /** Contour simplifié de l'Afrique (longitude, latitude), dans le sens horaire depuis Tanger. */
 const AFRICA: Array<[number, number]> = [
@@ -53,4 +54,75 @@ export function africaPoint(): [number, number] {
 export function mapPercent(lon: number, lat: number) {
   const [x, y] = projectMap(lon, lat);
   return { left: 50 + (x / 3.7) * 100, top: 50 - (y / 3.7) * 100 };
+}
+
+// ------------------------------------------------------------ Formes des pays
+
+
+/** Taille maximale d'un pays dans le nuage (unités ; l'ancre mesure 3,7 unités de côté). */
+const COUNTRY_SIZE = 3.2;
+
+interface CountryFrame {
+  rings: Array<Array<[number, number]>>;
+  /** (longitude, latitude) → coordonnées du nuage, pays centré et agrandi. */
+  project: (lon: number, lat: number) => [number, number];
+  box: [number, number, number, number];
+}
+
+const frames = new Map<string, CountryFrame>();
+
+function countryFrame(code: string): CountryFrame | null {
+  const rings = COUNTRY_SHAPES[code];
+  if (!rings) return null;
+  const cached = frames.get(code);
+  if (cached) return cached;
+  const pts = rings.flat();
+  const [minX, maxX] = [Math.min(...pts.map((p) => p[0])), Math.max(...pts.map((p) => p[0]))];
+  const [minY, maxY] = [Math.min(...pts.map((p) => p[1])), Math.max(...pts.map((p) => p[1]))];
+  // Correction de la longitude selon la latitude, pour garder les proportions du pays.
+  const k = Math.cos((((minY + maxY) / 2) * Math.PI) / 180);
+  const scale = COUNTRY_SIZE / Math.max((maxX - minX) * k, maxY - minY);
+  const cx = (minX + maxX) / 2, cy = (minY + maxY) / 2;
+  const frame: CountryFrame = {
+    rings,
+    project: (lon, lat) => [(lon - cx) * k * scale, (lat - cy) * scale],
+    box: [minX, maxX, minY, maxY],
+  };
+  frames.set(code, frame);
+  return frame;
+}
+
+/** N points de la forme d'un pays (30 % sur le contour), en coordonnées du nuage (x, y, z). */
+export function countryPoints(code: string, N: number): Float32Array | null {
+  const f = countryFrame(code);
+  if (!f) return null;
+  const out = new Float32Array(N * 3);
+  const [minX, maxX, minY, maxY] = f.box;
+  const edges = f.rings.flatMap((r) => r.map((p, i) => [p, r[(i + 1) % r.length]] as const));
+  for (let i = 0; i < N; i++) {
+    let lon: number, lat: number;
+    if (Math.random() < 0.3) {
+      const [a, b] = edges[Math.floor(Math.random() * edges.length)];
+      const t = Math.random();
+      lon = a[0] + (b[0] - a[0]) * t;
+      lat = a[1] + (b[1] - a[1]) * t;
+    } else {
+      do {
+        lon = minX + Math.random() * (maxX - minX);
+        lat = minY + Math.random() * (maxY - minY);
+      } while (!f.rings.some((r) => inside(r, lon, lat)));
+    }
+    const [x, y] = f.project(lon, lat);
+    out.set([x, y, (Math.random() - 0.5) * 0.12], i * 3);
+  }
+  return out;
+}
+
+/** Tracé SVG du pays, dans le repère de l'ancre (viewBox « -1.85 -1.85 3.7 3.7 »). */
+export function countryPath(code: string): string {
+  const f = countryFrame(code);
+  if (!f) return "";
+  return f.rings
+    .map((r) => "M" + r.map(([lon, lat]) => { const [x, y] = f.project(lon, lat); return `${x.toFixed(3)} ${(-y).toFixed(3)}`; }).join("L") + "Z")
+    .join("");
 }

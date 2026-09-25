@@ -20,7 +20,7 @@ export function ShopShell({ children }: { children: React.ReactNode }) {
     <CartProvider>
       <PageTransitionProvider>
         <div
-          className={`nuage-theme relative flex min-h-dvh flex-col text-[#fbeee2]`}
+          className={`nuage-theme relative flex min-h-dvh flex-col overflow-x-clip text-[#fbeee2]`}
           style={{ fontFamily: "var(--font-manrope), sans-serif", background: "#140a07" }}
         >
           <div

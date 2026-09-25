@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { withBasePath } from "@/lib/paths";
 import { TLink } from "@/components/nuage/PageTransition";
 import { NewsletterForm } from "@/components/community/NewsletterForm";
+import { CountryCarousel } from "@/components/recipe/CountryCarousel";
 import { CountryMap } from "@/components/recipe/CountryMap";
 import { RecipeRow } from "@/components/recipe/RecipeCard";
 import { siteConfig } from "@/lib/config";
@@ -38,7 +39,19 @@ export default async function HomePage() {
               Les grands plats d&apos;Afrique expliqués pas à pas, et les produits rares pour les réussir chez vous :
               poivre de Penja, soumbala, fonio, feuilles de ndolé…
             </p>
-            <p className="mt-4 text-sm text-[#ffc46b]">Touchez un pays sur la carte pour découvrir ses recettes.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Carrousel des pays : le nuage prend la forme du pays au centre. */}
+      <section aria-labelledby="pays" className="overflow-x-clip px-[clamp(20px,4vw,56px)] pb-16">
+        <div className="mx-auto max-w-[1320px]">
+          <h2 id="pays" className="uppercase" style={{ ...anton, fontSize: "clamp(36px,4.5vw,64px)" }}>
+            Cuisiner par pays<span className="text-[#ff7a3d]">.</span>
+          </h2>
+          <p className="mt-1 max-w-xl text-sm text-[#fbeee2]/65">Glissez pour voyager d&apos;un pays à l&apos;autre.</p>
+          <div className="mt-6">
+            <CountryCarousel countries={countries} />
           </div>
         </div>
       </section>
