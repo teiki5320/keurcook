@@ -28,12 +28,11 @@ Les deux versions sont republiées automatiquement à chaque push sur `main`.
 
 ## Ce qui reste, dans l'ordre
 
-1. Remplacer le stockage Blob « Private » par un stockage « Public », puis tester l'envoi d'une photo depuis l'admin.
-2. Passer une commande de test de bout en bout, puis l'annuler pour vérifier la remise en stock.
-3. Vérifier que le plan Vercel convient à un usage commercial (Hobby réservé au non commercial).
-4. Configurer le SMTP (`SMTP_*`, `EMAIL_FROM`) pour les e-mails de commande.
-5. Renseigner les coordonnées bancaires (`PAYMENT_BANK_*`).
-6. Remplacer les produits de démo par les vrais produits, photos et certificats d'analyse.
-7. Désactiver le mode maintenance pour ouvrir la boutique.
-8. Déclarer le site dans Google Search Console et choisir un outil de mesure d'audience.
-9. Brancher un prestataire de paiement par carte acceptant le CBD.
+1. Passer une commande de test de bout en bout, puis l'annuler pour vérifier la remise en stock.
+2. Vérifier que le plan Vercel convient à un usage commercial (Hobby réservé au non commercial).
+3. Configurer le SMTP (`SMTP_*`, `EMAIL_FROM`) pour les e-mails de commande.
+4. Renseigner les coordonnées bancaires (`PAYMENT_BANK_*`).
+5. Remplacer les produits de démo par les vrais produits : photos et certificats d'analyse ajoutés dans le dépôt (`public/products`, `public/coa`), pas par l'envoi depuis l'admin.
+6. Désactiver le mode maintenance pour ouvrir la boutique.
+7. Déclarer le site dans Google Search Console et choisir un outil de mesure d'audience.
+8. Brancher un prestataire de paiement par carte acceptant le CBD.

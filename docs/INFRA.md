@@ -42,7 +42,7 @@ Généré le 25 septembre 2026 par un scan du dépôt. Pour mettre à jour : rel
 
 ### 4. Vercel Blob (fichiers)
 
-- **Rôle** : photos produit et certificats d'analyse envoyés depuis l'admin, par URL présignée (le fichier va directement du navigateur vers Vercel Blob).
+- **Rôle** : prévu pour les photos produit et certificats d'analyse envoyés depuis l'admin, par URL présignée. Non utilisé pour l'instant : le stockage relié est en accès Private, et les fichiers des produits sont ajoutés directement dans le dépôt (`public/products`, `public/coa`).
 - **Console** : Vercel → projet `alohash` → Storage.
 - **Identifiants publics** : `BLOB_STORE_ID` (ajouté par Vercel lors de la liaison du stockage) ; images servies depuis `*.public.blob.vercel-storage.com` (`next.config.ts`).
 - **Secrets** : aucun sur Vercel (accès par OIDC) ; hors Vercel, `BLOB_READ_WRITE_TOKEN`.
