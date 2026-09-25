@@ -4,6 +4,7 @@ import { OrderStatusForm } from "@/components/admin/OrderStatusForm";
 import { StatusBadge } from "@/components/admin/StatusBadge";
 import { adminGetOrder } from "@/lib/data/admin";
 import { formatDateTime, formatPrice } from "@/lib/format";
+import { paymentLabel } from "@/lib/payments/registry";
 
 export const metadata = { title: "Commande" };
 
@@ -58,13 +59,13 @@ export default async function OrderDetailPage({ params }: PageProps<"/admin/comm
             </div>
             <div>
               <h2 className="mb-2 font-semibold">Paiement</h2>
-              <p>Moyen : {order.paymentProvider === "bank_transfer" ? "Virement bancaire" : order.paymentProvider}</p>
+              <p>Moyen : {paymentLabel(order.paymentProvider)}</p>
               <p>Référence : <span className="font-mono">{order.paymentReference ?? "—"}</span></p>
             </div>
           </section>
         </div>
 
-        <OrderStatusForm order={{ id: order.id, status: order.status, trackingNumber: order.trackingNumber }} />
+        <OrderStatusForm order={{ id: order.id, status: order.status, trackingNumber: order.trackingNumber, paymentProvider: order.paymentProvider }} />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { siteConfig } from "../config";
 import { formatPrice, ORDER_STATUS_LABELS } from "../format";
+import { paymentLabel } from "../payments/registry";
 import type { PaymentInstructions } from "../payments/types";
 import type { Order } from "../types";
 
@@ -110,7 +111,7 @@ export function adminNewOrderEmail(order: Order, adminUrl: string) {
     subject,
     `<h1 style="font-size:18px;margin:0 0 12px">Nouvelle commande ${esc(order.orderNumber)}</h1>
      <p style="font-size:14px">Client : ${esc(order.firstName)} ${esc(order.lastName)} — ${esc(order.email)}<br>
-     Paiement : ${esc(order.paymentProvider)} — ${esc(ORDER_STATUS_LABELS[order.status])}</p>
+     Paiement : ${esc(paymentLabel(order.paymentProvider))} — ${esc(ORDER_STATUS_LABELS[order.status])}</p>
      ${itemsTable(order)}
      <p style="margin-top:20px"><a href="${esc(adminUrl)}">Ouvrir dans l'espace admin</a></p>`,
   );

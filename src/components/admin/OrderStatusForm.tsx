@@ -5,7 +5,7 @@ import { updateOrderAction, type ActionState } from "@/app/admin/actions";
 import { ORDER_STATUS_LABELS } from "@/lib/format";
 import type { OrderStatus } from "@/lib/types";
 
-export function OrderStatusForm({ order }: { order: { id: string; status: OrderStatus; trackingNumber: string | null } }) {
+export function OrderStatusForm({ order }: { order: { id: string; status: OrderStatus; trackingNumber: string | null; paymentProvider: string } }) {
   const [state, action, pending] = useActionState<ActionState, FormData>(updateOrderAction, {});
   return (
     <form action={action} className="card space-y-4 self-start p-5 text-sm">
@@ -19,7 +19,11 @@ export function OrderStatusForm({ order }: { order: { id: string; status: OrderS
           ))}
         </select>
         {order.status === "pending_payment" && (
-          <p className="mt-1 text-xs text-muted">Passez en « Payée » à réception du virement.</p>
+          <p className="mt-1 text-xs text-muted">
+            {order.paymentProvider === "bank_transfer"
+              ? "Passez en « Payée » à réception du virement."
+              : "Le paiement en ligne est confirmé automatiquement ; sans paiement dans l'heure, la commande est annulée."}
+          </p>
         )}
       </div>
       <div>

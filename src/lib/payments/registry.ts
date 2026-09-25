@@ -28,6 +28,11 @@ export function getPaymentProvider(id: string): PaymentProvider | null {
   return allProviders.find((p) => p.id === id) ?? null;
 }
 
+/** Libellé lisible d'un moyen de paiement (admin, emails). */
+export function paymentLabel(id: string) {
+  return getPaymentProvider(id)?.label ?? id;
+}
+
 /** Données sérialisables pour les composants client. */
 export function getPaymentOptions() {
   return getPaymentProviders().map((p) => ({ id: p.id, label: p.label, description: p.description }));
