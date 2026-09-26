@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Minus, Plus, ShoppingBag } from "lucide-react";
+import { Minus, Plus, ShoppingBag, ShoppingBasket } from "lucide-react";
 import { CART_ADDED_EVENT } from "@/components/nuage/shared";
 import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
 import { TLink } from "@/components/nuage/PageTransition";
@@ -92,7 +92,8 @@ export function RecipeIngredients({
                       asin={product.amazonAsin}
                       priceCents={product.priceCents}
                       name={product.name}
-                      className="rounded-full bg-[#ff7a3d] px-2.5 py-1 text-[11px] font-bold whitespace-nowrap text-[#140a07] hover:bg-[#ffc46b]"
+                      icon
+                      className="inline-flex items-center gap-1 rounded-full bg-[#ff7a3d] px-2.5 py-1 text-[11px] font-bold whitespace-nowrap text-[#140a07] hover:bg-[#ffc46b]"
                     />
                   ) : (
                   <button
@@ -103,7 +104,7 @@ export function RecipeIngredients({
                     title={`${product.variantLabel} · ${formatPrice(product.priceCents)}`}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff7a3d] text-[#140a07] hover:bg-[#ffc46b] disabled:opacity-40"
                   >
-                    <Plus className="h-4 w-4" aria-hidden />
+                    <ShoppingBasket className="h-4 w-4" aria-hidden />
                   </button>
                   )}
                 </span>
