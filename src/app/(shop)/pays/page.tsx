@@ -3,7 +3,6 @@ import { TLink } from "@/components/nuage/PageTransition";
 import { anton } from "@/components/nuage/typography";
 import { getCountriesWithRecipes, getRecipes } from "@/lib/data/recipes";
 import { withBasePath } from "@/lib/paths";
-import { recipeWord } from "@/lib/gamme-words";
 
 export const revalidate = 300;
 
@@ -33,8 +32,7 @@ export default async function CountriesPage() {
                 )}
                 <span className="absolute inset-0 bg-gradient-to-b from-transparent via-[#140a07]/50 to-[#140a07]/95" />
                 <span className="absolute inset-x-0 bottom-0 p-5">
-                  <span className="block text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{recipeWord(c.count)}</span>
-                  <span className="mt-1 block text-4xl leading-none uppercase" style={anton}>{c.name}</span>
+                  <span className="block text-4xl leading-none uppercase" style={anton}>{c.name}</span>
                   <span className="mt-2 line-clamp-2 block text-sm text-[#fbeee2]/70">{c.description}</span>
                 </span>
               </TLink>

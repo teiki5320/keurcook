@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { countryPath } from "@/components/nuage/africa-map";
 import { TLink } from "@/components/nuage/PageTransition";
 import { anton, useSwipe } from "@/components/nuage/shared";
-import { recipeWord } from "@/lib/gamme-words";
 import type { MapCountry } from "./CountryMap";
 
 export interface CarouselCountry extends MapCountry {
@@ -77,8 +76,7 @@ export function CountryCarousel({ countries }: { countries: CarouselCountry[] })
       </div>
 
       <div className="mt-1 text-center" aria-live="polite">
-        <p className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">{recipeWord(cur.count)}</p>
-        <h3 className="mt-1 uppercase leading-none" style={{ ...anton, fontSize: "clamp(40px,7vw,72px)" }}>
+        <h3 className="uppercase leading-none" style={{ ...anton, fontSize: "clamp(40px,7vw,72px)" }}>
           {cur.name}
           <span className="text-[#ff7a3d]">.</span>
         </h3>

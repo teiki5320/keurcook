@@ -8,7 +8,7 @@ import { RecipeRow } from "@/components/recipe/RecipeCard";
 import { siteConfig } from "@/lib/config";
 import { getGammes } from "@/lib/data/gammes";
 import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
-import { recipeWord, unitWord } from "@/lib/gamme-words";
+import { unitWord } from "@/lib/gamme-words";
 
 export const revalidate = 300;
 
@@ -56,8 +56,7 @@ export default async function HomePage() {
           <section key={g.key} aria-labelledby={`type-${g.key}`} className="mx-auto max-w-[1320px]">
             <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
               <div>
-                <p className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">{recipeWord(g.recipes.length)}</p>
-                <h2 id={`type-${g.key}`} className="mt-1 uppercase" style={{ ...anton, fontSize: "clamp(36px,4.5vw,64px)" }}>
+                <h2 id={`type-${g.key}`} className="uppercase" style={{ ...anton, fontSize: "clamp(36px,4.5vw,64px)" }}>
                   {g.name}
                   <span className="text-[#ff7a3d]">.</span>
                 </h2>

@@ -10,7 +10,7 @@ export interface CoverflowItem {
   key: string;
   title: string;
   /** Petite ligne au-dessus du titre (région, nombre de produits…). */
-  eyebrow: string;
+  eyebrow?: string;
   image: string | null;
   href: string;
   /** Silhouette du nuage 3D quand la carte est au centre (0 feuille, 1 résine, 2 goutte, 3 anneau). */
@@ -131,8 +131,8 @@ export function Coverflow({
                   <img src={withBasePath(it.image)} alt="" draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
                 )}
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-5 pt-20">
-                  <div className="text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{it.eyebrow}</div>
-                  <div className="mt-1 text-3xl leading-none uppercase" style={anton}>{it.title}</div>
+                  {it.eyebrow && <div className="mb-1 text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{it.eyebrow}</div>}
+                  <div className="text-3xl leading-none uppercase" style={anton}>{it.title}</div>
                 </div>
               </div>
             </div>

@@ -5,7 +5,6 @@ import { Suspense, useState } from "react";
 import { LayoutGrid, Search, X } from "lucide-react";
 import { Coverflow } from "@/components/nuage/Coverflow";
 import { anton } from "@/components/nuage/shared";
-import { recipeWord } from "@/lib/gamme-words";
 import { DIFFICULTY_LABELS, filterRecipes, RECIPE_COURSES } from "@/lib/recipe-utils";
 import type { Country, Recipe } from "@/lib/types";
 import { RecipeCard } from "./RecipeCard";
@@ -71,7 +70,6 @@ function RecipesView({ recipes, countries, params }: Props & { params: URLSearch
     return {
       key: c.key,
       title: c.name,
-      eyebrow: recipeWord(items.length),
       image: (items.find((r) => r.featured) ?? items[0])?.image ?? null,
       href: `/recettes?type=${c.key}`,
       cloudMix: 3,
@@ -127,8 +125,7 @@ function RecipesView({ recipes, countries, params }: Props & { params: URLSearch
 
         <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
           <div>
-            <p className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">{recipeWord(list.length)}</p>
-            <h2 className="mt-1 text-4xl leading-none uppercase" style={anton}>
+            <h2 className="text-4xl leading-none uppercase" style={anton}>
               {title}
             </h2>
             {!showAll && course && <p className="mt-2 max-w-2xl text-sm text-muted">{course.description}</p>}
