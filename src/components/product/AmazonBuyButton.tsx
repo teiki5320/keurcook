@@ -13,7 +13,7 @@ export function AmazonBuyButton({
   asin: string;
   priceCents: number;
   name: string;
-  /** Version compacte (recettes) : icône panier et prix, sans le mot « Acheter ». */
+  /** Version compacte (recettes) : icône panier seule, prix dans l'infobulle. */
   icon?: boolean;
   className?: string;
 }) {
@@ -23,13 +23,11 @@ export function AmazonBuyButton({
       target="_blank"
       rel="sponsored nofollow noopener"
       aria-label={`Acheter ${name} sur Amazon, ${formatPrice(priceCents)} (nouvel onglet)`}
+      title={icon ? `Acheter · ${formatPrice(priceCents)}` : undefined}
       className={className}
     >
       {icon ? (
-        <>
-          <ShoppingBasket className="h-3.5 w-3.5" aria-hidden />
-          {formatPrice(priceCents)}
-        </>
+        <ShoppingBasket className="h-4 w-4" aria-hidden />
       ) : (
         <>Acheter · {formatPrice(priceCents)}</>
       )}

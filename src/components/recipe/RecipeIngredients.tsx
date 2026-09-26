@@ -93,7 +93,7 @@ export function RecipeIngredients({
                       priceCents={product.priceCents}
                       name={product.name}
                       icon
-                      className="inline-flex items-center gap-1 rounded-full bg-[#ff7a3d] px-2.5 py-1 text-[11px] font-bold whitespace-nowrap text-[#140a07] hover:bg-[#ffc46b]"
+                      className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff7a3d] text-[#140a07] hover:bg-[#ffc46b]"
                     />
                   ) : (
                   <button
