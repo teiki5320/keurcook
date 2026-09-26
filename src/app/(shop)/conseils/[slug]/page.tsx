@@ -115,7 +115,6 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
             </span>
           )}
         </div>
-        {conseil.image && <figcaption className="mt-2 text-xs text-muted">Photo d&apos;illustration générée par IA.</figcaption>}
       </figure>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)] lg:gap-14">
