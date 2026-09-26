@@ -34,6 +34,8 @@ const nextConfig: NextConfig = isStaticExport
     }
   : {
       poweredByHeader: false,
+      // Articles « Conseils » lus sur le disque à chaque revalidation : à embarquer dans les fonctions serveur.
+      outputFileTracingIncludes: { "/**": ["./content/conseils/**/*"] },
       images: {
         // Photos envoyées depuis l'admin (Vercel Blob).
         remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],

@@ -6,6 +6,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Chaque lundi à 0 h 15 (heure de Paris en hiver, 1 h 15 en été) : reconstruit la vitrine
+  # pour publier les articles « Conseils » programmés à cette date.
+  schedule:
+    - cron: "15 23 * * 0"
 
 permissions:
   contents: read

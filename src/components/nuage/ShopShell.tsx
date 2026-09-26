@@ -11,6 +11,7 @@ const nav: NavItem[] = [
   { href: "/recettes", label: "Recettes" },
   { href: "/pays", label: "Pays" },
   { href: "/boutique", label: "Boutique" },
+  { href: "/conseils", label: "Conseils" },
   { href: "/favoris", label: "Favoris" },
 ];
 
