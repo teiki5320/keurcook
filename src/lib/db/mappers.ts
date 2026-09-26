@@ -46,6 +46,7 @@ export function mapProduct(r: Row): Product {
     usageTips: r.usage_tips ?? null,
     conservation: r.conservation ?? null,
     tags: r.tags ?? [],
+    amazonAsin: r.amazon_asin ?? null,
     isActive: r.is_active,
     featured: r.featured,
     createdAt: iso(r.created_at),

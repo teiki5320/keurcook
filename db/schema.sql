@@ -34,6 +34,8 @@ create table if not exists public.products (
   usage_tips text,
   conservation text,
   tags text[] not null default '{}',
+  -- Code ASIN de la fiche Amazon.fr (programme Partenaires) : bouton « Acheter » vers Amazon.
+  amazon_asin text,
   is_active boolean not null default true,
   featured boolean not null default false,
   created_at timestamptz not null default now(),
@@ -49,6 +51,7 @@ alter table public.products add column if not exists composition text;
 alter table public.products add column if not exists allergens text[] not null default '{}';
 alter table public.products add column if not exists usage_tips text;
 alter table public.products add column if not exists conservation text;
+alter table public.products add column if not exists amazon_asin text;
 alter table public.products drop column if exists cbd_rate;
 alter table public.products drop column if exists thc_rate;
 alter table public.products drop column if exists coa_url;

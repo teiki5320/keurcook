@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { UtensilsCrossed } from "lucide-react";
+import { AMAZON_DISCLOSURE } from "@/lib/amazon";
 import { siteConfig } from "@/lib/config";
 import { CookieSettingsButton } from "../compliance/CookieBanner";
 
@@ -22,7 +23,6 @@ export function Footer() {
             <li><Link href="/pays" className="hover:text-white">Cuisines par pays</Link></li>
             <li><Link href="/boutique" className="hover:text-white">Produits rares</Link></li>
             <li><Link href="/favoris" className="hover:text-white">Mes favoris</Link></li>
-            <li><Link href="/panier" className="hover:text-white">Panier</Link></li>
           </ul>
         </div>
         <div>
@@ -43,6 +43,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-page space-y-2 py-6 text-xs leading-relaxed text-sage-200/70">
+          <p>{AMAZON_DISCLOSURE}</p>
           <p>© {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.</p>
         </div>
       </div>

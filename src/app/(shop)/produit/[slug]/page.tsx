@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
 import { AddToCart } from "@/components/product/AddToCart";
+import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
@@ -79,10 +80,17 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
           <p className="mt-3 text-muted">{product.shortDescription}</p>
 
           <div className="mt-6">
-            <AddToCart
-              product={{ id: product.id, slug: product.slug, name: product.name, image: product.images[0] ?? null }}
-              variants={product.variants}
-            />
+            {product.amazonAsin && product.variants[0] ? (
+              <>
+                <p className="text-sm text-muted">{product.variants[0].label}</p>
+                <AmazonBuyButton asin={product.amazonAsin} priceCents={product.variants[0].priceCents} name={product.name} className="btn-primary mt-3 h-12 w-full px-8 text-base sm:w-auto" />
+              </>
+            ) : (
+              <AddToCart
+                product={{ id: product.id, slug: product.slug, name: product.name, image: product.images[0] ?? null }}
+                variants={product.variants}
+              />
+            )}
           </div>
 
           <dl className="card mt-8 grid grid-cols-2 gap-x-4 gap-y-4 p-5 text-sm">
@@ -90,10 +98,12 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
               <dt className="flex items-center gap-1 text-muted"><MapPin className="h-3.5 w-3.5" aria-hidden /> Origine</dt>
               <dd className="mt-0.5 font-medium">{[product.originCountry, product.originRegion].filter(Boolean).join(" — ") || "—"}</dd>
             </div>
-            <div>
-              <dt className="flex items-center gap-1 text-muted"><Tractor className="h-3.5 w-3.5" aria-hidden /> Producteur</dt>
-              <dd className="mt-0.5 font-medium">{product.producer ?? "—"}</dd>
-            </div>
+            {product.producer && (
+              <div>
+                <dt className="flex items-center gap-1 text-muted"><Tractor className="h-3.5 w-3.5" aria-hidden /> Producteur</dt>
+                <dd className="mt-0.5 font-medium">{product.producer}</dd>
+              </div>
+            )}
             {product.composition && (
               <div className="col-span-2">
                 <dt className="text-muted">Ingrédients</dt>
@@ -111,6 +121,9 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
                 <dt className="flex items-center gap-1 text-muted"><Package className="h-3.5 w-3.5" aria-hidden /> Conservation</dt>
                 <dd className="mt-0.5">{product.conservation} Date de durabilité minimale indiquée sur l&apos;emballage.</dd>
               </div>
+            )}
+            {product.amazonAsin && (
+              <p className="col-span-2 text-xs text-muted">Composition exacte, allergènes et vendeur : voir la fiche Amazon avant l&apos;achat.</p>
             )}
           </dl>
         </div>

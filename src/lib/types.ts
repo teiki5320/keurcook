@@ -37,6 +37,8 @@ export interface Product {
   /** Conditions de conservation. */
   conservation: string | null;
   tags: string[];
+  /** Code ASIN de la fiche Amazon.fr : si présent, le bouton « Acheter » mène à Amazon. */
+  amazonAsin: string | null;
   isActive: boolean;
   featured: boolean;
   createdAt: string;

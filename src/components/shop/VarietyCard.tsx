@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { Heart, MapPin } from "lucide-react";
 import { CART_ADDED_EVENT } from "@/components/nuage/shared";
+import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
 import { ProductImage } from "@/components/product/ProductImage";
 import { useCart } from "@/lib/cart/cart-context";
 import { formatPrice, pricePerGram } from "@/lib/format";
 import type { ProductWithCategory } from "@/lib/types";
 
-/** Carte produit : photo, origine, choix du format (100 g · 250 g…) et ajout au panier. */
+/** Carte produit : photo, origine, format et bouton « Acheter » (Amazon) ou ajout au panier. */
 export function VarietyCard({ product, priority }: { product: ProductWithCategory; priority?: boolean }) {
   const { add } = useCart();
   const firstAvailable = product.variants.find((v) => v.stock > 0) ?? product.variants[0];
@@ -92,6 +93,10 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
           <span className="text-base font-bold text-forest-800">{formatPrice(variant.priceCents)}</span>
           <span className="ml-1.5 text-xs text-muted">{product.variants.length === 1 ? variant.label : unit ? `(${unit})` : ""}</span>
         </p>
+        {product.amazonAsin ? (
+          <AmazonBuyButton asin={product.amazonAsin} priceCents={variant.priceCents} name={product.name} className="btn-primary mt-1 w-full py-2.5" />
+        ) : (
+          <>
         {!out && variant.stock <= 5 && <p className="text-xs text-[#ff7a3d]">Plus que {variant.stock} en stock</p>}
         <button
           type="button"
@@ -102,6 +107,8 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
         >
           {out ? "Rupture de stock" : "Ajouter"}
         </button>
+          </>
+        )}
       </div>
     </article>
   );

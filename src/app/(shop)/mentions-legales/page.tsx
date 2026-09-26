@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
+import { AMAZON_DISCLOSURE } from "@/lib/amazon";
 import { legalConfig, siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = { title: "Mentions légales", alternates: { canonical: "/mentions-legales" } };
@@ -40,6 +41,13 @@ export default function LegalNoticePage() {
         allergènes et les conditions de conservation de chaque produit figurent sur sa fiche et sur son emballage,
         conformément au règlement (UE) n° 1169/2011 concernant l&apos;information des consommateurs sur les denrées
         alimentaires. Aucune allégation de santé n&apos;est formulée.
+      </p>
+
+      <h2>Liens d&apos;affiliation Amazon</h2>
+      <p>
+        Les boutons « Acheter » mènent à des produits vendus sur Amazon.fr par des vendeurs tiers ou par Amazon ; la vente,
+        la livraison et le service client relèvent de ce vendeur. Les prix affichés sur le site sont indicatifs : seul le prix
+        indiqué sur Amazon au moment de l&apos;achat fait foi. {AMAZON_DISCLOSURE}
       </p>
 
       <h2>Propriété intellectuelle</h2>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Minus, Plus, ShoppingBag } from "lucide-react";
 import { CART_ADDED_EVENT } from "@/components/nuage/shared";
+import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
 import { TLink } from "@/components/nuage/PageTransition";
 import { useCart } from "@/lib/cart/cart-context";
 import { formatPrice } from "@/lib/format";
@@ -19,6 +20,8 @@ export interface LinkedProduct {
   variantLabel: string;
   priceCents: number;
   stock: number;
+  /** Fiche Amazon.fr : bouton « Acheter » au lieu de l'ajout au panier. */
+  amazonAsin: string | null;
 }
 
 /**
@@ -38,7 +41,7 @@ export function RecipeIngredients({
   const [people, setPeople] = useState(servings);
   const factor = people / servings;
   const linked = [...new Map(ingredients.flatMap((i) => (i.productSlug && products[i.productSlug] ? [[i.productSlug, products[i.productSlug]] as const] : []))).values()];
-  const available = linked.filter((p) => p.stock > 0);
+  const available = linked.filter((p) => p.stock > 0 && !p.amazonAsin);
 
   const addProducts = (list: LinkedProduct[]) => {
     for (const p of list) {
@@ -84,6 +87,14 @@ export function RecipeIngredients({
                   <TLink href={`/produit/${product.slug}`} label={product.name} className="rounded-full bg-[#ff7a3d]/15 px-2.5 py-1 text-[11px] font-bold text-[#ffc46b] hover:bg-[#ff7a3d]/25">
                     Produit rare
                   </TLink>
+                  {product.amazonAsin ? (
+                    <AmazonBuyButton
+                      asin={product.amazonAsin}
+                      priceCents={product.priceCents}
+                      name={product.name}
+                      className="rounded-full bg-[#ff7a3d] px-2.5 py-1 text-[11px] font-bold whitespace-nowrap text-[#140a07] hover:bg-[#ffc46b]"
+                    />
+                  ) : (
                   <button
                     type="button"
                     disabled={product.stock <= 0}
@@ -94,6 +105,7 @@ export function RecipeIngredients({
                   >
                     <Plus className="h-4 w-4" aria-hidden />
                   </button>
+                  )}
                 </span>
               )}
             </li>

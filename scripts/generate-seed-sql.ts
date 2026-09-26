@@ -20,11 +20,11 @@ const out: string[] = [
     .map((c) => `  (${q(c.id)}, ${q(c.slug)}, ${q(c.name)}, ${q(c.description)}, ${c.position})`)
     .join(",\n") + "\non conflict (id) do nothing;",
   "",
-  "insert into public.products (id, slug, name, category_id, short_description, description, origin_country, origin_region, producer, images, composition, allergens, usage_tips, conservation, tags, is_active, featured, created_at) values",
+  "insert into public.products (id, slug, name, category_id, short_description, description, origin_country, origin_region, producer, images, composition, allergens, usage_tips, conservation, tags, amazon_asin, is_active, featured, created_at) values",
   demoProducts
     .map(
       (p) =>
-        `  (${q(p.id)}, ${q(p.slug)}, ${q(p.name)}, ${q(p.categoryId)}, ${q(p.shortDescription)}, ${q(p.description)}, ${q(p.originCountry)}, ${q(p.originRegion)}, ${q(p.producer)}, ${arr(p.images)}, ${q(p.composition)}, ${arr(p.allergens)}, ${q(p.usageTips)}, ${q(p.conservation)}, ${arr(p.tags)}, ${p.isActive}, ${p.featured}, ${q(p.createdAt)})`,
+        `  (${q(p.id)}, ${q(p.slug)}, ${q(p.name)}, ${q(p.categoryId)}, ${q(p.shortDescription)}, ${q(p.description)}, ${q(p.originCountry)}, ${q(p.originRegion)}, ${q(p.producer)}, ${arr(p.images)}, ${q(p.composition)}, ${arr(p.allergens)}, ${q(p.usageTips)}, ${q(p.conservation)}, ${arr(p.tags)}, ${q(p.amazonAsin)}, ${p.isActive}, ${p.featured}, ${q(p.createdAt)})`,
     )
     .join(",\n") + "\non conflict (id) do nothing;",
   "",

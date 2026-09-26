@@ -3,7 +3,6 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, Search, X } from "lucide-react";
-import { useCart } from "@/lib/cart/cart-context";
 import { normalizePath } from "./immersive";
 import { TLink } from "./PageTransition";
 
@@ -47,7 +46,6 @@ function SearchBox({ onDone, autoFocus }: { onDone?: () => void; autoFocus?: boo
 
 export function NuageHeader({ nav }: { nav: NavItem[] }) {
   const pathname = normalizePath(usePathname());
-  const { count, ready } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -108,15 +106,6 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
           >
             <Search className="h-5 w-5" aria-hidden />
           </button>
-          <TLink
-            href="/panier"
-            label="Panier"
-            className="flex items-center gap-2 rounded-full px-2 py-1 text-sm font-semibold text-[#fbeee2]"
-            aria-label={`Panier (${count} article${count > 1 ? "s" : ""})`}
-          >
-            <span className="hidden sm:inline">Panier</span>
-            <span className="inline-flex h-[26px] min-w-[26px] items-center justify-center rounded-full bg-[#ff7a3d] px-1.5 text-[#140a07]">{ready ? count : 0}</span>
-          </TLink>
           <button
             type="button"
             onClick={() => setMenuOpen(true)}

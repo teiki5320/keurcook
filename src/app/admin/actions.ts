@@ -73,6 +73,7 @@ const productSchema = z.object({
   usageTips: z.string().trim().max(2000).nullable(),
   conservation: z.string().trim().max(500).nullable(),
   tags: z.array(z.string()),
+  amazonAsin: z.string().regex(/^[A-Z0-9]{10}$/, "Code ASIN invalide : 10 lettres majuscules ou chiffres (ex. B0FQQXJ23P).").nullable(),
   isActive: z.boolean(),
   featured: z.boolean(),
   variants: z.array(variantSchema).min(1, "Au moins une variante (poids / contenance) est requise."),
@@ -117,6 +118,7 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
       .split(",")
       .map((t) => t.trim())
       .filter(Boolean),
+    amazonAsin: str("amazonAsin")?.toUpperCase() ?? null,
     isActive: formData.get("isActive") === "on",
     featured: formData.get("featured") === "on",
     variants,
@@ -143,19 +145,19 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
     await sql.transaction([
       sql.query(
         `insert into products (id, name, slug, category_id, short_description, description, origin_country,
-           origin_region, producer, images, composition, allergens, usage_tips, conservation, tags, is_active, featured)
-         values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)
+           origin_region, producer, images, composition, allergens, usage_tips, conservation, tags, is_active, featured, amazon_asin)
+         values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18)
          on conflict (id) do update set
            name = excluded.name, slug = excluded.slug, category_id = excluded.category_id,
            short_description = excluded.short_description, description = excluded.description,
            origin_country = excluded.origin_country, origin_region = excluded.origin_region,
            producer = excluded.producer, images = excluded.images, composition = excluded.composition,
            allergens = excluded.allergens, usage_tips = excluded.usage_tips, conservation = excluded.conservation, tags = excluded.tags,
-           is_active = excluded.is_active, featured = excluded.featured`,
+           is_active = excluded.is_active, featured = excluded.featured, amazon_asin = excluded.amazon_asin`,
         [
           productId, p.name, slugify(p.slug || p.name), p.categoryId, p.shortDescription, p.description,
           p.originCountry, p.originRegion, p.producer, p.images, p.composition, p.allergens, p.usageTips, p.conservation,
-          p.tags, p.isActive, p.featured,
+          p.tags, p.isActive, p.featured, p.amazonAsin,
         ],
       ),
       // Variantes retirées du formulaire.

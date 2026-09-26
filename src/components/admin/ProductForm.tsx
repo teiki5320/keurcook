@@ -249,6 +249,13 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
             <label className="label" htmlFor="conservation">Conservation</label>
             <input id="conservation" name="conservation" defaultValue={product?.conservation ?? ""} className="input" />
           </div>
+          <div>
+            <label className="label" htmlFor="amazonAsin">Code Amazon (ASIN)</label>
+            <input id="amazonAsin" name="amazonAsin" defaultValue={product?.amazonAsin ?? ""} placeholder="B0FQQXJ23P" className="input font-mono uppercase" maxLength={10} />
+            <p className="mt-1 text-xs text-muted">
+              Les 10 caractères après « /dp/ » dans l&apos;adresse de la fiche Amazon.fr. Le bouton « Acheter » mène alors à Amazon (tag partenaire ajouté automatiquement), au prix de la première variante.
+            </p>
+          </div>
         </section>
 
         {uploadError && <p role="alert" className="rounded-xl bg-terracotta/10 p-3 text-sm text-terracotta-dark">{uploadError}</p>}
