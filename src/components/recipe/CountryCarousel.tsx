@@ -27,7 +27,7 @@ export function CountryCarousel({ countries }: { countries: CarouselCountry[] })
 
   return (
     <div>
-      <div {...swipe} className="relative select-none" style={{ ...swipe.style, height: "clamp(330px,52vh,480px)" }}>
+      <div {...swipe} className="relative select-none" style={{ ...swipe.style, height: "min(clamp(300px,52vh,480px), 86vw)" }}>
         {countries.map((c, i) => {
           let o = i - active;
           if (o > n / 2) o -= n;
@@ -42,7 +42,7 @@ export function CountryCarousel({ countries }: { countries: CarouselCountry[] })
               onClick={() => !isActive && setActive(i)}
               className={`absolute top-1/2 left-1/2 aspect-square ${isActive ? "" : "cursor-pointer"}`}
               style={{
-                height: isActive ? "min(100%, 86vw)" : "min(48%, 40vw)",
+                height: isActive ? "100%" : "48%",
                 transform: `translate(-50%,-50%) translateX(${o * 105}%)`,
                 opacity: isActive ? 1 : ao === 1 ? 0.55 : 0.2,
                 transition: "transform .7s cubic-bezier(.16,1,.3,1), opacity .5s, height .7s cubic-bezier(.16,1,.3,1)",
@@ -76,7 +76,7 @@ export function CountryCarousel({ countries }: { countries: CarouselCountry[] })
         </button>
       </div>
 
-      <div className="mt-4 text-center" aria-live="polite">
+      <div className="mt-1 text-center" aria-live="polite">
         <p className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">{recipeWord(cur.count)}</p>
         <h3 className="mt-1 uppercase leading-none" style={{ ...anton, fontSize: "clamp(40px,7vw,72px)" }}>
           {cur.name}

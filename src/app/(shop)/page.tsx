@@ -25,7 +25,7 @@ export default async function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Accroche + carte de l'Afrique en particules (un point par pays ayant des recettes). */}
-      <section className="flex min-h-[92dvh] items-center pt-20 pb-10 lg:pt-24">
+      <section className="flex items-center pt-20 pb-6 lg:min-h-[92dvh] lg:pt-24 lg:pb-10">
         <div className="mx-auto grid w-full max-w-[1320px] items-center gap-4 px-[clamp(20px,4vw,56px)] lg:grid-cols-2 lg:gap-6">
           {/* Titre au-dessus de la carte (sur téléphone, la carte remonte un peu sous le titre). */}
           <h1 className="relative z-[3] uppercase leading-[.9]" style={{ ...anton, fontSize: "clamp(44px,8vw,120px)" }}>
@@ -33,7 +33,7 @@ export default async function HomePage() {
             <br />
             <span className="text-[#ff7a3d]">Dans l&apos;assiette.</span>
           </h1>
-          <CountryMap countries={countries} className="-mt-8 mx-auto max-w-[min(92vw,52vh)] sm:-mt-12 lg:mt-0 lg:max-w-[min(600px,72vh)]" />
+          <CountryMap countries={countries} className="-mt-12 mx-auto max-w-[min(92vw,52vh)] sm:-mt-16 lg:mt-0 lg:max-w-[min(600px,72vh)]" />
         </div>
       </section>
 
@@ -44,7 +44,7 @@ export default async function HomePage() {
             Cuisiner par pays<span className="text-[#ff7a3d]">.</span>
           </h2>
           <p className="mt-1 max-w-xl text-sm text-[#fbeee2]/65">Glissez pour voyager d&apos;un pays à l&apos;autre.</p>
-          <div className="mt-6">
+          <div className="mt-2">
             <CountryCarousel countries={countries} />
           </div>
         </div>
