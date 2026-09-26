@@ -1,4 +1,4 @@
-import { BookOpen, CookingPot, CupSoda, Flame, Package, Repeat, Wheat, type LucideIcon } from "lucide-react";
+import { BookOpen, Coffee, CookingPot, CupSoda, Flame, Package, Repeat, Utensils, Wheat, type LucideIcon } from "lucide-react";
 
 /** Thèmes de la rubrique Conseils : nom affiché et icône (utilisée aussi quand l'article n'a pas de photo). */
 export const CONSEIL_THEMES = {
@@ -9,6 +9,8 @@ export const CONSEIL_THEMES = {
   epices: { name: "Épices et condiments", short: "Épices", icon: Flame },
   boissons: { name: "Boissons et douceurs", short: "Boissons", icon: CupSoda },
   decouvrir: { name: "Découvrir et s'organiser", short: "Découvrir", icon: BookOpen },
+  "cafe-the": { name: "Cafés et thés", short: "Café & thé", icon: Coffee },
+  ustensiles: { name: "Ustensiles", short: "Ustensiles", icon: Utensils },
 } as const satisfies Record<string, { name: string; short: string; icon: LucideIcon }>;
 
 export type ConseilTheme = keyof typeof CONSEIL_THEMES;
