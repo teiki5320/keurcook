@@ -21,6 +21,15 @@ const explode = (v: number) => window.dispatchEvent(new CustomEvent("nuage:explo
 const COVER_MS = 450;
 const REVEAL_MS = 550;
 
+/** Taille du libellé selon sa longueur : les noms longs restent lisibles et centrés, même sur téléphone. */
+function labelSize(label: string): string {
+  const n = label.length;
+  if (n <= 10) return "clamp(56px,13vw,190px)";
+  if (n <= 20) return "clamp(46px,9.5vw,150px)";
+  if (n <= 32) return "clamp(38px,7.5vw,120px)";
+  return "clamp(32px,6vw,100px)";
+}
+
 const samePath = (a: string, b: string) => {
   const norm = (p: string) => (p.split(/[?#]/)[0].replace(/\/+$/, "") || "/");
   return norm(a) === norm(b);
@@ -77,11 +86,11 @@ export function PageTransitionProvider({ children }: { children: React.ReactNode
         style={{ clipPath: CLIP[phase], transition: phase === "idle" ? "none" : "clip-path .45s cubic-bezier(.76,0,.24,1)" }}
       >
         <span
-          className="uppercase text-[#140a07]"
+          className="max-w-[min(92vw,1400px)] px-4 text-center leading-[1.05] text-balance break-words uppercase text-[#140a07]"
           style={{
             fontFamily: "var(--font-anton), sans-serif",
-            fontSize: "clamp(64px,11vw,190px)",
-            transform: `scale(${phase === "in" ? 1 : phase === "out" ? 1.25 : 0.8})`,
+            fontSize: labelSize(label),
+            transform: `scale(${phase === "in" ? 1 : phase === "out" ? 1.08 : 0.9})`,
             transition: "transform .7s cubic-bezier(.16,1,.3,1)",
           }}
         >
