@@ -44,3 +44,6 @@ next-env.d.ts
 
 # export statique GitHub Pages
 /.static-export-stash/
+
+# Secrets locaux : ne jamais versionner
+/Clé Stripe/
