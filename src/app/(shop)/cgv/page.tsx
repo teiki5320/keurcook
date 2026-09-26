@@ -10,7 +10,6 @@ export const metadata: Metadata = { title: "Conditions générales de vente", al
 export default function TermsPage() {
   const l = legalConfig;
   const providers = getPaymentProviders().map((p) => p.id);
-  const card = providers.includes("stripe");
   const transfer = providers.includes("bank_transfer");
   return (
     <LegalPage title="Conditions générales de vente" updated="25 septembre 2026">
@@ -55,17 +54,9 @@ export default function TermsPage() {
       </p>
 
       <h2>Article 6 — Paiement</h2>
-      {card && (
-        <p>
-          Le paiement s&apos;effectue en ligne, au moment de la commande, par carte bancaire ou portefeuille électronique
-          (Apple Pay, Google Pay…) sur la page de paiement sécurisée de notre prestataire Stripe. Les données bancaires du
-          Client sont traitées par Stripe et ne transitent pas par le site. La commande est préparée dès la confirmation
-          du paiement ; à défaut de paiement dans l&apos;heure qui suit la validation, elle est annulée.
-        </p>
-      )}
       {transfer && (
         <p>
-          {card ? "Le Client peut également payer par virement bancaire. " : "Le paiement s'effectue par virement bancaire. "}
+          Le paiement s&apos;effectue par virement bancaire.{" "}
           Les coordonnées bancaires et la référence à indiquer sont communiquées à la validation de la commande et par
           email. La commande est préparée à réception du paiement. À défaut de paiement dans un délai de 7 jours, la
           commande est annulée.

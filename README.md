@@ -2,7 +2,7 @@
 
 Site en français de **recettes de plats africains** (vitrine principale) et **épicerie en ligne de produits africains rares** : épices, céréales anciennes, feuilles séchées, poissons fumés, huiles et pâtes.
 
-**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Three.js (carte de l'Afrique en particules) · Neon (base de données PostgreSQL) · Nodemailer (SMTP) · Stripe.
+**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Three.js (carte de l'Afrique en particules) · Neon (base de données PostgreSQL) · Nodemailer (SMTP).
 
 ---
 
@@ -26,7 +26,7 @@ Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie 
 | **Avis** (note + commentaire), publiés après validation | Newsletter : liste des inscrits, **export CSV** |
 | Pages pays, **favoris sans compte** (stockés dans le navigateur) | Produits (étiquetage : origine, ingrédients, allergènes, conservation), stocks, commandes |
 | Épicerie par gammes, fiche produit avec « Utilisé dans ces recettes » | Maintenance : met le site en pause (écran « On prépare la marmite », commandes suspendues) |
-| Panier, commande, paiement (Stripe Checkout et/ou virement), e-mails | Annulation de commande → remise en stock automatique |
+| Achat via Amazon Partenaires (bouton « Acheter ») ; panier et commande par virement conservés dans le code, masqués | Annulation de commande → remise en stock automatique |
 
 ### Conformité
 
@@ -100,17 +100,6 @@ Les opérations admin passent uniquement par le serveur : la base n'est jamais a
 N'importe quel serveur SMTP convient. Avec une boîte mail **IONOS** : `SMTP_HOST=smtp.ionos.fr`, `SMTP_PORT=587`, `SMTP_SECURE=false`, identifiants de la boîte, et `EMAIL_FROM` sur la même adresse. Pensez à configurer SPF / DKIM dans la zone DNS pour éviter les spams.
 
 ---
-
-## Paiement par carte (Stripe)
-
-`src/lib/payments/providers/stripe.ts` : Stripe Checkout (page hébergée par Stripe : carte, Apple Pay, Google Pay…). Le client est redirigé vers Stripe, puis revient sur la page de confirmation ; la commande passe en « Payée » automatiquement (webhook, et vérification au retour du client). Une session expirée (1 h) ou un paiement refusé annule la commande et remet le stock en vente. Les emails de commande partent une fois le paiement confirmé.
-
-1. Stripe (mode test d'abord) → **Développeurs → Clés API** : clé secrète → variable `STRIPE_SECRET_KEY` (Vercel, type Secret).
-2. **Développeurs → Webhooks → Ajouter une destination** : URL `https://www.alohash.fr/api/payments/stripe/webhook`, événements `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed`, `checkout.session.expired` ; secret de signature → `STRIPE_WEBHOOK_SECRET`.
-3. `PAYMENT_PROVIDERS=stripe,bank_transfer`, puis redéployer.
-4. Moyens proposés : **Paramètres → Moyens de paiement** dans Stripe.
-
-⚠️ Le compte Stripe ouvert pour l'ancienne activité CBD a été fermé : ouvrir (ou faire réactiver) un compte en déclarant l'activité d'épicerie alimentaire avant de passer en clés réelles (`sk_live_…`).
 
 ## Paiement : ajouter un prestataire
 

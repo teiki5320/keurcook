@@ -1,17 +1,15 @@
 import "server-only";
 import { BankTransferProvider } from "./providers/bank-transfer";
-import { StripeProvider } from "./providers/stripe";
 import type { PaymentProvider } from "./types";
 
 /**
  * Registre des moyens de paiement disponibles.
  * `PAYMENT_PROVIDERS` (liste séparée par des virgules) permet de choisir
- * lesquels sont proposés, dans l'ordre (ex. « stripe,bank_transfer »). Par défaut : virement uniquement.
+ * lesquels sont proposés, dans l'ordre. Par défaut : virement uniquement.
  * Un prestataire non configuré (clés absentes) n'est jamais proposé.
  */
 const allProviders: PaymentProvider[] = [
   new BankTransferProvider(),
-  new StripeProvider(),
 ];
 
 export function getPaymentProviders(): PaymentProvider[] {
