@@ -44,3 +44,6 @@ export function filterProducts(products: ProductWithCategory[], f: CatalogFilter
   };
   return result.sort(sorters[f.sort ?? "featured"]);
 }
+
+/** Gamme qui ne contient pas de denrées (pas de liste d'ingrédients ni d'allergènes exigés). */
+export const NON_FOOD_CATEGORY = "ustensiles";

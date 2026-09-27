@@ -6,6 +6,7 @@ theme: epicerie
 resume: Gardez-le au sec, bien emballé : au réfrigérateur pour quelques semaines, au congélateur en portions pour plus longtemps. L'humidité est son principal ennemi.
 recettes: pondu, eru, liboke-de-poisson
 produits: crevettes-sechees, guedj
+image: /conseils/comment-conserver-le-poisson-fume.webp
 imageAlt: Des morceaux de poisson fumé doré posés sur une natte tressée.
 imagePrompt: Photographie culinaire, morceaux de poisson fumé brun doré posés sur une natte tressée, quelques crevettes séchées à côté, fond sombre, lumière chaude orangée rasante, gros plan texturé, sans texte ni logo, format 16:9.
 ---

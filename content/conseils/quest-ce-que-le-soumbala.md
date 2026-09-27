@@ -6,6 +6,7 @@ theme: epices
 resume: Le soumbala est un condiment fait de graines de néré fermentées. Son odeur est forte, mais une petite quantité suffit à donner de la profondeur à une sauce.
 recettes: to-sauce-gombo, mafe
 produits: soumbala
+image: /conseils/quest-ce-que-le-soumbala.webp
 imageAlt: Des boulettes de soumbala sombres dans une coupelle en bois, à côté de graines de néré.
 imagePrompt: Photographie culinaire, coupelle en bois contenant des boulettes brunes de soumbala et des graines de néré fermentées, pilon et mortier en bois en arrière-plan, fond sombre, lumière chaude orangée, gros plan, sans texte ni logo, format 16:9.
 ---

@@ -9,6 +9,7 @@
  * volontairement aucune allégation de santé.
  */
 import type { Category, Product, Variant } from "../types";
+import { nouveauxProduits } from "./catalog-nouveautes";
 
 const id = (prefix: string, n: number) =>
   `${prefix}0000000-0000-4000-a000-${n.toString(16).padStart(12, "0")}`;
@@ -19,6 +20,8 @@ export const demoCategories: Category[] = [
   { id: id("1", 3), slug: "feuilles", name: "Feuilles & fleurs séchées", position: 3, description: "Feuilles de ndolé, de manioc, fleurs d'hibiscus : séchées sur place pour garder leur goût." },
   { id: id("1", 4), slug: "poissons", name: "Poissons & fumés", position: 4, description: "Poissons séchés, fumés ou fermentés et crevettes séchées, les exhausteurs de goût de la cuisine africaine." },
   { id: id("1", 5), slug: "huiles", name: "Huiles & pâtes", position: 5, description: "Huile de palme rouge, pâte d'arachide, pulpe de noix de palme : la base des grandes sauces." },
+  { id: id("1", 6), slug: "cafes-thes", name: "Cafés & thés", position: 6, description: "Cafés d'Éthiopie, du Kenya ou du Rwanda, rooibos, kinkeliba et thé vert pour l'ataya : les boissons chaudes du continent." },
+  { id: id("1", 7), slug: "ustensiles", name: "Ustensiles", position: 7, description: "Mortiers, couscoussiers, marmites, théières : le matériel pour cuisiner et servir les plats africains." },
 ];
 
 const cat = (slug: string) => demoCategories.find((c) => c.slug === slug)!.id;
@@ -550,6 +553,13 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "pate-d-arachide": { asin: "B07VX8JBYN", label: "425 g", priceCents: 1349, name: "Pâte d'arachide" },
   "pulpe-de-noix-de-palme": { asin: "B07C1KX53F", label: "800 g", priceCents: 1200, name: "Sauce graine (pulpe de noix de palme)" },
 };
+
+// Produits ajoutés le 27/09/2026 (catalog-nouveautes.ts), à la suite pour garder les identifiants existants.
+for (const n of nouveauxProduits) {
+  const { category, amazon, ...rest } = n;
+  seeds.push({ ...rest, categoryId: cat(category), producer: null, featured: false, variants: [] });
+  amazonOffers[n.slug] = amazon;
+}
 
 export const demoProducts: Product[] = seeds.map((seed, index) => {
   const productId = id("2", index + 1);

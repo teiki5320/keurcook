@@ -214,7 +214,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       [3, "gousses", "ail"],
       [2, "c. à soupe", "huile végétale"],
       [40, "cl", "eau chaude"],
-      [4, null, "grandes feuilles de bananier"],
+      [4, null, "grandes feuilles de bananier", "feuilles-de-bananier-fraiches"],
       [null, null, "sel et poivre de Penja", "poivre-de-penja"],
     ],
     steps: [

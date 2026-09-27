@@ -6,6 +6,7 @@ theme: decouvrir
 resume: Commencez par un plat mijoté à base d'ingrédients courants, comme le poulet yassa ou le mafé : ils demandent surtout du temps, pas de technique particulière.
 recettes: poulet-yassa, mafe, alloco, jus-de-bissap
 produits: pate-d-arachide, fleurs-de-bissap
+image: /conseils/par-quelle-recette-commencer.webp
 imageAlt: Une cocotte de poulet aux oignons fondants posée sur une table en bois, lumière chaude.
 imagePrompt: Photographie culinaire, cocotte en fonte de poulet yassa aux oignons caramélisés et citron, posée sur une table en bois sombre, riz blanc à côté, lumière chaude orangée venant de côté, fond sombre brun, ambiance chaleureuse, vue de trois quarts, sans texte ni logo, format 16:9.
 ---

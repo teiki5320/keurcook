@@ -6,6 +6,7 @@ theme: remplacer
 resume: Le plus simple est la poudre de gombo séché ou le gombo surgelé. À défaut, des feuilles de corète (mloukhiya) donnent la même texture filante à la sauce.
 recettes: to-sauce-gombo
 produits: gombo-seche
+image: /conseils/par-quoi-remplacer-le-gombo.webp
 imageAlt: Des gombos frais et un bol de poudre de gombo vert sur une planche en bois.
 imagePrompt: Photographie culinaire, gombos frais verts entiers et coupés en rondelles sur une planche en bois, petit bol de poudre de gombo séché, fond sombre, lumière chaude orangée latérale, sans texte ni logo, format 16:9.
 ---

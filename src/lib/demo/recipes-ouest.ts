@@ -391,7 +391,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       [1.5, "l", "eau"],
       [null, null, "sel"],
       [6, null, "œufs durs (pour servir)"],
-      [150, "g", "gari (semoule de manioc, pour servir)"],
+      [150, "g", "gari (semoule de manioc, pour servir)", "gari-jaune"],
     ],
     steps: [
       "Faire tremper les haricots 8 heures dans l'eau froide, puis les égoutter.",

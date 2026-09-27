@@ -16,7 +16,7 @@ export const recipesDouceurs: RecipeSeed[] = [
     servings: 10,
     difficulty: 2,
     ingredients: [
-      [250, "g", "café vert (robusta de préférence)"],
+      [250, "g", "café vert (robusta de préférence)", "cafe-vert-du-cameroun"],
       [15, "g", "poivre de Selim (djar) en gousses", "poivre-de-selim"],
       [2, null, "clous de girofle (facultatif)"],
       [1, "l", "eau"],

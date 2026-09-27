@@ -6,6 +6,7 @@ theme: sauces
 resume: Faites tremper les feuilles, blanchissez-les dans l'eau bouillante, puis rincez-les et pressez-les plusieurs fois. Plus vous répétez l'opération, moins elles sont amères.
 recettes: ndole
 produits: feuilles-de-ndole, crevettes-sechees
+image: /conseils/enlever-amertume-du-ndole.webp
 imageAlt: Des feuilles de ndolé pressées en boule dans une passoire, au-dessus d'un saladier.
 imagePrompt: Photographie culinaire, mains pressant une boule de feuilles de ndolé vert foncé au-dessus d'une passoire, saladier d'eau, feuilles séchées dans une coupelle, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
 ---

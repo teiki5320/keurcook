@@ -6,6 +6,7 @@ theme: boissons
 resume: On fait infuser des fleurs d'hibiscus séchées dans l'eau, à chaud ou à froid, puis on filtre, on sucre à son goût et on sert bien frais.
 recettes: jus-de-bissap
 produits: fleurs-de-bissap
+image: /conseils/comment-preparer-le-bissap.webp
 imageAlt: Une carafe de jus de bissap rouge rubis avec des fleurs d'hibiscus séchées.
 imagePrompt: Photographie culinaire, carafe en verre et deux verres de jus de bissap rouge rubis avec glaçons et feuilles de menthe, fleurs d'hibiscus séchées dans une coupelle, table en bois sombre, lumière chaude orangée, fond sombre, sans texte ni logo, format 16:9.
 ---

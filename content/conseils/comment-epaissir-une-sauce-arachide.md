@@ -6,6 +6,7 @@ theme: sauces
 resume: Laissez-la réduire à découvert à feu doux en remuant souvent. Si ce n'est pas assez, ajoutez un peu de pâte d'arachide délayée dans du bouillon chaud.
 recettes: mafe, fonio-aux-legumes
 produits: pate-d-arachide
+image: /conseils/comment-epaissir-une-sauce-arachide.webp
 imageAlt: Une cocotte de sauce arachide épaisse et orangée, une cuillère en bois posée dessus.
 imagePrompt: Photographie culinaire, cocotte de sauce arachide épaisse et orangée avec morceaux de viande et légumes, cuillère en bois, pot de pâte d'arachide à côté, table sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
 ---

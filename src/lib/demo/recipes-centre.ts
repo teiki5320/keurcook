@@ -106,7 +106,7 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
       [30, "cl", "eau tiède"],
       [1, null, "cube de bouillon"],
       [null, null, "sel"],
-      [null, null, "feuilles de bananier"],
+      [null, null, "feuilles de bananier", "feuilles-de-bananier-fraiches"],
     ],
     steps: [
       "Faire tremper les haricots 6 heures dans l'eau froide. Les frotter entre les mains pour retirer les peaux, qui remontent à la surface, puis rincer.",
@@ -187,7 +187,7 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
       [4, null, "grains de poivre de Selim", "poivre-de-selim"],
       [2, "c. à soupe", "huile"],
       [null, null, "sel"],
-      [null, null, "feuilles de bananier"],
+      [null, null, "feuilles de bananier", "feuilles-de-bananier-fraiches"],
     ],
     steps: [
       "Écailler et vider le poisson, le rincer, puis le couper en tronçons. Saler légèrement.",

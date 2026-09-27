@@ -11,6 +11,7 @@ import { minPriceCents, totalStock } from "@/lib/catalog-utils";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
 import { getRecipesUsingProduct } from "@/lib/data/recipes";
 import { siteConfig } from "@/lib/config";
+import { NON_FOOD_CATEGORY } from "@/lib/catalog-utils";
 
 export const revalidate = 300;
 
@@ -40,6 +41,8 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) notFound();
+  // Les ustensiles ne sont pas des denrées : pas d'allergènes ni de conservation à afficher.
+  const isFood = product.category.slug !== NON_FOOD_CATEGORY;
   const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
 
   const jsonLd = {
@@ -110,12 +113,14 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
                 <dd className="mt-0.5">{product.composition}</dd>
               </div>
             )}
-            <div className="col-span-2">
-              <dt className="flex items-center gap-1 text-muted"><AlertTriangle className="h-3.5 w-3.5" aria-hidden /> Allergènes</dt>
-              <dd className="mt-0.5">
-                {product.allergens.length ? <strong className="font-semibold text-[#ffc46b]">{product.allergens.join(", ")}</strong> : "Aucun allergène majeur déclaré."}
-              </dd>
-            </div>
+            {isFood && (
+              <div className="col-span-2">
+                <dt className="flex items-center gap-1 text-muted"><AlertTriangle className="h-3.5 w-3.5" aria-hidden /> Allergènes</dt>
+                <dd className="mt-0.5">
+                  {product.allergens.length ? <strong className="font-semibold text-[#ffc46b]">{product.allergens.join(", ")}</strong> : "Aucun allergène majeur déclaré."}
+                </dd>
+              </div>
+            )}
             {product.conservation && (
               <div className="col-span-2 border-t border-sage-200 pt-4">
                 <dt className="flex items-center gap-1 text-muted"><Package className="h-3.5 w-3.5" aria-hidden /> Conservation</dt>
@@ -123,7 +128,9 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
               </div>
             )}
             {product.amazonAsin && (
-              <p className="col-span-2 text-xs text-muted">Composition exacte, allergènes et vendeur : voir la fiche Amazon avant l&apos;achat.</p>
+              <p className="col-span-2 text-xs text-muted">
+                {isFood ? "Composition exacte, allergènes et vendeur" : "Dimensions, matériaux et vendeur"} : voir la fiche Amazon avant l&apos;achat.
+              </p>
             )}
           </dl>
         </div>

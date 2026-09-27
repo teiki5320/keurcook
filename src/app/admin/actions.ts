@@ -5,6 +5,7 @@ import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { siteConfig } from "@/lib/config";
+import { NON_FOOD_CATEGORY } from "@/lib/catalog-utils";
 import { findHealthClaims } from "@/lib/compliance";
 import { adminGetOrder, requireAdmin } from "@/lib/data/admin";
 import { isUuid, pgError } from "@/lib/db/client";
@@ -133,9 +134,9 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
       error: `Allégation de santé interdite détectée (${claims.join(", ")}). Reformulez le texte : aucune promesse thérapeutique ou médicale n'est autorisée.`,
     };
   }
-  const [category] = await sql.query("select id from categories where id = $1", [p.categoryId]);
+  const [category] = await sql.query("select id, slug from categories where id = $1", [p.categoryId]);
   if (!category) return { error: "Catégorie introuvable." };
-  if (p.isActive && !p.composition) return { error: "La liste des ingrédients est obligatoire pour publier un produit alimentaire." };
+  if (p.isActive && !p.composition && category.slug !== NON_FOOD_CATEGORY) return { error: "La liste des ingrédients est obligatoire pour publier un produit alimentaire." };
 
   const productId = p.id && isUuid(p.id) ? p.id : crypto.randomUUID();
   const keptIds = p.variants.map((v) => v.id).filter((id): id is string => Boolean(id && isUuid(id)));

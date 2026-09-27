@@ -6,6 +6,7 @@ theme: epicerie
 resume: L'huile de palme rouge est extraite de la pulpe du fruit sans être raffinée : elle garde sa couleur orangée et son goût. L'huile raffinée a été décolorée et désodorisée, elle est neutre.
 recettes: moambe, sauce-graine, eru
 produits: huile-de-palme-rouge, pulpe-de-noix-de-palme
+image: /conseils/huile-de-palme-rouge-ou-raffinee.webp
 imageAlt: Un bocal d'huile de palme rouge orangée à côté de noix de palme fraîches.
 imagePrompt: Photographie culinaire, bocal en verre d'huile de palme rouge orangée intense, régime de noix de palme rouges et orange à côté, table en bois sombre, lumière chaude orangée, fond sombre, sans texte ni logo, format 16:9.
 ---

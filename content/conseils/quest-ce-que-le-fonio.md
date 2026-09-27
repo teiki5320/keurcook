@@ -6,6 +6,7 @@ theme: cereales
 resume: Le fonio est une céréale ancienne d'Afrique de l'Ouest aux grains minuscules. Il se cuit très vite, à l'eau ou à la vapeur, puis s'égrène à la fourchette comme une semoule.
 recettes: fonio-aux-legumes
 produits: fonio
+image: /conseils/quest-ce-que-le-fonio.webp
 imageAlt: Un bol de fonio aux grains fins et dorés, avec une fourchette, sur fond sombre.
 imagePrompt: Photographie culinaire, bol en terre cuite rempli de fonio cuit aux grains très fins et légers, fourchette posée à côté, quelques grains crus éparpillés sur une planche en bois, fond sombre, lumière chaude orangée latérale, sans texte ni logo, format 16:9.
 ---

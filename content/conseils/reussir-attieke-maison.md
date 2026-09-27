@@ -6,6 +6,7 @@ theme: cereales
 resume: Avec de l'attiéké déshydraté, il suffit de le réhydrater avec un peu d'eau salée, de le laisser gonfler, puis de le réchauffer à la vapeur et de l'égrener.
 recettes: poisson-braise-attieke, garba
 produits: attieke-sec
+image: /conseils/reussir-attieke-maison.webp
 imageAlt: Une assiette d'attiéké blanc et moelleux avec du poisson braisé, des oignons et des tomates.
 imagePrompt: Photographie culinaire, assiette d'attiéké blanc moelleux accompagné d'un poisson braisé, rondelles d'oignon rouge et de tomate, piment vert, sur table en bois sombre, lumière chaude orangée, fond sombre, sans texte ni logo, format 16:9.
 ---
