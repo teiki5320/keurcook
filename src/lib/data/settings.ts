@@ -12,7 +12,7 @@ export const DEFAULT_MAINTENANCE_MESSAGE =
 
 /**
  * Mode maintenance : quand il est actif, toutes les pages du site
- * affichent l'écran de maintenance et les avis ne sont plus acceptés.
+ * affichent l'écran de maintenance.
  * En mode démo (sans base), le site n'est jamais en maintenance.
  */
 export const getMaintenance = cache(async (): Promise<MaintenanceSettings> => {

@@ -1,9 +1,7 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { z } from "zod";
-import { getSql, isDbConfigured, isUuid } from "@/lib/db/client";
-import { getMaintenance } from "@/lib/data/settings";
+import { getSql, isDbConfigured } from "@/lib/db/client";
 import { isRateLimited } from "@/lib/rate-limit";
 
 const TOO_MANY = "Trop d'envois depuis votre connexion. Réessayez dans une heure.";
@@ -14,43 +12,6 @@ export interface CommunityState {
 }
 
 const UNAVAILABLE = "Cette fonction n'est pas encore disponible. Réessayez bientôt.";
-
-// ------------------------------------------------------------------ Avis
-
-const reviewSchema = z.object({
-  recipeId: z.string().refine(isUuid, "Recette introuvable."),
-  authorName: z.string().trim().min(2, "Indiquez votre prénom.").max(60),
-  rating: z.coerce.number().int().min(1, "Choisissez une note.").max(5),
-  comment: z.string().trim().max(1500, "Votre avis est trop long (1 500 caractères maximum)."),
-});
-
-/** Dépôt d'un avis : enregistré « en attente », publié après validation dans l'admin. */
-export async function submitReviewAction(_prev: CommunityState, formData: FormData): Promise<CommunityState> {
-  // Champ piège invisible : rempli uniquement par les robots.
-  if (String(formData.get("site") ?? "")) return { success: "Merci ! Votre avis sera publié après relecture." };
-  if (!isDbConfigured || (await getMaintenance()).enabled) return { error: UNAVAILABLE };
-  const parsed = reviewSchema.safeParse({
-    recipeId: formData.get("recipeId"),
-    authorName: formData.get("authorName"),
-    rating: formData.get("rating"),
-    comment: formData.get("comment") ?? "",
-  });
-  if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "Formulaire invalide." };
-  // 5 avis par heure et par visiteur.
-  if (await isRateLimited("avis", 5, 3600)) return { error: TOO_MANY };
-  const r = parsed.data;
-  const sql = getSql();
-  const [recipe] = await sql.query("select id from recipes where id = $1 and is_published", [r.recipeId]);
-  if (!recipe) return { error: "Recette introuvable." };
-  await sql.query("insert into recipe_reviews (recipe_id, author_name, rating, comment) values ($1, $2, $3, $4)", [
-    r.recipeId,
-    r.authorName,
-    r.rating,
-    r.comment,
-  ]);
-  revalidatePath("/admin", "layout");
-  return { success: "Merci ! Votre avis sera publié après relecture." };
-}
 
 // ------------------------------------------------------------ Newsletter
 
@@ -76,6 +37,5 @@ export async function subscribeNewsletterAction(_prev: CommunityState, formData:
     console.error("Inscription newsletter impossible :", e);
     return { error: "Inscription impossible pour le moment. Réessayez plus tard." };
   }
-  revalidatePath("/admin", "layout");
   return { success: "C'est noté, à très vite dans votre boîte mail !" };
 }

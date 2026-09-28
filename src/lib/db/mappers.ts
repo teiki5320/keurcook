@@ -1,5 +1,5 @@
 /* Conversion des lignes SQL (snake_case) vers les types applicatifs. */
-import type { Category, NewsletterSubscriber, Product, Recipe, RecipeReview, Variant } from "../types";
+import type { Category, Product, Recipe, Variant } from "../types";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type Row = Record<string, any>;
@@ -83,26 +83,5 @@ export function mapRecipe(r: Row): Recipe {
     featured: r.featured,
     isPublished: r.is_published,
     createdAt: iso(r.created_at),
-  };
-}
-
-export function mapReview(r: Row): RecipeReview {
-  return {
-    id: r.id,
-    recipeId: r.recipe_id,
-    authorName: r.author_name,
-    rating: r.rating,
-    comment: r.comment ?? "",
-    status: r.status,
-    createdAt: iso(r.created_at),
-  };
-}
-
-export function mapSubscriber(r: Row): NewsletterSubscriber {
-  return {
-    id: r.id,
-    email: r.email,
-    consentAt: iso(r.consent_at),
-    unsubscribedAt: r.unsubscribed_at ? iso(r.unsubscribed_at) : null,
   };
 }

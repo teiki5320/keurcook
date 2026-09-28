@@ -91,7 +91,7 @@ drop table if exists public.order_items;
 drop table if exists public.orders;
 
 -- ---------------------------------------------------------------------
--- Limitation des envois (connexion admin, avis, newsletter) : une ligne par
+-- Limitation des envois (connexion admin, newsletter) : une ligne par
 -- tentative, clé = action + empreinte de l'adresse IP ; purgée après un jour.
 -- ---------------------------------------------------------------------
 create table if not exists public.rate_limits (
@@ -143,18 +143,8 @@ drop trigger if exists recipes_touch on public.recipes;
 create trigger recipes_touch before update on public.recipes
 for each row execute function public.touch_updated_at();
 
--- Avis des visiteurs : publiés seulement après validation dans l'admin.
-create table if not exists public.recipe_reviews (
-  id uuid primary key default gen_random_uuid(),
-  recipe_id uuid not null references public.recipes (id) on delete cascade,
-  author_name text not null,
-  rating int not null check (rating between 1 and 5),
-  comment text not null default '',
-  status text not null default 'pending' check (status in ('pending', 'approved', 'rejected')),
-  created_at timestamptz not null default now()
-);
-
-create index if not exists recipe_reviews_recipe_idx on public.recipe_reviews (recipe_id, status);
+-- Les avis des visiteurs ont été retirés du site.
+drop table if exists public.recipe_reviews;
 
 -- Inscrits à la newsletter (consentement explicite, désinscription possible).
 create table if not exists public.newsletter_subscribers (

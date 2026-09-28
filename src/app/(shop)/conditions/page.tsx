@@ -6,7 +6,7 @@ import { legalConfig, siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Conditions générales d'utilisation",
-  description: "Conditions d'utilisation du site Alohash : recettes, conseils, avis, newsletter et liens d'achat vers Amazon.",
+  description: "Conditions d'utilisation du site Alohash : recettes, conseils, newsletter et liens d'achat vers Amazon.",
   alternates: { canonical: "/conditions" },
 };
 
@@ -49,35 +49,28 @@ export default function TermsPage() {
         de la conservation des aliments et de la prise en compte de ses allergies ou de celles de ses invités.
       </p>
 
-      <h2>Article 5 — Avis des visiteurs</h2>
-      <p>
-        Les avis sont publiés après relecture. L&apos;Éditeur peut refuser ou retirer tout avis contraire à la loi,
-        injurieux, hors sujet ou publicitaire. En déposant un avis, vous autorisez sa publication sur le site sous le
-        prénom indiqué.
-      </p>
-
-      <h2>Article 6 — Newsletter</h2>
+      <h2>Article 5 — Newsletter</h2>
       <p>
         L&apos;inscription à la newsletter est gratuite et se fait avec votre consentement ; vous pouvez vous désinscrire à
         tout moment. Le traitement de vos données est décrit dans la <Link href="/confidentialite">politique de
         confidentialité</Link>.
       </p>
 
-      <h2>Article 7 — Propriété intellectuelle</h2>
+      <h2>Article 6 — Propriété intellectuelle</h2>
       <p>
         Les textes, photographies et éléments graphiques du site sont protégés par le droit de la propriété
         intellectuelle. Toute reproduction sans autorisation préalable est interdite, hormis le partage d&apos;un lien vers
         une page du site.
       </p>
 
-      <h2>Article 8 — Responsabilité</h2>
+      <h2>Article 7 — Responsabilité</h2>
       <p>
         L&apos;Éditeur s&apos;efforce de fournir des informations exactes mais ne peut garantir l&apos;absence
         d&apos;erreur. Il n&apos;est pas responsable du contenu des sites vers lesquels renvoient les liens, notamment
         Amazon.fr.
       </p>
 
-      <h2>Article 9 — Droit applicable</h2>
+      <h2>Article 8 — Droit applicable</h2>
       <p>
         Les présentes CGU sont soumises au droit français. Pour toute question :{" "}
         <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.

@@ -12,7 +12,7 @@ async function clientKey(scope: string): Promise<string> {
 }
 
 /**
- * Limite le nombre d'actions par visiteur (connexion admin, avis, newsletter).
+ * Limite le nombre d'actions par visiteur (connexion admin, newsletter).
  * Enregistre la tentative et renvoie vrai si `max` tentatives ont déjà eu lieu
  * dans les `windowSeconds` dernières secondes. Sans base (démo) ou en cas
  * d'erreur, ne bloque jamais.

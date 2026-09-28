@@ -2,10 +2,10 @@ import "server-only";
 import { cache } from "react";
 import { COUNTRIES } from "../countries";
 import { getSql, isDbConfigured } from "../db/client";
-import { mapRecipe, mapReview } from "../db/mappers";
+import { mapRecipe } from "../db/mappers";
 import { demoRecipes } from "../demo/recipes";
 import { RECIPE_COURSES } from "../recipe-utils";
-import type { Recipe, RecipeCourse, RecipeReview } from "../types";
+import type { Recipe, RecipeCourse } from "../types";
 
 /**
  * Recettes publiées : depuis la base de données, ou les données de
@@ -53,22 +53,4 @@ export async function getRelatedRecipes(recipe: Recipe, limit = 3) {
     ...others.filter((r) => r.countryCode !== recipe.countryCode && r.course === recipe.course),
     ...others.filter((r) => r.countryCode !== recipe.countryCode && r.course !== recipe.course),
   ].slice(0, limit);
-}
-
-export interface RecipeRating {
-  average: number;
-  count: number;
-}
-
-/** Avis validés d'une recette et note moyenne (aucun avis en mode démo). */
-export async function getRecipeReviews(recipeId: string): Promise<{ reviews: RecipeReview[]; rating: RecipeRating | null }> {
-  if (!isDbConfigured) return { reviews: [], rating: null };
-  const rows = await getSql().query(
-    "select * from recipe_reviews where recipe_id = $1 and status = 'approved' order by created_at desc limit 50",
-    [recipeId],
-  );
-  const reviews = rows.map(mapReview);
-  if (!reviews.length) return { reviews, rating: null };
-  const average = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
-  return { reviews, rating: { average: Math.round(average * 10) / 10, count: reviews.length } };
 }

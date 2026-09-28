@@ -123,22 +123,3 @@ export interface Country {
   lon: number;
   lat: number;
 }
-
-export type ReviewStatus = "pending" | "approved" | "rejected";
-
-export interface RecipeReview {
-  id: string;
-  recipeId: string;
-  authorName: string;
-  rating: number;
-  comment: string;
-  status: ReviewStatus;
-  createdAt: string;
-}
-
-export interface NewsletterSubscriber {
-  id: string;
-  email: string;
-  consentAt: string;
-  unsubscribedAt: string | null;
-}

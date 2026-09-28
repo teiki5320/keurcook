@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChefHat, Clock, Flame, Lightbulb, MapPin, Star, Users } from "lucide-react";
-import { ReviewForm } from "@/components/community/ReviewForm";
+import { ChefHat, Clock, Flame, Lightbulb, MapPin, Users } from "lucide-react";
 import { ProductImage } from "@/components/product/ProductImage";
 import { RecipeActions } from "@/components/recipe/RecipeActions";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
@@ -11,10 +10,10 @@ import { VarietyCard } from "@/components/shop/VarietyCard";
 import { minPriceCents } from "@/lib/catalog-utils";
 import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
-import { formatDate, formatPrice } from "@/lib/format";
+import { formatPrice } from "@/lib/format";
 import { countryByCode } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
-import { getRecipeBySlug, getRecipeReviews, getRecipes, getRelatedRecipes } from "@/lib/data/recipes";
+import { getRecipeBySlug, getRecipes, getRelatedRecipes } from "@/lib/data/recipes";
 import { courseName, DIFFICULTY_LABELS, formatDuration, ingredientLine, isoDuration } from "@/lib/recipe-utils";
 
 export const revalidate = 300;
@@ -42,10 +41,10 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   const { slug } = await params;
   const recipe = await getRecipeBySlug(slug);
   if (!recipe) notFound();
-  const [{ products }, related, { reviews, rating }] = await Promise.all([getCatalog(), getRelatedRecipes(recipe), getRecipeReviews(recipe.id)]);
+  const [{ products }, related] = await Promise.all([getCatalog(), getRelatedRecipes(recipe)]);
   const country = countryByCode(recipe.countryCode);
 
-  // Produits de la boutique utilisés par la recette (format le moins cher encore en stock).
+  // Produits de la boutique utilisés par la recette (premier format proposé).
   const used = products.filter((p) => recipe.ingredients.some((i) => i.productSlug === p.slug));
   const linked: Record<string, LinkedProduct> = {};
   for (const p of used) {
@@ -73,7 +72,6 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       return `${l.quantity} ${l.label}`.trim();
     }),
     recipeInstructions: recipe.steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, text: s.text })),
-    aggregateRating: rating ? { "@type": "AggregateRating", ratingValue: rating.average, ratingCount: rating.count, bestRating: 5 } : undefined,
   };
 
   const facts = [
@@ -186,44 +184,6 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
           )}
         </div>
       </div>
-
-      <section aria-labelledby="avis" className="mt-16 grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] print:hidden">
-        <div>
-          <h2 id="avis" className="font-display text-3xl">
-            Vos avis<span className="text-[#ff7a3d]">.</span>
-          </h2>
-          {rating && (
-            <p className="mt-1 flex items-center gap-1.5 text-sm">
-              <Star className="h-4 w-4 fill-[#ffc46b] text-[#ffc46b]" aria-hidden />
-              <strong>{rating.average.toLocaleString("fr-FR")}</strong> / 5 · {rating.count} avis
-            </p>
-          )}
-          {reviews.length ? (
-            <ul className="mt-5 space-y-4">
-              {reviews.map((r) => (
-                <li key={r.id} className="card p-5">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <p className="font-semibold">{r.authorName}</p>
-                    <p className="flex items-center gap-0.5" aria-label={`${r.rating} sur 5`}>
-                      {[1, 2, 3, 4, 5].map((n) => (
-                        <Star key={n} className={`h-4 w-4 ${n <= r.rating ? "fill-[#ffc46b] text-[#ffc46b]" : "text-[#fbeee2]/25"}`} aria-hidden />
-                      ))}
-                    </p>
-                  </div>
-                  {r.comment && <p className="mt-2 text-[15px] leading-relaxed text-[#fbeee2]/85">{r.comment}</p>}
-                  <p className="mt-2 text-xs text-muted">{formatDate(r.createdAt)}</p>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="mt-3 text-muted">Aucun avis pour l&apos;instant. Vous avez cuisiné cette recette ? Soyez le premier à donner le vôtre.</p>
-          )}
-        </div>
-        <div>
-          <h3 className="mb-3 text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">Donner mon avis</h3>
-          <ReviewForm recipeId={recipe.id} />
-        </div>
-      </section>
 
       {used.length > 0 && (
         <section aria-labelledby="produits-recette" className="mt-16 print:hidden">

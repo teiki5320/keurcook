@@ -22,16 +22,12 @@ export default function PrivacyPage() {
       <h2>Données collectées et finalités</h2>
       <ul>
         <li>
-          <strong>Avis sur les recettes</strong> : prénom, note et commentaire, publiés après relecture. Base légale :
-          consentement (dépôt volontaire de l&apos;avis).
-        </li>
-        <li>
           <strong>Newsletter</strong> : adresse e-mail et date de consentement, pour l&apos;envoi de la « recette de la
           semaine ». Base légale : consentement, retirable à tout moment en écrivant à l&apos;adresse de contact ou via le
           lien de désinscription de chaque e-mail.
         </li>
         <li>
-          <strong>Sécurité du site</strong> : pour limiter les envois abusifs (avis, newsletter, connexion à
+          <strong>Sécurité du site</strong> : pour limiter les envois abusifs (newsletter, connexion à
           l&apos;administration), une empreinte non réversible de l&apos;adresse IP est conservée un jour au plus. Base
           légale : intérêt légitime.
         </li>
@@ -41,7 +37,7 @@ export default function PrivacyPage() {
       <h2>Durées de conservation</h2>
       <ul>
         <li>Empreintes d&apos;adresse IP (limitation des envois) : un jour au plus.</li>
-        <li>Newsletter : jusqu&apos;à la désinscription, puis 3 ans sans ouverture ni clic. Avis : tant que la recette est publiée.</li>
+        <li>Newsletter : jusqu&apos;à la désinscription, puis 3 ans sans ouverture ni clic.</li>
         <li>Choix en matière de cookies : 6 mois.</li>
       </ul>
 
@@ -73,7 +69,7 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté.</li>
         <li><strong>ah_consent</strong> (nécessaire) — mémorise vos choix en matière de cookies, 6 mois.</li>
-        <li><strong>alohash_admin</strong> (nécessaire) — session de l&apos;espace d&apos;administration, réservé à l&apos;éditeur.</li>
+        <li><strong>alohash_admin</strong> (nécessaire) — session de l&apos;espace d&apos;administration, réservé à l&apos;éditeur, 7 jours.</li>
       </ul>
       <p>
         Le site ne dépose aucun cookie de mesure d&apos;audience ni publicitaire. Amazon.fr, une fois ouvert, dépose ses
