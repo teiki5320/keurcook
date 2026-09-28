@@ -29,7 +29,7 @@ export function Footer() {
         <div>
           <p className="font-semibold text-cream">Informations</p>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><Link href="/cgv" className="hover:text-white">Conditions générales de vente</Link></li>
+            <li><Link href="/conditions" className="hover:text-white">Conditions d&apos;utilisation</Link></li>
             <li><Link href="/mentions-legales" className="hover:text-white">Mentions légales</Link></li>
             <li><Link href="/confidentialite" className="hover:text-white">Politique de confidentialité</Link></li>
             <li><CookieSettingsButton className="hover:text-white" /></li>

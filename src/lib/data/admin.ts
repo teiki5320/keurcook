@@ -2,9 +2,9 @@ import "server-only";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { ADMIN_COOKIE, verifyAdminToken } from "../admin-session";
-import { getSql, isUuid, ORDER_SELECT, PRODUCT_SELECT } from "../db/client";
-import { mapCategory, mapOrder, mapProduct, mapRecipe, mapReview, mapSubscriber } from "../db/mappers";
-import type { OrderStatus, ReviewStatus } from "../types";
+import { getSql, isUuid, PRODUCT_SELECT } from "../db/client";
+import { mapCategory, mapProduct, mapRecipe, mapReview, mapSubscriber } from "../db/mappers";
+import type { ReviewStatus } from "../types";
 
 /**
  * Vérifie que la session admin (cookie signé) est valide, puis renvoie le
@@ -35,45 +35,19 @@ export async function adminGetProduct(id: string) {
   return rows[0] ? mapProduct(rows[0]) : null;
 }
 
-export async function adminListOrders(status?: OrderStatus) {
-  const { sql } = await requireAdmin();
-  const rows = status
-    ? await sql.query(`${ORDER_SELECT} where o.status = $1 order by o.created_at desc limit 200`, [status])
-    : await sql.query(`${ORDER_SELECT} order by o.created_at desc limit 200`);
-  return rows.map(mapOrder);
-}
-
-export async function adminGetOrder(id: string) {
-  const { sql } = await requireAdmin();
-  if (!isUuid(id)) return null;
-  const rows = await sql.query(`${ORDER_SELECT} where o.id = $1`, [id]);
-  return rows[0] ? mapOrder(rows[0]) : null;
-}
-
 export async function adminDashboardStats() {
   const { sql } = await requireAdmin();
-  const [counts, recent] = await Promise.all([
-    sql.query(`
-      select
-        (select count(*) from orders where status = 'pending_payment')::int as pending,
-        (select count(*) from orders where status in ('paid', 'preparing'))::int as to_ship,
-        (select count(*) from products where is_active)::int as products,
-        (select count(*) from product_variants where stock <= 5)::int as low_stock,
-        (select count(*) from recipes where is_published)::int as recipes,
-        (select count(*) from recipe_reviews where status = 'pending')::int as reviews,
-        (select count(*) from newsletter_subscribers where unsubscribed_at is null)::int as subscribers`),
-    sql.query(`${ORDER_SELECT} order by o.created_at desc limit 5`),
-  ]);
-  const c = counts[0];
+  const [c] = await sql.query(`
+    select
+      (select count(*) from products where is_active)::int as products,
+      (select count(*) from recipes where is_published)::int as recipes,
+      (select count(*) from recipe_reviews where status = 'pending')::int as reviews,
+      (select count(*) from newsletter_subscribers where unsubscribed_at is null)::int as subscribers`);
   return {
-    pendingPayment: c.pending,
-    toShip: c.to_ship,
     activeProducts: c.products,
-    lowStock: c.low_stock,
     publishedRecipes: c.recipes,
     pendingReviews: c.reviews,
     subscribers: c.subscribers,
-    recentOrders: recent.map(mapOrder),
   };
 }
 
@@ -81,14 +55,11 @@ export async function adminDashboardStats() {
 export async function adminNavCounts() {
   const { sql } = await requireAdmin();
   try {
-    const [c] = await sql.query(`
-      select
-        (select count(*) from recipe_reviews where status = 'pending')::int as reviews,
-        (select count(*) from orders where status in ('paid', 'preparing'))::int as orders`);
-    return { reviews: c.reviews as number, orders: c.orders as number };
+    const [c] = await sql.query("select count(*)::int as reviews from recipe_reviews where status = 'pending'");
+    return { reviews: c.reviews as number };
   } catch {
     // Schéma pas encore à jour : le menu s'affiche sans compteurs.
-    return { reviews: 0, orders: 0 };
+    return { reviews: 0 };
   }
 }
 

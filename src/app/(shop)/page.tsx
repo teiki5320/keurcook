@@ -6,6 +6,7 @@ import { CountryCarousel } from "@/components/recipe/CountryCarousel";
 import { CountryMap } from "@/components/recipe/CountryMap";
 import { RecipeRow } from "@/components/recipe/RecipeCard";
 import { siteConfig } from "@/lib/config";
+import { jsonLd } from "@/lib/json-ld";
 import { getGammes } from "@/lib/data/gammes";
 import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
 import { unitWord } from "@/lib/gamme-words";
@@ -19,11 +20,11 @@ const WORDS = ["Ndolé", "Mafé", "Yassa", "Thiéboudienne", "Pondu", "Suya", "D
 
 export default async function HomePage() {
   const [groups, countries, gammes] = await Promise.all([getRecipeGroups(), getCountriesWithRecipes(), getGammes()]);
-  const jsonLd = { "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description };
+  const structuredData = { "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
       {/* Accroche + carte de l'Afrique en particules (un point par pays ayant des recettes). */}
       <section className="flex items-center pt-20 pb-6 lg:min-h-[92dvh] lg:pt-24 lg:pb-10">
         <div className="mx-auto grid w-full max-w-[1320px] items-center gap-4 px-[clamp(20px,4vw,56px)] lg:grid-cols-2 lg:gap-6">
@@ -97,7 +98,7 @@ export default async function HomePage() {
               </p>
             </div>
             <TLink href="/boutique" label="Produits rares" className="text-sm font-bold text-[#ff7a3d] hover:text-[#ffc46b]">
-              Toute l&apos;épicerie →
+              Toute la boutique →
             </TLink>
           </div>
           <ul className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">

@@ -24,14 +24,13 @@ export default async function AdminProductsPage() {
               <th className="p-3">Produit</th>
               <th className="p-3">Catégorie</th>
               <th className="p-3">Origine</th>
-              <th className="p-3">Prix</th>
-              <th className="p-3">Stock</th>
+              <th className="p-3">Prix Amazon</th>
+              <th className="p-3">Code Amazon</th>
               <th className="p-3">Statut</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-sage-200">
             {products.map((p) => {
-              const stock = p.variants.reduce((s, v) => s + v.stock, 0);
               const prices = p.variants.map((v) => v.priceCents);
               return (
                 <tr key={p.id} className="hover:bg-sage-50">
@@ -48,7 +47,7 @@ export default async function AdminProductsPage() {
                     {p.originCountry ?? "—"}
                   </td>
                   <td className="p-3">{prices.length ? formatPrice(Math.min(...prices)) : "—"}</td>
-                  <td className={`p-3 ${stock <= 5 ? "font-semibold text-terracotta-dark" : ""}`}>{stock}</td>
+                  <td className="p-3 font-mono text-xs">{p.amazonAsin ?? "—"}</td>
                   <td className="p-3">
                     <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${p.isActive ? "bg-sage-200 text-forest-800" : "bg-zinc-200 text-zinc-600"}`}>
                       {p.isActive ? "En ligne" : "Masqué"}

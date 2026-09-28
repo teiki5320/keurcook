@@ -23,7 +23,12 @@ export async function POST(request: Request) {
   if (!verifyAdminToken(cookieStore.get(ADMIN_COOKIE)?.value)) {
     return Response.json({ error: "Non autorisé." }, { status: 401 });
   }
-  const body = (await request.json()) as HandleUploadPresignedBody;
+  let body: HandleUploadPresignedBody;
+  try {
+    body = (await request.json()) as HandleUploadPresignedBody;
+  } catch {
+    return Response.json({ error: "Requête invalide." }, { status: 400 });
+  }
   try {
     const result = await handleUploadPresigned({
       body,

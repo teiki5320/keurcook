@@ -19,7 +19,7 @@ Pour un suya au four, utilisez la fonction gril (la résistance du haut) plutôt
 1. Taillez la viande en tranches très fines, c'est la clé d'une cuisson rapide. Un passage au congélateur juste assez pour la raffermir aide à la couper.
 2. Si vous utilisez des pics en bois, faites-les tremper dans l'eau avant usage pour qu'ils ne brûlent pas.
 3. Enfilez la viande en accordéon, sans trop serrer, pour que la chaleur circule.
-4. Badigeonnez d'huile, salez, puis enrobez généreusement de [yaji](/produit/yaji-suya). Laissez reposer le temps de préchauffer le four.
+4. Badigeonnez d'huile, salez, puis enrobez généreusement de [yaji](/produit/yaji-suya). Laissez reposer le temps de préchauffer le four. Pour la composition du mélange et ses autres usages, lisez [qu'est-ce que le yaji](/conseils/quest-ce-que-le-yaji).
 
 ## La cuisson au four
 
@@ -31,12 +31,12 @@ Pour un suya au four, utilisez la fonction gril (la résistance du haut) plutôt
 
 ## Les erreurs à éviter
 
-- **Le yaji qui brûle** : il contient de l'arachide, qui noircit vite. Surveillez les dernières minutes et baissez la grille d'un cran si besoin.
+- **Le yaji qui brûle** : l'arachide qu'il contient noircit vite sous le gril. Surveillez les dernières minutes et baissez la grille d'un cran si besoin.
 - **Des tranches trop épaisses** : la viande cuit sans griller et reste pâle.
 - **Des brochettes serrées sur la grille** : elles cuisent à la vapeur. Laissez de l'espace entre elles.
 
 ## Pour servir
 
-Saupoudrez d'un peu de yaji frais à la sortie du four et servez avec de l'oignon rouge émincé et des tomates, comme dans notre recette de [suya](/recette/suya). Le poulet se prépare de la même façon. En accompagnement, pensez à l'[alloco](/recette/alloco) ou au [kelewele](/recette/kelewele).
+Saupoudrez d'un peu de yaji à la sortie du four et servez comme dans la recette de [suya](/recette/suya). Le poulet se prépare de la même façon. En accompagnement, pensez à l'[alloco](/recette/alloco) ou au [kelewele](/recette/kelewele).
 
-Attention : le yaji contient de l'arachide, prévenez vos invités.
+Le yaji étant à base d'arachide, prévenez vos invités.

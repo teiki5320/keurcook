@@ -41,7 +41,7 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
       price: (v.priceCents / 100).toFixed(2),
       stock: String(v.stock),
       sku: v.sku ?? "",
-    })) ?? [{ label: "", price: "", stock: "0", sku: "" }],
+    })) ?? [{ label: "", price: "", stock: "99", sku: "" }],
   );
 
   const variantsJson = JSON.stringify(
@@ -131,24 +131,20 @@ export function ProductForm({ categories, product }: { categories: Category[]; p
         <section className="card space-y-4 p-5">
           <div className="flex items-center justify-between">
             <h2 className="font-semibold">Variantes (poids / contenance)</h2>
-            <button type="button" className="btn-secondary py-1.5" onClick={() => setVariants((v) => [...v, { label: "", price: "", stock: "0", sku: "" }])}>
+            <button type="button" className="btn-secondary py-1.5" onClick={() => setVariants((v) => [...v, { label: "", price: "", stock: "99", sku: "" }])}>
               <Plus className="h-4 w-4" aria-hidden /> Ajouter
             </button>
           </div>
           <div className="space-y-3">
             {variants.map((v, i) => (
-              <div key={v.id ?? `new-${i}`} className="grid grid-cols-2 gap-2 rounded-xl bg-sage-50 p-3 sm:grid-cols-[1.2fr_1fr_1fr_1fr_auto] sm:items-end">
+              <div key={v.id ?? `new-${i}`} className="grid grid-cols-2 gap-2 rounded-xl bg-sage-50 p-3 sm:grid-cols-[1.2fr_1fr_1fr_auto] sm:items-end">
                 <div>
                   <label className="label text-xs">Libellé</label>
-                  <input value={v.label} onChange={(e) => updateVariant(i, { label: e.target.value })} placeholder="5 g, 10 ml…" className="input" required />
+                  <input value={v.label} onChange={(e) => updateVariant(i, { label: e.target.value })} placeholder="250 g, 1 kg…" className="input" required />
                 </div>
                 <div>
-                  <label className="label text-xs">Prix TTC (€)</label>
+                  <label className="label text-xs">Prix Amazon indicatif (€)</label>
                   <input value={v.price} onChange={(e) => updateVariant(i, { price: e.target.value })} inputMode="decimal" className="input" required />
-                </div>
-                <div>
-                  <label className="label text-xs">Stock</label>
-                  <input value={v.stock} onChange={(e) => updateVariant(i, { stock: e.target.value })} inputMode="numeric" className="input" />
                 </div>
                 <div>
                   <label className="label text-xs">Réf. (SKU)</label>

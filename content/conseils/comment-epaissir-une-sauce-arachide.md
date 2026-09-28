@@ -22,6 +22,6 @@ Si la sauce manque de corps, délayez une cuillère de [pâte d'arachide](/produ
 
 Si votre sauce contient des patates douces, du manioc ou des carottes, écrasez-en quelques morceaux contre la paroi de la cocotte. Ils épaississent la sauce sans changer son goût.
 
-## Rattraper une sauce qui a tranché
+## Quand l'huile remonte
 
 Quand l'huile remonte à la surface, c'est normal en fin de cuisson : c'est même le signe traditionnel que la sauce est prête. Mélangez simplement avant de servir. Pour les dosages, voyez notre [mafé](/recette/mafe).

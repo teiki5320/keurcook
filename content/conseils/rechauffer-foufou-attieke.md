@@ -3,7 +3,7 @@ title: Comment réchauffer le foufou ou l'attiéké ?
 description: Foufou devenu ferme, attiéké sec : les bonnes méthodes pour les réchauffer à la vapeur, au micro-ondes ou à la casserole sans perdre leur texture.
 date: 2027-07-05
 theme: cereales
-resume: Réchauffez-les avec un peu d'humidité et à couvert, à la vapeur de préférence. Le foufou se retravaille à la spatule, l'attiéké s'égraine à la fourchette.
+resume: Réchauffez-les avec un peu d'humidité et à couvert, à la vapeur de préférence. Le foufou se retravaille à la spatule, l'attiéké s'égrène à la fourchette.
 recettes: fufu-light-soup, poisson-braise-attieke
 produits: farine-de-foufou, attieke-sec
 image: /conseils/rechauffer-foufou-attieke.webp
@@ -28,10 +28,10 @@ Si le foufou reste ferme, mettez-le dans une casserole avec un fond d'eau chaude
 
 ## Réchauffer l'attiéké
 
-1. Égrainez d'abord l'attiéké froid entre vos doigts ou à la fourchette pour casser les paquets.
+1. Égrenez d'abord l'attiéké froid entre vos doigts ou à la fourchette pour casser les paquets.
 2. Aspergez-le de quelques gouttes d'eau.
 3. Réchauffez-le à la vapeur quelques minutes, ou au micro-ondes dans un bol couvert.
-4. Égrainez à nouveau avant de servir, avec un filet d'huile si vous le souhaitez.
+4. Égrenez à nouveau avant de servir, avec un filet d'huile si vous le souhaitez.
 
 Évitez la poêle sans matière grasse : les grains accrochent et durcissent. L'[attiéké sec](/produit/attieke-sec) suit d'ailleurs le même principe à la réhydratation, détaillé dans notre article [réussir l'attiéké maison](/conseils/reussir-attieke-maison).
 

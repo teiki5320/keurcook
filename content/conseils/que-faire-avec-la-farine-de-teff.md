@@ -14,7 +14,7 @@ imagePrompt: Photographie culinaire, bol en bois rempli de farine de teff brun r
 
 La farine de teff est obtenue en moulant les grains du teff, une céréale aux grains minuscules cultivée depuis très longtemps sur les hauts plateaux d'Éthiopie et d'Érythrée. Selon les variétés, elle est brun roux ou plus claire. Son goût est doux, légèrement noisetté, un peu terreux.
 
-Le teff ne contient pas de gluten : sa pâte ne lève pas et ne se travaille pas comme une pâte à pain classique. Il faut en tenir compte avant de l'utiliser à la place de la farine de blé.
+La pâte de teff ne lève pas comme une pâte de blé et ne se travaille pas comme une pâte à pain classique. Il faut en tenir compte avant de l'utiliser à la place de la farine de blé.
 
 ## L'injera, son usage principal
 

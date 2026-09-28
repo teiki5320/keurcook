@@ -12,7 +12,11 @@ imagePrompt: Photographie culinaire, filet de thé à la menthe doré versé de 
 ---
 ## Tout est dans le versement
 
-Pour faire mousser un thé à la menthe, versez-le de haut dans le verre, puis reversez le contenu du verre dans la théière, et recommencez plusieurs fois. Le filet de thé qui tombe de haut emprisonne de l'air, et les transvasements successifs transforment cet air en une mousse fine qui tient à la surface. C'est le même principe que pour l'ataya, le thé servi en plusieurs tournées en Afrique de l'Ouest, qu'on fait mousser en le passant d'un verre à l'autre.
+Pour faire mousser un thé à la menthe, versez-le de haut dans le verre, puis reversez le contenu du verre dans la théière, et recommencez plusieurs fois. Le filet de thé qui tombe de haut emprisonne de l'air, et les transvasements successifs transforment cet air en une mousse fine qui tient à la surface. Ce thé à la menthe fraîche est celui qu'on sert au Maroc et en Mauritanie, dans une théière en métal et de petits verres.
+
+## Menthe fraîche, service à la marocaine ou à la mauritanienne
+
+Au Maroc, le thé se prépare avec un généreux bouquet de menthe fraîche infusé directement dans la théière, puis servi de haut dans les verres. En Mauritanie, le thé à la menthe se sert lui aussi très mousseux, en petits verres. Au Sénégal, l'ataya suit sa propre logique, avec un thé bouilli et servi en trois tournées : elle est détaillée dans [comment préparer l'ataya](/conseils/comment-preparer-l-ataya). Ici, on s'en tient à la version à la menthe fraîche.
 
 ## Préparer le thé
 

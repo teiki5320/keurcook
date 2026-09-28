@@ -8,11 +8,11 @@ export interface MaintenanceSettings {
 }
 
 export const DEFAULT_MAINTENANCE_MESSAGE =
-  "Nous mijotons de nouvelles recettes et remplissons l'épicerie de produits rares. Revenez très vite !";
+  "Nous mijotons de nouvelles recettes et de nouveaux conseils. Revenez très vite !";
 
 /**
  * Mode maintenance : quand il est actif, toutes les pages du site
- * affichent l'écran de maintenance et les commandes sont refusées.
+ * affichent l'écran de maintenance et les avis ne sont plus acceptés.
  * En mode démo (sans base), le site n'est jamais en maintenance.
  */
 export const getMaintenance = cache(async (): Promise<MaintenanceSettings> => {

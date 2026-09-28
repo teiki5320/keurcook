@@ -47,7 +47,7 @@ const seeds: RecipeSeed[] = [
       "Dans une poêle, faire dorer les crevettes fraîches avec le second oignon émincé dans l'huile, puis les verser sur le ndolé au moment de servir.",
     ],
     tips: [
-      "Servez avec du plantain mûr frit (miondo ou bâton de manioc au Cameroun).",
+      "Servez avec du plantain mûr frit, des miondo ou des bâtons de manioc, comme au Cameroun.",
       "Plus les feuilles sont rincées, moins le ndolé est amer : goûtez-les avant de les cuire.",
     ],
     tags: ["fête", "arachide"],
@@ -59,7 +59,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "ML",
     region: "Bamako",
     course: "mijotes",
-    shortDescription: "Bœuf fondant dans une sauce onctueuse à la pâte d'arachide.",
+    shortDescription: "Bœuf fondant et légumes mijotés dans une sauce onctueuse à la pâte d'arachide, le grand classique du Mali.",
     story:
       "Le mafé, ou tigadèguèna (« sauce d'arachide » en bambara), vient des Mandingues du Mali. Il s'est répandu dans toute l'Afrique de l'Ouest, chaque pays y ajoutant sa touche.\n\nC'est le plat du quotidien par excellence : une grande marmite qui mijote pendant que la famille se réunit.",
     prepMinutes: 20,
@@ -97,7 +97,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "CD",
     region: "Kinshasa",
     course: "mijotes",
-    shortDescription: "Feuilles de manioc mijotées à l'huile de palme et au poisson fumé.",
+    shortDescription: "Feuilles de manioc pilées, mijotées longuement à l'huile de palme rouge avec du poisson fumé et des aubergines.",
     story:
       "Le pondu, ou saka-saka, est le légume-feuille des deux rives du fleuve Congo. Les feuilles de manioc, pilées au mortier, mijotent longuement jusqu'à devenir fondantes.\n\nÀ Kinshasa, on le sert avec de la chikwangue ou du fufu, et chaque famille a sa recette : avec du poisson fumé, de la viande ou simplement des aubergines.",
     prepMinutes: 20,
@@ -132,7 +132,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "ET",
     region: "Hauts plateaux",
     course: "mijotes",
-    shortDescription: "Le ragoût de poulet au berbéré et aux œufs, plat de fête éthiopien.",
+    shortDescription: "Le ragoût de poulet au berbéré et aux œufs durs, mijoté sur un lit d'oignons : le plat de fête éthiopien.",
     story:
       "Le doro wat est le plat de fête de l'Éthiopie, servi à Noël et à Pâques après les longues périodes de jeûne. Sa préparation commence par une montagne d'oignons cuits à sec pendant près d'une heure.\n\nIl se mange à la main, avec l'injera, la grande crêpe acidulée au teff.",
     prepMinutes: 30,
@@ -199,7 +199,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "SN",
     region: "Casamance",
     course: "grillades",
-    shortDescription: "Poulet grillé, puis mijoté dans une montagne d'oignons au citron.",
+    shortDescription: "Poulet mariné au citron et à la moutarde, grillé, puis mijoté dans une montagne d'oignons fondants.",
     story:
       "Originaire de Casamance, au sud du Sénégal, le yassa est devenu l'un des plats les plus aimés du pays. Le poulet mariné est d'abord grillé au charbon, puis mijote dans les oignons fondus au citron et à la moutarde.\n\nAcidulé, doux et fumé à la fois.",
     prepMinutes: 30,
@@ -235,7 +235,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "NG",
     region: "Kano",
     course: "grillades",
-    shortDescription: "Brochettes de bœuf grillées, enrobées d'épices yaji à l'arachide.",
+    shortDescription: "Fines brochettes de bœuf enrobées de yaji, mélange d'arachide et d'épices, grillées sur la braise comme à Kano.",
     story:
       "Le suya est la grillade de rue du Nigeria. Venue des Haoussas du nord, elle se vend le soir, au bord des routes, sur des braises rougeoyantes.\n\nLa viande, taillée très fine, est enrobée de yaji, un mélange d'arachide et de piment qui caramélise sur le feu.",
     prepMinutes: 25,
@@ -304,7 +304,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "SN",
     region: "Saint-Louis",
     course: "riz-cereales",
-    shortDescription: "Le riz au poisson du Sénégal, cuit dans le bouillon de légumes.",
+    shortDescription: "Le riz au poisson du Sénégal, cuit dans un bouillon rouge de tomate et de légumes, avec son fond croustillant.",
     story:
       "Le thiéboudienne (« riz au poisson » en wolof) serait né à Saint-Louis, au XIXᵉ siècle, dans la cuisine de Penda Mbaye. Il est aujourd'hui inscrit au patrimoine culturel immatériel de l'UNESCO.\n\nLe poisson farci au persil, les légumes et le riz cuisent successivement dans le même bouillon rouge, relevé de guedj et de yeet.",
     prepMinutes: 45,
@@ -348,7 +348,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "BF",
     region: "Bobo-Dioulasso",
     course: "riz-cereales",
-    shortDescription: "La céréale ancienne du Sahel, légère, avec une sauce aux légumes.",
+    shortDescription: "Le fonio, céréale ancienne du Sahel, cuit en quelques minutes et servi avec une sauce aux légumes et à l'arachide.",
     story:
       "Au Burkina Faso et au Mali, le fonio est la céréale des jours de fête et des hôtes de marque. On dit qu'il ne fait jamais honte à celui qui le cuisine, car il est toujours réussi.\n\nCuit à la vapeur en quelques minutes, il accompagne ici une sauce aux légumes relevée de soumbala.",
     prepMinutes: 20,
@@ -370,7 +370,7 @@ const seeds: RecipeSeed[] = [
       "Faire revenir l'oignon émincé dans l'huile, ajouter les tomates concassées et le soumbala écrasé.",
       "Ajouter les carottes et les courgettes en dés, couvrir d'eau et cuire 20 minutes.",
       "Délayer la pâte d'arachide dans un peu de bouillon, l'incorporer et laisser épaissir 10 minutes.",
-      "Porter 45 cl d'eau salée à ébullition, verser le fonio, couvrir hors du feu 5 minutes puis égrainer à la fourchette.",
+      "Porter 45 cl d'eau salée à ébullition, verser le fonio, couvrir hors du feu 5 minutes puis égrener à la fourchette.",
       "Servir le fonio avec la sauce aux légumes.",
     ],
     tips: ["Le fonio se prépare aussi en salade froide, comme un taboulé."],
@@ -384,9 +384,9 @@ const seeds: RecipeSeed[] = [
     countryCode: "CI",
     region: "Abidjan",
     course: "accompagnements",
-    shortDescription: "Bananes plantains mûres frites, dorées et fondantes.",
+    shortDescription: "Rondelles de banane plantain bien mûre, frites jusqu'à être dorées et fondantes, servies avec oignon et piment.",
     story:
-      "L'alloco tire son nom d'Allocodrome, le quartier de Cocody à Abidjan où les vendeuses frient les plantains le soir venu. Il accompagne le poisson braisé, le poulet ou se mange tel quel avec une sauce pimentée.",
+      "L'alloco, le plantain frit de Côte d'Ivoire, a donné son nom aux « allocodromes » d'Abidjan, comme celui de Cocody, où les vendeuses frient les plantains le soir venu. Il accompagne le poisson braisé, le poulet ou se mange tel quel avec une sauce pimentée.",
     prepMinutes: 10,
     cookMinutes: 15,
     servings: 4,
@@ -413,7 +413,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "GH",
     region: "Accra",
     course: "accompagnements",
-    shortDescription: "Dés de plantain épicés au gingembre et au piment, frits.",
+    shortDescription: "Dés de plantain mûr marinés au gingembre, au piment et au poivre de Selim, puis frits jusqu'à caraméliser.",
     story:
       "Le kelewele est l'en-cas du soir à Accra. Les dés de plantain mûr sont marinés au gingembre, au piment et aux épices avant d'être frits, puis servis avec des arachides grillées.",
     prepMinutes: 15,
@@ -447,7 +447,7 @@ const seeds: RecipeSeed[] = [
     course: "douceurs",
     shortDescription: "La boisson rouge rubis à la fleur d'hibiscus, menthe et fleur d'oranger.",
     story:
-      "Le bissap est la boisson de l'hospitalité au Sénégal : on l'offre aux invités, on le sert aux mariages et à la rupture du jeûne pendant le ramadan.\n\nSa couleur rubis et son goût acidulé en font la boisson la plus populaire d'Afrique de l'Ouest.",
+      "Le bissap est la boisson de l'hospitalité au Sénégal : on l'offre aux invités, on le sert aux mariages et à la rupture du jeûne pendant le ramadan.\n\nSa couleur rubis et son goût acidulé en font l'une des boissons les plus populaires d'Afrique de l'Ouest.",
     prepMinutes: 15,
     cookMinutes: 10,
     servings: 8,
@@ -476,7 +476,7 @@ const seeds: RecipeSeed[] = [
     countryCode: "SN",
     region: "Dakar",
     course: "douceurs",
-    shortDescription: "Couscous de mil au lait caillé, vanille et muscade.",
+    shortDescription: "Couscous de mil cuit à la vapeur, mêlé à un lait caillé sucré parfumé à la vanille et à la muscade, servi frais.",
     story:
       "Le thiakry (ou dégué au Burkina Faso) est le dessert frais des fêtes sénégalaises, notamment à la Tabaski. Les graines de mil cuites à la vapeur sont mélangées à un lait caillé sucré et parfumé.",
     prepMinutes: 15,
@@ -493,8 +493,8 @@ const seeds: RecipeSeed[] = [
       [null, null, "raisins secs (facultatif)"],
     ],
     steps: [
-      "Humidifier le couscous de mil et le cuire à la vapeur 15 minutes. L'égrainer, l'humidifier à nouveau et le recuire 15 minutes.",
-      "Laisser refroidir complètement en égrainant à la main.",
+      "Humidifier le couscous de mil et le cuire à la vapeur 15 minutes. L'égrener, l'humidifier à nouveau et le recuire 15 minutes.",
+      "Laisser refroidir complètement en égrenant à la main.",
       "Fouetter le lait fermenté avec le lait concentré, le sucre, le sucre vanillé et la muscade.",
       "Mélanger avec le mil, ajouter les raisins et servir bien frais.",
     ],

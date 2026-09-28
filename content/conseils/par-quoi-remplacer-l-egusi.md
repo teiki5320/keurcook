@@ -31,8 +31,8 @@ Pour remplacer l'egusi, le plus simple est d'utiliser des graines de courge déc
 
 Si vous n'avez pas de graines de courge, les graines de tournesol décortiquées peuvent dépanner, mais leur goût est plus éloigné. Évitez les graines de courge vendues grillées et salées : elles donneraient une sauce trop salée et au goût de torréfaction.
 
-Vous pouvez aussi mélanger moitié egusi, moitié graines de courge si votre stock est un peu juste : la différence sera à peine perceptible.
+Vous pouvez aussi mélanger moitié egusi moulu, moitié graines de courge moulues si votre stock est un peu juste : la différence sera à peine perceptible.
 
 ## Garder l'original en réserve
 
-Les [graines d'egusi](/produit/graines-d-egusi) se conservent bien dans un bocal fermé, au sec et au frais. Pour aller plus loin sur les remplacements, voyez aussi [par quoi remplacer le gombo](/conseils/par-quoi-remplacer-le-gombo).
+L'[egusi moulu](/produit/graines-d-egusi) se conserve bien dans un bocal fermé, au sec et au frais. Pour aller plus loin sur les remplacements, voyez aussi [par quoi remplacer le gombo](/conseils/par-quoi-remplacer-le-gombo).

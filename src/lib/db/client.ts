@@ -26,11 +26,5 @@ export const PRODUCT_SELECT = `
     coalesce((select json_agg(v order by v.position) from product_variants v where v.product_id = p.id), '[]') as product_variants
   from products p`;
 
-/** Commande avec ses lignes (colonne JSON `order_items`). */
-export const ORDER_SELECT = `
-  select o.*,
-    coalesce((select json_agg(i) from order_items i where i.order_id = o.id), '[]') as order_items
-  from orders o`;
-
 /** Évite une erreur SQL quand un identifiant reçu dans l'URL n'est pas un UUID. */
 export const isUuid = (v: string) => /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v);

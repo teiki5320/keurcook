@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Boxes, ChefHat, ClipboardList, ExternalLink, LayoutDashboard, LogOut, Mail, MessageSquareText, Package, PauseCircle } from "lucide-react";
+import { ChefHat, ExternalLink, LayoutDashboard, LogOut, Mail, MessageSquareText, Package, PauseCircle } from "lucide-react";
 import { logoutAction } from "@/app/admin/actions";
 import { anton } from "@/components/nuage/typography";
 
@@ -19,8 +19,6 @@ const groups = [
     title: "Boutique",
     links: [
       { href: "/admin/produits", label: "Produits", icon: Package },
-      { href: "/admin/stocks", label: "Stocks", icon: Boxes },
-      { href: "/admin/commandes", label: "Commandes", icon: ClipboardList, badge: "orders" as const },
     ],
   },
   {
@@ -31,7 +29,6 @@ const groups = [
 
 export interface NavCounts {
   reviews: number;
-  orders: number;
   maintenance: boolean;
 }
 
@@ -41,7 +38,7 @@ export function AdminNav({ counts }: { counts: NavCounts }) {
     `flex shrink-0 items-center gap-2.5 rounded-xl px-3 py-2 text-sm font-semibold transition ${
       active ? "bg-[#ff7a3d] text-[#140a07]" : "text-[#fbeee2]/80 hover:bg-[#fbeee2]/8 hover:text-[#fbeee2]"
     }`;
-  const badge = (key?: "reviews" | "orders" | "maintenance") => {
+  const badge = (key?: "reviews" | "maintenance") => {
     if (key === "maintenance") return counts.maintenance ? <span className="ml-auto rounded-full bg-[#ffc46b] px-2 text-[10px] font-bold text-[#140a07]">ACTIF</span> : null;
     const n = key ? counts[key] : 0;
     return n > 0 ? <span className="ml-auto rounded-full bg-[#ffc46b] px-2 text-[11px] font-bold text-[#140a07]">{n}</span> : null;

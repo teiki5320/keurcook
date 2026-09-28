@@ -16,8 +16,8 @@ Pour préparer le thiakry, on cuit du couscous de mil à la vapeur, on le laisse
 
 ## Les étapes
 
-1. **Cuire le mil** : humidifiez le [couscous de mil](/produit/couscous-de-mil), puis faites-le cuire à la vapeur dans un couscoussier. Égrainez-le, humidifiez-le à nouveau et remettez-le à la vapeur, en suivant les indications du paquet.
-2. **Refroidir** : étalez-le dans un grand plat et laissez-le refroidir complètement en l'égrainant à la main. Il doit être bien froid avant de rencontrer le lait.
+1. **Cuire le mil** : humidifiez le [couscous de mil](/produit/couscous-de-mil), puis faites-le cuire à la vapeur dans un couscoussier. Égrenez-le, humidifiez-le à nouveau et remettez-le à la vapeur, en suivant les indications du paquet.
+2. **Refroidir** : étalez-le dans un grand plat et laissez-le refroidir complètement en l'égrenant à la main. Il doit être bien froid avant de rencontrer le lait.
 3. **Préparer le lait** : fouettez du lait caillé ou du yaourt nature avec du lait concentré sucré, du sucre, un peu de vanille et une pincée de muscade râpée.
 4. **Mélanger** : incorporez le mil au lait, goûtez et ajustez le sucre.
 5. **Servir frais** : placez-le au réfrigérateur avant de servir.

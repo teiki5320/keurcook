@@ -23,7 +23,7 @@ export const COUNTRIES: Country[] = [
     lon: -3.5,
     lat: 16.5,
     description:
-      "Céréales anciennes (mil, fonio, sorgho), arachide et soumbala : la cuisine malienne est celle du fleuve Niger et du Sahel, simple et nourrissante.",
+      "Céréales anciennes (mil, fonio, sorgho), arachide et soumbala : la cuisine malienne est celle du fleuve Niger et du Sahel, simple et généreuse.",
   },
   {
     code: "BF",
@@ -89,7 +89,7 @@ export const COUNTRIES: Country[] = [
     code: "CD",
     slug: "rd-congo",
     name: "RD Congo",
-    of: "de RD Congo",
+    of: "de la RD Congo",
     lon: 23.6,
     lat: -2.9,
     description:

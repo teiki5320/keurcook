@@ -8,7 +8,7 @@ export const recipesDouceurs: RecipeSeed[] = [
     countryCode: "SN",
     region: "Diourbel, Touba",
     course: "douceurs",
-    shortDescription: "Café torréfié maison avec le djar, poivre de Selim aux notes boisées et poivrées.",
+    shortDescription: "Café torréfié maison avec le djar (poivre de Selim), aux notes boisées et poivrées, servi brûlant et bien sucré.",
     story:
       "Le café Touba porte le nom de la ville sainte fondée par Cheikh Ahmadou Bamba, figure de la confrérie mouride. Selon la tradition, c'est dans l'entourage du cheikh que l'habitude de parfumer le café au djar s'est installée, avant de gagner tout le Sénégal.\n\nAujourd'hui, on le boit à toute heure, servi brûlant et bien sucré dans de petits gobelets, au coin des rues de Dakar comme lors du grand Magal de Touba. Son goût se reconnaît immédiatement : une amertume ronde, relevée par le parfum résineux et légèrement piquant du poivre de Selim.",
     prepMinutes: 10,
@@ -97,7 +97,7 @@ export const recipesDouceurs: RecipeSeed[] = [
       [80, "g", "raisins secs"],
     ],
     steps: [
-      "Humidifier le couscous de mil avec un peu d'eau, l'égrainer à la main, puis le cuire 20 minutes à la vapeur dans un couscoussier. L'égrainer de nouveau et le laisser refroidir.",
+      "Humidifier le couscous de mil avec un peu d'eau, l'égrener à la main, puis le cuire 20 minutes à la vapeur dans un couscoussier. L'égrener de nouveau et le laisser refroidir.",
       "Dans une casserole, délayer la pâte d'arachide dans 75 cl d'eau chaude avec le sucre. Porter à frémissement et cuire 10 minutes à feu doux en remuant, jusqu'à obtenir une crème lisse. Laisser refroidir.",
       "Délayer la poudre de pain de singe dans 75 cl d'eau froide, puis filtrer au tamis pour retirer les fibres et les éventuels grains.",
       "Mélanger la crème d'arachide refroidie avec le jus de pain de singe, le sucre vanillé, la fleur d'oranger et la muscade. La préparation doit être onctueuse et bien nappante.",
@@ -116,7 +116,7 @@ export const recipesDouceurs: RecipeSeed[] = [
     countryCode: "SN",
     region: "Dakar",
     course: "douceurs",
-    shortDescription: "Boisson crémeuse et acidulée au pain de singe, le fruit du baobab.",
+    shortDescription: "Boisson crémeuse et acidulée au pain de singe, le fruit du baobab, parfumée à la vanille et à la fleur d'oranger.",
     story:
       "Le baobab est l'arbre emblème du Sénégal, présent jusque sur les armoiries du pays. Son fruit, appelé pain de singe, renferme une pulpe blanche et farineuse que l'on nomme bouye en wolof.\n\nDélayée dans l'eau et sucrée, elle donne une boisson onctueuse au goût acidulé, que l'on sert lors des cérémonies familiales, des baptêmes et, pendant le ramadan, à la rupture du jeûne. Souvent enrichi de lait, parfumé à la vanille ou à la fleur d'oranger, le jus de bouye est l'un des grands classiques des tables sénégalaises.",
     prepMinutes: 20,

@@ -12,7 +12,7 @@ imagePrompt: Photographie culinaire, marmite en fonte où mijote une sauce épai
 ---
 ## Une base de sauce à diluer
 
-La pulpe de noix de palme s'utilise diluée dans de l'eau, puis longuement mijotée jusqu'à devenir une sauce épaisse et brillante. Vendue en conserve, elle remplace le travail de la graine fraîche, qu'on fait bouillir puis piler pour en extraire le jus. Elle est très concentrée : ne l'utilisez jamais telle quelle.
+La pulpe de noix de palme s'utilise diluée dans de l'eau, puis longuement mijotée jusqu'à devenir une sauce épaisse et brillante. Vendue en conserve, elle remplace le travail de la graine fraîche, qu'on fait bouillir puis piler pour en extraire le jus. Elle est très concentrée : ne l'utilisez jamais telle quelle. Pour savoir pourquoi on la trouve surtout en boîte et comment la choisir, lisez [pourquoi la sauce graine est-elle vendue en conserve](/conseils/pourquoi-la-sauce-graine-en-conserve).
 
 ## Les étapes
 

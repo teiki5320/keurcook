@@ -1,42 +1,14 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
 import { Heart, MapPin } from "lucide-react";
-import { CART_ADDED_EVENT } from "@/components/nuage/shared";
 import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
 import { ProductImage } from "@/components/product/ProductImage";
-import { useCart } from "@/lib/cart/cart-context";
-import { formatPrice, pricePerGram } from "@/lib/format";
+import { formatPrice } from "@/lib/format";
 import type { ProductWithCategory } from "@/lib/types";
 
-/** Carte produit : photo, origine, format et bouton « Acheter » (Amazon) ou ajout au panier. */
+/** Carte produit : photo, origine, format, prix indicatif et bouton « Acheter » (Amazon). */
 export function VarietyCard({ product, priority }: { product: ProductWithCategory; priority?: boolean }) {
-  const { add } = useCart();
-  const firstAvailable = product.variants.find((v) => v.stock > 0) ?? product.variants[0];
-  const [variantId, setVariantId] = useState(firstAvailable?.id);
-  const variant = product.variants.find((v) => v.id === variantId) ?? firstAvailable;
+  const variant = product.variants[0];
   if (!variant) return null;
-  const out = variant.stock <= 0;
-  const unit = pricePerGram(variant.label, variant.priceCents);
-
-  const onAdd = () => {
-    if (out) return;
-    add(
-      {
-        variantId: variant.id,
-        productId: product.id,
-        slug: product.slug,
-        name: product.name,
-        variantLabel: variant.label,
-        priceCents: variant.priceCents,
-        image: product.images[0] ?? null,
-        maxStock: variant.stock,
-      },
-      1,
-    );
-    window.dispatchEvent(new CustomEvent(CART_ADDED_EVENT, { detail: `${product.name} (${variant.label})` }));
-  };
 
   return (
     <article className="card flex flex-col overflow-hidden">
@@ -69,45 +41,13 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
           </p>
         )}
 
-        {product.variants.length > 1 && (
-          <div className="mt-1 flex flex-wrap gap-1.5" role="radiogroup" aria-label={`Format de ${product.name}`}>
-            {product.variants.map((v) => (
-              <button
-                key={v.id}
-                type="button"
-                role="radio"
-                aria-checked={v.id === variant.id}
-                disabled={v.stock <= 0}
-                onClick={() => setVariantId(v.id)}
-                className={`rounded-full border px-3 py-1 text-xs font-semibold transition disabled:cursor-not-allowed disabled:line-through disabled:opacity-40 ${
-                  v.id === variant.id ? "border-[#ff7a3d] bg-[#ff7a3d] text-[#140a07]" : "border-[#fbeee2]/20 text-[#fbeee2] hover:border-[#ff7a3d]"
-                }`}
-              >
-                {v.label}
-              </button>
-            ))}
-          </div>
-        )}
 
         <p className="mt-auto pt-1">
           <span className="text-base font-bold text-forest-800">{formatPrice(variant.priceCents)}</span>
-          <span className="ml-1.5 text-xs text-muted">{product.variants.length === 1 ? variant.label : unit ? `(${unit})` : ""}</span>
+          <span className="ml-1.5 text-xs text-muted">{variant.label} · prix indicatif</span>
         </p>
-        {product.amazonAsin ? (
+        {product.amazonAsin && (
           <AmazonBuyButton asin={product.amazonAsin} priceCents={variant.priceCents} name={product.name} className="btn-primary mt-1 w-full py-2.5" />
-        ) : (
-          <>
-        {!out && variant.stock <= 5 && <p className="text-xs text-[#ff7a3d]">Plus que {variant.stock} en stock</p>}
-        <button
-          type="button"
-          disabled={out}
-          onClick={onAdd}
-          aria-label={`Ajouter ${product.name} (${variant.label}) au panier`}
-          className="btn-primary mt-1 w-full py-2.5"
-        >
-          {out ? "Rupture de stock" : "Ajouter"}
-        </button>
-          </>
         )}
       </div>
     </article>

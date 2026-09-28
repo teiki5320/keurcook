@@ -1,6 +1,6 @@
 ---
 title: Pourquoi la sauce graine est-elle vendue en conserve ?
-description: Loin des palmeraies, la pulpe de noix de palme en conserve remplace un long travail de cuisson et de pilage. Ce qu'elle contient et comment l'utiliser.
+description: Loin des palmeraies, la pulpe de noix de palme en conserve remplace un long travail de cuisson et de pilage. Ce qu'elle contient et comment la choisir.
 date: 2027-06-28
 theme: epicerie
 resume: Ce qu'on achète en conserve, c'est la pulpe de noix de palme, la base de la sauce. Elle évite de trouver des noix fraîches et de les cuire, piler et presser soi-même.
@@ -22,21 +22,10 @@ Ce qu'on appelle souvent « sauce graine en conserve » est en réalité de la p
 2. les piler au mortier pour détacher la pulpe des noyaux ;
 3. malaxer la pulpe avec de l'eau chaude, puis la presser et la filtrer pour obtenir un jus épais et orangé.
 
-La conserve fait tout ce travail à votre place. Il suffit ensuite de la diluer et de la faire mijoter avec la viande ou le poisson.
+La conserve fait tout ce travail à votre place. La même pulpe sert de base à la [sauce graine](/recette/sauce-graine), au [poulet nyembwe](/recette/poulet-nyembwe) ou à la [moambé](/recette/moambe).
 
-## Comment l'utiliser
+## Bien la choisir
 
-1. Ouvrez la boîte : la pulpe est épaisse, parfois avec une couche d'huile rouge en surface. Mélangez le tout.
-2. Délayez-la avec de l'eau selon les indications de la boîte ou de votre recette.
-3. Faites mijoter à feu doux, en remuant de temps en temps. La sauce est prête quand elle a épaissi et que l'huile rouge remonte en surface.
-4. Goûtez avant de saler : certaines pulpes sont déjà salées.
-
-## Les plats qui l'utilisent
-
-La même pulpe sert pour plusieurs plats : la [sauce graine](/recette/sauce-graine) ivoirienne, le [poulet nyembwe](/recette/poulet-nyembwe) du Gabon ou la [moambe](/recette/moambe) d'Afrique centrale. Chaque cuisine l'assaisonne à sa façon.
-
-## Bien la choisir et la conserver
-
-Regardez la liste des ingrédients : une bonne [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme) contient surtout de la noix de palme, avec peu d'additifs. Une fois la boîte ouverte, transférez le reste dans un récipient fermé, gardez-le au réfrigérateur et utilisez-le rapidement, ou congelez-le en portions.
+Regardez la liste des ingrédients : une bonne [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme) contient surtout de la noix de palme, avec peu d'additifs. Certaines pulpes sont déjà salées : vérifiez l'étiquette.
 
 À ne pas confondre avec l'[huile de palme rouge](/produit/huile-de-palme-rouge), qui est l'huile extraite du fruit. Pour en savoir plus, lisez [huile de palme rouge ou raffinée](/conseils/huile-de-palme-rouge-ou-raffinee).

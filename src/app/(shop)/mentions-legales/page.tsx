@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Mentions légales", alternates: { ca
 export default function LegalNoticePage() {
   const l = legalConfig;
   return (
-    <LegalPage title="Mentions légales" updated="24 septembre 2026">
+    <LegalPage title="Mentions légales" updated="28 septembre 2026">
       <p>
         Conformément aux articles 6-III et 19 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l&apos;économie
         numérique (LCEN), les informations suivantes sont portées à la connaissance des utilisateurs du site{" "}
@@ -35,12 +35,11 @@ export default function LegalNoticePage() {
         européenne (région de Francfort).
       </p>
 
-      <h2>Denrées alimentaires</h2>
+      <h2>Activité</h2>
       <p>
-        Le site publie des recettes de cuisine et commercialise des denrées alimentaires. La liste des ingrédients, les
-        allergènes et les conditions de conservation de chaque produit figurent sur sa fiche et sur son emballage,
-        conformément au règlement (UE) n° 1169/2011 concernant l&apos;information des consommateurs sur les denrées
-        alimentaires. Aucune allégation de santé n&apos;est formulée.
+        Le site publie des recettes de cuisine et des conseils. Il ne vend aucun produit : les boutons « Acheter »
+        renvoient vers Amazon.fr. L&apos;étiquetage qui fait foi (ingrédients, allergènes, conservation) est celui du
+        vendeur sur Amazon et de l&apos;emballage. Aucune allégation de santé n&apos;est formulée.
       </p>
 
       <h2>Liens d&apos;affiliation Amazon</h2>
@@ -63,11 +62,6 @@ export default function LegalNoticePage() {
         confidentialité</Link>.
       </p>
 
-      <h2>Médiation de la consommation</h2>
-      <p>
-        Conformément à l&apos;article L. 612-1 du code de la consommation, le consommateur peut recourir gratuitement au
-        médiateur de la consommation suivant : {l.mediator}.
-      </p>
     </LegalPage>
   );
 }

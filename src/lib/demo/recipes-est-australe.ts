@@ -8,7 +8,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     countryCode: "ET",
     region: "Addis-Abeba",
     course: "mijotes",
-    shortDescription: "Lentilles corail fondantes, mijotées dans une sauce rouge au berbéré.",
+    shortDescription: "Lentilles corail fondantes, mijotées dans une sauce rouge au berbéré sur un lit d'oignons longuement étuvés.",
     story:
       "Le misir wat est l'un des piliers de la table éthiopienne. Pendant les nombreux jours de jeûne de l'Église orthodoxe éthiopienne, où l'on renonce aux produits animaux, il s'impose comme le plat du quotidien, servi au centre d'une grande injera que l'on partage à la main.\n\nTout commence par des oignons longuement étuvés sans matière grasse, une technique typique de la cuisine éthiopienne, avant l'arrivée du berbéré, ce mélange d'épices rouge et parfumé qui donne au plat sa couleur profonde et sa chaleur.",
     prepMinutes: 15,
@@ -46,7 +46,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     countryCode: "ET",
     region: "Hauts plateaux",
     course: "mijotes",
-    shortDescription: "Une purée veloutée de farine de pois chiches, relevée au berbéré.",
+    shortDescription: "Une purée veloutée de farine de pois chiches, relevée au berbéré, que l'on sert bien chaude avec l'injera.",
     story:
       "Le shiro est présent dans presque tous les foyers d'Éthiopie et d'Érythrée. On le prépare à partir d'une farine de pois chiches ou de fèves grillées, souvent déjà mélangée à des épices, ce qui en fait un plat rapide et économique.\n\nServi fumant dans un petit plat en terre cuite, le shiro tegabino est une spécialité des restaurants d'Addis-Abeba : il arrive encore bouillonnant à table, accompagné d'injera.",
     prepMinutes: 10,
@@ -201,7 +201,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     course: "mijotes",
     shortDescription: "Poulet et sauce à l'arachide cuits à la vapeur dans des feuilles de bananier.",
     story:
-      "Le luwombo est un plat de cérémonie du royaume du Buganda, au centre de l'Ouganda. On raconte qu'il aurait été créé à la fin du XIXe siècle par le cuisinier du kabaka (le roi), et il reste aujourd'hui le plat d'honneur des mariages et des fêtes de famille.\n\nChaque portion est enveloppée dans des feuilles de bananier assouplies au-dessus du feu, puis cuite longuement à la vapeur. La sauce à l'arachide s'imprègne alors du parfum végétal des feuilles.",
+      "Le luwombo est un plat de cérémonie du royaume du Buganda, au centre de l'Ouganda. On raconte qu'il aurait été créé à la fin du XIXᵉ siècle par le cuisinier du kabaka (le roi), et il reste aujourd'hui le plat d'honneur des mariages et des fêtes de famille.\n\nChaque portion est enveloppée dans des feuilles de bananier assouplies au-dessus du feu, puis cuite longuement à la vapeur. La sauce à l'arachide s'imprègne alors du parfum végétal des feuilles.",
     prepMinutes: 45,
     cookMinutes: 90,
     servings: 4,
@@ -334,6 +334,10 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       [1, "c. à soupe", "jus de citron"],
       [3, null, "œufs"],
       [4, null, "feuilles de laurier"],
+      [null, null, "huile"],
+      [null, null, "beurre (pour le plat)"],
+      [null, null, "sel"],
+      [null, null, "poivre"],
     ],
     steps: [
       "Préchauffer le four à 180 °C. Faire tremper le pain dans 10 cl de lait, puis l'essorer en réservant le lait.",

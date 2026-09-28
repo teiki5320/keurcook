@@ -12,31 +12,27 @@ imagePrompt: Photographie culinaire, grand plat de thiéboudienne avec riz bris�
 ---
 ## Le riz brisé, choix traditionnel
 
-Pour le thiéboudienne, le riz brisé est le choix traditionnel au Sénégal. Ses grains cassés absorbent bien le bouillon de poisson et de légumes, prennent sa couleur et son goût, et donnent un riz à la fois tendre et légèrement collant. C'est lui qu'on utilise dans notre [recette de thiéboudienne](/recette/thieboudienne). On le trouve dans les épiceries africaines et asiatiques, parfois sous le nom de riz cassé.
+Pour le thiéboudienne, le riz brisé est le choix traditionnel au Sénégal. Ses grains cassés absorbent bien le bouillon de poisson et de légumes, prennent sa couleur et son goût, et donnent un riz tendre et bien détaché. C'est lui qu'on utilise dans la [recette du thiéboudienne](/recette/thieboudienne). On le trouve dans les épiceries africaines et asiatiques, parfois sous le nom de riz cassé.
 
 ## Ce que change le riz long
 
 Le riz long convient aussi, mais le résultat est différent :
 
-- les grains restent plus détachés et plus fermes ;
+- les grains restent plus fermes ;
 - ils absorbent le bouillon un peu moins vite, donc la couleur et le goût sont souvent moins intenses ;
 - la texture rappelle davantage un riz pilaf que le riz fondant typique du plat.
 
 C'est une bonne solution de dépannage, et certains préfèrent même ce rendu plus aéré.
 
-## Adapter la cuisson au riz long
+## Doser le bouillon selon le riz
 
-1. **Rincez le riz** à l'eau froide jusqu'à ce qu'elle soit presque claire, pour retirer l'amidon en surface.
-2. **Mesurez le bouillon** : retirez les légumes et le poisson, puis gardez la quantité de bouillon indiquée sur le paquet pour votre riz. Trop de liquide donnerait un riz détrempé.
-3. **Cuisez à feu doux et à couvert**, sans remuer, jusqu'à ce que le liquide soit absorbé.
-4. **Goûtez** : si le riz est encore ferme alors qu'il n'y a plus de bouillon, ajoutez un peu de bouillon chaud et prolongez la cuisson.
+Le riz brisé boit davantage de bouillon que le riz long. La quantité de liquide est donc le principal réglage quand on change de riz :
 
-Évitez de le remuer souvent : le riz long casserait et deviendrait pâteux.
+- **Riz brisé** : le bouillon doit juste couvrir le riz, et l'on garde un peu de bouillon de côté pour en rajouter si le riz semble sec avant d'être tendre.
+- **Riz long** : retirez les légumes et le poisson, puis gardez la quantité de bouillon indiquée sur le paquet pour votre riz. Trop de liquide donnerait un riz détrempé. Si le riz est encore ferme alors qu'il n'y a plus de bouillon, ajoutez un peu de bouillon chaud et prolongez la cuisson.
+
+Pour la sauce de départ, le lavage du riz et la cuisson à couvert, les étapes sont les mêmes quel que soit le riz : elles sont détaillées dans [comment réussir le riz rouge du thiéboudienne](/conseils/reussir-le-riz-rouge-du-thieboudienne).
 
 ## Et le riz parfumé ?
 
-Le riz jasmin ou basmati apporte son propre parfum, qui se mêle à celui du bouillon. Le plat reste bon, mais s'éloigne du goût habituel. Si vous tenez à l'arôme traditionnel, misez plutôt sur les condiments du bouillon, comme le [guedj](/produit/guedj) et le [soumbala](/produit/soumbala), qui donnent au thiéboudienne son caractère.
-
-## Garder le fond de marmite
-
-Quel que soit le riz, laissez-le accrocher légèrement au fond de la marmite en fin de cuisson : la croûte dorée qui se forme, appelée xoon, est très appréciée. Le même principe de riz cuit dans une sauce tomatée se retrouve dans le [riz jollof](/recette/riz-jollof), où le riz long est d'ailleurs plus courant.
+Le riz jasmin ou basmati apporte son propre parfum, qui se mêle à celui du bouillon. Le plat reste bon, mais s'éloigne du goût habituel. Si vous tenez à l'arôme traditionnel, misez plutôt sur les condiments du bouillon, comme le [guedj](/produit/guedj) et le [soumbala](/produit/soumbala), qui donnent au thiéboudienne son caractère. Dans le [riz jollof](/recette/riz-jollof), autre riz cuit dans une sauce tomatée, le riz long est d'ailleurs plus courant.

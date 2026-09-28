@@ -4,9 +4,9 @@ import { getCatalog } from "@/lib/data/catalog";
 import { getGammes } from "@/lib/data/gammes";
 
 export const metadata: Metadata = {
-  title: "Épicerie de produits africains rares",
+  title: "Produits africains à acheter sur Amazon",
   description:
-    "Épices, céréales anciennes, feuilles séchées, poissons fumés et huiles : les produits africains rares pour réussir nos recettes.",
+    "Épices, céréales, feuilles séchées, huiles, cafés, thés et ustensiles : une sélection de produits africains disponibles sur Amazon pour réussir nos recettes.",
   alternates: { canonical: "/boutique" },
 };
 

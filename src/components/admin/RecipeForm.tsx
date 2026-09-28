@@ -150,7 +150,7 @@ export function RecipeForm({
               <Plus className="h-4 w-4" aria-hidden /> Ajouter
             </button>
           </div>
-          <p className="text-xs text-muted">Quantités pour le nombre de personnes indiqué. Liez un ingrédient à un produit de la boutique pour afficher « Produit rare » et le bouton d&apos;ajout au panier.</p>
+          <p className="text-xs text-muted">Quantités pour le nombre de personnes indiqué. Liez un ingrédient à un produit de la boutique pour afficher « Produit rare » et le bouton d&apos;achat Amazon.</p>
           <ul className="space-y-2">
             {ingredients.map((ing, i) => (
               <li key={i} className="grid grid-cols-[70px_90px_1fr_auto] gap-2 rounded-xl border border-sage-200 p-2 sm:grid-cols-[70px_110px_1fr_200px_auto]">

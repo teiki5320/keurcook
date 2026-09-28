@@ -16,13 +16,7 @@ Non, un couscoussier n'est pas obligatoire pour le fonio ni pour l'attiéké. Ce
 
 ## Le fonio sans couscoussier
 
-Le [fonio précuit](/produit/fonio) se cuit par absorption, comme indiqué sur le paquet :
-
-1. Portez l'eau salée à ébullition.
-2. Versez le fonio en pluie, mélangez, couvrez et coupez le feu.
-3. Laissez gonfler quelques minutes, puis égrenez à la fourchette avec un filet d'huile.
-
-Le résultat est tout à fait correct pour accompagner une sauce, comme dans le [fonio aux légumes](/recette/fonio-aux-legumes). Le passage à la vapeur apporte simplement un grain plus aéré. Plus de détails dans notre article [sur le fonio](/conseils/quest-ce-que-le-fonio).
+Le [fonio précuit](/produit/fonio) se cuit très bien par absorption, dans une simple casserole, en suivant le paquet : les étapes sont détaillées dans [qu'est-ce que le fonio](/conseils/quest-ce-que-le-fonio). Le résultat convient parfaitement pour accompagner une sauce, comme dans le [fonio aux légumes](/recette/fonio-aux-legumes) ; le passage à la vapeur apporte simplement un grain plus aéré.
 
 ## L'attiéké sans couscoussier
 

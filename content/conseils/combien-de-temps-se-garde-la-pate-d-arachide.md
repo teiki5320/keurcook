@@ -35,4 +35,4 @@ Dans ces cas, ne cherchez pas à retirer la partie abîmée : jetez tout le pot.
 
 ## Pour en profiter jusqu'au bout
 
-Si votre pot s'éternise, cuisinez-le : la pâte d'arachide est la base du [mafé](/recette/mafe), entre dans certaines versions de la [moambe](/recette/moambe) et dans le [ngalakh](/recette/ngalakh), un dessert sénégalais au mil. Et si votre sauce reste trop liquide, voyez [comment épaissir une sauce arachide](/conseils/comment-epaissir-une-sauce-arachide).
+Si votre pot s'éternise, cuisinez-le : la pâte d'arachide est la base du [mafé](/recette/mafe), entre dans certaines versions de la [moambé](/recette/moambe) et dans le [ngalakh](/recette/ngalakh), un dessert sénégalais au mil. Et si votre sauce reste trop liquide, voyez [comment épaissir une sauce arachide](/conseils/comment-epaissir-une-sauce-arachide).

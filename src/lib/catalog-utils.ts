@@ -21,7 +21,6 @@ const normalize = (s: string) =>
   s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 export const minPriceCents = (p: Product) => Math.min(...p.variants.map((v) => v.priceCents));
-export const totalStock = (p: Product) => p.variants.reduce((sum, v) => sum + v.stock, 0);
 
 export function filterProducts(products: ProductWithCategory[], f: CatalogFilters) {
   const terms = f.q ? normalize(f.q).split(/\s+/).filter(Boolean) : [];

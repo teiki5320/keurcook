@@ -14,7 +14,7 @@ imagePrompt: Photographie culinaire, morceaux de guedj, poisson fermenté et sé
 
 Le guedj est un poisson que l'on laisse fermenter puis sécher au soleil. C'est un ingrédient de base de la cuisine sénégalaise, et on le retrouve plus largement sur la côte ouest-africaine. Il se présente en morceaux durs, à la peau brune, avec une odeur forte qui surprend la première fois.
 
-Il ne se mange pas tel quel : c'est un assaisonnement. Comme le [soumbala](/produit/soumbala) ou le nététou, il sert à donner de la profondeur à un plat, un goût salé et marin qu'aucune épice ne remplace vraiment.
+Il ne se mange pas tel quel : c'est un assaisonnement. Comme le [soumbala](/produit/soumbala) (nététou), il sert à donner de la profondeur à un plat, un goût salé et marin qu'aucune épice ne remplace vraiment.
 
 ## Le préparer avant cuisson
 

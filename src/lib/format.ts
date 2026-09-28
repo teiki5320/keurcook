@@ -31,19 +31,3 @@ export function slugify(value: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-export const ORDER_STATUS_LABELS: Record<string, string> = {
-  pending_payment: "En attente de paiement",
-  paid: "Payée",
-  preparing: "En préparation",
-  shipped: "Expédiée",
-  delivered: "Livrée",
-  cancelled: "Annulée",
-};
-
-/** Prix au gramme quand le format est exprimé en grammes (« 5 g » → « 6,00 € / g »), sinon null. */
-export function pricePerGram(label: string, priceCents: number): string | null {
-  const m = label.match(/^(\d+(?:[.,]\d+)?)\s*g$/i);
-  if (!m) return null;
-  const grams = Number(m[1].replace(",", "."));
-  return grams > 0 ? `${formatPrice(Math.round(priceCents / grams))} / g` : null;
-}

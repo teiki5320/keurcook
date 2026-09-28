@@ -82,185 +82,25 @@ create trigger products_touch before update on public.products
 for each row execute function public.touch_updated_at();
 
 -- ---------------------------------------------------------------------
--- Commandes
+-- Anciennes commandes : les achats se font sur Amazon (programme Partenaires),
+-- le site n'enregistre plus de commande.
 -- ---------------------------------------------------------------------
-create table if not exists public.orders (
-  id uuid primary key default gen_random_uuid(),
-  order_number text not null unique,
-  access_token text not null default encode(gen_random_bytes(16), 'hex'),
-  status text not null default 'pending_payment'
-    check (status in ('pending_payment', 'paid', 'preparing', 'shipped', 'delivered', 'cancelled')),
-  email text not null,
-  first_name text not null,
-  last_name text not null,
-  phone text,
-  address_line1 text not null,
-  address_line2 text,
-  postal_code text not null,
-  city text not null,
-  country text not null default 'FR',
-  notes text,
-  payment_provider text not null,
-  payment_reference text,
-  subtotal_cents int not null,
-  shipping_cents int not null,
-  total_cents int not null,
-  tracking_number text,
-  created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now()
+drop function if exists public.place_order cascade;
+drop function if exists public.cancel_order cascade;
+drop table if exists public.order_items;
+drop table if exists public.orders;
+
+-- ---------------------------------------------------------------------
+-- Limitation des envois (connexion admin, avis, newsletter) : une ligne par
+-- tentative, clé = action + empreinte de l'adresse IP ; purgée après un jour.
+-- ---------------------------------------------------------------------
+create table if not exists public.rate_limits (
+  id bigint generated always as identity primary key,
+  key text not null,
+  created_at timestamptz not null default now()
 );
-
-drop trigger if exists orders_touch on public.orders;
-create trigger orders_touch before update on public.orders
-for each row execute function public.touch_updated_at();
-
-create table if not exists public.order_items (
-  id uuid primary key default gen_random_uuid(),
-  order_id uuid not null references public.orders (id) on delete cascade,
-  product_id uuid references public.products (id) on delete set null,
-  variant_id uuid references public.product_variants (id) on delete set null,
-  product_name text not null,
-  variant_label text not null,
-  unit_price_cents int not null,
-  quantity int not null check (quantity > 0)
-);
-
-create index if not exists order_items_order_idx on public.order_items (order_id);
-
-create sequence if not exists public.order_number_seq start 1001;
-
--- ---------------------------------------------------------------------
--- place_order : création atomique d'une commande.
--- Vérifie les prix et les stocks côté base (on ne fait jamais confiance
--- aux prix envoyés par le navigateur), décrémente le stock et renvoie
--- la commande. Appelée uniquement côté serveur (src/lib/data/orders.ts).
--- ---------------------------------------------------------------------
-create or replace function public.place_order(
-  p_customer jsonb,
-  p_items jsonb,
-  p_payment_provider text,
-  p_shipping_rules jsonb
-)
-returns jsonb
-language plpgsql
-set search_path = public
-as $$
-declare
-  v_item jsonb;
-  v_variant record;
-  v_qty int;
-  v_subtotal int := 0;
-  v_shipping int;
-  v_order public.orders;
-  v_number text;
-begin
-  if jsonb_array_length(p_items) = 0 then
-    raise exception 'EMPTY_CART';
-  end if;
-
-  -- Première passe : verrouillage des variantes et contrôle du stock.
-  for v_item in select * from jsonb_array_elements(p_items) loop
-    v_qty := (v_item ->> 'quantity')::int;
-    if v_qty is null or v_qty <= 0 or v_qty > 99 then
-      raise exception 'INVALID_QUANTITY';
-    end if;
-
-    select v.id, v.price_cents, v.stock, v.label, p.name, p.id as product_id, p.is_active
-      into v_variant
-      from public.product_variants v
-      join public.products p on p.id = v.product_id
-     where v.id = (v_item ->> 'variant_id')::uuid
-       for update of v;
-
-    if not found or not v_variant.is_active then
-      raise exception 'PRODUCT_UNAVAILABLE:%', v_item ->> 'variant_id';
-    end if;
-    if v_variant.stock < v_qty then
-      raise exception 'OUT_OF_STOCK:%', v_variant.name || ' — ' || v_variant.label;
-    end if;
-
-    v_subtotal := v_subtotal + v_variant.price_cents * v_qty;
-  end loop;
-
-  if v_subtotal >= (p_shipping_rules ->> 'free_threshold_cents')::int then
-    v_shipping := 0;
-  else
-    v_shipping := (p_shipping_rules ->> 'flat_rate_cents')::int;
-  end if;
-
-  v_number := 'AH-' || to_char(now(), 'YYYY') || '-' || lpad(nextval('public.order_number_seq')::text, 6, '0');
-
-  insert into public.orders (
-    order_number, email, first_name, last_name, phone,
-    address_line1, address_line2, postal_code, city, country, notes,
-    payment_provider, payment_reference, subtotal_cents, shipping_cents, total_cents
-  ) values (
-    v_number,
-    lower(trim(p_customer ->> 'email')),
-    p_customer ->> 'first_name',
-    p_customer ->> 'last_name',
-    nullif(p_customer ->> 'phone', ''),
-    p_customer ->> 'address_line1',
-    nullif(p_customer ->> 'address_line2', ''),
-    p_customer ->> 'postal_code',
-    p_customer ->> 'city',
-    coalesce(nullif(p_customer ->> 'country', ''), 'FR'),
-    nullif(p_customer ->> 'notes', ''),
-    p_payment_provider,
-    v_number,
-    v_subtotal,
-    v_shipping,
-    v_subtotal + v_shipping
-  )
-  returning * into v_order;
-
-  -- Seconde passe : lignes de commande + décrément du stock.
-  for v_item in select * from jsonb_array_elements(p_items) loop
-    v_qty := (v_item ->> 'quantity')::int;
-
-    select v.id, v.price_cents, v.label, p.name, p.id as product_id
-      into v_variant
-      from public.product_variants v
-      join public.products p on p.id = v.product_id
-     where v.id = (v_item ->> 'variant_id')::uuid;
-
-    insert into public.order_items (order_id, product_id, variant_id, product_name, variant_label, unit_price_cents, quantity)
-    values (v_order.id, v_variant.product_id, v_variant.id, v_variant.name, v_variant.label, v_variant.price_cents, v_qty);
-
-    update public.product_variants set stock = stock - v_qty where id = v_variant.id;
-  end loop;
-
-  return to_jsonb(v_order);
-end;
-$$;
-
--- ---------------------------------------------------------------------
--- cancel_order : annule une commande et remet les produits en stock.
--- Appelée uniquement depuis l'admin (session vérifiée côté serveur).
--- ---------------------------------------------------------------------
-create or replace function public.cancel_order(p_order_id uuid)
-returns void
-language plpgsql
-set search_path = public
-as $$
-begin
-  update public.orders set status = 'cancelled'
-   where id = p_order_id and status <> 'cancelled';
-  if not found then
-    return;
-  end if;
-
-  update public.product_variants v
-     set stock = v.stock + i.qty
-    from (
-      select variant_id, sum(quantity)::int as qty
-        from public.order_items
-       where order_id = p_order_id and variant_id is not null
-       group by variant_id
-    ) i
-   where v.id = i.variant_id;
-end;
-$$;
+create index if not exists rate_limits_key_idx on public.rate_limits (key, created_at);
+alter table public.rate_limits enable row level security;
 
 -- ---------------------------------------------------------------------
 -- Réglages du site (clé → valeur JSON). Ex. : maintenance.

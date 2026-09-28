@@ -28,10 +28,8 @@ Pour mieux connaître le fonio avant de le remplacer, voyez notre article [qu'es
 2. **Le couscous de blé fin** est le plus facile à trouver et se rapproche du fonio par la finesse du grain.
 3. **Le couscous moyen ou gros** convient aux plats en sauce, mais s'éloigne davantage de la texture du fonio.
 
-Attention : le couscous de blé contient du gluten, contrairement au fonio. Si vous cuisinez pour quelqu'un qui l'évite, préférez le mil ou gardez le fonio.
-
 ## Adapter la recette
 
-Pour un plat comme le [fonio aux légumes](/recette/fonio-aux-legumes), préparez le couscous à part selon les indications du paquet, égrainez-le à la fourchette avec un filet d'huile, puis mélangez-le aux légumes en fin de cuisson. Ne le laissez pas mijoter dans la sauce : il gonflerait trop et deviendrait pâteux.
+Pour un plat comme le [fonio aux légumes](/recette/fonio-aux-legumes), préparez le couscous à part selon les indications du paquet, égrenez-le à la fourchette avec un filet d'huile, puis mélangez-le aux légumes en fin de cuisson. Ne le laissez pas mijoter dans la sauce : il gonflerait trop et deviendrait pâteux.
 
-Pour un dessert, laissez refroidir complètement le couscous en l'égrainant avant de l'ajouter au lait caillé, comme vous le feriez avec le fonio.
+Pour un dessert, laissez refroidir complètement le couscous en l'égrenant avant de l'ajouter au lait caillé, comme vous le feriez avec le fonio.

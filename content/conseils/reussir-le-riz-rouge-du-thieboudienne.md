@@ -30,7 +30,7 @@ On utilise traditionnellement du riz brisé, qui absorbe bien la sauce.
 1. Lavez-le jusqu'à ce que l'eau soit presque claire, pour retirer l'amidon qui le ferait coller.
 2. Passez-le d'abord à la vapeur, comme le fait la recette, pour qu'il commence à gonfler.
 3. Versez-le ensuite dans le bouillon : le liquide doit juste le couvrir. Trop de bouillon donne un riz pâteux, pas assez un riz qui reste dur.
-4. Couvrez et laissez cuire à feu doux, sans remuer sans cesse. Si le riz semble sec avant d'être tendre, ajoutez un peu de bouillon réservé.
+4. Couvrez et laissez cuire à feu doux, sans remuer sans cesse, jusqu'à obtenir des grains tendres et bien détachés. Si le riz semble sec avant d'être tendre, ajoutez un peu de bouillon réservé.
 
 ## Le xoon, le riz croustillant du fond
 

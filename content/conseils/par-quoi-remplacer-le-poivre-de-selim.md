@@ -28,7 +28,7 @@ Un poivre très aromatique comme le [poivre de Penja](/produit/poivre-de-penja) 
 ## Selon la recette
 
 - **Marinades et grillades** : dans le [poulet yassa](/recette/poulet-yassa) ou le [kelewele](/recette/kelewele), le mélange poivre noir, muscade et gingembre fonctionne bien, car les autres ingrédients prennent le relais.
-- **Bouillons et sauces** : dans le [thiéré mboum](/recette/thiere-mbuum), ajoutez le mélange en cours de cuisson pour qu'il se fonde. Une petite touche de fumé, par exemple un morceau de poisson fumé, rappelle le côté boisé des gousses.
+- **Bouillons et sauces** : dans le [thiéré mbuum](/recette/thiere-mbuum), ajoutez le mélange en cours de cuisson pour qu'il se fonde. Une petite touche de fumé, par exemple un morceau de poisson fumé, rappelle le côté boisé des gousses.
 - **Café Touba** : c'est là que le poivre de Selim est le plus difficile à remplacer, car il fait tout le caractère du [café Touba](/recette/cafe-touba). Un café torréfié avec une pointe de poivre noir et de clou de girofle donne une boisson parfumée, mais ce ne sera pas tout à fait le même goût.
 
 ## Doser avec prudence

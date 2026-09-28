@@ -9,6 +9,7 @@ import { VarietyCard } from "@/components/shop/VarietyCard";
 import { conseilSections } from "@/lib/conseils/article";
 import { CONSEIL_THEMES } from "@/lib/conseils/themes";
 import { siteConfig } from "@/lib/config";
+import { jsonLd } from "@/lib/json-ld";
 import { getCatalog } from "@/lib/data/catalog";
 import { getConseilBySlug, getConseils, getRelatedConseils, renderConseil } from "@/lib/data/conseils";
 import { getRecipes } from "@/lib/data/recipes";
@@ -55,7 +56,7 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
   const Icon = theme.icon;
   const url = `${siteConfig.url}/conseils/${conseil.slug}`;
 
-  const jsonLd = [
+  const structuredData = [
     {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -83,7 +84,7 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
 
   return (
     <article className="container-page pb-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted">
         <Link href="/" className="hover:underline">Accueil</Link> / <Link href="/conseils" className="hover:underline">Conseils</Link> /{" "}
         <span className="text-ink">{conseil.title}</span>

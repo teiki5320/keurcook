@@ -34,10 +34,7 @@ En Afrique de l'Ouest, on utilise aussi la pierre à écraser, une large pierre 
 
 ## L'entretien
 
-1. Rincez le mortier en bois à l'eau claire juste après usage, sans le laisser tremper.
-2. Faites-le sécher à l'air libre, loin du feu et du soleil direct.
-3. Lavez le mortier en pierre à l'eau chaude, avec une brosse si besoin.
-4. Pour chasser une odeur tenace, pilez un peu de riz cru ou de sel, puis rincez.
+Rincez le mortier en bois à l'eau claire sans le laisser tremper et faites-le sécher à l'air, loin du feu ; le mortier en pierre se lave simplement à l'eau chaude, avec une brosse si besoin.
 
 ## Selon vos recettes
 

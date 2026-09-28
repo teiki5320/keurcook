@@ -12,7 +12,7 @@ imagePrompt: Photographie culinaire, tasse en verre remplie d'infusion de kinkel
 ---
 ## Une infusion de feuilles
 
-Pour préparer le kinkeliba, on fait frémir ses feuilles séchées dans de l'eau quelques minutes, puis on filtre. Le kinkeliba est un arbuste de la savane d'Afrique de l'Ouest, et son infusion est très courante au Sénégal, au Mali ou au Burkina Faso. Au Sénégal, on le boit souvent au petit déjeuner, et il est aussi servi pendant le ramadan.
+Pour préparer le kinkeliba, on fait frémir ses feuilles séchées dans de l'eau quelques minutes, puis on filtre. Le kinkeliba est un arbuste de la savane d'Afrique de l'Ouest, et son infusion est très courante au Sénégal, au Mali ou au Burkina Faso. Au Sénégal, on le boit souvent au petit-déjeuner, et il est aussi servi pendant le ramadan.
 
 Son goût est boisé, légèrement amer, avec une couleur allant de l'ambre au brun rouge.
 
@@ -28,7 +28,7 @@ Si vous préférez une infusion légère, versez simplement l'eau bouillante sur
 
 ## Sucrer et parfumer
 
-Le kinkeliba se boit nature ou sucré. On l'accompagne souvent de lait, surtout au petit déjeuner. Pour varier :
+Le kinkeliba se boit nature ou sucré. On l'accompagne souvent de lait, surtout au petit-déjeuner. Pour varier :
 
 - quelques feuilles de menthe fraîche ajoutées en fin de cuisson ;
 - une tranche de gingembre frais, pour une note piquante ;
@@ -42,4 +42,4 @@ Gardez les feuilles séchées dans un sac ou une boîte bien fermés, au sec et 
 
 ## D'autres boissons à découvrir
 
-Si vous aimez les boissons chaudes d'Afrique de l'Ouest, essayez le [café Touba](/recette/cafe-touba), parfumé au poivre de Sélim. Côté boissons fraîches, le [jus de gingembre](/recette/jus-de-gingembre) est un autre grand classique.
+Si vous aimez les boissons chaudes d'Afrique de l'Ouest, essayez le [café Touba](/recette/cafe-touba), parfumé au poivre de Selim. Côté boissons fraîches, le [jus de gingembre](/recette/jus-de-gingembre) est un autre grand classique.

@@ -1,20 +1,16 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { siteConfig } from "@/lib/config";
 import { NON_FOOD_CATEGORY } from "@/lib/catalog-utils";
 import { findHealthClaims } from "@/lib/compliance";
-import { adminGetOrder, requireAdmin } from "@/lib/data/admin";
+import { requireAdmin } from "@/lib/data/admin";
 import { isUuid, pgError } from "@/lib/db/client";
-import { orderUrl } from "@/lib/data/orders";
-import { sendEmailSafe } from "@/lib/email/sender";
-import { orderStatusEmail } from "@/lib/email/templates";
+import { isRateLimited } from "@/lib/rate-limit";
 import { slugify } from "@/lib/format";
 import { ADMIN_COOKIE, ADMIN_SESSION_SECONDS, checkAdminPassword, createAdminToken } from "@/lib/admin-session";
-import type { OrderStatus } from "@/lib/types";
 
 export interface ActionState {
   error?: string;
@@ -26,6 +22,10 @@ export interface ActionState {
 export async function loginAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
   const password = String(formData.get("password") ?? "");
   if (!password) return { error: "Mot de passe requis." };
+  // 5 essais par quart d'heure et par adresse IP.
+  if (await isRateLimited("admin-login", 5, 15 * 60)) {
+    return { error: "Trop de tentatives. Réessayez dans un quart d'heure." };
+  }
   if (!checkAdminPassword(password)) {
     // Ralentit les essais en série.
     await new Promise((r) => setTimeout(r, 1000));
@@ -58,6 +58,9 @@ const variantSchema = z.object({
   sku: z.string().trim().optional(),
 });
 
+/** Image du site (/…) ou envoyée sur Vercel Blob : les autres adresses ne s'afficheraient pas. */
+const imageUrl = z.string().trim().regex(/^(\/[\w./-]+|https:\/\/[\w-]+\.public\.blob\.vercel-storage\.com\/\S+)$/, "Adresse d'image non autorisée.");
+
 const productSchema = z.object({
   id: z.string().optional(),
   name: z.string().trim().min(2, "Nom requis."),
@@ -68,7 +71,7 @@ const productSchema = z.object({
   originCountry: z.string().trim().max(100).nullable(),
   originRegion: z.string().trim().max(100).nullable(),
   producer: z.string().trim().max(200).nullable(),
-  images: z.array(z.string().min(1)).max(10),
+  images: z.array(imageUrl).max(10),
   composition: z.string().trim().max(2000).nullable(),
   allergens: z.array(z.string().max(60)).max(14),
   usageTips: z.string().trim().max(2000).nullable(),
@@ -180,7 +183,8 @@ export async function saveProductAction(_prev: ActionState, formData: FormData):
     if (err.code === "23505") {
       return { error: err.constraint?.includes("sku") ? "Une référence (SKU) est déjà utilisée par un autre produit." : "Ce slug est déjà utilisé." };
     }
-    return { error: err.message };
+    console.error("Enregistrement du produit impossible :", e);
+    return { error: "Enregistrement impossible. Réessayez ou vérifiez les champs." };
   }
 
   revalidatePath("/", "layout");
@@ -194,66 +198,6 @@ export async function deleteProductAction(formData: FormData) {
   if (isUuid(id)) await sql.query("delete from products where id = $1", [id]);
   revalidatePath("/", "layout");
   redirect("/admin/produits");
-}
-
-// ---------------------------------------------------------------- Stocks
-
-export async function updateStockAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const { sql } = await requireAdmin();
-  const updates: Array<{ id: string; stock: number }> = [];
-  for (const [key, value] of formData.entries()) {
-    if (!key.startsWith("stock:")) continue;
-    const stock = Number(value);
-    if (!Number.isInteger(stock) || stock < 0) return { error: "Les stocks doivent être des entiers positifs." };
-    const id = key.slice(6);
-    if (isUuid(id)) updates.push({ id, stock });
-  }
-  if (updates.length) {
-    await sql.transaction(updates.map((u) => sql.query("update product_variants set stock = $2 where id = $1", [u.id, u.stock])));
-  }
-  revalidatePath("/", "layout");
-  return { success: `${updates.length} stock(s) mis à jour.` };
-}
-
-// ------------------------------------------------------------- Commandes
-
-const STATUSES: OrderStatus[] = ["pending_payment", "paid", "preparing", "shipped", "delivered", "cancelled"];
-
-export async function updateOrderAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  const { sql } = await requireAdmin();
-  const id = String(formData.get("id") ?? "");
-  const status = String(formData.get("status") ?? "") as OrderStatus;
-  const tracking = String(formData.get("trackingNumber") ?? "").trim() || null;
-  const notify = formData.get("notify") === "on";
-  if (!STATUSES.includes(status)) return { error: "Statut invalide." };
-
-  const before = await adminGetOrder(id);
-  if (!before) return { error: "Commande introuvable." };
-
-  if (status === "cancelled" && before.status !== "cancelled") {
-    // Annulation + remise en stock (fonction SQL cancel_order), dans la même transaction.
-    await sql.transaction([
-      sql.query("select cancel_order($1)", [id]),
-      sql.query("update orders set tracking_number = $2 where id = $1", [id, tracking]),
-    ]);
-  } else {
-    if (before.status === "cancelled" && status !== "cancelled") {
-      return { error: "Une commande annulée ne peut pas être réactivée (le stock a été remis en vente)." };
-    }
-    await sql.query("update orders set status = $2, tracking_number = $3 where id = $1", [id, status, tracking]);
-  }
-
-  const after = await adminGetOrder(id);
-  if (notify && after && after.status !== before.status) {
-    const h = await headers();
-    const host = h.get("x-forwarded-host") ?? h.get("host");
-    const base = host ? `${h.get("x-forwarded-proto") ?? "https"}://${host}` : siteConfig.url;
-    await sendEmailSafe({ to: after.email, ...orderStatusEmail(after, orderUrl(after, base)) });
-  }
-
-  revalidatePath("/admin", "layout");
-  revalidatePath("/", "layout");
-  return { success: notify && after?.status !== before.status ? "Commande mise à jour, client notifié." : "Commande mise à jour." };
 }
 
 // ----------------------------------------------------------- Maintenance
@@ -284,7 +228,7 @@ const recipeSchema = z.object({
   course: z.enum(COURSES, { error: "Type de plat invalide." }),
   shortDescription: z.string().trim().max(300),
   story: z.string().trim().max(10000),
-  image: z.string().trim().max(500).nullable(),
+  image: imageUrl.max(500).nullable(),
   prepMinutes: z.number().int().min(0).max(10000),
   cookMinutes: z.number().int().min(0).max(10000),
   servings: z.number().int().min(1, "Au moins une personne.").max(50),
@@ -301,7 +245,7 @@ const recipeSchema = z.object({
     .min(1, "Ajoutez au moins un ingrédient.")
     .max(60),
   steps: z
-    .array(z.object({ text: z.string().trim().min(1, "Une étape est vide.").max(3000), image: z.string().trim().max(500).nullable() }))
+    .array(z.object({ text: z.string().trim().min(1, "Une étape est vide.").max(3000), image: imageUrl.max(500).nullable() }))
     .min(1, "Ajoutez au moins une étape.")
     .max(40),
   tips: z.array(z.string().max(1000)).max(20),
@@ -382,7 +326,8 @@ export async function saveRecipeAction(_prev: ActionState, formData: FormData): 
     );
   } catch (e) {
     const err = pgError(e);
-    return { error: err.code === "23505" ? "Ce slug (adresse de la recette) est déjà utilisé." : err.message };
+    if (err.code !== "23505") console.error("Enregistrement de la recette impossible :", e);
+    return { error: err.code === "23505" ? "Ce slug (adresse de la recette) est déjà utilisé." : "Enregistrement impossible. Réessayez ou vérifiez les champs." };
   }
 
   revalidatePath("/", "layout");

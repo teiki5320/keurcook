@@ -29,6 +29,8 @@ export function getRelatedConseils(conseil: Conseil, today = todayInParis()): Co
   return relatedConseils(conseil, getConseils(today));
 }
 
+const escapeAttr = (v: string) => v.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 /** Corps de l'article en HTML : ancres sur les parties, liens internes adaptés au préfixe du site. */
 export function renderConseil(body: string): string {
   const renderer = new marked.Renderer();
@@ -39,8 +41,10 @@ export function renderConseil(body: string): string {
   renderer.link = function ({ href, title, tokens }) {
     const inner = this.parser.parseInline(tokens);
     const external = /^https?:/.test(href);
-    const attrs = external ? ' target="_blank" rel="noopener"' : "";
-    return `<a href="${external ? href : withBasePath(href)}"${title ? ` title="${title}"` : ""}${attrs}>${inner}</a>`;
+    const attrs = external ? ` target="_blank" rel="${/amazon\./.test(href) ? "sponsored nofollow " : ""}noopener noreferrer"` : "";
+    return `<a href="${escapeAttr(external ? href : withBasePath(href))}"${title ? ` title="${escapeAttr(title)}"` : ""}${attrs}>${inner}</a>`;
   };
+  // Pas de HTML brut dans les articles : il est affiché comme du texte.
+  renderer.html = ({ text }) => escapeAttr(text);
   return marked.parse(body, { renderer, async: false });
 }

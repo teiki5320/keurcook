@@ -1,9 +1,8 @@
 /**
  * Build de la vitrine statique pour GitHub Pages → dossier out/.
  *
- * Les parties qui exigent un serveur (admin, API, proxy, page de
- * confirmation de commande) sont mises de côté le temps du build puis
- * restaurées, même en cas d'échec.
+ * Les parties qui exigent un serveur (admin, proxy) sont mises de côté le
+ * temps du build, puis restaurées, même en cas d'échec.
  *
  * Usage : npm run build:pages   (NEXT_PUBLIC_BASE_PATH=/alohash par défaut)
  */
@@ -16,8 +15,6 @@ const stash = join(root, ".static-export-stash");
 const serverOnly = [
   "src/proxy.ts",
   "src/app/admin",
-  "src/app/api",
-  "src/app/(shop)/commande/confirmation",
   "src/components/admin",
 ];
 

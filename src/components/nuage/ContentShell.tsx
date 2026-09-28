@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { isImmersive } from "./immersive";
 
 /**
- * Les pages non immersives (catégories, fiche produit, panier, commande, pages
+ * Les pages non immersives (catégories, fiche produit, conseils, pages
  * légales) gardent leur structure ; le thème sombre leur est appliqué via nuage.css.
  */
 export function ContentShell({ children }: { children: React.ReactNode }) {

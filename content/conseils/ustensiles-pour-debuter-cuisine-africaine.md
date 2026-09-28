@@ -24,7 +24,7 @@ Pour débuter en cuisine africaine, une grande marmite à fond épais, une spatu
 
 ## Ceux qui viennent ensuite
 
-- **Un couscoussier** : pour cuire à la vapeur le couscous de mil du [thiéré mboum](/recette/thiere-mbuum), l'attiéké ou le fonio. Une passoire posée sur une casserole et couverte d'un linge peut faire l'affaire au début.
+- **Un couscoussier** : pour cuire à la vapeur le couscous de mil du [thiéré mbuum](/recette/thiere-mbuum), l'attiéké ou le fonio. Une passoire posée sur une casserole et couverte d'un linge peut faire l'affaire au début.
 - **Une poêle en fonte ou un gril** : pour les grillades comme le [suya](/recette/suya) et le poisson braisé. Des brochettes en bois ou en métal complètent l'équipement.
 - **Une grande poêle à bord bas** : pour les galettes comme l'injera, à défaut du plat traditionnel éthiopien.
 - **Un moulin à épices** : pratique si vous torréfiez et moulez vous-même vos épices.

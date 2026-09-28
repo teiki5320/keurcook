@@ -34,6 +34,16 @@ const FORBIDDEN_PATTERNS: Array<[RegExp, string]> = [
   [/\bvertus?\b/i, "vertus"],
   [/\bcur(e|atif)\w*/i, "cure / curatif"],
   [/\bsoulag\w*/i, "soulager"],
+  // Allégations nutritionnelles et « bien-être » (règlement (CE) n° 1924/2006).
+  [/\bdigest\w*/i, "digestion"],
+  [/\bvitamin\w*/i, "vitamines"],
+  [/\bantioxyd\w*/i, "antioxydant"],
+  [/\bd[ée]tox\w*/i, "détox"],
+  [/\bimmun\w*/i, "immunité"],
+  [/\bsuper-?aliment\w*/i, "superaliment"],
+  [/\bbon(ne)?s? pour (la |le |les )?(sant|corps|peau|ligne|c[oœ]ur|forme)/i, "« bon pour »"],
+  [/\bsans (gluten|sucres?( ajout[ée]s?)?|lactose|th[ée]ine|caf[ée]ine)\b/i, "« sans … » (allégation nutritionnelle)"],
+  [/\bminceur\b/i, "minceur"],
 ];
 
 export function findHealthClaims(...texts: Array<string | null | undefined>): string[] {

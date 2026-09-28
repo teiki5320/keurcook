@@ -12,7 +12,7 @@ imagePrompt: Photographie culinaire, gousses de poivre de Selim brun noir, fines
 ---
 ## Une épice en gousses
 
-Le poivre de Selim s'utilise le plus souvent grillé puis moulu, en petite quantité, pour parfumer un café, une marinade ou une sauce. Il se présente sous forme de fines gousses sombres et allongées, qui renferment de petites graines. On l'appelle aussi djar au Sénégal, ou encore poivre de Guinée ou kani selon les pays.
+Le poivre de Selim s'utilise le plus souvent grillé puis moulu, en petite quantité, pour parfumer un café, une marinade ou une sauce. Il se présente sous forme de fines gousses sombres et allongées, qui renferment de petites graines. On l'appelle aussi djar au Sénégal, ou encore kani selon les pays.
 
 Son parfum est boisé, résineux et légèrement musqué, avec un piquant plus doux que celui du poivre noir et une pointe d'amertume.
 

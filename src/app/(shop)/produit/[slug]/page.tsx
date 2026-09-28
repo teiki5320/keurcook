@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
-import { AddToCart } from "@/components/product/AddToCart";
 import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
+import { AMAZON_PRICES_CHECKED_ON } from "@/lib/amazon";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
-import { minPriceCents, totalStock } from "@/lib/catalog-utils";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
 import { getRecipesUsingProduct } from "@/lib/data/recipes";
 import { siteConfig } from "@/lib/config";
+import { jsonLd } from "@/lib/json-ld";
 import { NON_FOOD_CATEGORY } from "@/lib/catalog-utils";
 
 export const revalidate = 300;
@@ -45,29 +45,19 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   const isFood = product.category.slug !== NON_FOOD_CATEGORY;
   const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
 
-  const jsonLd = {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     description: product.shortDescription,
     image: product.images.map((i) => (i.startsWith("http") ? i : `${siteConfig.url}${i}`)),
     category: product.category.name,
-    brand: product.producer ?? siteConfig.name,
     countryOfOrigin: product.originCountry ?? undefined,
-    sku: product.variants[0]?.sku ?? undefined,
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "EUR",
-      lowPrice: (minPriceCents(product) / 100).toFixed(2),
-      highPrice: (Math.max(...product.variants.map((v) => v.priceCents)) / 100).toFixed(2),
-      offerCount: product.variants.length,
-      availability: totalStock(product) > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-    },
   };
 
   return (
     <div className="container-page py-8 sm:py-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
       <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-muted">
         <Link href="/" className="hover:underline">Accueil</Link> /{" "}
         <Link href={`/boutique?gamme=${product.category.slug}`} className="hover:underline">{product.category.name}</Link> /{" "}
@@ -83,16 +73,12 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
           <p className="mt-3 text-muted">{product.shortDescription}</p>
 
           <div className="mt-6">
-            {product.amazonAsin && product.variants[0] ? (
+            {product.amazonAsin && product.variants[0] && (
               <>
                 <p className="text-sm text-muted">{product.variants[0].label}</p>
                 <AmazonBuyButton asin={product.amazonAsin} priceCents={product.variants[0].priceCents} name={product.name} className="btn-primary mt-3 h-12 w-full px-8 text-base sm:w-auto" />
+                <p className="mt-2 text-xs text-muted">Prix indicatif relevé sur Amazon le {AMAZON_PRICES_CHECKED_ON} : seul le prix affiché sur Amazon au moment de l&apos;achat fait foi.</p>
               </>
-            ) : (
-              <AddToCart
-                product={{ id: product.id, slug: product.slug, name: product.name, image: product.images[0] ?? null }}
-                variants={product.variants}
-              />
             )}
           </div>
 

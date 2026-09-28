@@ -10,6 +10,7 @@ import { RecipeIngredients, type LinkedProduct } from "@/components/recipe/Recip
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { minPriceCents } from "@/lib/catalog-utils";
 import { siteConfig } from "@/lib/config";
+import { jsonLd } from "@/lib/json-ld";
 import { formatDate, formatPrice } from "@/lib/format";
 import { countryByCode } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
@@ -48,12 +49,11 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   const used = products.filter((p) => recipe.ingredients.some((i) => i.productSlug === p.slug));
   const linked: Record<string, LinkedProduct> = {};
   for (const p of used) {
-    const v = [...p.variants].sort((a, b) => a.priceCents - b.priceCents).find((x) => x.stock > 0) ?? p.variants[0];
-    linked[p.slug] = { productId: p.id, slug: p.slug, name: p.name, image: p.images[0] ?? null, variantId: v.id, variantLabel: v.label, priceCents: v.priceCents, stock: v.stock, amazonAsin: p.amazonAsin };
+    if (p.amazonAsin && p.variants[0]) linked[p.slug] = { slug: p.slug, name: p.name, priceCents: p.variants[0].priceCents, amazonAsin: p.amazonAsin };
   }
 
   const url = `${siteConfig.url}/recette/${recipe.slug}`;
-  const jsonLd = {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: recipe.name,
@@ -85,7 +85,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
 
   return (
     <article className="container-page pb-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted print:hidden">
         <Link href="/" className="hover:underline">Accueil</Link> /{" "}
         <Link href={`/recettes?type=${recipe.course}`} className="hover:underline">{courseName(recipe.course)}</Link> /{" "}
@@ -230,7 +230,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
           <h2 id="produits-recette" className="font-display text-3xl">
             Les produits rares de cette recette<span className="text-[#ff7a3d]">.</span>
           </h2>
-          <p className="mt-1 text-sm text-muted">À partir de {formatPrice(Math.min(...used.map(minPriceCents)))}.</p>
+          <p className="mt-1 text-sm text-muted">À partir de {formatPrice(Math.min(...used.map(minPriceCents)))} sur Amazon (prix indicatifs).</p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
             {used.map((p) => (
               <VarietyCard key={p.id} product={p} />

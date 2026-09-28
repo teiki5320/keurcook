@@ -12,7 +12,7 @@ imagePrompt: Photographie culinaire, tasse en verre remplie d'une infusion rouge
 ---
 ## Une plante d'Afrique du Sud
 
-Le rooibos est un arbuste qui pousse en Afrique du Sud, dans la région du Cederberg, au nord de la ville du Cap. Son nom signifie « buisson rouge » en afrikaans. Ce n'est pas un thé au sens strict : il ne provient pas du théier, et il ne contient pas de théine. On le boit comme un thé, chaud ou froid, à toute heure.
+Le rooibos est un arbuste qui pousse en Afrique du Sud, dans la région du Cederberg, au nord de la ville du Cap. Son nom signifie « buisson rouge » en afrikaans. Ce n'est pas un thé au sens strict : il ne provient pas du théier. On le boit comme un thé, chaud ou froid, à toute heure.
 
 ## Rouge ou vert
 

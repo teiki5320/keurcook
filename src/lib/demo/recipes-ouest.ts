@@ -9,7 +9,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     countryCode: "NG",
     region: "Lagos",
     course: "riz-cereales",
-    shortDescription: "Riz cuit dans une sauce tomate pimentée, fumé au fond de la marmite.",
+    shortDescription: "Riz cuit dans une sauce tomate et poivron pimentée, légèrement fumé au fond de la marmite : le riz des fêtes de Lagos.",
     story:
       "Le riz jollof tiendrait son nom de l'ancien royaume wolof (Djolof), au Sénégal, où serait né l'ancêtre du plat, le thiéboudienne. Il a voyagé le long de la côte et s'est imposé au Nigeria et au Ghana, qui se disputent aujourd'hui, avec beaucoup d'humour, le titre du « meilleur jollof ».\n\nAu Nigeria, c'est le plat incontournable des « parties » : mariages, anniversaires et fêtes de quartier. Les connaisseurs réclament le riz légèrement fumé qui accroche au fond de la marmite, le fameux « party jollof ».",
     prepMinutes: 25,
@@ -36,7 +36,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       "Verser la purée réduite, le curry, le thym, le laurier et une pincée de yaji. Laisser frémir 10 minutes : l'huile doit remonter à la surface.",
       "Rincer le riz jusqu'à ce que l'eau soit claire, puis l'ajouter à la sauce avec le bouillon. Bien mélanger, saler et porter à ébullition.",
       "Couvrir d'une feuille d'aluminium puis du couvercle et cuire 30 minutes à feu très doux, sans remuer, pour que le riz cuise à la vapeur.",
-      "En fin de cuisson, monter le feu 3 à 4 minutes pour laisser le fond accrocher légèrement, puis égrainer à la fourchette avant de servir.",
+      "En fin de cuisson, monter le feu 3 à 4 minutes pour laisser le fond accrocher légèrement, puis égrener à la fourchette avant de servir.",
     ],
     tips: [
       "Servez avec du plantain frit (dodo) et du poulet grillé, comme dans les fêtes de Lagos.",
@@ -52,9 +52,9 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     countryCode: "NG",
     region: "Pays yoruba et igbo",
     course: "mijotes",
-    shortDescription: "Sauce épaisse aux graines de melon moulues, légumes-feuilles et poisson fumé.",
+    shortDescription: "Sauce épaisse aux graines d'egusi moulues (pistache africaine), avec légumes-feuilles, bœuf et poisson fumé.",
     story:
-      "L'egusi désigne les graines d'une variété de melon cultivée pour ses pépins, que l'on sèche puis que l'on moud. Au Nigeria, la soupe egusi se prépare aussi bien chez les Yorubas que chez les Igbos, chacun avec sa manière de cuire les graines : en petits grumeaux ou en sauce lisse.\n\nOn la déguste avec une boule d'igname pilée, d'eba ou de fufu, que l'on façonne du bout des doigts pour attraper la sauce.",
+      "L'egusi désigne les graines d'une courge de la famille du melon, cultivée pour ses pépins et parfois appelée « pistache africaine » : on les sèche, on les décortique puis on les moud. Au Nigeria, la soupe egusi se prépare aussi bien chez les Yorubas que chez les Igbos, chacun avec sa manière de cuire les graines : en petits grumeaux ou en sauce lisse.\n\nOn la déguste avec une boule d'igname pilée, d'eba ou de fufu, que l'on façonne du bout des doigts pour attraper la sauce.",
     prepMinutes: 25,
     cookMinutes: 50,
     servings: 6,
@@ -92,7 +92,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     countryCode: "CI",
     region: "Sud de la Côte d'Ivoire",
     course: "mijotes",
-    shortDescription: "Poulet mijoté dans une sauce onctueuse à la pulpe de noix de palme.",
+    shortDescription: "Poulet et poisson fumé mijotés dans une sauce onctueuse à la pulpe de noix de palme, un classique ivoirien.",
     story:
       "La « graine », c'est la noix de palme, que l'on fait bouillir puis que l'on pile pour en extraire une pulpe orangée et parfumée. La sauce graine est l'un des grands classiques de la cuisine ivoirienne, surtout dans le Sud forestier où poussent les palmiers à huile.\n\nOn la sert le dimanche avec du riz blanc, du foutou banane ou du placali, et chaque famille garde jalousement sa manière de la parfumer.",
     prepMinutes: 20,
@@ -150,8 +150,8 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       [null, null, "sel et poivre"],
     ],
     steps: [
-      "Arroser l'attiéké sec de 30 cl d'eau tiède salée, bien l'égrainer avec les doigts et laisser gonfler 10 minutes à couvert.",
-      "Cuire l'attiéké 10 minutes à la vapeur dans un couscoussier, puis l'égrainer de nouveau à la fourchette.",
+      "Arroser l'attiéké sec de 30 cl d'eau tiède salée, bien l'égrener avec les doigts et laisser gonfler 10 minutes à couvert.",
+      "Cuire l'attiéké 10 minutes à la vapeur dans un couscoussier, puis l'égrener de nouveau à la fourchette.",
       "Couper le thon en gros morceaux, l'assaisonner avec le cube de bouillon émietté, du sel et du poivre.",
       "Faire chauffer l'huile et frire le thon 6 à 8 minutes, jusqu'à ce qu'il soit bien doré et croustillant à l'extérieur. Égoutter sur du papier absorbant.",
       "Émincer finement les oignons, couper les tomates en dés et hacher les piments. Servir l'attiéké en dôme, le thon par-dessus, garni d'oignon, de tomate et de piment, avec un filet d'huile de friture.",
@@ -211,7 +211,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     countryCode: "BF",
     region: "Plateau central",
     course: "accompagnements",
-    shortDescription: "Pâte de maïs ferme servie avec une sauce gombo filante au soumbala.",
+    shortDescription: "Pâte ferme de farine de maïs, découpée à la main et servie avec une sauce gombo filante parfumée au soumbala.",
     story:
       "Le tô est la base des repas au Burkina Faso : une pâte ferme de farine de mil, de sorgho ou de maïs, que l'on découpe à la main et que l'on trempe dans la sauce. Chaque soir, dans les cours familiales, les grandes marmites de tô se préparent au feu de bois.\n\nLa sauce gombo, légèrement filante, en est la compagne la plus courante. Le soumbala, condiment fermenté à base de graines de néré, lui apporte son parfum profond si caractéristique.",
     prepMinutes: 20,
@@ -221,7 +221,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     ingredients: [
       [600, "g", "farine de maïs blanc"],
       [2, "l", "eau"],
-      [1, "c. à soupe", "jus de citron (ou d'eau de tamarin)"],
+      [1, "c. à soupe", "jus de citron (ou eau de tamarin)"],
       [60, "g", "gombo séché en poudre", "gombo-seche"],
       [2, "c. à soupe", "soumbala", "soumbala"],
       [400, "g", "viande de mouton ou de bœuf en morceaux"],
@@ -268,7 +268,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       [150, "g", "pâte d'arachide", "pate-d-arachide"],
       [2, null, "oignons"],
       [2, "c. à soupe", "concentré de tomate"],
-      [1, "c. à café", "poivre de Sélim moulu", "poivre-de-selim"],
+      [1, "c. à café", "poivre de Selim moulu", "poivre-de-selim"],
       [5, "cl", "huile d'arachide"],
       [30, "g", "beurre"],
       [null, null, "sel"],
@@ -276,13 +276,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     steps: [
       "Faire tremper le niébé 2 heures (ou la veille), puis le cuire 40 minutes à l'eau salée.",
       "Sauce : faire revenir le mouton dans l'huile avec les oignons émincés, ajouter le concentré de tomate et couvrir de 1,2 litre d'eau. Cuire 45 minutes, puis délayer la pâte d'arachide dans la sauce et laisser mijoter encore 15 minutes. Ajouter le niébé en fin de cuisson.",
-      "Humecter le couscous de mil avec 15 cl d'eau salée, l'égrainer et le cuire 20 minutes à la vapeur au-dessus d'une marmite d'eau frémissante.",
-      "Réhydrater les feuilles de moringa 5 minutes dans un peu d'eau tiède, les égoutter, puis les mélanger au couscous avec le beurre et le poivre de Sélim.",
-      "Remettre le couscous 15 minutes à la vapeur pour qu'il s'imprègne du parfum des feuilles, puis l'égrainer à la main.",
+      "Humecter le couscous de mil avec 15 cl d'eau salée, l'égrener et le cuire 20 minutes à la vapeur au-dessus d'une marmite d'eau frémissante.",
+      "Réhydrater les feuilles de moringa 5 minutes dans un peu d'eau tiède, les égoutter, puis les mélanger au couscous avec le beurre et le poivre de Selim.",
+      "Remettre le couscous 15 minutes à la vapeur pour qu'il s'imprègne du parfum des feuilles, puis l'égrener à la main.",
       "Servir le thiéré en large plat, arrosé de sauce, avec la viande et le niébé par-dessus.",
     ],
     tips: [
-      "Le couscous doit rester bien égrainé : travaillez-le avec les mains légèrement huilées entre deux cuissons.",
+      "Le couscous doit rester bien égrené : travaillez-le avec les mains légèrement huilées entre deux cuissons.",
       "À la Tamkharit, on le sert souvent avec une sauce tomate au poulet.",
     ],
     tags: ["mil", "moringa", "fête"],
@@ -398,7 +398,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       "Rincer les feuilles de sorgho et les déchirer en gros morceaux. Les mettre dans une marmite avec les haricots, le bicarbonate et 1,5 litre d'eau.",
       "Cuire 40 minutes à feu moyen, jusqu'à ce que les haricots soient presque tendres et que l'eau ait pris une couleur rouge sombre.",
       "Rincer le riz jusqu'à ce que l'eau soit claire, l'ajouter à la marmite avec du sel. L'eau doit dépasser le riz d'environ 1 cm ; en rajouter si besoin.",
-      "Couvrir et cuire 25 minutes à feu doux, jusqu'à absorption complète du liquide. Retirer les feuilles de sorgho et égrainer à la fourchette.",
+      "Couvrir et cuire 25 minutes à feu doux, jusqu'à absorption complète du liquide. Retirer les feuilles de sorgho et égrener à la fourchette.",
       "Servir avec des œufs durs, du gari et, selon les goûts, du shito, du poisson frit et une salade de chou.",
     ],
     tips: [

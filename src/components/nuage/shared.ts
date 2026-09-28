@@ -2,9 +2,6 @@
 
 import { useRef } from "react";
 
-/** Événement écouté par <CartDrawer> pour ouvrir le mini-panier après un ajout. */
-export const CART_ADDED_EVENT = "alohash:cart-added";
-
 export { anton } from "./typography";
 
 /**

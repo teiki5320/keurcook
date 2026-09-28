@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Politique de confidentialité", alte
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Politique de confidentialité" updated="24 septembre 2026">
+    <LegalPage title="Politique de confidentialité" updated="28 septembre 2026">
       <p>
         {legalConfig.companyName} (« nous ») attache une grande importance à la protection de vos données personnelles,
         traitées conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et
@@ -22,14 +22,6 @@ export default function PrivacyPage() {
       <h2>Données collectées et finalités</h2>
       <ul>
         <li>
-          <strong>Gestion des commandes</strong> : nom, prénom, email, téléphone, adresse de livraison, contenu de la
-          commande. Base légale : exécution du contrat.
-        </li>
-        <li>
-          <strong>Obligations comptables et fiscales</strong> : factures et données de commande. Base légale : obligation
-          légale.
-        </li>
-        <li>
           <strong>Avis sur les recettes</strong> : prénom, note et commentaire, publiés après relecture. Base légale :
           consentement (dépôt volontaire de l&apos;avis).
         </li>
@@ -39,16 +31,16 @@ export default function PrivacyPage() {
           lien de désinscription de chaque e-mail.
         </li>
         <li>
-          <strong>Sécurité de l&apos;espace d&apos;administration</strong> : identifiants de connexion des
-          administrateurs. Base légale : intérêt légitime.
+          <strong>Sécurité du site</strong> : pour limiter les envois abusifs (avis, newsletter, connexion à
+          l&apos;administration), une empreinte non réversible de l&apos;adresse IP est conservée un jour au plus. Base
+          légale : intérêt légitime.
         </li>
       </ul>
       <p>Nous ne collectons aucune donnée de santé et ne revendons jamais vos données.</p>
 
       <h2>Durées de conservation</h2>
       <ul>
-        <li>Données de commande : 3 ans à compter de la dernière commande à des fins de relation client.</li>
-        <li>Pièces comptables : 10 ans (article L. 123-22 du code de commerce).</li>
+        <li>Empreintes d&apos;adresse IP (limitation des envois) : un jour au plus.</li>
         <li>Newsletter : jusqu&apos;à la désinscription, puis 3 ans sans ouverture ni clic. Avis : tant que la recette est publiée.</li>
         <li>Choix en matière de cookies : 6 mois.</li>
       </ul>
@@ -56,9 +48,16 @@ export default function PrivacyPage() {
       <h2>Destinataires et sous-traitants</h2>
       <p>
         Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site
-        ({legalConfig.hostName}), base de données (Neon), envoi d&apos;emails (prestataire SMTP), transporteur. Lorsque des
+        ({legalConfig.hostName}) et base de données (Neon). Lorsque des
         données sont transférées hors de l&apos;Union européenne, ce transfert est encadré par des clauses contractuelles
         types de la Commission européenne.
+      </p>
+
+      <h2>Liens vers Amazon</h2>
+      <p>
+        Les boutons « Acheter » ouvrent Amazon.fr avec notre identifiant de partenaire, qui permet à Amazon de nous
+        rémunérer sur les achats. Nous ne recevons aucune donnée personnelle de votre part à cette occasion. Sur Amazon,
+        vos données et les cookies déposés relèvent de la politique de confidentialité d&apos;Amazon.
       </p>
 
       <h2>Vos droits</h2>
@@ -74,11 +73,11 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté.</li>
         <li><strong>ah_consent</strong> (nécessaire) — mémorise vos choix en matière de cookies, 6 mois.</li>
-        <li><strong>Panier</strong> (stockage local, nécessaire) — conserve le contenu de votre panier.</li>
-        <li><strong>sb-*</strong> (nécessaire) — session de l&apos;espace d&apos;administration uniquement.</li>
+        <li><strong>alohash_admin</strong> (nécessaire) — session de l&apos;espace d&apos;administration, réservé à l&apos;éditeur.</li>
       </ul>
       <p>
-        Aucun cookie de mesure d&apos;audience ou publicitaire n&apos;est déposé sans votre consentement. Vous pouvez
+        Le site ne dépose aucun cookie de mesure d&apos;audience ni publicitaire. Amazon.fr, une fois ouvert, dépose ses
+        propres cookies. Vous pouvez
         modifier vos choix à tout moment : <CookieSettingsButton className="font-semibold text-forest-700 underline" />.
       </p>
     </LegalPage>

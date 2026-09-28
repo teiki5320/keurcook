@@ -49,49 +49,6 @@ export interface ProductWithCategory extends Product {
   category: Category;
 }
 
-export type OrderStatus =
-  | "pending_payment"
-  | "paid"
-  | "preparing"
-  | "shipped"
-  | "delivered"
-  | "cancelled";
-
-export interface OrderItem {
-  id: string;
-  productId: string | null;
-  variantId: string | null;
-  productName: string;
-  variantLabel: string;
-  unitPriceCents: number;
-  quantity: number;
-}
-
-export interface Order {
-  id: string;
-  orderNumber: string;
-  accessToken: string;
-  status: OrderStatus;
-  email: string;
-  firstName: string;
-  lastName: string;
-  phone: string | null;
-  addressLine1: string;
-  addressLine2: string | null;
-  postalCode: string;
-  city: string;
-  country: string;
-  notes: string | null;
-  paymentProvider: string;
-  paymentReference: string | null;
-  subtotalCents: number;
-  shippingCents: number;
-  totalCents: number;
-  trackingNumber: string | null;
-  createdAt: string;
-  items: OrderItem[];
-}
-
 export interface CustomerInput {
   email: string;
   firstName: string;

@@ -38,6 +38,6 @@ Inutile d'avoir tout : deux ou trois épices bien choisies changent déjà beauc
 
 ## Pour les boissons
 
-Un sachet de [fleurs de bissap](/produit/fleurs-de-bissap) se garde longtemps et permet de préparer un [jus de bissap](/recette/jus-de-bissap) quand vous recevez. Du gingembre frais complète le tout pour les boissons pimentées.
+Un sachet de [fleurs de bissap](/produit/fleurs-de-bissap) se garde longtemps et permet de préparer un [jus de bissap](/recette/jus-de-bissap) quand vous recevez. Du gingembre frais complète le tout pour les boissons relevées.
 
 Si vous débutez, commencez par les ingrédients d'une ou deux recettes simples, puis élargissez petit à petit : voir aussi [par quelle recette commencer](/conseils/par-quelle-recette-commencer).
