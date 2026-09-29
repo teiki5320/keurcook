@@ -13,7 +13,7 @@ export const COUNTRIES: Country[] = [
     lon: -14.8,
     lat: 14.6,
     description:
-      "Riz cassé, poisson, oignons confits et citron vert : la cuisine sénégalaise est généreuse et parfumée, portée par des produits de caractère comme le guedj (poisson séché) ou le nététou.",
+      "Riz cassé, poisson, oignons confits et citron vert : une cuisine généreuse, relevée par le guedj (poisson séché) et le nététou.",
   },
   {
     code: "ML",

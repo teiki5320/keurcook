@@ -11,7 +11,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     course: "riz-cereales",
     shortDescription: "Riz cuit dans une sauce tomate et poivron pimentée, légèrement fumé au fond de la marmite : le riz des fêtes de Lagos.",
     story:
-      "Le riz jollof tiendrait son nom de l'ancien royaume wolof (Djolof), au Sénégal, où serait né l'ancêtre du plat, le thiéboudienne. Il a voyagé le long de la côte et s'est imposé au Nigeria et au Ghana, qui se disputent aujourd'hui, avec beaucoup d'humour, le titre du « meilleur jollof ».\n\nAu Nigeria, c'est le plat incontournable des « parties » : mariages, anniversaires et fêtes de quartier. Les connaisseurs réclament le riz légèrement fumé qui accroche au fond de la marmite, le fameux « party jollof ».",
+      "Le riz jollof tiendrait son nom de l'ancien royaume wolof (Djolof), au Sénégal, où serait né l'ancêtre du plat, le thiéboudienne. Il a voyagé le long de la côte et s'est imposé au Nigeria et au Ghana, qui se disputent aujourd'hui, avec beaucoup d'humour, le titre du « meilleur jollof ».\n\nAu Nigeria, c'est le plat incontournable des « parties » : mariages, anniversaires et fêtes de quartier. Le « party jollof », cuit au feu de bois dans de grandes marmites, est réputé pour son goût légèrement fumé. Quant au riz qui accroche au fond de la marmite, le « bottom pot », les connaisseurs se le disputent.",
     prepMinutes: 25,
     cookMinutes: 60,
     servings: 6,
@@ -220,7 +220,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     difficulty: 2,
     ingredients: [
       [600, "g", "farine de maïs blanc"],
-      [2, "l", "eau"],
+      [3, "l", "eau (1 l pour la sauce, 2 l pour le tô)"],
       [1, "c. à soupe", "jus de citron (ou eau de tamarin)"],
       [60, "g", "gombo séché en poudre", "gombo-seche"],
       [2, "c. à soupe", "soumbala", "soumbala"],
@@ -249,6 +249,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
   // ---------------------------------------------------------- Thiéré mbuum
   {
     slug: "thiere-mbuum",
+    equipment: ["couscoussier"],
     name: "Thiéré mbuum",
     countryCode: "SN",
     region: "Saloum et pays sérère",
@@ -344,7 +345,8 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     servings: 4,
     difficulty: 2,
     ingredients: [
-      [500, "g", "farine de foufou", "farine-de-foufou"],
+      [250, "g", "farine de foufou (manioc)", "farine-de-foufou"],
+      [250, "g", "farine de plantain pour foufou", "farine-de-plantain-pour-fufu"],
       [1, "kg", "poulet ou chèvre en morceaux"],
       [4, null, "tomates"],
       [2, null, "oignons"],
@@ -358,7 +360,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       "Assaisonner la viande avec un oignon mixé, le gingembre râpé et du sel. La faire suer 10 minutes à couvert dans une marmite, sans eau.",
       "Ajouter 1,5 litre d'eau, les tomates, le second oignon, les piments et les aubergines entiers. Cuire 15 minutes, puis retirer les légumes.",
       "Mixer les légumes cuits avec un peu de bouillon, puis les passer au tamis au-dessus de la marmite. Ajouter le poisson fumé et laisser mijoter 20 minutes.",
-      "Pendant ce temps, porter 75 cl d'eau à ébullition. Hors du feu, verser la farine de foufou en pluie en remuant vigoureusement avec une spatule solide.",
+      "Pendant ce temps, porter 75 cl d'eau à ébullition. Mélanger les deux farines, puis, hors du feu, les verser en pluie en remuant vigoureusement avec une spatule solide.",
       "Remettre sur feu doux et travailler la pâte 5 à 8 minutes en la rabattant sans cesse, jusqu'à ce qu'elle soit lisse, élastique et brillante. Former des boules avec les mains mouillées.",
       "Déposer une boule de foufou dans chaque bol creux et la recouvrir de light soup bien chaude, avec les morceaux de viande.",
     ],
@@ -366,7 +368,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       "Mouillez vos mains à l'eau froide pour façonner le foufou sans qu'il colle.",
       "Pour une soupe plus relevée, écrasez un piment dans le bol au moment de servir.",
     ],
-    tags: ["fufu", "soupe", "dimanche"],
+    tags: ["foufou", "soupe", "dimanche"],
     featured: false,
   },
   // ---------------------------------------------------------- Waakye
@@ -378,7 +380,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     course: "riz-cereales",
     shortDescription: "Riz et haricots cuits ensemble, teintés de rouge brun par les feuilles de sorgho.",
     story:
-      "Le waakye (prononcer « waa-tchi ») viendrait des peuples haoussas du nord du Ghana, avant de conquérir Accra et tout le pays. Son nom signifierait simplement « riz et haricots » en haoussa.\n\nSa couleur brun-rouge caractéristique vient des feuilles de sorgho séchées que l'on fait cuire avec le riz. Le matin, les vendeuses le servent sur une feuille de bananier avec du shito, du gari, des spaghettis, un œuf dur et du poisson frit.",
+      "Le waakye (prononcer « waa-tchi ») viendrait des peuples haoussas du nord du Ghana, avant de conquérir Accra et tout le pays. Son nom viendrait du haoussa wake, « haricots ».\n\nSa couleur brun-rouge caractéristique vient des feuilles de sorgho séchées que l'on fait cuire avec le riz. Le matin, les vendeuses le servent sur une feuille de bananier avec du shito, du gari, des spaghettis, un œuf dur et du poisson frit.",
     prepMinutes: 15,
     cookMinutes: 70,
     servings: 6,

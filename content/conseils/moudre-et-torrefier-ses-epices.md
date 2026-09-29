@@ -33,7 +33,7 @@ Attendez que les épices soient bien froides avant de les moudre, sinon la poudr
 
 ## Dans la cuisine africaine
 
-On torréfie de la même façon le café et le [poivre de Selim](/produit/poivre-de-selim) pour le [café Touba](/recette/cafe-touba). Les mélanges prêts à l'emploi comme le [berbéré](/produit/berbere), indispensable au [misir wat](/recette/misir-wat) et au [shiro](/recette/shiro), ou le [yaji](/produit/yaji-suya) du [suya](/recette/suya), gagnent à être réchauffés quelques instants dans l'huile chaude en début de cuisson : leur parfum s'ouvre de la même manière.
+On torréfie de la même façon le café et le [poivre de Selim](/produit/poivre-de-selim) pour le [café Touba](/recette/cafe-touba). Les mélanges prêts à l'emploi comme le [berbéré](/produit/berbere), indispensable au [misir wat](/recette/misir-wat) et au [shiro](/recette/shiro), gagnent à être réchauffés quelques instants dans l'huile chaude en début de cuisson : leur parfum s'ouvre de la même manière. Le [yaji](/produit/yaji-suya), lui, s'utilise plutôt en enrobage sur la viande, comme dans le [suya](/recette/suya).
 
 ## Conserver
 

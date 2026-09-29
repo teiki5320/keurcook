@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, Search, X } from "lucide-react";
 import { normalizePath } from "./immersive";
 import { TLink } from "./PageTransition";
@@ -49,6 +49,8 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
   const pathname = normalizePath(usePathname());
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const menuPanel = useRef<HTMLDivElement>(null);
 
   // Ferme menu et recherche à chaque changement de page.
   useEffect(() => {
@@ -67,6 +69,39 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  // Menu mobile ouvert : focus dans le menu, Tab reste à l'intérieur, page figée,
+  // puis focus rendu au bouton « Ouvrir le menu » à la fermeture.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const panel = menuPanel.current;
+    const opener = menuButton.current;
+    const focusables = () =>
+      Array.from(panel?.querySelectorAll<HTMLElement>("a[href], button, input, [tabindex]:not([tabindex='-1'])") ?? []);
+    focusables()[0]?.focus();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      const list = focusables();
+      if (!list.length) return;
+      const first = list[0];
+      const last = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previousOverflow;
+      opener?.focus();
+    };
+  }, [menuOpen]);
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href.split("?")[0]) && !href.includes("?"));
 
@@ -104,11 +139,13 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
             onClick={() => setSearchOpen((o) => !o)}
             aria-label="Rechercher"
             aria-expanded={searchOpen}
+            aria-controls="recherche-entete"
             className="flex h-10 w-10 items-center justify-center rounded-full text-[#fbeee2] hover:bg-[#fbeee2]/10"
           >
             <Search className="h-5 w-5" aria-hidden />
           </button>
           <button
+            ref={menuButton}
             type="button"
             onClick={() => setMenuOpen(true)}
             aria-label="Ouvrir le menu"
@@ -121,7 +158,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
       </div>
 
       {searchOpen && (
-        <div className="mx-auto max-w-xl px-4 pb-3">
+        <div id="recherche-entete" className="mx-auto max-w-xl px-4 pb-3">
           <SearchBox autoFocus onDone={() => setSearchOpen(false)} />
         </div>
       )}
@@ -129,7 +166,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
     </header>
       {/* Hors de <header> : son flou d'arrière-plan enfermerait le menu dans l'en-tête. */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[60] overflow-y-auto bg-[#140a07]/97 backdrop-blur-md lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
+        <div ref={menuPanel} className="fixed inset-0 z-[60] overflow-y-auto bg-[#140a07]/97 backdrop-blur-md lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
           <div className="flex items-center justify-between px-5 py-4">
             <span className="text-[26px] text-[#fbeee2]" style={anton}>
               MENU<span className="text-[#ff7a3d]">.</span>
@@ -153,6 +190,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
                   <TLink
                     href={item.href}
                     label={item.label}
+                    aria-current={isActive(item.href) ? "page" : undefined}
                     className={`block py-4 text-3xl uppercase ${isActive(item.href) ? "text-[#ff7a3d]" : "text-[#fbeee2]"}`}
                     style={anton}
                   >

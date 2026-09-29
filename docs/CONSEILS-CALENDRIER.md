@@ -1,6 +1,6 @@
 # Calendrier des articles « Conseils »
 
-Validé avec l'utilisateur le 26/09/2026. Un article par lundi (heure de Paris). Les 10 premiers (20/07 → 21/09/2026) sont en ligne.
+Validé avec l'utilisateur le 26/09/2026. Un article par lundi (heure de Paris). Les articles paraissent un par un, chaque lundi, depuis le 20/07/2026.
 
 | Date | Thème | Question |
 | --- | --- | --- |

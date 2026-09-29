@@ -80,6 +80,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
   },
   {
     slug: "injera",
+    equipment: ["plaque-a-injera"],
     name: "Injera au teff",
     countryCode: "ET",
     region: "Hauts plateaux",
@@ -281,11 +282,11 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     story:
       "Ravitoto signifie littéralement « feuilles pilées » en malgache : ce sont des feuilles de manioc écrasées au pilon, puis cuites longuement avec du porc (henakisoa). C'est l'un des plats les plus aimés de Madagascar, que l'on prépare pour le repas dominical ou lorsque la famille est réunie.\n\nLe gras du porc fond dans les feuilles et leur donne une texture riche et soyeuse, relevée par l'ail et le gingembre. Certaines familles y ajoutent du lait de coco, surtout sur la côte est.",
     prepMinutes: 30,
-    cookMinutes: 90,
+    cookMinutes: 80,
     servings: 6,
     difficulty: 2,
     ingredients: [
-      [300, "g", "feuilles de manioc pilées séchées", "feuilles-de-manioc"],
+      [1260, "g", "feuilles de manioc pilées en conserve (3 boîtes de 420 g)", "feuilles-de-manioc"],
       [1, "kg", "poitrine ou échine de porc en cubes"],
       [2, null, "oignons"],
       [6, "gousses", "ail"],
@@ -295,14 +296,14 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       [null, null, "sel et poivre noir"],
     ],
     steps: [
-      "Réhydrater les feuilles de manioc 30 minutes dans l'eau tiède, puis les rincer et les égoutter. Les cuire 20 minutes dans une grande casserole d'eau bouillante et jeter l'eau de cuisson.",
+      "Égoutter les feuilles de manioc et les rincer à l'eau claire dans une passoire.",
       "Mettre le porc dans une cocotte avec un fond d'eau et un peu de sel. Cuire à couvert 20 minutes, puis retirer le couvercle et laisser l'eau s'évaporer jusqu'à ce que la viande dore dans son propre gras.",
       "Ajouter les oignons émincés, puis l'ail et le gingembre pilés. Faire revenir 5 minutes, ajouter les tomates en dés et cuire encore 5 minutes.",
-      "Incorporer les feuilles de manioc égouttées, bien mélanger et mouiller avec 50 cl d'eau. Laisser mijoter à couvert 40 minutes à feu doux en remuant de temps en temps.",
+      "Incorporer les feuilles de manioc égouttées, bien mélanger et mouiller avec 50 cl d'eau. Laisser mijoter à couvert 30 minutes à feu doux en remuant de temps en temps.",
       "Ajouter le lait de coco si vous le souhaitez, cuire encore 10 minutes et rectifier l'assaisonnement. Le plat doit être fondant et peu liquide. Servir avec du riz blanc.",
     ],
     tips: [
-      "Les feuilles de manioc doivent toujours être bien cuites : ne raccourcissez pas le temps de cuisson.",
+      "Même en conserve, laissez bien mijoter les feuilles avec le porc : elles doivent être fondantes et bien imprégnées de la sauce.",
       "Comme beaucoup de plats mijotés, le ravitoto est encore meilleur réchauffé le lendemain.",
     ],
     tags: ["porc", "feuilles de manioc", "dimanche"],

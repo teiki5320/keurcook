@@ -23,7 +23,7 @@ Pour remplacer une ou deux gousses dans une recette familiale :
 3. Si vous en avez, ajoutez une ou deux graines de cardamome écrasées pour la note résineuse.
 4. Goûtez et ajustez : le mélange doit rester discret, sans que la muscade domine.
 
-Un poivre très aromatique comme le [poivre de Penja](/produit/poivre-de-penja) donne un résultat plus fin qu'un poivre ordinaire. Certains cuisiniers utilisent aussi le poivre long ou le poivre de Guinée (maniguette), dont les notes chaudes rappellent un peu le djar.
+Un poivre très aromatique comme le [poivre de Penja](/produit/poivre-de-penja) donne un résultat plus fin qu'un poivre ordinaire. Certains cuisiniers utilisent aussi le poivre long ou la [maniguette](/produit/maniguette) (graines de paradis), dont les notes chaudes rappellent un peu le djar.
 
 ## Selon la recette
 

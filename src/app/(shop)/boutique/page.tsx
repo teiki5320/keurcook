@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { BoutiqueBrowser } from "@/components/shop/BoutiqueBrowser";
 import { getCatalog } from "@/lib/data/catalog";
+import { getMaintenance } from "@/lib/data/settings";
 import { getGammes } from "@/lib/data/gammes";
 
 export const metadata: Metadata = pageMetadata({
@@ -12,6 +13,8 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default async function ShopPage() {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const [gammes, { products }] = await Promise.all([getGammes(), getCatalog()]);
   return (
     <BoutiqueBrowser

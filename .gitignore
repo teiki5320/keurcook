@@ -41,8 +41,10 @@ next-env.d.ts
 !.env.example
 
 # export statique GitHub Pages
-/.static-export-stash/
 
 # Dossiers de travail locaux
 /.nuage-backup/
 /.claude/
+
+# Images de partage générées au build (scripts/og-images.mjs)
+/public/og/

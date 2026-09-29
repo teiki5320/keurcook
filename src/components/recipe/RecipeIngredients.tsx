@@ -61,7 +61,7 @@ export function RecipeIngredients({
               </span>
               {product && (
                 <span className="flex shrink-0 items-center gap-1.5 print:hidden">
-                  <TLink href={`/produit/${product.slug}`} label={product.name} className="rounded-full bg-[#ff7a3d]/15 px-2.5 py-1 text-[11px] font-bold text-[#ffc46b] hover:bg-[#ff7a3d]/25">
+                  <TLink href={`/produit/${product.slug}`} label={product.name} aria-label={`Produit rare : ${product.name}`} className="rounded-full bg-[#ff7a3d]/15 px-2.5 py-1 text-[11px] font-bold text-[#ffc46b] hover:bg-[#ff7a3d]/25">
                     Produit rare
                   </TLink>
                   <AmazonBuyButton
@@ -77,7 +77,9 @@ export function RecipeIngredients({
           );
         })}
       </ul>
-
+      {Object.keys(products).length > 0 && (
+        <p className="mt-3 text-xs text-[#fbeee2]/60 print:hidden">Les paniers orange sont des liens partenaires Amazon.</p>
+      )}
     </div>
   );
 }

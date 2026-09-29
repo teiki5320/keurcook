@@ -13,8 +13,8 @@ import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
 import { getCatalog } from "@/lib/data/catalog";
 import { getConseilBySlug, getConseils, getRelatedConseils, renderConseil } from "@/lib/data/conseils";
+import { getMaintenance } from "@/lib/data/settings";
 import { getRecipes } from "@/lib/data/recipes";
-import { withBasePath } from "@/lib/paths";
 
 // Relu toutes les heures : un article programmé devient accessible le jour de sa date.
 
@@ -40,6 +40,8 @@ export async function generateMetadata({ params }: PageProps<"/conseils/[slug]">
 }
 
 export default async function ConseilPage({ params }: PageProps<"/conseils/[slug]">) {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const { slug } = await params;
   const conseil = getConseilBySlug(slug);
   if (!conseil) notFound();
@@ -106,7 +108,7 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
         <div className={`relative overflow-hidden rounded-[28px] border border-[#fbeee2]/10 bg-[#281610] ${conseil.image ? "aspect-[16/9]" : "aspect-[3/1]"}`}>
           {conseil.image ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={withBasePath(conseil.image)} alt={conseil.imageAlt ?? ""} className="absolute inset-0 h-full w-full object-cover" />
+            <img src={conseil.image} alt={conseil.imageAlt ?? ""} className="absolute inset-0 h-full w-full object-cover" />
           ) : (
             <span aria-hidden className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(55%_65%_at_50%_45%,rgba(255,122,61,.3),transparent_70%)]">
               <Icon className="h-16 w-16 text-[#ff7a3d] sm:h-20 sm:w-20" strokeWidth={1.25} />

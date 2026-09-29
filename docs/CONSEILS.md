@@ -26,7 +26,7 @@ Calendrier des prochains articles : `docs/CONSEILS-CALENDRIER.md`.
 ## Publication programmée
 
 - Seuls les articles dont la date est passée apparaissent (liste, page, sitemap).
-- Le site est reconstruit et republié automatiquement chaque lundi à 0 h 15 (`.github/workflows/deploy.yml`, déclencheur `schedule`) : l'article du jour apparaît alors sur keurcook.com.
+- Le site est reconstruit et republié automatiquement chaque lundi à 0 h 15 en hiver, 1 h 15 en été (`.github/workflows/deploy.yml`, déclencheur `schedule`) : l'article du jour apparaît alors sur keurcook.com.
 
 ## Vérifications
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { anton } from "@/components/nuage/typography";
 import { FavoritesList } from "@/components/recipe/FavoritesList";
+import { getMaintenance } from "@/lib/data/settings";
 import { getRecipes } from "@/lib/data/recipes";
 
 export const metadata: Metadata = pageMetadata({
@@ -12,6 +13,8 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default async function FavoritesPage() {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const recipes = await getRecipes();
   return (
     <div className="container-page">

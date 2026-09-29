@@ -1,8 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { withBasePath } from "@/lib/paths";
+import { useState, type KeyboardEvent } from "react";
 import { usePageTransition } from "./PageTransition";
 import { anton, useSwipe } from "./shared";
 
@@ -60,22 +59,18 @@ export function Coverflow({
   const router = useRouter();
   const open = (it: CoverflowItem) => (onOpen ? onOpen(it) : navigate ? navigate(it.href, it.title) : router.push(it.href));
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const t = e.target as HTMLElement | null;
-      if (e.altKey || e.ctrlKey || e.metaKey || t?.closest("input, select, textarea, [contenteditable='true']")) return;
-      if (e.key === "ArrowRight") go(1);
-      if (e.key === "ArrowLeft") go(-1);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  });
+  // Flèches gauche/droite : seulement quand le focus est dans le carrousel.
+  const onArrows = (e: KeyboardEvent) => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === "ArrowRight") go(1);
+    if (e.key === "ArrowLeft") go(-1);
+  };
 
   if (n === 0) return null;
   const cur = items[active];
 
   return (
-    <div>
+    <div onKeyDown={onArrows}>
       <div
         {...swipe}
         onDragStart={(e) => e.preventDefault()}
@@ -101,15 +96,24 @@ export function Coverflow({
           const ao = Math.abs(o);
           const isActive = o === 0;
           return (
-            <div
+            // Vrai lien <a href> : les moteurs de recherche suivent toutes les cartes.
+            <a
               key={it.key}
-              onClick={() => (isActive ? open(it) : setActive(i))}
-              role={isActive ? "link" : "button"}
+              href={it.href}
+              draggable={false}
+              onClick={(e) => {
+                e.preventDefault();
+                if (isActive) open(it);
+                else setActive(i);
+              }}
               tabIndex={isActive ? 0 : -1}
               aria-hidden={ao > 1}
               aria-label={isActive ? `Ouvrir ${it.title}` : `Afficher ${it.title}`}
               onKeyDown={(e) => {
-                if (isActive && e.key === "Enter") open(it);
+                if (isActive && e.key === " ") {
+                  e.preventDefault();
+                  open(it);
+                }
               }}
               className="absolute top-1/2 left-1/2 cursor-pointer"
               style={{
@@ -128,14 +132,14 @@ export function Coverflow({
               >
                 {it.image && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={withBasePath(it.image)} alt="" draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+                  <img src={it.image} alt="" draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
                 )}
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-5 pt-20">
                   {it.eyebrow && <div className="mb-1 text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{it.eyebrow}</div>}
                   <div className="text-3xl leading-none uppercase" style={anton}>{it.title}</div>
                 </div>
               </div>
-            </div>
+            </a>
           );
         })}
       </div>

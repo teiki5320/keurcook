@@ -100,11 +100,11 @@ const seeds: RecipeSeed[] = [
     story:
       "Le pondu, ou saka-saka, est le légume-feuille des deux rives du fleuve Congo. Les feuilles de manioc, pilées au mortier, mijotent longuement jusqu'à devenir fondantes.\n\nÀ Kinshasa, on le sert avec de la chikwangue ou du foufou, et chaque famille a sa recette : avec du poisson fumé, de la viande ou simplement des aubergines.",
     prepMinutes: 20,
-    cookMinutes: 120,
+    cookMinutes: 60,
     servings: 4,
     difficulty: 2,
     ingredients: [
-      [200, "g", "feuilles de manioc pilées", "feuilles-de-manioc"],
+      [840, "g", "feuilles de manioc pilées en conserve (2 boîtes de 420 g)", "feuilles-de-manioc"],
       [200, "g", "mâchoiron fumé"],
       [10, "cl", "huile de palme rouge", "huile-de-palme-rouge"],
       [2, null, "aubergines africaines (ou 1 aubergine)"],
@@ -113,12 +113,12 @@ const seeds: RecipeSeed[] = [
       [1, null, "poivron vert"],
       [1, null, "piment"],
       [null, null, "sel"],
+      [3, null, "bâtons de chikwangue, pour servir", "chikwangue"],
     ],
     steps: [
-      "Réhydrater les feuilles de manioc dans de l'eau tiède 20 minutes, puis les porter à ébullition dans une grande casserole d'eau.",
-      "Laisser cuire à feu doux 1 heure en ajoutant de l'eau si nécessaire : les feuilles de manioc doivent toujours être bien cuites.",
+      "Égoutter et rincer les feuilles de manioc, puis les cuire dans une grande casserole avec 50 cl d'eau, 15 minutes à feu doux.",
       "Pendant ce temps, faire tremper le poisson fumé dans l'eau chaude, retirer peau et arêtes et l'émietter.",
-      "Ajouter l'oignon, l'ail, le poivron et les aubergines coupés en morceaux, puis le poisson. Poursuivre la cuisson 40 minutes.",
+      "Ajouter l'oignon, l'ail, le poivron et les aubergines coupés en morceaux, puis le poisson. Poursuivre la cuisson 30 minutes en ajoutant un peu d'eau si nécessaire.",
       "Verser l'huile de palme rouge, saler, ajouter le piment et laisser mijoter encore 15 minutes à découvert.",
     ],
     tips: ["Accompagnez de chikwangue, de foufou ou de riz.", "Une cuillère de pâte d'arachide rend le pondu plus onctueux."],
@@ -230,6 +230,7 @@ const seeds: RecipeSeed[] = [
   },
   {
     slug: "suya",
+    equipment: ["brochettes-en-metal"],
     name: "Suya de bœuf",
     countryCode: "NG",
     region: "Kano",
@@ -477,7 +478,7 @@ const seeds: RecipeSeed[] = [
     course: "douceurs",
     shortDescription: "Couscous de mil cuit à la vapeur, mêlé à un lait caillé sucré parfumé à la vanille et à la muscade, servi frais.",
     story:
-      "Le thiakry (ou dégué au Burkina Faso) est le dessert frais des fêtes sénégalaises, notamment à la Tabaski. Les graines de mil cuites à la vapeur sont mélangées à un lait caillé sucré et parfumé.",
+      "Le thiakry, proche du dégué burkinabè, est le dessert frais des fêtes sénégalaises, notamment à la Tabaski. Les graines de mil cuites à la vapeur sont mélangées à un lait caillé sucré et parfumé.",
     prepMinutes: 15,
     cookMinutes: 30,
     servings: 6,

@@ -10,11 +10,12 @@ import { RecipeIngredients, type LinkedProduct } from "@/components/recipe/Recip
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { minPriceCents } from "@/lib/catalog-utils";
 import { siteConfig } from "@/lib/config";
-import { jsonLd } from "@/lib/json-ld";
+import { breadcrumbLd, jsonLd } from "@/lib/json-ld";
 import { formatPrice } from "@/lib/format";
 import { countryByCode } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipeBySlug, getRecipes, getRelatedRecipes } from "@/lib/data/recipes";
+import { getMaintenance } from "@/lib/data/settings";
 import { courseName, DIFFICULTY_LABELS, formatDuration, ingredientLine, isoDuration } from "@/lib/recipe-utils";
 
 
@@ -28,7 +29,11 @@ export async function generateMetadata({ params }: PageProps<"/recette/[slug]">)
   if (!recipe) return {};
   const country = countryByCode(recipe.countryCode);
   return pageMetadata({
-    title: `${recipe.name} — recette ${country?.of ?? "africaine"}`,
+    // « Nom — recette du pays » si ça tient, sinon le nom seul.
+    title:
+      `${recipe.name} — recette ${country?.of ?? "africaine"}`.length <= 52
+        ? `${recipe.name} — recette ${country?.of ?? "africaine"}`
+        : recipe.name,
     description: recipe.shortDescription,
     path: `/recette/${recipe.slug}`,
     image: recipe.image,
@@ -40,6 +45,8 @@ export async function generateMetadata({ params }: PageProps<"/recette/[slug]">)
 const anton = { fontFamily: "var(--font-anton), sans-serif", fontWeight: 400 } as const;
 
 export default async function RecipePage({ params }: PageProps<"/recette/[slug]">) {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const { slug } = await params;
   const recipe = await getRecipeBySlug(slug);
   if (!recipe) notFound();
@@ -47,7 +54,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   const country = countryByCode(recipe.countryCode);
 
   // Produits de la boutique utilisés par la recette (premier format proposé).
-  const used = products.filter((p) => recipe.ingredients.some((i) => i.productSlug === p.slug));
+  const used = products.filter((p) => recipe.ingredients.some((i) => i.productSlug === p.slug) || recipe.equipment?.includes(p.slug));
   const linked: Record<string, LinkedProduct> = {};
   for (const p of used) {
     if (p.amazonAsin && p.variants[0]) linked[p.slug] = { slug: p.slug, name: p.name, priceCents: p.variants[0].priceCents, amazonAsin: p.amazonAsin };
@@ -86,6 +93,18 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   return (
     <article className="container-page pb-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(
+            breadcrumbLd([
+              { name: "Accueil", url: siteConfig.url },
+              { name: courseName(recipe.course), url: `${siteConfig.url}/recettes?type=${recipe.course}` },
+              { name: recipe.name, url },
+            ]),
+          ),
+        }}
+      />
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted print:hidden">
         <Link href="/" className="hover:underline">Accueil</Link> /{" "}
         <Link href={`/recettes?type=${recipe.course}`} className="hover:underline">{courseName(recipe.course)}</Link> /{" "}
@@ -191,7 +210,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       {used.length > 0 && (
         <section aria-labelledby="produits-recette" className="mt-16 print:hidden">
           <h2 id="produits-recette" className="font-display text-3xl">
-            Les produits rares de cette recette<span className="text-[#ff7a3d]">.</span>
+            {recipe.equipment?.length ? "Produits et ustensiles de cette recette" : "Les produits rares de cette recette"}<span className="text-[#ff7a3d]">.</span>
           </h2>
           <p className="mt-1 text-sm text-muted">À partir de {formatPrice(Math.min(...used.map(minPriceCents)))} sur Amazon (prix indicatifs).</p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">

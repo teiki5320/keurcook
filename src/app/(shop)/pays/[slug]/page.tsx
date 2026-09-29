@@ -8,6 +8,9 @@ import { VarietyCard } from "@/components/shop/VarietyCard";
 import { COUNTRIES, countryBySlug } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipes } from "@/lib/data/recipes";
+import { siteConfig } from "@/lib/config";
+import { getMaintenance } from "@/lib/data/settings";
+import { breadcrumbLd, jsonLd } from "@/lib/json-ld";
 
 
 export async function generateStaticParams() {
@@ -31,6 +34,8 @@ export async function generateMetadata({ params }: PageProps<"/pays/[slug]">): P
 }
 
 export default async function CountryPage({ params }: PageProps<"/pays/[slug]">) {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const { slug } = await params;
   const country = countryBySlug(slug);
   if (!country) notFound();
@@ -40,6 +45,18 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
 
   return (
     <div className="container-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(
+            breadcrumbLd([
+              { name: "Accueil", url: siteConfig.url },
+              { name: "Pays", url: `${siteConfig.url}/pays` },
+              { name: country.name, url: `${siteConfig.url}/pays/${country.slug}` },
+            ]),
+          ),
+        }}
+      />
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted">
         <Link href="/" className="hover:underline">Accueil</Link> / <Link href="/pays" className="hover:underline">Pays</Link> /{" "}
         <span className="text-ink">{country.name}</span>

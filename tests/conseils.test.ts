@@ -18,7 +18,7 @@ import {
 } from "../src/lib/conseils/article";
 import { COUNTRIES } from "../src/lib/countries";
 import { findHealthClaims } from "../src/lib/compliance";
-import { demoCategories, demoProducts } from "../src/lib/demo/catalog";
+import { demoProducts } from "../src/lib/demo/catalog";
 import { demoRecipes } from "../src/lib/demo/recipes";
 
 const root = join(import.meta.dirname, "..");
@@ -37,7 +37,6 @@ function validAt(path: string, date: string): boolean {
   if (section === "recette") return recipeSlugs.has(slug);
   if (section === "produit") return productSlugs.has(slug);
   if (section === "pays") return COUNTRIES.some((c) => c.slug === slug);
-  if (section === "categorie") return demoCategories.some((c) => c.slug === slug);
   if (section === "conseils") {
     const target = bySlug.get(slug);
     return Boolean(target && target.date <= date);

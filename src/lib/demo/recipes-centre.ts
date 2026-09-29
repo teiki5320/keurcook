@@ -52,7 +52,7 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     course: "mijotes",
     shortDescription: "Feuilles d'okok finement émincées, mijotées avec waterleaf, huile de palme, viande et poisson fumé.",
     story:
-      "L'eru est la grande spécialité des Bayangi, peuple de la région de Mamfé, dans le Sud-Ouest du Cameroun. Son nom désigne à la fois le plat et la liane sauvage dont on récolte les feuilles, appelée okok dans d'autres régions du pays.\n\nOn le sert traditionnellement avec du water fufu, une boule de manioc fermenté, lors des réunions de famille et des cérémonies. Sa texture fondante et son goût fumé en font l'un des plats les plus appréciés du Cameroun anglophone.",
+      "L'eru est la grande spécialité des Bayangi, peuple de la région de Mamfé, dans le Sud-Ouest du Cameroun. Son nom désigne à la fois le plat et la liane sauvage dont on récolte les feuilles, appelée okok dans d'autres régions du pays.\n\nOn le sert traditionnellement avec du foufou à l'eau (water fufu), une boule de manioc fermenté, lors des réunions de famille et des cérémonies. Sa texture fondante et son goût fumé en font l'un des plats les plus appréciés du Cameroun anglophone.",
     prepMinutes: 30,
     cookMinutes: 60,
     servings: 6,
@@ -75,7 +75,7 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
       "Laver le waterleaf, l'émincer finement et l'ajouter à la viande. Laisser cuire 5 minutes : les feuilles rendent beaucoup d'eau.",
       "Incorporer le poisson fumé débarrassé de ses arêtes, les crevettes séchées pilées et le piment écrasé. Mélanger.",
       "Ajouter les feuilles d'okok petit à petit en remuant, puis verser l'huile de palme. Couvrir et laisser mijoter 15 minutes à feu doux, jusqu'à ce que le liquide soit presque entièrement absorbé.",
-      "Goûter, rectifier le sel et servir bien chaud avec du water fufu ou du gari.",
+      "Goûter, rectifier le sel et servir bien chaud avec du foufou à l'eau (water fufu) ou du gari.",
     ],
     tips: [
       "Les épinards rendent moins d'eau que le waterleaf : si vous les utilisez, ajoutez un demi-verre d'eau avec les feuilles d'okok pour que l'eru reste moelleux sans être liquide.",
@@ -188,6 +188,7 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
       [2, "c. à soupe", "huile"],
       [null, null, "sel"],
       [null, null, "feuilles de bananier", "feuilles-de-bananier-fraiches"],
+      [3, null, "bâtons de chikwangue, pour servir", "chikwangue"],
     ],
     steps: [
       "Écailler et vider le poisson, le rincer, puis le couper en tronçons. Saler légèrement.",

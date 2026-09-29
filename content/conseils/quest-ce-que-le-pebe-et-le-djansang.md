@@ -26,7 +26,7 @@ On l'utilise un peu comme le [poivre de Selim](/produit/poivre-de-selim), autre 
 
 ## Le djansang
 
-Le djansang (appelé aussi akpi en Côte d'Ivoire ou njansang au Cameroun) est une petite amande claire, tirée du fruit d'un grand arbre.
+Le djansang (appelé akpi en Côte d'Ivoire ; on trouve aussi la graphie njansang) est une petite amande claire, tirée du fruit d'un grand arbre.
 
 - **Son goût** : doux, rappelant la noisette ou l'arachide grillée.
 - **Comment le préparer** : faites-le griller légèrement à sec pour développer son parfum, puis écrasez-le au mortier ou mixez-le en pâte avec un peu d'eau.

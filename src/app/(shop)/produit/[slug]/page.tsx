@@ -12,6 +12,7 @@ import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/cat
 import { getRecipesUsingProduct } from "@/lib/data/recipes";
 import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
+import { getMaintenance } from "@/lib/data/settings";
 import { NON_FOOD_CATEGORY } from "@/lib/catalog-utils";
 
 
@@ -35,6 +36,8 @@ export async function generateMetadata({ params }: PageProps<"/produit/[slug]">)
 }
 
 export default async function ProductPage({ params }: PageProps<"/produit/[slug]">) {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) notFound();
@@ -75,7 +78,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
               <>
                 <p className="text-sm text-muted">{product.variants[0].label}</p>
                 <AmazonBuyButton asin={product.amazonAsin} priceCents={product.variants[0].priceCents} name={product.name} className="btn-primary mt-3 h-12 w-full px-8 text-base sm:w-auto" />
-                <p className="mt-2 text-xs text-muted">Prix indicatif relevé sur Amazon le {AMAZON_PRICES_CHECKED_ON} : seul le prix affiché sur Amazon au moment de l&apos;achat fait foi.</p>
+                <p className="mt-2 text-xs text-muted">Lien partenaire Amazon. Prix indicatif relevé le {AMAZON_PRICES_CHECKED_ON} : seul le prix affiché sur Amazon au moment de l&apos;achat fait foi.</p>
               </>
             )}
           </div>

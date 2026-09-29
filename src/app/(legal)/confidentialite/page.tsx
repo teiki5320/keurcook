@@ -46,14 +46,16 @@ export default function PrivacyPage() {
       <ul>
         <li>Messages de contact : le temps de traiter la demande, puis 3 ans au plus.</li>
         <li>Journaux techniques : selon la politique de l&apos;hébergeur, quelques jours en général.</li>
-        <li>Choix en matière de cookies : 6 mois.</li>
+        <li>Mémorisation du message sur les cookies : 6 mois.</li>
+        <li>Favoris : dans votre navigateur uniquement, jusqu&apos;à ce que vous les retiriez ou effaciez les données du site.</li>
       </ul>
 
       <h2>Destinataires et sous-traitants</h2>
       <p>
         Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site et
         acheminement des e-mails de contact ({legalConfig.hostName}), messagerie (IONOS). Lorsque des données sont
-        transférées hors de l&apos;Union européenne, ce transfert est encadré par des clauses contractuelles types de la
+        transférées hors de l&apos;Union européenne (Cloudflare, États-Unis), ce transfert est encadré par le cadre de
+        protection des données UE–États-Unis (Data Privacy Framework) et par des clauses contractuelles types de la
         Commission européenne.
       </p>
 
@@ -75,13 +77,13 @@ export default function PrivacyPage() {
       <h2 id="cookies">Cookies</h2>
       <p>Le site utilise les cookies et stockages locaux suivants :</p>
       <ul>
-        <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté.</li>
-        <li><strong>ah_consent</strong> (nécessaire) — mémorise vos choix en matière de cookies, 6 mois.</li>
+        <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté, jusqu&apos;à ce que vous les retiriez ou effaciez les données du site.</li>
+        <li><strong>ah_consent</strong> (nécessaire) — mémorise que vous avez vu le message sur les cookies, 6 mois.</li>
       </ul>
       <p>
         Le site ne dépose aucun cookie de mesure d&apos;audience ni publicitaire. Amazon.fr, une fois ouvert, dépose ses
         propres cookies. Vous pouvez
-        modifier vos choix à tout moment : <CookieSettingsButton className="font-semibold text-forest-700 underline" />.
+        afficher à nouveau le message sur les cookies à tout moment : <CookieSettingsButton className="font-semibold text-forest-700 underline" />.
       </p>
     </LegalPage>
   );

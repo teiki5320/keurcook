@@ -18,13 +18,15 @@ on:
         required: false
 
 permissions:
-  contents: write
+  contents: read
 
 # Pas de groupe de concurrence ici : la publication appelée plus bas a déjà le sien.
 
 jobs:
   basculer:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Récupérer le code
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
@@ -49,6 +51,8 @@ jobs:
           '
 
       - name: Enregistrer le changement sur main
+        env:
+          ETAT: ${{ inputs.etat }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -56,12 +60,15 @@ jobs:
           if git diff --cached --quiet; then
             echo "Aucun changement : le site est déjà dans cet état."
           else
-            git commit -m "Maintenance : ${{ inputs.etat }}"
+            git commit -m "Maintenance : $ETAT"
             git push
           fi
 
   # Les commits faits par le bot ne relancent pas les autres workflows : on republie ici.
   publier:
     needs: basculer
+    permissions:
+      contents: read
+      actions: write
     uses: ./.github/workflows/deploy.yml
     secrets: inherit

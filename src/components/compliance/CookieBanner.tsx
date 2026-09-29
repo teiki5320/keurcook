@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const CONSENT_COOKIE = "ah_consent";
 export const OPEN_CONSENT_EVENT = "keurcook:open-cookie-settings";
@@ -47,6 +47,7 @@ export function CookieSettingsButton({ className }: { className?: string }) {
  */
 export function CookieBanner() {
   const [open, setOpen] = useState(false);
+  const banner = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Lecture du cookie après montage uniquement.
@@ -57,10 +58,25 @@ export function CookieBanner() {
     return () => window.removeEventListener(OPEN_CONSENT_EVENT, reopen);
   }, []);
 
+  // Bannière ouverte : on réserve sa hauteur en bas de page pour qu'elle ne cache rien
+  // (liens légaux de l'écran de maintenance, pied de page).
+  useEffect(() => {
+    if (!open || !banner.current) return;
+    const el = banner.current;
+    const apply = () => (document.body.style.paddingBottom = `${el.offsetHeight}px`);
+    apply();
+    const observer = new ResizeObserver(apply);
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      document.body.style.paddingBottom = "";
+    };
+  }, [open]);
+
   if (!open) return null;
 
   return (
-    <div role="dialog" aria-live="polite" aria-label="Cookies" className="nuage-theme fixed inset-x-0 bottom-0 z-[55] p-3 sm:p-4">
+    <div ref={banner} role="region" aria-label="Information sur les cookies" className="nuage-theme fixed inset-x-0 bottom-0 z-[55] p-3 sm:p-4">
       <div className="mx-auto flex max-w-3xl flex-col gap-4 rounded-2xl border border-sage-300 bg-white p-5 shadow-xl sm:flex-row sm:items-center" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         <p className="text-sm text-muted">
           <strong className="text-forest-800">Cookies</strong> — Ce site n&apos;utilise qu&apos;un stockage local pour vos

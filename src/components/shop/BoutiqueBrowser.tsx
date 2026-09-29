@@ -99,6 +99,7 @@ function BoutiqueView({ gammes, allProducts, gammeKey, query }: Props & { gammeK
               {title}
             </h2>
             {!query && !showAll && gamme?.description && <p className="mt-2 max-w-2xl text-sm text-muted">{gamme.description}</p>}
+            <p className="mt-1 text-xs text-muted">Les boutons « Acheter » sont des liens partenaires Amazon ; prix indicatifs.</p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <label className="sr-only" htmlFor="tri">

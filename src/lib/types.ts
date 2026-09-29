@@ -86,6 +86,8 @@ export interface Recipe {
   steps: RecipeStep[];
   tips: string[];
   tags: string[];
+  /** Ustensiles de la boutique utiles pour cette recette (slugs de produits). */
+  equipment?: string[];
   featured: boolean;
   isPublished: boolean;
   createdAt: string;

@@ -29,7 +29,7 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 ### Boutique et Amazon Partenaires
 
 - 91 produits en 8 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles. Produits retenus : plus de 3,5 étoiles sur Amazon.
-- Liens construits par `src/lib/amazon.ts` à partir du champ `amazon_asin` et du tag partenaire `keurcook-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer).
+- Liens construits par `src/lib/amazon.ts` à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) et du tag partenaire `keurcook-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer).
 - Prix **indicatifs**, relevés le 27/09/2026 : le prix affiché par Amazon fait foi.
 - Le site n'encaisse rien et ne gère aucun stock : achat, paiement et livraison se font sur Amazon.
 
@@ -77,11 +77,13 @@ Toutes publiques (aucun secret dans le site). Liste complète : `.env.example`.
 Workflow GitHub Actions `.github/workflows/deploy.yml` (« Publier le site »), lancé :
 
 - à chaque push sur `main` ;
-- chaque lundi à 0 h 15 (cron), pour publier les articles « Conseils » programmés ;
+- chaque lundi à 0 h 15, heure de Paris en hiver (1 h 15 en été ; cron), pour publier les articles « Conseils » programmés ;
 - à la main (onglet **Actions → Publier le site → Run workflow**) ;
 - après le bouton « Maintenance ».
 
 Étapes : lint, types, tests, build (`out/`), puis `wrangler pages deploy out --project-name=keurcook` vers Cloudflare Pages. La publication n'a lieu que si les secrets GitHub `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` sont présents (**Settings → Secrets and variables → Actions**) ; sinon le workflow affiche un avertissement et ne publie rien.
+
+Les secrets ne sont donnés qu'à l'étape d'envoi ; `wrangler` est figé dans `package-lock.json`. GitHub coupant les tâches programmées d'un dépôt public après 60 jours sans activité, chaque publication du lundi réactive elle-même la tâche.
 
 Mise en route restante : voir `docs/PUBLICATION.md`.
 
@@ -96,7 +98,7 @@ Pendant la maintenance : écran « On prépare la marmite », pages en `noindex`
 Servis par Cloudflare Pages :
 
 - `public/_headers` : politique de sécurité du contenu (CSP), HSTS, `X-Frame-Options`, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, cache long des fichiers `/_next/static/`.
-- `public/_redirects` : `/cgv` → `/conditions`, `/categorie/:slug` → `/boutique?gamme=:slug`, anciennes pages (`/panier`, `/commande`, `/accessoires`, `/avertissements`, `/admin`…) vers la boutique, les conditions ou l'accueil.
+- `public/_redirects` : `/cgv` → `/conditions`, `/categorie/<gamme>` → `/boutique?gamme=<gamme>` (une règle par gamme : Cloudflare ne recopie pas les variables après « ? »), anciennes pages (`/panier`, `/commande`, `/accessoires`, `/avertissements`, `/admin`…) vers la boutique, les conditions ou l'accueil.
 
 ---
 
@@ -105,7 +107,7 @@ Servis par Cloudflare Pages :
 | Script | Description |
 | --- | --- |
 | `npm run dev` | Serveur de développement |
-| `npm run build` | Build statique (dossier `out/`) |
+| `npm run build` | Build statique (dossier `out/`) ; crée d'abord les images de partage JPEG dans `public/og/` (`scripts/og-images.mjs`, non versionné) |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Vérification TypeScript |
 | `npm test` | Tests (`tests/*.test.ts`) |

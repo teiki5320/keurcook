@@ -22,7 +22,7 @@ export function AmazonBuyButton({
       href={amazonUrl(asin)}
       target="_blank"
       rel="sponsored nofollow noopener"
-      aria-label={`Acheter ${name} sur Amazon, ${formatPrice(priceCents)} (nouvel onglet)`}
+      aria-label={`Acheter · ${formatPrice(priceCents)} — ${name} sur Amazon, lien partenaire (nouvel onglet)`}
       title={icon ? `Acheter · ${formatPrice(priceCents)}` : undefined}
       className={className}
     >

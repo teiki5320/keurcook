@@ -39,7 +39,7 @@ L'huile est importante : elle aide le mélange à accrocher et à dorer sans br�
 Le yaji ne se limite pas au bœuf. Essayez-le :
 
 - sur du poulet, des ailes ou du poisson avant de les griller ;
-- en pincée dans une sauce tomate, comme dans le [riz jollof](/recette/riz-jollof) ;
+- en pincée dans une sauce tomate, par exemple dans un [riz jollof](/recette/riz-jollof) ;
 - saupoudré sur des dés de plantain frits, en complément des épices du [kelewele](/recette/kelewele) ;
 - sur des légumes rôtis ou des pommes de terre.
 

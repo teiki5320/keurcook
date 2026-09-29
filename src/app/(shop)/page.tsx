@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
-import { withBasePath } from "@/lib/paths";
 import { TLink } from "@/components/nuage/PageTransition";
 import { CountryCarousel } from "@/components/recipe/CountryCarousel";
 import { CountryMap } from "@/components/recipe/CountryMap";
@@ -9,6 +8,7 @@ import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
 import { getGammes } from "@/lib/data/gammes";
 import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
+import { getMaintenance } from "@/lib/data/settings";
 import { unitWord } from "@/lib/gamme-words";
 
 
@@ -23,6 +23,8 @@ const anton = { fontFamily: "var(--font-anton), sans-serif", fontWeight: 400 } a
 const WORDS = ["Ndolé", "Mafé", "Yassa", "Thiéboudienne", "Pondu", "Suya", "Doro wat", "Bissap"];
 
 export default async function HomePage() {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const [groups, countries, gammes] = await Promise.all([getRecipeGroups(), getCountriesWithRecipes(), getGammes()]);
   const structuredData = { "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description };
 
@@ -111,7 +113,7 @@ export default async function HomePage() {
                 <TLink href={g.href} label={g.name} className="group relative block aspect-[3/4] overflow-hidden rounded-3xl border border-[#fbeee2]/10 bg-[#211209]">
                   {g.image && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={withBasePath(g.image)} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                    <img src={g.image} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                   )}
                   <span className="absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-4 pt-14">
                     <span className="block text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{unitWord(g.products.length)}</span>

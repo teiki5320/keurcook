@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { ShopShell } from "@/components/nuage/ShopShell";
 import { TLink } from "@/components/nuage/PageTransition";
 
-export const metadata: Metadata = { title: "Page introuvable" };
+export const metadata: Metadata = {
+  title: "Page introuvable",
+  description: "Cette page n'existe pas ou n'est plus disponible sur Keur Cook.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

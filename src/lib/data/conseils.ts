@@ -4,7 +4,6 @@ import { join } from "node:path";
 import { cache } from "react";
 import { marked } from "marked";
 import { anchorId, isPublished, parseConseil, relatedConseils, todayInParis, type Conseil } from "@/lib/conseils/article";
-import { withBasePath } from "@/lib/paths";
 
 const DIR = join(process.cwd(), "content", "conseils");
 
@@ -40,11 +39,11 @@ export function renderConseil(body: string): string {
   };
   renderer.link = function ({ href, title, tokens }) {
     const inner = this.parser.parseInline(tokens);
-    // Seuls les liens web, internes, ancres et e-mails sont acceptés (pas de « javascript: »).
-    if (!/^(https?:|\/|#|mailto:)/i.test(href)) href = "#";
+    // Seuls les liens web, internes, ancres et e-mails sont acceptés (pas de « javascript: » ni de « //autre-site »).
+    if (!/^(https?:|\/(?!\/)|#|mailto:)/i.test(href)) href = "#";
     const external = /^https?:/.test(href);
     const attrs = external ? ` target="_blank" rel="${/amazon\./.test(href) ? "sponsored nofollow " : ""}noopener noreferrer"` : "";
-    return `<a href="${escapeAttr(external ? href : withBasePath(href))}"${title ? ` title="${escapeAttr(title)}"` : ""}${attrs}>${inner}</a>`;
+    return `<a href="${escapeAttr(href)}"${title ? ` title="${escapeAttr(title)}"` : ""}${attrs}>${inner}</a>`;
   };
   // Pas de HTML brut dans les articles : il est affiché comme du texte.
   renderer.html = ({ text }) => escapeAttr(text);

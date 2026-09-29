@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { ConseilCard } from "@/components/conseils/ConseilCard";
 import { anton } from "@/components/nuage/typography";
+import { getMaintenance } from "@/lib/data/settings";
 import { getConseils } from "@/lib/data/conseils";
 
 // Relu toutes les heures : un article programmé paraît le jour de sa date sans redéploiement.
@@ -14,6 +15,8 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function ConseilsPage() {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const conseils = getConseils();
   return (
     <div className="container-page">

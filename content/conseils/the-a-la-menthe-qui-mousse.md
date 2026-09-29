@@ -45,4 +45,4 @@ Entraînez-vous au-dessus d'un plateau : viser juste de haut demande un peu de p
 
 ## Le matériel
 
-Une théière en métal, qui supporte d'être posée sur le feu, et des petits verres épais sont l'équipement classique. Un plateau sous les verres évite les éclaboussures pendant les premiers essais.
+Une théière en métal à long bec, qui supporte d'être posée sur le feu, et des verres à thé épais sont l'équipement classique. Les modèles de 1 L à 1,2 L conviennent pour 4 à 6 verres. Un plateau sous les verres évite les éclaboussures pendant les premiers essais.

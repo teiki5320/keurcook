@@ -33,7 +33,7 @@ export async function getCountriesWithRecipes() {
 
 /** Recettes qui utilisent un produit de la boutique. */
 export async function getRecipesUsingProduct(productSlug: string) {
-  return (await getRecipes()).filter((r) => r.ingredients.some((i) => i.productSlug === productSlug));
+  return (await getRecipes()).filter((r) => r.ingredients.some((i) => i.productSlug === productSlug) || r.equipment?.includes(productSlug));
 }
 
 /** Recettes proches : même pays, puis même type de plat. */

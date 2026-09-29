@@ -1,9 +1,6 @@
 /**
- * Données de démonstration : produits africains rares (épicerie).
- *
- * Elles servent :
- *  - de catalogue de secours quand la base de données n'est pas configurée (mode démo) ;
- *  - de source pour générer `db/seed.sql` (npm run db:seed-sql).
+ * Catalogue du site : produits africains rares, achetés sur Amazon.fr.
+ * Le site est statique : ces données sont la seule source (lues par src/lib/data/catalog.ts).
  *
  * Les textes décrivent les produits de façon générale : l'achat se fait sur des
  * fiches Amazon.fr de vendeurs tiers. Ils ne contiennent volontairement aucune
@@ -285,24 +282,6 @@ const seeds: ProductSeed[] = [
     featured: false,
     variants: [["100 g", 990]],
   },
-  {
-    slug: "poisson-fume",
-    name: "Machoiron fumé",
-    categoryId: cat("poissons"),
-    shortDescription: "Poisson-chat fumé, utilisé pour parfumer le pondu, les sauces graine et les plats de légumes feuilles.",
-    description:
-      "Le mâchoiron est un poisson-chat que l'on fume pour le conserver. Sa chair ferme prend un goût fumé prononcé.\n\nÉmietté, il parfume le pondu, les sauces graine et les plats de légumes feuilles d'Afrique centrale et de l'Ouest.",
-    originCountry: null,
-    originRegion: null,
-    producer: null,
-    composition: "Poisson-chat fumé.",
-    allergens: ["poisson"],
-    usageTips: "Tremper 15 minutes dans l'eau chaude, retirer les arêtes et émietter dans la sauce.",
-    conservation: "Au sec et au frais, dans une boîte hermétique.",
-    tags: ["fumé", "poisson"],
-    featured: false,
-    variants: [["200 g", 1290]],
-  },
   // ------------------------------------------------------ Huiles & pâtes
   {
     slug: "huile-de-palme-rouge",
@@ -432,42 +411,6 @@ const seeds: ProductSeed[] = [
     variants: [["50 g", 490]],
   },
   {
-    slug: "feuilles-d-okok",
-    name: "Feuilles d'okok émincées",
-    categoryId: cat("feuilles"),
-    shortDescription: "Feuilles d'okok émincées et séchées, pour préparer l'eru et les plats de légumes du Cameroun.",
-    description:
-      "L'okok, ou eru, est une liane des forêts d'Afrique centrale dont les feuilles se consomment émincées très finement. Séchées, elles se conservent longtemps.\n\nAu Cameroun, elles se cuisinent avec de l'huile de palme, de la viande, du poisson fumé ou des crevettes séchées.",
-    originCountry: "Cameroun",
-    originRegion: null,
-    producer: null,
-    composition: "Feuilles de Gnetum africanum émincées et séchées.",
-    allergens: [],
-    usageTips: "Réhydrater dans l'eau tiède avant de cuisiner, en suivant les indications de l'emballage.",
-    conservation: "Au sec, à l'abri de la lumière.",
-    tags: ["feuilles", "forêt"],
-    featured: false,
-    variants: [["100 g", 890]],
-  },
-  {
-    slug: "odika",
-    name: "Odika (chocolat indigène)",
-    categoryId: cat("huiles"),
-    shortDescription: "Pain d'amandes de mangue sauvage, surnommé chocolat indigène, qui épaissit les sauces gabonaises.",
-    description:
-      "L'odika est préparé à partir des amandes de la mangue sauvage (Irvingia gabonensis), grillées puis pressées en un pain sombre. On le surnomme parfois « chocolat indigène » pour son aspect.\n\nRâpé dans les sauces, il leur donne une couleur brune, une texture onctueuse et un goût fumé ; c'est un ingrédient phare de la cuisine gabonaise.",
-    originCountry: "Gabon",
-    originRegion: null,
-    producer: null,
-    composition: "Amandes de mangue sauvage (Irvingia gabonensis) grillées et pressées.",
-    allergens: ["fruits à coque"],
-    usageTips: "Râper ou chauffer légèrement pour ramollir, puis délayer dans la sauce en fin de cuisson.",
-    conservation: "Au sec et au frais, emballé.",
-    tags: ["Gabon", "forêt"],
-    featured: true,
-    variants: [["150 g", 1190]],
-  },
-  {
     slug: "farine-de-teff",
     name: "Farine de teff",
     categoryId: cat("cereales"),
@@ -561,7 +504,26 @@ for (const n of nouveauxProduits) {
   amazonOffers[n.slug] = amazon;
 }
 
-export const demoProducts: Product[] = seeds.map((seed, index) => {
+/**
+ * Positions (à partir de 1) des produits retirés du catalogue : poisson fumé,
+ * feuilles d'okok et odika. Elles restent vides pour que les identifiants des
+ * produits et des variantes suivants ne changent pas.
+ */
+const retiredPositions = new Set([14, 22, 23]);
+
+let nextPosition = 0;
+function takePosition(): number {
+  nextPosition += 1;
+  while (retiredPositions.has(nextPosition)) {
+    // Chaque produit retiré avait une variante : on saute aussi son identifiant.
+    variantCounter += 1;
+    nextPosition += 1;
+  }
+  return nextPosition;
+}
+
+export const demoProducts: Product[] = seeds.map((seed) => {
+  const index = takePosition() - 1;
   const productId = id("2", index + 1);
   const offer = amazonOffers[seed.slug];
   return {

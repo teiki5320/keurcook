@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { TLink } from "@/components/nuage/PageTransition";
 import { anton } from "@/components/nuage/typography";
+import { getMaintenance } from "@/lib/data/settings";
 import { getCountriesWithRecipes, getRecipes } from "@/lib/data/recipes";
-import { withBasePath } from "@/lib/paths";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -14,6 +14,8 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default async function CountriesPage() {
+  // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
+  if (getMaintenance().enabled) return null;
   const [countries, recipes] = await Promise.all([getCountriesWithRecipes(), getRecipes()]);
   return (
     <div className="container-page">
@@ -29,7 +31,7 @@ export default async function CountriesPage() {
               <TLink href={`/pays/${c.slug}`} label={c.name} className="group relative block aspect-[16/11] overflow-hidden rounded-[26px] border border-[#fbeee2]/12 bg-[#281610] hover:border-[#ff7a3d]">
                 {cover?.image && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={withBasePath(cover.image)} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                  <img src={cover.image} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                 )}
                 <span className="absolute inset-0 bg-gradient-to-b from-transparent via-[#140a07]/50 to-[#140a07]/95" />
                 <span className="absolute inset-x-0 bottom-0 p-5">

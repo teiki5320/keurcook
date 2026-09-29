@@ -12,7 +12,7 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
 
   return (
     <article className="card flex flex-col overflow-hidden">
-      <Link href={`/produit/${product.slug}`} className="group relative block aspect-square overflow-hidden bg-sage-100">
+      <Link href={`/produit/${product.slug}`} tabIndex={-1} aria-hidden className="group relative block aspect-square overflow-hidden bg-sage-100">
         <ProductImage
           src={product.images[0]}
           alt=""
