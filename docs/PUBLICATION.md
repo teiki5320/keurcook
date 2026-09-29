@@ -48,8 +48,8 @@ Pendant la maintenance : écran « On prépare la marmite », pages en `noindex`
 
 Mise en route (propriétaire) :
 
-- [ ] Après la première publication (le projet Cloudflare Pages **keurcook** est créé automatiquement), y relier `keurcook.com` et `www.keurcook.com` (Workers et Pages → keurcook → Domaines personnalisés).
-- [ ] Créer un jeton API Cloudflare (droit **Cloudflare Pages : Edit**), puis ajouter les secrets `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` dans GitHub (**Settings → Secrets and variables → Actions**).
+- [ ] Première publication faite le 29 septembre 2026 (https://keurcook.pages.dev, projet créé automatiquement) : y relier `keurcook.com` et `www.keurcook.com` (Workers et Pages → keurcook → Domaines personnalisés).
+- [x] Créer un jeton API Cloudflare (droit **Cloudflare Pages : Edit**), puis ajouter les secrets `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` dans GitHub (**Settings → Secrets and variables → Actions**).
 - [ ] Ajouter `keurcook.com` à la liste des sites du compte Amazon Partenaires.
 - [ ] Chez IONOS, rediriger le site `alohash.fr` vers `keurcook.com` sans toucher aux enregistrements de messagerie.
 - [ ] Fermer Vercel et Neon une fois la bascule vérifiée.
