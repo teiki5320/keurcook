@@ -1,21 +1,12 @@
 import "server-only";
 import { cache } from "react";
 import { COUNTRIES } from "../countries";
-import { getSql, isDbConfigured } from "../db/client";
-import { mapRecipe } from "../db/mappers";
 import { demoRecipes } from "../demo/recipes";
 import { RECIPE_COURSES } from "../recipe-utils";
 import type { Recipe, RecipeCourse } from "../types";
 
-/**
- * Recettes publiées : depuis la base de données, ou les données de
- * démonstration (src/lib/demo/recipes.ts) en mode démo.
- */
-export const getRecipes = cache(async (): Promise<Recipe[]> => {
-  if (!isDbConfigured) return demoRecipes.filter((r) => r.isPublished);
-  const rows = await getSql().query("select * from recipes where is_published order by featured desc, created_at");
-  return rows.map(mapRecipe);
-});
+/** Recettes publiées, écrites dans src/lib/demo/recipes*.ts. */
+export const getRecipes = cache(async (): Promise<Recipe[]> => demoRecipes.filter((r) => r.isPublished));
 
 export async function getRecipeBySlug(slug: string) {
   return (await getRecipes()).find((r) => r.slug === slug) ?? null;

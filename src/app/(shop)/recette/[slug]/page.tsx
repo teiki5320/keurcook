@@ -16,7 +16,6 @@ import { getCatalog } from "@/lib/data/catalog";
 import { getRecipeBySlug, getRecipes, getRelatedRecipes } from "@/lib/data/recipes";
 import { courseName, DIFFICULTY_LABELS, formatDuration, ingredientLine, isoDuration } from "@/lib/recipe-utils";
 
-export const revalidate = 300;
 
 export async function generateStaticParams() {
   return (await getRecipes()).map((r) => ({ slug: r.slug }));

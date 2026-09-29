@@ -1,6 +1,6 @@
 /**
  * Recettes et produits sont écrits dans le code (src/lib/demo/) : ces tests
- * remplacent le contrôle qui se faisait à l'enregistrement dans l'admin.
+ * bloquent toute allégation de santé avant publication.
  */
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";

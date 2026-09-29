@@ -5,24 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "tsx --test tests/*.test.ts",
-    "db:seed-sql": "tsx scripts/generate-seed-sql.ts",
-    "db:setup": "node scripts/db-setup.mjs",
-    "build:pages": "node scripts/build-pages.mjs"
+    "test": "tsx --test tests/*.test.ts"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.1.0",
     "lucide-react": "^1.48.0",
     "marked": "^16.4.2",
     "next": "16.3.6",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "server-only": "^0.0.1",
-    "three": "^0.186.1",
-    "zod": "^4.6.5"
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

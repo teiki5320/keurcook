@@ -4,20 +4,17 @@ import { getCatalog } from "@/lib/data/catalog";
 import { getConseils } from "@/lib/data/conseils";
 import { getRecipes } from "@/lib/data/recipes";
 import { getMaintenance } from "@/lib/data/settings";
-import { isStaticExport } from "@/lib/paths";
 import { siteConfig } from "@/lib/config";
 
-export const revalidate = 3600;
+export const dynamic = "force-static";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Site en maintenance : rien à indexer.
-  if ((await getMaintenance()).enabled) return [];
+  if (getMaintenance().enabled) return [];
   const [{ products }, recipes] = await Promise.all([getCatalog(), getRecipes()]);
   const base = siteConfig.url;
-  const now = new Date();
   const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
     url: `${base}${path}`,
-    lastModified: now,
     changeFrequency: ["", "/recettes", "/boutique"].includes(path) ? ("daily" as const) : ["/pays", "/conseils"].includes(path) ? ("weekly" as const) : ("yearly" as const),
     priority: path === "" ? 1 : ["/recettes", "/boutique"].includes(path) ? 0.9 : ["/pays", "/conseils"].includes(path) ? 0.7 : 0.3,
   }));
@@ -31,7 +28,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...COUNTRIES.filter((c) => recipes.some((r) => r.countryCode === c.code)).map((c) => ({
       url: `${base}/pays/${c.slug}`,
-      lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     })),
@@ -48,6 +44,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     })),
   ];
-  // La vitrine statique sert les pages avec une barre oblique finale : mêmes adresses que les balises canonical.
-  return isStaticExport ? entries.map((e) => ({ ...e, url: e.url.endsWith("/") ? e.url : `${e.url}/` })) : entries;
+  return entries;
 }

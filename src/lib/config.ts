@@ -3,18 +3,14 @@
  * Les valeurs sensibles ou propres à l'entreprise se règlent via les
  * variables d'environnement (voir .env.example).
  */
-import { isStaticExport } from "./paths";
-
-/** Hébergeur par défaut : GitHub Pages pour la démo statique, Vercel sinon. */
-const defaultHost = isStaticExport
-  ? { name: "GitHub Pages", full: "GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — pages.github.com" }
-  : { name: "Vercel", full: "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com" };
+/** Hébergeur du site : Cloudflare Pages. */
+const defaultHost = { name: "Cloudflare", full: "Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, États-Unis — cloudflare.com" };
 export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME || "Keurcook",
   tagline: "Recettes africaines & produits rares",
   description:
     "Recettes de plats africains expliquées pas à pas (ndolé, mafé, thiéboudienne, poulet yassa…), conseils de cuisine et sélection de produits africains à acheter sur Amazon.",
-  url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://keurcook.com").replace(/\/$/, ""),
   locale: "fr_FR",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@keurcook.com",
 };

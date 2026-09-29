@@ -42,7 +42,7 @@ export function CookieSettingsButton({ className }: { className?: string }) {
 
 /**
  * Information sur les cookies : le site ne dépose que des cookies nécessaires
- * (favoris, mémorisation de ce message, session admin), aucun cookie de mesure
+ * (favoris en stockage local, mémorisation de ce message), aucun cookie de mesure
  * d'audience ni publicitaire ; aucun consentement n'est donc à recueillir.
  */
 export function CookieBanner() {
@@ -63,8 +63,8 @@ export function CookieBanner() {
     <div role="dialog" aria-live="polite" aria-label="Cookies" className="nuage-theme fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-4">
       <div className="mx-auto flex max-w-3xl flex-col gap-4 rounded-2xl border border-sage-300 bg-white p-5 shadow-xl sm:flex-row sm:items-center" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         <p className="text-sm text-muted">
-          <strong className="text-forest-800">Cookies</strong> — Ce site n&apos;utilise que des cookies nécessaires (vos
-          favoris et ce message). Aucun cookie de mesure d&apos;audience ni publicitaire. Les boutons « Acheter » ouvrent
+          <strong className="text-forest-800">Cookies</strong> — Ce site n&apos;utilise qu&apos;un stockage local pour vos
+          favoris et un cookie pour mémoriser ce message. Aucun cookie de mesure d&apos;audience ni publicitaire. Les boutons « Acheter » ouvrent
           Amazon.fr, qui dépose ses propres cookies.{" "}
           <Link href="/confidentialite#cookies" className="underline">En savoir plus</Link>
         </p>

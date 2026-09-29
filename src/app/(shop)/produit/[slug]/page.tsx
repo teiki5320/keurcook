@@ -13,7 +13,6 @@ import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
 import { NON_FOOD_CATEGORY } from "@/lib/catalog-utils";
 
-export const revalidate = 300;
 
 export async function generateStaticParams() {
   const { products } = await getCatalog();

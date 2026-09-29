@@ -3,7 +3,7 @@
  * thérapeutique ou de santé. Pour les denrées alimentaires, seules les
  * allégations autorisées par le règlement (CE) n° 1924/2006 sont permises :
  * on les refuse toutes par prudence.
- * Utilisé à l'enregistrement d'un produit dans l'admin.
+ * Vérifié par les tests (tests/contenus.test.ts, tests/conseils.test.ts).
  * Liste non exhaustive : elle ne remplace pas une relecture humaine.
  */
 const FORBIDDEN_PATTERNS: Array<[RegExp, string]> = [

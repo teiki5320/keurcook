@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Anton, Fraunces, Inter, Manrope } from "next/font/google";
 import { CookieBanner } from "@/components/compliance/CookieBanner";
 import { siteConfig } from "@/lib/config";
-import { isStaticExport } from "@/lib/paths";
 import "./globals.css";
 import "./nuage.css";
 
@@ -29,14 +28,12 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     images: [{ url: "/recipes/thieboudienne.webp", alt: "Thiéboudienne, plat du Sénégal" }],
   },
-  // La vitrine GitHub Pages est une copie de démonstration : le site de référence est keurcook.com.
-  robots: isStaticExport ? { index: false, follow: true } : undefined,
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2f4a37",
+  themeColor: "#140a07",
   width: "device-width",
   initialScale: 1,
 };

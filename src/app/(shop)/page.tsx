@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { withBasePath } from "@/lib/paths";
 import { TLink } from "@/components/nuage/PageTransition";
-import { NewsletterForm } from "@/components/community/NewsletterForm";
 import { CountryCarousel } from "@/components/recipe/CountryCarousel";
 import { CountryMap } from "@/components/recipe/CountryMap";
 import { RecipeRow } from "@/components/recipe/RecipeCard";
@@ -11,7 +10,6 @@ import { getGammes } from "@/lib/data/gammes";
 import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
 import { unitWord } from "@/lib/gamme-words";
 
-export const revalidate = 300;
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -117,21 +115,6 @@ export default async function HomePage() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section aria-labelledby="newsletter" className="bg-[#140a07] px-[clamp(20px,4vw,56px)] pb-20">
-        <div className="mx-auto grid max-w-[1320px] items-center gap-8 rounded-[32px] border border-[#ff7a3d]/30 bg-[radial-gradient(60%_80%_at_85%_20%,rgba(255,122,61,.18),transparent_70%)] p-6 sm:p-10 lg:grid-cols-2">
-          <div>
-            <p className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">Newsletter</p>
-            <h2 id="newsletter" className="mt-1 uppercase leading-[.95]" style={{ ...anton, fontSize: "clamp(36px,4.5vw,64px)" }}>
-              La recette de la semaine<span className="text-[#ff7a3d]">.</span>
-            </h2>
-            <p className="mt-2 max-w-md text-sm text-[#fbeee2]/70">
-              Chaque semaine, un plat d&apos;un pays différent, son histoire et le produit rare pour le réussir.
-            </p>
-          </div>
-          <NewsletterForm />
         </div>
       </section>
 

@@ -8,7 +8,6 @@ import { COUNTRIES, countryBySlug } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipes } from "@/lib/data/recipes";
 
-export const revalidate = 300;
 
 export async function generateStaticParams() {
   return COUNTRIES.map((c) => ({ slug: c.slug }));

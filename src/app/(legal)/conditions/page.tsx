@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { AMAZON_DISCLOSURE } from "@/lib/amazon";
@@ -6,14 +5,14 @@ import { legalConfig, siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Conditions générales d'utilisation",
-  description: "Conditions d'utilisation du site Keurcook : recettes, conseils, newsletter et liens d'achat vers Amazon.",
+  description: "Conditions d'utilisation du site Keurcook : recettes, conseils et liens d'achat vers Amazon.",
   alternates: { canonical: "/conditions" },
 };
 
 export default function TermsPage() {
   const l = legalConfig;
   return (
-    <LegalPage title="Conditions générales d'utilisation" updated="28 septembre 2026">
+    <LegalPage title="Conditions générales d'utilisation" updated="29 septembre 2026">
       <h2>Article 1 — Objet</h2>
       <p>
         Les présentes conditions générales d&apos;utilisation (CGU) encadrent l&apos;accès au site {siteConfig.url}, édité
@@ -49,28 +48,21 @@ export default function TermsPage() {
         de la conservation des aliments et de la prise en compte de ses allergies ou de celles de ses invités.
       </p>
 
-      <h2>Article 5 — Newsletter</h2>
-      <p>
-        L&apos;inscription à la newsletter est gratuite et se fait avec votre consentement ; vous pouvez vous désinscrire à
-        tout moment. Le traitement de vos données est décrit dans la <Link href="/confidentialite">politique de
-        confidentialité</Link>.
-      </p>
-
-      <h2>Article 6 — Propriété intellectuelle</h2>
+      <h2>Article 5 — Propriété intellectuelle</h2>
       <p>
         Les textes, photographies et éléments graphiques du site sont protégés par le droit de la propriété
         intellectuelle. Toute reproduction sans autorisation préalable est interdite, hormis le partage d&apos;un lien vers
         une page du site.
       </p>
 
-      <h2>Article 7 — Responsabilité</h2>
+      <h2>Article 6 — Responsabilité</h2>
       <p>
         L&apos;Éditeur s&apos;efforce de fournir des informations exactes mais ne peut garantir l&apos;absence
         d&apos;erreur. Il n&apos;est pas responsable du contenu des sites vers lesquels renvoient les liens, notamment
         Amazon.fr.
       </p>
 
-      <h2>Article 8 — Droit applicable</h2>
+      <h2>Article 7 — Droit applicable</h2>
       <p>
         Les présentes CGU sont soumises au droit français. Pour toute question :{" "}
         <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.

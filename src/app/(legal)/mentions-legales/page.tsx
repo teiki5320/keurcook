@@ -31,10 +31,6 @@ export default function LegalNoticePage() {
 
       <h2>Hébergement</h2>
       <p>{l.host}</p>
-      <p>
-        Base de données : Neon (neon.com), service fourni via Vercel. Les données sont hébergées dans l&apos;Union
-        européenne (région de Francfort).
-      </p>
 
       <h2>Activité</h2>
       <p>

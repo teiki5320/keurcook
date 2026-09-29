@@ -2,35 +2,29 @@
 
 Site en français de **recettes de plats africains** (46 recettes, 16 pays), avec une rubrique **Conseils** (un article chaque lundi) et une **boutique de 91 produits africains rares** en 8 gammes. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
 
-**Stack** : Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Three.js (carte de l'Afrique en particules) · Neon (base de données PostgreSQL) · Marked (articles Markdown).
+- **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
+- **Éditeur** : ALOHASH (SAS). Contact : contact@keurcook.com.
+- **Dépôt** : https://github.com/teiki5320/keurcook.
 
----
+**Stack** : Next.js 16 (App Router, export statique) · React 19 · TypeScript · Tailwind CSS 4 · Three.js (carte de l'Afrique en particules) · Marked (articles Markdown). Hébergement : Cloudflare Pages.
 
-## Voir le site en ligne
-
-> Le site s'appelle désormais **Keurcook** (domaine **keurcook.com**, contact **contact@keurcook.com**, renvoyé vers contact@alohash.fr). La société éditrice reste **ALOHASH** (SAS). Migration de l'hébergement vers Cloudflare en cours : les adresses ci-dessous sont encore celles d'aujourd'hui.
-
-- **Site de référence** : https://www.alohash.fr (Vercel + Neon ; actuellement en maintenance).
-- **Vitrine de démonstration** : 👉 **https://teiki5320.github.io/alohash/**, copie statique en `noindex` publiée sur GitHub Pages à chaque push sur `main` et chaque lundi (workflow `.github/workflows/pages.yml`). GitHub Pages n'ayant pas de serveur, **la newsletter et l'admin y sont désactivés**.
-
-Pour reproduire le build de la vitrine en local : `npm run build:pages` (sortie dans `out/`, servie sous `/alohash/`).
+Le site est **100 % statique** : pas de serveur, pas de base de données. Recettes, produits et articles sont dans le code (`src/lib/demo/`, `content/conseils/`) ; le build produit le dossier `out/`, publié tel quel.
 
 ---
 
 ## Fonctionnalités
 
-**Côté site**
-
-- Accueil : carte de l'Afrique en particules (un point par pays), carrousels de recettes par type de plat, produits rares, newsletter.
+- Accueil : carte de l'Afrique en particules (un point par pays), carrousels de recettes par type de plat, produits rares.
 - Recettes : carrousel des types de plats, filtres (pays, difficulté), **recherche par plat, pays ou ingrédient**.
 - Fiche recette : histoire du plat, portions ajustables (quantités recalculées), étapes, astuces, **version imprimable**, **partage WhatsApp**, favori ; ingrédients disponibles en boutique signalés « Produit rare », avec bouton d'achat Amazon.
 - Pages pays, **favoris sans compte** (stockés dans le navigateur).
 - **Conseils** : articles Markdown (`content/conseils/`), un article chaque lundi, publication programmée (voir `docs/CONSEILS.md`).
 - Boutique par gammes, fiche produit avec « Utilisé dans ces recettes », bouton « Acheter · prix » vers Amazon.fr.
+- **Mode maintenance** : écran « On prépare la marmite », activé ou coupé depuis GitHub (voir « Maintenance » ci-dessous).
 
-**Côté admin (`/admin`)** : une seule fonction, **mettre le site en maintenance** (écran « On prépare la marmite », message modifiable). Connexion par mot de passe unique (`ADMIN_PASSWORD`), session par cookie signé valable 7 jours.
+Recettes et produits se modifient dans le code (`src/lib/demo/`), articles dans `content/conseils/` ; chaque modification envoyée sur `main` republie le site.
 
-Recettes et produits se modifient dans le code (`src/lib/demo/`), puis sont recopiés dans la base.
+Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le choix d'un outil d'envoi.
 
 ### Boutique et Amazon Partenaires
 
@@ -42,16 +36,15 @@ Recettes et produits se modifient dans le code (`src/lib/demo/`), puis sont reco
 ### Conformité
 
 - **Aucune allégation de santé** : liste de termes à risque (« soigne », « bienfaits », « digestion »… — voir `src/lib/compliance.ts`). Cette liste ne remplace pas une relecture humaine.
-- **Étiquetage alimentaire** : ingrédients, allergènes et conservation sur chaque fiche produit .
-- Newsletter avec **consentement explicite**.
-- Pages **conditions d'utilisation** (`/conditions`, CGU ; `/cgv` y redirige), **mentions légales**, **politique de confidentialité** ; **bannière cookies d'information** (cookies nécessaires seulement).
+- **Étiquetage alimentaire** : ingrédients, allergènes et conservation sur chaque fiche produit.
+- Pages **conditions d'utilisation** (`/conditions`, CGU ; `/cgv` y redirige), **mentions légales**, **politique de confidentialité** ; **bannière cookies d'information** (cookies nécessaires seulement). Hébergeur indiqué : Cloudflare, Inc.
 - Données structurées Google **Recipe** et **Product**, sitemap avec les recettes, les pays et les articles publiés.
 
 > ⚠️ Les textes légaux sont des **modèles** à faire valider.
 
 ---
 
-## Démarrage rapide (mode démo)
+## Démarrage
 
 Prérequis : Node.js ≥ 20.9.
 
@@ -60,68 +53,46 @@ npm install
 npm run dev
 ```
 
-Ouvrez http://localhost:3000. **Sans `DATABASE_URL`, le site tourne en mode démo** : les recettes et les produits sont chargés depuis `src/lib/demo/` (`recipes*.ts`, `catalog*.ts`). L'admin et la newsletter ne sont pas disponibles dans ce mode.
+Ouvrez http://localhost:3000. Aucune variable n'est obligatoire ; pour les régler en local : `cp .env.example .env.local`.
 
----
+### Variables d'environnement
 
-## Installation complète (Vercel + Neon)
-
-### 1. Créer le projet Vercel et la base
-
-1. Sur [vercel.com](https://vercel.com) : **Add New → Project**, importez le dépôt GitHub (framework détecté automatiquement). Chaque push sur `main` redéploie le site.
-2. Dans le projet : **Storage → Create Database → Neon** (région **Francfort `eu-central-1`**, pour le RGPD), puis **Connect** au projet. La variable `DATABASE_URL` est ajoutée automatiquement.
-3. Installez le schéma de la base, au choix :
-   - depuis Vercel : **Storage → la base Neon → Open in Neon → SQL Editor**, collez `db/schema.sql` puis (facultatif) `db/seed.sql` et exécutez ;
-   - en local : `npx vercel link`, `npx vercel env pull .env.local`, puis `npm run db:setup` (schéma seul) ou `npm run db:setup -- --seed` (schéma + recettes et produits de démo).
-
-   Les deux scripts sont rejouables sans perte de données.
-
-### 2. Variables d'environnement
-
-```bash
-cp .env.example .env.local
-```
-
-Sur Vercel, ajoutez les autres variables dans **Settings → Environment Variables**. En local, `npx vercel env pull .env.local` récupère `DATABASE_URL`.
+Toutes publiques (aucun secret dans le site). Liste complète : `.env.example`.
 
 | Variable | Rôle |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens canoniques) |
-| `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site, e-mail de contact |
-| `DATABASE_URL` | **Secret serveur** : connexion à la base Neon (recettes, catalogue, newsletter, réglages) |
-| `ADMIN_PASSWORD` | **Secret** : mot de passe de l'espace admin (maintenance) |
+| `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens canoniques) ; `https://keurcook.com` au build de production |
+| `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site (Keurcook), e-mail de contact (contact@keurcook.com) |
 | `NEXT_PUBLIC_AMAZON_TAG` | Tag Amazon Partenaires (par défaut `kultiva-21`) |
-| `NEXT_PUBLIC_LEGAL_*` | Informations des mentions légales et des conditions d'utilisation |
-
-### 3. Accès administrateur
-
-1. Définissez `ADMIN_PASSWORD` (mot de passe long et unique) dans les variables d'environnement.
-2. Connectez-vous sur `/admin/login` avec ce mot de passe.
-
-L'admin ne sert qu'à activer ou couper le mode maintenance. Les opérations passent uniquement par le serveur : la base n'est jamais accessible depuis le navigateur. Changer `ADMIN_PASSWORD` déconnecte toutes les sessions.
+| `NEXT_PUBLIC_LEGAL_*` | Informations des mentions légales et des conditions d'utilisation (hébergeur par défaut : Cloudflare) |
 
 ---
 
-## Déploiement
+## Publication
 
-### GitHub Pages (vitrine de démonstration)
+Workflow GitHub Actions `.github/workflows/deploy.yml` (« Publier le site »), lancé :
 
-Automatique à chaque push sur `main` et chaque lundi à 0 h 15 (cron, pour publier les articles programmés). Réglage unique : **Settings → Pages → Source : « GitHub Actions »**. Le script `scripts/build-pages.mjs` active `output: "export"` + `basePath`, met temporairement de côté les parties serveur (admin, proxy), utilise toujours les données de démo et remplace le formulaire de newsletter par un message. Toutes les pages sont en `noindex` : `www.alohash.fr` reste le site de référence.
+- à chaque push sur `main` ;
+- chaque lundi à 0 h 15 (cron), pour publier les articles « Conseils » programmés ;
+- à la main (onglet **Actions → Publier le site → Run workflow**) ;
+- après le bouton « Maintenance ».
 
-### Vercel (site de référence)
+Étapes : lint, types, tests, build (`out/`), puis `wrangler pages deploy out --project-name=keurcook` vers Cloudflare Pages. La publication n'a lieu que si les secrets GitHub `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` sont présents (**Settings → Secrets and variables → Actions**) ; sinon le workflow affiche un avertissement et ne publie rien.
 
-Voir « Installation complète » ci-dessus. Pensez à `NEXT_PUBLIC_SITE_URL=https://www.alohash.fr` dans les variables d'environnement.
+Mise en route restante : voir `docs/PUBLICATION.md`.
 
-### Nom de domaine IONOS
+### Maintenance
 
-Dans Vercel (**Settings → Domains**), ajoutez `votre-domaine.fr` et `www.votre-domaine.fr`, puis dans IONOS (**Domaines & SSL → votre domaine → DNS**) :
+Onglet **Actions → Maintenance → Run workflow** : choisir « Oui, mettre en pause » ou « Non, rouvrir le site », avec un message facultatif. Le workflow `.github/workflows/maintenance.yml` modifie `content/maintenance.json`, l'enregistre sur `main` et republie le site.
 
-| Type | Nom d'hôte | Valeur |
-| --- | --- | --- |
-| A | `@` | `76.76.21.21` |
-| CNAME | `www` | `cname.vercel-dns.com` |
+Pendant la maintenance : écran « On prépare la marmite », pages en `noindex`, sitemap vide. Les pages légales (`/mentions-legales`, `/confidentialite`, `/conditions`) restent accessibles (groupe de routes `src/app/(legal)`).
 
-Supprimez au préalable les enregistrements A / AAAA / CNAME par défaut d'IONOS sur `@` et `www` (conservez les MX si vous utilisez la messagerie IONOS). Les valeurs exactes sont affichées par Vercel lors de l'ajout du domaine : elles font foi. Le certificat HTTPS est généré automatiquement après propagation (de quelques minutes à 24 h).
+### En-têtes et redirections
+
+Servis par Cloudflare Pages :
+
+- `public/_headers` : politique de sécurité du contenu (CSP), HSTS, `X-Frame-Options`, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, cache long des fichiers `/_next/static/`.
+- `public/_redirects` : `/cgv` → `/conditions`, `/categorie/:slug` → `/boutique?gamme=:slug`, anciennes pages (`/panier`, `/commande`, `/accessoires`, `/avertissements`, `/admin`…) vers la boutique, les conditions ou l'accueil.
 
 ---
 
@@ -130,46 +101,40 @@ Supprimez au préalable les enregistrements A / AAAA / CNAME par défaut d'IONOS
 | Script | Description |
 | --- | --- |
 | `npm run dev` | Serveur de développement |
-| `npm run build` / `npm start` | Build et serveur de production |
-| `npm run build:pages` | Build de la vitrine statique GitHub Pages (dossier `out/`, sous-dossier `/alohash/`) |
+| `npm run build` | Build statique (dossier `out/`) |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Vérification TypeScript |
 | `npm test` | Tests (`tests/*.test.ts`) |
-| `npm run db:setup` | Installe le schéma (`db/schema.sql`) sur la base `DATABASE_URL` ; `-- --seed` ajoute les recettes et produits de démo |
-| `npm run db:seed-sql` | Régénère `db/seed.sql` depuis `src/lib/demo/` (produits et recettes) |
 
-**Avant chaque envoi** : `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, `npm run build:pages`.
+**Avant chaque envoi** : `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`.
 
 ## Structure
 
 ```
-content/conseils/      articles « Conseils » en Markdown (date de publication dans l'en-tête)
+.github/workflows/
+  deploy.yml           publication sur Cloudflare Pages (push, lundi, à la main, après maintenance)
+  maintenance.yml      bouton « Maintenance » (modifie content/maintenance.json et republie)
+content/
+  conseils/            articles « Conseils » en Markdown (date de publication dans l'en-tête)
+  maintenance.json     mode maintenance (activé ou non, message affiché)
+public/
+  _headers             en-têtes de sécurité (Cloudflare Pages)
+  _redirects           redirections (Cloudflare Pages)
+  recipes/, products/, conseils/   photos (WebP)
 src/
   app/(shop)/          site : accueil, recettes (?type= / ?pays= / ?q=), recette/, pays/, favoris,
-                       boutique (?gamme= / ?q=), categorie/, produit/, conseils/, pages légales
-                       communaute-actions.ts : inscription à la newsletter
-  app/admin/           espace admin (login + (panel) protégé : mode maintenance)
-  components/          UI (recipe/, community/, conseils/, nuage/ = thème, carte et carrousels, product/, shop/, admin/)
-  lib/data/            accès aux données (recettes, catalogue, conseils, admin, réglages) — base Neon ou démo
+                       boutique (?gamme= / ?q=), produit/, conseils/
+  app/(legal)/         pages légales, accessibles même en maintenance
+  components/          UI (recipe/, conseils/, nuage/ = thème, carte et carrousels, product/, shop/, layout/, compliance/)
+  lib/data/            accès aux données (recettes, catalogue, gammes, conseils, réglages de maintenance)
+  lib/demo/            recettes et produits
   lib/amazon.ts        liens « Acheter » vers Amazon.fr (tag partenaire)
   lib/conseils/        lecture des articles et thèmes
   lib/countries.ts     pays (nom, « de … », position sur la carte)
   lib/recipe-utils.ts  types de plats, durées, quantités, recherche
-  lib/db/              client SQL Neon, conversion des lignes
-  lib/rate-limit.ts    limitation des tentatives (table rate_limits)
   lib/compliance.ts    détection des allégations de santé
-  proxy.ts             protection de /admin (cookie de session admin)
-db/
-  schema.sql           schéma SQL (catalogue, recettes, newsletter, réglages, rate_limits)
-  seed.sql             recettes et produits de démo
 docs/                  INFRA, MARKETING, PUBLICATION, CONSEILS, CONSEILS-CALENDRIER
-tests/                 tests (articles « Conseils »)
+tests/                 tests (articles « Conseils », contenus)
 ```
 
-### Sécurité
-
-- La base n'est jamais exposée au navigateur : toutes les requêtes passent par le serveur (`DATABASE_URL` est un secret serveur), et les écritures admin exigent la session admin (mot de passe + cookie signé).
-- **Limitation des tentatives** (table `rate_limits`, adresse IP hachée) : connexion admin 5 par 15 minutes, newsletter 5 par heure.
-- En-têtes de sécurité dans `next.config.ts` : politique de sécurité du contenu (CSP), HSTS, `X-Frame-Options`, `nosniff`.
-- En maintenance, les pages sont en `noindex` et le sitemap est vide.
-- Les photos (`public/recipes/*.webp`, `public/products/*.webp`, `public/conseils/`) sont **générées par IA** (OpenArt).
+Photos (`public/recipes/*.webp`, `public/products/*.webp`, `public/conseils/`) : photos OpenArt.

@@ -4,7 +4,6 @@ import { anton } from "@/components/nuage/typography";
 import { getCountriesWithRecipes, getRecipes } from "@/lib/data/recipes";
 import { withBasePath } from "@/lib/paths";
 
-export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Cuisines d'Afrique par pays",

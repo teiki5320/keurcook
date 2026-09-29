@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { RecipesBrowser } from "@/components/recipe/RecipesBrowser";
 import { getCountriesWithRecipes, getRecipes } from "@/lib/data/recipes";
 
-export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Recettes africaines",

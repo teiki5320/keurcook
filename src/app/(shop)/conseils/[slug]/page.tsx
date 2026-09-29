@@ -16,7 +16,6 @@ import { getRecipes } from "@/lib/data/recipes";
 import { withBasePath } from "@/lib/paths";
 
 // Relu toutes les heures : un article programmé devient accessible le jour de sa date.
-export const revalidate = 3600;
 
 export function generateStaticParams() {
   return getConseils().map((c) => ({ slug: c.slug }));

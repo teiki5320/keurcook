@@ -1,8 +1,6 @@
 import "server-only";
 import { cache } from "react";
 import { demoCategories, demoProducts } from "../demo/catalog";
-import { getSql, isDbConfigured, PRODUCT_SELECT } from "../db/client";
-import { mapCategory, mapProduct } from "../db/mappers";
 import type { Category, Product, ProductWithCategory } from "../types";
 
 export interface Catalog {
@@ -10,28 +8,10 @@ export interface Catalog {
   products: ProductWithCategory[];
 }
 
-/**
- * Charge le catalogue actif (catégories + produits + variantes).
- * Le catalogue d'une épicerie fine reste modeste (quelques centaines de
- * références) : on le charge en une requête puis on filtre en mémoire, ce
- * qui garde un comportement identique en mode démo et avec la base de données.
- */
+/** Catalogue actif (gammes + produits), écrit dans src/lib/demo/catalog*.ts. */
 export const getCatalog = cache(async (): Promise<Catalog> => {
-  let categories: Category[];
-  let products: Product[];
-
-  if (isDbConfigured) {
-    const sql = getSql();
-    const [cats, prods] = await Promise.all([
-      sql.query("select * from categories order by position"),
-      sql.query(`${PRODUCT_SELECT} where p.is_active order by p.created_at desc`),
-    ]);
-    categories = cats.map(mapCategory);
-    products = prods.map(mapProduct);
-  } else {
-    categories = demoCategories;
-    products = demoProducts.filter((p) => p.isActive);
-  }
+  const categories: Category[] = demoCategories;
+  const products: Product[] = demoProducts.filter((p) => p.isActive);
 
   const byId = new Map(categories.map((c) => [c.id, c]));
   return {

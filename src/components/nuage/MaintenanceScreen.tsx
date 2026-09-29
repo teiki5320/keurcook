@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { NewsletterForm } from "@/components/community/NewsletterForm";
+import Link from "next/link";
 import { anton } from "./typography";
 
 // Même nuage de particules que l'accueil, en forme de carte de l'Afrique (data-mix="0", immobile).
@@ -40,11 +40,7 @@ export function MaintenanceScreen({ message, contactEmail }: { message: string; 
             <span className="text-[#ff7a3d]">la marmite.</span>
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed whitespace-pre-line text-[#fbeee2]/75">{message}</p>
-          <div className="mt-8">
-            <p className="mb-3 text-sm font-semibold">Soyez prévenu de la réouverture, et recevez la recette de la semaine :</p>
-            <NewsletterForm />
-          </div>
-          <p className="mt-6 text-sm text-[#fbeee2]/60">
+          <p className="mt-8 text-sm text-[#fbeee2]/60">
             Une question ?{" "}
             <a href={`mailto:${contactEmail}`} className="text-[#ffc46b] underline-offset-4 hover:underline">
               {contactEmail}
@@ -66,6 +62,13 @@ export function MaintenanceScreen({ message, contactEmail }: { message: string; 
           )}
         </div>
       </div>
+
+      {/* Pages légales : toujours accessibles, y compris pendant la maintenance. */}
+      <footer className="relative z-[2] flex flex-wrap justify-center gap-x-6 gap-y-2 px-4 py-4 text-xs text-[#fbeee2]/60">
+        <Link href="/mentions-legales" className="hover:text-[#fbeee2]">Mentions légales</Link>
+        <Link href="/confidentialite" className="hover:text-[#fbeee2]">Confidentialité</Link>
+        <Link href="/conditions" className="hover:text-[#fbeee2]">Conditions d&apos;utilisation</Link>
+      </footer>
     </div>
   );
 }

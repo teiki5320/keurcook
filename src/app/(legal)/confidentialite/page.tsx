@@ -20,33 +20,36 @@ export default function PrivacyPage() {
       </p>
 
       <h2>Données collectées et finalités</h2>
+      <p>
+        Le site ne comporte ni compte, ni formulaire, ni outil de mesure d&apos;audience : nous ne collectons aucune
+        donnée personnelle en dehors des cas suivants.
+      </p>
       <ul>
         <li>
-          <strong>Newsletter</strong> : adresse e-mail et date de consentement, pour l&apos;envoi de la « recette de la
-          semaine ». Base légale : consentement, retirable à tout moment en écrivant à l&apos;adresse de contact ou via le
-          lien de désinscription de chaque e-mail.
+          <strong>Messages envoyés à l&apos;adresse de contact</strong> : votre adresse e-mail et le contenu de votre
+          message, pour vous répondre. Base légale : intérêt légitime (répondre à votre demande).
         </li>
         <li>
-          <strong>Sécurité du site</strong> : pour limiter les envois abusifs (newsletter, connexion à
-          l&apos;administration), une empreinte non réversible de l&apos;adresse IP est conservée un jour au plus. Base
-          légale : intérêt légitime.
+          <strong>Journaux techniques de l&apos;hébergeur</strong> : comme tout site, l&apos;hébergeur ({legalConfig.hostName})
+          traite l&apos;adresse IP et les informations techniques de connexion pour délivrer les pages et protéger le site
+          contre les attaques. Base légale : intérêt légitime (sécurité du site).
         </li>
       </ul>
       <p>Nous ne collectons aucune donnée de santé et ne revendons jamais vos données.</p>
 
       <h2>Durées de conservation</h2>
       <ul>
-        <li>Empreintes d&apos;adresse IP (limitation des envois) : un jour au plus.</li>
-        <li>Newsletter : jusqu&apos;à la désinscription, puis 3 ans sans ouverture ni clic.</li>
+        <li>Messages de contact : le temps de traiter la demande, puis 3 ans au plus.</li>
+        <li>Journaux techniques : selon la politique de l&apos;hébergeur, quelques jours en général.</li>
         <li>Choix en matière de cookies : 6 mois.</li>
       </ul>
 
       <h2>Destinataires et sous-traitants</h2>
       <p>
-        Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site
-        ({legalConfig.hostName}) et base de données (Neon). Lorsque des
-        données sont transférées hors de l&apos;Union européenne, ce transfert est encadré par des clauses contractuelles
-        types de la Commission européenne.
+        Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site et
+        acheminement des e-mails de contact ({legalConfig.hostName}), messagerie (IONOS). Lorsque des données sont
+        transférées hors de l&apos;Union européenne, ce transfert est encadré par des clauses contractuelles types de la
+        Commission européenne.
       </p>
 
       <h2>Liens vers Amazon</h2>
@@ -69,7 +72,6 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté.</li>
         <li><strong>ah_consent</strong> (nécessaire) — mémorise vos choix en matière de cookies, 6 mois.</li>
-        <li><strong>keurcook_admin</strong> (nécessaire) — session de l&apos;espace d&apos;administration, réservé à l&apos;éditeur, 7 jours.</li>
       </ul>
       <p>
         Le site ne dépose aucun cookie de mesure d&apos;audience ni publicitaire. Amazon.fr, une fois ouvert, dépose ses

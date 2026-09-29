@@ -4,7 +4,6 @@ import { anton } from "@/components/nuage/typography";
 import { getConseils } from "@/lib/data/conseils";
 
 // Relu toutes les heures : un article programmé paraît le jour de sa date sans redéploiement.
-export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Conseils de cuisine africaine",

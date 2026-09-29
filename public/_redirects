@@ -1,0 +1,13 @@
+# Redirections servies par Cloudflare Pages.
+# Anciennes CGV → conditions d'utilisation.
+/cgv /conditions 301
+# Anciennes pages de gamme → boutique filtrée.
+/categorie/:slug /boutique?gamme=:slug 301
+# Anciennes pages supprimées (commande, admin…).
+/panier /boutique 301
+/commande /boutique 301
+/commande/* /boutique 301
+/accessoires /boutique 301
+/avertissements /conditions 301
+/admin / 301
+/admin/* / 301
