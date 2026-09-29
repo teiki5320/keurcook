@@ -11,8 +11,6 @@ export interface Variant {
   productId: string;
   label: string;
   priceCents: number;
-  stock: number;
-  sku: string | null;
   position: number;
 }
 
@@ -47,24 +45,6 @@ export interface Product {
 
 export interface ProductWithCategory extends Product {
   category: Category;
-}
-
-export interface CustomerInput {
-  email: string;
-  firstName: string;
-  lastName: string;
-  phone?: string;
-  addressLine1: string;
-  addressLine2?: string;
-  postalCode: string;
-  city: string;
-  country: string;
-  notes?: string;
-}
-
-export interface CartLineInput {
-  variantId: string;
-  quantity: number;
 }
 
 // ------------------------------------------------------------------ Recettes

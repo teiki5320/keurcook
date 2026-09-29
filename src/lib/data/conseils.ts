@@ -40,6 +40,8 @@ export function renderConseil(body: string): string {
   };
   renderer.link = function ({ href, title, tokens }) {
     const inner = this.parser.parseInline(tokens);
+    // Seuls les liens web, internes, ancres et e-mails sont acceptés (pas de « javascript: »).
+    if (!/^(https?:|\/|#|mailto:)/i.test(href)) href = "#";
     const external = /^https?:/.test(href);
     const attrs = external ? ` target="_blank" rel="${/amazon\./.test(href) ? "sponsored nofollow " : ""}noopener noreferrer"` : "";
     return `<a href="${escapeAttr(external ? href : withBasePath(href))}"${title ? ` title="${escapeAttr(title)}"` : ""}${attrs}>${inner}</a>`;

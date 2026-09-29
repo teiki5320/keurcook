@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { anton } from "@/components/nuage/typography";
 import { FavoritesList } from "@/components/recipe/FavoritesList";
 import { getRecipes } from "@/lib/data/recipes";
 
-export const metadata: Metadata = { title: "Mes recettes favorites", robots: { index: false } };
+export const metadata: Metadata = pageMetadata({
+  title: "Mes recettes favorites",
+  description: "Les recettes africaines que vous avez mises de côté sur Keur Cook.",
+  path: "/favoris",
+  noindex: true,
+});
 
 export default async function FavoritesPage() {
   const recipes = await getRecipes();

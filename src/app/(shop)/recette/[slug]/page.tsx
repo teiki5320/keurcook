@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChefHat, Clock, Flame, Lightbulb, MapPin, Users } from "lucide-react";
@@ -26,12 +27,14 @@ export async function generateMetadata({ params }: PageProps<"/recette/[slug]">)
   const recipe = await getRecipeBySlug(slug);
   if (!recipe) return {};
   const country = countryByCode(recipe.countryCode);
-  return {
+  return pageMetadata({
     title: `${recipe.name} — recette ${country?.of ?? "africaine"}`,
     description: recipe.shortDescription,
-    alternates: { canonical: `/recette/${recipe.slug}` },
-    openGraph: { title: recipe.name, description: recipe.shortDescription, images: recipe.image ? [{ url: recipe.image }] : undefined },
-  };
+    path: `/recette/${recipe.slug}`,
+    image: recipe.image,
+    imageAlt: recipe.name,
+    type: "article",
+  });
 }
 
 const anton = { fontFamily: "var(--font-anton), sans-serif", fontWeight: 400 } as const;
@@ -109,7 +112,8 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
         </div>
       </header>
       <div className="mt-6 hidden print:block">
-        <h1 className="text-4xl font-bold">{recipe.name}</h1>
+        {/* Titre de la version imprimée : pas un second h1 (le h1 est dans l'en-tête). */}
+        <p className="text-4xl font-bold">{recipe.name}</p>
         <p className="mt-1">{country?.name}{recipe.region ? ` · ${recipe.region}` : ""} — {recipe.shortDescription}</p>
       </div>
 
@@ -160,7 +164,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
                     <p className="text-[16px] leading-relaxed">{s.text}</p>
                     {s.image && (
                       <div className="relative mt-3 aspect-[16/10] overflow-hidden rounded-2xl">
-                        <ProductImage src={s.image} alt={`Étape ${i + 1}`} sizes="(min-width: 1024px) 50vw, 100vw" />
+                        <ProductImage src={s.image} alt="" sizes="(min-width: 1024px) 50vw, 100vw" />
                       </div>
                     )}
                   </div>

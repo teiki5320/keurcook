@@ -4,7 +4,7 @@
 @keyframes nuage-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /*
- * Les pages existantes (catégories, fiche produit, panier, commande, légales)
+ * Les pages existantes (boutique, fiche produit, conseils, pages légales)
  * utilisent les couleurs Tailwind du thème clair. On les redéfinit ici pour
  * qu'elles adoptent le thème sombre sans toucher à leur code.
  */

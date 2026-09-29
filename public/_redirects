@@ -11,6 +11,8 @@
 /categorie/cafes-thes /boutique?gamme=cafes-thes 301
 /categorie/ustensiles /boutique?gamme=ustensiles 301
 /categorie/* /boutique 301
+# Fiche produit renommée.
+/produit/sauce-graine-nkulenus /produit/base-soupe-noix-de-palme 301
 # Anciennes pages supprimées (commande, admin…).
 /panier /boutique 301
 /commande /boutique 301

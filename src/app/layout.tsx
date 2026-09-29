@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Anton, Fraunces, Inter, Manrope } from "next/font/google";
 import { CookieBanner } from "@/components/compliance/CookieBanner";
 import { siteConfig } from "@/lib/config";
+import { DEFAULT_SHARE_IMAGE } from "@/lib/metadata";
 import "./globals.css";
 import "./nuage.css";
 
@@ -25,8 +26,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
-    url: siteConfig.url,
-    images: [{ url: "/brand/keurcook-partage.jpg", width: 1200, height: 630, alt: "Keur Cook, la cuisine de demain" }],
+    images: [DEFAULT_SHARE_IMAGE],
   },
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },

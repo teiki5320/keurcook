@@ -29,23 +29,21 @@ export const demoCategories: Category[] = [
 const cat = (slug: string) => demoCategories.find((c) => c.slug === slug)!.id;
 
 let variantCounter = 0;
-function variants(productId: string, list: Array<[label: string, priceCents: number, stock: number]>): Variant[] {
-  return list.map(([label, priceCents, stock], position) => {
+function variants(productId: string, list: Array<[label: string, priceCents: number]>): Variant[] {
+  return list.map(([label, priceCents], position) => {
     variantCounter += 1;
     return {
       id: id("3", variantCounter),
       productId,
       label,
       priceCents,
-      stock,
-      sku: `AH-${variantCounter.toString().padStart(4, "0")}`,
       position,
     };
   });
 }
 
 type ProductSeed = Omit<Product, "variants" | "id" | "createdAt" | "isActive" | "images" | "amazonAsin"> & {
-  variants: Array<[string, number, number]>;
+  variants: Array<[string, number]>;
 };
 
 const seeds: ProductSeed[] = [
@@ -66,7 +64,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["poivre", "Cameroun"],
     featured: true,
-    variants: [["50 g", 890, 40], ["100 g", 1590, 25]],
+    variants: [["50 g", 890], ["100 g", 1590]],
   },
   {
     slug: "soumbala",
@@ -84,7 +82,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans une boîte hermétique, car son odeur est puissante.",
     tags: ["fermenté", "umami"],
     featured: true,
-    variants: [["100 g", 690, 30], ["250 g", 1490, 15]],
+    variants: [["100 g", 690], ["250 g", 1490]],
   },
   {
     slug: "berbere",
@@ -102,7 +100,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["mélange", "piquant"],
     featured: false,
-    variants: [["80 g", 790, 30]],
+    variants: [["80 g", 790]],
   },
   {
     slug: "yaji-suya",
@@ -120,7 +118,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["grillade", "piquant"],
     featured: true,
-    variants: [["100 g", 790, 25]],
+    variants: [["100 g", 790]],
   },
   {
     slug: "poivre-de-selim",
@@ -138,7 +136,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["épice", "gousses"],
     featured: false,
-    variants: [["50 g", 690, 30]],
+    variants: [["50 g", 690]],
   },
   // ---------------------------------------------------- Farines & céréales
   {
@@ -157,7 +155,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["céréale ancienne"],
     featured: true,
-    variants: [["500 g", 590, 50], ["1 kg", 990, 30]],
+    variants: [["500 g", 590], ["1 kg", 990]],
   },
   {
     slug: "attieke-sec",
@@ -175,7 +173,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["manioc", "fermenté"],
     featured: false,
-    variants: [["500 g", 490, 40], ["1 kg", 890, 20]],
+    variants: [["500 g", 490], ["1 kg", 890]],
   },
   {
     slug: "couscous-de-mil",
@@ -193,7 +191,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["mil"],
     featured: false,
-    variants: [["500 g", 550, 30]],
+    variants: [["500 g", 550]],
   },
   // -------------------------------------------- Feuilles & fleurs séchées
   {
@@ -212,7 +210,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière.",
     tags: ["feuilles", "Cameroun"],
     featured: true,
-    variants: [["100 g", 790, 30], ["250 g", 1790, 15]],
+    variants: [["100 g", 790], ["250 g", 1790]],
   },
   {
     slug: "feuilles-de-manioc",
@@ -230,7 +228,7 @@ const seeds: ProductSeed[] = [
     conservation: "Tant que le contenant est fermé : à température ambiante. Une fois entamé : au frais, dans un récipient fermé, et à utiliser rapidement.",
     tags: ["feuilles", "manioc"],
     featured: false,
-    variants: [["200 g", 690, 30]],
+    variants: [["200 g", 690]],
   },
   {
     slug: "fleurs-de-bissap",
@@ -248,7 +246,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière.",
     tags: ["boisson", "hibiscus"],
     featured: true,
-    variants: [["100 g", 490, 60], ["250 g", 990, 30]],
+    variants: [["100 g", 490], ["250 g", 990]],
   },
   // ----------------------------------------------------- Poissons & fumés
   {
@@ -267,7 +265,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans une boîte hermétique.",
     tags: ["poisson", "fermenté"],
     featured: false,
-    variants: [["150 g", 890, 20]],
+    variants: [["150 g", 890]],
   },
   {
     slug: "crevettes-sechees",
@@ -285,7 +283,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans une boîte hermétique.",
     tags: ["crustacés"],
     featured: false,
-    variants: [["100 g", 990, 25]],
+    variants: [["100 g", 990]],
   },
   {
     slug: "poisson-fume",
@@ -293,7 +291,7 @@ const seeds: ProductSeed[] = [
     categoryId: cat("poissons"),
     shortDescription: "Poisson-chat fumé, utilisé pour parfumer le pondu, les sauces graine et les plats de légumes feuilles.",
     description:
-      "Le machoiron est un poisson-chat que l'on fume pour le conserver. Sa chair ferme prend un goût fumé prononcé.\n\nÉmietté, il parfume le pondu, les sauces graine et les plats de légumes feuilles d'Afrique centrale et de l'Ouest.",
+      "Le mâchoiron est un poisson-chat que l'on fume pour le conserver. Sa chair ferme prend un goût fumé prononcé.\n\nÉmietté, il parfume le pondu, les sauces graine et les plats de légumes feuilles d'Afrique centrale et de l'Ouest.",
     originCountry: null,
     originRegion: null,
     producer: null,
@@ -303,7 +301,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec et au frais, dans une boîte hermétique.",
     tags: ["fumé", "poisson"],
     featured: false,
-    variants: [["200 g", 1290, 15]],
+    variants: [["200 g", 1290]],
   },
   // ------------------------------------------------------ Huiles & pâtes
   {
@@ -322,7 +320,7 @@ const seeds: ProductSeed[] = [
     conservation: "À température ambiante, à l'abri de la lumière.",
     tags: ["palme"],
     featured: false,
-    variants: [["500 ml", 890, 30]],
+    variants: [["500 ml", 890]],
   },
   {
     slug: "pate-d-arachide",
@@ -340,13 +338,13 @@ const seeds: ProductSeed[] = [
     conservation: "À température ambiante, pot bien fermé. Remuer avant usage si l'huile est remontée à la surface.",
     tags: ["arachide"],
     featured: true,
-    variants: [["500 g", 690, 40]],
+    variants: [["500 g", 690]],
   },
   {
     slug: "pulpe-de-noix-de-palme",
-    name: "Pulpe de noix de palme (800 g)",
+    name: "Pulpe de noix de palme",
     categoryId: cat("huiles"),
-    shortDescription: "Crème de noix de palme prête à cuisiner, pour la sauce graine, le poulet nyembwe et la soupe de noix de palme.",
+    shortDescription: "Le concentré de noix de palme de Côte d'Ivoire, en grande boîte, pour la sauce graine et le poulet nyembwe.",
     description:
       "La pulpe de noix de palme est extraite des noix de palme cuites et pilées. Onctueuse et orangée, elle évite la longue préparation des noix fraîches.\n\nElle sert de base à la sauce graine de Côte d'Ivoire, au poulet nyembwe du Gabon, à la palm nut soup du Ghana ou au banga du Nigeria.",
     originCountry: null,
@@ -358,7 +356,7 @@ const seeds: ProductSeed[] = [
     conservation: "Tant que le contenant est fermé : à température ambiante. Une fois entamé : au frais, dans un récipient fermé, et à utiliser rapidement.",
     tags: ["palme"],
     featured: false,
-    variants: [["400 g", 490, 40]],
+    variants: [["400 g", 490]],
   },
   // ------------------------------------------- Ajouts (nouvelles recettes)
   {
@@ -367,7 +365,7 @@ const seeds: ProductSeed[] = [
     categoryId: cat("epices"),
     shortDescription: "Graines d'egusi moulues, pour épaissir et parfumer la soupe egusi du Nigeria et du Ghana.",
     description:
-      "L'egusi, parfois appelé pistache africaine, désigne les graines de certaines courges et melons d'Afrique de l'Ouest. Moulues, elles ont un goût doux qui rappelle la noisette.\n\nElles épaississent et parfument la soupe egusi, un grand classique du Nigeria et du Ghana, servie avec le fufu, l'eba ou l'amala.",
+      "L'egusi, parfois appelé pistache africaine, désigne les graines de certaines courges et melons d'Afrique de l'Ouest. Moulues, elles ont un goût doux qui rappelle la noisette.\n\nElles épaississent et parfument la soupe egusi, un grand classique du Nigeria et du Ghana, servie avec le foufou, l'eba ou l'amala.",
     originCountry: "Afrique de l'Ouest",
     originRegion: null,
     producer: null,
@@ -377,7 +375,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["graines", "egusi"],
     featured: true,
-    variants: [["250 g", 790, 30], ["500 g", 1390, 15]],
+    variants: [["250 g", 790], ["500 g", 1390]],
   },
   {
     slug: "gombo-seche",
@@ -395,7 +393,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière.",
     tags: ["gombo", "Sahel"],
     featured: false,
-    variants: [["100 g", 590, 30]],
+    variants: [["100 g", 590]],
   },
   {
     slug: "feuilles-de-moringa",
@@ -413,7 +411,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière.",
     tags: ["feuilles", "Sénégal"],
     featured: false,
-    variants: [["100 g", 690, 30]],
+    variants: [["100 g", 690]],
   },
   {
     slug: "feuilles-de-sorgho",
@@ -431,7 +429,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["feuilles", "Ghana"],
     featured: false,
-    variants: [["50 g", 490, 40]],
+    variants: [["50 g", 490]],
   },
   {
     slug: "feuilles-d-okok",
@@ -449,7 +447,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, à l'abri de la lumière.",
     tags: ["feuilles", "forêt"],
     featured: false,
-    variants: [["100 g", 890, 25]],
+    variants: [["100 g", 890]],
   },
   {
     slug: "odika",
@@ -467,7 +465,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec et au frais, emballé.",
     tags: ["Gabon", "forêt"],
     featured: true,
-    variants: [["150 g", 1190, 15]],
+    variants: [["150 g", 1190]],
   },
   {
     slug: "farine-de-teff",
@@ -475,7 +473,7 @@ const seeds: ProductSeed[] = [
     categoryId: cat("cereales"),
     shortDescription: "Farine de teff, la petite céréale éthiopienne qui sert à préparer l'injera, la grande galette alvéolée.",
     description:
-      "Le teff est une céréale minuscule cultivée depuis très longtemps sur les hauts plateaux d'Éthiopie et d'Érythrée. Sa farine a un goût légèrement acidulé.\n\nFermentée quelques jours, elle donne l'injera, la grande galette alvéolée qui sert à la fois d'assiette et de couvert pour les wats ; on l'utilise aussi en pâtisserie.",
+      "Le teff est une céréale minuscule cultivée depuis très longtemps sur les hauts plateaux d'Éthiopie et d'Érythrée. Sa farine a un goût doux, légèrement noisetté.\n\nFermentée quelques jours, elle donne l'injera, la grande galette alvéolée qui sert à la fois d'assiette et de couvert pour les wats ; on l'utilise aussi en pâtisserie.",
     originCountry: "Éthiopie",
     originRegion: null,
     producer: null,
@@ -485,7 +483,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec et au frais, dans un contenant fermé.",
     tags: ["céréale ancienne", "Éthiopie"],
     featured: true,
-    variants: [["500 g", 690, 30], ["1 kg", 1190, 15]],
+    variants: [["500 g", 690], ["1 kg", 1190]],
   },
   {
     slug: "poudre-de-baobab",
@@ -503,7 +501,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["baobab", "Sénégal"],
     featured: false,
-    variants: [["250 g", 790, 30]],
+    variants: [["250 g", 790]],
   },
   {
     slug: "farine-de-foufou",
@@ -521,7 +519,7 @@ const seeds: ProductSeed[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["manioc", "foufou"],
     featured: false,
-    variants: [["1 kg", 690, 40]],
+    variants: [["1 kg", 690]],
   },
 ];
 
@@ -553,7 +551,7 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "crevettes-sechees": { asin: "B0BVGJQC39", label: "50 g", priceCents: 490 },
   "huile-de-palme-rouge": { asin: "B0962X7DNX", label: "75 cl", priceCents: 1499, name: "Huile de palme rouge" },
   "pate-d-arachide": { asin: "B07VX8JBYN", label: "425 g", priceCents: 1349, name: "Pâte d'arachide" },
-  "pulpe-de-noix-de-palme": { asin: "B07C1KX53F", label: "800 g", priceCents: 1200, name: "Pulpe de noix de palme (800 g)" },
+  "pulpe-de-noix-de-palme": { asin: "B07C1KX53F", label: "800 g", priceCents: 1200, name: "Pulpe de noix de palme" },
 };
 
 // Produits ajoutés le 27/09/2026 (catalog-nouveautes.ts), à la suite pour garder les identifiants existants.
@@ -576,6 +574,6 @@ export const demoProducts: Product[] = seeds.map((seed, index) => {
     amazonAsin: offer?.asin ?? null,
     isActive: Boolean(offer),
     createdAt: new Date(Date.UTC(2026, 0, 1 + index)).toISOString(),
-    variants: variants(productId, offer ? [[offer.label, offer.priceCents, 99]] : seed.variants),
+    variants: variants(productId, offer ? [[offer.label, offer.priceCents]] : seed.variants),
   };
 });

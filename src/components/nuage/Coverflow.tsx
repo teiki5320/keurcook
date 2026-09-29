@@ -141,22 +141,27 @@ export function Coverflow({
       </div>
 
       {n > 1 && (
-        <div className="mt-4 flex justify-center gap-2" role="tablist" aria-label="Cartes">
+        <div className="mt-2 flex justify-center" aria-label="Choisir une carte">
           {items.map((it, i) => (
             <button
               key={it.key}
               type="button"
-              role="tab"
-              aria-selected={i === active}
+              aria-pressed={i === active}
               aria-label={it.title}
               onClick={() => setActive(i)}
-              className="h-1.5 rounded-md transition-[width] duration-300"
-              style={{ width: i === active ? 32 : 10, background: i === active ? "#ff7a3d" : "rgba(251,238,226,.25)" }}
-            />
+              // Zone de clic de 24 px de haut autour du petit trait, plus facile à toucher.
+              className="flex h-6 items-center px-1"
+            >
+              <span
+                aria-hidden
+                className="block h-1.5 rounded-md transition-[width] duration-300"
+                style={{ width: i === active ? 32 : 10, background: i === active ? "#ff7a3d" : "rgba(251,238,226,.35)" }}
+              />
+            </button>
           ))}
         </div>
       )}
-      <p className="mt-3 text-center text-xs text-[#fbeee2]/45">
+      <p className="mt-2 text-center text-xs text-[#fbeee2]/70">
         <span className="pointer-fine:hidden">{hint ?? "Glissez pour parcourir · touchez la carte pour l'ouvrir"}</span>
         <span className="hidden pointer-fine:inline">
           {hintMouse ?? "Cliquez sur une carte voisine ou glissez pour parcourir · cliquez la carte centrale pour l'ouvrir"}

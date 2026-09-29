@@ -1,6 +1,5 @@
 /**
- * Recettes de démonstration (mode démo et source de db/seed.sql).
- * Photos générées par IA, à remplacer par de vraies photos.
+ * Recettes publiées sur le site (source unique : ce dossier).
  * Les recettes sont réparties par région dans les fichiers recipes-*.ts.
  */
 import type { Recipe } from "../types";
@@ -99,14 +98,14 @@ const seeds: RecipeSeed[] = [
     course: "mijotes",
     shortDescription: "Feuilles de manioc pilées, mijotées longuement à l'huile de palme rouge avec du poisson fumé et des aubergines.",
     story:
-      "Le pondu, ou saka-saka, est le légume-feuille des deux rives du fleuve Congo. Les feuilles de manioc, pilées au mortier, mijotent longuement jusqu'à devenir fondantes.\n\nÀ Kinshasa, on le sert avec de la chikwangue ou du fufu, et chaque famille a sa recette : avec du poisson fumé, de la viande ou simplement des aubergines.",
+      "Le pondu, ou saka-saka, est le légume-feuille des deux rives du fleuve Congo. Les feuilles de manioc, pilées au mortier, mijotent longuement jusqu'à devenir fondantes.\n\nÀ Kinshasa, on le sert avec de la chikwangue ou du foufou, et chaque famille a sa recette : avec du poisson fumé, de la viande ou simplement des aubergines.",
     prepMinutes: 20,
     cookMinutes: 120,
     servings: 4,
     difficulty: 2,
     ingredients: [
       [200, "g", "feuilles de manioc pilées", "feuilles-de-manioc"],
-      [200, "g", "machoiron fumé", "poisson-fume"],
+      [200, "g", "mâchoiron fumé"],
       [10, "cl", "huile de palme rouge", "huile-de-palme-rouge"],
       [2, null, "aubergines africaines (ou 1 aubergine)"],
       [1, null, "oignon"],
@@ -122,7 +121,7 @@ const seeds: RecipeSeed[] = [
       "Ajouter l'oignon, l'ail, le poivron et les aubergines coupés en morceaux, puis le poisson. Poursuivre la cuisson 40 minutes.",
       "Verser l'huile de palme rouge, saler, ajouter le piment et laisser mijoter encore 15 minutes à découvert.",
     ],
-    tips: ["Accompagnez de chikwangue, de fufu ou de riz.", "Une cuillère de pâte d'arachide rend le pondu plus onctueux."],
+    tips: ["Accompagnez de chikwangue, de foufou ou de riz.", "Une cuillère de pâte d'arachide rend le pondu plus onctueux."],
     tags: ["feuilles", "fumé"],
     featured: false,
   },
@@ -467,7 +466,7 @@ const seeds: RecipeSeed[] = [
       "Laisser refroidir, puis servir très frais.",
     ],
     tips: ["Infusion à froid : laissez les fleurs une nuit dans l'eau froide, le goût est plus fruité.", "Les fleurs infusées peuvent servir une seconde fois."],
-    tags: ["boisson", "sans cuisson"],
+    tags: ["boisson", "rapide"],
     featured: true,
   },
   {

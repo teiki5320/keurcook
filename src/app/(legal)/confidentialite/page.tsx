@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { CookieSettingsButton } from "@/components/compliance/CookieBanner";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { legalConfig, siteConfig } from "@/lib/config";
 
-export const metadata: Metadata = { title: "Politique de confidentialité", alternates: { canonical: "/confidentialite" } };
+export const metadata: Metadata = pageMetadata({
+  title: "Politique de confidentialité",
+  description: "Données personnelles et cookies sur Keur Cook : ce qui est collecté, pourquoi, et vos droits.",
+  path: "/confidentialite",
+});
 
 export default function PrivacyPage() {
   return (

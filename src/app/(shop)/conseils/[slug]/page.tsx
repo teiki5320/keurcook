@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ConseilCard } from "@/components/conseils/ConseilCard";
@@ -27,18 +28,15 @@ export async function generateMetadata({ params }: PageProps<"/conseils/[slug]">
   const { slug } = await params;
   const conseil = getConseilBySlug(slug);
   if (!conseil) return {};
-  return {
+  return pageMetadata({
     title: conseil.title,
     description: conseil.description,
-    alternates: { canonical: `/conseils/${conseil.slug}` },
-    openGraph: {
-      type: "article",
-      title: conseil.title,
-      description: conseil.description,
-      publishedTime: conseil.date,
-      images: conseil.image ? [{ url: conseil.image, alt: conseil.imageAlt ?? conseil.title }] : undefined,
-    },
-  };
+    path: `/conseils/${conseil.slug}`,
+    image: conseil.image,
+    imageAlt: conseil.imageAlt ?? conseil.title,
+    type: "article",
+    publishedTime: conseil.date,
+  });
 }
 
 export default async function ConseilPage({ params }: PageProps<"/conseils/[slug]">) {

@@ -17,7 +17,7 @@ Pour débuter en cuisine africaine, une grande marmite à fond épais, une spatu
 ## Les indispensables
 
 1. **Une grande marmite à fond épais** : en fonte ou en inox épais, elle répartit bien la chaleur et évite que les sauces ne collent pendant les longues cuissons, comme celle du [mafé](/recette/mafe).
-2. **Une spatule ou un bâton en bois** : solide et assez long, il sert à remuer les sauces et à travailler les pâtes fermes comme le tô de la [sauce gombo](/recette/to-sauce-gombo), l'ugali ou le foufou.
+2. **Une spatule ou un bâton en bois** : solide et assez long, il sert à remuer les sauces et à travailler les pâtes fermes comme le [tô](/recette/to-sauce-gombo), l'ugali ou le foufou.
 3. **Un mortier et un pilon** : pour écraser l'ail, le gingembre, le piment et les épices. Un modèle en bois ou en pierre de taille moyenne suffit à la maison.
 4. **Un mixeur** : il remplace le mortier pour les grandes quantités, les pâtes d'épices et les marinades.
 5. **Une passoire fine** : pour filtrer les boissons comme le bissap ou le jus de gingembre.

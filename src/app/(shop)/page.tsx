@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { withBasePath } from "@/lib/paths";
 import { TLink } from "@/components/nuage/PageTransition";
 import { CountryCarousel } from "@/components/recipe/CountryCarousel";
@@ -11,7 +12,12 @@ import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
 import { unitWord } from "@/lib/gamme-words";
 
 
-export const metadata: Metadata = { alternates: { canonical: "/" } };
+export const metadata: Metadata = pageMetadata({
+  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  description: siteConfig.description,
+  path: "/",
+  absoluteTitle: true,
+});
 
 const anton = { fontFamily: "var(--font-anton), sans-serif", fontWeight: 400 } as const;
 const WORDS = ["Ndolé", "Mafé", "Yassa", "Thiéboudienne", "Pondu", "Suya", "Doro wat", "Bissap"];
@@ -92,7 +98,7 @@ export default async function HomePage() {
                 Produits rares<span className="text-[#ff7a3d]">.</span>
               </h2>
               <p className="mt-1 max-w-xl text-sm text-[#fbeee2]/65">
-                Les ingrédients introuvables en grande surface, choisis à la source pour cuisiner nos recettes.
+                Les ingrédients introuvables en grande surface, sélectionnés sur Amazon pour cuisiner nos recettes.
               </p>
             </div>
             <TLink href="/boutique" label="Produits rares" className="text-sm font-bold text-[#ff7a3d] hover:text-[#ffc46b]">

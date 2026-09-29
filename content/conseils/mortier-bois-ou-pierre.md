@@ -16,7 +16,7 @@ Choisissez un mortier en bois si vous pilez de grandes quantités ou des aliment
 
 ## Le mortier en bois
 
-C'est le grand mortier des cours familiales, taillé dans un tronc, avec un long pilon que l'on manie debout. On l'utilise pour piler le manioc et le plantain du fufu, l'igname, les feuilles ou pour décortiquer certaines céréales.
+C'est le grand mortier des cours familiales, taillé dans un tronc, avec un long pilon que l'on manie debout. On l'utilise pour piler le manioc et le plantain du foufou, l'igname, les feuilles ou pour décortiquer certaines céréales.
 
 - **Ses atouts** : grande contenance, geste ample, bois qui amortit les chocs.
 - **Ses limites** : le bois garde les odeurs et les couleurs, il peut se fendre s'il reste mouillé ou s'il sèche trop vite près d'une source de chaleur.
@@ -38,4 +38,4 @@ Rincez le mortier en bois à l'eau claire sans le laisser tremper et faites-le s
 
 ## Selon vos recettes
 
-Pour les épices du [suya](/recette/suya) ou une pâte d'ail et de gingembre, la pierre est plus efficace. Pour préparer un fufu à l'ancienne, comme celui du [fufu et light soup](/recette/fufu-light-soup), ou écraser des feuilles, le bois reste le compagnon idéal. Pour la [sauce gombo du tô](/recette/to-sauce-gombo), un petit mortier de l'un ou l'autre suffit à écraser soumbala et piment.
+Pour les épices du [suya](/recette/suya) ou une pâte d'ail et de gingembre, la pierre est plus efficace. Pour préparer un foufou à l'ancienne, comme celui du [fufu et light soup](/recette/fufu-light-soup), ou écraser des feuilles, le bois reste le compagnon idéal. Pour la [sauce gombo du tô](/recette/to-sauce-gombo), un petit mortier de l'un ou l'autre suffit à écraser soumbala et piment.

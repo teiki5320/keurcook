@@ -36,7 +36,7 @@ La solution la plus conviviale : cuisiner une sauce modérée et poser sur la ta
 ## Si c'est trop fort
 
 - Allongez la sauce avec un peu de bouillon, de tomate ou de pâte d'arachide.
-- Servez avec plus de riz, de fufu ou d'attiéké.
+- Servez avec plus de riz, de foufou ou d'attiéké.
 - Proposez à côté une boisson ou un accompagnement frais, comme un yaourt ou des crudités.
 
 ## Manipuler le piment

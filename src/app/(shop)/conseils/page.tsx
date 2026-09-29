@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { ConseilCard } from "@/components/conseils/ConseilCard";
 import { anton } from "@/components/nuage/typography";
 import { getConseils } from "@/lib/data/conseils";
 
 // Relu toutes les heures : un article programmé paraît le jour de sa date sans redéploiement.
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Conseils de cuisine africaine",
-  description: "Conserver, cuire, remplacer un ingrédient, réussir une sauce : les réponses aux questions courantes sur la cuisine africaine et ses produits.",
-  alternates: { canonical: "/conseils" },
-};
+  description:
+    "Conserver, cuire, remplacer un ingrédient, réussir une sauce : les réponses aux questions courantes sur la cuisine africaine et ses produits.",
+  path: "/conseils",
+});
 
 export default function ConseilsPage() {
   const conseils = getConseils();

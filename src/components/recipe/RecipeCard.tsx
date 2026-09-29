@@ -19,7 +19,7 @@ export function RecipeCard({ recipe, priority, className = "" }: { recipe: Recip
       >
         <ProductImage
           src={recipe.image}
-          alt={recipe.name}
+          alt=""
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 45vw, 80vw"
           priority={priority}
           className="transition duration-700 group-hover:scale-105"

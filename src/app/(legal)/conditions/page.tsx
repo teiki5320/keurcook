@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { AMAZON_DISCLOSURE } from "@/lib/amazon";
 import { legalConfig, siteConfig } from "@/lib/config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Conditions générales d'utilisation",
-  description: "Conditions d'utilisation du site Keur Cook : recettes, conseils et liens d'achat vers Amazon.",
-  alternates: { canonical: "/conditions" },
-};
+  description:
+    "Conditions d'utilisation du site Keur Cook : recettes, conseils et liens d'achat vers Amazon.",
+  path: "/conditions",
+});
 
 export default function TermsPage() {
   const l = legalConfig;

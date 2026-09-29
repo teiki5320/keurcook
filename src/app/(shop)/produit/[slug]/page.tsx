@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
@@ -24,16 +25,13 @@ export async function generateMetadata({ params }: PageProps<"/produit/[slug]">)
   const product = await getProductBySlug(slug);
   if (!product) return {};
   const image = product.images[0];
-  return {
+  return pageMetadata({
     title: product.name,
     description: `${product.shortDescription}${product.originCountry ? ` Origine : ${product.originCountry}.` : ""}`,
-    alternates: { canonical: `/produit/${product.slug}` },
-    openGraph: {
-      title: product.name,
-      description: product.shortDescription,
-      images: image && !image.endsWith(".svg") ? [{ url: image }] : undefined,
-    },
-  };
+    path: `/produit/${product.slug}`,
+    image: image && !image.endsWith(".svg") ? image : null,
+    imageAlt: product.name,
+  });
 }
 
 export default async function ProductPage({ params }: PageProps<"/produit/[slug]">) {
@@ -44,14 +42,15 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   const isFood = product.category.slug !== NON_FOOD_CATEGORY;
   const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
 
+  // Fil d'Ariane pour Google (une fiche « Product » sans offre ni avis serait signalée comme incomplète).
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    description: product.shortDescription,
-    image: product.images.map((i) => (i.startsWith("http") ? i : `${siteConfig.url}${i}`)),
-    category: product.category.name,
-    countryOfOrigin: product.originCountry ?? undefined,
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: product.category.name, item: `${siteConfig.url}/boutique?gamme=${product.category.slug}` },
+      { "@type": "ListItem", position: 3, name: product.name, item: `${siteConfig.url}/produit/${product.slug}` },
+    ],
   };
 
   return (
@@ -102,7 +101,11 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
               <div className="col-span-2">
                 <dt className="flex items-center gap-1 text-muted"><AlertTriangle className="h-3.5 w-3.5" aria-hidden /> Allergènes</dt>
                 <dd className="mt-0.5">
-                  {product.allergens.length ? <strong className="font-semibold text-[#ffc46b]">{product.allergens.join(", ")}</strong> : "Aucun allergène majeur déclaré."}
+                  {product.allergens.length ? (
+                    <strong className="font-semibold text-[#ffc46b]">{product.allergens.join(", ")}</strong>
+                  ) : (
+                    "Aucun allergène majeur connu pour ce type de produit. La composition varie selon la marque : vérifiez l'étiquette sur Amazon."
+                  )}
                 </dd>
               </div>
             )}

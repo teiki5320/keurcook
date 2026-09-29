@@ -1,10 +1,15 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { LegalPage } from "@/components/layout/LegalPage";
 import { AMAZON_DISCLOSURE } from "@/lib/amazon";
 import { legalConfig, siteConfig } from "@/lib/config";
 
-export const metadata: Metadata = { title: "Mentions légales", alternates: { canonical: "/mentions-legales" } };
+export const metadata: Metadata = pageMetadata({
+  title: "Mentions légales",
+  description: "Éditeur, hébergeur et informations légales du site Keur Cook.",
+  path: "/mentions-legales",
+});
 
 export default function LegalNoticePage() {
   const l = legalConfig;

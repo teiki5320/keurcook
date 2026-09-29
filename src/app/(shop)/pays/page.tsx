@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import { TLink } from "@/components/nuage/PageTransition";
 import { anton } from "@/components/nuage/typography";
 import { getCountriesWithRecipes, getRecipes } from "@/lib/data/recipes";
 import { withBasePath } from "@/lib/paths";
 
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Cuisines d'Afrique par pays",
-  description: "Sénégal, Cameroun, Côte d'Ivoire, Nigeria, Éthiopie… Découvrez la cuisine de chaque pays et ses recettes emblématiques.",
-  alternates: { canonical: "/pays" },
-};
+  description:
+    "Sénégal, Cameroun, Côte d'Ivoire, Nigeria, Éthiopie… Découvrez la cuisine de chaque pays et ses recettes emblématiques.",
+  path: "/pays",
+});
 
 export default async function CountriesPage() {
   const [countries, recipes] = await Promise.all([getCountriesWithRecipes(), getRecipes()]);

@@ -60,7 +60,7 @@ export function CookieBanner() {
   if (!open) return null;
 
   return (
-    <div role="dialog" aria-live="polite" aria-label="Cookies" className="nuage-theme fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-4">
+    <div role="dialog" aria-live="polite" aria-label="Cookies" className="nuage-theme fixed inset-x-0 bottom-0 z-[55] p-3 sm:p-4">
       <div className="mx-auto flex max-w-3xl flex-col gap-4 rounded-2xl border border-sage-300 bg-white p-5 shadow-xl sm:flex-row sm:items-center" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         <p className="text-sm text-muted">
           <strong className="text-forest-800">Cookies</strong> — Ce site n&apos;utilise qu&apos;un stockage local pour vos

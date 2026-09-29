@@ -177,7 +177,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       [2, "gousses", "ail"],
       [3, "c. à soupe", "huile végétale"],
       [1, null, "cube de bouillon (facultatif)"],
-      [null, null, "sel et poivre de Penja", "poivre-de-penja"],
+      [null, null, "sel et poivre noir"],
     ],
     steps: [
       "Pour le sukuma wiki, retirer les grosses côtes du chou, empiler les feuilles, les rouler et les couper en très fines lanières.",
@@ -215,7 +215,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       [2, "c. à soupe", "huile végétale"],
       [40, "cl", "eau chaude"],
       [4, null, "grandes feuilles de bananier", "feuilles-de-bananier-fraiches"],
-      [null, null, "sel et poivre de Penja", "poivre-de-penja"],
+      [null, null, "sel et poivre noir"],
     ],
     steps: [
       "Saler et poivrer le poulet, puis le faire dorer dans l'huile 10 minutes. Réserver. Dans la même cocotte, faire fondre les oignons émincés, l'ail et les tomates en dés pendant 8 minutes.",
@@ -255,7 +255,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       [1, "botte", "brèdes chinoises (pak choï)"],
       [1, "botte", "brèdes morelle ou épinards"],
       [2, "c. à soupe", "huile végétale"],
-      [null, null, "sel et poivre de Penja", "poivre-de-penja"],
+      [null, null, "sel et poivre noir"],
     ],
     steps: [
       "Faire revenir la viande dans l'huile dans un grand faitout 10 minutes, jusqu'à ce qu'elle soit bien colorée.",
@@ -292,7 +292,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       [1, "morceau", "gingembre frais (4 cm)"],
       [2, null, "tomates"],
       [20, "cl", "lait de coco (facultatif)"],
-      [null, null, "sel et poivre de Penja", "poivre-de-penja"],
+      [null, null, "sel et poivre noir"],
     ],
     steps: [
       "Réhydrater les feuilles de manioc 30 minutes dans l'eau tiède, puis les rincer et les égoutter. Les cuire 20 minutes dans une grande casserole d'eau bouillante et jeter l'eau de cuisson.",

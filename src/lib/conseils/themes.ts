@@ -7,7 +7,7 @@ export const CONSEIL_THEMES = {
   remplacer: { name: "Remplacer un ingrédient", short: "Remplacer", icon: Repeat },
   sauces: { name: "Sauces et techniques", short: "Techniques", icon: CookingPot },
   epices: { name: "Épices et condiments", short: "Épices", icon: Flame },
-  boissons: { name: "Boissons et douceurs", short: "Boissons", icon: CupSoda },
+  boissons: { name: "Boissons et douceurs", short: "Boissons & douceurs", icon: CupSoda },
   decouvrir: { name: "Découvrir et s'organiser", short: "Découvrir", icon: BookOpen },
   "cafe-the": { name: "Cafés et thés", short: "Café & thé", icon: Coffee },
   ustensiles: { name: "Ustensiles", short: "Ustensiles", icon: Utensils },

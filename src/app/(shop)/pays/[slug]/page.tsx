@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { anton } from "@/components/nuage/typography";
@@ -17,11 +18,16 @@ export async function generateMetadata({ params }: PageProps<"/pays/[slug]">): P
   const { slug } = await params;
   const country = countryBySlug(slug);
   if (!country) return {};
-  return {
+  const own = (await getRecipes()).filter((r) => r.countryCode === country.code);
+  return pageMetadata({
     title: `Recettes ${country.of}`,
     description: country.description,
-    alternates: { canonical: `/pays/${country.slug}` },
-  };
+    path: `/pays/${country.slug}`,
+    image: own.find((r) => r.image)?.image,
+    imageAlt: `Cuisine ${country.of}`,
+    // Pays sans recette publiée : page d'attente, à ne pas référencer.
+    noindex: own.length === 0,
+  });
 }
 
 export default async function CountryPage({ params }: PageProps<"/pays/[slug]">) {
