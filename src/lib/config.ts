@@ -1,5 +1,5 @@
 /**
- * Configuration générale de la boutique.
+ * Configuration générale du site.
  * Les valeurs sensibles ou propres à l'entreprise se règlent via les
  * variables d'environnement (voir .env.example).
  */
@@ -10,16 +10,19 @@ const defaultHost = isStaticExport
   ? { name: "GitHub Pages", full: "GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — pages.github.com" }
   : { name: "Vercel", full: "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com" };
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || "Alohash",
+  name: process.env.NEXT_PUBLIC_SITE_NAME || "Keurcook",
   tagline: "Recettes africaines & produits rares",
   description:
     "Recettes de plats africains expliquées pas à pas (ndolé, mafé, thiéboudienne, poulet yassa…), conseils de cuisine et sélection de produits africains à acheter sur Amazon.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
   locale: "fr_FR",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@alohash.fr",
+  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@keurcook.com",
 };
 
-/** Informations légales de l'éditeur (annuaire-entreprises.data.gouv.fr), affichées dans les mentions légales / CGV. */
+/**
+ * Informations légales de l'éditeur (annuaire-entreprises.data.gouv.fr), affichées dans les mentions légales
+ * et les conditions d'utilisation. La société ALOHASH édite le site Keurcook.
+ */
 export const legalConfig = {
   companyName: process.env.NEXT_PUBLIC_LEGAL_COMPANY_NAME || "ALOHASH",
   legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "SAS (société par actions simplifiée) au capital de 200 €",

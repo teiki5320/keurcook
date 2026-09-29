@@ -1,4 +1,4 @@
-# Alohash — recettes africaines & produits rares
+# Keurcook — recettes africaines & produits rares
 
 Site en français de **recettes de plats africains** (46 recettes, 16 pays), avec une rubrique **Conseils** (un article chaque lundi) et une **boutique de 91 produits africains rares** en 8 gammes. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
 
@@ -7,6 +7,8 @@ Site en français de **recettes de plats africains** (46 recettes, 16 pays), ave
 ---
 
 ## Voir le site en ligne
+
+> Le site s'appelle désormais **Keurcook** (domaine **keurcook.com**, contact **contact@keurcook.com**, renvoyé vers contact@alohash.fr). La société éditrice reste **ALOHASH** (SAS). Migration de l'hébergement vers Cloudflare en cours : les adresses ci-dessous sont encore celles d'aujourd'hui.
 
 - **Site de référence** : https://www.alohash.fr (Vercel + Neon ; actuellement en maintenance).
 - **Vitrine de démonstration** : 👉 **https://teiki5320.github.io/alohash/**, copie statique en `noindex` publiée sur GitHub Pages à chaque push sur `main` et chaque lundi (workflow `.github/workflows/pages.yml`). GitHub Pages n'ayant pas de serveur, **la newsletter et l'admin y sont désactivés**.

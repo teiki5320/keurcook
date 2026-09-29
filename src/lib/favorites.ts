@@ -6,8 +6,8 @@ import { useCallback, useSyncExternalStore } from "react";
  * Recettes favorites, gardées dans le navigateur (sans compte).
  * Synchronisées entre les onglets et entre les composants de la page.
  */
-const STORAGE_KEY = "alohash-favoris-v1";
-const EVENT = "alohash:favoris";
+const STORAGE_KEY = "keurcook-favoris-v1";
+const EVENT = "keurcook:favoris";
 const EMPTY: string[] = [];
 
 let cacheRaw: string | null = null;

@@ -1,5 +1,5 @@
 -- =====================================================================
--- Alohash — schéma de base de données (PostgreSQL, hébergé chez Neon)
+-- Keurcook — schéma de base de données (PostgreSQL, hébergé chez Neon)
 -- Installation : `npm run db:setup` (voir README), ou copier-coller dans
 -- l'éditeur SQL de Neon. Le script est rejouable sans perte de données.
 -- =====================================================================

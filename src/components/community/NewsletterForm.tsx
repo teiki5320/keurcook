@@ -33,7 +33,7 @@ export function NewsletterForm() {
       <label className="flex items-start gap-2 text-xs text-[#fbeee2]/65">
         <input type="checkbox" name="consent" required className="mt-0.5 h-4 w-4 accent-[#ff7a3d]" />
         <span>
-          J&apos;accepte de recevoir la newsletter d&apos;Alohash (une recette par semaine, désinscription à tout moment).{" "}
+          J&apos;accepte de recevoir la newsletter de Keurcook (une recette par semaine, désinscription à tout moment).{" "}
           <Link href="/confidentialite" className="underline">Confidentialité</Link>
         </span>
       </label>

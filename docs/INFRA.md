@@ -56,6 +56,7 @@ Généré le 28 septembre 2026 par un scan du dépôt. Pour mettre à jour : rel
 - **Rôle** : adresse du site, `www.alohash.fr` (principale) ; `alohash.fr` redirige vers `www`.
 - **Console** : IONOS (Domaines & SSL → alohash.fr → DNS) et Vercel (projet alohash → Domains).
 - **Identifiants publics** : A `@` et CNAME `www` pointés vers Vercel ; messagerie IONOS (MX, SPF, DKIM, DMARC) sur le même domaine, adresse `contact@alohash.fr`.
+- **Nouveau domaine** : `keurcook.com` chez Cloudflare (le site devient Keurcook) ; Cloudflare Email Routing renvoie `contact@keurcook.com` vers `contact@alohash.fr`. Hébergement du site à migrer vers Cloudflare.
 - **Secrets** : aucun dans le dépôt (accès au compte IONOS hors dépôt).
 - **Coût** : à vérifier dans la console IONOS.
 

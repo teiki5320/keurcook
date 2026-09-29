@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const CONSENT_COOKIE = "ah_consent";
-export const OPEN_CONSENT_EVENT = "alohash:open-cookie-settings";
+export const OPEN_CONSENT_EVENT = "keurcook:open-cookie-settings";
 
 interface Consent {
   necessary: true;

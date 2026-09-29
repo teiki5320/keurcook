@@ -6,7 +6,7 @@ import { legalConfig, siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Conditions générales d'utilisation",
-  description: "Conditions d'utilisation du site Alohash : recettes, conseils, newsletter et liens d'achat vers Amazon.",
+  description: "Conditions d'utilisation du site Keurcook : recettes, conseils, newsletter et liens d'achat vers Amazon.",
   alternates: { canonical: "/conditions" },
 };
 

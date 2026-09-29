@@ -27,7 +27,7 @@ export function MaintenanceScreen({ message, contactEmail }: { message: string; 
       <NuageCloud />
       <header className="relative z-[2] px-[clamp(20px,4vw,56px)] py-5">
         <p className="text-[26px] tracking-[.02em]" style={anton}>
-          ALOHASH<span className="text-[#ff7a3d]">.</span>
+          KEURCOOK<span className="text-[#ff7a3d]">.</span>
         </p>
       </header>
 

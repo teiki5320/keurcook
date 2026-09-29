@@ -10,7 +10,7 @@ export function AdminNav() {
     <header className="flex flex-wrap items-center justify-between gap-3 border-b border-[#fbeee2]/10 bg-[#0d0604] px-4 py-4 sm:px-8">
       <Link href="/admin">
         <span className="text-[26px] tracking-[.02em]" style={anton}>
-          ALOHASH<span className="text-[#ff7a3d]">.</span>
+          KEURCOOK<span className="text-[#ff7a3d]">.</span>
         </span>
         <span className="block text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">Administration</span>
       </Link>

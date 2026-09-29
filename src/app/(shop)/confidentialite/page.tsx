@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Politique de confidentialité", alte
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Politique de confidentialité" updated="28 septembre 2026">
+    <LegalPage title="Politique de confidentialité" updated="29 septembre 2026">
       <p>
         {legalConfig.companyName} (« nous ») attache une grande importance à la protection de vos données personnelles,
         traitées conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté.</li>
         <li><strong>ah_consent</strong> (nécessaire) — mémorise vos choix en matière de cookies, 6 mois.</li>
-        <li><strong>alohash_admin</strong> (nécessaire) — session de l&apos;espace d&apos;administration, réservé à l&apos;éditeur, 7 jours.</li>
+        <li><strong>keurcook_admin</strong> (nécessaire) — session de l&apos;espace d&apos;administration, réservé à l&apos;éditeur, 7 jours.</li>
       </ul>
       <p>
         Le site ne dépose aucun cookie de mesure d&apos;audience ni publicitaire. Amazon.fr, une fois ouvert, dépose ses

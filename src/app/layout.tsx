@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     images: [{ url: "/recipes/thieboudienne.webp", alt: "Thiéboudienne, plat du Sénégal" }],
   },
-  // La vitrine GitHub Pages est une copie de démonstration : le site de référence est www.alohash.fr.
+  // La vitrine GitHub Pages est une copie de démonstration : le site de référence est keurcook.com.
   robots: isStaticExport ? { index: false, follow: true } : undefined,
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },
