@@ -1,8 +1,16 @@
 # Redirections servies par Cloudflare Pages.
 # Anciennes CGV → conditions d'utilisation.
 /cgv /conditions 301
-# Anciennes pages de gamme → boutique filtrée.
-/categorie/:slug /boutique?gamme=:slug 301
+# Anciennes pages de gamme → boutique filtrée (Cloudflare ne recopie pas les variables dans la partie « ?… »).
+/categorie/epices /boutique?gamme=epices 301
+/categorie/cereales /boutique?gamme=cereales 301
+/categorie/feuilles /boutique?gamme=feuilles 301
+/categorie/poissons /boutique?gamme=poissons 301
+/categorie/huiles /boutique?gamme=huiles 301
+/categorie/snacks /boutique?gamme=snacks 301
+/categorie/cafes-thes /boutique?gamme=cafes-thes 301
+/categorie/ustensiles /boutique?gamme=ustensiles 301
+/categorie/* /boutique 301
 # Anciennes pages supprimées (commande, admin…).
 /panier /boutique 301
 /commande /boutique 301
