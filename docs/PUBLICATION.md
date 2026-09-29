@@ -17,7 +17,7 @@ Site 100 % statique (Next.js `output: "export"`, dossier `out/`), sans serveur n
 
 Étapes : lint, types, tests, build, puis `wrangler pages deploy out --project-name=keurcook`. Sans les secrets GitHub `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID`, le workflow affiche un avertissement et ne publie rien.
 
-Contenu : 46 recettes (16 pays), 67 articles « Conseils » programmés du 20/07/2026 au 25/10/2027, 91 produits en 8 gammes dont les boutons « Acheter · prix » mènent à Amazon.fr (tag `kultiva-21`, prix indicatifs relevés le 27/09/2026). Le site ne vend rien lui-même.
+Contenu : 46 recettes (16 pays), 67 articles « Conseils » programmés du 20/07/2026 au 25/10/2027, 91 produits en 8 gammes dont les boutons « Acheter · prix » mènent à Amazon.fr (tag `keurcook-21`, prix indicatifs relevés le 27/09/2026). Le site ne vend rien lui-même.
 
 ## Maintenance
 

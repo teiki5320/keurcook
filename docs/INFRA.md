@@ -15,7 +15,7 @@ Mis à jour le 29 septembre 2026 par un scan du dépôt. Pour mettre à jour : r
   - mode maintenance piloté par le bouton « Maintenance » de GitHub Actions ; en maintenance, pages en `noindex` et sitemap vide ;
   - en-têtes de sécurité (CSP, HSTS, `X-Frame-Options`, `nosniff`…) dans `public/_headers` ; redirections (`/cgv`, `/categorie/:slug`, anciennes pages `/panier`, `/commande`, `/admin`…) dans `public/_redirects` ;
   - favoris stockés dans le navigateur (aucun compte) ;
-  - liens Amazon construits par `src/lib/amazon.ts` (tag `kultiva-21`, champ `amazon_asin`) ; prix indicatifs relevés le 27/09/2026.
+  - liens Amazon construits par `src/lib/amazon.ts` (tag `keurcook-21`, champ `amazon_asin`) ; prix indicatifs relevés le 27/09/2026.
 
 ### 1. GitHub
 
@@ -45,9 +45,9 @@ Mis à jour le 29 septembre 2026 par un scan du dépôt. Pour mettre à jour : r
 
 ### 4. Amazon Partenaires
 
-- **Rôle** : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires, tag `kultiva-21`, `src/lib/amazon.ts`) ; Amazon encaisse et livre. Produits retenus : plus de 3,5 étoiles sur Amazon ; prix indicatifs relevés le 27/09/2026. `keurcook.com` doit être ajouté à la liste des sites du compte.
+- **Rôle** : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires, tag `keurcook-21`, `src/lib/amazon.ts`) ; Amazon encaisse et livre. Produits retenus : plus de 3,5 étoiles sur Amazon ; prix indicatifs relevés le 27/09/2026. `keurcook.com` doit être ajouté à la liste des sites du compte.
 - **Console** : https://partenaires.amazon.fr.
-- **Identifiants publics** : tag partenaire `kultiva-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer).
+- **Identifiants publics** : tag partenaire `keurcook-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer).
 - **Secrets** : aucun.
 - **Coût** : gratuit ; commission versée par Amazon sur les achats.
 

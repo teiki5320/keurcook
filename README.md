@@ -29,7 +29,7 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 ### Boutique et Amazon Partenaires
 
 - 91 produits en 8 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles. Produits retenus : plus de 3,5 étoiles sur Amazon.
-- Liens construits par `src/lib/amazon.ts` à partir du champ `amazon_asin` et du tag partenaire `kultiva-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer).
+- Liens construits par `src/lib/amazon.ts` à partir du champ `amazon_asin` et du tag partenaire `keurcook-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer).
 - Prix **indicatifs**, relevés le 27/09/2026 : le prix affiché par Amazon fait foi.
 - Le site n'encaisse rien et ne gère aucun stock : achat, paiement et livraison se font sur Amazon.
 
@@ -67,7 +67,7 @@ Toutes publiques (aucun secret dans le site). Liste complète : `.env.example`.
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens canoniques) ; `https://keurcook.com` au build de production |
 | `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site (Keur Cook), e-mail de contact (contact@keurcook.com) |
-| `NEXT_PUBLIC_AMAZON_TAG` | Tag Amazon Partenaires (par défaut `kultiva-21`) |
+| `NEXT_PUBLIC_AMAZON_TAG` | Tag Amazon Partenaires (par défaut `keurcook-21`) |
 | `NEXT_PUBLIC_LEGAL_*` | Informations des mentions légales et des conditions d'utilisation (hébergeur par défaut : Cloudflare) |
 
 ---

@@ -16,7 +16,7 @@ Mis à jour le 29 septembre 2026. Compagnon de INFRA.md.
 
 ## Modèle de rémunération
 
-Affiliation Amazon Partenaires : les boutons « Acheter · prix » mènent à Amazon.fr (tag `kultiva-21`, `src/lib/amazon.ts`) ; Amazon encaisse, livre et verse une commission sur les achats. Le site ne vend rien lui-même. Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affichés indicatifs, relevés le 27/09/2026.
+Affiliation Amazon Partenaires : les boutons « Acheter · prix » mènent à Amazon.fr (tag `keurcook-21`, `src/lib/amazon.ts`) ; Amazon encaisse, livre et verse une commission sur les achats. Le site ne vend rien lui-même. Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affichés indicatifs, relevés le 27/09/2026.
 
 | Phase | Levier | Statut |
 | --- | --- | --- |
@@ -57,7 +57,7 @@ Articles « Conseils » : un chaque lundi du 20/07/2026 au 25/10/2027 (`docs/CON
 ## Prochaines actions
 
 - ✅ Site de recettes africaines (46 recettes, 16 pays) et rubrique « Conseils » (67 articles programmés)
-- ✅ Boutique de 91 produits vers Amazon Partenaires (tag kultiva-21)
+- ✅ Boutique de 91 produits vers Amazon Partenaires (tag keurcook-21)
 - ✅ Mise en maintenance du site depuis GitHub (bouton « Maintenance »)
 - ⬜ Terminer la bascule vers Cloudflare Pages (keurcook.com) et ajouter keurcook.com dans Amazon Partenaires
 - ⬜ Désactiver la maintenance et déclarer le site à Google Search Console

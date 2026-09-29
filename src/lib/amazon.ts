@@ -1,5 +1,5 @@
 /** Programme Partenaires Amazon : liens d'achat vers Amazon.fr avec l'identifiant du site. */
-export const AMAZON_TAG = process.env.NEXT_PUBLIC_AMAZON_TAG || "kultiva-21";
+export const AMAZON_TAG = process.env.NEXT_PUBLIC_AMAZON_TAG || "keurcook-21";
 
 /** Lien vers la fiche Amazon.fr d'un produit (ASIN), avec le tag partenaire. */
 export function amazonUrl(asin: string): string {
