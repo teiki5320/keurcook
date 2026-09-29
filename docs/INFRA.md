@@ -58,7 +58,3 @@ Mis à jour le 29 septembre 2026 par un scan du dépôt. Pour mettre à jour : r
 - **Identifiants publics** : aucun.
 - **Secrets** : aucun dans le dépôt.
 - **Coût** : crédits OpenArt.
-
-### Services fermés
-
-- **Vercel** (ancien hébergement de `www.alohash.fr`, avec son stockage Blob) et **Neon** (ancienne base PostgreSQL) : supprimés le 29 septembre 2026, après la bascule vers Cloudflare.

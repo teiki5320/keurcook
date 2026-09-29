@@ -26,8 +26,7 @@ Calendrier des prochains articles : `docs/CONSEILS-CALENDRIER.md`.
 ## Publication programmée
 
 - Seuls les articles dont la date est passée apparaissent (liste, page, sitemap).
-- Vercel : pages relues toutes les heures (ISR), aucun redéploiement nécessaire.
-- GitHub Pages : reconstruction automatique chaque lundi (`.github/workflows/pages.yml`, déclencheur `schedule`).
+- Le site est reconstruit et republié automatiquement chaque lundi à 0 h 15 (`.github/workflows/deploy.yml`, déclencheur `schedule`) : l'article du jour apparaît alors sur keurcook.com.
 
 ## Vérifications
 

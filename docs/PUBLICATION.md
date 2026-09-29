@@ -51,7 +51,6 @@ Mise en route (propriétaire) :
 - [x] Première publication faite le 29 septembre 2026 (https://keurcook.pages.dev, projet créé automatiquement) ; `keurcook.com` relié (SSL actif) et `www.keurcook.com` redirigé vers `keurcook.com` (règle de redirection Cloudflare « Rediriger de WWW vers la racine », 301, chaîne de requête conservée).
 - [x] Créer un jeton API Cloudflare (droit **Cloudflare Pages : Edit**), puis ajouter les secrets `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` dans GitHub (**Settings → Secrets and variables → Actions**).
 - [ ] Ajouter `keurcook.com` à la liste des sites du compte Amazon Partenaires.
-- [x] Fermer Vercel (projet et stockage Blob) et Neon : fait le 29 septembre 2026.
 
 Ensuite :
 
