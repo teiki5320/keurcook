@@ -37,7 +37,7 @@ Mis à jour le 29 septembre 2026 par un scan du dépôt. Pour mettre à jour : r
 
 ### 3. IONOS
 
-- **Rôle** : domaine `alohash.fr` et messagerie (boîte `contact@alohash.fr`, qui reçoit aussi les messages envoyés à `contact@keurcook.com`). Le site `alohash.fr` doit rediriger vers `keurcook.com`.
+- **Rôle** : domaine `alohash.fr` et messagerie (boîte `contact@alohash.fr`, qui reçoit aussi les messages envoyés à `contact@keurcook.com`). Le domaine ne sert plus qu'à la messagerie : aucun site n'y est publié (choix du propriétaire, pas de redirection).
 - **Console** : IONOS (Domaines & SSL → alohash.fr ; E-mail).
 - **Identifiants publics** : enregistrements de messagerie (MX, SPF, DKIM, DMARC) sur `alohash.fr`, à conserver.
 - **Secrets** : aucun dans le dépôt (accès au compte IONOS hors dépôt).
@@ -59,7 +59,6 @@ Mis à jour le 29 septembre 2026 par un scan du dépôt. Pour mettre à jour : r
 - **Secrets** : aucun dans le dépôt.
 - **Coût** : crédits OpenArt.
 
-### Services à fermer
+### Services fermés
 
-- **Vercel** (ancien hébergement de `www.alohash.fr`) et **Neon** (ancienne base PostgreSQL) : plus utilisés par le code, à fermer après la bascule vers Cloudflare.
-- **Vercel Blob** : inutilisé.
+- **Vercel** (ancien hébergement de `www.alohash.fr`, avec son stockage Blob) et **Neon** (ancienne base PostgreSQL) : supprimés le 29 septembre 2026, après la bascule vers Cloudflare.

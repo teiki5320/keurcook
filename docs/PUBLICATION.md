@@ -29,7 +29,7 @@ Pendant la maintenance : écran « On prépare la marmite », pages en `noindex`
 
 - **Domaine** : `keurcook.com` chez Cloudflare, à relier au projet Pages `keurcook` (avec `www`).
 - **E-mail** : `contact@keurcook.com`, renvoyé par Cloudflare Email Routing vers `contact@alohash.fr` (boîte IONOS conservée).
-- **Ancien domaine** : `alohash.fr` reste chez IONOS pour la messagerie (MX, SPF, DKIM, DMARC à ne pas toucher) ; son site doit rediriger vers `keurcook.com`.
+- **Ancien domaine** : `alohash.fr` reste chez IONOS pour la messagerie (MX, SPF, DKIM, DMARC à ne pas toucher) ; aucun site n'y est plus publié (pas de redirection).
 - **SSL** : certificat HTTPS géré par Cloudflare ; en-têtes de sécurité (CSP, HSTS…) dans `public/_headers`.
 - **Redirections** : `public/_redirects` (`/cgv`, `/categorie/:slug`, anciennes pages `/panier`, `/commande`, `/admin`…).
 
@@ -51,8 +51,7 @@ Mise en route (propriétaire) :
 - [x] Première publication faite le 29 septembre 2026 (https://keurcook.pages.dev, projet créé automatiquement) ; `keurcook.com` relié (SSL actif) et `www.keurcook.com` redirigé vers `keurcook.com` (règle de redirection Cloudflare « Rediriger de WWW vers la racine », 301, chaîne de requête conservée).
 - [x] Créer un jeton API Cloudflare (droit **Cloudflare Pages : Edit**), puis ajouter les secrets `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` dans GitHub (**Settings → Secrets and variables → Actions**).
 - [ ] Ajouter `keurcook.com` à la liste des sites du compte Amazon Partenaires.
-- [ ] Chez IONOS, rediriger le site `alohash.fr` vers `keurcook.com` sans toucher aux enregistrements de messagerie.
-- [ ] Fermer Vercel et Neon une fois la bascule vérifiée.
+- [x] Fermer Vercel (projet et stockage Blob) et Neon : fait le 29 septembre 2026.
 
 Ensuite :
 
