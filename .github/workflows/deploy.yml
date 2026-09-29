@@ -58,7 +58,10 @@ jobs:
 
       - name: Publier sur Cloudflare Pages
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
-        run: npx --yes wrangler@4 pages deploy out --project-name=keurcook --branch=main --commit-dirty=true
+        run: |
+          # Crée le projet « keurcook » à la première publication (sans effet s'il existe déjà).
+          npx --yes wrangler@4 pages project create keurcook --production-branch=main || true
+          npx --yes wrangler@4 pages deploy out --project-name=keurcook --branch=main --commit-dirty=true
 
       - name: Publication ignorée (secrets Cloudflare absents)
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
