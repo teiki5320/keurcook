@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     url: siteConfig.url,
-    images: [{ url: "/recipes/thieboudienne.webp", alt: "Thiéboudienne, plat du Sénégal" }],
+    images: [{ url: "/brand/keurcook-partage.jpg", width: 1200, height: 630, alt: "Keur Cook, la cuisine de demain" }],
   },
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },

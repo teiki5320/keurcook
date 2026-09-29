@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, Search, X } from "lucide-react";
@@ -74,8 +75,9 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#fbeee2]/8 bg-[#140a07]/85 backdrop-blur-md">
 
       <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-3 px-[clamp(16px,4vw,56px)] py-3">
-        <TLink href="/" label="Keurcook." className="shrink-0 text-[26px] tracking-[.02em] text-[#fbeee2]" style={anton}>
-          KEURCOOK<span className="text-[#ff7a3d]">.</span>
+        <TLink href="/" label="Keur Cook." className="flex shrink-0 items-center gap-2 text-[26px] tracking-[.02em] text-[#fbeee2]" style={anton}>
+          <Image src="/brand/keurcook-embleme.webp" alt="" width={36} height={36} priority className="h-9 w-9" />
+          KEUR COOK<span className="-ml-2 text-[#ff7a3d]">.</span>
         </TLink>
 
         <nav aria-label="Navigation principale" className="hidden gap-1 rounded-full border border-[#fbeee2]/10 bg-[#fbeee2]/6 p-[5px] backdrop-blur-md lg:flex">

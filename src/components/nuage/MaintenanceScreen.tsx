@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { anton } from "./typography";
 
@@ -26,8 +27,9 @@ export function MaintenanceScreen({ message, contactEmail }: { message: string; 
       />
       <NuageCloud />
       <header className="relative z-[2] px-[clamp(20px,4vw,56px)] py-5">
-        <p className="text-[26px] tracking-[.02em]" style={anton}>
-          KEURCOOK<span className="text-[#ff7a3d]">.</span>
+        <p className="flex items-center gap-2 text-[26px] tracking-[.02em]" style={anton}>
+          <Image src="/brand/keurcook-embleme.webp" alt="" width={36} height={36} priority className="h-9 w-9" />
+          KEUR COOK<span className="-ml-2 text-[#ff7a3d]">.</span>
         </p>
       </header>
 

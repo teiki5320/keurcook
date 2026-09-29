@@ -1,4 +1,4 @@
-# Keurcook — recettes africaines & produits rares
+# Keur Cook — recettes africaines & produits rares
 
 Site en français de **recettes de plats africains** (46 recettes, 16 pays), avec une rubrique **Conseils** (un article chaque lundi) et une **boutique de 91 produits africains rares** en 8 gammes. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
 
@@ -42,6 +42,10 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 
 > ⚠️ Les textes légaux sont des **modèles** à faire valider.
 
+### Logos
+
+Fichiers d'origine dans `assets/logo/` (fond noir, fond blanc, transparent). Versions du site dans `public/brand/` : `keurcook-embleme.webp` (marmite, en-tête et pied de page), `keurcook-logo.webp` (logo complet), `keurcook-partage.jpg` (image de partage 1200 × 630) ; icônes d'onglet `src/app/icon.png` et `src/app/apple-icon.png`.
+
 ---
 
 ## Démarrage
@@ -62,7 +66,7 @@ Toutes publiques (aucun secret dans le site). Liste complète : `.env.example`.
 | Variable | Rôle |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens canoniques) ; `https://keurcook.com` au build de production |
-| `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site (Keurcook), e-mail de contact (contact@keurcook.com) |
+| `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site (Keur Cook), e-mail de contact (contact@keurcook.com) |
 | `NEXT_PUBLIC_AMAZON_TAG` | Tag Amazon Partenaires (par défaut `kultiva-21`) |
 | `NEXT_PUBLIC_LEGAL_*` | Informations des mentions légales et des conditions d'utilisation (hébergeur par défaut : Cloudflare) |
 

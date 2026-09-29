@@ -6,7 +6,7 @@
 /** Hébergeur du site : Cloudflare Pages. */
 const defaultHost = { name: "Cloudflare", full: "Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, États-Unis — cloudflare.com" };
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || "Keurcook",
+  name: process.env.NEXT_PUBLIC_SITE_NAME || "Keur Cook",
   tagline: "Recettes africaines & produits rares",
   description:
     "Recettes de plats africains expliquées pas à pas (ndolé, mafé, thiéboudienne, poulet yassa…), conseils de cuisine et sélection de produits africains à acheter sur Amazon.",
@@ -17,7 +17,7 @@ export const siteConfig = {
 
 /**
  * Informations légales de l'éditeur (annuaire-entreprises.data.gouv.fr), affichées dans les mentions légales
- * et les conditions d'utilisation. La société ALOHASH édite le site Keurcook.
+ * et les conditions d'utilisation. La société ALOHASH édite le site Keur Cook.
  */
 export const legalConfig = {
   companyName: process.env.NEXT_PUBLIC_LEGAL_COMPANY_NAME || "ALOHASH",

@@ -6,7 +6,7 @@
 
 | Version | En production ? | URL | Hébergeur |
 | --- | --- | --- | --- |
-| Web — Keurcook (recettes, conseils, boutique) | En préparation : bascule vers Cloudflare à terminer (voir « À faire ») ; **maintenance activée** (écran « On prépare la marmite », pages en `noindex`, sitemap vide) | https://keurcook.com (`www` redirigé) | Cloudflare Pages (projet `keurcook`) |
+| Web — Keur Cook (recettes, conseils, boutique) | En préparation : bascule vers Cloudflare à terminer (voir « À faire ») ; **maintenance activée** (écran « On prépare la marmite », pages en `noindex`, sitemap vide) | https://keurcook.com (`www` redirigé) | Cloudflare Pages (projet `keurcook`) |
 
 Site 100 % statique (Next.js `output: "export"`, dossier `out/`), sans serveur ni base de données. Il est construit et publié par GitHub Actions (`.github/workflows/deploy.yml`, « Publier le site ») :
 

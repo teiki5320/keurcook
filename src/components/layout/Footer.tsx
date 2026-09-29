@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { UtensilsCrossed } from "lucide-react";
+import Image from "next/image";
 import { AMAZON_DISCLOSURE } from "@/lib/amazon";
 import { siteConfig } from "@/lib/config";
 import { CookieSettingsButton } from "../compliance/CookieBanner";
@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="flex items-center gap-2 font-display text-2xl text-cream">
-            <UtensilsCrossed className="h-5 w-5" aria-hidden /> {siteConfig.name}
+            <Image src="/brand/keurcook-embleme.webp" alt="" width={40} height={40} className="h-10 w-10" /> {siteConfig.name}
           </p>
           <p className="mt-3 text-sm text-sage-200/80">
             Les recettes de toute l&apos;Afrique, expliquées pas à pas, et les produits rares pour les réussir chez vous.
