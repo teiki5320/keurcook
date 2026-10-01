@@ -7,6 +7,8 @@ export type Ing = [number | null, string | null, string, string?];
 export type RecipeSeed = Omit<Recipe, "id" | "image" | "isPublished" | "createdAt" | "ingredients" | "steps"> & {
   ingredients: Ing[];
   steps: string[];
+  /** Date de publication (par défaut : une date de février 2026 selon l'ordre de la liste). */
+  createdAt?: string;
 };
 
 const id = (n: number) => `40000000-0000-4000-a000-${n.toString(16).padStart(12, "0")}`;
@@ -22,6 +24,6 @@ export function buildRecipes(seeds: RecipeSeed[]): Recipe[] {
     ingredients: ing(seed.ingredients),
     steps: seed.steps.map((text) => ({ text, image: null })),
     isPublished: true,
-    createdAt: new Date(Date.UTC(2026, 1, 1 + index)).toISOString(),
+    createdAt: seed.createdAt ?? new Date(Date.UTC(2026, 1, 1 + index)).toISOString(),
   }));
 }

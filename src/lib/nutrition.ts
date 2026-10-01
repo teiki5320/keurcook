@@ -60,6 +60,7 @@ const FOODS: Food[] = [
   { match: /poulet/i, per100: [215, 18.6, 15, 0, 0, 0], piece: 1500, eaten: 0.7 },
   { match: /bœuf haché/i, per100: [215, 18, 15, 0, 0, 0] },
   { match: /rumsteck|faux-filet/i, per100: [150, 22, 6.5, 0, 0, 0] },
+  { match: /chèvre/i, per100: [143, 27, 3, 0, 0, 0], eaten: 0.8 },
   { match: /mouton/i, per100: [230, 18, 17, 0, 0, 0] },
   { match: /porc/i, per100: [260, 17, 21, 0, 0, 0] },
   { match: /bœuf|zébu/i, per100: [190, 20, 12, 0, 0, 0] },
@@ -99,6 +100,7 @@ const FOODS: Food[] = [
   { match: /feuilles de manioc/i, per100: [55, 4, 1, 8, 4, 0] },
   { match: /épinards|waterleaf|taro|brèdes|chou cavalier/i, per100: GREENS, piece: 250 },
   { match: /persil/i, per100: [36, 3, 0.8, 6, 3.3, 0.9], piece: 50 },
+  { match: /basilic|coriandre/i, per100: [23, 2.5, 0.6, 3.7, 2.8, 0.9], piece: 50 },
   { match: /ciboule/i, per100: [30, 1.8, 0.2, 7, 2.6, 2], piece: 100 },
   { match: /gombo séché/i, per100: [280, 14, 2, 55, 25, 8], spoon: 8 },
   // Légumes et fruits frais (poids d'une pièce épluchée).
@@ -120,6 +122,7 @@ const FOODS: Food[] = [
   { match: /courgettes?/i, per100: [17, 1.2, 0.3, 3.1, 1, 2.5], piece: 200 },
   { match: /gombos?/i, per100: [33, 1.9, 0.2, 7, 3.2, 1.5], piece: 12 },
   { match: /manioc/i, per100: [160, 1.4, 0.3, 38, 1.8, 1.7], piece: 400 },
+  { match: /bananes vertes|matoké/i, per100: [120, 1.3, 0.4, 31, 2.3, 3] },
   { match: /plantains?/i, per100: [122, 1.3, 0.4, 32, 2.3, 15], piece: 180 },
   { match: /ananas/i, per100: [50, 0.5, 0.1, 13, 1.4, 10], piece: 1000 },
   { match: /jus de citron/i, per100: [25, 0.4, 0.1, 8, 0.4, 1.7] },
@@ -129,7 +132,7 @@ const FOODS: Food[] = [
   // Bouillons et assaisonnements.
   { match: /bouillon de volaille/i, per100: [5, 0.5, 0.2, 0.5, 0, 0] },
   { match: /cube de bouillon/i, per100: [250, 8, 18, 15, 0, 1], piece: 10 },
-  { match: /berbéré|curry|curcuma|cumin|thym|muscade|poivre|assaisonnement/i, per100: SPICE, spoon: 7, piece: 1 },
+  { match: /berbéré|curry|curcuma|cumin|thym|muscade|poivre|assaisonnement|pèbè|mbongo/i, per100: SPICE, spoon: 7, piece: 1 },
 ];
 
 /** Aliment correspondant à un ingrédient (undefined : ingrédient inconnu de la table). */

@@ -7,6 +7,7 @@ import { buildRecipes, type RecipeSeed } from "./recipe-seed";
 import { recipesAfriqueCentrale } from "./recipes-centre";
 import { recipesDouceurs } from "./recipes-douceurs";
 import { recipesAfriqueEstAustrale } from "./recipes-est-australe";
+import { recipesNouvelles } from "./recipes-nouvelles";
 import { recipesAfriqueOuest } from "./recipes-ouest";
 
 const seeds: RecipeSeed[] = [
@@ -510,4 +511,5 @@ export const demoRecipes: Recipe[] = buildRecipes([
   ...recipesAfriqueCentrale,
   ...recipesAfriqueEstAustrale,
   ...recipesDouceurs,
+  ...recipesNouvelles,
 ]);
