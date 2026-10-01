@@ -46,3 +46,18 @@ export function filterProducts(products: ProductWithCategory[], f: CatalogFilter
 
 /** Gamme qui ne contient pas de denrées (pas de liste d'ingrédients ni d'allergènes exigés). */
 export const NON_FOOD_CATEGORY = "ustensiles";
+
+/**
+ * Produits d'Afrique du Nord : gardés dans la boutique, mais jamais proposés en suggestion
+ * sur les autres fiches (le site est centré sur l'Afrique subsaharienne).
+ */
+export const NORTH_AFRICAN_SLUGS = new Set([
+  "ras-el-hanout",
+  "epices-tunisiennes",
+  "dukkah",
+  "dattes-deglet-nour",
+  "huile-d-argan",
+  "citrons-beldi-confits",
+  "harissa-artisanale",
+  "tajine-en-argile",
+]);

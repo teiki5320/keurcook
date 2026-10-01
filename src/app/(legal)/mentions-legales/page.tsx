@@ -7,7 +7,7 @@ import { legalConfig, siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = pageMetadata({
   title: "Mentions légales",
-  description: "Éditeur, hébergeur et informations légales du site Keur Cook.",
+  description: "Mentions légales du site Keur Cook : éditeur, directeur de la publication, hébergeur et liens d'affiliation Amazon.",
   path: "/mentions-legales",
 });
 

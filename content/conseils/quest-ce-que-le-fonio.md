@@ -1,6 +1,6 @@
 ---
 title: Qu'est-ce que le fonio et comment le cuire ?
-description: Le fonio est une petite céréale d'Afrique de l'Ouest à grains très fins. Voici comment le cuire à la vapeur ou à l'eau pour obtenir des grains bien détachés.
+description: Le fonio, petite céréale d'Afrique de l'Ouest à grains très fins : comment le cuire à la vapeur ou à l'eau pour des grains bien détachés.
 date: 2026-07-27
 theme: cereales
 resume: Le fonio est une céréale ancienne d'Afrique de l'Ouest aux grains minuscules. Il se cuit très vite, à l'eau ou à la vapeur, puis s'égrène à la fourchette comme une semoule.

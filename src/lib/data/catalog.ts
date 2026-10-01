@@ -1,6 +1,7 @@
 import "server-only";
 import { cache } from "react";
 import { demoCategories, demoProducts } from "../demo/catalog";
+import { NORTH_AFRICAN_SLUGS } from "../catalog-utils";
 import type { Category, Product, ProductWithCategory } from "../types";
 
 export interface Catalog {
@@ -29,8 +30,9 @@ export async function getProductBySlug(slug: string) {
 
 export async function getRelatedProducts(product: ProductWithCategory, limit = 4) {
   const { products } = await getCatalog();
-  return products
-    .filter((p) => p.id !== product.id && p.categoryId === product.categoryId)
-    .concat(products.filter((p) => p.id !== product.id && p.categoryId !== product.categoryId))
+  const candidates = products.filter((p) => p.id !== product.id && !NORTH_AFRICAN_SLUGS.has(p.slug));
+  return candidates
+    .filter((p) => p.categoryId === product.categoryId)
+    .concat(candidates.filter((p) => p.categoryId !== product.categoryId))
     .slice(0, limit);
 }

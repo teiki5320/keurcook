@@ -1,6 +1,6 @@
 ---
 title: Comment réussir un attiéké maison ?
-description: L'attiéké, semoule de manioc ivoirienne, se prépare en quelques minutes à partir d'attiéké déshydraté. Les gestes pour un résultat moelleux et bien détaché.
+description: L'attiéké, semoule de manioc ivoirienne, se prépare en quelques minutes avec de l'attiéké déshydraté. Les gestes pour un résultat moelleux.
 date: 2026-08-03
 theme: cereales
 resume: Avec de l'attiéké déshydraté, il suffit de le réhydrater avec un peu d'eau salée, de le laisser gonfler, puis de le réchauffer à la vapeur et de l'égrener.

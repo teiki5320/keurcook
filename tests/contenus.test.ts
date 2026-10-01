@@ -23,3 +23,10 @@ describe("Produits : aucune allégation de santé", () => {
     });
   }
 });
+
+describe("Produits d'Afrique du Nord : jamais en suggestion", () => {
+  it("les slugs exclus existent bien dans le catalogue", async () => {
+    const { NORTH_AFRICAN_SLUGS } = await import("../src/lib/catalog-utils");
+    for (const slug of NORTH_AFRICAN_SLUGS) assert.ok(demoProducts.some((p) => p.slug === slug), slug);
+  });
+});
