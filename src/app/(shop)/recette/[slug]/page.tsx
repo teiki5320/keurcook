@@ -61,12 +61,13 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   }
 
   const url = `${siteConfig.url}/recette/${recipe.slug}`;
+  const absoluteImage = (src: string) => (src.startsWith("http") ? src : `${siteConfig.url}${src}`);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: recipe.name,
     description: recipe.shortDescription,
-    image: recipe.image ? [recipe.image.startsWith("http") ? recipe.image : `${siteConfig.url}${recipe.image}`] : undefined,
+    image: recipe.image ? [absoluteImage(recipe.image)] : undefined,
     author: { "@type": "Organization", name: siteConfig.name },
     datePublished: recipe.createdAt.slice(0, 10),
     prepTime: isoDuration(recipe.prepMinutes),
@@ -80,7 +81,18 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       const l = ingredientLine(i);
       return `${l.quantity} ${l.label}`.trim();
     }),
-    recipeInstructions: recipe.steps.map((s, i) => ({ "@type": "HowToStep", position: i + 1, text: s.text })),
+    // Chaque étape : un nom, un lien vers la section et une image (photo de l'étape, sinon celle du plat).
+    recipeInstructions: recipe.steps.map((s, i) => {
+      const image = s.image ?? recipe.image;
+      return {
+        "@type": "HowToStep",
+        position: i + 1,
+        name: `Étape ${i + 1}`,
+        text: s.text,
+        url: `${url}#etapes`,
+        ...(image ? { image: absoluteImage(image) } : {}),
+      };
+    }),
   };
 
   const facts = [
