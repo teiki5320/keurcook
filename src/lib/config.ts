@@ -21,12 +21,14 @@ export const siteConfig = {
  */
 export const legalConfig = {
   companyName: process.env.NEXT_PUBLIC_LEGAL_COMPANY_NAME || "ALOHASH",
-  legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "SAS (société par actions simplifiée) au capital de 200 €",
+  legalForm: process.env.NEXT_PUBLIC_LEGAL_FORM || "société par actions simplifiée (SAS) au capital de 200 €",
+  /** Nom commercial sous lequel la société exerce. */
+  tradeName: process.env.NEXT_PUBLIC_LEGAL_TRADE_NAME || "TOA CORP",
   address: process.env.NEXT_PUBLIC_LEGAL_ADDRESS || "587 La Petite Sigonnière, 85190 Maché, France",
   siret: process.env.NEXT_PUBLIC_LEGAL_SIRET || "938 522 596 00015",
   rcs: process.env.NEXT_PUBLIC_LEGAL_RCS || "RCS La Roche-sur-Yon 938 522 596",
   vat: process.env.NEXT_PUBLIC_LEGAL_VAT || "FR16 938 522 596",
-  director: process.env.NEXT_PUBLIC_LEGAL_DIRECTOR || "TOA CORP",
+  director: process.env.NEXT_PUBLIC_LEGAL_DIRECTOR || "le président de la société ALOHASH",
   phone: process.env.NEXT_PUBLIC_LEGAL_PHONE || "",
   host: process.env.NEXT_PUBLIC_LEGAL_HOST || defaultHost.full,
   hostName: process.env.NEXT_PUBLIC_LEGAL_HOST_NAME || defaultHost.name,

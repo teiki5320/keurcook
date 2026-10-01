@@ -14,11 +14,11 @@ export const metadata: Metadata = pageMetadata({
 export default function TermsPage() {
   const l = legalConfig;
   return (
-    <LegalPage title="Conditions générales d'utilisation" updated="29 septembre 2026">
+    <LegalPage title="Conditions générales d'utilisation" updated="1er octobre 2026">
       <h2>Article 1 — Objet</h2>
       <p>
         Les présentes conditions générales d&apos;utilisation (CGU) encadrent l&apos;accès au site {siteConfig.url}, édité
-        par {l.companyName}, {l.legalForm}, dont le siège est situé {l.address} (ci-après « l&apos;Éditeur »). Le site
+        par {l.companyName}, {l.legalForm}, exerçant sous le nom commercial {l.tradeName}, dont le siège est situé {l.address} (ci-après « l&apos;Éditeur »). Le site
         publie des recettes de cuisine africaine, des conseils et une sélection de produits disponibles sur Amazon.fr.
         Utiliser le site vaut acceptation des présentes CGU.
       </p>

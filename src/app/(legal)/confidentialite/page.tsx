@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Politique de confidentialité" updated="29 septembre 2026">
+    <LegalPage title="Politique de confidentialité" updated="1er octobre 2026">
       <p>
         {legalConfig.companyName} (« nous ») attache une grande importance à la protection de vos données personnelles,
         traitées conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
       <h2 id="cookies">Cookies</h2>
       <p>Le site utilise les cookies et stockages locaux suivants :</p>
       <ul>
-        <li><strong>Favoris</strong> (stockage local, nécessaire) — conserve les recettes que vous avez mises de côté, jusqu&apos;à ce que vous les retiriez ou effaciez les données du site.</li>
+        <li><strong>keurcook-favoris-v1</strong> (stockage local, nécessaire) — vos favoris : les recettes que vous avez mises de côté, uniquement sur votre appareil, jusqu&apos;à ce que vous les retiriez ou effaciez les données du site.</li>
         <li><strong>ah_consent</strong> (nécessaire) — mémorise que vous avez vu le message sur les cookies, 6 mois.</li>
       </ul>
       <p>
