@@ -16,6 +16,7 @@ import { countryByCode } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipeBySlug, getRecipes, getRelatedRecipes } from "@/lib/data/recipes";
 import { getMaintenance } from "@/lib/data/settings";
+import { recipeNutrition } from "@/lib/nutrition";
 import { courseName, DIFFICULTY_LABELS, formatDuration, ingredientLine, isoDuration } from "@/lib/recipe-utils";
 
 
@@ -61,6 +62,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   }
 
   const url = `${siteConfig.url}/recette/${recipe.slug}`;
+  const nutrition = recipeNutrition(recipe);
   const absoluteImage = (src: string) => (src.startsWith("http") ? src : `${siteConfig.url}${src}`);
   const structuredData = {
     "@context": "https://schema.org",
@@ -77,6 +79,16 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
     recipeCategory: courseName(recipe.course),
     recipeCuisine: country?.name,
     keywords: recipe.tags.join(", "),
+    nutrition: {
+      "@type": "NutritionInformation",
+      servingSize: "1 personne",
+      calories: `${nutrition.calories} kcal`,
+      proteinContent: `${nutrition.protein} g`,
+      fatContent: `${nutrition.fat} g`,
+      carbohydrateContent: `${nutrition.carbohydrate} g`,
+      fiberContent: `${nutrition.fiber} g`,
+      sugarContent: `${nutrition.sugar} g`,
+    },
     recipeIngredient: recipe.ingredients.map((i) => {
       const l = ingredientLine(i);
       return `${l.quantity} ${l.label}`.trim();
@@ -166,6 +178,25 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <RecipeIngredients ingredients={recipe.ingredients} servings={recipe.servings} products={linked} />
+          <section aria-labelledby="nutrition" className="card mt-4 p-5 sm:p-6">
+            <h2 id="nutrition" className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">Valeurs nutritionnelles estimées</h2>
+            <p className="mt-1 text-xs text-[#fbeee2]/55">Par personne, calculées à partir des ingrédients (ordre de grandeur).</p>
+            <dl className="mt-4 grid grid-cols-3 gap-x-4 gap-y-3 text-sm">
+              {[
+                ["Énergie", `${nutrition.calories} kcal`],
+                ["Protéines", `${nutrition.protein} g`],
+                ["Lipides", `${nutrition.fat} g`],
+                ["Glucides", `${nutrition.carbohydrate} g`],
+                ["dont sucres", `${nutrition.sugar} g`],
+                ["Fibres", `${nutrition.fiber} g`],
+              ].map(([label, value]) => (
+                <div key={label}>
+                  <dt className="text-[10px] font-bold tracking-[.14em] text-[#fbeee2]/55 uppercase">{label}</dt>
+                  <dd className="font-semibold">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
         </aside>
 
         <div>
