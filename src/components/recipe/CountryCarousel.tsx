@@ -77,8 +77,10 @@ export function CountryCarousel({ countries }: { countries: CarouselCountry[] })
 
       <div className="mt-1 text-center" aria-live="polite">
         <h3 className="uppercase leading-none" style={{ ...anton, fontSize: "clamp(40px,7vw,72px)" }}>
-          {cur.name}
-          <span className="text-[#ff7a3d]">.</span>
+          <TLink href={`/pays/${cur.slug}`} label={cur.name} className="transition hover:text-[#ffc46b]">
+            {cur.name}
+            <span className="text-[#ff7a3d]">.</span>
+          </TLink>
         </h3>
         <p className="mx-auto mt-2 max-w-xl text-sm text-[#fbeee2]/70">{cur.description}</p>
         <TLink href={`/pays/${cur.slug}`} label={cur.name} className="mt-5 inline-flex rounded-full bg-[#ff7a3d] px-7 py-3.5 font-bold text-[#140a07] transition hover:bg-[#ffc46b]">
