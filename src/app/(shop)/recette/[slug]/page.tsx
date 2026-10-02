@@ -172,7 +172,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
             </div>
           ))}
         </dl>
-        <RecipeActions slug={recipe.slug} name={recipe.name} url={url} image={recipe.image ? absoluteImage(recipe.image.replace(/^\/recipes\/(.+)\.webp$/, "/og/recipes/$1.jpg")) : null} />
+        <RecipeActions slug={recipe.slug} name={recipe.name} url={url} image={recipe.image ? absoluteImage(`/pins/${recipe.slug}.jpg`) : null} />
       </div>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
