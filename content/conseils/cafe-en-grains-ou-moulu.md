@@ -1,5 +1,6 @@
 ---
 title: Café en grains ou moulu : que choisir et comment le conserver ?
+seoTitle: Café en grains ou moulu : que choisir et comment le garder ?
 description: Café en grains ou déjà moulu, lequel acheter selon votre matériel et votre consommation, et comment le ranger pour qu'il garde son arôme.
 date: 2026-10-02
 theme: cafe-the

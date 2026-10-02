@@ -5,7 +5,9 @@ export interface Conseil {
   slug: string;
   /** La question posée, qui sert de titre. */
   title: string;
-  /** Description pour Google (70 à 170 caractères). */
+  /** Titre pour Google (balise <title>, 60 caractères au plus) quand la question est plus longue. */
+  seoTitle: string | null;
+  /** Description pour Google (70 à 160 caractères, au-delà Google la coupe). */
   description: string;
   /** Date de publication (AAAA-MM-JJ) : l'article n'apparaît qu'à partir de ce jour. */
   date: string;
@@ -23,7 +25,9 @@ export interface Conseil {
 }
 
 export const DESCRIPTION_MIN = 70;
-export const DESCRIPTION_MAX = 170;
+export const DESCRIPTION_MAX = 160;
+/** Longueur maximale d'un titre dans les résultats de Google. */
+export const TITLE_MAX = 60;
 
 /** En-tête simple « clé: valeur » entre deux lignes « --- » ; les listes sont séparées par des virgules. */
 export function parseConseil(slug: string, raw: string): Conseil {
@@ -40,6 +44,7 @@ export function parseConseil(slug: string, raw: string): Conseil {
   return {
     slug,
     title: meta.title ?? "",
+    seoTitle: meta.seoTitle || null,
     description: meta.description ?? "",
     date: meta.date ?? "",
     theme,

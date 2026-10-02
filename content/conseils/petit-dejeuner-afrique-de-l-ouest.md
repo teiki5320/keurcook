@@ -1,5 +1,6 @@
 ---
 title: Qu'est-ce qu'on mange au petit-déjeuner en Afrique de l'Ouest ?
+seoTitle: Que mange-t-on au petit-déjeuner en Afrique de l'Ouest ?
 description: Bouillies de céréales, beignets, pain et café, ou plats complets comme le waakye. Tour d'horizon des petits-déjeuners d'Afrique de l'Ouest.
 date: 2026-12-23
 theme: decouvrir

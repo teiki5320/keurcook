@@ -1,5 +1,6 @@
 ---
 title: Comment préparer l'ataya, le thé sénégalais en trois services ?
+seoTitle: Comment préparer l'ataya, le thé sénégalais ?
 description: L'ataya se prépare avec du thé vert, du sucre et de la menthe, servi en trois tournées de plus en plus douces. Matériel, étapes et astuces pour la mousse.
 date: 2026-09-28
 theme: cafe-the

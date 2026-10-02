@@ -1,6 +1,7 @@
 ---
 title: De quels ustensiles a-t-on besoin pour débuter en cuisine africaine ?
-description: Marmite à fond épais, mortier, spatule en bois, mixeur, couscoussier. Les ustensiles vraiment utiles pour débuter en cuisine africaine, et ceux qui peuvent attendre.
+seoTitle: Quels ustensiles pour débuter en cuisine africaine ?
+description: Marmite à fond épais, mortier, spatule en bois, mixeur, couscoussier : les ustensiles vraiment utiles pour débuter en cuisine africaine, et ceux qui attendront.
 date: 2026-12-28
 theme: ustensiles
 resume: Une grande marmite à fond épais, une spatule en bois solide, un mortier et un pilon ou un mixeur suffisent pour la plupart des recettes. Un couscoussier et une poêle en fonte viennent ensuite.

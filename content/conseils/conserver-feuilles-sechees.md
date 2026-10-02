@@ -1,5 +1,6 @@
 ---
 title: Comment conserver les feuilles séchées (ndolé, manioc, sorgho) ?
+seoTitle: Comment conserver les feuilles séchées (ndolé, manioc) ?
 description: Feuilles de ndolé, de manioc ou de sorgho séchées : comment les ranger à l'abri de l'humidité et vérifier qu'elles sont encore bonnes avant de cuisiner.
 date: 2026-10-02
 theme: epicerie

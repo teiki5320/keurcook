@@ -1,6 +1,6 @@
 ---
 title: Comment cuisiner avec des feuilles de bananier ?
-description: Assouplir, nettoyer, plier et ficeler les feuilles de bananier pour cuire à la vapeur ou sur la braise : koki, liboké ou luwombo sans que la papillote se déchire.
+description: Assouplir, nettoyer, plier et ficeler les feuilles de bananier pour cuire à la vapeur ou sur la braise : koki, liboké ou luwombo sans déchirer la papillote.
 date: 2026-12-07
 theme: ustensiles
 resume: Nettoyez les feuilles, assouplissez-les à la flamme ou à l'eau chaude, retirez la nervure centrale, puis pliez-les en papillote bien fermée. Elles se cuisent à la vapeur, au four ou sur la braise.

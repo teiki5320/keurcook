@@ -1,6 +1,6 @@
 ---
 title: Qu'est-ce que le café Touba et comment le préparer ?
-description: Le café Touba est un café sénégalais torréfié avec du poivre de Selim. Son origine, son goût et les étapes pour le préparer chez soi, de la torréfaction au service.
+description: Le café Touba est un café sénégalais torréfié avec du poivre de Selim. Son origine, son goût et comment le préparer chez soi, de la torréfaction au service.
 date: 2026-10-02
 theme: cafe-the
 resume: C'est un café du Sénégal torréfié avec du djar, le poivre de Selim, qui lui donne un parfum boisé et légèrement piquant. On le moud, on le passe dans un filtre et on le sert bien sucré.
