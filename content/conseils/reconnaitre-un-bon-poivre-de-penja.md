@@ -1,7 +1,7 @@
 ---
 title: Comment reconnaître un bon poivre de Penja ?
 description: Origine, aspect des grains, parfum et conservation : les repères simples pour choisir un vrai poivre de Penja et en profiter pleinement en cuisine.
-date: 2026-12-14
+date: 2026-10-28
 theme: epicerie
 resume: Un bon poivre de Penja se reconnaît à son origine clairement indiquée, à des grains entiers réguliers et à un parfum puissant dès qu'on les écrase.
 recettes: ndole, poisson-braise-attieke, suya

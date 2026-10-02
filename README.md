@@ -1,6 +1,6 @@
 # Keur Cook — recettes africaines & produits rares
 
-Site en français de **recettes de plats africains** (46 recettes, 16 pays), avec une rubrique **Conseils** (un article chaque lundi) et une **boutique de 91 produits africains rares** en 8 gammes. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
+Site en français de **recettes de plats africains** (46 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi) et une **boutique de 91 produits africains rares** en 8 gammes. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
 
 - **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
 - **Éditeur** : ALOHASH (SAS). Contact : contact@keurcook.com.
@@ -18,7 +18,7 @@ Le site est **100 % statique** : pas de serveur, pas de base de données. Recett
 - Recettes : carrousel des types de plats, filtres (pays, difficulté), **recherche par plat, pays ou ingrédient**.
 - Fiche recette : histoire du plat, portions ajustables (quantités recalculées), étapes, astuces, **version imprimable**, **partage WhatsApp**, favori ; ingrédients disponibles en boutique signalés « Produit rare », avec bouton d'achat Amazon.
 - Pages pays, **favoris sans compte** (stockés dans le navigateur).
-- **Conseils** : articles Markdown (`content/conseils/`), un article chaque lundi, publication programmée (voir `docs/CONSEILS.md`).
+- **Conseils** : articles Markdown (`content/conseils/`), trois articles par semaine (lundi, mercredi, vendredi), publication programmée (voir `docs/CONSEILS.md`).
 - Boutique par gammes, fiche produit avec « Utilisé dans ces recettes », bouton « Acheter · prix » vers Amazon.fr.
 - **Mode maintenance** : écran « On prépare la marmite », activé ou coupé depuis GitHub (voir « Maintenance » ci-dessous).
 
@@ -77,13 +77,13 @@ Toutes publiques (aucun secret dans le site). Liste complète : `.env.example`.
 Workflow GitHub Actions `.github/workflows/deploy.yml` (« Publier le site »), lancé :
 
 - à chaque push sur `main` ;
-- chaque lundi à 0 h 15, heure de Paris en hiver (1 h 15 en été ; cron), pour publier les articles « Conseils » programmés ;
+- chaque lundi, mercredi et vendredi à 0 h 15, heure de Paris en hiver (1 h 15 en été ; cron), pour publier les articles « Conseils » programmés ;
 - à la main (onglet **Actions → Publier le site → Run workflow**) ;
 - après le bouton « Maintenance ».
 
 Étapes : lint, types, tests, build (`out/`), puis `wrangler pages deploy out --project-name=keurcook` vers Cloudflare Pages. La publication n'a lieu que si les secrets GitHub `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` sont présents (**Settings → Secrets and variables → Actions**) ; sinon le workflow affiche un avertissement et ne publie rien.
 
-Les secrets ne sont donnés qu'à l'étape d'envoi ; `wrangler` est figé dans `package-lock.json`. GitHub coupant les tâches programmées d'un dépôt public après 60 jours sans activité, chaque publication du lundi réactive elle-même la tâche.
+Les secrets ne sont donnés qu'à l'étape d'envoi ; `wrangler` est figé dans `package-lock.json`. GitHub coupant les tâches programmées d'un dépôt public après 60 jours sans activité, chaque publication programmée réactive elle-même la tâche.
 
 Mise en route restante : voir `docs/PUBLICATION.md`.
 
@@ -118,7 +118,7 @@ Servis par Cloudflare Pages :
 
 ```
 .github/workflows/
-  deploy.yml           publication sur Cloudflare Pages (push, lundi, à la main, après maintenance)
+  deploy.yml           publication sur Cloudflare Pages (push, lundi/mercredi/vendredi, à la main, après maintenance)
   maintenance.yml      bouton « Maintenance » (modifie content/maintenance.json et republie)
 content/
   conseils/            articles « Conseils » en Markdown (date de publication dans l'en-tête)

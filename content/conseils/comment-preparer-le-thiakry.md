@@ -1,7 +1,7 @@
 ---
 title: Comment préparer le thiakry ?
 description: Le thiakry, mil vapeur au lait caillé sucré, se sert en dessert ou plus liquide à boire. Les étapes, la bonne consistance et les variantes.
-date: 2027-03-22
+date: 2026-11-30
 theme: boissons
 resume: Cuisez le couscous de mil à la vapeur, laissez-le refroidir, puis mélangez-le à un lait caillé sucré et parfumé. Allongez-le avec du lait pour le boire.
 recettes: thiakry, degue

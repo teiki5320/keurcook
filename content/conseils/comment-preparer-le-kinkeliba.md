@@ -1,7 +1,7 @@
 ---
 title: Comment préparer le kinkeliba ?
 description: Le kinkeliba est une infusion de feuilles très bue en Afrique de l'Ouest. Comment le préparer, le sucrer, le parfumer et bien conserver les feuilles.
-date: 2027-02-01
+date: 2026-11-13
 theme: cafe-the
 resume: Rincez les feuilles séchées, faites-les frémir quelques minutes dans l'eau, puis filtrez. On le boit chaud, nature ou sucré, parfois parfumé à la menthe.
 recettes: cafe-touba, jus-de-gingembre

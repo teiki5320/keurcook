@@ -1,7 +1,7 @@
 ---
 title: Le guedj, qu'est-ce que c'est et comment l'utiliser ?
 description: Le guedj, poisson fermenté et séché du Sénégal, donne son goût profond au thiéboudienne. Comment le préparer, le doser et le conserver.
-date: 2026-10-12
+date: 2026-10-07
 theme: epicerie
 resume: Le guedj est un poisson fermenté puis séché au soleil, très utilisé au Sénégal. On en met un petit morceau dans le bouillon ou la sauce pour lui donner un goût marin puissant.
 recettes: thieboudienne, caldou

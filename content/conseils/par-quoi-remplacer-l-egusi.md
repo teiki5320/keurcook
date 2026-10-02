@@ -1,7 +1,7 @@
 ---
 title: Par quoi remplacer l'egusi ?
 description: Pas d'egusi sous la main ? Les graines de courge décortiquées sont le remplacement le plus proche. Comment les préparer et ce qui change dans la sauce.
-date: 2026-12-28
+date: 2026-11-02
 theme: remplacer
 resume: Le meilleur remplacement est la graine de courge décortiquée, moulue finement. Le goût est un peu différent, mais la sauce épaissit et prend la même texture granuleuse.
 recettes: soupe-egusi

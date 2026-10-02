@@ -1,7 +1,7 @@
 ---
 title: Comment faire des beignets qui gonflent ?
 description: Pâte bien levée, huile à la bonne température, boules régulières. Les secrets de beignets africains ronds et moelleux, et la boisson à servir avec.
-date: 2027-05-24
+date: 2026-12-21
 theme: boissons
 resume: Des beignets gonflent quand la levure est active, que la pâte a doublé de volume et qu'on les plonge dans une huile assez chaude, mais pas brûlante, sans trop en mettre à la fois.
 recettes: puff-puff, jus-de-bissap, jus-de-gingembre

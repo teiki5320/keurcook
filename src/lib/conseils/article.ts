@@ -52,7 +52,7 @@ export function parseConseil(slug: string, raw: string): Conseil {
   };
 }
 
-/** Date du jour à Paris (AAAA-MM-JJ) : un article daté d'un lundi paraît le lundi à 0 h, heure française. */
+/** Date du jour à Paris (AAAA-MM-JJ) : un article daté d'un jour donné paraît ce jour-là à 0 h, heure française. */
 export function todayInParis(now = new Date()): string {
   return new Intl.DateTimeFormat("fr-CA", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
 }

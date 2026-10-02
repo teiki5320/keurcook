@@ -1,7 +1,7 @@
 ---
 title: Quelle marmite pour mijoter les sauces africaines ?
 description: Fonte, inox à fond épais ou aluminium : quelle marmite choisir pour mijoter mafé, sauce graine ou ndolé sans que la sauce attache au fond.
-date: 2026-12-07
+date: 2026-10-26
 theme: ustensiles
 resume: Choisissez une marmite à fond épais, assez grande et munie d'un bon couvercle. La cocotte en fonte et le faitout en inox à fond épais sont les plus polyvalents, la marmite en aluminium reste pratique pour les grandes quantités.
 recettes: mafe, sauce-graine, ndole, poulet-yassa

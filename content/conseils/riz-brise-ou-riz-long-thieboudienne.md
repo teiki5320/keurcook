@@ -1,7 +1,7 @@
 ---
 title: Riz brisé ou riz long : lequel pour le thiéboudienne ?
 description: Le thiéboudienne se prépare traditionnellement au riz brisé, qui absorbe bien le bouillon. Comment faire si vous n'avez que du riz long.
-date: 2027-04-26
+date: 2026-12-11
 theme: cereales
 resume: Le riz brisé est le choix traditionnel : il boit le bouillon et donne la texture typique du plat. Le riz long fonctionne aussi, avec des grains plus détachés et une cuisson à adapter.
 recettes: thieboudienne, riz-jollof

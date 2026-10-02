@@ -1,7 +1,7 @@
 ---
 title: Comment moudre et torréfier ses épices ?
 description: Torréfier ses épices à la poêle puis les moudre au mortier ou au moulin fait ressortir leurs arômes. La méthode pas à pas et les erreurs à éviter.
-date: 2027-05-17
+date: 2026-12-18
 theme: epices
 resume: Faites griller les épices entières à sec dans une poêle, à feu doux, jusqu'à ce qu'elles embaument, laissez-les refroidir, puis moulez-les au mortier ou au moulin juste avant de les utiliser.
 recettes: cafe-touba, misir-wat, shiro, suya

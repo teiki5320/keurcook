@@ -1,7 +1,7 @@
 ---
 title: Comment doser le piment dans la cuisine africaine ?
 description: Piment entier, épépiné, en poudre ou servi à part : les techniques pour garder le parfum du piment tout en réglant le piquant selon vos convives.
-date: 2027-01-11
+date: 2026-11-06
 theme: epices
 resume: Mettez le piment entier dans la sauce pour parfumer sans trop piquer, percez-le ou hachez-le pour plus de force, et proposez toujours une sauce pimentée à part.
 recettes: mafe, poulet-yassa, doro-wat, suya

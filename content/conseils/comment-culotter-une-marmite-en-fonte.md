@@ -1,7 +1,7 @@
 ---
 title: Comment culotter une marmite en fonte ?
 description: Culotter une marmite en fonte brute la protège de la rouille et la rend moins collante. Les étapes, l'huile à choisir et l'entretien au quotidien.
-date: 2027-02-08
+date: 2026-11-16
 theme: ustensiles
 resume: Lavez et séchez la marmite, enduisez-la d'une fine couche d'huile, puis chauffez-la jusqu'à ce que l'huile fume et fonce. Répétez l'opération plusieurs fois.
 recettes: kedjenou, mafe, poulet-dg

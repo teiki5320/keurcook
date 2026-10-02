@@ -1,7 +1,7 @@
 ---
 title: Pourquoi la sauce graine est-elle vendue en conserve ?
 description: Loin des palmeraies, la pulpe de noix de palme en conserve remplace un long travail de cuisson et de pilage. Ce qu'elle contient et comment la choisir.
-date: 2027-02-15
+date: 2026-11-18
 theme: epicerie
 resume: Ce qu'on achète en conserve, c'est la pulpe de noix de palme, la base de la sauce. Elle évite de trouver des noix fraîches et de les cuire, piler et presser soi-même.
 recettes: sauce-graine, poulet-nyembwe, moambe

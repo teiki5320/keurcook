@@ -1,7 +1,7 @@
 ---
 title: Peut-on remplacer le fonio par du couscous ?
 description: Fonio ou couscous de blé ou de mil : quand l'un peut remplacer l'autre, ce qui change à la cuisson et à la texture, et comment adapter votre recette.
-date: 2027-03-01
+date: 2026-11-23
 theme: remplacer
 resume: Oui, dans la plupart des plats salés et sucrés, le couscous remplace bien le fonio. La texture sera un peu plus ferme et la cuisson se règle différemment.
 recettes: fonio-aux-legumes, thiakry

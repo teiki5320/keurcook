@@ -1,7 +1,7 @@
 ---
 title: Comment réussir le riz rouge du thiéboudienne ?
 description: Une sauce tomate bien revenue, un riz brisé lavé et la juste quantité de bouillon : les clés d'un riz rouge du thiéboudienne parfumé et bien détaché.
-date: 2026-11-02
+date: 2026-10-14
 theme: sauces
 resume: Tout se joue dans la sauce de départ. Faites bien revenir le concentré de tomate dans l'huile, puis cuisez le riz dans juste assez de bouillon, à couvert et à feu doux, sans trop remuer.
 recettes: thieboudienne, riz-jollof, caldou

@@ -1,7 +1,7 @@
 ---
 title: Qu'est-ce que le yaji (épice à suya) ?
 description: Le yaji, mélange d'arachide torréfiée, de piment et d'épices, enrobe le suya nigérian. Sa composition, comment l'utiliser et avec quoi l'associer.
-date: 2026-11-09
+date: 2026-10-16
 theme: epices
 resume: Le yaji est le mélange d'épices du suya, la brochette grillée du Nigeria. Il associe de l'arachide torréfiée moulue, du piment, du gingembre et d'autres épices, et forme une croûte relevée sur la viande.
 recettes: suya, riz-jollof, kelewele

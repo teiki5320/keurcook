@@ -1,7 +1,7 @@
 ---
 title: Quelle différence entre mafé et sauce arachide ?
 description: Le mafé est une sauce arachide, mais toutes les sauces arachide ne sont pas du mafé. Ce qui les distingue, et les grandes variantes du continent.
-date: 2027-03-29
+date: 2026-12-02
 theme: decouvrir
 resume: La sauce arachide est une grande famille de plats à base de pâte d'arachide. Le mafé en est une version précise, venue d'Afrique de l'Ouest, avec de la viande mijotée, de la tomate et des légumes.
 recettes: mafe, luwombo, moambe
