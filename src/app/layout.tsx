@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },
+  // Revendication du site sur le compte Pinterest Keur Cook.
+  other: { "p:domain_verify": "8622238bb1aaaf67660719f4e4c1273a" },
 };
 
 export const viewport: Viewport = {
