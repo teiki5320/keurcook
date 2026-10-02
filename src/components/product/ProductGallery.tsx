@@ -22,7 +22,7 @@ export function ProductGallery({ images, name }: { images: string[]; name: strin
               aria-current={i === active}
               className={`relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 ${i === active ? "border-forest-700" : "border-transparent"}`}
             >
-              <ProductImage src={src} alt="" sizes="80px" />
+              <ProductImage src={src} alt={`${name}, image ${i + 1}`} sizes="80px" />
             </button>
           ))}
         </div>

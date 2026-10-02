@@ -132,7 +132,7 @@ export function Coverflow({
               >
                 {it.image && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={it.image} alt="" draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
+                  <img src={it.image} alt={it.title} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-cover" />
                 )}
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-5 pt-20">
                   {it.eyebrow && <div className="mb-1 text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{it.eyebrow}</div>}
