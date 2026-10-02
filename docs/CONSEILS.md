@@ -7,7 +7,8 @@ Un article = un fichier Markdown dans `content/conseils/<slug>.md` (le nom du fi
 ```
 ---
 title: La question posée, terminée par « ? »
-description: 70 à 170 caractères, pour Google.
+seoTitle: (facultatif) titre pour Google, 60 caractères au plus, si la question est plus longue
+description: 70 à 160 caractères, pour Google.
 date: 2026-10-05            # un lundi, mercredi ou vendredi ; l'article paraît ce jour-là (heure de Paris)
 theme: epicerie             # epicerie, cereales, remplacer, sauces, epices, boissons, decouvrir, cafe-the, ustensiles
 resume: Réponse courte, affichée en chapeau.

@@ -10,6 +10,7 @@ import { describe, it } from "node:test";
 import {
   DESCRIPTION_MAX,
   DESCRIPTION_MIN,
+  TITLE_MAX,
   internalLinks,
   isPublished,
   parseConseil,
@@ -49,6 +50,8 @@ describe("Conseils : en-têtes", () => {
   for (const c of conseils) {
     it(`« ${c.slug} » a un en-tête complet`, () => {
       assert.match(c.title, /\?$/, "le titre doit être la question (terminée par « ? »)");
+      const shown = c.seoTitle ?? c.title;
+      assert.ok(shown.length <= TITLE_MAX, `titre pour Google de ${shown.length} caractères (${TITLE_MAX} au plus) : ajouter un seoTitle plus court`);
       assert.ok(c.description.length >= DESCRIPTION_MIN && c.description.length <= DESCRIPTION_MAX, `description de ${c.description.length} caractères (attendu ${DESCRIPTION_MIN} à ${DESCRIPTION_MAX})`);
       assert.match(c.date, /^\d{4}-\d{2}-\d{2}$/, "date au format AAAA-MM-JJ");
       assert.ok(!Number.isNaN(Date.parse(c.date)), "date valide");

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps<"/conseils/[slug]">
   const conseil = getConseilBySlug(slug);
   if (!conseil) return {};
   return pageMetadata({
-    title: conseil.title,
+    title: conseil.seoTitle ?? conseil.title,
     description: conseil.description,
     path: `/conseils/${conseil.slug}`,
     image: conseil.image,

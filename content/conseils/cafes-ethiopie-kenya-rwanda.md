@@ -1,5 +1,6 @@
 ---
 title: Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?
+seoTitle: Cafés d'Éthiopie, du Kenya et du Rwanda : les différences
 description: Floral et fruité en Éthiopie, vif et intense au Kenya, doux et équilibré au Rwanda : ce qui distingue ces trois cafés d'Afrique de l'Est et comment les goûter.
 date: 2026-10-02
 theme: cafe-the

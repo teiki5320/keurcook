@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata({
 export default function TermsPage() {
   const l = legalConfig;
   return (
-    <LegalPage title="Conditions générales d'utilisation" updated="1er octobre 2026">
+    <LegalPage title="Conditions générales d'utilisation" path="/conditions" updated="1er octobre 2026">
       <h2>Article 1 — Objet</h2>
       <p>
         Les présentes conditions générales d&apos;utilisation (CGU) encadrent l&apos;accès au site {siteConfig.url}, édité

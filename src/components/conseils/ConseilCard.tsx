@@ -14,7 +14,7 @@ export function ConseilCard({ conseil, headingLevel = 2 }: { conseil: Conseil; h
       <div className="relative aspect-[16/9] overflow-hidden bg-[#281610]">
         {conseil.image ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={conseil.image} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+          <img src={conseil.image} alt={conseil.imageAlt ?? conseil.title} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105" />
         ) : (
           <span aria-hidden className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(60%_70%_at_50%_45%,rgba(255,122,61,.28),transparent_70%)]">
             <Icon className="h-14 w-14 text-[#ff7a3d]" strokeWidth={1.5} />

@@ -6,6 +6,7 @@ import { anton } from "@/components/nuage/typography";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { COUNTRIES, countryBySlug } from "@/lib/countries";
+import { COUNTRY_CUISINE } from "@/lib/country-cuisine";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipes } from "@/lib/data/recipes";
 import { siteConfig } from "@/lib/config";
@@ -77,6 +78,20 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
         </ul>
       ) : (
         <p className="card mt-10 p-8 text-center text-muted">Les premières recettes de ce pays arrivent bientôt.</p>
+      )}
+
+      {COUNTRY_CUISINE[country.code] && (
+        <section aria-labelledby="cuisine-pays" className="mt-16 max-w-3xl">
+          <h2 id="cuisine-pays" className="font-display text-3xl">
+            La cuisine {country.of}
+            <span className="text-[#ff7a3d]">.</span>
+          </h2>
+          <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-[#fbeee2]/85">
+            {COUNTRY_CUISINE[country.code].split("\n\n").map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
+        </section>
       )}
 
       {local.length > 0 && (

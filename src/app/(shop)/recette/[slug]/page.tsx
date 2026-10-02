@@ -226,7 +226,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
                     <p className="text-[16px] leading-relaxed">{s.text}</p>
                     {s.image && (
                       <div className="relative mt-3 aspect-[16/10] overflow-hidden rounded-2xl">
-                        <ProductImage src={s.image} alt="" sizes="(min-width: 1024px) 50vw, 100vw" />
+                        <ProductImage src={s.image} alt={`${recipe.name}, étape ${i + 1}`} sizes="(min-width: 1024px) 50vw, 100vw" />
                       </div>
                     )}
                   </div>

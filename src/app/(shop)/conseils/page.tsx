@@ -4,6 +4,8 @@ import { ConseilCard } from "@/components/conseils/ConseilCard";
 import { anton } from "@/components/nuage/typography";
 import { getMaintenance } from "@/lib/data/settings";
 import { getConseils } from "@/lib/data/conseils";
+import { siteConfig } from "@/lib/config";
+import { breadcrumbLd, itemListLd, JsonLdScript } from "@/lib/json-ld";
 
 // Relu toutes les heures : un article programmé paraît le jour de sa date sans redéploiement.
 
@@ -20,6 +22,12 @@ export default function ConseilsPage() {
   const conseils = getConseils();
   return (
     <div className="container-page">
+      <JsonLdScript
+        data={[
+          breadcrumbLd([{ name: "Accueil", url: siteConfig.url }, { name: "Conseils", url: `${siteConfig.url}/conseils` }]),
+          itemListLd("Conseils de cuisine africaine", conseils.map((c) => ({ name: c.title, url: `${siteConfig.url}/conseils/${c.slug}` }))),
+        ]}
+      />
       <h1 className="uppercase leading-[.88]" style={{ ...anton, fontSize: "clamp(56px,8vw,120px)" }}>
         Conseils<span className="text-[#ff7a3d]">.</span>
       </h1>

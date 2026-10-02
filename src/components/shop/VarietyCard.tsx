@@ -15,7 +15,7 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
       <Link href={`/produit/${product.slug}`} tabIndex={-1} aria-hidden className="group relative block aspect-square overflow-hidden bg-sage-100">
         <ProductImage
           src={product.images[0]}
-          alt=""
+          alt={product.name}
           sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
           priority={priority}
           className="transition duration-500 group-hover:scale-105"
