@@ -15,7 +15,7 @@ export default function LegalNoticePage() {
   const l = legalConfig;
   const contact = <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>;
   return (
-    <LegalPage title="Mentions légales" updated="1er octobre 2026">
+    <LegalPage title="Mentions légales" path="/mentions-legales" updated="1er octobre 2026">
       <p>
         Informations sur l&apos;éditeur et l&apos;hébergeur du site, l&apos;usage de vos données et les limites des
         informations publiées (loi n° 2004-575 du 21 juin 2004 pour la confiance dans l&apos;économie numérique).
