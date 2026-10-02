@@ -1,7 +1,7 @@
 ---
 title: Qu'est-ce que le berbéré et avec quoi le cuisiner ?
 description: Le berbéré est le mélange d'épices rouge de la cuisine éthiopienne. Ce qu'il contient, comment le faire revenir et dans quels plats l'utiliser.
-date: 2026-12-07
+date: 2026-10-02
 theme: epices
 resume: Le berbéré est un mélange d'épices rouge, à base de piment, typique d'Éthiopie et d'Érythrée. On le fait revenir dans la matière grasse pour relever les ragoûts, les lentilles et les purées de pois chiches.
 recettes: doro-wat, misir-wat, shiro, injera

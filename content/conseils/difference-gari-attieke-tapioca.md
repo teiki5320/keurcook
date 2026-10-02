@@ -1,7 +1,7 @@
 ---
 title: Quelle différence entre gari, attiéké et tapioca ?
 description: Gari, attiéké et tapioca viennent tous du manioc, mais ne se fabriquent ni ne se cuisinent de la même façon. Ce qui les distingue et comment les utiliser.
-date: 2027-01-04
+date: 2026-10-02
 theme: cereales
 resume: Les trois sont tirés du manioc. Le gari est une semoule fermentée puis grillée, l'attiéké une semoule fermentée cuite à la vapeur, et le tapioca l'amidon extrait de la racine, au goût neutre.
 recettes: poisson-braise-attieke, garba

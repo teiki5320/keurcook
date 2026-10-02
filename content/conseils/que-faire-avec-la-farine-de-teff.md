@@ -1,7 +1,7 @@
 ---
 title: Qu'est-ce que la farine de teff et que peut-on en faire ?
 description: La farine de teff vient d'une minuscule céréale d'Éthiopie. Son goût, son usage pour l'injera et d'autres idées simples pour la cuisiner à la maison.
-date: 2027-05-03
+date: 2026-12-21
 theme: cereales
 resume: C'est la farine d'une toute petite céréale cultivée en Éthiopie et en Érythrée. On en fait surtout l'injera, mais elle se prête aussi aux bouillies, crêpes et gâteaux.
 recettes: injera, doro-wat, misir-wat, shiro

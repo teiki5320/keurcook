@@ -1,7 +1,7 @@
 ---
 title: Par quoi remplacer les feuilles de ndolé ?
 description: Pas de feuilles de ndolé ? Les autres noms sous lesquels les chercher, les légumes-feuilles qui s'en approchent et comment retrouver un peu de leur amertume.
-date: 2026-11-23
+date: 2026-10-02
 theme: remplacer
 resume: Cherchez-les d'abord sous le nom de bitterleaf, séchées ou surgelées. À défaut, des épinards donnent la texture, et un peu de feuilles amères comme la chicorée ou le pissenlit apporte l'amertume qui manque.
 recettes: ndole

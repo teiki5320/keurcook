@@ -1,7 +1,7 @@
 ---
 title: Qu'est-ce que le pèbè et le djansang ?
 description: Pèbè et djansang, deux graines d'Afrique de l'Ouest et centrale pour parfumer et lier les sauces. Leur goût, comment les préparer et les utiliser.
-date: 2027-07-26
+date: 2027-03-15
 theme: epices
 resume: Le pèbè est une graine aromatique au parfum proche de la muscade. Le djansang est une petite amande au goût de noisette qu'on écrase pour épaissir et parfumer les sauces.
 recettes:

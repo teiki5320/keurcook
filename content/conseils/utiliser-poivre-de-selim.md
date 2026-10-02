@@ -1,7 +1,7 @@
 ---
 title: Comment utiliser le poivre de Selim ?
 description: Le poivre de Selim, ou djar, parfume le café Touba, le yassa et les marinades. Comment le griller, le moudre et le doser pour profiter de son arôme.
-date: 2027-01-25
+date: 2026-10-02
 theme: epices
 resume: On le fait légèrement griller, puis on le pile ou on le moud pour l'ajouter aux marinades, aux sauces ou au café. Son goût boisé et poivré est puissant : quelques gousses suffisent.
 recettes: cafe-touba, poulet-yassa, kelewele, liboke-de-poisson

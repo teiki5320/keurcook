@@ -1,7 +1,7 @@
 ---
 title: Comment faire griller des brochettes façon suya au four ?
 description: Sans barbecue, le gril du four donne un suya bien saisi. Découpe, marinade au yaji, placement dans le four et repères visuels pour une cuisson réussie.
-date: 2027-05-17
+date: 2027-01-04
 theme: sauces
 resume: Utilisez la fonction gril, placez les brochettes près de la résistance sur une grille au-dessus d'une plaque, et retournez-les à mi-cuisson en surveillant le yaji.
 recettes: suya, alloco, kelewele

@@ -1,7 +1,7 @@
 ---
 title: Faut-il un couscoussier pour cuire le fonio ou l'attiéké ?
 description: Fonio, attiéké, couscous de mil : quand le couscoussier est vraiment utile, et comment s'en passer avec une passoire, un linge et une casserole.
-date: 2027-02-15
+date: 2026-10-05
 theme: ustensiles
 resume: Non, il n'est pas indispensable. Le fonio précuit et l'attiéké sec se préparent très bien sans lui, mais le couscoussier donne un grain plus léger et devient presque nécessaire pour le couscous de mil.
 recettes: fonio-aux-legumes, poisson-braise-attieke, thiere-mbuum

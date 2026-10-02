@@ -1,7 +1,7 @@
 ---
 title: Café en grains ou moulu : que choisir et comment le conserver ?
 description: Café en grains ou déjà moulu, lequel acheter selon votre matériel et votre consommation, et comment le ranger pour qu'il garde son arôme.
-date: 2026-12-14
+date: 2026-10-02
 theme: cafe-the
 resume: Le café en grains garde son arôme plus longtemps, à condition de le moudre juste avant usage. Le café moulu est plus pratique mais s'évente vite. Dans les deux cas, rangez-le dans un contenant hermétique, au sec et à l'abri de la lumière.
 recettes: cafe-touba

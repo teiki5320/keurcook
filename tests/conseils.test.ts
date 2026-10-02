@@ -52,7 +52,8 @@ describe("Conseils : en-têtes", () => {
       assert.ok(c.description.length >= DESCRIPTION_MIN && c.description.length <= DESCRIPTION_MAX, `description de ${c.description.length} caractères (attendu ${DESCRIPTION_MIN} à ${DESCRIPTION_MAX})`);
       assert.match(c.date, /^\d{4}-\d{2}-\d{2}$/, "date au format AAAA-MM-JJ");
       assert.ok(!Number.isNaN(Date.parse(c.date)), "date valide");
-      assert.equal(new Date(`${c.date}T12:00:00Z`).getUTCDay(), 1, "publication un lundi");
+      // Un article par lundi ; seule exception : la mise en ligne groupée du 02/10/2026 (19 articles d'un coup).
+      if (c.date !== "2026-10-02") assert.equal(new Date(`${c.date}T12:00:00Z`).getUTCDay(), 1, "publication un lundi");
       assert.ok(c.resume.length > 0, "réponse courte (resume) obligatoire");
       assert.ok(c.body.length > 0, "corps de l'article vide");
       if (c.image) {

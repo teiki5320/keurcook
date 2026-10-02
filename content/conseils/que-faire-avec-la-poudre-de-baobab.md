@@ -1,7 +1,7 @@
 ---
 title: Que faire avec la poudre de baobab (pain de singe) ?
 description: La poudre de pain de singe donne le jus de bouye et la crème du ngalakh. Son goût, comment la délayer sans grumeaux et d'autres idées simples.
-date: 2027-05-31
+date: 2027-01-18
 theme: boissons
 resume: On en fait surtout le jus de bouye et la crème du ngalakh. Son goût acidulé se marie aussi très bien avec les yaourts, les smoothies et les desserts lactés.
 recettes: jus-de-bouye, ngalakh, thiakry

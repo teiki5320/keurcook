@@ -1,7 +1,7 @@
 ---
 title: Quels plats se préparent à l'avance ou se congèlent ?
 description: Mafé, ndolé, sauce graine, soupe egusi : les plats mijotés africains se préparent la veille et se congèlent bien. Ceux à cuisiner au dernier moment.
-date: 2027-06-07
+date: 2027-01-25
 theme: decouvrir
 resume: Les sauces et ragoûts mijotés se préparent très bien la veille et se congèlent. Les fritures, grillades et accompagnements comme l'attiéké sont meilleurs préparés au dernier moment.
 recettes: mafe, ndole, sauce-graine, soupe-egusi

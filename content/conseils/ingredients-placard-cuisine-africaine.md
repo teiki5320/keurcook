@@ -1,7 +1,7 @@
 ---
 title: Quels ingrédients avoir toujours dans son placard ?
 description: Pâte d'arachide, huile de palme rouge, épices, céréales et produits séchés : la liste des ingrédients de base pour cuisiner africain sans courir les magasins.
-date: 2027-02-01
+date: 2026-10-02
 theme: decouvrir
 resume: Une base d'aromates frais, quelques produits secs qui se gardent longtemps (pâte d'arachide, crevettes séchées, céréales) et deux ou trois épices clés suffisent pour préparer une grande partie des plats africains.
 recettes: mafe, riz-jollof, fonio-aux-legumes, jus-de-bissap

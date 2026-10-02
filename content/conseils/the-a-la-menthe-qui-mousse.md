@@ -1,7 +1,7 @@
 ---
 title: Comment faire un thé à la menthe qui mousse ?
 description: La mousse du thé à la menthe vient du service en hauteur et des transvasements. Les gestes, le bon thé et les erreurs qui empêchent la mousse.
-date: 2027-08-16
+date: 2027-04-05
 theme: cafe-the
 resume: La mousse se forme en versant le thé de haut, puis en le reversant plusieurs fois entre le verre et la théière. Un thé bien sucré et bien chaud mousse plus facilement.
 recettes:

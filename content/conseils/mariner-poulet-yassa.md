@@ -1,7 +1,7 @@
 ---
 title: Pourquoi faire mariner le poulet yassa une nuit ?
 description: Citron, oignons et moutarde : ce que la longue marinade apporte au poulet yassa, combien de temps la prévoir au minimum et comment bien la conduire.
-date: 2027-01-18
+date: 2026-10-02
 theme: sauces
 resume: Une longue marinade laisse le citron, l'oignon et les épices parfumer la viande en profondeur et attendrit les oignons, qui formeront ensuite la sauce. Une nuit au frais laisse au goût du yassa le temps de se développer.
 recettes: poulet-yassa

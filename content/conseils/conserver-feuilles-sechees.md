@@ -1,7 +1,7 @@
 ---
 title: Comment conserver les feuilles séchées (ndolé, manioc, sorgho) ?
 description: Feuilles de ndolé, de manioc ou de sorgho séchées : comment les ranger à l'abri de l'humidité et vérifier qu'elles sont encore bonnes avant de cuisiner.
-date: 2026-12-28
+date: 2026-10-02
 theme: epicerie
 resume: Gardez-les dans un contenant hermétique, au sec, au frais et à l'abri de la lumière. L'humidité est leur principal ennemi, et une odeur de moisi ou des taches suspectes doivent vous faire les jeter.
 recettes: ndole, pondu, ravitoto, waakye

@@ -1,7 +1,7 @@
 ---
 title: Quels plats africains sont naturellement végétariens ?
 description: Lentilles au berbéré, shiro, alloco, chakalaka, fonio aux légumes : des plats africains sans viande ni poisson, et les ingrédients cachés à surveiller.
-date: 2027-04-05
+date: 2026-11-23
 theme: decouvrir
 resume: La cuisine éthiopienne en offre beaucoup, comme le misir wat ou le shiro, mais on en trouve partout sur le continent, du plantain frit à la chakalaka. Attention seulement aux condiments à base de poisson ou de crevettes.
 recettes: misir-wat, shiro, chakalaka, alloco

@@ -1,7 +1,7 @@
 ---
 title: Comment réussir une sauce gombo qui file ?
 description: Pour une sauce gombo bien filante, tout se joue dans la découpe, le moment où l'on ajoute le gombo et la façon de remuer. Les gestes qui marchent, frais ou en poudre.
-date: 2026-11-30
+date: 2026-10-02
 theme: sauces
 resume: Coupez le gombo très finement ou utilisez-le en poudre, ajoutez-le en fin de cuisson et battez la sauce au fouet. Évitez de le noyer dans trop d'acidité, qui réduit son côté filant.
 recettes: to-sauce-gombo, thieboudienne

@@ -1,7 +1,7 @@
 ---
 title: Comment préparer un foufou sans qu'il fasse de grumeaux ?
 description: Un foufou lisse et élastique, sans grumeaux : les gestes qui comptent, la bonne façon d'ajouter la farine et comment rattraper une pâte qui a déjà fait des boules.
-date: 2026-11-16
+date: 2026-10-02
 theme: cereales
 resume: Versez la farine en pluie fine sur l'eau très chaude en remuant vigoureusement, puis travaillez la pâte en l'écrasant contre la paroi de la marmite. Délayer une partie de la farine à froid au départ aide aussi beaucoup.
 recettes: fufu-light-soup, soupe-egusi, eru

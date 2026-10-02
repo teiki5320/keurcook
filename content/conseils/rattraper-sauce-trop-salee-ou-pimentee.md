@@ -1,7 +1,7 @@
 ---
 title: Comment rattraper une sauce trop salée ou trop pimentée ?
 description: Sauce trop salée ou trop pimentée ? Les gestes qui corrigent vraiment le goût, les astuces qui marchent moins bien, et comment éviter le problème.
-date: 2027-09-20
+date: 2027-05-10
 theme: sauces
 resume: Le plus efficace est d'allonger la sauce avec des ingrédients non salés et non pimentés. Pour le piment, une matière grasse ou onctueuse comme la pâte d'arachide ou le lait de coco adoucit aussi nettement le goût.
 recettes: mafe, sauce-graine, poulet-yassa

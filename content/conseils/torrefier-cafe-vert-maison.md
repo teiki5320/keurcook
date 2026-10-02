@@ -1,7 +1,7 @@
 ---
 title: Comment torréfier du café vert à la maison ?
 description: Torréfier son café vert à la poêle, comme pour le café Touba : le matériel, les étapes, les repères de couleur et comment refroidir et conserver les grains.
-date: 2027-02-08
+date: 2026-10-02
 theme: cafe-the
 resume: Faites griller le café vert dans une poêle épaisse, à sec et à feu moyen, en remuant sans arrêt jusqu'à la couleur voulue. Refroidissez aussitôt les grains, retirez leurs peaux, puis laissez-les reposer avant de les moudre.
 recettes: cafe-touba

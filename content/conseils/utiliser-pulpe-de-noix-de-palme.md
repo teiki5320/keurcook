@@ -1,7 +1,7 @@
 ---
 title: Comment utiliser la pulpe de noix de palme ?
 description: Pulpe de noix de palme en conserve : comment la diluer, la faire mijoter et reconnaître qu'elle est cuite pour réussir sauce graine, nyembwe ou moambé.
-date: 2027-07-19
+date: 2027-03-08
 theme: sauces
 resume: Diluez-la dans de l'eau, faites-la mijoter longtemps à feu doux en remuant, et attendez que l'huile rouge remonte en surface. C'est le signe que la sauce est prête.
 recettes: sauce-graine, poulet-nyembwe, moambe

@@ -1,7 +1,7 @@
 ---
 title: Qu'est-ce que le rooibos et comment l'infuser ?
 description: Le rooibos, plante d'Afrique du Sud au goût doux et rond, s'infuse à l'eau frémissante. Rouge ou vert, chaud ou glacé, comment bien le préparer.
-date: 2027-04-12
+date: 2026-11-30
 theme: cafe-the
 resume: Le rooibos est une plante d'Afrique du Sud dont les feuilles fines donnent une infusion rouge, douce et légèrement sucrée. Il s'infuse à l'eau très chaude et supporte une infusion longue sans devenir amer.
 recettes: jus-de-gingembre, jus-de-bissap

@@ -1,7 +1,7 @@
 ---
 title: Comment cuire le couscous de mil (thiéré) ?
 description: Le thiéré se cuit à la vapeur, en deux passages, avec un égrenage entre les deux. La méthode pas à pas pour un couscous de mil léger et bien détaché.
-date: 2027-03-01
+date: 2026-10-19
 theme: cereales
 resume: Le couscous de mil se cuit à la vapeur, jamais dans l'eau. On l'humidifie, on le cuit une première fois, on l'égrène, puis on le repasse à la vapeur jusqu'à ce qu'il soit tendre.
 recettes: thiere-mbuum, thiakry, degue

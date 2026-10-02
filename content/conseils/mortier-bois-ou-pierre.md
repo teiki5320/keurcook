@@ -1,7 +1,7 @@
 ---
 title: Mortier en bois ou en pierre : lequel choisir ?
 description: Mortier en bois ou en pierre ? Leurs usages en cuisine africaine, leurs avantages, leurs limites et l'entretien de chacun pour bien choisir selon ce que vous pilez.
-date: 2026-10-19
+date: 2026-10-02
 theme: ustensiles
 resume: Le grand mortier en bois sert à piler de grandes quantités, comme les tubercules ou les feuilles. Le mortier en pierre, plus petit et lourd, est idéal pour écraser épices, ail et piment. Tout dépend de ce que vous cuisinez le plus.
 recettes: fufu-light-soup, to-sauce-gombo, suya

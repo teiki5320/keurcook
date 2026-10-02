@@ -1,7 +1,7 @@
 ---
 title: Par quoi remplacer l'huile de palme rouge ?
 description: Pas d'huile de palme rouge sous la main ? Les solutions pour retrouver sa couleur et une partie de son goût dans les sauces, et leurs limites.
-date: 2027-01-11
+date: 2026-10-02
 theme: remplacer
 resume: Aucune huile ne la remplace parfaitement. Le plus proche est la pulpe de noix de palme ; sinon, une huile neutre colorée au paprika doux ou aux graines de roucou redonne la couleur, mais pas tout le goût.
 recettes: pondu, eru, soupe-egusi, koki

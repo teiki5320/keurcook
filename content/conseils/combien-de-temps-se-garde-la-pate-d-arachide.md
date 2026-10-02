@@ -1,7 +1,7 @@
 ---
 title: Combien de temps se garde la pâte d'arachide ouverte ?
 description: Pot de pâte d'arachide entamé : combien de temps le garder, où le ranger, pourquoi l'huile remonte et à quels signes reconnaître une pâte qui a tourné.
-date: 2026-11-02
+date: 2026-10-02
 theme: epicerie
 resume: Bien fermée et entamée avec une cuillère propre, elle se garde plusieurs semaines, souvent davantage. La durée exacte figure sur l'étiquette ; une odeur rance est le signal qu'il faut la jeter.
 recettes: mafe, moambe, ngalakh

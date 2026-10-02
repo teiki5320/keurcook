@@ -1,7 +1,7 @@
 ---
 title: Comment faire un jus de gingembre maison ?
 description: Mixer, filtrer, sucrer et servir bien frais : la méthode simple pour un jus de gingembre maison, avec ananas, citron ou menthe selon vos goûts.
-date: 2027-03-29
+date: 2026-11-16
 theme: boissons
 resume: Mixez du gingembre frais épluché avec de l'eau, filtrez en pressant bien la pulpe, puis sucrez et citronnez à votre goût. Servez-le très frais, après un passage au réfrigérateur.
 recettes: jus-de-gingembre, jus-de-bissap, jus-de-bouye

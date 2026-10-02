@@ -1,7 +1,7 @@
 ---
 title: Comment infuser le thé noir du Kenya ?
 description: Nature ou préparé à la kényane avec du lait et du sucre, le thé noir du Kenya s'infuse vite. Les bons gestes pour un thé corsé sans amertume.
-date: 2027-10-18
+date: 2027-06-07
 theme: cafe-the
 resume: Infusez-le peu de temps dans une eau frémissante, car il est très corsé. Pour le chai kényan, faites-le chauffer directement dans un mélange d'eau et de lait, avec du sucre et parfois du gingembre.
 recettes: puff-puff

@@ -1,7 +1,7 @@
 ---
 title: Faut-il rincer les crevettes séchées avant de cuisiner ?
 description: Rincer, faire tremper ou griller les crevettes séchées : ce qu'il faut faire selon la recette pour retirer poussière et excès de sel sans perdre leur goût.
-date: 2027-08-30
+date: 2027-04-19
 theme: epicerie
 resume: Oui, un rinçage rapide est conseillé pour retirer poussière, débris et excès de sel. Faites-les tremper si elles doivent s'attendrir, et séchez-les si vous voulez les moudre.
 recettes: ndole, eru, soupe-egusi

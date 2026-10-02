@@ -1,7 +1,7 @@
 ---
 title: Par quoi remplacer le poisson fumé dans une sauce ?
 description: Pas de poisson fumé sous la main ? Crevettes séchées, guedj, viande fumée ou version végétale au soumbala : les bonnes alternatives selon votre sauce.
-date: 2027-03-08
+date: 2026-10-26
 theme: remplacer
 resume: Les crevettes séchées et le guedj sont les remplaçants les plus proches, car ils apportent la même note marine. Pour une sauce sans poisson, associez un condiment fermenté comme le soumbala à une touche fumée.
 recettes: pondu, sauce-graine, eru

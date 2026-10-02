@@ -1,7 +1,7 @@
 ---
 title: Par quoi remplacer le soumbala ?
 description: Pas de soumbala sous la main ? Ses autres noms, les condiments fermentés qui s'en approchent et comment les doser pour garder une sauce savoureuse.
-date: 2026-10-05
+date: 2026-10-02
 theme: remplacer
 resume: Cherchez-le d'abord sous ses autres noms, dawadawa ou nététou. À défaut, un peu de guedj, de crevettes séchées pilées ou de miso brun apporte une profondeur comparable, sans donner exactement le même goût.
 recettes: to-sauce-gombo, mafe, sauce-graine

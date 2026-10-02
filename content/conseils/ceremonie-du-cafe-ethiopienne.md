@@ -1,7 +1,7 @@
 ---
 title: Comment se déroule la cérémonie du café éthiopienne ?
 description: Torréfaction devant les invités, jebena en terre cuite, trois tournées : les grandes étapes de la cérémonie du café éthiopienne et comment s'en inspirer chez soi.
-date: 2026-10-26
+date: 2026-10-02
 theme: cafe-the
 resume: Les grains verts sont lavés, torréfiés devant les invités, pilés puis bouillis dans une jebena, une verseuse en terre cuite. Le café est servi dans de petites tasses, en trois tournées successives.
 recettes: doro-wat, shiro, injera

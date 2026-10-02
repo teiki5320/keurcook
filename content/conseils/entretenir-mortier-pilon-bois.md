@@ -1,7 +1,7 @@
 ---
 title: Comment entretenir un mortier et un pilon en bois ?
 description: Lavage, séchage, huilage et rangement : les gestes simples pour garder un mortier et un pilon en bois propres, sans fissure et sans odeur.
-date: 2026-12-21
+date: 2026-10-02
 theme: ustensiles
 resume: Rincez-le à l'eau chaude juste après usage, sans le laisser tremper, puis faites-le sécher complètement à l'air. Huilez-le de temps en temps et rangez-le dans un endroit sec.
 recettes: cafe-touba

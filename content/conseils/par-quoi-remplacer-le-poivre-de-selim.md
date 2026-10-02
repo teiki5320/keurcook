@@ -1,7 +1,7 @@
 ---
 title: Par quoi remplacer le poivre de Selim ?
 description: Pas de poivre de Selim sous la main ? Les mélanges d'épices qui s'en approchent, selon qu'il parfume une marinade, un bouillon ou le café Touba.
-date: 2027-09-13
+date: 2027-05-03
 theme: remplacer
 resume: Aucune épice ne le remplace exactement, mais un mélange de poivre noir et d'une pointe de muscade, éventuellement avec un peu de cardamome, donne une note chaude et boisée assez proche.
 recettes: poulet-yassa, kelewele, thiere-mbuum, cafe-touba
