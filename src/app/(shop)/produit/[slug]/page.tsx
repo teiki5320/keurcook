@@ -10,6 +10,8 @@ import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
 import { getRecipesUsingProduct } from "@/lib/data/recipes";
+import { getConseilsForProduct } from "@/lib/data/conseils";
+import { PRODUCT_GUIDES } from "@/lib/product-guides";
 import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
 import { getMaintenance } from "@/lib/data/settings";
@@ -44,6 +46,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   // Les ustensiles ne sont pas des denrées : pas d'allergènes ni de conservation à afficher.
   const isFood = product.category.slug !== NON_FOOD_CATEGORY;
   const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
+  const conseils = getConseilsForProduct(product.slug);
 
   // Fil d'Ariane pour Google (une fiche « Product » sans offre ni avis serait signalée comme incomplète).
   const structuredData = {
@@ -144,6 +147,17 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
         )}
       </div>
 
+      {PRODUCT_GUIDES[product.slug] && (
+        <section aria-labelledby="bien-l-utiliser" className="mt-12 max-w-3xl">
+          <h2 id="bien-l-utiliser" className="font-display text-2xl text-forest-900">Bien l&apos;utiliser</h2>
+          <div className="mt-4 space-y-4 leading-relaxed text-ink/85">
+            {PRODUCT_GUIDES[product.slug].split("\n\n").map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {recipes.length > 0 && (
         <section className="mt-16">
           <h2 className="mb-6 font-display text-2xl text-forest-900">Utilisé dans ces recettes</h2>
@@ -151,6 +165,22 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
             {recipes.map((r) => (
               <li key={r.id}>
                 <RecipeCard recipe={r} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {conseils.length > 0 && (
+        <section className="mt-16 max-w-3xl">
+          <h2 className="mb-6 font-display text-2xl text-forest-900">Nos conseils sur ce produit</h2>
+          <ul className="space-y-5">
+            {conseils.map((c) => (
+              <li key={c.slug}>
+                <Link href={`/conseils/${c.slug}`} className="font-semibold text-[#ffc46b] hover:underline">
+                  {c.title}
+                </Link>
+                <p className="mt-1 text-sm leading-relaxed text-ink/80">{c.resume}</p>
               </li>
             ))}
           </ul>

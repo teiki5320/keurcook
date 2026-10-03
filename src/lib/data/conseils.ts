@@ -24,6 +24,15 @@ export function getConseilBySlug(slug: string, today = todayInParis()): Conseil 
   return getConseils(today).find((c) => c.slug === slug) ?? null;
 }
 
+/** Articles publiés qui parlent d'un produit (cité dans l'en-tête « produits » ou lié dans le texte), 4 au plus. */
+export function getConseilsForProduct(productSlug: string, today = todayInParis()): Conseil[] {
+  const listed = (c: Conseil) => c.produits.includes(productSlug);
+  return getConseils(today)
+    .filter((c) => listed(c) || c.body.includes(`/produit/${productSlug})`))
+    .sort((a, b) => Number(listed(b)) - Number(listed(a)))
+    .slice(0, 4);
+}
+
 export function getRelatedConseils(conseil: Conseil, today = todayInParis()): Conseil[] {
   return relatedConseils(conseil, getConseils(today));
 }
