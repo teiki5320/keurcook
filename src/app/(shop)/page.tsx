@@ -128,10 +128,10 @@ export default async function HomePage() {
 
       <section className="bg-[#140a07] px-[clamp(20px,4vw,56px)] pb-24">
         <div className="mx-auto flex max-w-[1320px] flex-wrap items-end justify-between gap-8">
-          <h2 className="uppercase leading-[1.02] sm:leading-[.9]" style={{ ...anton, fontSize: "clamp(52px,7vw,120px)" }}>
-            Du marché de Dakar,
+          <h2 className="uppercase leading-[.9]" style={{ ...anton, fontSize: "clamp(52px,7vw,120px)" }}>
+            Seize pays,
             <br />
-            <span className="text-[#ff7a3d]">à votre cuisine.</span>
+            <span className="text-[#ff7a3d]">une seule table.</span>
           </h2>
           <TLink
             href="/recettes"
