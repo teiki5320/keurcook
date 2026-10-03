@@ -9,6 +9,7 @@ import { demoProducts } from "../src/lib/demo/catalog";
 import { demoRecipes } from "../src/lib/demo/recipes";
 import { COUNTRIES } from "../src/lib/countries";
 import { COUNTRY_CUISINE } from "../src/lib/country-cuisine";
+import { PRODUCT_GUIDES } from "../src/lib/product-guides";
 
 describe("Recettes : aucune allégation de santé", () => {
   for (const r of demoRecipes) {
@@ -37,6 +38,16 @@ describe("Pages pays : présentation de la cuisine", () => {
   for (const country of COUNTRIES.filter((c) => demoRecipes.some((r) => r.countryCode === c.code))) {
     it(`${country.name} a une présentation d'au moins 100 mots`, () => {
       const text = COUNTRY_CUISINE[country.code] ?? "";
+      assert.ok(text.split(/\s+/).length >= 100, `${text.split(/\s+/).length} mots`);
+      assert.deepEqual(findHealthClaims(text), []);
+    });
+  }
+});
+
+describe("Fiches produits : textes « Bien l'utiliser »", () => {
+  for (const [slug, text] of Object.entries(PRODUCT_GUIDES)) {
+    it(`${slug} : produit existant, 100 mots au moins, aucune allégation de santé`, () => {
+      assert.ok(demoProducts.some((p) => p.slug === slug), "produit inconnu");
       assert.ok(text.split(/\s+/).length >= 100, `${text.split(/\s+/).length} mots`);
       assert.deepEqual(findHealthClaims(text), []);
     });
