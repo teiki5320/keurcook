@@ -80,24 +80,6 @@ jobs:
           npx wrangler pages project create keurcook --production-branch=main || true
           npx wrangler pages deploy out --project-name=keurcook --branch=main --commit-dirty=true
 
-      # IndexNow : prévient Bing (et DuckDuckGo, Ecosia, Yandex…) des pages publiées.
-      # La clé est publique par nature : elle est servie à la racine du site (public/229a9f2486bf3431b6b9abc0c8e5bf78.txt).
-      - name: Prévenir les moteurs de recherche (IndexNow)
-        if: steps.secrets.outputs.ok == 'true'
-        continue-on-error: true
-        run: |
-          node -e '
-            const fs = require("node:fs");
-            const urls = [...fs.readFileSync("out/sitemap.xml", "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-            if (!urls.length) { console.log("Sitemap vide (maintenance) : rien à envoyer."); process.exit(0); }
-            fs.writeFileSync("indexnow.json", JSON.stringify({ host: "keurcook.com", key: "229a9f2486bf3431b6b9abc0c8e5bf78", keyLocation: "https://keurcook.com/229a9f2486bf3431b6b9abc0c8e5bf78.txt", urlList: urls }));
-            console.log(urls.length + " adresses à envoyer.");
-          '
-          if [ -f indexnow.json ]; then
-            curl -sS -o /dev/null -w "IndexNow : réponse %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" \
-              -H "Content-Type: application/json; charset=utf-8" --data @indexnow.json
-          fi
-
       # GitHub coupe les tâches programmées d'un dépôt public après 60 jours sans activité :
       # chaque publication programmée réactive la tâche, pour que les articles continuent de paraître.
       - name: Garder la publication programmée active
