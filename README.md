@@ -93,6 +93,10 @@ Onglet **Actions → Maintenance → Run workflow** : choisir « Oui, mettre en 
 
 Pendant la maintenance : écran « On prépare la marmite », pages en `noindex`, sitemap vide. Les pages légales (`/mentions-legales`, `/confidentialite`, `/conditions`) restent accessibles (groupe de routes `src/app/(legal)`).
 
+### Signaler les pages à Bing (IndexNow)
+
+Chaque lundi à 3 h UTC, après la publication de la nuit, le workflow `.github/workflows/indexnow.yml` (« Signaler les pages (IndexNow) ») lit le sitemap publié et envoie toutes ses adresses à IndexNow, qui les transmet à Bing, Yandex, Seznam… Pour le relancer à la main : onglet **Actions → Signaler les pages (IndexNow) → Run workflow**, ou en local `node scripts/indexnow.mjs`. La clé IndexNow (publique par conception) est écrite dans `scripts/indexnow.mjs` et servie à la racine du site (`public/<clé>.txt`). L'état de l'indexation se suit dans Bing Webmaster Tools.
+
 ### En-têtes et redirections
 
 Servis par Cloudflare Pages :
@@ -120,6 +124,7 @@ Servis par Cloudflare Pages :
 .github/workflows/
   deploy.yml           publication sur Cloudflare Pages (push, lundi/mercredi/vendredi, à la main, après maintenance)
   maintenance.yml      bouton « Maintenance » (modifie content/maintenance.json et republie)
+  indexnow.yml         signale les pages à Bing via IndexNow (lundi 3 h UTC et à la main)
 content/
   conseils/            articles « Conseils » en Markdown (date de publication dans l'en-tête)
   maintenance.json     mode maintenance (activé ou non, message affiché)

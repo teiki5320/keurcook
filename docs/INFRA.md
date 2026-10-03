@@ -21,6 +21,7 @@ Mis à jour le 29 septembre 2026 par un scan du dépôt. Pour mettre à jour : r
 
 - **Rôle** : dépôt du code et publication automatique.
   - `.github/workflows/deploy.yml` (« Publier le site ») : lint, types, tests, build, puis `wrangler pages deploy out --project-name=keurcook` ; à chaque push sur `main`, chaque lundi, mercredi et vendredi à 0 h 15 (cron, articles programmés), à la main et après la maintenance.
+  - `.github/workflows/indexnow.yml` (« Signaler les pages (IndexNow) ») : chaque lundi à 3 h UTC et à la main, `node scripts/indexnow.mjs` envoie les adresses du sitemap publié à IndexNow (Bing, Yandex, Seznam…). Clé publique dans le script et dans `public/<clé>.txt`.
   - `.github/workflows/maintenance.yml` (« Maintenance ») : choix Oui/Non et message facultatif ; modifie `content/maintenance.json`, l'enregistre sur `main` et relance la publication.
 - **Console** : https://github.com/teiki5320/keurcook (Actions, Settings → Secrets and variables → Actions).
 - **Identifiants publics** : dépôt `teiki5320/keurcook` (anciennement `teiki5320/alohash`).
