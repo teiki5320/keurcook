@@ -1,5 +1,5 @@
 # Signaler une faille de sécurité sur keurcook.com
-Contact: mailto:contact@keurcook.com
+Contact: mailto:keurcook@toakeur.com
 Expires: 2027-09-30T22:00:00.000Z
 Preferred-Languages: fr, en
 Canonical: https://keurcook.com/.well-known/security.txt

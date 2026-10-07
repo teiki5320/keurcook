@@ -3,7 +3,7 @@
 Site en français de **recettes de plats africains** (46 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi) et une **boutique de 91 produits africains rares** en 8 gammes. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
 
 - **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
-- **Éditeur** : ALOHASH (SAS). Contact : contact@keurcook.com.
+- **Éditeur** : ALOHASH (SAS). Contact : keurcook@toakeur.com.
 - **Dépôt** : https://github.com/teiki5320/keurcook.
 
 **Stack** : Next.js 16 (App Router, export statique) · React 19 · TypeScript · Tailwind CSS 4 · Three.js (carte de l'Afrique en particules) · Marked (articles Markdown). Hébergement : Cloudflare Pages.
@@ -66,7 +66,7 @@ Toutes publiques (aucun secret dans le site). Liste complète : `.env.example`.
 | Variable | Rôle |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens canoniques) ; `https://keurcook.com` au build de production |
-| `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site (Keur Cook), e-mail de contact (contact@keurcook.com) |
+| `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site (Keur Cook), e-mail de contact (keurcook@toakeur.com) |
 | `NEXT_PUBLIC_AMAZON_TAG` | Tag Amazon Partenaires (par défaut `keurcook-21`) |
 | `NEXT_PUBLIC_LEGAL_*` | Informations des mentions légales et des conditions d'utilisation (hébergeur par défaut : Cloudflare) |
 
