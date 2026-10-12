@@ -46,6 +46,10 @@ export function Footer() {
         <div className="container-page space-y-2 py-6 text-xs leading-relaxed text-sage-200/70">
           <p>{AMAZON_DISCLOSURE}</p>
           <p>© {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.</p>
+          <p>
+            Un site{" "}
+            <a href="https://toakeur.com" className="font-semibold text-sage-100 hover:text-white">TOA KEUR</a>
+          </p>
         </div>
       </div>
     </footer>
