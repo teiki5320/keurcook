@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { ConseilCard } from "@/components/conseils/ConseilCard";
 import { formatConseilDate } from "@/components/conseils/format";
 import { anton } from "@/components/nuage/typography";
@@ -9,6 +10,7 @@ import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { conseilSections } from "@/lib/conseils/article";
 import { CONSEIL_THEMES } from "@/lib/conseils/themes";
+import { AD_SLOTS } from "@/lib/ads";
 import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
 import { getCatalog } from "@/lib/data/catalog";
@@ -21,6 +23,20 @@ import { getRecipes } from "@/lib/data/recipes";
 export function generateStaticParams() {
   return getConseils().map((c) => ({ slug: c.slug }));
 }
+
+/**
+ * Coupe l'article en deux avant l'intertitre le plus proche du milieu, pour y placer une annonce.
+ * Article trop court (moins de trois intertitres) : pas de coupure.
+ */
+function splitAtMiddleHeading(html: string): [string, string] {
+  const starts = [...html.matchAll(/<h2[\s>]/g)].map((m) => m.index);
+  if (starts.length < 3) return [html, ""];
+  const cut = starts.reduce((best, i) => (Math.abs(i - html.length / 2) < Math.abs(best - html.length / 2) ? i : best));
+  return [html.slice(0, cut), html.slice(cut)];
+}
+
+const ARTICLE_CLASS =
+  "space-y-4 text-[17px] leading-relaxed text-[#fbeee2]/85 [&_a]:font-semibold [&_a]:text-[#ffc46b] [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#ff7a3d] [&_h2]:scroll-mt-28 [&_h2]:pt-4 [&_h2]:font-display [&_h2]:text-3xl [&_h2]:text-[#fbeee2] [&_h3]:pt-2 [&_h3]:text-xl [&_h3]:font-semibold [&_li]:pl-1 [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-6 [&_strong]:text-[#fbeee2] [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6";
 
 const absolute = (path: string) => (path.startsWith("http") ? path : `${siteConfig.url}${path}`);
 
@@ -51,6 +67,7 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
   const linkedProducts = conseil.produits.flatMap((s) => products.filter((p) => p.slug === s));
   const related = getRelatedConseils(conseil);
   const sections = conseilSections(conseil.body);
+  const [bodyStart, bodyEnd] = splitAtMiddleHeading(renderConseil(conseil.body));
   const theme = CONSEIL_THEMES[conseil.theme];
   const Icon = theme.icon;
   const url = `${siteConfig.url}/conseils/${conseil.slug}`;
@@ -133,10 +150,15 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
         ) : (
           <div className="hidden lg:block" />
         )}
-        <div
-          className="max-w-3xl space-y-4 text-[17px] leading-relaxed text-[#fbeee2]/85 [&_a]:font-semibold [&_a]:text-[#ffc46b] [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#ff7a3d] [&_h2]:scroll-mt-28 [&_h2]:pt-4 [&_h2]:font-display [&_h2]:text-3xl [&_h2]:text-[#fbeee2] [&_h3]:pt-2 [&_h3]:text-xl [&_h3]:font-semibold [&_li]:pl-1 [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-6 [&_strong]:text-[#fbeee2] [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6"
-          dangerouslySetInnerHTML={{ __html: renderConseil(conseil.body) }}
-        />
+        <div className="max-w-3xl">
+          <div className={ARTICLE_CLASS} dangerouslySetInnerHTML={{ __html: bodyStart }} />
+          {bodyEnd && (
+            <>
+              <AdSlot slot={AD_SLOTS.conseilMilieu} />
+              <div className={`mt-4 ${ARTICLE_CLASS}`} dangerouslySetInnerHTML={{ __html: bodyEnd }} />
+            </>
+          )}
+        </div>
       </div>
 
       {linkedRecipes.length > 0 && (
@@ -181,6 +203,8 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
           </ul>
         </section>
       )}
+
+      <AdSlot slot={AD_SLOTS.conseilFin} className="mt-16" />
     </article>
   );
 }

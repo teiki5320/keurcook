@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Fraunces, Inter, Manrope } from "next/font/google";
-import { CookieBanner } from "@/components/compliance/CookieBanner";
+import { ADSENSE_CLIENT } from "@/lib/ads";
 import { siteConfig } from "@/lib/config";
 import { DEFAULT_SHARE_IMAGE } from "@/lib/metadata";
 import "./globals.css";
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },
-  // Revendication du site sur le compte Pinterest Keur Cook.
-  other: { "p:domain_verify": "8622238bb1aaaf67660719f4e4c1273a" },
+  // Revendication du site sur les comptes Pinterest et AdSense de Keur Cook.
+  other: { "p:domain_verify": "8622238bb1aaaf67660719f4e4c1273a", "google-adsense-account": ADSENSE_CLIENT },
 };
 
 export const viewport: Viewport = {
@@ -43,12 +43,15 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${inter.variable} ${fraunces.variable} ${anton.variable} ${manrope.variable} antialiased`} suppressHydrationWarning>
+      <head>
+        {/* AdSense : annonces et message de consentement de Google (Confidentialité et messages). */}
+        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossOrigin="anonymous" />
+      </head>
       <body className="flex min-h-dvh flex-col">
         <a href="#contenu" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:rounded focus:bg-white focus:p-2">
           Aller au contenu
         </a>
         {children}
-        <CookieBanner />
       </body>
     </html>
   );

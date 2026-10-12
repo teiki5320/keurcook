@@ -76,3 +76,31 @@ body {
     @apply text-forest-700 underline underline-offset-2;
   }
 }
+
+/* Publicité AdSense : rien n'apparaît tant qu'aucune annonce n'est servie ;
+   une annonce affichée est encadrée et titrée « Publicité ». */
+.ad-slot {
+  max-width: 100%;
+  overflow: hidden;
+}
+.ad-slot .ad-label {
+  display: none;
+}
+.ad-slot:has(ins[data-ad-status="filled"]) {
+  margin-block: 2.5rem;
+  padding: 0.75rem;
+  border: 1px solid rgb(251 238 226 / 0.12);
+  border-radius: 1rem;
+}
+.ad-slot:has(ins[data-ad-status="filled"]) .ad-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(251 238 226 / 0.55);
+}
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
