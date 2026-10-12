@@ -177,7 +177,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
         <RecipeActions slug={recipe.slug} name={recipe.name} url={url} image={recipe.image ? absoluteImage(`/pins/${recipe.slug}.jpg`) : null} />
       </div>
 
-      <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
+      <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <RecipeIngredients ingredients={recipe.ingredients} servings={recipe.servings} products={linked} />
           <section aria-labelledby="nutrition" className="card mt-4 p-5 sm:p-6">
