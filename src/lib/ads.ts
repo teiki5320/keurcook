@@ -4,19 +4,22 @@
  */
 export const ADSENSE_CLIENT = "ca-pub-2680784147246798";
 
+/** Bloc d'annonces display responsive « Keur Cook », partagé par tous les emplacements. */
+const KEUR_COOK_UNIT = "1417105513";
+
 /**
  * Numéros des blocs d'annonces créés dans AdSense (Annonces → Par bloc d'annonces).
  * Un emplacement sans numéro n'affiche rien : la page reste telle quelle.
  */
 export const AD_SLOTS = {
   /** Recette : entre « L'histoire du plat » et la préparation. */
-  recetteMilieu: "",
+  recetteMilieu: KEUR_COOK_UNIT,
   /** Recette : en fin de page, après les recettes proches. */
-  recetteFin: "",
+  recetteFin: KEUR_COOK_UNIT,
   /** Conseil : au milieu de l'article, avant un intertitre. */
-  conseilMilieu: "",
+  conseilMilieu: KEUR_COOK_UNIT,
   /** Conseil : en fin de page, après « À lire aussi ». */
-  conseilFin: "",
+  conseilFin: KEUR_COOK_UNIT,
   /** Pays : entre les recettes et la présentation de la cuisine. */
-  pays: "",
+  pays: KEUR_COOK_UNIT,
 } as const;
