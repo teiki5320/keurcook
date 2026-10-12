@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Politique de confidentialité" path="/confidentialite" updated="1er octobre 2026">
+    <LegalPage title="Politique de confidentialité" path="/confidentialite" updated="12 octobre 2026">
       <p>
         {legalConfig.companyName} (« nous ») attache une grande importance à la protection de vos données personnelles,
         traitées conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et
@@ -26,8 +26,8 @@ export default function PrivacyPage() {
 
       <h2>Données collectées et finalités</h2>
       <p>
-        Le site ne comporte ni compte, ni formulaire, ni outil de mesure d&apos;audience : nous ne collectons aucune
-        donnée personnelle en dehors des cas suivants.
+        Le site ne comporte ni compte, ni formulaire, ni outil de mesure d&apos;audience. Des données sont traitées
+        dans les cas suivants.
       </p>
       <ul>
         <li>
@@ -39,6 +39,18 @@ export default function PrivacyPage() {
           traite l&apos;adresse IP et les informations techniques de connexion pour délivrer les pages et protéger le site
           contre les attaques. Base légale : intérêt légitime (sécurité du site).
         </li>
+        <li>
+          <strong>Publicité (Google AdSense)</strong> : le site affiche des annonces fournies par Google. Pour les
+          afficher, en mesurer l&apos;efficacité et lutter contre la fraude, Google et ses partenaires publicitaires
+          utilisent des cookies et des identifiants (adresse IP, informations sur le navigateur et l&apos;appareil, pages
+          vues). Les annonces personnalisées, et les cookies publicitaires qui ne sont pas strictement nécessaires, ne
+          sont utilisés qu&apos;avec votre accord, donné ou refusé dans le message de consentement de Google affiché à
+          votre première visite. Si vous refusez, des annonces non personnalisées peuvent s&apos;afficher. Base légale :
+          votre consentement. Pour en savoir plus :{" "}
+          <a href="https://policies.google.com/technologies/partner-sites?hl=fr" target="_blank" rel="noopener noreferrer">
+            comment Google utilise les données des sites partenaires
+          </a>.
+        </li>
       </ul>
       <p>Nous ne collectons aucune donnée de santé et ne revendons jamais vos données.</p>
 
@@ -46,15 +58,18 @@ export default function PrivacyPage() {
       <ul>
         <li>Messages de contact : le temps de traiter la demande, puis 3 ans au plus.</li>
         <li>Journaux techniques : selon la politique de l&apos;hébergeur, quelques jours en général.</li>
-        <li>Mémorisation du message sur les cookies : 6 mois.</li>
+        <li>Votre choix dans le message de consentement de Google : 13 mois au plus, puis la question vous est reposée.</li>
+        <li>Cookies publicitaires de Google : 13 mois au plus.</li>
         <li>Favoris : dans votre navigateur uniquement, jusqu&apos;à ce que vous les retiriez ou effaciez les données du site.</li>
       </ul>
 
       <h2>Destinataires et sous-traitants</h2>
       <p>
         Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site et
-        acheminement des e-mails de contact ({legalConfig.hostName}), messagerie (IONOS). Lorsque des données sont
-        transférées hors de l&apos;Union européenne (Cloudflare, États-Unis), ce transfert est encadré par le cadre de
+        acheminement des e-mails de contact ({legalConfig.hostName}), messagerie (IONOS). Pour la publicité, Google
+        Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irlande) et, avec votre accord, ses partenaires
+        publicitaires, dont la liste figure dans le message de consentement. Lorsque des données sont transférées hors
+        de l&apos;Union européenne (Cloudflare et Google, États-Unis), ce transfert est encadré par le cadre de
         protection des données UE–États-Unis (Data Privacy Framework) et par des clauses contractuelles types de la
         Commission européenne.
       </p>
@@ -78,12 +93,25 @@ export default function PrivacyPage() {
       <p>Le site utilise les cookies et stockages locaux suivants :</p>
       <ul>
         <li><strong>keurcook-favoris-v1</strong> (stockage local, nécessaire) — vos favoris : les recettes que vous avez mises de côté, uniquement sur votre appareil, jusqu&apos;à ce que vous les retiriez ou effaciez les données du site.</li>
-        <li><strong>ah_consent</strong> (nécessaire) — mémorise que vous avez vu le message sur les cookies, 6 mois.</li>
+        <li>
+          <strong>Message de consentement de Google</strong> (nécessaire) — mémorise votre choix (accepter, refuser ou
+          personnaliser), 13 mois au plus.
+        </li>
+        <li>
+          <strong>Cookies publicitaires de Google et de ses partenaires</strong> (soumis à votre accord) — affichage
+          d&apos;annonces, personnalisées ou non, mesure de leur efficacité et lutte contre la fraude, 13 mois au plus.
+        </li>
       </ul>
       <p>
-        Le site ne dépose aucun cookie de mesure d&apos;audience ni publicitaire. Amazon.fr, une fois ouvert, dépose ses
-        propres cookies. Vous pouvez
-        afficher à nouveau le message sur les cookies à tout moment : <CookieSettingsButton className="font-semibold text-forest-700 underline" />.
+        Le site ne dépose aucun cookie de mesure d&apos;audience. Amazon.fr, une fois ouvert, dépose ses propres cookies.
+      </p>
+      <p>
+        <strong>Retirer ou modifier votre accord</strong> : à tout moment, aussi simplement que vous l&apos;avez donné,
+        avec le lien « Cookies » en bas de chaque page ou ici :{" "}
+        <CookieSettingsButton className="font-semibold text-forest-700 underline" />. Vous pouvez aussi régler la
+        personnalisation des annonces Google sur{" "}
+        <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Mon Centre publicités</a>{" "}
+        ou supprimer les cookies dans les réglages de votre navigateur.
       </p>
     </LegalPage>
   );

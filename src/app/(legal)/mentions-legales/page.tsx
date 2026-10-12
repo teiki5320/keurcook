@@ -15,7 +15,7 @@ export default function LegalNoticePage() {
   const l = legalConfig;
   const contact = <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>;
   return (
-    <LegalPage title="Mentions légales" path="/mentions-legales" updated="1er octobre 2026">
+    <LegalPage title="Mentions légales" path="/mentions-legales" updated="12 octobre 2026">
       <p>
         Informations sur l&apos;éditeur et l&apos;hébergeur du site, l&apos;usage de vos données et les limites des
         informations publiées (loi n° 2004-575 du 21 juin 2004 pour la confiance dans l&apos;économie numérique).
@@ -48,12 +48,13 @@ export default function LegalNoticePage() {
           données du site dans votre navigateur.
         </li>
         <li>
-          Un seul cookie est déposé : <code>ah_consent</code>, qui mémorise pendant 6 mois que vous avez vu le message
-          sur les cookies.
+          Publicité : le site affiche des annonces fournies par Google (AdSense). Google et ses partenaires déposent des
+          cookies publicitaires seulement avec votre accord, recueilli par le message de consentement de Google ; vous
+          pouvez le retirer à tout moment avec le lien « Cookies » en bas de chaque page.
         </li>
         <li>
-          Aucune mesure d&apos;audience ni publicité : les polices, les images et le code du site sont servis par le site
-          lui-même, sans service tiers.
+          Aucune mesure d&apos;audience : les polices, les images et le code du site sont servis par le site lui-même ;
+          seules les annonces et le message de consentement viennent de Google.
         </li>
         <li>
           L&apos;hébergeur peut enregistrer des journaux techniques (adresse IP, date, page demandée) pour la sécurité du
@@ -80,6 +81,14 @@ export default function LegalNoticePage() {
       <p>
         Un clic sur ces liens vous fait quitter le site : Amazon applique alors sa propre politique de confidentialité et
         de cookies.
+      </p>
+
+      <h2>Publicité</h2>
+      <p>
+        Des annonces fournies par Google AdSense peuvent s&apos;afficher sur les recettes, les conseils et les pages des
+        pays. Elles sont toujours signalées par la mention « Publicité » et ne sont pas choisies par l&apos;éditeur : leur
+        présence ne vaut pas recommandation. Elles sont distinctes des boutons « Acheter », qui mènent aux produits
+        sélectionnés sur Amazon.
       </p>
 
       <h2>Propriété intellectuelle et images</h2>
