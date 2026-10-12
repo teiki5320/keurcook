@@ -3,12 +3,14 @@ import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChefHat, Clock, Flame, Lightbulb, MapPin, Users } from "lucide-react";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { ProductImage } from "@/components/product/ProductImage";
 import { RecipeActions } from "@/components/recipe/RecipeActions";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { RecipeIngredients, type LinkedProduct } from "@/components/recipe/RecipeIngredients";
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { minPriceCents } from "@/lib/catalog-utils";
+import { AD_SLOTS } from "@/lib/ads";
 import { siteConfig } from "@/lib/config";
 import { breadcrumbLd, jsonLd } from "@/lib/json-ld";
 import { formatPrice } from "@/lib/format";
@@ -211,6 +213,8 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
             </div>
           </section>
 
+          <AdSlot slot={AD_SLOTS.recetteMilieu} />
+
           <section aria-labelledby="etapes" className="mt-12">
             <h2 id="etapes" className="font-display text-4xl">
               Préparation<span className="text-[#ff7a3d]">.</span>
@@ -278,6 +282,8 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
           </ul>
         </section>
       )}
+
+      <AdSlot slot={AD_SLOTS.recetteFin} className="mt-16" />
     </article>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AdSlot } from "@/components/ads/AdSlot";
 import { anton } from "@/components/nuage/typography";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
@@ -9,6 +10,7 @@ import { COUNTRIES, countryBySlug } from "@/lib/countries";
 import { COUNTRY_CUISINE } from "@/lib/country-cuisine";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipes } from "@/lib/data/recipes";
+import { AD_SLOTS } from "@/lib/ads";
 import { siteConfig } from "@/lib/config";
 import { getMaintenance } from "@/lib/data/settings";
 import { breadcrumbLd, jsonLd } from "@/lib/json-ld";
@@ -79,6 +81,8 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
       ) : (
         <p className="card mt-10 p-8 text-center text-muted">Les premières recettes de ce pays arrivent bientôt.</p>
       )}
+
+      <AdSlot slot={AD_SLOTS.pays} />
 
       {COUNTRY_CUISINE[country.code] && (
         <section aria-labelledby="cuisine-pays" className="mt-16 max-w-3xl">
