@@ -31,16 +31,39 @@ function writeConsent() {
   document.cookie = `${CONSENT_COOKIE}=${encodeURIComponent(JSON.stringify(value))}; Max-Age=${60 * 60 * 24 * 182}; Path=/; SameSite=Lax${secure}`;
 }
 
-/** Bouton à placer n'importe où (pied de page) pour rouvrir les préférences. */
+interface GoogleFundingChoices {
+  callbackQueue?: Array<() => void>;
+  showRevocationMessage?: () => void;
+}
+
+declare global {
+  interface Window {
+    googlefc?: GoogleFundingChoices;
+  }
+}
+
+/**
+ * Bouton à placer n'importe où (pied de page) pour revoir ses choix : il rouvre le message de
+ * consentement de Google (Confidentialité et messages, AdSense), qui gère les cookies publicitaires.
+ */
 export function CookieSettingsButton({ className }: { className?: string }) {
   return (
-    <button type="button" className={className} onClick={() => window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))}>
+    <button
+      type="button"
+      className={className}
+      onClick={() => {
+        const fc = (window.googlefc = window.googlefc || {});
+        fc.callbackQueue = fc.callbackQueue || [];
+        fc.callbackQueue.push(() => fc.showRevocationMessage?.());
+      }}
+    >
       Cookies
     </button>
   );
 }
 
 /**
+ * Ancien message maison (plus affiché depuis l'arrivée d'AdSense : Google recueille le consentement).
  * Information sur les cookies : le site ne dépose que des cookies nécessaires
  * (favoris en stockage local, mémorisation de ce message), aucun cookie de mesure
  * d'audience ni publicitaire ; aucun consentement n'est donc à recueillir.
