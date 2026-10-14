@@ -469,6 +469,7 @@ const seeds: ProductSeed[] = [
 /**
  * Offres Amazon.fr retenues (plus de 3,5 étoiles, relevées le 26 septembre 2026) :
  * ASIN, format et prix de la fiche, et nom affiché s'il diffère du produit de démo.
+ * 13 octobre 2026 : poivre de Selim, attiéké et farine de foufou remplacés (anciens produits indisponibles).
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
@@ -476,14 +477,14 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   soumbala: { asin: "B0CQKHMT2Y", label: "50 g", priceCents: 899 },
   berbere: { asin: "B079R281WV", label: "40 g", priceCents: 419 },
   "yaji-suya": { asin: "B0CTTM79ZR", label: "180 g", priceCents: 2499 },
-  "poivre-de-selim": { asin: "B07GFN2J77", label: "250 g", priceCents: 995 },
+  "poivre-de-selim": { asin: "B0FGDXL99W", label: "50 g", priceCents: 999 },
   "graines-d-egusi": { asin: "B0DLV721PS", label: "50 g", priceCents: 899, name: "Egusi moulu (pistache africaine)" },
   fonio: { asin: "B0C78LFHJS", label: "1 kg", priceCents: 990 },
-  "attieke-sec": { asin: "B0CCLHXJFJ", label: "500 g", priceCents: 1990 },
+  "attieke-sec": { asin: "B09239KJ74", label: "3 × 500 g", priceCents: 3140 },
   "couscous-de-mil": { asin: "B0DWKQHXLN", label: "500 g", priceCents: 990 },
   "farine-de-teff": { asin: "B0C1TBB24S", label: "1 kg", priceCents: 2496 },
   "poudre-de-baobab": { asin: "B06Y3L4CP1", label: "1 kg", priceCents: 3399 },
-  "farine-de-foufou": { asin: "B0DY1V2QVZ", label: "500 g", priceCents: 1299, name: "Farine de manioc pour foufou" },
+  "farine-de-foufou": { asin: "B0GBPVP3XM", label: "300 g", priceCents: 1290, name: "Farine de manioc pour foufou" },
   "feuilles-de-ndole": { asin: "B0FQQXJ23P", label: "100 g", priceCents: 1490 },
   "feuilles-de-manioc": { asin: "B092379XP9", label: "3 × 420 g", priceCents: 3299, name: "Feuilles de manioc pilées (pondu, ravitoto)" },
   "fleurs-de-bissap": { asin: "B09LMHFX9T", label: "1 kg", priceCents: 2299 },
