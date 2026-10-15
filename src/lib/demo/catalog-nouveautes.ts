@@ -49,7 +49,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Retirer la fine peau brune, puis croquer la noix nature, en petits morceaux. Son amertume se marie bien avec une boisson fraîche.",
     conservation: "Au frais et au sec, dans un sachet ou un bocal fermé.",
     tags: ["noix", "tradition", "Nigeria"],
-    amazon: { asin: "B09YPZ3T11", label: "20 noix", priceCents: 999 },
+    amazon: { asin: "B0DBGJDGFX", label: "80 g", priceCents: 999 },
   },
   {
     slug: "cafe-touba",
@@ -79,7 +79,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Verser la farine en pluie dans l'eau bouillante en tournant vivement à la spatule jusqu'à obtenir une pâte lisse et élastique.",
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["igname", "amala", "Nigeria"],
-    amazon: { asin: "B08CF5G29P", label: "1,8 kg", priceCents: 1290 },
+    amazon: { asin: "B00UXOTFJA", label: "910 g", priceCents: 895 },
   },
   {
     slug: "akpi-djansang",
@@ -94,7 +94,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Torréfier légèrement à sec, puis moudre ou écraser au mortier avant de les ajouter à la sauce ou à la marinade du poisson braisé.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["graines", "sauce", "Cameroun"],
-    amazon: { asin: "B0CP9SPRP8", label: "50 g", priceCents: 899 },
+    amazon: { asin: "B0GXT1SHFT", label: "50 g", priceCents: 899 },
   },
   {
     slug: "assaisonnement-jollof",
