@@ -6,7 +6,7 @@ import { getMaintenance } from "@/lib/data/settings";
 
 /** Pendant la maintenance, les pages affichent toutes le même écran : on demande aux moteurs de ne pas les indexer. */
 export function generateMetadata(): Metadata {
-  return getMaintenance().enabled ? { robots: { index: false, follow: false } } : {};
+  return getMaintenance().enabled ? { robots: { index: false, follow: false, "max-image-preview": "large" } } : {};
 }
 
 export default function ShopLayout({ children }: { children: React.ReactNode }) {

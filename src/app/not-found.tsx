@@ -5,7 +5,7 @@ import { TLink } from "@/components/nuage/PageTransition";
 export const metadata: Metadata = {
   title: "Page introuvable",
   description: "Cette page n'existe pas ou n'est plus disponible sur Keur Cook.",
-  robots: { index: false, follow: true },
+  robots: { index: false, follow: true, "max-image-preview": "large" },
 };
 
 export default function NotFound() {

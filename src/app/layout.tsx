@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   formatDetection: { telephone: false },
+  // Grande image autorisée dans Google Discover et les résultats (« max-image-preview:large »).
+  robots: { "max-image-preview": "large" },
   // Revendication du site sur les comptes Pinterest et AdSense de Keur Cook.
   other: { "p:domain_verify": "8622238bb1aaaf67660719f4e4c1273a", "google-adsense-account": ADSENSE_CLIENT },
 };

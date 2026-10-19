@@ -55,6 +55,7 @@ export function pageMetadata({ title, description, path, image, imageAlt, type =
       ...(publishedTime ? { publishedTime } : {}),
     },
     twitter: { card: "summary_large_image", title: fullTitle, description, images: images.map((i) => i.url) },
-    ...(noindex ? { robots: { index: false, follow: true } } : {}),
+    // Remplace celui du gabarit commun : on garde « max-image-preview:large ».
+    ...(noindex ? { robots: { index: false, follow: true, "max-image-preview": "large" } } : {}),
   };
 }
