@@ -5,7 +5,7 @@ date: 2026-10-07
 theme: epicerie
 resume: Le guedj est un poisson fermenté puis séché au soleil, très utilisé au Sénégal. On en met un petit morceau dans le bouillon ou la sauce pour lui donner un goût marin puissant.
 recettes: thieboudienne, caldou
-produits: guedj, soumbala, crevettes-sechees
+produits: soumbala, crevettes-sechees
 image: /conseils/quest-ce-que-le-guedj.webp
 imageAlt: Des morceaux de guedj, poisson séché brun, posés sur une planche en bois.
 imagePrompt: Photographie culinaire, morceaux de guedj, poisson fermenté et séché à la peau brune et rugueuse, posés sur une planche en bois brut, un bol de riz et quelques piments en arrière-plan flou, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -37,7 +37,7 @@ On l'ajoute en début de cuisson, avec les oignons ou dans le bouillon, pour qu'
 
 ## Le conserver
 
-Gardez le [guedj](/produit/guedj) dans un bocal ou une boîte hermétique, au sec. Cela contient son odeur et le protège de l'humidité, qui pourrait le faire moisir. Pour une longue durée, le congélateur fonctionne très bien, en portions. Les conseils sont les mêmes que pour le [poisson fumé](/conseils/comment-conserver-le-poisson-fume).
+Gardez le guedj dans un bocal ou une boîte hermétique, au sec. Cela contient son odeur et le protège de l'humidité, qui pourrait le faire moisir. Pour une longue durée, le congélateur fonctionne très bien, en portions. Les conseils sont les mêmes que pour le [poisson fumé](/conseils/comment-conserver-le-poisson-fume).
 
 ## Si vous n'en trouvez pas
 

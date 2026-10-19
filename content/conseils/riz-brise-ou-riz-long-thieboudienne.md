@@ -5,7 +5,7 @@ date: 2026-12-11
 theme: cereales
 resume: Le riz brisé est le choix traditionnel : il boit le bouillon et donne la texture typique du plat. Le riz long fonctionne aussi, avec des grains plus détachés et une cuisson à adapter.
 recettes: thieboudienne, riz-jollof
-produits: guedj, soumbala
+produits: soumbala
 image: /conseils/riz-brise-ou-riz-long-thieboudienne.webp
 imageAlt: Un grand plat de thiéboudienne au riz rouge orangé, garni de poisson et de légumes.
 imagePrompt: Photographie culinaire, grand plat de thiéboudienne avec riz brisé rouge orangé, tranches de poisson farci, carotte, manioc, aubergine et chou, poignée de riz brisé cru dans une coupelle à côté, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -35,4 +35,4 @@ Pour la sauce de départ, le lavage du riz et la cuisson à couvert, les étapes
 
 ## Et le riz parfumé ?
 
-Le riz jasmin ou basmati apporte son propre parfum, qui se mêle à celui du bouillon. Le plat reste bon, mais s'éloigne du goût habituel. Si vous tenez à l'arôme traditionnel, misez plutôt sur les condiments du bouillon, comme le [guedj](/produit/guedj) et le [soumbala](/produit/soumbala), qui donnent au thiéboudienne son caractère. Dans le [riz jollof](/recette/riz-jollof), autre riz cuit dans une sauce tomatée, le riz long est d'ailleurs plus courant.
+Le riz jasmin ou basmati apporte son propre parfum, qui se mêle à celui du bouillon. Le plat reste bon, mais s'éloigne du goût habituel. Si vous tenez à l'arôme traditionnel, misez plutôt sur les condiments du bouillon, comme le guedj et le [soumbala](/produit/soumbala), qui donnent au thiéboudienne son caractère. Dans le [riz jollof](/recette/riz-jollof), autre riz cuit dans une sauce tomatée, le riz long est d'ailleurs plus courant.

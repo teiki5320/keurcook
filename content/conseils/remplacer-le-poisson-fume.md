@@ -5,7 +5,7 @@ date: 2026-10-12
 theme: remplacer
 resume: Les crevettes séchées et le guedj sont les remplaçants les plus proches, car ils apportent la même note marine. Pour une sauce sans poisson, associez un condiment fermenté comme le soumbala à une touche fumée.
 recettes: pondu, sauce-graine, eru
-produits: crevettes-sechees, guedj, soumbala
+produits: crevettes-sechees, soumbala
 image: /conseils/remplacer-le-poisson-fume.webp
 imageAlt: Des crevettes séchées, un morceau de guedj et des boulettes de soumbala dans trois petites coupelles.
 imagePrompt: Photographie culinaire, trois petites coupelles en bois contenant des crevettes séchées orangées, un morceau de poisson séché et des boulettes sombres de soumbala, à côté d'une marmite de sauce rouge, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -20,7 +20,7 @@ Les [crevettes séchées](/produit/crevettes-sechees) sont le choix le plus simp
 
 ## Le guedj
 
-Le [guedj](/produit/guedj), poisson fermenté et séché du Sénégal, a un goût plus puissant. Un petit morceau, rincé et émietté, suffit pour une marmite entière. Ajoutez-le en début de cuisson et salez seulement à la fin, car il apporte déjà beaucoup de sel. Pour mieux le connaître, lisez notre article [sur le guedj](/conseils/quest-ce-que-le-guedj).
+Le guedj, poisson fermenté et séché du Sénégal, a un goût plus puissant. Un petit morceau, rincé et émietté, suffit pour une marmite entière. Ajoutez-le en début de cuisson et salez seulement à la fin, car il apporte déjà beaucoup de sel. Pour mieux le connaître, lisez notre article [sur le guedj](/conseils/quest-ce-que-le-guedj).
 
 ## Un autre poisson ou une viande fumée
 

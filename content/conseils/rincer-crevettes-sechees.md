@@ -31,7 +31,7 @@ Si les crevettes sont très salées ou très poussiéreuses, faites-les tremper 
 
 ## Goûter avant de saler
 
-Même rincées, les crevettes séchées apportent du sel à la préparation. Salez votre plat en fin de cuisson, après avoir goûté, surtout s'il contient aussi du poisson fumé, du [guedj](/produit/guedj) ou un cube de bouillon.
+Même rincées, les crevettes séchées apportent du sel à la préparation. Salez votre plat en fin de cuisson, après avoir goûté, surtout s'il contient aussi du poisson fumé, du guedj ou un cube de bouillon.
 
 ## Bien les conserver
 

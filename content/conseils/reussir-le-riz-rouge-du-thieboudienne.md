@@ -5,7 +5,7 @@ date: 2026-10-14
 theme: sauces
 resume: Tout se joue dans la sauce de départ. Faites bien revenir le concentré de tomate dans l'huile, puis cuisez le riz dans juste assez de bouillon, à couvert et à feu doux, sans trop remuer.
 recettes: thieboudienne, riz-jollof, caldou
-produits: guedj, soumbala
+produits: soumbala
 image: /conseils/reussir-le-riz-rouge-du-thieboudienne.webp
 imageAlt: Un grand plat de riz rouge surmonté de poisson et de légumes, avec des morceaux de riz croustillant sur le bord.
 imagePrompt: Photographie culinaire, grand plat collectif de riz rouge brisé surmonté de tranches de poisson farci, carotte, manioc, chou et aubergine, morceaux de riz croustillant sur le bord, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -16,7 +16,7 @@ Le secret du riz rouge du [thiéboudienne](/recette/thieboudienne), c'est une sa
 
 1. Faites dorer le poisson dans l'huile, puis réservez-le. Gardez cette huile parfumée.
 2. Faites revenir les oignons dans cette même huile.
-3. Ajoutez le concentré de tomate délayé, le [guedj](/produit/guedj) et le [nététou](/produit/soumbala).
+3. Ajoutez le concentré de tomate délayé, le guedj et le [nététou](/produit/soumbala).
 4. Laissez cuire en remuant souvent, jusqu'à ce que la sauce fonce et que l'huile se sépare légèrement de la tomate. L'acidité du concentré doit avoir disparu quand vous goûtez.
 
 ## Un bouillon riche

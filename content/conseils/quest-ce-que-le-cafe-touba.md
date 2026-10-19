@@ -5,7 +5,7 @@ date: 2026-10-02
 theme: cafe-the
 resume: C'est un café du Sénégal torréfié avec du djar, le poivre de Selim, qui lui donne un parfum boisé et légèrement piquant. On le moud, on le passe dans un filtre et on le sert bien sucré.
 recettes: cafe-touba
-produits: cafe-touba, poivre-de-selim
+produits: poivre-de-selim
 image: /conseils/quest-ce-que-le-cafe-touba.webp
 imageAlt: Des grains de café torréfiés mélangés à des gousses de poivre de Selim dans une poêle en fonte.
 imagePrompt: Photographie culinaire, grains de café brun foncé et gousses sombres de poivre de Selim en train de griller dans une poêle en fonte, petits verres de café fumant à côté, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.

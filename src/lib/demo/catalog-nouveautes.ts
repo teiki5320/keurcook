@@ -17,7 +17,8 @@ export interface NouveauProduit {
   usageTips: string | null;
   conservation: string | null;
   tags: string[];
-  amazon: { asin: string; label: string; priceCents: number };
+  /** null = produit masqué (plus en vente sur Amazon.fr). */
+  amazon: { asin: string; label: string; priceCents: number } | null;
 }
 
 export const nouveauxProduits: NouveauProduit[] = [
@@ -64,7 +65,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Préparer au filtre, avec une cuillère de café Touba par tasse, et sucrer généreusement comme au Sénégal.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["café", "Sénégal", "épicé"],
-    amazon: { asin: "B0B52RYJS8", label: "250 g", priceCents: 1599 },
+    // Masqué le 19/10/2026 : B0B52RYJS8 (250 g, 15,99 €) indisponible sur Amazon.fr.
+    amazon: null,
   },
   {
     slug: "farine-d-igname",

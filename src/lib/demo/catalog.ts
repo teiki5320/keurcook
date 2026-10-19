@@ -471,6 +471,8 @@ const seeds: ProductSeed[] = [
  * ASIN, format et prix de la fiche, et nom affiché s'il diffère du produit de démo.
  * 13 octobre 2026 : poivre de Selim, attiéké et farine de foufou remplacés (anciens produits indisponibles).
  * 19 octobre 2026 : berbère remplacé (ancien produit indisponible).
+ * 19 octobre 2026 : guedj (B0DK3SVDJN) et café Touba (B0B52RYJS8) masqués, indisponibles sur Amazon.fr
+ * sans équivalent ; remettre leur offre quand ils reviennent.
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
@@ -492,7 +494,6 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "gombo-seche": { asin: "B0C66R4FWK", label: "100 g", priceCents: 490 },
   "feuilles-de-moringa": { asin: "B086JBQJ1J", label: "250 g", priceCents: 999 },
   "feuilles-de-sorgho": { asin: "B0F922WGDC", label: "130 g", priceCents: 1499 },
-  guedj: { asin: "B0DK3SVDJN", label: "100 g", priceCents: 3391 },
   "crevettes-sechees": { asin: "B0BVGJQC39", label: "50 g", priceCents: 490 },
   "huile-de-palme-rouge": { asin: "B0962X7DNX", label: "75 cl", priceCents: 1499, name: "Huile de palme rouge" },
   "pate-d-arachide": { asin: "B07VX8JBYN", label: "425 g", priceCents: 1349, name: "Pâte d'arachide" },
@@ -503,7 +504,7 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
 for (const n of nouveauxProduits) {
   const { category, amazon, ...rest } = n;
   seeds.push({ ...rest, categoryId: cat(category), producer: null, featured: false, variants: [] });
-  amazonOffers[n.slug] = amazon;
+  if (amazon) amazonOffers[n.slug] = amazon;
 }
 
 /**
