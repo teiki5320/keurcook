@@ -345,6 +345,124 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "farines-africaines",
+    tab: "Farines",
+    title: "Top 10 des fonios, garis et farines africaines",
+    description:
+      "Couscous de mil, attiéké, farine de maïs blanc, fonio, gari, farine de teff : notre top 10, classé selon le nombre de recettes du site qui les emploient.",
+    intro:
+      "Notre sélection de dix céréales, semoules et farines d'Afrique, parmi celles de la boutique. Elles sont classées selon le nombre de recettes du site qui les emploient. À égalité, la plus courante passe devant.",
+    updated: "2026-10-19",
+    rankBy: "recettes",
+    items: [
+      {
+        product: "couscous-de-mil",
+        pourquoi:
+          "Au Sénégal, la farine de mil est roulée en petits grains puis cuite à la vapeur pour donner le thiéré. C'est la semoule la plus employée du site : quatre recettes, du thiéré mbuum au thiakry et au dégué. Il se cuit à la vapeur, jamais dans l'eau, de préférence en deux fois.",
+        recettes: ["thiakry", "thiere-mbuum", "ngalakh", "degue"],
+        articles: ["cuire-le-couscous-de-mil"],
+      },
+      {
+        product: "attieke-sec",
+        pourquoi:
+          "L'attiéké est une semoule de manioc fermenté au goût légèrement acidulé, emblématique de la cuisine ivoirienne. La version déshydratée se garde longtemps et se réhydrate en quelques minutes. Deux recettes du site l'emploient : le garba et le poisson braisé à l'attiéké.",
+        recettes: ["poisson-braise-attieke", "garba"],
+        articles: ["reussir-attieke-maison", "difference-gari-attieke-tapioca"],
+      },
+      {
+        product: "farine-de-mais-blanc",
+        pourquoi:
+          "Cuite à l'eau, la farine de maïs blanc donne une pâte ferme et lisse : le tô au Burkina Faso et au Mali, l'ugali au Kenya, le pap en Afrique du Sud. Deux recettes du site l'emploient, le tô sauce gombo et l'ugali au sukuma wiki. On la verse en pluie dans l'eau bouillante, puis on tourne vigoureusement à la spatule.",
+        recettes: ["to-sauce-gombo", "ugali-sukuma-wiki"],
+      },
+      {
+        product: "fonio",
+        pourquoi:
+          "Le fonio est une toute petite céréale cultivée depuis très longtemps en Afrique de l'Ouest, notamment au Mali, en Guinée, au Burkina Faso et au Sénégal. Ses grains très fins cuisent en quelques minutes, au goût léger entre noisette et semoule. Notre fonio aux légumes l'emploie, et il se prépare aussi en salade ou en version sucrée.",
+        recettes: ["fonio-aux-legumes"],
+        articles: ["quest-ce-que-le-fonio"],
+      },
+      {
+        product: "gari-jaune",
+        pourquoi:
+          "Le gari est obtenu en râpant du manioc, en le laissant fermenter, puis en le torréfiant en fines graines croquantes ; la version jaune doit sa couleur à l'huile de palme. Au Bénin, au Nigeria et au Ghana, on le travaille dans l'eau chaude pour faire l'eba. Notre waakye le sert en accompagnement.",
+        recettes: ["waakye"],
+        articles: ["difference-gari-attieke-tapioca"],
+      },
+      {
+        product: "farine-de-foufou",
+        pourquoi:
+          "Cette farine de manioc permet de préparer le foufou à la casserole, sans piler au mortier. Travaillée dans l'eau bouillante, elle donne une pâte lisse et élastique, qui accompagne les sauces et soupes d'Afrique centrale et de l'Ouest. Notre recette de foufou et light soup l'emploie.",
+        recettes: ["fufu-light-soup"],
+        articles: ["foufou-sans-grumeaux"],
+      },
+      {
+        product: "farine-de-plantain-pour-fufu",
+        pourquoi:
+          "Au Ghana, le foufou se pile traditionnellement au mortier à partir de plantain et de manioc cuits. Cette farine de plantain séché permet d'obtenir une pâte lisse directement à la casserole. Elle sert dans notre foufou et light soup, avec la farine de manioc.",
+        recettes: ["fufu-light-soup"],
+      },
+      {
+        product: "farine-de-teff",
+        pourquoi:
+          "Le teff est une céréale minuscule cultivée depuis très longtemps sur les hauts plateaux d'Éthiopie et d'Érythrée, au goût doux et légèrement noisetté. Fermentée deux à trois jours, sa farine donne l'injera, la grande galette alvéolée de notre recette. On l'utilise aussi en pâtisserie.",
+        recettes: ["injera"],
+      },
+      {
+        product: "farine-d-igname",
+        pourquoi:
+          "L'elubo est une farine obtenue à partir d'igname épluchée, séchée puis moulue. Travaillée dans l'eau bouillante, elle donne l'amala, une pâte souple à la couleur brune caractéristique. Au sud-ouest du Nigeria, l'amala accompagne l'ewedu, le gbegiri et les sauces au poisson ou à la viande.",
+        recettes: [],
+      },
+      {
+        product: "tapioca-de-manioc",
+        pourquoi:
+          "Le tapioca granulé est tiré de l'amidon de manioc, humidifié puis roulé en petits grains qui gonflent et deviennent translucides dans l'eau. En Afrique de l'Ouest et centrale, on le prépare en bouillie sucrée, ou trempé dans l'eau froide avec du lait et du sucre. Il entre aussi dans des desserts à la noix de coco.",
+        recettes: [],
+        articles: ["difference-gari-attieke-tapioca"],
+      },
+    ],
+    guide: [
+      ["Semoule ou farine : le couscous de mil, l'attiéké et le fonio se cuisent à la vapeur ou se réhydratent ; les farines de maïs, de manioc ou de plantain se travaillent dans l'eau bouillante pour faire une pâte."],
+      [
+        "Pour une pâte sans grumeaux, versez la farine en pluie en remuant vigoureusement. Voir ",
+        { href: "/conseils/foufou-sans-grumeaux", label: "le foufou sans grumeaux" },
+        ".",
+      ],
+      [
+        "Pour la vapeur, un couscoussier aide mais n'est pas indispensable. Voir ",
+        { href: "/conseils/couscoussier-fonio-attieke", label: "notre conseil" },
+        ".",
+      ],
+    ],
+    faq: [
+      {
+        question: "Quelle différence entre gari, attiéké et tapioca ?",
+        reponse: [
+          "Les trois sont tirés du manioc. Le gari est une semoule fermentée puis grillée, l'attiéké une semoule fermentée cuite à la vapeur, et le tapioca l'amidon extrait de la racine, au goût neutre. Voir ",
+          { href: "/conseils/difference-gari-attieke-tapioca", label: "notre conseil" },
+          ".",
+        ],
+      },
+      {
+        question: "Qu'est-ce que le fonio ?",
+        reponse: [
+          "Une céréale ancienne d'Afrique de l'Ouest aux grains minuscules. Il se cuit très vite, à l'eau ou à la vapeur, puis s'égrène à la fourchette comme une semoule. Voir ",
+          { href: "/conseils/quest-ce-que-le-fonio", label: "qu'est-ce que le fonio" },
+          ".",
+        ],
+      },
+      {
+        question: "Comment cuire le couscous de mil ?",
+        reponse: [
+          "À la vapeur, jamais dans l'eau : on l'humidifie, on le cuit une première fois, on l'égrène, puis on le repasse à la vapeur jusqu'à ce qu'il soit tendre. Voir ",
+          { href: "/conseils/cuire-le-couscous-de-mil", label: "cuire le couscous de mil" },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
     slug: "thes-et-cafes-africains",
     tab: "Thés et cafés",
     title: "Top 10 des thés et cafés d'Afrique",
