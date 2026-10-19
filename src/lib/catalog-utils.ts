@@ -61,3 +61,7 @@ export const NORTH_AFRICAN_SLUGS = new Set([
   "harissa-artisanale",
   "tajine-en-argile",
 ]);
+
+/** Livres : l'image est une illustration Keur Cook, pas la couverture de l'édition vendue (comme sur Keurbook). */
+export const BOOK_ILLUSTRATION_NOTE = "Illustration Keur Cook d'après la description du livre. L'édition vendue sur Amazon a sa propre couverture.";
+export const isBook = (p: { category: { slug: string } }) => p.category.slug === "livres";

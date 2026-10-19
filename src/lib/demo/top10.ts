@@ -459,6 +459,113 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "mixeurs-sauces-pate-d-arachide",
+    tab: "Mixeurs",
+    title: "Top 10 des mixeurs pour sauces et pâtes d'arachide",
+    seoTitle: "Top 10 des mixeurs pour sauces africaines",
+    description:
+      "Blenders de 2000 à 800 W, robot, mixeur plongeant et hachoir : notre top 10 des mixeurs pour les sauces, la pâte d'arachide et les jus de la cuisine africaine.",
+    intro:
+      "Notre sélection de dix mixeurs parmi ceux de la boutique. Ils servent tous dans les mêmes seize recettes du site qui demandent de mixer : ils sont donc classés par puissance, du plus puissant au moins puissant. Les plus puissants viennent mieux à bout des graines et des arachides.",
+    updated: "2026-10-19",
+    rankBy: "puissance",
+    items: [
+      {
+        product: "blender-amzchef-2000w",
+        mesure: 2000,
+        pourquoi:
+          "Le plus puissant de notre sélection avec le Springlane : 2000 W et jusqu'à 25 000 tours par minute. Ses huit lames en inox entraînent les ingrédients vers le bas, utile pour les bases ail-oignon-piment, les graines d'egusi ou les haricots trempés des akara. Le bol contient 2 litres.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-springlane-hanno-2000w",
+        mesure: 2000,
+        pourquoi:
+          "Même puissance, 2000 W, mais avec un atout pour la pâte d'arachide : un petit bol en inox de 750 ml prévu pour les purées de noix. Le grand bol mixe les sauces et les soupes, le petit broie les arachides grillées. Il pile aussi la glace pour les jus.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-magimix-power-4",
+        mesure: 1300,
+        pourquoi:
+          "Ce blender Magimix de 1300 W a un bol en verre thermorésistant de 1,8 litre, qui accepte les préparations chaudes comme froides. Il mixe, hache et pile la glace, avec cinq programmes automatiques. Pratique pour mixer la base d'une sauce encore tiède.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-moulinex-perfectmix",
+        mesure: 1200,
+        pourquoi:
+          "Le Moulinex PerfectMix Plus, 1200 W, a un bol en verre de 2 litres et des lames Powelix pour un mixage rapide. Son programme de nettoyage automatique évite de démonter les lames après une sauce au piment. Une valeur sûre pour les mixages du quotidien.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-ninja-2-en-1",
+        mesure: 1200,
+        pourquoi:
+          "Ce Ninja de 1200 W associe un pichet de 2,1 litres et un gobelet de 700 ml. Ses programmes « hacher » et « réduire en purée » conviennent aux oignons et au piment comme aux bases de sauce. Le gobelet sert pour un jus de gingembre individuel.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-philips-5000",
+        mesure: 1000,
+        pourquoi:
+          "Simple et peu encombrant, ce Philips de 1000 W fait circuler les ingrédients grâce à son bol nervuré pour une texture lisse. Le bol contient 2 litres, dont 1,5 litre utile. Il suffit pour les sauces et les jus d'une famille.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-moulinex-blendforce",
+        mesure: 800,
+        pourquoi:
+          "Ce Moulinex Blendforce de 800 W mixe jusqu'à trois minutes en continu, et son moteur est refroidi par air. Le bol en verre de 1,75 litre supporte jusqu'à 80 °C. Un bon premier blender pour les bases tomate-oignon et les soupes.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "robot-moulinex-easy-force",
+        mesure: 800,
+        pourquoi:
+          "Plus qu'un blender : ce robot Moulinex de 800 W hache, émince, râpe, pétrit et mixe grâce à six accessoires. Il prépare en quelques secondes les oignons du yassa ou les légumes d'une sauce. Son bol de 3 litres range la plupart des accessoires.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mixeur-plongeant-moulinex-daily-chef",
+        mesure: 600,
+        pourquoi:
+          "Le mixeur plongeant se glisse directement dans la marmite : pratique pour lisser une soupe d'arachide ou une light soup sans transvaser. Ce Moulinex de 600 W a quatre lames en inox et un pied anti-éclaboussure. Il est livré avec un gobelet de 800 ml.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "hachoir-moulinex-choppeo",
+        mesure: 500,
+        pourquoi:
+          "Le moins puissant de notre sélection, mais le plus simple pour hacher : 500 W et un bol en verre d'un litre utile. Par impulsions, il garde des morceaux d'oignon ou de piment ; plus longtemps, il donne une purée d'ail et de gingembre. Il se range facilement.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+    ],
+    guide: [
+      ["Pour la pâte d'arachide et les graines, visez un blender puissant (1200 W et plus) ou un petit bol dédié aux purées de noix."],
+      ["Pour les sauces et les soupes, un bol en verre accepte mieux les préparations tièdes ; un mixeur plongeant évite de transvaser."],
+      ["Pour l'ail, l'oignon et le piment en petite quantité, un hachoir suffit et se nettoie plus vite."],
+    ],
+    faq: [
+      {
+        question: "Peut-on faire sa pâte d'arachide au blender ?",
+        reponse: ["Oui, avec un blender puissant ou un petit bol pour purées de noix : mixez les arachides grillées par impulsions en raclant les bords, jusqu'à obtenir une pâte lisse."],
+      },
+      {
+        question: "Blender ou mixeur plongeant pour les sauces ?",
+        reponse: ["Le blender donne une texture plus fine et convient aux bases crues ; le mixeur plongeant mixe directement dans la marmite, pratique pour les soupes."],
+      },
+      {
+        question: "Combien de temps se garde la pâte d'arachide ?",
+        reponse: [
+          "Bien fermée et entamée avec une cuillère propre, plusieurs semaines, souvent davantage. Voir ",
+          { href: "/conseils/combien-de-temps-se-garde-la-pate-d-arachide", label: "notre conseil" },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
     slug: "epices-africaines",
     tab: "Épices",
     title: "Top 10 des épices et condiments africains",
@@ -689,6 +796,112 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "livres-de-recettes-africaines",
+    tab: "Livres",
+    title: "Top 10 des livres de recettes africaines",
+    description:
+      "Cheikh Niang, Youssou N'Dour, cuisines du Cameroun, du Sénégal et des deux Congo : notre top 10 des livres de recettes africaines en français.",
+    intro:
+      "Notre sélection de dix livres de recettes africaines en français, parmi ceux de la boutique. Ils sont classés par nombre de pages, du plus complet au plus court. Les images sont des illustrations Keur Cook : chaque édition vendue sur Amazon a sa propre couverture.",
+    updated: "2026-10-19",
+    rankBy: "pages",
+    items: [
+      {
+        product: "livre-200-recettes-camerounaises",
+        mesure: 218,
+        pourquoi:
+          "Le plus épais de notre sélection : 218 pages et 200 recettes camerounaises, des plats traditionnels des différentes régions du pays aux versions revisitées. Chaque recette est expliquée étape par étape, avec des astuces de préparation. C'est un livre relié, paru en 2026.",
+        recettes: [],
+      },
+      {
+        product: "livre-la-cuisine-congolaise",
+        mesure: 216,
+        pourquoi:
+          "Un ouvrage de référence de 216 pages, publié chez L'Harmattan : Fidèle Mialoundama et Isabelle Goma Mouyokani y recensent les recettes les plus courantes de toutes les régions du Congo. Le livre se veut une mémoire des recettes et des aliments traditionnels. Une bonne base pour qui s'intéresse au pays.",
+        recettes: [],
+      },
+      {
+        product: "livre-senegal-cuisine-intime-et-gourmande",
+        mesure: 192,
+        pourquoi:
+          "Le chanteur Youssou N'Dour raconte la cuisine de son enfance à Dakar : le marché, la préparation du repas entre femmes, la famille autour du grand plat commun. Les photographies d'Isabelle Rozenbaum accompagnent ses recettes. Un beau livre de 192 pages, publié aux éditions de La Martinière.",
+        recettes: [],
+      },
+      {
+        product: "livre-dans-ma-cuisine-congolaise",
+        mesure: 178,
+        pourquoi:
+          "Gisèle Mbeku Andjelani partage plus de 70 recettes de la RD Congo, des rives du Kivu à Kinshasa : sombe, madesu, liboke, sambaza, ndazi, mikate. Chacune est accompagnée d'une petite histoire. Notre recette de liboké de poisson permet de goûter l'un de ces plats.",
+        recettes: ["liboke-de-poisson"],
+      },
+      {
+        product: "livre-plats-express-saveurs-d-afrique",
+        mesure: 160,
+        pourquoi:
+          "Cheikh Niang, le cuisinier @niangcook, propose 60 recettes inédites prêtes en 30 minutes maximum, entre goûts d'Afrique et saveurs du monde. Riz à la tomate express, pancakes de plantain ou afro burger : des idées rapides pour se lancer. Publié chez Solar, avec les photos de Laurent Moynat.",
+        recettes: [],
+      },
+      {
+        product: "livre-le-meilleur-de-la-cuisine-congolaise",
+        mesure: 155,
+        pourquoi:
+          "Lukusa Jessica présente les plats emblématiques de la cuisine congolaise, de l'accompagnement à la pâtisserie. Chaque recette est accompagnée d'une histoire, d'anecdotes et de conseils de technique, pour les débutants comme pour les cuisiniers aguerris. Un broché de 155 pages, paru en 2025.",
+        recettes: [],
+      },
+      {
+        product: "livre-cuisine-d-afrique-et-d-ailleurs",
+        mesure: 144,
+        pourquoi:
+          "Le premier livre de @niangcook reprend les classiques de ses vidéos : des recettes pas à pas, simples et accessibles. Il mêle les saveurs d'Afrique de l'Ouest et d'Afrique centrale à des influences du monde entier. Un livre relié de 144 pages, publié chez Solar.",
+        recettes: [],
+      },
+      {
+        product: "livre-grain-d-afrique",
+        mesure: 128,
+        pourquoi:
+          "Aïssatou Mbaye propose plus de 60 recettes du quotidien relevées d'une touche africaine : pancakes à la farine de mil, houmous de niébé et cajou, chips de plantain, madeleines au manioc. Une bonne porte d'entrée pour glisser des saveurs africaines dans les plats de tous les jours. Publié aux éditions Marie Claire en 2026.",
+        recettes: [],
+      },
+      {
+        product: "livre-cuisine-du-senegal-81-recettes",
+        mesure: 109,
+        pourquoi:
+          "Kaya N'Dor réunit 81 recettes traditionnelles du Sénégal, avec des explications pas à pas, des astuces de réussite et des substitutions d'ingrédients. Le livre vise les grands classiques, comme le thiéboudienne, le yassa ou le mafé. Vous trouverez aussi ces trois plats sur notre site, pour comparer les versions.",
+        recettes: ["thieboudienne", "poulet-yassa", "mafe"],
+      },
+      {
+        product: "livre-afro-vegan",
+        mesure: 80,
+        pourquoi:
+          "Le plus court de notre sélection : 80 pages et 50 recettes afro véganes, salées et sucrées, entrées, plats, desserts et boissons. Chaque recette est expliquée pas à pas et accompagnée d'une photo en couleur. Pour cuisiner africain sans produits d'origine animale.",
+        recettes: [],
+      },
+    ],
+    guide: [
+      ["Un pays ou toute l'Afrique : les livres sur le Cameroun, le Sénégal ou les deux Congo vont plus loin dans une cuisine ; les livres de Cheikh Niang ou d'Aïssatou Mbaye mêlent l'Afrique et d'autres saveurs."],
+      ["Débutant : préférez les recettes expliquées pas à pas et les plats express ; curieux d'histoire : les livres qui racontent les plats et les familles."],
+      ["Avant de commander, regardez sur la fiche Amazon le format (broché ou relié), le nombre de pages et l'éditeur."],
+    ],
+    faq: [
+      {
+        question: "Ces livres sont-ils en français ?",
+        reponse: ["Oui, les dix livres de cette sélection sont écrits en français."],
+      },
+      {
+        question: "Pourquoi les images ne sont-elles pas les couvertures ?",
+        reponse: ["Ce sont des illustrations Keur Cook faites d'après la description de chaque livre. L'édition vendue sur Amazon a sa propre couverture, visible sur la fiche Amazon."],
+      },
+      {
+        question: "Par quelle recette commencer ?",
+        reponse: [
+          "Par un plat mijoté à base d'ingrédients courants, comme le poulet yassa ou le mafé. Voir ",
+          { href: "/conseils/par-quelle-recette-commencer", label: "notre conseil" },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
     slug: "thes-et-cafes-africains",
     tab: "Thés et cafés",
     title: "Top 10 des thés et cafés d'Afrique",
@@ -800,6 +1013,110 @@ export const demoTop10: Top10[] = [
           { href: "/conseils/torrefier-cafe-vert-maison", label: "comment torréfier du café vert" },
           ".",
         ],
+      },
+    ],
+  },
+  {
+    slug: "service-et-the",
+    tab: "Service et thé",
+    title: "Top 10 des ustensiles pour le service et le thé",
+    seoTitle: "Top 10 du service et du thé à l'africaine",
+    description:
+      "Théière et verres pour l'ataya, bouilloire émaillée, saladiers et bols en bois, plateaux : notre top 10 pour servir le repas et le thé à l'africaine.",
+    intro:
+      "Notre sélection de dix objets pour servir le repas et le thé, parmi ceux de la boutique. Ils sont classés selon le nombre de recettes et d'articles Conseils du site qui en parlent. À égalité, le plus courant passe devant.",
+    updated: "2026-10-19",
+    rankBy: "recettes-et-articles",
+    items: [
+      {
+        product: "saladier-en-bois",
+        pourquoi:
+          "Dans beaucoup de cuisines africaines, on partage le repas autour d'un plat commun : ce grand saladier en acacia de 26 cm s'y prête bien. Quatre recettes du site commencent dans un saladier, de la pâte de l'injera à celle des puff-puff. Il met aussi en valeur le thiakry ou l'attiéké.",
+        recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
+      },
+      {
+        product: "saladiers-acacia-lot-de-2",
+        pourquoi:
+          "Deux grands bols individuels en acacia de 20 cm et 760 ml : l'assiette de chacun quand on ne mange pas au plat commun. Ils conviennent au riz, à l'attiéké, aux salades et aux plats en sauce tièdes. On les lave rapidement à la main.",
+        recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
+      },
+      {
+        product: "theiere-a-ataya",
+        pourquoi:
+          "La théière de l'ataya : en inox, de 1,2 litre, avec une forme ventrue et un long bec qui permet de verser le thé de haut pour former la mousse. Elle se pose directement sur le feu. Notre article explique comment préparer l'ataya en trois tournées.",
+        recettes: [],
+        articles: ["comment-preparer-l-ataya"],
+      },
+      {
+        product: "verres-a-the",
+        pourquoi:
+          "Au Sénégal, l'ataya se sert dans de petits verres facettés. On fait passer le thé d'un verre à l'autre pour former la mousse. Ce lot de six verres de 210 ml accompagne la théière pour les trois services.",
+        recettes: [],
+        articles: ["comment-preparer-l-ataya"],
+      },
+      {
+        product: "verres-a-the-et-soucoupes-pasabahce",
+        pourquoi:
+          "Six petits verres à thé d'environ 155 ml, au ventre arrondi, et leurs six soucoupes : de quoi servir le thé à six sans marquer la table. La soucoupe permet aussi de tenir le verre chaud. Une autre option pour l'ataya, plus classique.",
+        recettes: [],
+        articles: ["comment-preparer-l-ataya"],
+      },
+      {
+        product: "bouilloire-emaillee",
+        pourquoi:
+          "Les bouilloires émaillées colorées font partie du paysage de nombreuses cuisines africaines. Posée directement sur le feu, celle-ci chauffe l'eau du thé et des infusions, comme le kinkeliba. Elle contient 2,4 litres.",
+        recettes: [],
+      },
+      {
+        product: "plateau-acacia-amazon-basics",
+        pourquoi:
+          "Un plateau en acacia de 43 × 30 cm à poignées intégrées, pour porter le thé, les beignets ou les petits plats à table. Chaque plateau a son propre motif de veines de bois. On l'essuie avec un chiffon humide, sans le laisser tremper.",
+        recettes: [],
+      },
+      {
+        product: "plateau-rond-bambou-40-cm",
+        pourquoi:
+          "Ce grand plateau rond en bambou de 40 cm accueille la théière et tous les verres de l'ataya, ou une assiette de beignets. Ses deux poignées intégrées assurent une prise stable. Il s'essuie avec un chiffon humide.",
+        recettes: [],
+      },
+      {
+        product: "bols-manguier-lot-de-3",
+        pourquoi:
+          "Trois bols en bois de manguier sculptés à la main, pour servir les sauces au piment, les arachides grillées ou les desserts. Leurs tailles différentes permettent de présenter plusieurs accompagnements à la fois. On les lave rapidement à la main.",
+        recettes: [],
+      },
+      {
+        product: "bols-noix-de-coco-lot-de-2",
+        pourquoi:
+          "Deux bols taillés à la main dans des coquilles de noix de coco, polis à l'huile de coco, avec leurs cuillères. Ils conviennent aux fruits, aux salades de fruits et aux desserts comme le thiakry. Ils se lavent à l'eau tiède, sans lave-vaisselle ni micro-ondes.",
+        recettes: [],
+      },
+    ],
+    guide: [
+      [
+        "Pour l'ataya, il faut une théière en métal qui va sur le feu et de petits verres pour faire mousser le thé. Voir ",
+        { href: "/conseils/comment-preparer-l-ataya", label: "comment préparer l'ataya" },
+        ".",
+      ],
+      ["Pour le plat commun, un grand saladier ; pour servir chacun, des bols individuels en bois."],
+      ["Le bois et la noix de coco se lavent à la main et se sèchent bien ; évitez les liquides très chauds."],
+    ],
+    faq: [
+      {
+        question: "Comment se prépare l'ataya ?",
+        reponse: [
+          "On fait bouillir du thé vert avec du sucre dans une théière en métal, on le fait mousser en le versant de haut d'un verre à l'autre, puis on le sert en trois tournées. Voir ",
+          { href: "/conseils/comment-preparer-l-ataya", label: "notre article" },
+          ".",
+        ],
+      },
+      {
+        question: "Peut-on mettre ces bols en bois au lave-vaisselle ?",
+        reponse: ["Non : le bois, le bambou et la noix de coco se lavent rapidement à la main, puis se sèchent bien."],
+      },
+      {
+        question: "Quelle bouilloire pour le kinkeliba ?",
+        reponse: ["Une bouilloire qui va sur le feu, comme la bouilloire émaillée de cette sélection : on y fait frémir les feuilles quelques minutes avant de filtrer."],
       },
     ],
   },

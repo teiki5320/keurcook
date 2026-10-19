@@ -21,6 +21,7 @@ export const demoCategories: Category[] = [
   { id: id("1", 8), slug: "snacks", name: "Snacks & fruits secs", position: 6, description: "Chips de plantain, dattes, souchet, biltong, bitter kola : de quoi grignoter à l'africaine." },
   { id: id("1", 6), slug: "cafes-thes", name: "Cafés & thés", position: 7, description: "Cafés d'Éthiopie, du Kenya ou du Rwanda, rooibos, kinkeliba et thé vert pour l'ataya : les boissons chaudes du continent." },
   { id: id("1", 7), slug: "ustensiles", name: "Ustensiles", position: 8, description: "Mortiers, couscoussiers, marmites, théières : le matériel pour cuisiner et servir les plats africains." },
+  { id: id("1", 9), slug: "livres", name: "Livres de cuisine", position: 9, description: "Livres de recettes africaines en français, pour cuisiner les plats du Sénégal, du Cameroun, des deux Congo et d'ailleurs." },
 ];
 
 const cat = (slug: string) => demoCategories.find((c) => c.slug === slug)!.id;

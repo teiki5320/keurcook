@@ -6,6 +6,7 @@ import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
 import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
 import { AMAZON_PRICES_CHECKED_ON } from "@/lib/amazon";
 import { ProductGallery } from "@/components/product/ProductGallery";
+import { BOOK_ILLUSTRATION_NOTE, isBook } from "@/lib/catalog-utils";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
@@ -43,8 +44,8 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) notFound();
-  // Les ustensiles ne sont pas des denrées : pas d'allergènes ni de conservation à afficher.
-  const isFood = product.category.slug !== NON_FOOD_CATEGORY;
+  // Les ustensiles et les livres ne sont pas des denrées : pas d'allergènes ni de conservation à afficher.
+  const isFood = product.category.slug !== NON_FOOD_CATEGORY && !isBook(product);
   const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
   const conseils = getConseilsForProduct(product.slug);
 
@@ -69,7 +70,10 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
       </nav>
 
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-14">
-        <ProductGallery images={product.images} name={product.name} />
+        <div>
+          <ProductGallery images={product.images} name={product.name} />
+          {isBook(product) && <p className="mt-3 text-center text-xs text-muted">{BOOK_ILLUSTRATION_NOTE}</p>}
+        </div>
 
         <div>
           <p className="text-sm font-semibold tracking-wide text-terracotta uppercase">{product.category.name}</p>
@@ -123,7 +127,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
             )}
             {product.amazonAsin && (
               <p className="col-span-2 text-xs text-muted">
-                {isFood ? "Composition exacte, allergènes et vendeur" : "Dimensions, matériaux et vendeur"} : voir la fiche Amazon avant l&apos;achat.
+                {isFood ? "Composition exacte, allergènes et vendeur" : isBook(product) ? "Édition, couverture et vendeur" : "Dimensions, matériaux et vendeur"} : voir la fiche Amazon avant l&apos;achat.
               </p>
             )}
           </dl>
