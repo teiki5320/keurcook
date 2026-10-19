@@ -18,7 +18,7 @@ const links = (value: RichText) => value.flatMap((p) => (typeof p === "string" ?
 const conseilFile = (slug: string) => join(process.cwd(), "content", "conseils", `${slug}.md`);
 
 /** Texte commun des onglets classés selon la note des acheteurs : il nomme la note et précise qu'elle n'est pas affichée. */
-const CRITERE = /^Notre sélection de .+, classée?s selon la note moyenne des acheteurs sur Amazon\.fr, relevée le \d{1,2} \S+ \d{4} ; à égalité, (le|la) plus évaluée? passe devant\. Seuls les produits disponibles avec au moins 10 évaluations sont retenus\. Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces produits\. /;
+const CRITERE = /^Notre sélection de .+, classée?s selon la note moyenne des acheteurs sur Amazon\.fr, relevée le \d{1,2} \S+ \d{4} ; à égalité, (le|la) plus évaluée? passe devant\. (Seuls les produits disponibles avec au moins 10 évaluations sont retenus\.|Certains \S+ n'ont encore que quelques évaluations, parfois une seule : leur note est donc moins sûre, et ceux qui n'ont aucune note sont placés à la fin\.) Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces \S+\. /;
 
 function texts(t: Top10): string[] {
   return [
@@ -76,6 +76,9 @@ describe("Top 10", () => {
           assert.ok(t.intro.endsWith(`N° 1 : ${first.name}.`), "le n° 1 doit être nommé à la fin de l'introduction");
           return;
         }
+        // Les autres règles : le n° 1 est nommé dans l'introduction.
+        const premier = demoProducts.find((p) => p.slug === t.items[0].product)!;
+        assert.ok(t.intro.includes(`N° 1 : ${premier.name}`), "le n° 1 doit être nommé dans l'introduction");
         const parMesure = ["taille", "contenance", "pages", "puissance"].includes(t.rankBy);
         if (parMesure) assert.ok(t.items.every((it) => typeof it.mesure === "number"), "mesure manquante");
         const score = (it: Top10["items"][number]) =>

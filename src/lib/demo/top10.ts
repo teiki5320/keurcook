@@ -7,10 +7,17 @@ import { demoProducts } from "./catalog";
  */
 const RELEVE = "2026-10-19";
 
-/** Introduction des onglets classés selon la note des acheteurs ; le n° 1 est nommé à la suite. */
-function introNote(quoi: string, feminin: boolean): string {
+/**
+ * Introduction des onglets classés selon la note des acheteurs ; le n° 1 est nommé à la suite.
+ * `peuDAvis` (livres) : tous les produits sont gardés, même avec peu d'évaluations, et ceux sans note vont à la fin.
+ */
+function introNote(quoi: string, feminin: boolean, peuDAvis?: { qui: string; suite: string }): string {
   const date = new Date(`${RELEVE}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" });
-  return `Notre sélection de ${quoi}, parmi ${feminin ? "celles" : "ceux"} de la boutique, ${feminin ? "classées" : "classés"} selon la note moyenne des acheteurs sur Amazon.fr, relevée le ${date} ; à égalité, ${feminin ? "la plus évaluée" : "le plus évalué"} passe devant. Seuls les produits disponibles avec au moins 10 évaluations sont retenus. Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces produits.`;
+  const debut = `Notre sélection de ${quoi}, parmi ${feminin ? "celles" : "ceux"} de la boutique, ${feminin ? "classées" : "classés"} selon la note moyenne des acheteurs sur Amazon.fr, relevée le ${date} ; à égalité, ${feminin ? "la plus évaluée" : "le plus évalué"} passe devant.`;
+  if (peuDAvis) {
+    return `${debut} Certains ${peuDAvis.qui} n'ont encore que quelques évaluations, parfois une seule : leur note est donc moins sûre, et ceux qui n'ont aucune note sont placés à la fin. Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces ${peuDAvis.qui}. ${peuDAvis.suite}`;
+  }
+  return `${debut} Seuls les produits disponibles avec au moins 10 évaluations sont retenus. Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces produits.`;
 }
 
 /**
@@ -25,7 +32,7 @@ const tops: Top10[] = [
     title: "Top 10 des ustensiles indispensables de la cuisine africaine",
     seoTitle: "Top 10 des ustensiles de la cuisine africaine",
     description:
-      "Faitout, marmite à riz, mortiers, araignée, couscoussier : notre top 10 des ustensiles, classés selon le nombre de recettes du site où ils servent.",
+      "Araignée, faitout, spatules, mortiers, couscoussier : notre top 10 des ustensiles, classés selon l'avis des acheteurs sur Amazon.fr.",
     intro: introNote("dix ustensiles de cuisine", false),
     updated: "2026-10-19",
     rankBy: "note-acheteurs",
@@ -135,7 +142,7 @@ const tops: Top10[] = [
     title: "Top 10 des ingrédients pour débuter la cuisine africaine",
     seoTitle: "Top 10 des ingrédients de la cuisine africaine",
     description:
-      "Pâte d'arachide, poivre de Selim, huile de palme rouge, soumbala : notre top 10 des ingrédients, classés selon le nombre de recettes du site qui les emploient.",
+      "Farine de maïs blanc, pain de singe, poivre de Penja, feuilles de manioc, soumbala : notre top 10 des ingrédients, classés selon l'avis des acheteurs.",
     intro: introNote("dix ingrédients", false),
     updated: "2026-10-19",
     rankBy: "note-acheteurs",
@@ -552,7 +559,7 @@ const tops: Top10[] = [
     tab: "Épices",
     title: "Top 10 des épices et condiments africains",
     description:
-      "Poivre de Selim, poivre de Penja, soumbala, berbéré, yaji : notre top 10 des épices et condiments, classés selon le nombre de recettes du site.",
+      "Poivre voatsiperifery, vanille de Madagascar, maniguette, pili-pili, poivre de Penja : notre top 10 des épices, classées selon l'avis des acheteurs.",
     intro: introNote("dix épices", true),
     updated: "2026-10-19",
     rankBy: "note-acheteurs",
@@ -665,7 +672,7 @@ const tops: Top10[] = [
     description:
       "Couscous de mil, attiéké, farine de maïs blanc, fonio, gari, farine de teff : notre top 10, classé selon le nombre de recettes du site qui les emploient.",
     intro:
-      "Notre sélection de dix céréales, semoules et farines d'Afrique, parmi celles de la boutique. Elles sont classées selon le nombre de recettes du site qui les emploient. À égalité, la plus courante passe devant.",
+      "Notre sélection de dix céréales, semoules et farines d'Afrique, parmi celles de la boutique. Elles sont classées selon le nombre de recettes du site qui les emploient. À égalité, la plus courante passe devant. N° 1 : Couscous de mil (thiéré), en tête car quatre recettes du site l'emploient, du thiéré mbuum au thiakry, au ngalakh et au dégué.",
     updated: "2026-10-19",
     rankBy: "recettes",
     items: [
@@ -781,80 +788,73 @@ const tops: Top10[] = [
     tab: "Livres",
     title: "Top 10 des livres de recettes africaines",
     description:
-      "Cheikh Niang, Youssou N'Dour, cuisines du Cameroun, du Sénégal et des deux Congo : notre top 10 des livres de recettes africaines en français.",
-    intro:
-      "Notre sélection de dix livres de recettes africaines en français, parmi ceux de la boutique. Ils sont classés par nombre de pages, du plus complet au plus court. Les images sont des illustrations Keur Cook : chaque édition vendue sur Amazon a sa propre couverture.",
+      "Cuisines des deux Congo, du Sénégal et du Cameroun, Youssou N'Dour, Cheikh Niang : notre top 10 des livres de recettes africaines, selon l'avis des lecteurs.",
+    intro: introNote("dix livres de recettes africaines en français", false, {
+      qui: "livres",
+      suite: "Les images sont des illustrations Keur Cook : chaque édition vendue sur Amazon a sa propre couverture.",
+    }),
     updated: "2026-10-19",
-    rankBy: "pages",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
       {
-        product: "livre-200-recettes-camerounaises",
-        mesure: 218,
-        pourquoi:
-          "Le plus épais de notre sélection : 218 pages et 200 recettes camerounaises, des plats traditionnels des différentes régions du pays aux versions revisitées. Chaque recette est expliquée étape par étape, avec des astuces de préparation. C'est un livre relié, paru en 2026.",
-        recettes: [],
-      },
-      {
-        product: "livre-la-cuisine-congolaise",
-        mesure: 216,
-        pourquoi:
-          "Un ouvrage de référence de 216 pages, publié chez L'Harmattan : Fidèle Mialoundama et Isabelle Goma Mouyokani y recensent les recettes les plus courantes de toutes les régions du Congo. Le livre se veut une mémoire des recettes et des aliments traditionnels. Une bonne base pour qui s'intéresse au pays.",
-        recettes: [],
-      },
-      {
-        product: "livre-senegal-cuisine-intime-et-gourmande",
-        mesure: 192,
-        pourquoi:
-          "Le chanteur Youssou N'Dour raconte la cuisine de son enfance à Dakar : le marché, la préparation du repas entre femmes, la famille autour du grand plat commun. Les photographies d'Isabelle Rozenbaum accompagnent ses recettes. Un beau livre de 192 pages, publié aux éditions de La Martinière.",
-        recettes: [],
-      },
-      {
         product: "livre-dans-ma-cuisine-congolaise",
-        mesure: 178,
         pourquoi:
-          "Gisèle Mbeku Andjelani partage plus de 70 recettes de la RD Congo, des rives du Kivu à Kinshasa : sombe, madesu, liboke, sambaza, ndazi, mikate. Chacune est accompagnée d'une petite histoire. Notre recette de liboké de poisson permet de goûter l'un de ces plats.",
+          "Gisèle Mbeku Andjelani partage plus de 70 recettes de la RD Congo, des rives du Kivu à Kinshasa : sombe, madesu, liboke, sambaza, ndazi, mikate. Chacune est accompagnée d'une petite histoire, sur 178 pages. Notre recette de liboké de poisson permet de goûter l'un de ces plats.",
         recettes: ["liboke-de-poisson"],
       },
       {
-        product: "livre-plats-express-saveurs-d-afrique",
-        mesure: 160,
+        product: "livre-afro-vegan",
         pourquoi:
-          "Cheikh Niang, le cuisinier @niangcook, propose 60 recettes inédites prêtes en 30 minutes maximum, entre goûts d'Afrique et saveurs du monde. Riz à la tomate express, pancakes de plantain ou afro burger : des idées rapides pour se lancer. Publié chez Solar, avec les photos de Laurent Moynat.",
+          "Le plus court de notre sélection : 80 pages et 50 recettes afro véganes, salées et sucrées, entrées, plats, desserts et boissons. Chaque recette est expliquée pas à pas et accompagnée d'une photo en couleur. Pour cuisiner africain sans produits d'origine animale.",
         recettes: [],
       },
       {
-        product: "livre-le-meilleur-de-la-cuisine-congolaise",
-        mesure: 155,
+        product: "livre-cuisine-du-senegal-81-recettes",
         pourquoi:
-          "Lukusa Jessica présente les plats emblématiques de la cuisine congolaise, de l'accompagnement à la pâtisserie. Chaque recette est accompagnée d'une histoire, d'anecdotes et de conseils de technique, pour les débutants comme pour les cuisiniers aguerris. Un broché de 155 pages, paru en 2025.",
-        recettes: [],
+          "Kaya N'Dor réunit, en 109 pages, 81 recettes traditionnelles du Sénégal, avec des explications pas à pas, des astuces de réussite et des substitutions d'ingrédients. Le livre vise les grands classiques, comme le thiéboudienne, le yassa ou le mafé. Vous trouverez aussi ces trois plats sur notre site, pour comparer les versions.",
+        recettes: ["thieboudienne", "poulet-yassa", "mafe"],
       },
       {
         product: "livre-cuisine-d-afrique-et-d-ailleurs",
-        mesure: 144,
         pourquoi:
           "Le premier livre de @niangcook reprend les classiques de ses vidéos : des recettes pas à pas, simples et accessibles. Il mêle les saveurs d'Afrique de l'Ouest et d'Afrique centrale à des influences du monde entier. Un livre relié de 144 pages, publié chez Solar.",
         recettes: [],
       },
       {
         product: "livre-grain-d-afrique",
-        mesure: 128,
         pourquoi:
-          "Aïssatou Mbaye propose plus de 60 recettes du quotidien relevées d'une touche africaine : pancakes à la farine de mil, houmous de niébé et cajou, chips de plantain, madeleines au manioc. Une bonne porte d'entrée pour glisser des saveurs africaines dans les plats de tous les jours. Publié aux éditions Marie Claire en 2026.",
+          "Aïssatou Mbaye propose plus de 60 recettes du quotidien relevées d'une touche africaine : pancakes à la farine de mil, houmous de niébé et cajou, chips de plantain, madeleines au manioc. Une bonne porte d'entrée pour glisser des saveurs africaines dans les plats de tous les jours. Un broché de 128 pages, publié aux éditions Marie Claire en 2026.",
         recettes: [],
       },
       {
-        product: "livre-cuisine-du-senegal-81-recettes",
-        mesure: 109,
+        product: "livre-senegal-cuisine-intime-et-gourmande",
         pourquoi:
-          "Kaya N'Dor réunit 81 recettes traditionnelles du Sénégal, avec des explications pas à pas, des astuces de réussite et des substitutions d'ingrédients. Le livre vise les grands classiques, comme le thiéboudienne, le yassa ou le mafé. Vous trouverez aussi ces trois plats sur notre site, pour comparer les versions.",
-        recettes: ["thieboudienne", "poulet-yassa", "mafe"],
+          "Le chanteur Youssou N'Dour raconte la cuisine de son enfance à Dakar : le marché, la préparation du repas entre femmes, la famille autour du grand plat commun. Les photographies d'Isabelle Rozenbaum accompagnent ses recettes. Un beau livre de 192 pages, publié aux éditions de La Martinière.",
+        recettes: [],
       },
       {
-        product: "livre-afro-vegan",
-        mesure: 80,
+        product: "livre-plats-express-saveurs-d-afrique",
         pourquoi:
-          "Le plus court de notre sélection : 80 pages et 50 recettes afro véganes, salées et sucrées, entrées, plats, desserts et boissons. Chaque recette est expliquée pas à pas et accompagnée d'une photo en couleur. Pour cuisiner africain sans produits d'origine animale.",
+          "Cheikh Niang, le cuisinier @niangcook, propose 60 recettes inédites prêtes en 30 minutes maximum, entre goûts d'Afrique et saveurs du monde. Riz à la tomate express, pancakes de plantain ou afro burger : des idées rapides pour se lancer. Un livre de 160 pages publié chez Solar, avec les photos de Laurent Moynat.",
+        recettes: [],
+      },
+      {
+        product: "livre-le-meilleur-de-la-cuisine-congolaise",
+        pourquoi:
+          "Lukusa Jessica présente les plats emblématiques de la cuisine congolaise, de l'accompagnement à la pâtisserie. Chaque recette est accompagnée d'une histoire, d'anecdotes et de conseils de technique, pour les débutants comme pour les cuisiniers aguerris. Un broché de 155 pages, paru en 2025.",
+        recettes: [],
+      },
+      {
+        product: "livre-la-cuisine-congolaise",
+        pourquoi:
+          "Un ouvrage de référence de 216 pages, publié chez L'Harmattan : Fidèle Mialoundama et Isabelle Goma Mouyokani y recensent les recettes les plus courantes de toutes les régions du Congo. Le livre se veut une mémoire des recettes et des aliments traditionnels. Une bonne base pour qui s'intéresse au pays.",
+        recettes: [],
+      },
+      {
+        product: "livre-200-recettes-camerounaises",
+        pourquoi:
+          "Le plus épais de notre sélection : 218 pages et 200 recettes camerounaises, des plats traditionnels des différentes régions du pays aux versions revisitées. Chaque recette est expliquée étape par étape, avec des astuces de préparation. C'est un livre relié, paru en 2026.",
         recettes: [],
       },
     ],
@@ -887,7 +887,7 @@ const tops: Top10[] = [
     tab: "Thés et cafés",
     title: "Top 10 des thés et cafés d'Afrique",
     description:
-      "Cafés d'Éthiopie, du Kenya, du Rwanda et du Cameroun, kinkeliba, rooibos : notre top 10 des thés et cafés d'Afrique, avec nos recettes et conseils.",
+      "Rooibos, thés du Kenya, cafés de Tanzanie, du Rwanda, d'Éthiopie et du Burundi, kinkeliba : notre top 10 des thés et cafés d'Afrique.",
     intro: introNote("dix cafés, thés et infusions d'Afrique", false),
     updated: "2026-10-19",
     rankBy: "note-acheteurs",
