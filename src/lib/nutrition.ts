@@ -36,7 +36,7 @@ const CASSAVA_FLOUR: Per100 = [355, 1.2, 0.4, 87, 2, 1];
 // L'ordre compte : les noms précis (« pâte d'arachide », « huile de friture ») avant les génériques.
 const FOODS: Food[] = [
   // Sans apport : eau, infusions retirées, sel, levures, aromates en feuilles, emballages.
-  { match: /eau de fleur|extrait de vanille|levure|bicarbonate|^sel|^eau|feuilles? de (laurier|bananier|sorgho)|feuilles de menthe|botte de menthe|café vert|fleurs de bissap|bâton de cannelle|clous? de girofle|cardamome/i, per100: ZERO },
+  { match: /eau de fleur|extrait de vanille|levure|bicarbonate|^sel|^eau|feuilles? de (laurier|bananier|sorgho)|feuilles de menthe|botte de menthe|café vert|café d.Éthiopie|café du Kenya|^thé (vert|noir)|kinkeliba|rooibos|fleurs de bissap|bâton de cannelle|clous? de girofle|cardamome/i, per100: ZERO },
   // Matières grasses.
   { match: /huile de friture/i, per100: OIL, density: 0.92, spoon: 13, eaten: 0.15 },
   { match: /huile/i, per100: OIL, density: 0.92, spoon: 13 },
