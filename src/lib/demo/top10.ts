@@ -117,6 +117,122 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "ingredients-cuisine-africaine",
+    tab: "Ingrédients",
+    title: "Top 10 des ingrédients pour débuter la cuisine africaine",
+    seoTitle: "Top 10 des ingrédients de la cuisine africaine",
+    description:
+      "Pâte d'arachide, poivre de Selim, huile de palme rouge, soumbala : notre top 10 des ingrédients, classés selon le nombre de recettes du site qui les emploient.",
+    intro:
+      "Notre sélection de dix ingrédients de la boutique pour se lancer. Ils sont classés selon le nombre de recettes du site qui les emploient : avec les premiers, vous pouvez déjà cuisiner une bonne partie de nos plats. À égalité, le plus courant passe devant.",
+    updated: "2026-10-19",
+    rankBy: "recettes",
+    items: [
+      {
+        product: "pate-d-arachide",
+        pourquoi:
+          "C'est l'ingrédient le plus employé du site : sept recettes, du mafé à la groundnut soup du Ghana. Obtenue en broyant des arachides grillées, elle forme une pâte épaisse qui, selon les marques, contient du sel ou de l'huile végétale. On la délaie dans un peu de bouillon chaud avant de l'ajouter à la sauce. Bien fermée, elle se garde plusieurs semaines.",
+        recettes: ["mafe", "fonio-aux-legumes", "thiere-mbuum", "moambe", "luwombo", "ngalakh", "groundnut-soup"],
+        articles: ["combien-de-temps-se-garde-la-pate-d-arachide"],
+      },
+      {
+        product: "poivre-de-selim",
+        pourquoi:
+          "Six recettes du site l'emploient, du poulet yassa au café Touba. Ce sont les longues gousses sombres du Xylopia aethiopica, au parfum résineux, musqué et poivré, appelées djar au Sénégal. On les écrase pour les infuser dans les bouillons, ou on les moud avec le café. Quelques gousses suffisent.",
+        recettes: ["poulet-yassa", "kelewele", "thiere-mbuum", "liboke-de-poisson", "cafe-touba", "pepper-soup"],
+        articles: ["utiliser-poivre-de-selim"],
+      },
+      {
+        product: "huile-de-palme-rouge",
+        pourquoi:
+          "Six recettes du site reposent sur elle, dont le pondu, l'eru et la soupe egusi. Extraite de la pulpe des fruits du palmier à huile et non raffinée, elle garde sa couleur orangée et son goût fruité. On la chauffe doucement, sans la faire fumer. Elle fige au frais : c'est normal.",
+        recettes: ["pondu", "soupe-egusi", "eru", "koki", "poulet-odika", "mbongo-tchobi"],
+        articles: ["huile-de-palme-rouge-ou-raffinee", "remplacer-huile-de-palme-rouge"],
+      },
+      {
+        product: "poivre-de-penja",
+        pourquoi:
+          "Cinq recettes du site le demandent, dont le ndolé, le poulet DG et le kedjenou. Cultivé dans la région de Penja, au Cameroun, ce poivre blanc offre un piquant net et des notes boisées et musquées. On le moud au dernier moment, en fin de cuisson, pour garder tout son parfum.",
+        recettes: ["ndole", "poisson-braise-attieke", "kedjenou", "caldou", "poulet-dg"],
+      },
+      {
+        product: "soumbala",
+        pourquoi:
+          "Le soumbala, ou nététou, est fait de graines de néré cuites puis fermentées. Il donne au mafé, au thiéboudienne et aux sauces un goût profond, proche de l'umami : quatre recettes du site l'emploient. Son odeur est forte, mais un petit morceau écrasé en début de cuisson suffit.",
+        recettes: ["mafe", "thieboudienne", "fonio-aux-legumes", "to-sauce-gombo"],
+        articles: ["quest-ce-que-le-soumbala", "par-quoi-remplacer-le-soumbala"],
+      },
+      {
+        product: "couscous-de-mil",
+        pourquoi:
+          "Au Sénégal, la farine de mil est roulée en petits grains puis cuite à la vapeur pour donner le thiéré, au goût plus rustique que la semoule de blé. Quatre recettes du site l'emploient : le thiéré mbuum, le thiakry, le ngalakh et le dégué. Il se cuit à la vapeur, jamais dans l'eau, de préférence en deux fois.",
+        recettes: ["thiakry", "thiere-mbuum", "ngalakh", "degue"],
+        articles: ["cuire-le-couscous-de-mil"],
+      },
+      {
+        product: "berbere",
+        pourquoi:
+          "Le berbéré est le mélange d'épices rouge et relevé de la cuisine éthiopienne : piment, fenugrec, gingembre, ail et épices chaudes, le plus souvent. Il parfume les wats servis sur l'injera, et trois recettes du site l'emploient. On le fait d'abord revenir dans le beurre ou l'huile avec les oignons.",
+        recettes: ["doro-wat", "misir-wat", "shiro"],
+        articles: ["quest-ce-que-le-berbere"],
+      },
+      {
+        product: "crevettes-sechees",
+        pourquoi:
+          "Séchées, parfois fumées, les crevettes concentrent un goût marin prononcé, courant dans les cuisines d'Afrique de l'Ouest et centrale. Trois recettes du site les emploient : le ndolé, la soupe egusi et l'eru. On les rince rapidement, puis on les ajoute entières en fin de cuisson ou moulues dans la sauce.",
+        recettes: ["ndole", "soupe-egusi", "eru"],
+      },
+      {
+        product: "pulpe-de-noix-de-palme",
+        pourquoi:
+          "Extraite des noix de palme cuites et pilées, cette pulpe onctueuse évite la longue préparation des noix fraîches. Elle sert de base à trois recettes du site : la sauce graine, le poulet nyembwe et la moambé. On la dilue dans l'eau et on la fait réduire lentement jusqu'à ce que l'huile remonte.",
+        recettes: ["poulet-nyembwe", "sauce-graine", "moambe"],
+      },
+      {
+        product: "attieke-sec",
+        pourquoi:
+          "L'attiéké est une semoule de manioc fermenté au goût légèrement acidulé, emblématique de la cuisine ivoirienne. La version déshydratée se garde longtemps et se réhydrate en quelques minutes. Nos recettes de garba et de poisson braisé à l'attiéké l'emploient, avec oignons, tomate et piment.",
+        recettes: ["poisson-braise-attieke", "garba"],
+        articles: ["reussir-attieke-maison"],
+      },
+    ],
+    guide: [
+      ["Commencez par une recette simple, comme le mafé ou le poulet yassa : la pâte d'arachide et le poivre de Selim y suffisent pour une bonne partie du goût."],
+      ["Privilégiez les produits qui se gardent longtemps : pâte d'arachide, crevettes séchées, couscous de mil, attiéké déshydraté."],
+      [
+        "Ajoutez ensuite deux ou trois épices clés. Voir ",
+        { href: "/conseils/ingredients-placard-cuisine-africaine", label: "les ingrédients à avoir dans son placard" },
+        ".",
+      ],
+    ],
+    faq: [
+      {
+        question: "Par quelle recette commencer ?",
+        reponse: [
+          "Par un plat mijoté à base d'ingrédients courants, comme le poulet yassa ou le mafé : ils demandent surtout du temps, pas de technique particulière. Voir ",
+          { href: "/conseils/par-quelle-recette-commencer", label: "notre conseil" },
+          ".",
+        ],
+      },
+      {
+        question: "Par quoi remplacer l'huile de palme rouge ?",
+        reponse: [
+          "Aucune huile ne la remplace parfaitement. Le plus proche est la pulpe de noix de palme ; sinon, une huile neutre colorée au paprika doux redonne la couleur, mais pas tout le goût. Voir ",
+          { href: "/conseils/remplacer-huile-de-palme-rouge", label: "remplacer l'huile de palme rouge" },
+          ".",
+        ],
+      },
+      {
+        question: "Combien de temps se garde la pâte d'arachide ?",
+        reponse: [
+          "Bien fermée et entamée avec une cuillère propre, plusieurs semaines, souvent davantage ; la durée exacte figure sur l'étiquette. Voir ",
+          { href: "/conseils/combien-de-temps-se-garde-la-pate-d-arachide", label: "notre conseil" },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
     slug: "epices-africaines",
     tab: "Épices",
     title: "Top 10 des épices et condiments africains",
