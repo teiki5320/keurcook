@@ -64,7 +64,7 @@ describe("Top 10", () => {
       });
 
       it("classement conforme à la règle annoncée", () => {
-        const parMesure = t.rankBy === "taille" || t.rankBy === "contenance" || t.rankBy === "pages";
+        const parMesure = ["taille", "contenance", "pages", "puissance"].includes(t.rankBy);
         if (parMesure) assert.ok(t.items.every((it) => typeof it.mesure === "number"), "mesure manquante");
         const score = (it: Top10["items"][number]) =>
           parMesure ? it.mesure! : it.recettes.length + (t.rankBy === "recettes-et-articles" ? (it.articles?.length ?? 0) : 0);

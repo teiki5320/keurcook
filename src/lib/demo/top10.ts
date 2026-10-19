@@ -459,6 +459,113 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "mixeurs-sauces-pate-d-arachide",
+    tab: "Mixeurs",
+    title: "Top 10 des mixeurs pour sauces et pâtes d'arachide",
+    seoTitle: "Top 10 des mixeurs pour sauces africaines",
+    description:
+      "Blenders de 2000 à 800 W, robot, mixeur plongeant et hachoir : notre top 10 des mixeurs pour les sauces, la pâte d'arachide et les jus de la cuisine africaine.",
+    intro:
+      "Notre sélection de dix mixeurs parmi ceux de la boutique. Ils servent tous dans les mêmes seize recettes du site qui demandent de mixer : ils sont donc classés par puissance, du plus puissant au moins puissant. Les plus puissants viennent mieux à bout des graines et des arachides.",
+    updated: "2026-10-19",
+    rankBy: "puissance",
+    items: [
+      {
+        product: "blender-amzchef-2000w",
+        mesure: 2000,
+        pourquoi:
+          "Le plus puissant de notre sélection avec le Springlane : 2000 W et jusqu'à 25 000 tours par minute. Ses huit lames en inox entraînent les ingrédients vers le bas, utile pour les bases ail-oignon-piment, les graines d'egusi ou les haricots trempés des akara. Le bol contient 2 litres.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-springlane-hanno-2000w",
+        mesure: 2000,
+        pourquoi:
+          "Même puissance, 2000 W, mais avec un atout pour la pâte d'arachide : un petit bol en inox de 750 ml prévu pour les purées de noix. Le grand bol mixe les sauces et les soupes, le petit broie les arachides grillées. Il pile aussi la glace pour les jus.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-magimix-power-4",
+        mesure: 1300,
+        pourquoi:
+          "Ce blender Magimix de 1300 W a un bol en verre thermorésistant de 1,8 litre, qui accepte les préparations chaudes comme froides. Il mixe, hache et pile la glace, avec cinq programmes automatiques. Pratique pour mixer la base d'une sauce encore tiède.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-moulinex-perfectmix",
+        mesure: 1200,
+        pourquoi:
+          "Le Moulinex PerfectMix Plus, 1200 W, a un bol en verre de 2 litres et des lames Powelix pour un mixage rapide. Son programme de nettoyage automatique évite de démonter les lames après une sauce au piment. Une valeur sûre pour les mixages du quotidien.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-ninja-2-en-1",
+        mesure: 1200,
+        pourquoi:
+          "Ce Ninja de 1200 W associe un pichet de 2,1 litres et un gobelet de 700 ml. Ses programmes « hacher » et « réduire en purée » conviennent aux oignons et au piment comme aux bases de sauce. Le gobelet sert pour un jus de gingembre individuel.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-philips-5000",
+        mesure: 1000,
+        pourquoi:
+          "Simple et peu encombrant, ce Philips de 1000 W fait circuler les ingrédients grâce à son bol nervuré pour une texture lisse. Le bol contient 2 litres, dont 1,5 litre utile. Il suffit pour les sauces et les jus d'une famille.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-moulinex-blendforce",
+        mesure: 800,
+        pourquoi:
+          "Ce Moulinex Blendforce de 800 W mixe jusqu'à trois minutes en continu, et son moteur est refroidi par air. Le bol en verre de 1,75 litre supporte jusqu'à 80 °C. Un bon premier blender pour les bases tomate-oignon et les soupes.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "robot-moulinex-easy-force",
+        mesure: 800,
+        pourquoi:
+          "Plus qu'un blender : ce robot Moulinex de 800 W hache, émince, râpe, pétrit et mixe grâce à six accessoires. Il prépare en quelques secondes les oignons du yassa ou les légumes d'une sauce. Son bol de 3 litres range la plupart des accessoires.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mixeur-plongeant-moulinex-daily-chef",
+        mesure: 600,
+        pourquoi:
+          "Le mixeur plongeant se glisse directement dans la marmite : pratique pour lisser une soupe d'arachide ou une light soup sans transvaser. Ce Moulinex de 600 W a quatre lames en inox et un pied anti-éclaboussure. Il est livré avec un gobelet de 800 ml.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "hachoir-moulinex-choppeo",
+        mesure: 500,
+        pourquoi:
+          "Le moins puissant de notre sélection, mais le plus simple pour hacher : 500 W et un bol en verre d'un litre utile. Par impulsions, il garde des morceaux d'oignon ou de piment ; plus longtemps, il donne une purée d'ail et de gingembre. Il se range facilement.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+    ],
+    guide: [
+      ["Pour la pâte d'arachide et les graines, visez un blender puissant (1200 W et plus) ou un petit bol dédié aux purées de noix."],
+      ["Pour les sauces et les soupes, un bol en verre accepte mieux les préparations tièdes ; un mixeur plongeant évite de transvaser."],
+      ["Pour l'ail, l'oignon et le piment en petite quantité, un hachoir suffit et se nettoie plus vite."],
+    ],
+    faq: [
+      {
+        question: "Peut-on faire sa pâte d'arachide au blender ?",
+        reponse: ["Oui, avec un blender puissant ou un petit bol pour purées de noix : mixez les arachides grillées par impulsions en raclant les bords, jusqu'à obtenir une pâte lisse."],
+      },
+      {
+        question: "Blender ou mixeur plongeant pour les sauces ?",
+        reponse: ["Le blender donne une texture plus fine et convient aux bases crues ; le mixeur plongeant mixe directement dans la marmite, pratique pour les soupes."],
+      },
+      {
+        question: "Combien de temps se garde la pâte d'arachide ?",
+        reponse: [
+          "Bien fermée et entamée avec une cuillère propre, plusieurs semaines, souvent davantage. Voir ",
+          { href: "/conseils/combien-de-temps-se-garde-la-pate-d-arachide", label: "notre conseil" },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
     slug: "epices-africaines",
     tab: "Épices",
     title: "Top 10 des épices et condiments africains",
@@ -906,6 +1013,110 @@ export const demoTop10: Top10[] = [
           { href: "/conseils/torrefier-cafe-vert-maison", label: "comment torréfier du café vert" },
           ".",
         ],
+      },
+    ],
+  },
+  {
+    slug: "service-et-the",
+    tab: "Service et thé",
+    title: "Top 10 des ustensiles pour le service et le thé",
+    seoTitle: "Top 10 du service et du thé à l'africaine",
+    description:
+      "Théière et verres pour l'ataya, bouilloire émaillée, saladiers et bols en bois, plateaux : notre top 10 pour servir le repas et le thé à l'africaine.",
+    intro:
+      "Notre sélection de dix objets pour servir le repas et le thé, parmi ceux de la boutique. Ils sont classés selon le nombre de recettes et d'articles Conseils du site qui en parlent. À égalité, le plus courant passe devant.",
+    updated: "2026-10-19",
+    rankBy: "recettes-et-articles",
+    items: [
+      {
+        product: "saladier-en-bois",
+        pourquoi:
+          "Dans beaucoup de cuisines africaines, on partage le repas autour d'un plat commun : ce grand saladier en acacia de 26 cm s'y prête bien. Quatre recettes du site commencent dans un saladier, de la pâte de l'injera à celle des puff-puff. Il met aussi en valeur le thiakry ou l'attiéké.",
+        recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
+      },
+      {
+        product: "saladiers-acacia-lot-de-2",
+        pourquoi:
+          "Deux grands bols individuels en acacia de 20 cm et 760 ml : l'assiette de chacun quand on ne mange pas au plat commun. Ils conviennent au riz, à l'attiéké, aux salades et aux plats en sauce tièdes. On les lave rapidement à la main.",
+        recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
+      },
+      {
+        product: "theiere-a-ataya",
+        pourquoi:
+          "La théière de l'ataya : en inox, de 1,2 litre, avec une forme ventrue et un long bec qui permet de verser le thé de haut pour former la mousse. Elle se pose directement sur le feu. Notre article explique comment préparer l'ataya en trois tournées.",
+        recettes: [],
+        articles: ["comment-preparer-l-ataya"],
+      },
+      {
+        product: "verres-a-the",
+        pourquoi:
+          "Au Sénégal, l'ataya se sert dans de petits verres facettés. On fait passer le thé d'un verre à l'autre pour former la mousse. Ce lot de six verres de 210 ml accompagne la théière pour les trois services.",
+        recettes: [],
+        articles: ["comment-preparer-l-ataya"],
+      },
+      {
+        product: "verres-a-the-et-soucoupes-pasabahce",
+        pourquoi:
+          "Six petits verres à thé d'environ 155 ml, au ventre arrondi, et leurs six soucoupes : de quoi servir le thé à six sans marquer la table. La soucoupe permet aussi de tenir le verre chaud. Une autre option pour l'ataya, plus classique.",
+        recettes: [],
+        articles: ["comment-preparer-l-ataya"],
+      },
+      {
+        product: "bouilloire-emaillee",
+        pourquoi:
+          "Les bouilloires émaillées colorées font partie du paysage de nombreuses cuisines africaines. Posée directement sur le feu, celle-ci chauffe l'eau du thé et des infusions, comme le kinkeliba. Elle contient 2,4 litres.",
+        recettes: [],
+      },
+      {
+        product: "plateau-acacia-amazon-basics",
+        pourquoi:
+          "Un plateau en acacia de 43 × 30 cm à poignées intégrées, pour porter le thé, les beignets ou les petits plats à table. Chaque plateau a son propre motif de veines de bois. On l'essuie avec un chiffon humide, sans le laisser tremper.",
+        recettes: [],
+      },
+      {
+        product: "plateau-rond-bambou-40-cm",
+        pourquoi:
+          "Ce grand plateau rond en bambou de 40 cm accueille la théière et tous les verres de l'ataya, ou une assiette de beignets. Ses deux poignées intégrées assurent une prise stable. Il s'essuie avec un chiffon humide.",
+        recettes: [],
+      },
+      {
+        product: "bols-manguier-lot-de-3",
+        pourquoi:
+          "Trois bols en bois de manguier sculptés à la main, pour servir les sauces au piment, les arachides grillées ou les desserts. Leurs tailles différentes permettent de présenter plusieurs accompagnements à la fois. On les lave rapidement à la main.",
+        recettes: [],
+      },
+      {
+        product: "bols-noix-de-coco-lot-de-2",
+        pourquoi:
+          "Deux bols taillés à la main dans des coquilles de noix de coco, polis à l'huile de coco, avec leurs cuillères. Ils conviennent aux fruits, aux salades de fruits et aux desserts comme le thiakry. Ils se lavent à l'eau tiède, sans lave-vaisselle ni micro-ondes.",
+        recettes: [],
+      },
+    ],
+    guide: [
+      [
+        "Pour l'ataya, il faut une théière en métal qui va sur le feu et de petits verres pour faire mousser le thé. Voir ",
+        { href: "/conseils/comment-preparer-l-ataya", label: "comment préparer l'ataya" },
+        ".",
+      ],
+      ["Pour le plat commun, un grand saladier ; pour servir chacun, des bols individuels en bois."],
+      ["Le bois et la noix de coco se lavent à la main et se sèchent bien ; évitez les liquides très chauds."],
+    ],
+    faq: [
+      {
+        question: "Comment se prépare l'ataya ?",
+        reponse: [
+          "On fait bouillir du thé vert avec du sucre dans une théière en métal, on le fait mousser en le versant de haut d'un verre à l'autre, puis on le sert en trois tournées. Voir ",
+          { href: "/conseils/comment-preparer-l-ataya", label: "notre article" },
+          ".",
+        ],
+      },
+      {
+        question: "Peut-on mettre ces bols en bois au lave-vaisselle ?",
+        reponse: ["Non : le bois, le bambou et la noix de coco se lavent rapidement à la main, puis se sèchent bien."],
+      },
+      {
+        question: "Quelle bouilloire pour le kinkeliba ?",
+        reponse: ["Une bouilloire qui va sur le feu, comme la bouilloire émaillée de cette sélection : on y fait frémir les feuilles quelques minutes avant de filtrer."],
       },
     ],
   },
