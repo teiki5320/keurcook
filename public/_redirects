@@ -21,3 +21,6 @@
 /avertissements /conditions 301
 /admin / 301
 /admin/* / 301
+# Ancienne page « Nos sélections » → page Top 10.
+/selections /top-10 301
+/selections/* /top-10 301
