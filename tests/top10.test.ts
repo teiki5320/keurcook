@@ -64,9 +64,10 @@ describe("Top 10", () => {
       });
 
       it("classement conforme à la règle annoncée", () => {
-        if (t.rankBy === "taille") assert.ok(t.items.every((it) => typeof it.tailleCm === "number"), "taille manquante");
+        const parMesure = t.rankBy === "taille" || t.rankBy === "contenance";
+        if (parMesure) assert.ok(t.items.every((it) => typeof it.mesure === "number"), "mesure manquante");
         const score = (it: Top10["items"][number]) =>
-          t.rankBy === "taille" ? it.tailleCm! : it.recettes.length + (t.rankBy === "recettes-et-articles" ? (it.articles?.length ?? 0) : 0);
+          parMesure ? it.mesure! : it.recettes.length + (t.rankBy === "recettes-et-articles" ? (it.articles?.length ?? 0) : 0);
         for (let i = 1; i < t.items.length; i++) {
           assert.ok(score(t.items[i - 1]) >= score(t.items[i]), `${t.items[i - 1].product} (${score(t.items[i - 1])}) avant ${t.items[i].product} (${score(t.items[i])})`);
         }
