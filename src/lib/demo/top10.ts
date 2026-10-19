@@ -908,10 +908,17 @@ export const demoTop10: Top10[] = [
     description:
       "Cafés d'Éthiopie, du Kenya, du Rwanda et du Cameroun, kinkeliba, rooibos : notre top 10 des thés et cafés d'Afrique, avec nos recettes et conseils.",
     intro:
-      "Notre sélection de dix cafés, thés et infusions d'Afrique, parmi ceux de la boutique. Peu de recettes emploient ces boissons : ils sont donc classés selon le nombre de recettes et d'articles Conseils du site qui en parlent. À égalité, le plus courant passe devant.",
+      "Notre sélection de dix cafés, thés et infusions d'Afrique, parmi ceux de la boutique. Ils sont classés selon le nombre de recettes et d'articles Conseils du site qui en parlent. À égalité, le plus courant passe devant.",
     updated: "2026-10-19",
     rankBy: "recettes-et-articles",
     items: [
+      {
+        product: "cafe-yirgacheffe",
+        pourquoi:
+          "Yirgacheffe, dans le sud de l'Éthiopie, est l'une des régions de café les plus réputées au monde. Ses cafés lavés offrent une tasse légère, aux notes de fleurs blanches et d'agrumes. C'est le café de notre buna, préparé comme lors de la cérémonie, et deux de nos articles en parlent. À moudre juste avant la préparation.",
+        recettes: ["buna-cafe-ethiopien"],
+        articles: ["ceremonie-du-cafe-ethiopienne", "cafes-ethiopie-kenya-rwanda"],
+      },
       {
         product: "cafe-vert-du-cameroun",
         pourquoi:
@@ -920,64 +927,57 @@ export const demoTop10: Top10[] = [
         articles: ["torrefier-cafe-vert-maison"],
       },
       {
-        product: "cafe-yirgacheffe",
-        pourquoi:
-          "Yirgacheffe, dans le sud de l'Éthiopie, est l'une des régions de café les plus réputées au monde. Ses cafés lavés offrent une tasse légère, aux notes de fleurs blanches et d'agrumes. Deux de nos articles en parlent, dont celui sur la cérémonie du café éthiopienne. À moudre juste avant la préparation, au filtre ou à la cafetière à piston.",
-        recettes: [],
-        articles: ["ceremonie-du-cafe-ethiopienne", "cafes-ethiopie-kenya-rwanda"],
-      },
-      {
         product: "cafe-harrar",
         pourquoi:
-          "La région de Harrar, à l'est de l'Éthiopie, produit un café séché dans son fruit, au soleil. Il en ressort une tasse corsée et fruitée, avec des notes de cacao : l'un des cafés les plus typés du pays. Il convient particulièrement à la cafetière italienne et à l'expresso.",
-        recettes: [],
+          "La région de Harrar, à l'est de l'Éthiopie, produit un café séché dans son fruit, au soleil. Il en ressort une tasse corsée et fruitée, avec des notes de cacao : l'un des cafés les plus typés du pays. Il donne un buna plus puissant, et convient aussi à la cafetière italienne et à l'expresso.",
+        recettes: ["buna-cafe-ethiopien"],
         articles: ["ceremonie-du-cafe-ethiopienne"],
       },
       {
         product: "cafe-du-kenya",
         pourquoi:
-          "Les cafés du Kenya poussent sur les hauts plateaux, au pied du mont Kenya. Ils sont réputés pour leur acidité vive et leurs notes de fruits rouges et d'agrumes. En grains, ils gardent tout leur parfum jusqu'à la mouture, plutôt grossière pour le filtre ou la cafetière à piston.",
-        recettes: [],
+          "Les cafés du Kenya poussent sur les hauts plateaux, au pied du mont Kenya. Ils sont réputés pour leur acidité vive et leurs notes de fruits rouges et d'agrumes. Sur la côte, on en fait le kahawa chungu, un café noir parfumé à la cardamome et au gingembre. En grains, ils gardent tout leur parfum jusqu'à la mouture.",
+        recettes: ["kahawa-chungu"],
         articles: ["cafes-ethiopie-kenya-rwanda"],
       },
       {
         product: "cafe-du-rwanda",
         pourquoi:
-          "Au Rwanda, le café pousse sur les collines, en altitude, et est cueilli par de petits producteurs. Il offre une tasse douce, fruitée et sucrée. Il se prête à toutes les méthodes, du filtre à l'expresso, et se moud juste avant la préparation.",
-        recettes: [],
+          "Au Rwanda, le café pousse sur les collines, en altitude, et est cueilli par de petits producteurs. Il offre une tasse douce, fruitée et sucrée. Il donne une version plus ronde de notre kahawa chungu, et se prête à toutes les méthodes, du filtre à l'expresso.",
+        recettes: ["kahawa-chungu"],
         articles: ["cafes-ethiopie-kenya-rwanda"],
       },
       {
         product: "cafe-moka-sidamo",
         pourquoi:
-          "L'Éthiopie est le berceau de l'arabica. Dans la région de Sidamo, au sud du pays, le café pousse en altitude et offre une tasse florale, fruitée et délicate. Moulu, il se prépare au filtre ou à la cafetière à piston ; en Éthiopie, on le sert parfois avec une pincée de sel ou de cardamome.",
-        recettes: [],
+          "L'Éthiopie est le berceau de l'arabica. Dans la région de Sidamo, au sud du pays, le café pousse en altitude et offre une tasse florale, fruitée et délicate. Il convient très bien à notre buna, servi en trois tournées. Moulu, il se prépare aussi au filtre ou à la cafetière à piston.",
+        recettes: ["buna-cafe-ethiopien"],
         articles: ["cafe-en-grains-ou-moulu"],
       },
       {
         product: "cafe-d-ethiopie-bio",
         pourquoi:
-          "Ce café éthiopien vient de coopératives de petits producteurs, en agriculture biologique et commerce équitable. Il offre les notes florales et fruitées typiques des cafés d'Éthiopie. En grains, il se moud selon la préparation choisie : filtre, piston ou expresso. Bien refermer le paquet après chaque usage.",
-        recettes: [],
+          "Ce café éthiopien vient de coopératives de petits producteurs, en agriculture biologique et commerce équitable. Il offre les notes florales et fruitées typiques des cafés d'Éthiopie. Il se prête à notre buna comme au filtre, au piston ou à l'expresso. Bien refermer le paquet après chaque usage.",
+        recettes: ["buna-cafe-ethiopien"],
         articles: ["cafe-en-grains-ou-moulu"],
       },
       {
         product: "kinkeliba",
         pourquoi:
-          "Le kinkeliba est un arbuste du Sahel dont on infuse les feuilles séchées. Il donne une boisson ambrée au goût boisé et légèrement amer. Au Sénégal, on le boit le matin, souvent sucré, avec du pain, et il est très présent au moment du ramadan. On fait bouillir les feuilles quelques minutes, on filtre puis on sucre.",
-        recettes: [],
+          "Le kinkeliba est un arbuste du Sahel dont on infuse les feuilles séchées. Il donne une boisson ambrée au goût boisé et légèrement amer. Au Sénégal, on le boit le matin, sucré, avec du pain, et il est très présent au moment du ramadan. Notre recette explique comment le faire frémir puis le filtrer.",
+        recettes: ["kinkeliba"],
       },
       {
         product: "the-noir-du-kenya",
         pourquoi:
-          "Le Kenya est l'un des grands producteurs de thé noir au monde. Ses thés, cultivés sur les hauts plateaux, sont corsés et donnent une infusion très colorée. Au Kenya, il se prépare en chai : bouilli dans un mélange d'eau et de lait, sucré, parfois épicé, puis filtré.",
-        recettes: [],
+          "Le Kenya est l'un des grands producteurs de thé noir au monde. Ses thés, cultivés sur les hauts plateaux, sont corsés et donnent une infusion très colorée. Au Kenya, il se prépare en chai : bouilli dans un mélange d'eau et de lait, sucré, parfois épicé, puis filtré, comme dans notre recette.",
+        recettes: ["chai-kenyan"],
       },
       {
         product: "rooibos",
         pourquoi:
-          "Le rooibos est un arbuste qui pousse principalement dans la région du Cederberg, en Afrique du Sud. Ses feuilles fermentées puis séchées donnent une infusion rouge ambré, au goût doux et légèrement vanillé. Il se boit à toute heure, chaud ou glacé ; en Afrique du Sud, souvent avec du lait et du miel.",
-        recettes: [],
+          "Le rooibos est un arbuste qui pousse principalement dans la région du Cederberg, en Afrique du Sud. Ses feuilles fermentées puis séchées donnent une infusion rouge ambré, au goût doux et légèrement vanillé. Il se boit à toute heure, chaud avec du lait et du miel, ou glacé au citron comme dans notre recette.",
+        recettes: ["rooibos-glace"],
       },
     ],
     guide: [
@@ -1041,55 +1041,55 @@ export const demoTop10: Top10[] = [
         recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
       },
       {
+        product: "plateau-acacia-amazon-basics",
+        pourquoi:
+          "Un plateau en acacia de 43 × 30 cm à poignées intégrées, pour porter le thé, les beignets ou les petits plats à table. Chaque plateau a son propre motif de veines de bois. On l'essuie avec un chiffon humide, sans le laisser tremper.",
+        recettes: ["chai-kenyan", "puff-puff", "akara"],
+      },
+      {
+        product: "bols-manguier-lot-de-3",
+        pourquoi:
+          "Trois bols en bois de manguier sculptés à la main, pour servir les sauces au piment, les arachides grillées ou les desserts. Leurs tailles différentes permettent de présenter plusieurs accompagnements à la fois. On les lave rapidement à la main.",
+        recettes: ["kelewele", "alloco", "suya"],
+      },
+      {
         product: "theiere-a-ataya",
         pourquoi:
-          "La théière de l'ataya : en inox, de 1,2 litre, avec une forme ventrue et un long bec qui permet de verser le thé de haut pour former la mousse. Elle se pose directement sur le feu. Notre article explique comment préparer l'ataya en trois tournées.",
-        recettes: [],
+          "La théière de l'ataya : en inox, de 1,2 litre, avec une forme ventrue et un long bec qui permet de verser le thé de haut pour former la mousse. Elle se pose directement sur le feu. Notre recette et notre article expliquent comment préparer l'ataya en trois tournées.",
+        recettes: ["ataya"],
         articles: ["comment-preparer-l-ataya"],
       },
       {
         product: "verres-a-the",
         pourquoi:
           "Au Sénégal, l'ataya se sert dans de petits verres facettés. On fait passer le thé d'un verre à l'autre pour former la mousse. Ce lot de six verres de 210 ml accompagne la théière pour les trois services.",
-        recettes: [],
+        recettes: ["ataya"],
         articles: ["comment-preparer-l-ataya"],
       },
       {
         product: "verres-a-the-et-soucoupes-pasabahce",
         pourquoi:
           "Six petits verres à thé d'environ 155 ml, au ventre arrondi, et leurs six soucoupes : de quoi servir le thé à six sans marquer la table. La soucoupe permet aussi de tenir le verre chaud. Une autre option pour l'ataya, plus classique.",
-        recettes: [],
+        recettes: ["ataya"],
         articles: ["comment-preparer-l-ataya"],
       },
       {
         product: "bouilloire-emaillee",
         pourquoi:
-          "Les bouilloires émaillées colorées font partie du paysage de nombreuses cuisines africaines. Posée directement sur le feu, celle-ci chauffe l'eau du thé et des infusions, comme le kinkeliba. Elle contient 2,4 litres.",
-        recettes: [],
-      },
-      {
-        product: "plateau-acacia-amazon-basics",
-        pourquoi:
-          "Un plateau en acacia de 43 × 30 cm à poignées intégrées, pour porter le thé, les beignets ou les petits plats à table. Chaque plateau a son propre motif de veines de bois. On l'essuie avec un chiffon humide, sans le laisser tremper.",
-        recettes: [],
+          "Les bouilloires émaillées colorées font partie du paysage de nombreuses cuisines africaines. Posée directement sur le feu, celle-ci chauffe l'eau de l'ataya et fait frémir le kinkeliba du matin. Elle contient 2,4 litres.",
+        recettes: ["ataya", "kinkeliba"],
       },
       {
         product: "plateau-rond-bambou-40-cm",
         pourquoi:
-          "Ce grand plateau rond en bambou de 40 cm accueille la théière et tous les verres de l'ataya, ou une assiette de beignets. Ses deux poignées intégrées assurent une prise stable. Il s'essuie avec un chiffon humide.",
-        recettes: [],
-      },
-      {
-        product: "bols-manguier-lot-de-3",
-        pourquoi:
-          "Trois bols en bois de manguier sculptés à la main, pour servir les sauces au piment, les arachides grillées ou les desserts. Leurs tailles différentes permettent de présenter plusieurs accompagnements à la fois. On les lave rapidement à la main.",
-        recettes: [],
+          "Ce grand plateau rond en bambou de 40 cm accueille la théière et tous les verres de l'ataya, ou les petites tasses du café éthiopien. Ses deux poignées intégrées assurent une prise stable. Il s'essuie avec un chiffon humide.",
+        recettes: ["ataya", "buna-cafe-ethiopien"],
       },
       {
         product: "bols-noix-de-coco-lot-de-2",
         pourquoi:
           "Deux bols taillés à la main dans des coquilles de noix de coco, polis à l'huile de coco, avec leurs cuillères. Ils conviennent aux fruits, aux salades de fruits et aux desserts comme le thiakry. Ils se lavent à l'eau tiède, sans lave-vaisselle ni micro-ondes.",
-        recettes: [],
+        recettes: ["thiakry", "degue"],
       },
     ],
     guide: [
