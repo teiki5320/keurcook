@@ -233,6 +233,232 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "mortiers-et-pilons",
+    tab: "Mortiers",
+    title: "Top 10 des mortiers et pilons",
+    seoTitle: "Top 10 des mortiers et pilons pour la cuisine africaine",
+    description:
+      "Granit, marbre, bois ou inox, de 20 à 10,5 cm : notre top 10 des mortiers et pilons pour piler ail, piment, arachides et épices dans les recettes africaines.",
+    intro:
+      "Notre sélection de dix mortiers et pilons parmi ceux de la boutique. Tous servent dans les mêmes neuf recettes du site : ils sont donc classés par taille, du plus grand au plus petit. Les grands pilent les feuilles et les grandes quantités, les petits une pincée d'épices.",
+    updated: "2026-10-19",
+    rankBy: "taille",
+    items: [
+      {
+        product: "grand-mortier-granit-20-cm",
+        mesure: 20,
+        pourquoi:
+          "Le plus grand de notre sélection : 20 cm de granit massif, pour piler de grandes quantités d'ail, de gingembre, de piment ou de feuilles en une fois. C'est le mortier des grandes tablées, quand la sauce est prévue pour huit. L'extérieur poli lui permet aussi de servir de bol. Il se rince à l'eau chaude, sans lave-vaisselle.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-granit-18-cm",
+        mesure: 18,
+        pourquoi:
+          "Ce mortier Cole & Mason en granit noir de 18 cm est lisse à l'extérieur et brut à l'intérieur, pour bien accrocher les ingrédients secs comme humides. Assez grand pour une pâte d'épices ou une marinade de poulet yassa, il reste maniable au quotidien. Il ne passe pas au lave-vaisselle.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["mortier-bois-ou-pierre"],
+      },
+      {
+        product: "mortier-granit-16-cm",
+        mesure: 16,
+        pourquoi:
+          "Profond, avec ses 16 cm de diamètre et 8 cm de haut, ce mortier en granit garde les ingrédients dans la coquille pendant qu'on pile. Son poids l'empêche de glisser sur le plan de travail. Il convient aux arachides grillées, aux graines d'egusi ou aux épices du pilau.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-granit-socle-acacia",
+        mesure: 15.5,
+        pourquoi:
+          "Le granit pour écraser, le bois d'acacia pour protéger le plan de travail : ce mortier de 15,5 cm est posé sur un socle et livré avec un pilon extra-long. Le long manche donne de la force sans effort pour broyer herbes et épices. Le granit se rince à l'eau chaude, le socle s'essuie.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-marbre-noir",
+        mesure: 15,
+        pourquoi:
+          "Ce mortier Coninx en marbre massif noir mesure 15 cm pour 8 cm de haut. Lourd et stable, il écrase facilement les herbes fraîches, l'ail et les épices pour en libérer les arômes. Il peut rester posé sur le plan de travail. On le rince à l'eau chaude, puis on le sèche.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-en-granit",
+        mesure: 14,
+        pourquoi:
+          "Lourd et non poreux, ce mortier en granit de 14 cm écrase les aromates frais sans glisser. On y prépare la base ail-gingembre-piment des marinades, les pâtes de piment frais ou les mélanges d'épices en graines. Il se rince à l'eau chaude et sèche à l'air.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["mortier-bois-ou-pierre"],
+      },
+      {
+        product: "mortier-inox",
+        mesure: 13,
+        pourquoi:
+          "L'inox ne retient ni les odeurs ni les traces : le piment d'hier ne parfume pas les épices du lendemain. Ce mortier Mastrad d'environ 13 cm, à double paroi et base stable, passe au lave-vaisselle. Il peut aussi servir de petit bol pour une sauce.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-et-pilon-en-bois",
+        mesure: 12.7,
+        pourquoi:
+          "En acacia, un bois dense et solide, ce mortier de 12,7 cm écrase épices, ail, piment, arachides grillées ou feuilles. C'est un outil du quotidien dans beaucoup de cuisines africaines, fait pour les petites quantités. Il se lave à l'eau chaude sans tremper, puis s'huile de temps en temps.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["entretenir-mortier-pilon-bois"],
+      },
+      {
+        product: "mortier-marbre-blanc",
+        mesure: 11,
+        pourquoi:
+          "Petit mais lourd, ce mortier en marbre blanc massif de 11 cm reste stable pendant qu'on écrase. Il suffit pour une gousse d'ail, une pincée de poivre de Selim ou quelques clous de girofle. Ses dimensions compactes conviennent aux petites cuisines.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "petit-mortier-hetre",
+        mesure: 10.5,
+        pourquoi:
+          "Le plus petit et le plus léger de notre sélection : 10,5 cm de bois de hêtre. Il sert à moudre en poudre les épices entières juste avant usage, pour en libérer l'arôme. Il se lave à la main à l'eau chaude, sans tremper, puis se sèche bien.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["entretenir-mortier-pilon-bois"],
+      },
+    ],
+    guide: [
+      ["Choisissez la taille selon vos quantités : un grand mortier pour les sauces familiales et les feuilles, un petit pour moudre des épices au dernier moment."],
+      [
+        "Le bois convient aux épices et aux arachides, la pierre (granit, marbre) aux aromates frais et humides. Voir ",
+        { href: "/conseils/mortier-bois-ou-pierre", label: "mortier en bois ou en pierre" },
+        ".",
+      ],
+      ["L'inox ne retient pas les odeurs et passe au lave-vaisselle ; la pierre et le bois se rincent à l'eau chaude."],
+    ],
+    faq: [
+      {
+        question: "Mortier en bois ou en pierre ?",
+        reponse: [
+          "Le bois convient aux épices sèches et aux arachides ; le granit, lourd et non poreux, écrase mieux les aromates frais sans glisser. Voir ",
+          { href: "/conseils/mortier-bois-ou-pierre", label: "notre conseil" },
+          ".",
+        ],
+      },
+      {
+        question: "Comment entretenir un mortier en bois ?",
+        reponse: [
+          "Lavez-le à l'eau chaude sans le laisser tremper, séchez-le bien puis huilez-le de temps en temps. Voir ",
+          { href: "/conseils/entretenir-mortier-pilon-bois", label: "comment entretenir un mortier en bois" },
+          ".",
+        ],
+      },
+      {
+        question: "Peut-on passer un mortier au lave-vaisselle ?",
+        reponse: ["Seulement s'il est en inox, comme le Mastrad de cette sélection. Le bois, le granit et le marbre se rincent à l'eau chaude puis sèchent à l'air."],
+      },
+    ],
+  },
+  {
+    slug: "marmites-et-cocottes",
+    tab: "Marmites",
+    title: "Top 10 des marmites et cocottes pour les plats mijotés",
+    seoTitle: "Top 10 des marmites et cocottes pour mijoter",
+    description:
+      "Inox, fonte émaillée, caldero, potjie : notre top 10 des marmites et cocottes pour le ndolé, le riz jollof et les mijotés, de 13,5 à 2,5 litres.",
+    intro:
+      "Notre sélection de dix marmites et cocottes parmi celles de la boutique. Elles sont classées par contenance, de la plus grande à la plus petite : choisissez selon le nombre de personnes à table. Pour chacune, les recettes du site qui demandent une marmite, un faitout ou une cocotte.",
+    updated: "2026-10-19",
+    rankBy: "contenance",
+    items: [
+      {
+        product: "marmite-inox-13-litres",
+        mesure: 13.5,
+        pourquoi:
+          "La plus grande de notre sélection : 13,5 litres d'inox pour le riz, les bouillons et les sauces des grandes tablées. Son triple fond diffuseur répartit la chaleur pour une cuisson homogène, et elle va sur tous les feux, dont l'induction. Le couvercle en verre a un trou vapeur. Elle se lave à l'eau chaude savonneuse.",
+        recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
+      },
+      {
+        product: "faitout-fonte-aluminium-36-cm",
+        mesure: 13,
+        pourquoi:
+          "Avec 36 cm de diamètre et 13 litres, ce faitout Kamberg est fait pour les mijotés en grande quantité. La fonte d'aluminium chauffe vite et son revêtement type pierre limite l'attache. Il va sur tous les feux, dont l'induction, et passe au lave-vaisselle.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "caldero-aluminium-7-litres",
+        mesure: 6.9,
+        pourquoi:
+          "La grande version du caldero : près de 7 litres d'aluminium poli, pour les grandes portions de riz, de haricots et de ragoûts. L'aluminium répartit la chaleur, ce qui aide le riz à cuire de façon régulière. On cuit le riz à feu doux, couvercle fermé.",
+        recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
+      },
+      {
+        product: "cocotte-staub-28-cm",
+        mesure: 6.7,
+        pourquoi:
+          "Cette cocotte Staub de 28 cm, fabriquée en France, contient 6,7 litres de fonte émaillée. Son émail intérieur noir mat facilite le rissolage, et les picots du couvercle répartissent l'humidité sur les aliments. La fonte garde longtemps la chaleur : le plat reste chaud à table.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "cocotte-fonte-emaillee-28-cm",
+        mesure: 6.6,
+        pourquoi:
+          "Même taille que la Staub, 28 cm pour 6,6 litres, cette cocotte Overmont en fonte émaillée retient et diffuse la chaleur de façon régulière. Elle convient aux cuissons lentes : ragoûts, soupes épaisses, viandes braisées. Elle va sur tous les feux, dont l'induction.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "marmite-potjie",
+        mesure: 6,
+        pourquoi:
+          "Le potjie est une marmite ventrue en fonte, montée sur trois pieds, héritée des cuisines de plein air d'Afrique du Sud. Posée sur les braises, elle mijote lentement viande, légumes et épices. Le potjiekos, ragoût en couches cuit sans remuer, en est le plat emblématique.",
+        recettes: [],
+      },
+      {
+        product: "faitout-en-fonte-d-aluminium",
+        mesure: 5.8,
+        pourquoi:
+          "Ce faitout Kamberg de 28 cm contient 5,8 litres : la taille du quotidien pour quatre à six personnes. La fonte d'aluminium chauffe vite et répartit la chaleur de façon homogène, sans le poids de la fonte de fer. Il se lave à l'eau chaude avec une éponge non abrasive.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "faitout-inox-24-cm",
+        mesure: 5.4,
+        pourquoi:
+          "Ce faitout Beka Polo en inox 18/10, sans revêtement, contient environ 5,4 litres. Son fond capsulé trois couches chauffe vite et de façon homogène, et son couvercle en verre à évent permet de surveiller la sauce sans le soulever. Il passe au lave-vaisselle.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "cocotte-fonte-emaillee-4-litres",
+        mesure: 4.1,
+        pourquoi:
+          "Une cocotte en fonte émaillée de 4,1 litres, pour les mijotés à deux ou quatre personnes. L'émail vitrifié ne réagit pas avec les aliments : on peut mariner, cuire et conserver dans le même plat. Elle va sur tous les feux et au four jusqu'à 260 °C.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "marmite-en-aluminium",
+        mesure: 2.5,
+        pourquoi:
+          "La plus petite de notre sélection, environ 2,5 litres, mais la marmite des plats de riz. En aluminium épais, elle répartit bien la chaleur et favorise au fond la formation du xoon, le riz légèrement croustillant recherché au Sénégal. Elle se lave à l'eau chaude savonneuse, sans lave-vaisselle.",
+        recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
+      },
+    ],
+    guide: [
+      ["Choisissez la contenance selon la tablée : 4 à 6 litres pour quatre à six personnes, 7 litres et plus pour les grandes familles et les plats de fête."],
+      ["Fonte émaillée ou fonte d'aluminium pour les longs mijotés ; aluminium épais pour le riz ; inox pour les bouillons et un entretien simple."],
+      ["Vérifiez sur la fiche Amazon que la marmite convient à votre plaque (gaz, électrique ou induction)."],
+    ],
+    faq: [
+      {
+        question: "Fonte ou aluminium pour une marmite ?",
+        reponse: ["La fonte garde longtemps la chaleur, idéale pour les longs mijotés ; l'aluminium chauffe plus vite et pèse moins. La fonte d'aluminium est entre les deux."],
+      },
+      {
+        question: "Quelle marmite pour le thiéboudienne ou le riz jollof ?",
+        reponse: [
+          "Une marmite en aluminium épais, comme le caldero : elle répartit bien la chaleur et favorise le fond de riz doré. Voir ",
+          { href: "/conseils/reussir-le-riz-rouge-du-thieboudienne", label: "réussir le riz rouge du thiéboudienne" },
+          ".",
+        ],
+      },
+      {
+        question: "Peut-on passer ces marmites au lave-vaisselle ?",
+        reponse: ["Le faitout Beka en inox et les faitouts Kamberg oui ; la fonte et l'aluminium poli se lavent plutôt à l'eau chaude, puis se sèchent bien. Suivez la notice du fabricant."],
+      },
+    ],
+  },
+  {
     slug: "epices-africaines",
     tab: "Épices",
     title: "Top 10 des épices et condiments africains",

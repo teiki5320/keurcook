@@ -15,6 +15,8 @@ export interface Top10Item {
   recettes: string[];
   /** Articles Conseils publiés qui en parlent (slugs). */
   articles?: string[];
+  /** Mesure indiquée par la fiche Amazon, pour un classement par taille (diamètre en cm) ou par contenance (litres). */
+  mesure?: number;
 }
 
 export interface Top10 {
@@ -33,7 +35,7 @@ export interface Top10 {
   /** Date de mise à jour (AAAA-MM-JJ). */
   updated: string;
   /** Règle de classement annoncée dans l'introduction (vérifiée par les tests). */
-  rankBy: "recettes" | "recettes-et-articles";
+  rankBy: "recettes" | "recettes-et-articles" | "taille" | "contenance";
   /** Exactement dix produits, du 1er au 10e. */
   items: Top10Item[];
   /** « Comment choisir » : quelques conseils courts. */
