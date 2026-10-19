@@ -233,6 +233,125 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "mortiers-et-pilons",
+    tab: "Mortiers",
+    title: "Top 10 des mortiers et pilons",
+    seoTitle: "Top 10 des mortiers et pilons pour la cuisine africaine",
+    description:
+      "Granit, marbre, bois ou inox, de 20 à 10,5 cm : notre top 10 des mortiers et pilons pour piler ail, piment, arachides et épices dans les recettes africaines.",
+    intro:
+      "Notre sélection de dix mortiers et pilons parmi ceux de la boutique. Tous servent dans les mêmes neuf recettes du site : ils sont donc classés par taille, du plus grand au plus petit. Les grands pilent les feuilles et les grandes quantités, les petits une pincée d'épices.",
+    updated: "2026-10-19",
+    rankBy: "taille",
+    items: [
+      {
+        product: "grand-mortier-granit-20-cm",
+        tailleCm: 20,
+        pourquoi:
+          "Le plus grand de notre sélection : 20 cm de granit massif, pour piler de grandes quantités d'ail, de gingembre, de piment ou de feuilles en une fois. C'est le mortier des grandes tablées, quand la sauce est prévue pour huit. L'extérieur poli lui permet aussi de servir de bol. Il se rince à l'eau chaude, sans lave-vaisselle.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-granit-18-cm",
+        tailleCm: 18,
+        pourquoi:
+          "Ce mortier Cole & Mason en granit noir de 18 cm est lisse à l'extérieur et brut à l'intérieur, pour bien accrocher les ingrédients secs comme humides. Assez grand pour une pâte d'épices ou une marinade de poulet yassa, il reste maniable au quotidien. Il ne passe pas au lave-vaisselle.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["mortier-bois-ou-pierre"],
+      },
+      {
+        product: "mortier-granit-16-cm",
+        tailleCm: 16,
+        pourquoi:
+          "Profond, avec ses 16 cm de diamètre et 8 cm de haut, ce mortier en granit garde les ingrédients dans la coquille pendant qu'on pile. Son poids l'empêche de glisser sur le plan de travail. Il convient aux arachides grillées, aux graines d'egusi ou aux épices du pilau.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-granit-socle-acacia",
+        tailleCm: 15.5,
+        pourquoi:
+          "Le granit pour écraser, le bois d'acacia pour protéger le plan de travail : ce mortier de 15,5 cm est posé sur un socle et livré avec un pilon extra-long. Le long manche donne de la force sans effort pour broyer herbes et épices. Le granit se rince à l'eau chaude, le socle s'essuie.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-marbre-noir",
+        tailleCm: 15,
+        pourquoi:
+          "Ce mortier Coninx en marbre massif noir mesure 15 cm pour 8 cm de haut. Lourd et stable, il écrase facilement les herbes fraîches, l'ail et les épices pour en libérer les arômes. Il peut rester posé sur le plan de travail. On le rince à l'eau chaude, puis on le sèche.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-en-granit",
+        tailleCm: 14,
+        pourquoi:
+          "Lourd et non poreux, ce mortier en granit de 14 cm écrase les aromates frais sans glisser. On y prépare la base ail-gingembre-piment des marinades, les pâtes de piment frais ou les mélanges d'épices en graines. Il se rince à l'eau chaude et sèche à l'air.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["mortier-bois-ou-pierre"],
+      },
+      {
+        product: "mortier-inox",
+        tailleCm: 13,
+        pourquoi:
+          "L'inox ne retient ni les odeurs ni les traces : le piment d'hier ne parfume pas les épices du lendemain. Ce mortier Mastrad d'environ 13 cm, à double paroi et base stable, passe au lave-vaisselle. Il peut aussi servir de petit bol pour une sauce.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-et-pilon-en-bois",
+        tailleCm: 12.7,
+        pourquoi:
+          "En acacia, un bois dense et solide, ce mortier de 12,7 cm écrase épices, ail, piment, arachides grillées ou feuilles. C'est un outil du quotidien dans beaucoup de cuisines africaines, fait pour les petites quantités. Il se lave à l'eau chaude sans tremper, puis s'huile de temps en temps.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["entretenir-mortier-pilon-bois"],
+      },
+      {
+        product: "mortier-marbre-blanc",
+        tailleCm: 11,
+        pourquoi:
+          "Petit mais lourd, ce mortier en marbre blanc massif de 11 cm reste stable pendant qu'on écrase. Il suffit pour une gousse d'ail, une pincée de poivre de Selim ou quelques clous de girofle. Ses dimensions compactes conviennent aux petites cuisines.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "petit-mortier-hetre",
+        tailleCm: 10.5,
+        pourquoi:
+          "Le plus petit et le plus léger de notre sélection : 10,5 cm de bois de hêtre. Il sert à moudre en poudre les épices entières juste avant usage, pour en libérer l'arôme. Il se lave à la main à l'eau chaude, sans tremper, puis se sèche bien.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["entretenir-mortier-pilon-bois"],
+      },
+    ],
+    guide: [
+      ["Choisissez la taille selon vos quantités : un grand mortier pour les sauces familiales et les feuilles, un petit pour moudre des épices au dernier moment."],
+      [
+        "Le bois convient aux épices et aux arachides, la pierre (granit, marbre) aux aromates frais et humides. Voir ",
+        { href: "/conseils/mortier-bois-ou-pierre", label: "mortier en bois ou en pierre" },
+        ".",
+      ],
+      ["L'inox ne retient pas les odeurs et passe au lave-vaisselle ; la pierre et le bois se rincent à l'eau chaude."],
+    ],
+    faq: [
+      {
+        question: "Mortier en bois ou en pierre ?",
+        reponse: [
+          "Le bois convient aux épices sèches et aux arachides ; le granit, lourd et non poreux, écrase mieux les aromates frais sans glisser. Voir ",
+          { href: "/conseils/mortier-bois-ou-pierre", label: "notre conseil" },
+          ".",
+        ],
+      },
+      {
+        question: "Comment entretenir un mortier en bois ?",
+        reponse: [
+          "Lavez-le à l'eau chaude sans le laisser tremper, séchez-le bien puis huilez-le de temps en temps. Voir ",
+          { href: "/conseils/entretenir-mortier-pilon-bois", label: "comment entretenir un mortier en bois" },
+          ".",
+        ],
+      },
+      {
+        question: "Peut-on passer un mortier au lave-vaisselle ?",
+        reponse: ["Seulement s'il est en inox, comme le Mastrad de cette sélection. Le bois, le granit et le marbre se rincent à l'eau chaude puis sèchent à l'air."],
+      },
+    ],
+  },
+  {
     slug: "epices-africaines",
     tab: "Épices",
     title: "Top 10 des épices et condiments africains",
