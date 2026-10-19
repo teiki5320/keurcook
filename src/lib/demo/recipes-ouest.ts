@@ -219,7 +219,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     servings: 6,
     difficulty: 2,
     ingredients: [
-      [600, "g", "farine de maïs blanc"],
+      [600, "g", "farine de maïs blanc", "farine-de-mais-blanc"],
       [3, "l", "eau (1 l pour la sauce, 2 l pour le tô)"],
       [1, "c. à soupe", "jus de citron (ou eau de tamarin)"],
       [60, "g", "gombo séché en poudre", "gombo-seche"],
