@@ -23,6 +23,7 @@ export function Footer() {
             <li><Link href="/pays" className="hover:text-white">Cuisines par pays</Link></li>
             <li><Link href="/boutique" className="hover:text-white">Produits rares</Link></li>
             <li><Link href="/conseils" className="hover:text-white">Conseils</Link></li>
+            <li><Link href="/selections" className="hover:text-white">Nos sélections</Link></li>
             <li><Link href="/favoris" className="hover:text-white">Mes favoris</Link></li>
           </ul>
         </div>
