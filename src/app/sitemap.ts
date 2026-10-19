@@ -3,6 +3,7 @@ import { COUNTRIES } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
 import { getConseils } from "@/lib/data/conseils";
 import { getRecipes } from "@/lib/data/recipes";
+import { getTop10s } from "@/lib/data/top10";
 import { getMaintenance } from "@/lib/data/settings";
 import { siteConfig } from "@/lib/config";
 
@@ -21,6 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const recipesAt = recipes.map((r) => r.createdAt);
   const productsAt = products.map((p) => p.createdAt);
   const conseilsAt = getConseils().map((c) => `${c.date}T00:00:00Z`);
+  const tops = getTop10s();
   // Même date que « Dernière mise à jour » affichée sur les trois pages légales.
   const LEGAL_UPDATED = "2026-10-01T00:00:00Z";
   const pageUpdated: Record<string, Date> = {
@@ -63,6 +65,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.6,
       images: imgs(c.image),
+    })),
+    // Un top 10 par onglet ; /top-10 renvoie vers le premier onglet (adresse de référence), il n'est donc pas listé.
+    ...tops.map((t) => ({
+      url: `${base}/top-10/${t.slug}`,
+      lastModified: new Date(`${t.updated}T00:00:00Z`),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+      images: imgs(...t.items.slice(0, 3).map((it) => products.find((p) => p.slug === it.product)?.images[0])),
     })),
     ...products.map((p) => ({
       url: `${base}/produit/${p.slug}`,
