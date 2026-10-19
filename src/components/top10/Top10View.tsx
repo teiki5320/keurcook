@@ -4,6 +4,7 @@ import { TLink } from "@/components/nuage/PageTransition";
 import { anton } from "@/components/nuage/typography";
 import { ProductImage } from "@/components/product/ProductImage";
 import { AMAZON_DISCLOSURE, amazonUrl } from "@/lib/amazon";
+import { BOOK_ILLUSTRATION_NOTE, isBook } from "@/lib/catalog-utils";
 import { siteConfig } from "@/lib/config";
 import type { ResolvedTop10Item } from "@/lib/data/top10";
 import { breadcrumbLd, itemListLd, JsonLdScript } from "@/lib/json-ld";
@@ -119,6 +120,7 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
                   </TLink>
                 </h2>
                 <p className="text-[15px] leading-relaxed text-[#fbeee2]/85">{it.pourquoi}</p>
+                {isBook(it.productData) && <p className="-mt-2 text-xs text-muted">{BOOK_ILLUSTRATION_NOTE}</p>}
                 {it.recipesData.length > 0 && (
                   <div>
                     <p className="text-xs font-bold tracking-[.14em] text-[#ffc46b] uppercase">Dans nos recettes</p>
