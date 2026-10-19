@@ -7,8 +7,10 @@ export const DEFAULT_SHARE_IMAGE = { url: "/brand/keurcook-partage.jpg", width: 
 /**
  * Photo du site → version JPEG 1200 × 630 créée au build par scripts/og-images.mjs
  * (/recipes/x.webp → /og/recipes/x.jpg), mieux affichée par les réseaux que le WebP.
+ * Les images des onglets Top 10 (/top10/x.jpg, scripts/images-top10.ts) sont déjà au bon format.
  */
 function shareImage(image: string, alt: string) {
+  if (/^\/top10\/[^/]+\.jpg$/.test(image)) return { url: image, width: 1200, height: 630, alt };
   const m = image.match(/^\/(recipes|products|conseils)\/([^/]+)\.webp$/);
   return m ? { url: `/og/${m[1]}/${m[2]}.jpg`, width: 1200, height: 630, alt } : { url: image, alt };
 }
