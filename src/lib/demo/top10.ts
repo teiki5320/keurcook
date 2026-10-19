@@ -1,11 +1,24 @@
 import type { Top10 } from "@/lib/top10/types";
+import { demoProducts } from "./catalog";
+
+/**
+ * Date du relevé des notes des acheteurs sur Amazon.fr (page de chaque produit). Les notes ne sont ni
+ * enregistrées ni affichées : seul l'ordre des produits en découle. À relever de nouveau avant de modifier un classement.
+ */
+const RELEVE = "2026-10-19";
+
+/** Introduction des onglets classés selon la note des acheteurs ; le n° 1 est nommé à la suite. */
+function introNote(quoi: string, feminin: boolean): string {
+  const date = new Date(`${RELEVE}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" });
+  return `Notre sélection de ${quoi}, parmi ${feminin ? "celles" : "ceux"} de la boutique, ${feminin ? "classées" : "classés"} selon la note moyenne des acheteurs sur Amazon.fr, relevée le ${date} ; à égalité, ${feminin ? "la plus évaluée" : "le plus évalué"} passe devant. Seuls les produits disponibles avec au moins 10 évaluations sont retenus. Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces produits.`;
+}
 
 /**
  * Onglets de la page « Top 10 », dans l'ordre d'affichage. Uniquement des produits de la boutique
  * avec un lien Amazon (src/lib/demo/catalog*.ts) et des recettes ou articles du site.
  * Textes tirés des fiches produits. Vérifié par tests/top10.test.ts.
  */
-export const demoTop10: Top10[] = [
+const tops: Top10[] = [
   {
     slug: "ustensiles-cuisine-africaine",
     tab: "Ustensiles",
@@ -13,16 +26,42 @@ export const demoTop10: Top10[] = [
     seoTitle: "Top 10 des ustensiles de la cuisine africaine",
     description:
       "Faitout, marmite à riz, mortiers, araignée, couscoussier : notre top 10 des ustensiles, classés selon le nombre de recettes du site où ils servent.",
-    intro:
-      "Notre sélection de dix ustensiles parmi ceux de la boutique. Ils sont classés selon le nombre de recettes du site qui s'en servent : plus un ustensile revient dans nos recettes, plus il monte. À égalité, le plus courant passe devant.",
+    intro: introNote("dix ustensiles de cuisine", false),
     updated: "2026-10-19",
-    rankBy: "recettes",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
+      {
+        product: "araignee-a-friture",
+        pourquoi:
+          "Huit recettes du site passent par la friture : alloco, kelewele, puff-puff, akara… Avec son large panier en fils métalliques, l'araignée retire plusieurs morceaux de l'huile à la fois et les égoutte aussitôt. On pose ensuite les fritures sur du papier absorbant. Elle se lave à l'eau chaude savonneuse et se sèche bien.",
+        recettes: ["alloco", "kelewele", "riz-jollof", "soupe-egusi", "garba", "poulet-dg", "puff-puff", "akara"],
+      },
       {
         product: "faitout-en-fonte-d-aluminium",
         pourquoi:
-          "Le faitout arrive en tête : quatorze recettes du site se cuisinent dans un faitout ou une cocotte, du ndolé au doro wat. Celui-ci, en fonte d'aluminium, chauffe vite et répartit la chaleur de façon homogène, sans être aussi lourd que la fonte de fer. C'est l'allié des plats qui mijotent longtemps : sauces feuilles, ragoûts, kedjenou. Il se lave à l'eau chaude avec une éponge non abrasive.",
+          "Quatorze recettes du site se cuisinent dans un faitout ou une cocotte, du ndolé au doro wat. Celui-ci, en fonte d'aluminium, chauffe vite et répartit la chaleur de façon homogène, sans être aussi lourd que la fonte de fer. C'est l'allié des plats qui mijotent longtemps : sauces feuilles, ragoûts, kedjenou. Il se lave à l'eau chaude avec une éponge non abrasive.",
         recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "spatules-en-bois",
+        pourquoi:
+          "Le tô, le foufou ou l'ugali se tournent avec énergie contre la paroi de la marmite : six recettes du site demandent une spatule ou une cuillère en bois. Solides, ces spatules ne rayent pas le fond. Le lot de huit sert aussi à remuer les sauces, le riz et les mijotés. Elles se lavent à la main, se sèchent bien et s'huilent de temps en temps.",
+        recettes: ["to-sauce-gombo", "fufu-light-soup", "ugali-sukuma-wiki", "cafe-touba", "puff-puff", "akara"],
+      },
+      {
+        product: "mortier-en-granit",
+        pourquoi:
+          "Il sert dans les mêmes neuf recettes que le mortier en bois, avec un autre usage. Le granit, lourd et non poreux, écrase efficacement les aromates frais sans glisser. On y prépare la base ail-gingembre-piment des marinades, les pâtes de piment frais ou les mélanges d'épices en graines. Il se rince à l'eau chaude et sèche à l'air.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["mortier-bois-ou-pierre"],
+      },
+      {
+        product: "couscoussier",
+        pourquoi:
+          "Le couscoussier associe une marmite et un panier percé : l'eau ou la sauce mijote en bas pendant que les graines cuisent à la vapeur en haut. Quatre recettes du site l'emploient : le thiéré mbuum, l'attiéké du garba, le ngalakh et le dégué. On humidifie la semoule, on la cuit, on l'égrène puis on la remet à cuire une seconde fois. Ce modèle en inox se lave à l'eau chaude savonneuse.",
+        recettes: ["garba", "thiere-mbuum", "ngalakh", "degue"],
+        articles: ["couscoussier-fonio-attieke"],
       },
       {
         product: "marmite-en-aluminium",
@@ -38,48 +77,22 @@ export const demoTop10: Top10[] = [
         articles: ["entretenir-mortier-pilon-bois"],
       },
       {
-        product: "mortier-en-granit",
+        product: "brochettes-en-metal",
         pourquoi:
-          "Il sert dans les mêmes neuf recettes que le mortier en bois, avec un autre usage. Le granit, lourd et non poreux, écrase efficacement les aromates frais sans glisser. On y prépare la base ail-gingembre-piment des marinades, les pâtes de piment frais ou les mélanges d'épices en graines. Il se rince à l'eau chaude et sèche à l'air.",
-        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
-        articles: ["mortier-bois-ou-pierre"],
-      },
-      {
-        product: "araignee-a-friture",
-        pourquoi:
-          "Huit recettes du site passent par la friture : alloco, kelewele, puff-puff, akara… Avec son large panier en fils métalliques, l'araignée retire plusieurs morceaux de l'huile à la fois et les égoutte aussitôt. On pose ensuite les fritures sur du papier absorbant. Elle se lave à l'eau chaude savonneuse et se sèche bien.",
-        recettes: ["alloco", "kelewele", "riz-jollof", "soupe-egusi", "garba", "poulet-dg", "puff-puff", "akara"],
-      },
-      {
-        product: "spatules-en-bois",
-        pourquoi:
-          "Le tô, le foufou ou l'ugali se tournent avec énergie contre la paroi de la marmite : six recettes du site demandent une spatule ou une cuillère en bois. Solides, ces spatules ne rayent pas le fond. Le lot de huit sert aussi à remuer les sauces, le riz et les mijotés. Elles se lavent à la main, se sèchent bien et s'huilent de temps en temps.",
-        recettes: ["to-sauce-gombo", "fufu-light-soup", "ugali-sukuma-wiki", "cafe-touba", "puff-puff", "akara"],
-      },
-      {
-        product: "couscoussier",
-        pourquoi:
-          "Le couscoussier associe une marmite et un panier percé : l'eau ou la sauce mijote en bas pendant que les graines cuisent à la vapeur en haut. Quatre recettes du site l'emploient : le thiéré mbuum, l'attiéké du garba, le ngalakh et le dégué. On humidifie la semoule, on la cuit, on l'égrène puis on la remet à cuire une seconde fois. Ce modèle en inox se lave à l'eau chaude savonneuse.",
-        recettes: ["garba", "thiere-mbuum", "ngalakh", "degue"],
-        articles: ["couscoussier-fonio-attieke"],
-      },
-      {
-        product: "tamis-en-bois",
-        pourquoi:
-          "Un tamis à maille fine sert autant aux farines qu'aux boissons. Quatre recettes du site l'emploient : il retient les fibres du jus de bouye et du jus de gingembre, passe les légumes de la light soup et sert pour le ngalakh. Son cadre en bois est un classique des cuisines africaines. Il se brosse à sec et sèche à l'air.",
-        recettes: ["fufu-light-soup", "jus-de-gingembre", "ngalakh", "jus-de-bouye"],
-      },
-      {
-        product: "rechaud-a-charbon-jiko",
-        pourquoi:
-          "Le jiko est le réchaud à charbon de bois des cuisines d'Afrique de l'Est. Il concentre la chaleur des braises pour griller ou mijoter : quatre recettes du site se cuisent sur les braises, du nyama choma au suya. Il s'utilise uniquement à l'extérieur ou dans un lieu très bien aéré. Les cendres se vident une fois refroidies.",
-        recettes: ["nyama-choma", "suya", "poisson-braise-attieke", "liboke-de-poisson"],
+          "Ce lot de trente brochettes en métal de 40 cm sert au suya, la brochette épicée des rues du Nigeria, grillée sur de longues piques au-dessus des braises. Elles conviennent aussi aux dibi et aux brochettes de poisson ou de légumes. Réutilisables, elles vont au barbecue comme au four. On les lave à l'eau chaude savonneuse, puis on les sèche bien.",
+        recettes: ["suya"],
       },
       {
         product: "saladier-en-bois",
         pourquoi:
           "Dans beaucoup de cuisines africaines, on partage le repas autour d'un plat commun : ce grand saladier en acacia de 26 cm s'y prête bien. Quatre recettes du site commencent dans un saladier, de la pâte de l'injera à celle des puff-puff. Il met aussi en valeur le thiakry ou l'attiéké. On évite les liquides très chauds et on le lave rapidement à la main.",
         recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
+      },
+      {
+        product: "tamis-en-bois",
+        pourquoi:
+          "Un tamis à maille fine sert autant aux farines qu'aux boissons. Quatre recettes du site l'emploient : il retient les fibres du jus de bouye et du jus de gingembre, passe les légumes de la light soup et sert pour le ngalakh. Son cadre en bois est un classique des cuisines africaines. Il se brosse à sec et sèche à l'air.",
+        recettes: ["fufu-light-soup", "jus-de-gingembre", "ngalakh", "jus-de-bouye"],
       },
     ],
     guide: [
@@ -123,11 +136,56 @@ export const demoTop10: Top10[] = [
     seoTitle: "Top 10 des ingrédients de la cuisine africaine",
     description:
       "Pâte d'arachide, poivre de Selim, huile de palme rouge, soumbala : notre top 10 des ingrédients, classés selon le nombre de recettes du site qui les emploient.",
-    intro:
-      "Notre sélection de dix ingrédients de la boutique pour se lancer. Ils sont classés selon le nombre de recettes du site qui les emploient : avec les premiers, vous pouvez déjà cuisiner une bonne partie de nos plats. À égalité, le plus courant passe devant.",
+    intro: introNote("dix ingrédients", false),
     updated: "2026-10-19",
-    rankBy: "recettes",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
+      {
+        product: "farine-de-mais-blanc",
+        pourquoi:
+          "Cuite à l'eau, la farine de maïs blanc donne une pâte ferme et lisse : le tô au Burkina Faso et au Mali, l'ugali au Kenya, le pap en Afrique du Sud. Deux recettes du site l'emploient, le tô sauce gombo et l'ugali au sukuma wiki. On la verse en pluie dans l'eau bouillante, puis on tourne vigoureusement à la spatule.",
+        recettes: ["to-sauce-gombo",  "ugali-sukuma-wiki"],
+      },
+      {
+        product: "poudre-de-baobab",
+        pourquoi:
+          "Le pain de singe est la pulpe du fruit du baobab réduite en poudre, au goût acidulé. Au Sénégal, elle sert au jus de bouye et à la crème du ngalakh, deux recettes du site. Elle se délaye facilement dans l'eau froide ou le lait, puis se sucre à votre goût.",
+        recettes: ["jus-de-bouye",  "ngalakh"],
+      },
+      {
+        product: "poivre-de-penja",
+        pourquoi:
+          "Cinq recettes du site le demandent, dont le ndolé, le poulet DG et le kedjenou. Cultivé dans la région de Penja, au Cameroun, ce poivre blanc offre un piquant net et des notes boisées et musquées. On le moud au dernier moment, en fin de cuisson, pour garder tout son parfum.",
+        recettes: ["ndole", "poisson-braise-attieke", "kedjenou", "caldou", "poulet-dg"],
+      },
+      {
+        product: "feuilles-de-manioc",
+        pourquoi:
+          "Ces feuilles de manioc pilées sont la base du pondu, ou saka-saka, des deux Congo, et du ravitoto malgache, deux recettes du site. En conserve, elles sont déjà pilées et prêtes à cuisiner. On les fait mijoter avec de l'huile de palme, de l'oignon, de l'ail et souvent du poisson fumé.",
+        recettes: ["pondu",  "ravitoto"],
+      },
+      {
+        product: "soumbala",
+        pourquoi:
+          "Le soumbala, ou nététou, est fait de graines de néré cuites puis fermentées. Il donne au mafé, au thiéboudienne et aux sauces un goût profond, proche de l'umami : quatre recettes du site l'emploient. Son odeur est forte, mais un petit morceau écrasé en début de cuisson suffit.",
+        recettes: ["mafe", "thieboudienne", "fonio-aux-legumes", "to-sauce-gombo"],
+        articles: ["quest-ce-que-le-soumbala", "par-quoi-remplacer-le-soumbala"],
+      },
+      {
+        product: "attieke-sec",
+        pourquoi:
+          "L'attiéké est une semoule de manioc fermenté au goût légèrement acidulé, emblématique de la cuisine ivoirienne. La version déshydratée se garde longtemps et se réhydrate en quelques minutes. Nos recettes de garba et de poisson braisé à l'attiéké l'emploient, avec oignons, tomate et piment.",
+        recettes: ["poisson-braise-attieke", "garba"],
+        articles: ["reussir-attieke-maison"],
+      },
+      {
+        product: "berbere",
+        pourquoi:
+          "Le berbéré est le mélange d'épices rouge et relevé de la cuisine éthiopienne : piment, fenugrec, gingembre, ail et épices chaudes, le plus souvent. Il parfume les wats servis sur l'injera, et trois recettes du site l'emploient. On le fait d'abord revenir dans le beurre ou l'huile avec les oignons.",
+        recettes: ["doro-wat", "misir-wat", "shiro"],
+        articles: ["quest-ce-que-le-berbere"],
+      },
       {
         product: "pate-d-arachide",
         pourquoi:
@@ -148,52 +206,6 @@ export const demoTop10: Top10[] = [
           "Six recettes du site reposent sur elle, dont le pondu, l'eru et la soupe egusi. Extraite de la pulpe des fruits du palmier à huile et non raffinée, elle garde sa couleur orangée et son goût fruité. On la chauffe doucement, sans la faire fumer. Elle fige au frais : c'est normal.",
         recettes: ["pondu", "soupe-egusi", "eru", "koki", "poulet-odika", "mbongo-tchobi"],
         articles: ["huile-de-palme-rouge-ou-raffinee", "remplacer-huile-de-palme-rouge"],
-      },
-      {
-        product: "poivre-de-penja",
-        pourquoi:
-          "Cinq recettes du site le demandent, dont le ndolé, le poulet DG et le kedjenou. Cultivé dans la région de Penja, au Cameroun, ce poivre blanc offre un piquant net et des notes boisées et musquées. On le moud au dernier moment, en fin de cuisson, pour garder tout son parfum.",
-        recettes: ["ndole", "poisson-braise-attieke", "kedjenou", "caldou", "poulet-dg"],
-      },
-      {
-        product: "soumbala",
-        pourquoi:
-          "Le soumbala, ou nététou, est fait de graines de néré cuites puis fermentées. Il donne au mafé, au thiéboudienne et aux sauces un goût profond, proche de l'umami : quatre recettes du site l'emploient. Son odeur est forte, mais un petit morceau écrasé en début de cuisson suffit.",
-        recettes: ["mafe", "thieboudienne", "fonio-aux-legumes", "to-sauce-gombo"],
-        articles: ["quest-ce-que-le-soumbala", "par-quoi-remplacer-le-soumbala"],
-      },
-      {
-        product: "couscous-de-mil",
-        pourquoi:
-          "Au Sénégal, la farine de mil est roulée en petits grains puis cuite à la vapeur pour donner le thiéré, au goût plus rustique que la semoule de blé. Quatre recettes du site l'emploient : le thiéré mbuum, le thiakry, le ngalakh et le dégué. Il se cuit à la vapeur, jamais dans l'eau, de préférence en deux fois.",
-        recettes: ["thiakry", "thiere-mbuum", "ngalakh", "degue"],
-        articles: ["cuire-le-couscous-de-mil"],
-      },
-      {
-        product: "berbere",
-        pourquoi:
-          "Le berbéré est le mélange d'épices rouge et relevé de la cuisine éthiopienne : piment, fenugrec, gingembre, ail et épices chaudes, le plus souvent. Il parfume les wats servis sur l'injera, et trois recettes du site l'emploient. On le fait d'abord revenir dans le beurre ou l'huile avec les oignons.",
-        recettes: ["doro-wat", "misir-wat", "shiro"],
-        articles: ["quest-ce-que-le-berbere"],
-      },
-      {
-        product: "crevettes-sechees",
-        pourquoi:
-          "Séchées, parfois fumées, les crevettes concentrent un goût marin prononcé, courant dans les cuisines d'Afrique de l'Ouest et centrale. Trois recettes du site les emploient : le ndolé, la soupe egusi et l'eru. On les rince rapidement, puis on les ajoute entières en fin de cuisson ou moulues dans la sauce.",
-        recettes: ["ndole", "soupe-egusi", "eru"],
-      },
-      {
-        product: "pulpe-de-noix-de-palme",
-        pourquoi:
-          "Extraite des noix de palme cuites et pilées, cette pulpe onctueuse évite la longue préparation des noix fraîches. Elle sert de base à trois recettes du site : la sauce graine, le poulet nyembwe et la moambé. On la dilue dans l'eau et on la fait réduire lentement jusqu'à ce que l'huile remonte.",
-        recettes: ["poulet-nyembwe", "sauce-graine", "moambe"],
-      },
-      {
-        product: "attieke-sec",
-        pourquoi:
-          "L'attiéké est une semoule de manioc fermenté au goût légèrement acidulé, emblématique de la cuisine ivoirienne. La version déshydratée se garde longtemps et se réhydrate en quelques minutes. Nos recettes de garba et de poisson braisé à l'attiéké l'emploient, avec oignons, tomate et piment.",
-        recettes: ["poisson-braise-attieke", "garba"],
-        articles: ["reussir-attieke-maison"],
       },
     ],
     guide: [
@@ -239,80 +251,70 @@ export const demoTop10: Top10[] = [
     seoTitle: "Top 10 des mortiers et pilons pour la cuisine africaine",
     description:
       "Granit, marbre, bois ou inox, de 20 à 10,5 cm : notre top 10 des mortiers et pilons pour piler ail, piment, arachides et épices dans les recettes africaines.",
-    intro:
-      "Notre sélection de dix mortiers et pilons parmi ceux de la boutique. Tous servent dans les mêmes neuf recettes du site : ils sont donc classés par taille, du plus grand au plus petit. Les grands pilent les feuilles et les grandes quantités, les petits une pincée d'épices.",
+    intro: introNote("dix mortiers et pilons", false),
     updated: "2026-10-19",
-    rankBy: "taille",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
       {
-        product: "grand-mortier-granit-20-cm",
-        mesure: 20,
-        pourquoi:
-          "Le plus grand de notre sélection : 20 cm de granit massif, pour piler de grandes quantités d'ail, de gingembre, de piment ou de feuilles en une fois. C'est le mortier des grandes tablées, quand la sauce est prévue pour huit. L'extérieur poli lui permet aussi de servir de bol. Il se rince à l'eau chaude, sans lave-vaisselle.",
-        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "mortier-granit-18-cm",
-        mesure: 18,
-        pourquoi:
-          "Ce mortier Cole & Mason en granit noir de 18 cm est lisse à l'extérieur et brut à l'intérieur, pour bien accrocher les ingrédients secs comme humides. Assez grand pour une pâte d'épices ou une marinade de poulet yassa, il reste maniable au quotidien. Il ne passe pas au lave-vaisselle.",
-        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
-        articles: ["mortier-bois-ou-pierre"],
-      },
-      {
-        product: "mortier-granit-16-cm",
-        mesure: 16,
-        pourquoi:
-          "Profond, avec ses 16 cm de diamètre et 8 cm de haut, ce mortier en granit garde les ingrédients dans la coquille pendant qu'on pile. Son poids l'empêche de glisser sur le plan de travail. Il convient aux arachides grillées, aux graines d'egusi ou aux épices du pilau.",
-        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "mortier-granit-socle-acacia",
-        mesure: 15.5,
-        pourquoi:
-          "Le granit pour écraser, le bois d'acacia pour protéger le plan de travail : ce mortier de 15,5 cm est posé sur un socle et livré avec un pilon extra-long. Le long manche donne de la force sans effort pour broyer herbes et épices. Le granit se rince à l'eau chaude, le socle s'essuie.",
-        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "mortier-marbre-noir",
-        mesure: 15,
-        pourquoi:
-          "Ce mortier Coninx en marbre massif noir mesure 15 cm pour 8 cm de haut. Lourd et stable, il écrase facilement les herbes fraîches, l'ail et les épices pour en libérer les arômes. Il peut rester posé sur le plan de travail. On le rince à l'eau chaude, puis on le sèche.",
-        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
-      },
-      {
         product: "mortier-en-granit",
-        mesure: 14,
         pourquoi:
           "Lourd et non poreux, ce mortier en granit de 14 cm écrase les aromates frais sans glisser. On y prépare la base ail-gingembre-piment des marinades, les pâtes de piment frais ou les mélanges d'épices en graines. Il se rince à l'eau chaude et sèche à l'air.",
         recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
         articles: ["mortier-bois-ou-pierre"],
       },
       {
-        product: "mortier-inox",
-        mesure: 13,
+        product: "mortier-marbre-blanc",
         pourquoi:
-          "L'inox ne retient ni les odeurs ni les traces : le piment d'hier ne parfume pas les épices du lendemain. Ce mortier Mastrad d'environ 13 cm, à double paroi et base stable, passe au lave-vaisselle. Il peut aussi servir de petit bol pour une sauce.",
+          "Petit mais lourd, ce mortier en marbre blanc massif de 11 cm reste stable pendant qu'on écrase. Il suffit pour une gousse d'ail, une pincée de poivre de Selim ou quelques clous de girofle. Ses dimensions compactes conviennent aux petites cuisines.",
         recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
       },
       {
+        product: "mortier-marbre-noir",
+        pourquoi:
+          "Ce mortier Coninx en marbre massif noir mesure 15 cm pour 8 cm de haut. Lourd et stable, il écrase facilement les herbes fraîches, l'ail et les épices pour en libérer les arômes. Il peut rester posé sur le plan de travail. On le rince à l'eau chaude, puis on le sèche.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-granit-16-cm",
+        pourquoi:
+          "Profond, avec ses 16 cm de diamètre et 8 cm de haut, ce mortier en granit garde les ingrédients dans la coquille pendant qu'on pile. Son poids l'empêche de glisser sur le plan de travail. Il convient aux arachides grillées, aux graines d'egusi ou aux épices du pilau.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-granit-socle-acacia",
+        pourquoi:
+          "Le granit pour écraser, le bois d'acacia pour protéger le plan de travail : ce mortier de 15,5 cm est posé sur un socle et livré avec un pilon extra-long. Le long manche donne de la force sans effort pour broyer herbes et épices. Le granit se rince à l'eau chaude, le socle s'essuie.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "grand-mortier-granit-20-cm",
+        pourquoi:
+          "Le plus grand de notre sélection : 20 cm de granit massif, pour piler de grandes quantités d'ail, de gingembre, de piment ou de feuilles en une fois. C'est le mortier des grandes tablées, quand la sauce est prévue pour huit. L'extérieur poli lui permet aussi de servir de bol. Il se rince à l'eau chaude, sans lave-vaisselle.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mortier-granit-18-cm",
+        pourquoi:
+          "Ce mortier Cole & Mason en granit noir de 18 cm est lisse à l'extérieur et brut à l'intérieur, pour bien accrocher les ingrédients secs comme humides. Assez grand pour une pâte d'épices ou une marinade de poulet yassa, il reste maniable au quotidien. Il ne passe pas au lave-vaisselle.",
+        recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
+        articles: ["mortier-bois-ou-pierre"],
+      },
+      {
         product: "mortier-et-pilon-en-bois",
-        mesure: 12.7,
         pourquoi:
           "En acacia, un bois dense et solide, ce mortier de 12,7 cm écrase épices, ail, piment, arachides grillées ou feuilles. C'est un outil du quotidien dans beaucoup de cuisines africaines, fait pour les petites quantités. Il se lave à l'eau chaude sans tremper, puis s'huile de temps en temps.",
         recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
         articles: ["entretenir-mortier-pilon-bois"],
       },
       {
-        product: "mortier-marbre-blanc",
-        mesure: 11,
+        product: "mortier-inox",
         pourquoi:
-          "Petit mais lourd, ce mortier en marbre blanc massif de 11 cm reste stable pendant qu'on écrase. Il suffit pour une gousse d'ail, une pincée de poivre de Selim ou quelques clous de girofle. Ses dimensions compactes conviennent aux petites cuisines.",
+          "L'inox ne retient ni les odeurs ni les traces : le piment d'hier ne parfume pas les épices du lendemain. Ce mortier Mastrad d'environ 13 cm, à double paroi et base stable, passe au lave-vaisselle. Il peut aussi servir de petit bol pour une sauce.",
         recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
       },
       {
         product: "petit-mortier-hetre",
-        mesure: 10.5,
         pourquoi:
           "Le plus petit et le plus léger de notre sélection : 10,5 cm de bois de hêtre. Il sert à moudre en poudre les épices entières juste avant usage, pour en libérer l'arôme. Il se lave à la main à l'eau chaude, sans tremper, puis se sèche bien.",
         recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
@@ -358,79 +360,69 @@ export const demoTop10: Top10[] = [
     seoTitle: "Top 10 des marmites et cocottes pour mijoter",
     description:
       "Inox, fonte émaillée, caldero, potjie : notre top 10 des marmites et cocottes pour le ndolé, le riz jollof et les mijotés, de 13,5 à 2,5 litres.",
-    intro:
-      "Notre sélection de dix marmites et cocottes parmi celles de la boutique. Elles sont classées par contenance, de la plus grande à la plus petite : choisissez selon le nombre de personnes à table. Pour chacune, les recettes du site qui demandent une marmite, un faitout ou une cocotte.",
+    intro: introNote("dix marmites et cocottes", true),
     updated: "2026-10-19",
-    rankBy: "contenance",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
       {
-        product: "marmite-inox-13-litres",
-        mesure: 13.5,
-        pourquoi:
-          "La plus grande de notre sélection : 13,5 litres d'inox pour le riz, les bouillons et les sauces des grandes tablées. Son triple fond diffuseur répartit la chaleur pour une cuisson homogène, et elle va sur tous les feux, dont l'induction. Le couvercle en verre a un trou vapeur. Elle se lave à l'eau chaude savonneuse.",
-        recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
-      },
-      {
-        product: "faitout-fonte-aluminium-36-cm",
-        mesure: 13,
-        pourquoi:
-          "Avec 36 cm de diamètre et 13 litres, ce faitout Kamberg est fait pour les mijotés en grande quantité. La fonte d'aluminium chauffe vite et son revêtement type pierre limite l'attache. Il va sur tous les feux, dont l'induction, et passe au lave-vaisselle.",
-        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
-      },
-      {
-        product: "caldero-aluminium-7-litres",
-        mesure: 6.9,
-        pourquoi:
-          "La grande version du caldero : près de 7 litres d'aluminium poli, pour les grandes portions de riz, de haricots et de ragoûts. L'aluminium répartit la chaleur, ce qui aide le riz à cuire de façon régulière. On cuit le riz à feu doux, couvercle fermé.",
-        recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
-      },
-      {
         product: "cocotte-staub-28-cm",
-        mesure: 6.7,
         pourquoi:
           "Cette cocotte Staub de 28 cm, fabriquée en France, contient 6,7 litres de fonte émaillée. Son émail intérieur noir mat facilite le rissolage, et les picots du couvercle répartissent l'humidité sur les aliments. La fonte garde longtemps la chaleur : le plat reste chaud à table.",
         recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
       },
       {
         product: "cocotte-fonte-emaillee-28-cm",
-        mesure: 6.6,
         pourquoi:
           "Même taille que la Staub, 28 cm pour 6,6 litres, cette cocotte Overmont en fonte émaillée retient et diffuse la chaleur de façon régulière. Elle convient aux cuissons lentes : ragoûts, soupes épaisses, viandes braisées. Elle va sur tous les feux, dont l'induction.",
         recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
       },
       {
-        product: "marmite-potjie",
-        mesure: 6,
+        product: "faitout-fonte-aluminium-36-cm",
         pourquoi:
-          "Le potjie est une marmite ventrue en fonte, montée sur trois pieds, héritée des cuisines de plein air d'Afrique du Sud. Posée sur les braises, elle mijote lentement viande, légumes et épices. Le potjiekos, ragoût en couches cuit sans remuer, en est le plat emblématique.",
-        recettes: [],
+          "Avec 36 cm de diamètre et 13 litres, ce faitout Kamberg est fait pour les mijotés en grande quantité. La fonte d'aluminium chauffe vite et son revêtement type pierre limite l'attache. Il va sur tous les feux, dont l'induction, et passe au lave-vaisselle.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
       },
       {
         product: "faitout-en-fonte-d-aluminium",
-        mesure: 5.8,
         pourquoi:
           "Ce faitout Kamberg de 28 cm contient 5,8 litres : la taille du quotidien pour quatre à six personnes. La fonte d'aluminium chauffe vite et répartit la chaleur de façon homogène, sans le poids de la fonte de fer. Il se lave à l'eau chaude avec une éponge non abrasive.",
         recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
       },
       {
-        product: "faitout-inox-24-cm",
-        mesure: 5.4,
+        product: "marmite-potjie",
         pourquoi:
-          "Ce faitout Beka Polo en inox 18/10, sans revêtement, contient environ 5,4 litres. Son fond capsulé trois couches chauffe vite et de façon homogène, et son couvercle en verre à évent permet de surveiller la sauce sans le soulever. Il passe au lave-vaisselle.",
-        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+          "Le potjie est une marmite ventrue en fonte d'environ 6 litres, montée sur trois pieds, héritée des cuisines de plein air d'Afrique du Sud. Posée sur les braises, elle mijote lentement viande, légumes et épices. Le potjiekos, ragoût en couches cuit sans remuer, en est le plat emblématique.",
+        recettes: [],
+      },
+      {
+        product: "marmite-inox-13-litres",
+        pourquoi:
+          "La plus grande de notre sélection : 13,5 litres d'inox pour le riz, les bouillons et les sauces des grandes tablées. Son triple fond diffuseur répartit la chaleur pour une cuisson homogène, et elle va sur tous les feux, dont l'induction. Le couvercle en verre a un trou vapeur. Elle se lave à l'eau chaude savonneuse.",
+        recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
       },
       {
         product: "cocotte-fonte-emaillee-4-litres",
-        mesure: 4.1,
         pourquoi:
           "Une cocotte en fonte émaillée de 4,1 litres, pour les mijotés à deux ou quatre personnes. L'émail vitrifié ne réagit pas avec les aliments : on peut mariner, cuire et conserver dans le même plat. Elle va sur tous les feux et au four jusqu'à 260 °C.",
         recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
       },
       {
         product: "marmite-en-aluminium",
-        mesure: 2.5,
         pourquoi:
           "La plus petite de notre sélection, environ 2,5 litres, mais la marmite des plats de riz. En aluminium épais, elle répartit bien la chaleur et favorise au fond la formation du xoon, le riz légèrement croustillant recherché au Sénégal. Elle se lave à l'eau chaude savonneuse, sans lave-vaisselle.",
+        recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
+      },
+      {
+        product: "faitout-inox-24-cm",
+        pourquoi:
+          "Ce faitout Beka Polo en inox 18/10, sans revêtement, contient environ 5,4 litres. Son fond capsulé trois couches chauffe vite et de façon homogène, et son couvercle en verre à évent permet de surveiller la sauce sans le soulever. Il passe au lave-vaisselle.",
+        recettes: ["ndole", "doro-wat", "soupe-egusi", "sauce-graine", "kedjenou", "caldou", "poulet-dg", "moambe", "poulet-odika", "misir-wat", "pilau", "luwombo", "romazava", "ravitoto"],
+      },
+      {
+        product: "caldero-aluminium-7-litres",
+        pourquoi:
+          "La grande version du caldero : près de 7 litres d'aluminium poli, pour les grandes portions de riz, de haricots et de ragoûts. L'aluminium répartit la chaleur, ce qui aide le riz à cuire de façon régulière. On cuit le riz à feu doux, couvercle fermé.",
         recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
       },
     ],
@@ -465,79 +457,69 @@ export const demoTop10: Top10[] = [
     seoTitle: "Top 10 des mixeurs pour sauces africaines",
     description:
       "Blenders de 2000 à 800 W, robot, mixeur plongeant et hachoir : notre top 10 des mixeurs pour les sauces, la pâte d'arachide et les jus de la cuisine africaine.",
-    intro:
-      "Notre sélection de dix mixeurs parmi ceux de la boutique. Ils servent tous dans les mêmes seize recettes du site qui demandent de mixer : ils sont donc classés par puissance, du plus puissant au moins puissant. Les plus puissants viennent mieux à bout des graines et des arachides.",
+    intro: introNote("dix mixeurs", false),
     updated: "2026-10-19",
-    rankBy: "puissance",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
       {
-        product: "blender-amzchef-2000w",
-        mesure: 2000,
+        product: "blender-ninja-2-en-1",
         pourquoi:
-          "Le plus puissant de notre sélection avec le Springlane : 2000 W et jusqu'à 25 000 tours par minute. Ses huit lames en inox entraînent les ingrédients vers le bas, utile pour les bases ail-oignon-piment, les graines d'egusi ou les haricots trempés des akara. Le bol contient 2 litres.",
+          "Ce Ninja de 1200 W associe un pichet de 2,1 litres et un gobelet de 700 ml. Ses programmes « hacher » et « réduire en purée » conviennent aux oignons et au piment comme aux bases de sauce. Le gobelet sert pour un jus de gingembre individuel.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
-        product: "blender-springlane-hanno-2000w",
-        mesure: 2000,
+        product: "hachoir-moulinex-choppeo",
         pourquoi:
-          "Même puissance, 2000 W, mais avec un atout pour la pâte d'arachide : un petit bol en inox de 750 ml prévu pour les purées de noix. Le grand bol mixe les sauces et les soupes, le petit broie les arachides grillées. Il pile aussi la glace pour les jus.",
+          "Le moins puissant de notre sélection, mais le plus simple pour hacher : 500 W et un bol en verre d'un litre utile. Par impulsions, il garde des morceaux d'oignon ou de piment ; plus longtemps, il donne une purée d'ail et de gingembre. Il se range facilement.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "mixeur-plongeant-moulinex-daily-chef",
+        pourquoi:
+          "Le mixeur plongeant se glisse directement dans la marmite : pratique pour lisser une soupe d'arachide ou une light soup sans transvaser. Ce Moulinex de 600 W a quatre lames en inox et un pied anti-éclaboussure. Il est livré avec un gobelet de 800 ml.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
         product: "blender-magimix-power-4",
-        mesure: 1300,
         pourquoi:
           "Ce blender Magimix de 1300 W a un bol en verre thermorésistant de 1,8 litre, qui accepte les préparations chaudes comme froides. Il mixe, hache et pile la glace, avec cinq programmes automatiques. Pratique pour mixer la base d'une sauce encore tiède.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
         product: "blender-moulinex-perfectmix",
-        mesure: 1200,
         pourquoi:
           "Le Moulinex PerfectMix Plus, 1200 W, a un bol en verre de 2 litres et des lames Powelix pour un mixage rapide. Son programme de nettoyage automatique évite de démonter les lames après une sauce au piment. Une valeur sûre pour les mixages du quotidien.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
-        product: "blender-ninja-2-en-1",
-        mesure: 1200,
+        product: "blender-springlane-hanno-2000w",
         pourquoi:
-          "Ce Ninja de 1200 W associe un pichet de 2,1 litres et un gobelet de 700 ml. Ses programmes « hacher » et « réduire en purée » conviennent aux oignons et au piment comme aux bases de sauce. Le gobelet sert pour un jus de gingembre individuel.",
-        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "blender-philips-5000",
-        mesure: 1000,
-        pourquoi:
-          "Simple et peu encombrant, ce Philips de 1000 W fait circuler les ingrédients grâce à son bol nervuré pour une texture lisse. Le bol contient 2 litres, dont 1,5 litre utile. Il suffit pour les sauces et les jus d'une famille.",
+          "Même puissance, 2000 W, mais avec un atout pour la pâte d'arachide : un petit bol en inox de 750 ml prévu pour les purées de noix. Le grand bol mixe les sauces et les soupes, le petit broie les arachides grillées. Il pile aussi la glace pour les jus.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
         product: "blender-moulinex-blendforce",
-        mesure: 800,
         pourquoi:
           "Ce Moulinex Blendforce de 800 W mixe jusqu'à trois minutes en continu, et son moteur est refroidi par air. Le bol en verre de 1,75 litre supporte jusqu'à 80 °C. Un bon premier blender pour les bases tomate-oignon et les soupes.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
+        product: "blender-amzchef-2000w",
+        pourquoi:
+          "Le plus puissant de notre sélection avec le Springlane : 2000 W et jusqu'à 25 000 tours par minute. Ses huit lames en inox entraînent les ingrédients vers le bas, utile pour les bases ail-oignon-piment, les graines d'egusi ou les haricots trempés des akara. Le bol contient 2 litres.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
         product: "robot-moulinex-easy-force",
-        mesure: 800,
         pourquoi:
           "Plus qu'un blender : ce robot Moulinex de 800 W hache, émince, râpe, pétrit et mixe grâce à six accessoires. Il prépare en quelques secondes les oignons du yassa ou les légumes d'une sauce. Son bol de 3 litres range la plupart des accessoires.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
-        product: "mixeur-plongeant-moulinex-daily-chef",
-        mesure: 600,
+        product: "blender-philips-5000",
         pourquoi:
-          "Le mixeur plongeant se glisse directement dans la marmite : pratique pour lisser une soupe d'arachide ou une light soup sans transvaser. Ce Moulinex de 600 W a quatre lames en inox et un pied anti-éclaboussure. Il est livré avec un gobelet de 800 ml.",
-        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "hachoir-moulinex-choppeo",
-        mesure: 500,
-        pourquoi:
-          "Le moins puissant de notre sélection, mais le plus simple pour hacher : 500 W et un bol en verre d'un litre utile. Par impulsions, il garde des morceaux d'oignon ou de piment ; plus longtemps, il donne une purée d'ail et de gingembre. Il se range facilement.",
+          "Simple et peu encombrant, ce Philips de 1000 W fait circuler les ingrédients grâce à son bol nervuré pour une texture lisse. Le bol contient 2 litres, dont 1,5 litre utile. Il suffit pour les sauces et les jus d'une famille.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
     ],
@@ -571,17 +553,34 @@ export const demoTop10: Top10[] = [
     title: "Top 10 des épices et condiments africains",
     description:
       "Poivre de Selim, poivre de Penja, soumbala, berbéré, yaji : notre top 10 des épices et condiments, classés selon le nombre de recettes du site.",
-    intro:
-      "Notre sélection de dix épices et condiments d'Afrique subsaharienne, parmi ceux de la boutique. Ils sont classés selon le nombre de recettes du site qui les emploient. À égalité, le plus courant passe devant.",
+    intro: introNote("dix épices", true),
     updated: "2026-10-19",
-    rankBy: "recettes",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
       {
-        product: "poivre-de-selim",
+        product: "poivre-sauvage-voatsiperifery",
         pourquoi:
-          "Le poivre de Selim est l'épice la plus présente dans nos recettes : six plats l'emploient, du poulet yassa au café Touba. Ce sont les longues gousses sombres du Xylopia aethiopica, au parfum résineux, musqué et poivré, appelées djar au Sénégal. On les écrase pour les infuser dans les bouillons, ou on les moud avec le café. Il parfume aussi les soupes et les marinades d'Afrique de l'Ouest et centrale.",
-        recettes: ["poulet-yassa", "kelewele", "thiere-mbuum", "liboke-de-poisson", "cafe-touba", "pepper-soup"],
-        articles: ["utiliser-poivre-de-selim"],
+          "Le voatsiperifery est un poivre sauvage qui pousse sur des lianes dans les forêts de Madagascar. Ses baies à petite queue sont cueillies à la main, puis séchées. Son piquant est plus doux que celui du poivre noir, avec un parfum boisé et légèrement citronné. On le moud au dernier moment sur les poissons, les viandes blanches ou les légumes.",
+        recettes: [],
+      },
+      {
+        product: "vanille-bourbon-de-madagascar",
+        pourquoi:
+          "La vanille bourbon est cultivée à Madagascar, où chaque fleur est fécondée à la main ; les gousses sont ensuite échaudées, étuvées et séchées lentement. Elle parfume le dégué, la crème de mil au lait caillé de notre site, ainsi que les desserts et certaines sauces pour le poisson. On fend la gousse, on gratte les graines et on les infuse dans le lait chaud.",
+        recettes: ["degue"],
+      },
+      {
+        product: "maniguette",
+        pourquoi:
+          "La maniguette, ou graine de paradis, pousse en gousses sur une plante des côtes d'Afrique de l'Ouest. Ses petites graines brunes ont un piquant proche du poivre, avec des touches citronnées et florales. Elle parfume les sauces, les grillades et les bouillons. On l'écrase au mortier et on l'ajoute en fin de cuisson.",
+        recettes: [],
+      },
+      {
+        product: "piment-pili-pili",
+        pourquoi:
+          "Petit, rouge vif et très piquant, le pili-pili, ou piment oiseau, est présent de Dakar à Kinshasa. Séché entier, il garde son parfum fruité et sa force. On le met entier dans le poulet yassa pour une chaleur douce, puis on le retire avant de servir, ou on l'écrase au mortier pour un piquant franc. Pensez à vous laver les mains après l'avoir manipulé.",
+        recettes: ["poulet-yassa"],
       },
       {
         product: "poivre-de-penja",
@@ -597,6 +596,12 @@ export const demoTop10: Top10[] = [
         articles: ["quest-ce-que-le-soumbala", "par-quoi-remplacer-le-soumbala"],
       },
       {
+        product: "assaisonnement-jollof",
+        pourquoi:
+          "Le riz jollof, riz rouge cuit dans une sauce tomate épicée, se dispute entre le Nigeria et le Ghana. Ce mélange prêt à l'emploi réunit les épices et aromates qui lui donnent sa couleur et son parfum, sans multiplier les pots. On l'ajoute à la base tomate-oignon-piment une fois qu'elle a bien réduit, avant le riz et le bouillon.",
+        recettes: ["riz-jollof"],
+      },
+      {
         product: "berbere",
         pourquoi:
           "Le berbéré est le mélange d'épices rouge et relevé de la cuisine éthiopienne : on y trouve le plus souvent du piment, du fenugrec, du gingembre, de l'ail et des épices chaudes. Il parfume et colore les wats servis sur l'injera, et trois recettes du site l'emploient. On le fait d'abord revenir dans le beurre ou l'huile avec les oignons.",
@@ -604,41 +609,17 @@ export const demoTop10: Top10[] = [
         articles: ["quest-ce-que-le-berbere"],
       },
       {
-        product: "pebe-moulu",
+        product: "poivre-de-selim",
         pourquoi:
-          "Le pèbè est la graine du Monodora myristica, appelée muscade africaine, aux notes plus douces et légèrement épicées que la muscade. Au Cameroun, il entre dans les épices du poisson braisé et de nombreuses sauces. Nos recettes de pepper soup et de mbongo tchobi l'emploient. On en ajoute une pincée dans le bouillon, ou on le mélange à l'ail et au gingembre pour mariner.",
-        recettes: ["pepper-soup", "mbongo-tchobi"],
+          "Le poivre de Selim est l'épice la plus présente dans nos recettes : six plats l'emploient, du poulet yassa au café Touba. Ce sont les longues gousses sombres du Xylopia aethiopica, au parfum résineux, musqué et poivré, appelées djar au Sénégal. On les écrase pour les infuser dans les bouillons, ou on les moud avec le café. Il parfume aussi les soupes et les marinades d'Afrique de l'Ouest et centrale.",
+        recettes: ["poulet-yassa", "kelewele", "thiere-mbuum", "liboke-de-poisson", "cafe-touba", "pepper-soup"],
+        articles: ["utiliser-poivre-de-selim"],
       },
       {
-        product: "yaji-suya",
+        product: "essesse-sassas",
         pourquoi:
-          "Le yaji est le mélange qui enrobe le suya, la brochette grillée vendue dans les rues du Nigeria. Il associe généralement arachide grillée moulue, piment, gingembre et autres épices, et donne à la viande un enrobage relevé et légèrement croustillant. On en frotte la viande avant de la griller, puis on en saupoudre à la sortie du feu.",
-        recettes: ["suya"],
-        articles: ["quest-ce-que-le-yaji"],
-      },
-      {
-        product: "assaisonnement-jollof",
-        pourquoi:
-          "Le riz jollof, riz rouge cuit dans une sauce tomate épicée, se dispute entre le Nigeria et le Ghana. Ce mélange prêt à l'emploi réunit les épices et aromates qui lui donnent sa couleur et son parfum, sans multiplier les pots. On l'ajoute à la base tomate-oignon-piment une fois qu'elle a bien réduit, avant le riz et le bouillon.",
-        recettes: ["riz-jollof"],
-      },
-      {
-        product: "piment-pili-pili",
-        pourquoi:
-          "Petit, rouge vif et très piquant, le pili-pili, ou piment oiseau, est présent de Dakar à Kinshasa. Séché entier, il garde son parfum fruité et sa force. On le met entier dans le poulet yassa pour une chaleur douce, puis on le retire avant de servir, ou on l'écrase au mortier pour un piquant franc. Pensez à vous laver les mains après l'avoir manipulé.",
-        recettes: ["poulet-yassa"],
-      },
-      {
-        product: "graines-d-egusi",
-        pourquoi:
-          "L'egusi, parfois appelé pistache africaine, désigne les graines de certaines courges et melons d'Afrique de l'Ouest. Moulues, elles ont un goût doux qui rappelle la noisette. Elles épaississent et parfument la soupe egusi, grand classique du Nigeria et du Ghana. On délaie la poudre dans un peu d'eau avant de l'ajouter à la sauce.",
-        recettes: ["soupe-egusi"],
-      },
-      {
-        product: "vanille-bourbon-de-madagascar",
-        pourquoi:
-          "La vanille bourbon est cultivée à Madagascar, où chaque fleur est fécondée à la main ; les gousses sont ensuite échaudées, étuvées et séchées lentement. Elle parfume le dégué, la crème de mil au lait caillé de notre site, ainsi que les desserts et certaines sauces pour le poisson. On fend la gousse, on gratte les graines et on les infuse dans le lait chaud.",
-        recettes: ["degue"],
+          "L'essessè est une épice de la cuisine camerounaise, séchée puis réduite en poudre. Elle apporte un parfum boisé, légèrement sucré et fumé. On l'associe au pèbè et au djansang dans les soupes, les bouillons de poisson et les sauces jaunes. Une petite pincée suffit, en début de cuisson.",
+        recettes: [],
       },
     ],
     guide: [
@@ -907,38 +888,40 @@ export const demoTop10: Top10[] = [
     title: "Top 10 des thés et cafés d'Afrique",
     description:
       "Cafés d'Éthiopie, du Kenya, du Rwanda et du Cameroun, kinkeliba, rooibos : notre top 10 des thés et cafés d'Afrique, avec nos recettes et conseils.",
-    intro:
-      "Notre sélection de dix cafés, thés et infusions d'Afrique, parmi ceux de la boutique. Ils sont classés selon le nombre de recettes et d'articles Conseils du site qui en parlent. À égalité, le plus courant passe devant.",
+    intro: introNote("dix cafés, thés et infusions d'Afrique", false),
     updated: "2026-10-19",
-    rankBy: "recettes-et-articles",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
       {
-        product: "cafe-yirgacheffe",
+        product: "rooibos-vert",
         pourquoi:
-          "Yirgacheffe, dans le sud de l'Éthiopie, est l'une des régions de café les plus réputées au monde. Ses cafés lavés offrent une tasse légère, aux notes de fleurs blanches et d'agrumes. C'est le café de notre buna, préparé comme lors de la cérémonie, et deux de nos articles en parlent. À moudre juste avant la préparation.",
-        recettes: ["buna-cafe-ethiopien"],
-        articles: ["ceremonie-du-cafe-ethiopienne", "cafes-ethiopie-kenya-rwanda"],
+          "Le rooibos vert vient, comme le rouge, de la région du Cederberg, en Afrique du Sud. Ses feuilles sont séchées sans fermentation : l'infusion est plus claire, avec un goût végétal et légèrement miellé. Il s'infuse dans une eau juste avant l'ébullition et se boit chaud ou glacé, avec un zeste d'orange.",
+        recettes: [],
       },
       {
-        product: "cafe-vert-du-cameroun",
+        product: "the-noir-du-kenya-cardamome",
         pourquoi:
-          "Dans l'Ouest du Cameroun, de nombreuses familles torréfient encore leur café à la poêle. Ces grains verts permettent de retrouver ce geste et de choisir son degré de torréfaction. Ils servent à notre café Touba, et notre article explique comment les torréfier à la maison. Une fois grillés, ils se moulent et se préparent comme n'importe quel café.",
-        recettes: ["cafe-touba"],
-        articles: ["torrefier-cafe-vert-maison"],
+          "La cardamome parfume le thé dans toute l'Afrique de l'Est, de Mombasa à Zanzibar. Ce thé noir corsé est déjà aromatisé : il suffit de l'infuser. Préparé en chai, bouilli avec du lait et du sucre, il remplace le thé nature et les gousses de cardamome de notre chai kényan.",
+        recettes: ["chai-kenyan"],
       },
       {
-        product: "cafe-harrar",
+        product: "rooibos",
         pourquoi:
-          "La région de Harrar, à l'est de l'Éthiopie, produit un café séché dans son fruit, au soleil. Il en ressort une tasse corsée et fruitée, avec des notes de cacao : l'un des cafés les plus typés du pays. Il donne un buna plus puissant, et convient aussi à la cafetière italienne et à l'expresso.",
-        recettes: ["buna-cafe-ethiopien"],
-        articles: ["ceremonie-du-cafe-ethiopienne"],
+          "Le rooibos est un arbuste qui pousse principalement dans la région du Cederberg, en Afrique du Sud. Ses feuilles fermentées puis séchées donnent une infusion rouge ambré, au goût doux et légèrement vanillé. Il se boit à toute heure, chaud avec du lait et du miel, ou glacé au citron comme dans notre recette.",
+        recettes: ["rooibos-glace"],
       },
       {
-        product: "cafe-du-kenya",
+        product: "the-noir-du-kenya",
         pourquoi:
-          "Les cafés du Kenya poussent sur les hauts plateaux, au pied du mont Kenya. Ils sont réputés pour leur acidité vive et leurs notes de fruits rouges et d'agrumes. Sur la côte, on en fait le kahawa chungu, un café noir parfumé à la cardamome et au gingembre. En grains, ils gardent tout leur parfum jusqu'à la mouture.",
-        recettes: ["kahawa-chungu"],
-        articles: ["cafes-ethiopie-kenya-rwanda"],
+          "Le Kenya est l'un des grands producteurs de thé noir au monde. Ses thés, cultivés sur les hauts plateaux, sont corsés et donnent une infusion très colorée. Au Kenya, il se prépare en chai : bouilli dans un mélange d'eau et de lait, sucré, parfois épicé, puis filtré, comme dans notre recette.",
+        recettes: ["chai-kenyan"],
+      },
+      {
+        product: "cafe-de-tanzanie",
+        pourquoi:
+          "La Tanzanie cultive le café sur les pentes de ses montagnes, notamment autour du Kilimandjaro. Ses cafés sont vifs et équilibrés, avec un goût fruité. En grains, ils se moulent juste avant la préparation et conviennent bien au filtre et à la cafetière à piston.",
+        recettes: [],
       },
       {
         product: "cafe-du-rwanda",
@@ -948,11 +931,17 @@ export const demoTop10: Top10[] = [
         articles: ["cafes-ethiopie-kenya-rwanda"],
       },
       {
-        product: "cafe-moka-sidamo",
+        product: "cafe-yirgacheffe",
         pourquoi:
-          "L'Éthiopie est le berceau de l'arabica. Dans la région de Sidamo, au sud du pays, le café pousse en altitude et offre une tasse florale, fruitée et délicate. Il convient très bien à notre buna, servi en trois tournées. Moulu, il se prépare aussi au filtre ou à la cafetière à piston.",
+          "Yirgacheffe, dans le sud de l'Éthiopie, est l'une des régions de café les plus réputées au monde. Ses cafés lavés offrent une tasse légère, aux notes de fleurs blanches et d'agrumes. C'est le café de notre buna, préparé comme lors de la cérémonie, et deux de nos articles en parlent. À moudre juste avant la préparation.",
         recettes: ["buna-cafe-ethiopien"],
-        articles: ["cafe-en-grains-ou-moulu"],
+        articles: ["ceremonie-du-cafe-ethiopienne", "cafes-ethiopie-kenya-rwanda"],
+      },
+      {
+        product: "kinkeliba",
+        pourquoi:
+          "Le kinkeliba est un arbuste du Sahel dont on infuse les feuilles séchées. Il donne une boisson ambrée au goût boisé et légèrement amer. Au Sénégal, on le boit le matin, sucré, avec du pain, et il est très présent au moment du ramadan. Notre recette explique comment le faire frémir puis le filtrer.",
+        recettes: ["kinkeliba"],
       },
       {
         product: "cafe-d-ethiopie-bio",
@@ -962,22 +951,10 @@ export const demoTop10: Top10[] = [
         articles: ["cafe-en-grains-ou-moulu"],
       },
       {
-        product: "kinkeliba",
+        product: "cafe-du-burundi",
         pourquoi:
-          "Le kinkeliba est un arbuste du Sahel dont on infuse les feuilles séchées. Il donne une boisson ambrée au goût boisé et légèrement amer. Au Sénégal, on le boit le matin, sucré, avec du pain, et il est très présent au moment du ramadan. Notre recette explique comment le faire frémir puis le filtrer.",
-        recettes: ["kinkeliba"],
-      },
-      {
-        product: "the-noir-du-kenya",
-        pourquoi:
-          "Le Kenya est l'un des grands producteurs de thé noir au monde. Ses thés, cultivés sur les hauts plateaux, sont corsés et donnent une infusion très colorée. Au Kenya, il se prépare en chai : bouilli dans un mélange d'eau et de lait, sucré, parfois épicé, puis filtré, comme dans notre recette.",
-        recettes: ["chai-kenyan"],
-      },
-      {
-        product: "rooibos",
-        pourquoi:
-          "Le rooibos est un arbuste qui pousse principalement dans la région du Cederberg, en Afrique du Sud. Ses feuilles fermentées puis séchées donnent une infusion rouge ambré, au goût doux et légèrement vanillé. Il se boit à toute heure, chaud avec du lait et du miel, ou glacé au citron comme dans notre recette.",
-        recettes: ["rooibos-glace"],
+          "Au Burundi, au cœur de l'Afrique des Grands Lacs, le café est cultivé en altitude par de petits producteurs, sur les collines. Il donne une tasse sucrée et fruitée, à l'acidité douce. Il se moud juste avant la préparation et se prête à toutes les méthodes, du filtre à l'expresso.",
+        recettes: [],
       },
     ],
     guide: [
@@ -1023,16 +1000,23 @@ export const demoTop10: Top10[] = [
     seoTitle: "Top 10 du service et du thé à l'africaine",
     description:
       "Théière et verres pour l'ataya, bouilloire émaillée, saladiers et bols en bois, plateaux : notre top 10 pour servir le repas et le thé à l'africaine.",
-    intro:
-      "Notre sélection de dix objets pour servir le repas et le thé, parmi ceux de la boutique. Ils sont classés selon le nombre de recettes et d'articles Conseils du site qui en parlent. À égalité, le plus courant passe devant.",
+    intro: introNote("dix objets pour servir le repas et le thé", false),
     updated: "2026-10-19",
-    rankBy: "recettes-et-articles",
+    rankBy: "note-acheteurs",
+    classementLe: RELEVE,
     items: [
       {
-        product: "saladier-en-bois",
+        product: "plateau-acacia-amazon-basics",
         pourquoi:
-          "Dans beaucoup de cuisines africaines, on partage le repas autour d'un plat commun : ce grand saladier en acacia de 26 cm s'y prête bien. Quatre recettes du site commencent dans un saladier, de la pâte de l'injera à celle des puff-puff. Il met aussi en valeur le thiakry ou l'attiéké.",
-        recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
+          "Un plateau en acacia de 43 × 30 cm à poignées intégrées, pour porter le thé, les beignets ou les petits plats à table. Chaque plateau a son propre motif de veines de bois. On l'essuie avec un chiffon humide, sans le laisser tremper.",
+        recettes: ["chai-kenyan", "puff-puff", "akara"],
+      },
+      {
+        product: "verres-a-the-et-soucoupes-pasabahce",
+        pourquoi:
+          "Six petits verres à thé d'environ 155 ml, au ventre arrondi, et leurs six soucoupes : de quoi servir le thé à six sans marquer la table. La soucoupe permet aussi de tenir le verre chaud. Une autre option pour l'ataya, plus classique.",
+        recettes: ["ataya"],
+        articles: ["comment-preparer-l-ataya"],
       },
       {
         product: "saladiers-acacia-lot-de-2",
@@ -1041,10 +1025,35 @@ export const demoTop10: Top10[] = [
         recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
       },
       {
-        product: "plateau-acacia-amazon-basics",
+        product: "plateau-rond-bambou-40-cm",
         pourquoi:
-          "Un plateau en acacia de 43 × 30 cm à poignées intégrées, pour porter le thé, les beignets ou les petits plats à table. Chaque plateau a son propre motif de veines de bois. On l'essuie avec un chiffon humide, sans le laisser tremper.",
-        recettes: ["chai-kenyan", "puff-puff", "akara"],
+          "Ce grand plateau rond en bambou de 40 cm accueille la théière et tous les verres de l'ataya, ou les petites tasses du café éthiopien. Ses deux poignées intégrées assurent une prise stable. Il s'essuie avec un chiffon humide.",
+        recettes: ["ataya", "buna-cafe-ethiopien"],
+      },
+      {
+        product: "verres-a-the",
+        pourquoi:
+          "Au Sénégal, l'ataya se sert dans de petits verres facettés. On fait passer le thé d'un verre à l'autre pour former la mousse. Ce lot de six verres de 210 ml accompagne la théière pour les trois services.",
+        recettes: ["ataya"],
+        articles: ["comment-preparer-l-ataya"],
+      },
+      {
+        product: "bols-noix-de-coco-lot-de-2",
+        pourquoi:
+          "Deux bols taillés à la main dans des coquilles de noix de coco, polis à l'huile de coco, avec leurs cuillères. Ils conviennent aux fruits, aux salades de fruits et aux desserts comme le thiakry. Ils se lavent à l'eau tiède, sans lave-vaisselle ni micro-ondes.",
+        recettes: ["thiakry", "degue"],
+      },
+      {
+        product: "bouilloire-emaillee",
+        pourquoi:
+          "Les bouilloires émaillées colorées font partie du paysage de nombreuses cuisines africaines. Posée directement sur le feu, celle-ci chauffe l'eau de l'ataya et fait frémir le kinkeliba du matin. Elle contient 2,4 litres.",
+        recettes: ["ataya", "kinkeliba"],
+      },
+      {
+        product: "saladier-en-bois",
+        pourquoi:
+          "Dans beaucoup de cuisines africaines, on partage le repas autour d'un plat commun : ce grand saladier en acacia de 26 cm s'y prête bien. Quatre recettes du site commencent dans un saladier, de la pâte de l'injera à celle des puff-puff. Il met aussi en valeur le thiakry ou l'attiéké.",
+        recettes: ["injera", "puff-puff", "jus-de-bouye", "jus-de-gingembre"],
       },
       {
         product: "bols-manguier-lot-de-3",
@@ -1058,38 +1067,6 @@ export const demoTop10: Top10[] = [
           "La théière de l'ataya : en inox, de 1,2 litre, avec une forme ventrue et un long bec qui permet de verser le thé de haut pour former la mousse. Elle se pose directement sur le feu. Notre recette et notre article expliquent comment préparer l'ataya en trois tournées.",
         recettes: ["ataya"],
         articles: ["comment-preparer-l-ataya"],
-      },
-      {
-        product: "verres-a-the",
-        pourquoi:
-          "Au Sénégal, l'ataya se sert dans de petits verres facettés. On fait passer le thé d'un verre à l'autre pour former la mousse. Ce lot de six verres de 210 ml accompagne la théière pour les trois services.",
-        recettes: ["ataya"],
-        articles: ["comment-preparer-l-ataya"],
-      },
-      {
-        product: "verres-a-the-et-soucoupes-pasabahce",
-        pourquoi:
-          "Six petits verres à thé d'environ 155 ml, au ventre arrondi, et leurs six soucoupes : de quoi servir le thé à six sans marquer la table. La soucoupe permet aussi de tenir le verre chaud. Une autre option pour l'ataya, plus classique.",
-        recettes: ["ataya"],
-        articles: ["comment-preparer-l-ataya"],
-      },
-      {
-        product: "bouilloire-emaillee",
-        pourquoi:
-          "Les bouilloires émaillées colorées font partie du paysage de nombreuses cuisines africaines. Posée directement sur le feu, celle-ci chauffe l'eau de l'ataya et fait frémir le kinkeliba du matin. Elle contient 2,4 litres.",
-        recettes: ["ataya", "kinkeliba"],
-      },
-      {
-        product: "plateau-rond-bambou-40-cm",
-        pourquoi:
-          "Ce grand plateau rond en bambou de 40 cm accueille la théière et tous les verres de l'ataya, ou les petites tasses du café éthiopien. Ses deux poignées intégrées assurent une prise stable. Il s'essuie avec un chiffon humide.",
-        recettes: ["ataya", "buna-cafe-ethiopien"],
-      },
-      {
-        product: "bols-noix-de-coco-lot-de-2",
-        pourquoi:
-          "Deux bols taillés à la main dans des coquilles de noix de coco, polis à l'huile de coco, avec leurs cuillères. Ils conviennent aux fruits, aux salades de fruits et aux desserts comme le thiakry. Ils se lavent à l'eau tiède, sans lave-vaisselle ni micro-ondes.",
-        recettes: ["thiakry", "degue"],
       },
     ],
     guide: [
@@ -1121,3 +1098,10 @@ export const demoTop10: Top10[] = [
     ],
   },
 ];
+
+/** Les onglets classés selon la note des acheteurs nomment leur n° 1 à la fin de l'introduction. */
+export const demoTop10: Top10[] = tops.map((t) => {
+  if (t.rankBy !== "note-acheteurs") return t;
+  const first = demoProducts.find((p) => p.slug === t.items[0].product);
+  return first ? { ...t, intro: `${t.intro} N° 1 : ${first.name}.` } : t;
+});

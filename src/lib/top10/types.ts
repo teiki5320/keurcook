@@ -1,6 +1,6 @@
 /**
  * Page « Top 10 » (/top-10/<sujet>) : un onglet par sujet, chacun avec exactement dix vrais produits
- * de la boutique, classés selon la règle donnée dans l'introduction. Ni prix ni note.
+ * de la boutique, classés selon la règle donnée dans l'introduction. Ni prix ni note affichés.
  */
 
 /** Texte avec liens internes : chaînes et liens mis bout à bout. */
@@ -30,12 +30,18 @@ export interface Top10 {
   seoTitle?: string;
   /** Description pour Google (≤ 160 caractères). */
   description: string;
-  /** 2 ou 3 phrases : comment le classement est fait. */
+  /** Comment le classement est fait (onglets classés selon la note des acheteurs : texte commun, puis le n° 1). */
   intro: string;
   /** Date de mise à jour (AAAA-MM-JJ). */
   updated: string;
-  /** Règle de classement annoncée dans l'introduction (vérifiée par les tests). */
-  rankBy: "recettes" | "recettes-et-articles" | "taille" | "contenance" | "pages" | "puissance";
+  /**
+   * Règle de classement annoncée dans l'introduction. « note-acheteurs » : note moyenne des acheteurs
+   * sur Amazon.fr relevée le `classementLe`, à égalité le plus évalué devant ; produits disponibles
+   * avec au moins 10 évaluations. Les autres règles sont vérifiées par les tests.
+   */
+  rankBy: "note-acheteurs" | "recettes" | "recettes-et-articles" | "taille" | "contenance" | "pages" | "puissance";
+  /** Date du relevé des notes (AAAA-MM-JJ), pour « note-acheteurs ». */
+  classementLe?: string;
   /** Exactement dix produits, du 1er au 10e. */
   items: Top10Item[];
   /** « Comment choisir » : quelques conseils courts. */

@@ -17,12 +17,16 @@ const plain = (value: RichText) => value.map((p) => (typeof p === "string" ? p :
 const links = (value: RichText) => value.flatMap((p) => (typeof p === "string" ? [] : [p.href]));
 const conseilFile = (slug: string) => join(process.cwd(), "content", "conseils", `${slug}.md`);
 
+/** Texte commun des onglets classés selon la note des acheteurs : il nomme la note et précise qu'elle n'est pas affichée. */
+const CRITERE = /^Notre sélection de .+, classée?s selon la note moyenne des acheteurs sur Amazon\.fr, relevée le \d{1,2} \S+ \d{4} ; à égalité, (le|la) plus évaluée? passe devant\. Seuls les produits disponibles avec au moins 10 évaluations sont retenus\. Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces produits\. /;
+
 function texts(t: Top10): string[] {
   return [
     t.tab,
     t.title,
     t.description,
-    t.intro,
+    // Onglets classés selon la note : seul ce qui suit le texte commun est contrôlé ici.
+    t.rankBy === "note-acheteurs" ? t.intro.replace(CRITERE, "") : t.intro,
     ...t.items.map((it) => it.pourquoi),
     ...t.guide.map(plain),
     ...t.faq.flatMap((q) => [q.question, plain(q.reponse)]),
@@ -64,6 +68,14 @@ describe("Top 10", () => {
       });
 
       it("classement conforme à la règle annoncée", () => {
+        if (t.rankBy === "note-acheteurs") {
+          // Les notes ne sont pas enregistrées : l'ordre vient du relevé du jour indiqué.
+          assert.match(t.classementLe ?? "", /^\d{4}-\d{2}-\d{2}$/);
+          assert.match(t.intro, CRITERE);
+          const first = demoProducts.find((p) => p.slug === t.items[0].product)!;
+          assert.ok(t.intro.endsWith(`N° 1 : ${first.name}.`), "le n° 1 doit être nommé à la fin de l'introduction");
+          return;
+        }
         const parMesure = ["taille", "contenance", "pages", "puissance"].includes(t.rankBy);
         if (parMesure) assert.ok(t.items.every((it) => typeof it.mesure === "number"), "mesure manquante");
         const score = (it: Top10["items"][number]) =>
@@ -90,6 +102,15 @@ describe("Top 10", () => {
 
       it("aucune allégation de santé", () => {
         assert.deepEqual(findHealthClaims(...texts(t)), []);
+      });
+
+      it("aucune note, aucune étoile, aucun nombre d'avis, ni enregistrés ni affichés", () => {
+        assert.doesNotMatch(JSON.stringify(t), /"(note|notes|etoiles|avis|evaluations)"\s*:/);
+        for (const text of texts(t)) assert.doesNotMatch(text, /★|\d\s*(,\d)?\s*(\/|sur)\s*5\b|\d\s*(avis|évaluations)\b/, text);
+      });
+
+      it("image de partage", () => {
+        assert.ok(existsSync(join(process.cwd(), "public", "top10", `${t.slug}.jpg`)), "lancer : npx tsx scripts/images-top10.ts");
       });
 
       it("aucun vocabulaire de vente, de prix, de note ou d'essai", () => {
