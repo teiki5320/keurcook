@@ -170,7 +170,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     servings: 4,
     difficulty: 1,
     ingredients: [
-      [400, "g", "farine de maïs blanc fine"],
+      [400, "g", "farine de maïs blanc fine", "farine-de-mais-blanc"],
       [1, "l", "eau"],
       [1, "botte", "chou cavalier (collard) ou chou kale"],
       [1, null, "oignon"],

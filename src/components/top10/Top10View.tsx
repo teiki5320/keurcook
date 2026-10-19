@@ -7,6 +7,7 @@ import { AMAZON_DISCLOSURE, amazonUrl } from "@/lib/amazon";
 import { siteConfig } from "@/lib/config";
 import type { ResolvedTop10Item } from "@/lib/data/top10";
 import { breadcrumbLd, itemListLd, JsonLdScript } from "@/lib/json-ld";
+import { TabsStrip } from "./TabsStrip";
 import type { RichText as RichTextValue, Top10 } from "@/lib/top10/types";
 
 const linkClass = "font-semibold text-[#ffc46b] underline underline-offset-2 hover:text-[#ff7a3d]";
@@ -63,7 +64,7 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
       </nav>
 
       {/* Onglets : sur téléphone, la bande défile seule de côté, sans faire défiler la page. */}
-      <nav aria-label="Sujets du top 10" className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:px-0">
+      <TabsStrip>
         <ul className="flex w-max gap-2 sm:w-auto sm:flex-wrap">
           {tops.map((t) => {
             const current = t.slug === active.slug;
@@ -82,7 +83,7 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
             );
           })}
         </ul>
-      </nav>
+      </TabsStrip>
 
       <header className="mt-8 max-w-4xl">
         <p className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">

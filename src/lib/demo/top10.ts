@@ -117,6 +117,122 @@ export const demoTop10: Top10[] = [
     ],
   },
   {
+    slug: "ingredients-cuisine-africaine",
+    tab: "Ingrédients",
+    title: "Top 10 des ingrédients pour débuter la cuisine africaine",
+    seoTitle: "Top 10 des ingrédients de la cuisine africaine",
+    description:
+      "Pâte d'arachide, poivre de Selim, huile de palme rouge, soumbala : notre top 10 des ingrédients, classés selon le nombre de recettes du site qui les emploient.",
+    intro:
+      "Notre sélection de dix ingrédients de la boutique pour se lancer. Ils sont classés selon le nombre de recettes du site qui les emploient : avec les premiers, vous pouvez déjà cuisiner une bonne partie de nos plats. À égalité, le plus courant passe devant.",
+    updated: "2026-10-19",
+    rankBy: "recettes",
+    items: [
+      {
+        product: "pate-d-arachide",
+        pourquoi:
+          "C'est l'ingrédient le plus employé du site : sept recettes, du mafé à la groundnut soup du Ghana. Obtenue en broyant des arachides grillées, elle forme une pâte épaisse qui, selon les marques, contient du sel ou de l'huile végétale. On la délaie dans un peu de bouillon chaud avant de l'ajouter à la sauce. Bien fermée, elle se garde plusieurs semaines.",
+        recettes: ["mafe", "fonio-aux-legumes", "thiere-mbuum", "moambe", "luwombo", "ngalakh", "groundnut-soup"],
+        articles: ["combien-de-temps-se-garde-la-pate-d-arachide"],
+      },
+      {
+        product: "poivre-de-selim",
+        pourquoi:
+          "Six recettes du site l'emploient, du poulet yassa au café Touba. Ce sont les longues gousses sombres du Xylopia aethiopica, au parfum résineux, musqué et poivré, appelées djar au Sénégal. On les écrase pour les infuser dans les bouillons, ou on les moud avec le café. Quelques gousses suffisent.",
+        recettes: ["poulet-yassa", "kelewele", "thiere-mbuum", "liboke-de-poisson", "cafe-touba", "pepper-soup"],
+        articles: ["utiliser-poivre-de-selim"],
+      },
+      {
+        product: "huile-de-palme-rouge",
+        pourquoi:
+          "Six recettes du site reposent sur elle, dont le pondu, l'eru et la soupe egusi. Extraite de la pulpe des fruits du palmier à huile et non raffinée, elle garde sa couleur orangée et son goût fruité. On la chauffe doucement, sans la faire fumer. Elle fige au frais : c'est normal.",
+        recettes: ["pondu", "soupe-egusi", "eru", "koki", "poulet-odika", "mbongo-tchobi"],
+        articles: ["huile-de-palme-rouge-ou-raffinee", "remplacer-huile-de-palme-rouge"],
+      },
+      {
+        product: "poivre-de-penja",
+        pourquoi:
+          "Cinq recettes du site le demandent, dont le ndolé, le poulet DG et le kedjenou. Cultivé dans la région de Penja, au Cameroun, ce poivre blanc offre un piquant net et des notes boisées et musquées. On le moud au dernier moment, en fin de cuisson, pour garder tout son parfum.",
+        recettes: ["ndole", "poisson-braise-attieke", "kedjenou", "caldou", "poulet-dg"],
+      },
+      {
+        product: "soumbala",
+        pourquoi:
+          "Le soumbala, ou nététou, est fait de graines de néré cuites puis fermentées. Il donne au mafé, au thiéboudienne et aux sauces un goût profond, proche de l'umami : quatre recettes du site l'emploient. Son odeur est forte, mais un petit morceau écrasé en début de cuisson suffit.",
+        recettes: ["mafe", "thieboudienne", "fonio-aux-legumes", "to-sauce-gombo"],
+        articles: ["quest-ce-que-le-soumbala", "par-quoi-remplacer-le-soumbala"],
+      },
+      {
+        product: "couscous-de-mil",
+        pourquoi:
+          "Au Sénégal, la farine de mil est roulée en petits grains puis cuite à la vapeur pour donner le thiéré, au goût plus rustique que la semoule de blé. Quatre recettes du site l'emploient : le thiéré mbuum, le thiakry, le ngalakh et le dégué. Il se cuit à la vapeur, jamais dans l'eau, de préférence en deux fois.",
+        recettes: ["thiakry", "thiere-mbuum", "ngalakh", "degue"],
+        articles: ["cuire-le-couscous-de-mil"],
+      },
+      {
+        product: "berbere",
+        pourquoi:
+          "Le berbéré est le mélange d'épices rouge et relevé de la cuisine éthiopienne : piment, fenugrec, gingembre, ail et épices chaudes, le plus souvent. Il parfume les wats servis sur l'injera, et trois recettes du site l'emploient. On le fait d'abord revenir dans le beurre ou l'huile avec les oignons.",
+        recettes: ["doro-wat", "misir-wat", "shiro"],
+        articles: ["quest-ce-que-le-berbere"],
+      },
+      {
+        product: "crevettes-sechees",
+        pourquoi:
+          "Séchées, parfois fumées, les crevettes concentrent un goût marin prononcé, courant dans les cuisines d'Afrique de l'Ouest et centrale. Trois recettes du site les emploient : le ndolé, la soupe egusi et l'eru. On les rince rapidement, puis on les ajoute entières en fin de cuisson ou moulues dans la sauce.",
+        recettes: ["ndole", "soupe-egusi", "eru"],
+      },
+      {
+        product: "pulpe-de-noix-de-palme",
+        pourquoi:
+          "Extraite des noix de palme cuites et pilées, cette pulpe onctueuse évite la longue préparation des noix fraîches. Elle sert de base à trois recettes du site : la sauce graine, le poulet nyembwe et la moambé. On la dilue dans l'eau et on la fait réduire lentement jusqu'à ce que l'huile remonte.",
+        recettes: ["poulet-nyembwe", "sauce-graine", "moambe"],
+      },
+      {
+        product: "attieke-sec",
+        pourquoi:
+          "L'attiéké est une semoule de manioc fermenté au goût légèrement acidulé, emblématique de la cuisine ivoirienne. La version déshydratée se garde longtemps et se réhydrate en quelques minutes. Nos recettes de garba et de poisson braisé à l'attiéké l'emploient, avec oignons, tomate et piment.",
+        recettes: ["poisson-braise-attieke", "garba"],
+        articles: ["reussir-attieke-maison"],
+      },
+    ],
+    guide: [
+      ["Commencez par une recette simple, comme le mafé ou le poulet yassa : la pâte d'arachide et le poivre de Selim y suffisent pour une bonne partie du goût."],
+      ["Privilégiez les produits qui se gardent longtemps : pâte d'arachide, crevettes séchées, couscous de mil, attiéké déshydraté."],
+      [
+        "Ajoutez ensuite deux ou trois épices clés. Voir ",
+        { href: "/conseils/ingredients-placard-cuisine-africaine", label: "les ingrédients à avoir dans son placard" },
+        ".",
+      ],
+    ],
+    faq: [
+      {
+        question: "Par quelle recette commencer ?",
+        reponse: [
+          "Par un plat mijoté à base d'ingrédients courants, comme le poulet yassa ou le mafé : ils demandent surtout du temps, pas de technique particulière. Voir ",
+          { href: "/conseils/par-quelle-recette-commencer", label: "notre conseil" },
+          ".",
+        ],
+      },
+      {
+        question: "Par quoi remplacer l'huile de palme rouge ?",
+        reponse: [
+          "Aucune huile ne la remplace parfaitement. Le plus proche est la pulpe de noix de palme ; sinon, une huile neutre colorée au paprika doux redonne la couleur, mais pas tout le goût. Voir ",
+          { href: "/conseils/remplacer-huile-de-palme-rouge", label: "remplacer l'huile de palme rouge" },
+          ".",
+        ],
+      },
+      {
+        question: "Combien de temps se garde la pâte d'arachide ?",
+        reponse: [
+          "Bien fermée et entamée avec une cuillère propre, plusieurs semaines, souvent davantage ; la durée exacte figure sur l'étiquette. Voir ",
+          { href: "/conseils/combien-de-temps-se-garde-la-pate-d-arachide", label: "notre conseil" },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
     slug: "epices-africaines",
     tab: "Épices",
     title: "Top 10 des épices et condiments africains",
@@ -223,6 +339,124 @@ export const demoTop10: Top10[] = [
         reponse: [
           "Écrasez les gousses et infusez-les dans les bouillons, ou moulez-les avec le café pour le café Touba. Voir ",
           { href: "/conseils/utiliser-poivre-de-selim", label: "comment utiliser le poivre de Selim" },
+          ".",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "farines-africaines",
+    tab: "Farines",
+    title: "Top 10 des fonios, garis et farines africaines",
+    description:
+      "Couscous de mil, attiéké, farine de maïs blanc, fonio, gari, farine de teff : notre top 10, classé selon le nombre de recettes du site qui les emploient.",
+    intro:
+      "Notre sélection de dix céréales, semoules et farines d'Afrique, parmi celles de la boutique. Elles sont classées selon le nombre de recettes du site qui les emploient. À égalité, la plus courante passe devant.",
+    updated: "2026-10-19",
+    rankBy: "recettes",
+    items: [
+      {
+        product: "couscous-de-mil",
+        pourquoi:
+          "Au Sénégal, la farine de mil est roulée en petits grains puis cuite à la vapeur pour donner le thiéré. C'est la semoule la plus employée du site : quatre recettes, du thiéré mbuum au thiakry et au dégué. Il se cuit à la vapeur, jamais dans l'eau, de préférence en deux fois.",
+        recettes: ["thiakry", "thiere-mbuum", "ngalakh", "degue"],
+        articles: ["cuire-le-couscous-de-mil"],
+      },
+      {
+        product: "attieke-sec",
+        pourquoi:
+          "L'attiéké est une semoule de manioc fermenté au goût légèrement acidulé, emblématique de la cuisine ivoirienne. La version déshydratée se garde longtemps et se réhydrate en quelques minutes. Deux recettes du site l'emploient : le garba et le poisson braisé à l'attiéké.",
+        recettes: ["poisson-braise-attieke", "garba"],
+        articles: ["reussir-attieke-maison", "difference-gari-attieke-tapioca"],
+      },
+      {
+        product: "farine-de-mais-blanc",
+        pourquoi:
+          "Cuite à l'eau, la farine de maïs blanc donne une pâte ferme et lisse : le tô au Burkina Faso et au Mali, l'ugali au Kenya, le pap en Afrique du Sud. Deux recettes du site l'emploient, le tô sauce gombo et l'ugali au sukuma wiki. On la verse en pluie dans l'eau bouillante, puis on tourne vigoureusement à la spatule.",
+        recettes: ["to-sauce-gombo", "ugali-sukuma-wiki"],
+      },
+      {
+        product: "fonio",
+        pourquoi:
+          "Le fonio est une toute petite céréale cultivée depuis très longtemps en Afrique de l'Ouest, notamment au Mali, en Guinée, au Burkina Faso et au Sénégal. Ses grains très fins cuisent en quelques minutes, au goût léger entre noisette et semoule. Notre fonio aux légumes l'emploie, et il se prépare aussi en salade ou en version sucrée.",
+        recettes: ["fonio-aux-legumes"],
+        articles: ["quest-ce-que-le-fonio"],
+      },
+      {
+        product: "gari-jaune",
+        pourquoi:
+          "Le gari est obtenu en râpant du manioc, en le laissant fermenter, puis en le torréfiant en fines graines croquantes ; la version jaune doit sa couleur à l'huile de palme. Au Bénin, au Nigeria et au Ghana, on le travaille dans l'eau chaude pour faire l'eba. Notre waakye le sert en accompagnement.",
+        recettes: ["waakye"],
+        articles: ["difference-gari-attieke-tapioca"],
+      },
+      {
+        product: "farine-de-foufou",
+        pourquoi:
+          "Cette farine de manioc permet de préparer le foufou à la casserole, sans piler au mortier. Travaillée dans l'eau bouillante, elle donne une pâte lisse et élastique, qui accompagne les sauces et soupes d'Afrique centrale et de l'Ouest. Notre recette de foufou et light soup l'emploie.",
+        recettes: ["fufu-light-soup"],
+        articles: ["foufou-sans-grumeaux"],
+      },
+      {
+        product: "farine-de-plantain-pour-fufu",
+        pourquoi:
+          "Au Ghana, le foufou se pile traditionnellement au mortier à partir de plantain et de manioc cuits. Cette farine de plantain séché permet d'obtenir une pâte lisse directement à la casserole. Elle sert dans notre foufou et light soup, avec la farine de manioc.",
+        recettes: ["fufu-light-soup"],
+      },
+      {
+        product: "farine-de-teff",
+        pourquoi:
+          "Le teff est une céréale minuscule cultivée depuis très longtemps sur les hauts plateaux d'Éthiopie et d'Érythrée, au goût doux et légèrement noisetté. Fermentée deux à trois jours, sa farine donne l'injera, la grande galette alvéolée de notre recette. On l'utilise aussi en pâtisserie.",
+        recettes: ["injera"],
+      },
+      {
+        product: "farine-d-igname",
+        pourquoi:
+          "L'elubo est une farine obtenue à partir d'igname épluchée, séchée puis moulue. Travaillée dans l'eau bouillante, elle donne l'amala, une pâte souple à la couleur brune caractéristique. Au sud-ouest du Nigeria, l'amala accompagne l'ewedu, le gbegiri et les sauces au poisson ou à la viande.",
+        recettes: [],
+      },
+      {
+        product: "tapioca-de-manioc",
+        pourquoi:
+          "Le tapioca granulé est tiré de l'amidon de manioc, humidifié puis roulé en petits grains qui gonflent et deviennent translucides dans l'eau. En Afrique de l'Ouest et centrale, on le prépare en bouillie sucrée, ou trempé dans l'eau froide avec du lait et du sucre. Il entre aussi dans des desserts à la noix de coco.",
+        recettes: [],
+        articles: ["difference-gari-attieke-tapioca"],
+      },
+    ],
+    guide: [
+      ["Semoule ou farine : le couscous de mil, l'attiéké et le fonio se cuisent à la vapeur ou se réhydratent ; les farines de maïs, de manioc ou de plantain se travaillent dans l'eau bouillante pour faire une pâte."],
+      [
+        "Pour une pâte sans grumeaux, versez la farine en pluie en remuant vigoureusement. Voir ",
+        { href: "/conseils/foufou-sans-grumeaux", label: "le foufou sans grumeaux" },
+        ".",
+      ],
+      [
+        "Pour la vapeur, un couscoussier aide mais n'est pas indispensable. Voir ",
+        { href: "/conseils/couscoussier-fonio-attieke", label: "notre conseil" },
+        ".",
+      ],
+    ],
+    faq: [
+      {
+        question: "Quelle différence entre gari, attiéké et tapioca ?",
+        reponse: [
+          "Les trois sont tirés du manioc. Le gari est une semoule fermentée puis grillée, l'attiéké une semoule fermentée cuite à la vapeur, et le tapioca l'amidon extrait de la racine, au goût neutre. Voir ",
+          { href: "/conseils/difference-gari-attieke-tapioca", label: "notre conseil" },
+          ".",
+        ],
+      },
+      {
+        question: "Qu'est-ce que le fonio ?",
+        reponse: [
+          "Une céréale ancienne d'Afrique de l'Ouest aux grains minuscules. Il se cuit très vite, à l'eau ou à la vapeur, puis s'égrène à la fourchette comme une semoule. Voir ",
+          { href: "/conseils/quest-ce-que-le-fonio", label: "qu'est-ce que le fonio" },
+          ".",
+        ],
+      },
+      {
+        question: "Comment cuire le couscous de mil ?",
+        reponse: [
+          "À la vapeur, jamais dans l'eau : on l'humidifie, on le cuit une première fois, on l'égrène, puis on le repasse à la vapeur jusqu'à ce qu'il soit tendre. Voir ",
+          { href: "/conseils/cuire-le-couscous-de-mil", label: "cuire le couscous de mil" },
           ".",
         ],
       },
