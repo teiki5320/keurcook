@@ -470,12 +470,13 @@ const seeds: ProductSeed[] = [
  * Offres Amazon.fr retenues (plus de 3,5 étoiles, relevées le 26 septembre 2026) :
  * ASIN, format et prix de la fiche, et nom affiché s'il diffère du produit de démo.
  * 13 octobre 2026 : poivre de Selim, attiéké et farine de foufou remplacés (anciens produits indisponibles).
+ * 19 octobre 2026 : berbère remplacé (ancien produit indisponible).
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
   "poivre-de-penja": { asin: "B000PBXHBS", label: "70 g", priceCents: 2105 },
   soumbala: { asin: "B0CQKHMT2Y", label: "50 g", priceCents: 899 },
-  berbere: { asin: "B079R281WV", label: "40 g", priceCents: 419 },
+  berbere: { asin: "B0B576RTWD", label: "65 g", priceCents: 850 },
   "yaji-suya": { asin: "B0CTTM79ZR", label: "180 g", priceCents: 2499 },
   "poivre-de-selim": { asin: "B0FGDXL99W", label: "50 g", priceCents: 999 },
   "graines-d-egusi": { asin: "B0DLV721PS", label: "50 g", priceCents: 899, name: "Egusi moulu (pistache africaine)" },
