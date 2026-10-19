@@ -39,6 +39,9 @@ const plain = (value: RichTextValue) => value.map((p) => (typeof p === "string" 
  */
 export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top10; items: ResolvedTop10Item[] }) {
   const path = `/top-10/${active.slug}`;
+  // « Voir aussi » : les trois onglets qui suivent, en revenant au début après le dernier.
+  const index = tops.findIndex((t) => t.slug === active.slug);
+  const others = [1, 2, 3].map((n) => tops[(index + n) % tops.length]);
   return (
     <article className="container-page pb-10">
       <JsonLdScript
@@ -59,11 +62,6 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
           },
         ]}
       />
-      <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted">
-        <Link href="/" className="hover:underline">Accueil</Link> / <Link href="/top-10" className="hover:underline">Top 10</Link> /{" "}
-        <span className="text-ink">{active.tab}</span>
-      </nav>
-
       {/* Onglets : sur téléphone, la bande défile seule de côté, sans faire défiler la page. */}
       <TabsStrip>
         <ul className="flex w-max gap-2 sm:w-auto sm:flex-wrap">
@@ -203,6 +201,22 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
           ))}
         </div>
         <p className="mt-8 text-xs leading-relaxed text-muted">{AMAZON_DISCLOSURE} Keur Cook ne vend aucun produit lui-même.</p>
+      </section>
+
+      <section aria-labelledby="voir-aussi" className="mt-14">
+        <h2 id="voir-aussi" className="font-display text-3xl">
+          Voir aussi<span className="text-[#ff7a3d]">.</span>
+        </h2>
+        <ul className="mt-4 grid gap-4 sm:grid-cols-3">
+          {others.map((t) => (
+            <li key={t.slug}>
+              <Link href={`/top-10/${t.slug}`} className="card block h-full p-5 transition hover:border-[#ff7a3d]">
+                <span className="text-xs font-bold tracking-[.14em] text-[#ffc46b] uppercase">{t.tab}</span>
+                <span className="mt-2 block text-lg leading-snug font-bold">{t.title} →</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
     </article>
   );
