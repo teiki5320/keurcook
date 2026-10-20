@@ -34,7 +34,7 @@ Prévoyez au moins un accompagnement qui se garde :
 
 ## Quelques épices clés
 
-Inutile d'avoir tout : deux ou trois épices bien choisies changent déjà beaucoup de plats. Le [soumbala](/produit/soumbala) pour les sauces d'Afrique de l'Ouest, le [poivre de Penja](/produit/poivre-de-penja) pour les grillades et les sauces, le [berbéré](/produit/berbere) si vous aimez la cuisine éthiopienne. Rangez-les dans des bocaux bien fermés, à l'abri de la lumière.
+Inutile d'avoir tout : deux ou trois épices bien choisies changent déjà beaucoup de plats. Le [soumbala](/produit/soumbala) pour les sauces d'Afrique de l'Ouest, le [poivre de Penja](/produit/poivre-de-penja) pour les grillades, les sauces ou la marinade du [poulet DG camerounais](/recette/poulet-dg), le [berbéré](/produit/berbere) si vous aimez la cuisine éthiopienne. Rangez-les dans des bocaux bien fermés, à l'abri de la lumière.
 
 ## Pour les boissons
 

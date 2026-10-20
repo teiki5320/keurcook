@@ -84,6 +84,8 @@ export const COUNTRIES: Country[] = [
     lat: -0.8,
     description:
       "Noix de palme, chocolat indigène (odika) et poissons de rivière : la cuisine gabonaise puise dans la forêt équatoriale.",
+    seoTitle: "Plats gabonais : recettes et cuisine du Gabon",
+    seoDescription: "Plats gabonais : le poulet nyembwe à la noix de palme, le poulet à l'odika (chocolat indigène) et la cuisine de forêt et de rivières du Gabon.",
   },
   {
     code: "CD",

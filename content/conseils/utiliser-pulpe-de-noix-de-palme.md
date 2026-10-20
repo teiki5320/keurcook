@@ -31,7 +31,7 @@ Inutile d'ajouter beaucoup de matière grasse : la pulpe contient déjà son hui
 ## Dans quelles recettes
 
 - La [sauce graine](/recette/sauce-graine), où la pulpe cuit avec le poulet, le poisson fumé et le gombo.
-- Le [poulet nyembwe](/recette/poulet-nyembwe), une recette courte qui met la noix de palme au premier plan.
+- Le [poulet nyembwe](/recette/poulet-nyembwe), une recette courte qui met la noix de palme au premier plan, parmi les [plats gabonais](/pays/gabon) les plus connus.
 - La [moambé](/recette/moambe), où elle se marie avec un peu de pâte d'arachide.
 
 ## Conserver une boîte entamée

@@ -34,10 +34,11 @@ export async function generateMetadata({ params }: PageProps<"/recette/[slug]">)
   return pageMetadata({
     // « Nom — recette du pays » si ça tient, sinon le nom seul.
     title:
-      `${recipe.name} — recette ${country?.of ?? "africaine"}`.length <= 52
+      recipe.seoTitle ??
+      (`${recipe.name} — recette ${country?.of ?? "africaine"}`.length <= 52
         ? `${recipe.name} — recette ${country?.of ?? "africaine"}`
-        : recipe.name,
-    description: recipe.shortDescription,
+        : recipe.name),
+    description: recipe.seoDescription ?? recipe.shortDescription,
     path: `/recette/${recipe.slug}`,
     image: recipe.image,
     imageAlt: recipe.name,
@@ -131,6 +132,18 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
           ),
         }}
       />
+      {recipe.faq?.length ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: recipe.faq.map((q) => ({ "@type": "Question", name: q.question, acceptedAnswer: { "@type": "Answer", text: q.answer } })),
+            }),
+          }}
+        />
+      ) : null}
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted print:hidden">
         <Link href="/" className="hover:underline">Accueil</Link> /{" "}
         <Link href={`/recettes?type=${recipe.course}`} className="hover:underline">{courseName(recipe.course)}</Link> /{" "}
@@ -249,6 +262,22 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
                   <li key={i}>{t}</li>
                 ))}
               </ul>
+            </section>
+          )}
+
+          {recipe.faq && recipe.faq.length > 0 && (
+            <section aria-labelledby="questions" className="mt-12">
+              <h2 id="questions" className="font-display text-3xl">
+                Questions fréquentes<span className="text-[#ff7a3d]">.</span>
+              </h2>
+              <dl className="mt-5 space-y-5">
+                {recipe.faq.map((q) => (
+                  <div key={q.question} className="border-t border-[#fbeee2]/12 pt-4">
+                    <dt className="text-[17px] font-semibold">{q.question}</dt>
+                    <dd className="mt-1.5 text-[15px] leading-relaxed text-[#fbeee2]/85">{q.answer}</dd>
+                  </div>
+                ))}
+              </dl>
             </section>
           )}
         </div>

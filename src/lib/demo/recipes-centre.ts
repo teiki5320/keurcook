@@ -9,6 +9,13 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     region: "Douala et Yaoundé",
     course: "mijotes",
     shortDescription: "Poulet doré et plantains mûrs sautés avec carottes, haricots verts et poivrons.",
+    seoTitle: "Poulet DG : recette du Cameroun au plantain",
+    seoDescription: "Recette du poulet DG camerounais : poulet doré, plantains mûrs frits, carottes, haricots verts et poivron mijotés ensemble. Le plat de fête de Douala.",
+    faq: [
+      { question: "Que veut dire « DG » dans poulet DG ?", answer: "DG signifie « directeur général ». Le plat serait né dans les années 1980 dans les restaurants de Douala, où il était, dit-on, réservé aux tables des patrons." },
+      { question: "Quels plantains choisir pour le poulet DG ?", answer: "Des plantains bien mûrs, à la peau noircie. Coupés en rondelles épaisses et frits, ils restent fondants et légèrement sucrés." },
+      { question: "Combien de temps faut-il pour faire un poulet DG ?", answer: "Comptez 30 minutes de préparation et 1 heure de cuisson pour 6 personnes, plus au moins 30 minutes de marinade pour le poulet." },
+    ],
     story:
       "Le poulet DG, pour « directeur général », serait né dans les années 1980 dans les restaurants de Douala. On raconte qu'il était alors réservé aux tables des patrons, tant le poulet et le plantain frit y étaient servis avec générosité.\n\nDevenu un classique des fêtes et des repas du dimanche dans tout le Cameroun, il réunit dans une même sauteuse le poulet doré, les plantains bien mûrs et une poêlée de légumes colorés.",
     prepMinutes: 30,

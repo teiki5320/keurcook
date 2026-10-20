@@ -93,6 +93,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Sud de la Côte d'Ivoire",
     course: "mijotes",
     shortDescription: "Poulet et poisson fumé mijotés dans une sauce onctueuse à la pulpe de noix de palme, un classique ivoirien.",
+    seoTitle: "Recette sauce graine au poulet (Côte d'Ivoire)",
+    seoDescription: "Recette de la sauce graine au poulet ivoirienne : poulet et poisson fumé mijotés dans la pulpe de noix de palme, servis avec riz blanc ou foutou banane.",
+    faq: [
+      { question: "Qu'est-ce que la « graine » de la sauce graine ?", answer: "C'est la noix de palme. On la fait bouillir puis on la pile pour en extraire une pulpe orangée et parfumée ; la pulpe de noix de palme vendue en boîte évite ce travail." },
+      { question: "Avec quoi servir la sauce graine au poulet ?", answer: "Avec du riz blanc, du foutou banane ou du placali, comme on la sert le dimanche en Côte d'Ivoire." },
+      { question: "Comment savoir si la sauce graine est prête ?", answer: "Elle est prête quand une fine couche d'huile rouge brille à la surface, après environ 35 minutes de mijotage à feu doux avec le poisson fumé." },
+    ],
     story:
       "La « graine », c'est la noix de palme, que l'on fait bouillir puis que l'on pile pour en extraire une pulpe orangée et parfumée. La sauce graine est l'un des grands classiques de la cuisine ivoirienne, surtout dans le Sud forestier où poussent les palmiers à huile.\n\nOn la sert le dimanche avec du riz blanc, du foutou banane ou du placali, et chaque famille garde jalousement sa manière de la parfumer.",
     prepMinutes: 20,

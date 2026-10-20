@@ -24,7 +24,7 @@ L'huile de palmiste est extraite de l'amande, au cœur du noyau, et non de la pu
 
 ## Laquelle choisir
 
-Pour la [moambé](/recette/moambe), l'[eru](/recette/eru) ou la [sauce graine](/recette/sauce-graine), choisissez l'huile rouge : le plat n'aurait pas le même goût sans elle. Pour la sauce graine, on utilise aussi directement la [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme).
+Pour la [moambé](/recette/moambe), l'[eru](/recette/eru) ou la [sauce graine au poulet](/recette/sauce-graine), choisissez l'huile rouge : le plat n'aurait pas le même goût sans elle. Pour la sauce graine, on utilise aussi directement la [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme).
 
 ## Bien l'utiliser
 

@@ -12,7 +12,7 @@ imagePrompt: Photographie culinaire, grains de café brun foncé et gousses somb
 ---
 ## Un café parfumé au djar
 
-Le café Touba est un café sénégalais torréfié avec du djar, le nom local du poivre de Selim, parfois avec un clou de girofle. Il doit son nom à la ville de Touba et on l'associe à la confrérie mouride. On le trouve aujourd'hui partout au Sénégal, vendu dans la rue en petits gobelets, brûlant et sucré.
+Le café Touba est un café sénégalais torréfié avec du djar, le nom local du poivre de Selim, parfois avec un clou de girofle. Il doit son nom à la ville de Touba et on l'associe à la confrérie mouride. On le trouve aujourd'hui partout au Sénégal, vendu dans la rue en petits gobelets, brûlant et sucré. Avec le [thé ataya](/conseils/comment-preparer-l-ataya), c'est l'une des grandes boissons chaudes du Sénégal.
 
 ## Son goût
 

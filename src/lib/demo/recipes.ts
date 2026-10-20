@@ -387,6 +387,13 @@ const seeds: RecipeSeed[] = [
     region: "Abidjan",
     course: "accompagnements",
     shortDescription: "Rondelles de banane plantain bien mûre, frites jusqu'à être dorées et fondantes, servies avec oignon et piment.",
+    seoTitle: "Alloco : recette du plantain frit de Côte d'Ivoire",
+    seoDescription: "Recette de l'alloco ivoirien : bananes plantains bien mûres frites jusqu'à être dorées, servies avec oignon et piment. Prêt en 25 minutes.",
+    faq: [
+      { question: "Quel plantain choisir pour l'alloco ?", answer: "Une banane plantain bien mûre, à la peau noire. Plus elle est mûre, plus l'alloco est sucré et fondant." },
+      { question: "Avec quoi manger l'alloco ?", answer: "Il accompagne le poisson braisé ou le poulet, ou se mange tel quel avec de l'oignon et du piment hachés, ou une sauce pimentée." },
+      { question: "Qu'est-ce qu'un allocodrome ?", answer: "C'est le nom donné à Abidjan aux lieux où les vendeuses frient les plantains le soir venu, comme l'allocodrome de Cocody. Ils doivent leur nom à l'alloco." },
+    ],
     story:
       "L'alloco, le plantain frit de Côte d'Ivoire, a donné son nom aux « allocodromes » d'Abidjan, comme celui de Cocody, où les vendeuses frient les plantains le soir venu. Il accompagne le poisson braisé, le poulet ou se mange tel quel avec une sauce pimentée.",
     prepMinutes: 10,

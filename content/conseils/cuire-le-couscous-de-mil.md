@@ -37,4 +37,4 @@ L'idéal est un couscoussier. À défaut, une passoire fine posée sur une marmi
 
 Côté salé, le thiéré accompagne une sauce de viande ou de légumes. Dans le [thiéré mbuum](/recette/thiere-mbuum), on le mélange à des [feuilles de moringa](/produit/feuilles-de-moringa) avant de le repasser à la vapeur.
 
-Côté sucré, le même couscous refroidi devient le [thiakry](/recette/thiakry), mélangé à du lait caillé sucré et parfumé, ou le [dégué](/recette/degue), sa version burkinabè. Pour ces desserts, laissez-le refroidir complètement en l'égrenant avant de le mélanger.
+Côté sucré, le même couscous refroidi devient le [thiakry](/recette/thiakry), mélangé à du lait caillé sucré et parfumé, ou le [dégué (ou dèguè)](/recette/degue), sa version burkinabè. Pour ces desserts, laissez-le refroidir complètement en l'égrenant avant de le mélanger.

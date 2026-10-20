@@ -22,4 +22,4 @@ Le [mafé](/recette/mafe) est l'autre grand classique pour débuter. Il repose s
 
 ## Ajouter un accompagnement et une boisson
 
-Pour compléter le repas sans difficulté, l'[alloco](/recette/alloco) (bananes plantains frites) ne demande que des plantains bien mûrs et de l'huile. Côté boisson, le [jus de bissap](/recette/jus-de-bissap) se prépare avec des [fleurs d'hibiscus séchées](/produit/fleurs-de-bissap), de l'eau et du sucre, et se garde au frais.
+Pour compléter le repas sans difficulté, la [recette de l'alloco](/recette/alloco) (bananes plantains frites) ne demande que des plantains bien mûrs et de l'huile. Les mêmes plantains frits entrent ensuite dans le [poulet DG](/recette/poulet-dg), le plat de fête camerounais. Côté boisson, le [jus de bissap](/recette/jus-de-bissap) se prépare avec des [fleurs d'hibiscus séchées](/produit/fleurs-de-bissap), de l'eau et du sucre, et se garde au frais.

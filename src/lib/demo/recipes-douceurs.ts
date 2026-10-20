@@ -189,6 +189,13 @@ export const recipesDouceurs: RecipeSeed[] = [
     region: "Ouagadougou",
     course: "douceurs",
     shortDescription: "Graines de mil cuites à la vapeur, noyées dans un lait caillé sucré, à boire bien frais.",
+    seoTitle: "Dégué (dèguè) : recette du dessert au mil du Burkina",
+    seoDescription: "Recette du dégué (dèguè, degue) : graines de mil cuites à la vapeur et lait caillé sucré, le dessert frais du Burkina Faso, du Mali et de Côte d'Ivoire.",
+    faq: [
+      { question: "Dégué, dèguè, degue : est-ce le même dessert ?", answer: "Oui. Son nom s'écrit de plusieurs façons (dégué, dèguè, degué, dègue ou degue), mais il désigne toujours ce dessert de graines de mil roulées mélangées à du lait caillé sucré, très répandu au Burkina Faso, au Mali et en Côte d'Ivoire." },
+      { question: "Quelle différence entre le dégué et le thiakry ?", answer: "Le thiakry est le dessert voisin du Sénégal. Le dégué est plus liquide, car le lait caillé y est plus abondant : on le boit volontiers au verre ou au sachet. On le prépare aussi le plus souvent sans raisins secs." },
+      { question: "Avec quoi prépare-t-on le dégué ?", answer: "Avec du couscous de mil (des graines de mil roulées) cuit à la vapeur, du lait caillé ou un yaourt nature brassé, du lait concentré sucré, du sucre, un peu de vanille et de muscade." },
+    ],
     story:
       "Le dégué est un dessert très répandu au Burkina Faso, au Mali, en Côte d'Ivoire et dans toute l'Afrique de l'Ouest sahélienne. Les petites graines de mil roulées, proches du couscous, sont cuites à la vapeur puis mélangées à du lait caillé.\n\nVendu en sachets bien frais sur les marchés et devant les écoles, il se déguste à toute heure, surtout pendant les journées chaudes. Au Sénégal, un dessert voisin porte le nom de thiakry. Le dégué s'en distingue par sa texture plus liquide : le lait caillé y est plus abondant, si bien qu'on le boit volontiers au verre ou directement au sachet, et on le prépare le plus souvent sans raisins secs.",
     prepMinutes: 15,

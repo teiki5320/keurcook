@@ -26,7 +26,10 @@ export default async function HomePage() {
   // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
   if (getMaintenance().enabled) return null;
   const [groups, countries, gammes] = await Promise.all([getRecipeGroups(), getCountriesWithRecipes(), getGammes()]);
-  const structuredData = { "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description };
+  const structuredData = [
+    { "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description },
+    { "@context": "https://schema.org", "@type": "Organization", name: siteConfig.name, url: siteConfig.url, logo: `${siteConfig.url}/brand/keurcook-logo-complet.png` },
+  ];
 
   return (
     <>

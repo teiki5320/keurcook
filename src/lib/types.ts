@@ -88,6 +88,12 @@ export interface Recipe {
   tags: string[];
   /** Ustensiles de la boutique utiles pour cette recette (slugs de produits). */
   equipment?: string[];
+  /** Titre de la page pour Google (60 caractères au plus avec « | Keur Cook »), s'il diffère du titre automatique. */
+  seoTitle?: string;
+  /** Méta-description (155 caractères au plus), à la place de la description courte. */
+  seoDescription?: string;
+  /** Questions fréquentes affichées sur la page (et données FAQPage), avec des faits déjà présents dans la recette. */
+  faq?: Array<{ question: string; answer: string }>;
   featured: boolean;
   isPublished: boolean;
   createdAt: string;
@@ -101,6 +107,9 @@ export interface Country {
   of: string;
   /** Présentation courte de la cuisine du pays. */
   description: string;
+  /** Titre et méta-description pour Google, s'ils diffèrent de « Recettes du … » et de la présentation courte. */
+  seoTitle?: string;
+  seoDescription?: string;
   /** Position sur la carte (longitude, latitude). */
   lon: number;
   lat: number;

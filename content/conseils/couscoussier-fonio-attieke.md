@@ -29,7 +29,7 @@ L'essentiel est d'égrener à nouveau après la chauffe. Notre article [pour ré
 
 ## Le couscous de mil, lui, le réclame
 
-Pour le [couscous de mil](/produit/couscous-de-mil), la vapeur est la méthode de base : les grains sont humidifiés, cuits une première fois, égrenés, puis remis à cuire. C'est le cas pour le [thiéré mbuum](/recette/thiere-mbuum). Une cuisson dans l'eau donnerait une pâte collante.
+Pour le [couscous de mil](/produit/couscous-de-mil), la vapeur est la méthode de base : les grains sont humidifiés, cuits une première fois, égrenés, puis remis à cuire. C'est le cas pour le [thiéré mbuum](/recette/thiere-mbuum), mais aussi pour les desserts au lait caillé comme la [recette du dégué](/recette/degue). Une cuisson dans l'eau donnerait une pâte collante.
 
 ## Improviser un couscoussier
 

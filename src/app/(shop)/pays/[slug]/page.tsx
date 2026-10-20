@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: PageProps<"/pays/[slug]">): P
   if (!country) return {};
   const own = (await getRecipes()).filter((r) => r.countryCode === country.code);
   return pageMetadata({
-    title: `Recettes ${country.of}`,
-    description: country.description,
+    title: country.seoTitle ?? `Recettes ${country.of}`,
+    description: country.seoDescription ?? country.description,
     path: `/pays/${country.slug}`,
     image: own.find((r) => r.image)?.image,
     imageAlt: `Cuisine ${country.of}`,
