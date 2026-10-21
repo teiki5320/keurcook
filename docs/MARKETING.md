@@ -1,6 +1,6 @@
 # MARKETING — plan marketing & rémunération
 
-Mis à jour le 20 octobre 2026. Compagnon de INFRA.md.
+Mis à jour le 21 octobre 2026. Compagnon de INFRA.md.
 
 ## Positionnement
 
@@ -20,13 +20,13 @@ Mis à jour le 20 octobre 2026. Compagnon de INFRA.md.
 Deux sources, sans rien vendre soi-même :
 
 - **Affiliation Amazon Partenaires** : les boutons « Acheter · prix » mènent à Amazon.fr (tag `keurcookfr-21`, `src/lib/amazon.ts`) ; Amazon encaisse, livre et verse une commission sur les achats.
-- **Publicité Google AdSense** (depuis le 12 octobre 2026) : annonces titrées « Publicité » sur les recettes, les articles « Conseils » et les pages pays ; consentement recueilli par le message de Google.
+- **Publicité Google AdSense** (en examen depuis le 12 octobre 2026) : emplacements titrés « Publicité » prêts sur les recettes, les articles « Conseils » et les pages pays ; aucune annonce ne s'affiche tant que Google n'a pas validé le site ; consentement recueilli par le message de Google.
 
 Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affichés indicatifs, relevés le 27 septembre 2026.
 
 ## Rémunération par phases
 
-- [fait] **Aujourd'hui** : affiliation Amazon sur 131 produits et 10 Top 10, annonces AdSense depuis le 12 octobre 2026, audience mesurée depuis le 13
+- [fait] **Aujourd'hui** : affiliation Amazon sur 131 produits et 10 Top 10, AdSense en place mais encore en examen (aucune annonce), audience mesurée depuis le 13
 - [en cours] **Mesurer** : lire dans Cloudflare Web Analytics quelles pages attirent et rapportent
 - **Fidéliser** : newsletter « la recette de la semaine », outil à choisir
 - **Élargir** : vidéos de recettes sur TikTok et YouTube, comptes à rattacher à Keur Cook dans le Studio
@@ -52,7 +52,7 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 - **Pages indexées par Google** : 189 indexées, 31 non indexées (Search Console, 7 octobre 2026)
 - **Adresses du sitemap** : 260 (20 octobre 2026)
 - **Clics, achats et commissions Amazon** : à vérifier dans la console (partenaires.amazon.fr)
-- **Affichages et revenus des annonces** : à vérifier dans la console (adsense.google.com)
+- **Affichages et revenus des annonces** : aucun, site encore en examen chez Google (adsense.google.com)
 - **Épingles Pinterest** : 52 recettes épinglées ; impressions et clics à vérifier dans la console
 - **Visites et pages les plus vues** : à vérifier dans la console Cloudflare Web Analytics (mesure active depuis le 13 octobre 2026)
 

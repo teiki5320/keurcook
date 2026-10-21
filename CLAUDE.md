@@ -3,4 +3,4 @@
 - Site en français : textes UI, commentaires et messages en français.
 - Ne jamais écrire d'allégation thérapeutique/médicale dans les textes produits (voir src/lib/compliance.ts).
 - Données : passer par src/lib/data/* (données écrites dans src/lib/demo et content/conseils ; site statique, sans base).
-- Vérifications : `npm run lint`, `npm run typecheck`, `npm run build`.
+- Vérifications : `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`.

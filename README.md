@@ -1,6 +1,6 @@
 # Keur Cook — recettes africaines & produits rares
 
-Site en français de **recettes de plats africains** (46 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi) et une **boutique de 91 produits africains rares** en 8 gammes. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
+Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 131 produits africains rares** en 9 gammes et des pages **Top 10** (10 classements de produits). Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
 
 - **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
 - **Éditeur** : ALOHASH (SAS). Contact : keurcook@toakeur.com.
@@ -19,6 +19,7 @@ Le site est **100 % statique** : pas de serveur, pas de base de données. Recett
 - Fiche recette : histoire du plat, portions ajustables (quantités recalculées), étapes, astuces, **version imprimable**, **partage WhatsApp**, favori ; ingrédients disponibles en boutique signalés « Produit rare », avec bouton d'achat Amazon.
 - Pages pays, **favoris sans compte** (stockés dans le navigateur).
 - **Conseils** : articles Markdown (`content/conseils/`), trois articles par semaine (lundi, mercredi, vendredi), publication programmée (voir `docs/CONSEILS.md`).
+- **Top 10** (`/top-10/<sujet>`) : 10 classements de dix produits de la boutique (voir « Top 10 » ci-dessous).
 - Boutique par gammes, fiche produit avec « Utilisé dans ces recettes », bouton « Acheter · prix » vers Amazon.fr.
 - **Mode maintenance** : écran « On prépare la marmite », activé ou coupé depuis GitHub (voir « Maintenance » ci-dessous).
 
@@ -28,17 +29,35 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 
 ### Boutique et Amazon Partenaires
 
-- 91 produits en 8 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles. Produits retenus : plus de 3,5 étoiles sur Amazon.
-- Liens construits par `src/lib/amazon.ts` à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) et du tag partenaire `keurcook-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer).
+- 131 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
+- Liens construits par `src/lib/amazon.ts` à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) et du tag partenaire `keurcookfr-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer). Ce tag vient du nouveau compte Amazon Partenaires ouvert le 18 octobre 2026 (l'ancien compte a été fermé par Amazon).
 - Prix **indicatifs**, relevés le 27/09/2026 : le prix affiché par Amazon fait foi.
 - Le site n'encaisse rien et ne gère aucun stock : achat, paiement et livraison se font sur Amazon.
+
+### Top 10
+
+Données dans `src/lib/demo/top10.ts`, vérifiées par `tests/top10.test.ts`. Chaque onglet compte exactement dix produits de la boutique avec un lien Amazon. Règle de classement :
+
+- **Cas général** : note moyenne des acheteurs sur Amazon.fr (relevé du 19 octobre 2026) ; à égalité, le produit le plus évalué passe devant. Seuls les produits disponibles avec **au moins 10 évaluations** sont retenus.
+- **Onglet Livres** : les livres sont gardés même avec peu d'évaluations (choix de Jean le 19 octobre 2026) ; ceux qui n'ont aucune note sont placés à la fin.
+- **Onglet Farines** : classé selon le nombre de recettes du site qui emploient chaque produit.
+- Les notes servent seulement à classer : elles ne sont **jamais affichées** (pas de prix non plus).
+
+### Publicité (Google AdSense)
+
+- Compte AdSense `pub-2680784147246798` (comptes de gestion sur `admin@toakeur.com`). Script chargé dans `src/app/layout.tsx`, emplacements « Publicité » (`src/components/ads/AdSlot.tsx`, `src/lib/ads.ts`) et `public/ads.txt` en place.
+- **Le site est encore en examen chez Google** (demande faite le 12 octobre 2026) : aucune annonce ne s'affiche tant que Google n'a pas validé le site.
+
+### Pinterest
+
+Compte « Keur Cook », site revendiqué, bouton « Épingler » sur chaque recette. Les 52 recettes qui ont une image d'épingle (`public/pins/`, créées par `scripts/pin-images.mjs`) ont toutes été épinglées par la routine Claude `keurcook-epingles-pinterest` ; les six recettes de boissons ajoutées le 19 octobre n'ont pas encore d'image d'épingle.
 
 ### Conformité
 
 - **Aucune allégation de santé** : liste de termes à risque (« soigne », « bienfaits », « digestion »… — voir `src/lib/compliance.ts`). Cette liste ne remplace pas une relecture humaine.
 - **Étiquetage alimentaire** : ingrédients, allergènes et conservation sur chaque fiche produit.
-- Pages **conditions d'utilisation** (`/conditions`, CGU ; `/cgv` y redirige), **mentions légales**, **politique de confidentialité** ; **bannière cookies d'information** (cookies nécessaires seulement). Hébergeur indiqué : Cloudflare, Inc.
-- Données structurées Google **Recipe** et **Product**, sitemap avec les recettes, les pays et les articles publiés.
+- Pages **conditions d'utilisation** (`/conditions`, CGU ; `/cgv` y redirige), **mentions légales**, **politique de confidentialité** ; consentement aux cookies recueilli par le **message de Google** (Confidentialité et messages, dans AdSense), que le lien « Cookies » du pied de page rouvre (`src/components/compliance/CookieBanner.tsx`). Hébergeur indiqué : Cloudflare, Inc.
+- Données structurées Google **Recipe**, **Article**, fil d'Ariane et listes (pas de **Product** sur les fiches produit), sitemap avec les recettes, les pays et les articles publiés.
 
 > ⚠️ Les textes légaux sont des **modèles** à faire valider.
 
@@ -67,7 +86,7 @@ Toutes publiques (aucun secret dans le site). Liste complète : `.env.example`.
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (SEO, sitemap, liens canoniques) ; `https://keurcook.com` au build de production |
 | `NEXT_PUBLIC_SITE_NAME`, `NEXT_PUBLIC_CONTACT_EMAIL` | Nom du site (Keur Cook), e-mail de contact (keurcook@toakeur.com) |
-| `NEXT_PUBLIC_AMAZON_TAG` | Tag Amazon Partenaires (par défaut `keurcook-21`) |
+| `NEXT_PUBLIC_AMAZON_TAG` | Tag Amazon Partenaires (par défaut `keurcookfr-21`) |
 | `NEXT_PUBLIC_LEGAL_*` | Informations des mentions légales et des conditions d'utilisation (hébergeur par défaut : Cloudflare) |
 
 ---
@@ -138,7 +157,7 @@ src/
   app/(legal)/         pages légales, accessibles même en maintenance
   components/          UI (recipe/, conseils/, nuage/ = thème, carte et carrousels, product/, shop/, layout/, compliance/)
   lib/data/            accès aux données (recettes, catalogue, gammes, conseils, réglages de maintenance)
-  lib/demo/            recettes et produits
+  lib/demo/            recettes, produits et Top 10
   lib/amazon.ts        liens « Acheter » vers Amazon.fr (tag partenaire)
   lib/conseils/        lecture des articles et thèmes
   lib/countries.ts     pays (nom, « de … », position sur la carte)
