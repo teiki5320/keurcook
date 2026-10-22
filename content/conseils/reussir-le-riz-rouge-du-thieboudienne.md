@@ -16,7 +16,7 @@ Le secret du riz rouge du [thiéboudienne](/recette/thieboudienne), c'est une sa
 
 1. Faites dorer le poisson dans l'huile, puis réservez-le. Gardez cette huile parfumée.
 2. Faites revenir les oignons dans cette même huile.
-3. Ajoutez le concentré de tomate délayé, le guedj et le [nététou](/produit/soumbala).
+3. Ajoutez le concentré de tomate délayé, le [guedj](/conseils/quest-ce-que-le-guedj) et le [nététou](/produit/soumbala).
 4. Laissez cuire en remuant souvent, jusqu'à ce que la sauce fonce et que l'huile se sépare légèrement de la tomate. L'acidité du concentré doit avoir disparu quand vous goûtez.
 
 ## Un bouillon riche

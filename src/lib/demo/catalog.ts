@@ -142,6 +142,8 @@ const seeds: ProductSeed[] = [
     name: "Fonio précuit",
     categoryId: cat("cereales"),
     shortDescription: "Petite céréale d'Afrique de l'Ouest à la cuisson rapide et au goût léger, pour accompagner les sauces.",
+    seoTitle: "Fonio précuit : la petite céréale d'Afrique de l'Ouest",
+    seoDescription: "Le fonio, petite céréale cultivée au Mali, en Guinée, au Burkina Faso et au Sénégal, cuit en quelques minutes : avec les sauces, en salade ou sucré.",
     description:
       "Le fonio est une toute petite céréale cultivée depuis très longtemps en Afrique de l'Ouest, notamment au Mali, en Guinée, au Burkina Faso et au Sénégal. Ses grains très fins cuisent en quelques minutes.\n\nSon goût léger, entre noisette et semoule, en fait un accompagnement pour les sauces ; on le prépare aussi en salade ou en version sucrée.",
     originCountry: "Afrique de l'Ouest",

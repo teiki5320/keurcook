@@ -41,4 +41,4 @@ La même méthode vaut pour le tô ou les autres pâtes de céréales et de tube
 
 ## À quoi le servir
 
-Le foufou accompagne les soupes et les sauces : la [light soup](/recette/fufu-light-soup) ghanéenne, la [soupe egusi](/recette/soupe-egusi) ou l'[eru](/recette/eru) camerounais. On en détache un morceau du bout des doigts, on le creuse un peu, et on s'en sert pour attraper la sauce.
+Le foufou accompagne les soupes et les sauces : la light soup ghanéenne du [fufu and light soup](/recette/fufu-light-soup), la [soupe egusi](/recette/soupe-egusi) ou l'[eru](/recette/eru) camerounais. On en détache un morceau du bout des doigts, on le creuse un peu, et on s'en sert pour attraper la sauce.

@@ -78,3 +78,25 @@ export function filterRecipes(recipes: Recipe[], f: RecipeFilters, countryName: 
     return terms.every((t) => haystack.includes(t));
   });
 }
+
+/** Lien interne écrit « [texte](/chemin) » dans une réponse de la FAQ d'une recette. */
+const FAQ_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+
+/** Réponse de FAQ sans la syntaxe des liens (données FAQPage pour Google). */
+export const faqPlainText = (text: string) => text.replace(FAQ_LINK, "$1");
+
+/** Chemins des liens internes d'une réponse de FAQ. */
+export const faqLinks = (text: string) => [...text.matchAll(FAQ_LINK)].map((m) => m[2]);
+
+/** Réponse de FAQ découpée en morceaux de texte et en liens internes, pour l'affichage. */
+export function faqParts(text: string): Array<string | { text: string; href: string }> {
+  const parts: Array<string | { text: string; href: string }> = [];
+  let last = 0;
+  for (const m of text.matchAll(FAQ_LINK)) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    parts.push({ text: m[1], href: m[2] });
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}

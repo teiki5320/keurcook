@@ -12,6 +12,13 @@ export const recipesNouvelles: RecipeSeed[] = [
     region: "Pays yoruba",
     course: "accompagnements",
     shortDescription: "Beignets de niébé mixé avec oignon et piment, croustillants dehors et moelleux dedans.",
+    seoTitle: "Akara : recette des beignets de niébé du Nigeria",
+    seoDescription: "Recette de l'akara du Nigeria : beignets de haricots cornille (niébé) mixés avec oignon et piment, croustillants dehors et moelleux dedans.",
+    faq: [
+      { question: "Qu'est-ce que l'akara ?", answer: "Le beignet de haricots cornille (niébé) du Nigeria, cuisiné dans tout le pays et surtout en pays yoruba. On le retrouve sous d'autres noms du Ghana au Bénin, et jusqu'au Brésil, où il est devenu l'acarajé de Bahia." },
+      { question: "Comment réussir des akara légers ?", answer: "Mixez les haricots avec très peu d'eau, puis fouettez la pâte 5 minutes à la cuillère en bois avant la cuisson. Une pâte trop liquide s'étale dans l'huile et les beignets ne gonflent pas." },
+      { question: "Avec quoi manger l'akara ?", answer: "Avec de la bouillie de maïs (ogi ou pap) ou glissé dans un morceau de pain. Autre beignet du Nigeria, à la farine cette fois : le [puff-puff](/recette/puff-puff)." },
+    ],
     story:
       "L'akara est le beignet de haricots cornille (niébé) du Nigeria, cuisiné partout dans le pays et surtout en pays yoruba. On l'achète le matin au bord des routes, tout juste sorti de l'huile, et on le mange avec de la bouillie de maïs (ogi ou pap) ou glissé dans un morceau de pain.\n\nLe même beignet se retrouve sous d'autres noms sur toute la côte, du Ghana au Bénin, et il a voyagé jusqu'au Brésil, où il est devenu l'acarajé de Bahia.",
     prepMinutes: 30,

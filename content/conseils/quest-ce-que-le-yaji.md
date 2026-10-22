@@ -12,7 +12,7 @@ imagePrompt: Photographie culinaire, coupelle en bois remplie de poudre de yaji 
 ---
 ## Le mélange du suya
 
-Le yaji est le mélange d'épices qui enrobe le [suya](/recette/suya), la brochette de viande grillée vendue le soir dans les rues du Nigeria. On l'appelle aussi simplement « épice à suya ». C'est une spécialité associée au nord du pays, et on la trouve aujourd'hui dans une grande partie de l'Afrique de l'Ouest.
+Le yaji est le mélange d'épices qui enrobe le [suya nigérian](/recette/suya), la brochette de viande grillée vendue le soir dans les rues du Nigeria. On l'appelle aussi simplement « épice à suya ». C'est une spécialité associée au nord du pays, et on la trouve aujourd'hui dans une grande partie de l'Afrique de l'Ouest.
 
 ## Ce qu'il contient
 

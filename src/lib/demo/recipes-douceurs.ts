@@ -79,6 +79,14 @@ export const recipesDouceurs: RecipeSeed[] = [
     region: "Dakar et Petite-Côte",
     course: "douceurs",
     shortDescription: "Le dessert de Pâques sénégalais : mil, pâte d'arachide et pain de singe.",
+    seoTitle: "Ngalakh : recette du dessert de Pâques du Sénégal",
+    seoDescription: "Recette du ngalakh (ngalax), dessert sénégalais de Pâques : couscous de mil (sankhal) nappé d'une crème de pâte d'arachide et de pain de singe.",
+    faq: [
+      { question: "Ngalakh, ngalax : comment l'écrire ?", answer: "Les deux orthographes désignent le même dessert de mil, d'arachide et de pain de singe que les chrétiens du Sénégal préparent pour Pâques." },
+      { question: "Quand prépare-t-on le ngalakh ?", answer: "Le Vendredi saint : les familles en préparent de grandes bassines, puis en offrent des bols à leurs voisins, amis et proches, quelle que soit leur religion." },
+      { question: "Quel mil utiliser pour le ngalakh ?", answer: "Du couscous de mil (sankhal ou araw), cuit 20 minutes à la vapeur puis égrené. Voir [comment cuire le couscous de mil](/conseils/cuire-le-couscous-de-mil)." },
+      { question: "Faut-il cuire le pain de singe ?", answer: "Non, jamais : il perdrait son acidité fraîche. On le délaye dans l'eau froide puis on le filtre, comme pour le [jus de bouye (jus de baobab)](/recette/jus-de-bouye)." },
+    ],
     story:
       "Le ngalakh est la douceur emblématique de Pâques chez les chrétiens du Sénégal. Le Vendredi saint, les familles en préparent de grandes bassines, puis en offrent des bols à leurs voisins, amis et proches, quelle que soit leur religion.\n\nCe partage est devenu un symbole apprécié de la convivialité sénégalaise. La recette associe trois saveurs du terroir : le mil, l'arachide et le pain de singe, le fruit du baobab, dont l'acidité légère équilibre la richesse de la crème.",
     prepMinutes: 30,
@@ -117,6 +125,13 @@ export const recipesDouceurs: RecipeSeed[] = [
     region: "Dakar",
     course: "douceurs",
     shortDescription: "Boisson crémeuse et acidulée au pain de singe, le fruit du baobab, parfumée à la vanille et à la fleur d'oranger.",
+    seoTitle: "Jus de bouye : recette du jus de baobab sénégalais",
+    seoDescription: "Recette du jus de bouye, le jus de baobab du Sénégal : poudre de pain de singe, eau, sucre, vanille et fleur d'oranger, avec ou sans lait, servi frais.",
+    faq: [
+      { question: "Jus de bouye ou jus de baobab ?", answer: "C'est la même boisson : bouye est le nom wolof de la pulpe blanche du pain de singe, le fruit du baobab. La même poudre parfume le [ngalakh](/recette/ngalakh), dessert sénégalais de Pâques." },
+      { question: "Avec ou sans lait ?", answer: "Sans lait, le jus est plus léger et plus acidulé ; avec lait, il devient crémeux, presque comme un milkshake." },
+      { question: "Combien de temps se garde le jus de bouye ?", answer: "48 heures au réfrigérateur. Secouez bien la bouteille avant de servir." },
+    ],
     story:
       "Le baobab est l'arbre emblème du Sénégal, présent jusque sur les armoiries du pays. Son fruit, appelé pain de singe, renferme une pulpe blanche et farineuse que l'on nomme bouye en wolof.\n\nDélayée dans l'eau et sucrée, elle donne une boisson onctueuse au goût acidulé, que l'on sert lors des cérémonies familiales, des baptêmes et, pendant le ramadan, à la rupture du jeûne. Souvent enrichi de lait, parfumé à la vanille ou à la fleur d'oranger, le jus de bouye est l'un des grands classiques des tables sénégalaises.",
     prepMinutes: 20,
@@ -152,6 +167,13 @@ export const recipesDouceurs: RecipeSeed[] = [
     region: "Lagos",
     course: "douceurs",
     shortDescription: "Petits beignets levés, dorés dehors et moelleux dedans, parfumés à la muscade.",
+    seoTitle: "Puff-puff : recette des beignets du Nigeria",
+    seoDescription: "Recette du puff-puff (puff puff) du Nigeria : petits beignets levés à la muscade, dorés dehors et moelleux dedans, comme dans les rues de Lagos. Pas à pas.",
+    faq: [
+      { question: "Puff-puff, bofrot, beignets : est-ce la même chose ?", answer: "C'est le même beignet levé sous plusieurs noms : puff-puff au Nigeria, bofrot au Ghana, beignets ou « boules » au Cameroun, mikate au Congo." },
+      { question: "Pourquoi mes puff-puff restent crus à l'intérieur ?", answer: "L'huile est trop chaude : ils dorent dehors avant de cuire au cœur. Chauffez-la à 170 °C, baissez le feu si besoin et comptez 3 à 4 minutes de friture en les retournant." },
+      { question: "Avec quoi manger les puff-puff ?", answer: "Nature, roulés dans le sucre ou avec une sauce pimentée. Autre beignet du Nigeria : l'[akara](/recette/akara), aux haricots cornille." },
+    ],
     story:
       "Le puff-puff est l'un des en-cas de rue les plus populaires du Nigeria, vendu tout chaud dans des sachets en papier au coin des rues de Lagos. On le retrouve sous d'autres noms dans toute la région : bofrot au Ghana, beignets ou « boules » au Cameroun, mikate au Congo.\n\nSimple pâte levée frite en petites boules, il accompagne les fêtes, les anniversaires et les goûters. On le mange nature, saupoudré de sucre ou accompagné d'une sauce pimentée.",
     prepMinutes: 15,

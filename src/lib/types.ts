@@ -37,6 +37,10 @@ export interface Product {
   tags: string[];
   /** Code ASIN de la fiche Amazon.fr : si présent, le bouton « Acheter » mène à Amazon. */
   amazonAsin: string | null;
+  /** Titre pour Google (60 caractères au plus avec « | Keur Cook »), s'il diffère du nom. */
+  seoTitle?: string;
+  /** Méta-description (155 caractères au plus), à la place de la description courte et de l'origine. */
+  seoDescription?: string;
   isActive: boolean;
   featured: boolean;
   createdAt: string;

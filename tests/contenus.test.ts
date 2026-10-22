@@ -10,6 +10,49 @@ import { demoRecipes } from "../src/lib/demo/recipes";
 import { COUNTRIES } from "../src/lib/countries";
 import { COUNTRY_CUISINE } from "../src/lib/country-cuisine";
 import { PRODUCT_GUIDES } from "../src/lib/product-guides";
+import { readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+import { isPublished, parseConseil, todayInParis } from "../src/lib/conseils/article";
+import { faqLinks, faqPlainText } from "../src/lib/recipe-utils";
+
+/** Longueur du titre affiché par Google : avec « | Keur Cook » s'il tient en 60 caractères (src/lib/metadata.ts). */
+const googleTitle = (title: string) => (`${title} | Keur Cook`.length <= 60 ? `${title} | Keur Cook` : title);
+
+describe("Recettes et produits : titre, description et FAQ pour Google", () => {
+  const conseilsDir = join(import.meta.dirname, "..", "content", "conseils");
+  const today = todayInParis();
+  const publishedConseils = new Set(
+    readdirSync(conseilsDir)
+      .filter((f) => f.endsWith(".md"))
+      .map((f) => parseConseil(f.replace(/\.md$/, ""), readFileSync(join(conseilsDir, f), "utf8")))
+      .filter((c) => isPublished(c, today))
+      .map((c) => c.slug),
+  );
+  const exists = (path: string) => {
+    const [, section, slug] = path.split("/");
+    if (section === "recette") return demoRecipes.some((r) => r.isPublished && r.slug === slug);
+    if (section === "produit") return demoProducts.some((p) => p.isActive && p.slug === slug);
+    if (section === "pays") return COUNTRIES.some((c) => c.slug === slug);
+    if (section === "conseils") return publishedConseils.has(slug);
+    return false;
+  };
+  for (const r of demoRecipes.filter((x) => x.seoTitle || x.seoDescription || x.faq)) {
+    it(r.slug, () => {
+      if (r.seoTitle) assert.ok(googleTitle(r.seoTitle).length <= 60, `titre de ${r.seoTitle.length} caractères`);
+      if (r.seoDescription) assert.ok(r.seoDescription.length <= 155, `description de ${r.seoDescription.length} caractères`);
+      const answers = (r.faq ?? []).map((q) => q.answer);
+      assert.deepEqual(findHealthClaims(r.seoTitle, r.seoDescription, ...(r.faq ?? []).map((q) => q.question), ...answers.map(faqPlainText)), []);
+      for (const path of answers.flatMap(faqLinks)) assert.ok(exists(path), `lien de FAQ invalide : ${path}`);
+    });
+  }
+  for (const p of demoProducts.filter((x) => x.seoTitle || x.seoDescription)) {
+    it(p.slug, () => {
+      if (p.seoTitle) assert.ok(googleTitle(p.seoTitle).length <= 60, `titre de ${p.seoTitle.length} caractères`);
+      if (p.seoDescription) assert.ok(p.seoDescription.length <= 155, `description de ${p.seoDescription.length} caractères`);
+      assert.deepEqual(findHealthClaims(p.seoTitle, p.seoDescription), []);
+    });
+  }
+});
 
 describe("Recettes : aucune allégation de santé", () => {
   for (const r of demoRecipes) {

@@ -20,6 +20,13 @@ const seeds: RecipeSeed[] = [
     region: "Littoral, Douala",
     course: "mijotes",
     shortDescription: "Le plat national camerounais : feuilles amères, arachides fondantes et crevettes.",
+    seoTitle: "Recette du ndolé camerounais aux crevettes",
+    seoDescription: "Recette du ndolé, plat national camerounais : feuilles de ndolé, arachides fondantes, bœuf et crevettes. Le plat des grandes occasions au Cameroun.",
+    faq: [
+      { question: "Le ndolé est-il le plat national du Cameroun ?", answer: "On le présente comme le plat national camerounais. Né chez les Doualas, sur les rives du Wouri, il est devenu le plat des mariages, des baptêmes et des dimanches en famille dans tout le pays. Autre plat camerounais à découvrir : le [koki](/recette/koki), gâteau de haricots cornille." },
+      { question: "Comment enlever l'amertume du ndolé ?", answer: "Réhydratez les feuilles séchées 30 minutes dans l'eau tiède, puis rincez-les et pressez-les fortement : plus elles sont rincées, moins le ndolé est amer. La méthode complète : [comment enlever l'amertume du ndolé](/conseils/enlever-amertume-du-ndole)." },
+      { question: "Avec quoi servir le ndolé ?", answer: "Avec du plantain mûr frit, des miondo ou des bâtons de manioc, comme au Cameroun." },
+    ],
     story:
       "Né chez les Doualas, sur les rives du Wouri, le ndolé est devenu le plat des grandes occasions dans tout le Cameroun. On le prépare pour les mariages, les baptêmes et les dimanches en famille.\n\nSa magie tient à l'équilibre entre l'amertume des feuilles, patiemment lavées, et la douceur des arachides fraîches longuement mijotées.",
     prepMinutes: 40,
@@ -99,6 +106,13 @@ const seeds: RecipeSeed[] = [
     region: "Kinshasa",
     course: "mijotes",
     shortDescription: "Feuilles de manioc pilées, mijotées longuement à l'huile de palme rouge avec du poisson fumé et des aubergines.",
+    seoTitle: "Pondu (saka-saka) : recette congolaise au poisson fumé",
+    seoDescription: "Recette du pondu congolais, ou saka-saka : feuilles de manioc pilées mijotées à l'huile de palme avec poisson fumé et aubergines, avec de la chikwangue.",
+    faq: [
+      { question: "Pondu, poundou, saka-saka : est-ce le même plat ?", answer: "Oui : ce sont les noms du plat de feuilles de manioc pilées cuisiné sur les deux rives du fleuve Congo. Chaque famille a sa recette, avec du poisson fumé, de la viande ou simplement des aubergines." },
+      { question: "Peut-on faire le pondu avec des feuilles de manioc en conserve ?", answer: "Oui, c'est ce que fait cette recette : égouttez et rincez les feuilles, puis cuisez-les 15 minutes avant d'ajouter les autres ingrédients." },
+      { question: "Avec quoi servir le pondu ?", answer: "Avec de la chikwangue, du foufou ou du riz, comme à Kinshasa. La chikwangue accompagne aussi le [liboké de poisson](/recette/liboke-de-poisson) cuit en feuilles de bananier." },
+    ],
     story:
       "Le pondu, ou saka-saka, est le légume-feuille des deux rives du fleuve Congo. Les feuilles de manioc, pilées au mortier, mijotent longuement jusqu'à devenir fondantes.\n\nÀ Kinshasa, on le sert avec de la chikwangue ou du foufou, et chaque famille a sa recette : avec du poisson fumé, de la viande ou simplement des aubergines.",
     prepMinutes: 20,
@@ -169,6 +183,13 @@ const seeds: RecipeSeed[] = [
     region: "Libreville",
     course: "mijotes",
     shortDescription: "Poulet mijoté dans la crème de noix de palme, le plat national gabonais.",
+    seoTitle: "Poulet nyembwe : le plat national gabonais",
+    seoDescription: "Recette du poulet nyembwe, plat national du Gabon : poulet mijoté dans la pulpe de noix de palme, en sauce orangée et onctueuse, servi avec riz ou manioc.",
+    faq: [
+      { question: "Qu'est-ce que le nyembwe ?", answer: "Au Gabon, le nyembwe est la sauce à la pulpe de noix de palme. Longuement réduite, elle enrobe le poulet d'une sauce orangée, onctueuse et fruitée." },
+      { question: "Quel est le plat national du Gabon ?", answer: "Le poulet nyembwe. Avec le [poulet à l'odika](/recette/poulet-odika), sauce au « chocolat indigène », c'est l'un des [plats gabonais](/pays/gabon) les plus connus." },
+      { question: "Avec quoi servir le poulet nyembwe ?", answer: "Avec du riz blanc ou des bâtons de manioc, souvent le dimanche." },
+    ],
     story:
       "Le poulet nyembwe est le plat national du Gabon. La pulpe de noix de palme, longuement réduite, enrobe la viande d'une sauce orangée, onctueuse et fruitée.\n\nOn le sert avec du riz ou du manioc, souvent le dimanche.",
     prepMinutes: 20,
@@ -238,6 +259,13 @@ const seeds: RecipeSeed[] = [
     region: "Kano",
     course: "grillades",
     shortDescription: "Fines brochettes de bœuf enrobées de yaji, mélange d'arachide et d'épices, grillées sur la braise comme à Kano.",
+    seoTitle: "Suya : recette des brochettes de bœuf du Nigeria",
+    seoDescription: "Recette du suya du Nigeria : fines brochettes de bœuf enrobées de yaji, mélange d'arachide et d'épices, grillées sur la braise ou au four comme à Kano.",
+    faq: [
+      { question: "Qu'est-ce que le yaji du suya ?", answer: "Le mélange d'arachide et d'épices qui enrobe la viande et caramélise sur le feu. Il contient de l'arachide. Pour tout savoir : [qu'est-ce que le yaji](/conseils/quest-ce-que-le-yaji)." },
+      { question: "Peut-on faire le suya au four ?", answer: "Oui : sous le gril du four, 4 à 5 minutes de chaque côté, comme sur des braises bien chaudes." },
+      { question: "Avec quoi servir le suya ?", answer: "Saupoudré d'un peu de yaji, avec de l'oignon rouge émincé et des tomates en rondelles. Le poulet se prépare aussi en suya." },
+    ],
     story:
       "Le suya est la grillade de rue du Nigeria. Venue des Haoussas du nord, elle se vend le soir, au bord des routes, sur des braises rougeoyantes.\n\nLa viande, taillée très fine, est enrobée de yaji, un mélange d'arachide et de piment qui caramélise sur le feu.",
     prepMinutes: 25,
@@ -269,6 +297,13 @@ const seeds: RecipeSeed[] = [
     region: "Abidjan",
     course: "grillades",
     shortDescription: "Le classique des maquis d'Abidjan : poisson grillé, attiéké et sauce crue.",
+    seoTitle: "Poisson braisé et attiéké : recette ivoirienne au four",
+    seoDescription: "Recette du poisson braisé des maquis d'Abidjan : dorade marinée, grillée sur la braise ou au four à 220 °C, servie avec attiéké, sauce crue et alloco.",
+    faq: [
+      { question: "Comment faire le poisson braisé au four ?", answer: "Après 30 minutes de marinade, grillez les poissons au four à 220 °C, 10 à 12 minutes de chaque côté, comme sur des braises." },
+      { question: "Attiéké, alloco, poisson braisé : comment servir ?", answer: "Avec l'attiéké et une sauce crue de tomates, d'oignons et de piment par-dessus. Ajoutez de l'[alloco](/recette/alloco), bananes plantains frites, pour un repas complet. L'attiéké accompagne aussi le [kedjenou de poulet](/recette/kedjenou)." },
+      { question: "Et le poisson braisé du Cameroun ?", answer: "On braise aussi le poisson au Cameroun, où le poivre blanc de Penja le relève volontiers. La marinade de cette recette en contient déjà." },
+    ],
     story:
       "Le poisson braisé servi avec de l'attiéké est le plat emblématique des maquis, ces restaurants en plein air d'Abidjan. Le poisson, mariné aux épices, est grillé au charbon et servi avec une sauce crue de tomates, d'oignons et de piment.\n\nOn le mange avec les doigts, entre amis.",
     prepMinutes: 25,
@@ -351,6 +386,13 @@ const seeds: RecipeSeed[] = [
     region: "Bobo-Dioulasso",
     course: "riz-cereales",
     shortDescription: "Le fonio, céréale ancienne du Sahel, cuit en quelques minutes et servi avec une sauce aux légumes et à l'arachide.",
+    seoTitle: "Fonio sauce arachide et légumes : recette du Burkina",
+    seoDescription: "Recette du fonio aux légumes et sauce arachide : le fonio cuit en 5 minutes, servi avec une sauce de carottes, courgettes et pâte d'arachide au soumbala.",
+    faq: [
+      { question: "Comment cuire le fonio ?", answer: "Versez 300 g de fonio précuit dans 45 cl d'eau salée bouillante, couvrez hors du feu 5 minutes, puis égrenez à la fourchette." },
+      { question: "Qu'est-ce que le fonio ?", answer: "Une petite céréale ancienne du Sahel. Au Burkina Faso et au Mali, c'est la céréale des jours de fête et des hôtes de marque. Voir aussi notre [fonio précuit](/produit/fonio) et [qu'est-ce que le fonio](/conseils/quest-ce-que-le-fonio)." },
+      { question: "Peut-on manger le fonio froid ?", answer: "Oui : il se prépare aussi en salade froide, comme un taboulé." },
+    ],
     story:
       "Au Burkina Faso et au Mali, le fonio est la céréale des jours de fête et des hôtes de marque. On dit qu'il ne fait jamais honte à celui qui le cuisine, car il est toujours réussi.\n\nCuit à la vapeur en quelques minutes, il accompagne ici une sauce aux légumes relevée de soumbala.",
     prepMinutes: 20,

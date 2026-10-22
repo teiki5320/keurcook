@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: PageProps<"/produit/[slug]">)
   if (!product) return {};
   const image = product.images[0];
   return pageMetadata({
-    title: product.name,
-    description: `${product.shortDescription}${product.originCountry ? ` Origine : ${product.originCountry}.` : ""}`,
+    title: product.seoTitle ?? product.name,
+    description: product.seoDescription ?? `${product.shortDescription}${product.originCountry ? ` Origine : ${product.originCountry}.` : ""}`,
     path: `/produit/${product.slug}`,
     image: image && !image.endsWith(".svg") ? image : null,
     imageAlt: product.name,

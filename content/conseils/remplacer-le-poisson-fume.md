@@ -20,7 +20,7 @@ Les [crevettes séchées](/produit/crevettes-sechees) sont le choix le plus simp
 
 ## Le guedj
 
-Le guedj, poisson fermenté et séché du Sénégal, a un goût plus puissant. Un petit morceau, rincé et émietté, suffit pour une marmite entière. Ajoutez-le en début de cuisson et salez seulement à la fin, car il apporte déjà beaucoup de sel. Pour mieux le connaître, lisez notre article [sur le guedj](/conseils/quest-ce-que-le-guedj).
+Le guedj, poisson fermenté et séché du Sénégal, a un goût plus puissant. Un petit morceau, rincé et émietté, suffit pour une marmite entière. Ajoutez-le en début de cuisson et salez seulement à la fin, car il apporte déjà beaucoup de sel. Pour mieux le connaître, lisez notre article sur le [guedj, ou guedji](/conseils/quest-ce-que-le-guedj).
 
 ## Un autre poisson ou une viande fumée
 
@@ -32,7 +32,7 @@ Le guedj, poisson fermenté et séché du Sénégal, a un goût plus puissant. U
 
 Pour une sauce végétale, il faut recréer à la fois la profondeur et la note fumée :
 
-1. Ajoutez un condiment fermenté comme le [soumbala](/produit/soumbala), écrasé, dès le début de la cuisson.
+1. Ajoutez un condiment fermenté comme le [soumbala](/produit/soumbala), écrasé, dès le début de la cuisson. À défaut, voyez [par quoi remplacer le soumbala](/conseils/par-quoi-remplacer-le-soumbala).
 2. Apportez le fumé avec une pincée de paprika fumé, à doser avec prudence.
 3. Pour la mâche, ajoutez des champignons émincés ou des aubergines, qui absorbent bien la sauce.
 

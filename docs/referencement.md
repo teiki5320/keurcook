@@ -45,3 +45,58 @@ Liens internes ajoutés ou précisés :
 
 Les 5 pages ci-dessus et /pays/gabon : noter leur nouvelle place.
 Prochaines candidates (non travaillées) : koki (« koki » 47 vues, place 9), puff-puff (36 vues, 14,3), akara (34 vues, 7,7), garba (30 vues, 19,1), suya, waakye, poulet nyembwe, fonio, soumbala.
+
+## 22 octobre 2026
+
+### Pages presque en première page
+
+Pages déjà montrées par Google entre la 4e et la 20e place (Search Console, 30 derniers jours, via le Studio). Pour chaque page : titre et description pour Google qui reprennent la recherche principale ; pour les 22 recettes, une FAQ visible « Questions fréquentes » (avec données FAQPage) écrite uniquement avec des faits déjà présents dans la recette ou sur le site. Le h1 des recettes est le nom du plat, qui contient déjà la recherche : inchangé. Données Recipe inchangées (nom, ingrédients, étapes, temps) et vérifiées dans les pages construites.
+
+Nouveauté : les réponses de FAQ des recettes peuvent contenir des liens internes (`[texte](/recette/…)`), affichés comme liens et retirés du texte FAQPage. `npm test` vérifie leurs adresses (recette publiée, produit actif, pays, conseil déjà paru), la longueur des titres (60) et des descriptions (155), et l'absence d'allégation de santé.
+
+| Page | Recherches visées | Place et vues au moment du travail | Ancien titre → nouveau titre |
+| --- | --- | --- | --- |
+| /recette/koki | koki, koki cameroun, le koki, gâteau de cornille | 15,1, 64 vues (« koki » : 9, 49 vues) | « Koki — recette du Cameroun \| Keur Cook » → « Koki : recette camerounaise du gâteau de cornille » |
+| /recette/ndole | ndolé recette, plat camerounais | 7,4, 61 vues (« plat camerounais » : 2,6) | « Ndolé aux crevettes — recette du Cameroun \| Keur Cook » → « Recette du ndolé camerounais aux crevettes \| Keur Cook » |
+| /recette/poulet-nyembwe | plat gabonais, poulet nyembwe, nyembwe | 9,6, 50 vues (« poulet nyembwe » : 15,1) | « Poulet nyembwe — recette du Gabon \| Keur Cook » → « Poulet nyembwe : le plat national gabonais \| Keur Cook » |
+| /recette/poulet-odika | odika, chocolat indigène gabon, sauce odika | 9, 50 vues (« odika » : 17,4) | « Poulet à l'odika — recette du Gabon \| Keur Cook » → « Poulet à l'odika : sauce au chocolat indigène du Gabon » |
+| /recette/puff-puff | puff puff, puff puff nigeria | 14, 48 vues (« puff puff » : 14,3, 36 vues) | « Puff-puff — recette du Nigeria \| Keur Cook » → « Puff-puff : recette des beignets du Nigeria \| Keur Cook » |
+| /recette/fufu-light-soup | ghana fufu and light soup, fufu light soup | 6,7, 45 vues (« ghana fufu and light soup » : 9,3) | « Fufu et light soup — recette du Ghana \| Keur Cook » → « Fufu and light soup (Ghana) : recette du foufou \| Keur Cook » |
+| /recette/waakye | waakye, waakye ghana | 8,4, 43 vues (« waakye » : 10,5, 30 vues) | « Waakye — recette du Ghana \| Keur Cook » → « Waakye : recette ghanéenne du riz aux haricots \| Keur Cook » |
+| /recette/romazava | romazava, recette romazava | 12,2, 43 vues (« recette romazava » : 12,6) | « Romazava — recette de Madagascar \| Keur Cook » → « Romazava : recette du plat national malgache \| Keur Cook » |
+| /recette/akara | akara, recette akara | 11,1, 41 vues (« akara » : 7,8, 37 vues) | « Akara — recette du Nigeria \| Keur Cook » → « Akara : recette des beignets de niébé du Nigeria \| Keur Cook » |
+| /recette/pondu | pondu, pondu congo, le poundou | 10,2, 40 vues (« pondu » : 30,6) | « Pondu au poisson fumé — recette de la RD Congo \| Keur Cook » → « Pondu (saka-saka) : recette congolaise au poisson fumé » |
+| /recette/ravitoto | ravitoto recette, ravitoto | 14,9, 40 vues (« ravitoto recette » : 17,9) | « Ravitoto sy henakisoa — recette de Madagascar \| Keur Cook » → « Ravitoto : recette malgache au porc (henakisoa) \| Keur Cook » |
+| /recette/suya | suya | 8,5, 32 vues | « Suya de bœuf — recette du Nigeria \| Keur Cook » → « Suya : recette des brochettes de bœuf du Nigeria \| Keur Cook » |
+| /recette/poisson-braise-attieke | poisson braisé cameroun, attiéké alloco poisson braisé, poisson braisé au four | 13,6, 27 vues | « Poisson braisé et attiéké — recette de Côte d'Ivoire » → « Poisson braisé et attiéké : recette ivoirienne au four » |
+| /recette/to-sauce-gombo | tô sauce gombo, to plat burkina, le tô | 6, 26 vues | « Tô et sauce gombo — recette du Burkina Faso \| Keur Cook » → « Tô sauce gombo : recette du plat du Burkina Faso \| Keur Cook » |
+| /recette/liboke-de-poisson | liboké de poisson, maboké de poisson | 19,2, 19 vues | « Liboké de poisson — recette du Congo \| Keur Cook » → « Liboké de poisson : recette congolaise en papillote » |
+| /recette/kedjenou | kedjenou, poulet kedjenou | 15,9, 18 vues (« kedjenou » : 17) | « Kedjenou de poulet — recette de Côte d'Ivoire \| Keur Cook » → « Kedjenou de poulet : recette ivoirienne à l'étouffée » |
+| /recette/shiro | shiro éthiopie, recette shiro éthiopie | 13, 17 vues | « Shiro — recette d'Éthiopie \| Keur Cook » → « Shiro : recette éthiopienne aux pois chiches \| Keur Cook » |
+| /recette/jus-de-bouye | jus de baobab, jus de bouye | 5,7, 16 vues | « Jus de bouye — recette du Sénégal \| Keur Cook » → « Jus de bouye : recette du jus de baobab sénégalais » |
+| /recette/fonio-aux-legumes | fonio sauce arachide, recette de fonio | 7,8, 14 vues | « Fonio aux légumes et sauce arachide \| Keur Cook » → « Fonio sauce arachide et légumes : recette du Burkina » |
+| /recette/ngalakh | ngalakh, ngalar, lakh sankhal | 18, 14 vues (« ngalakh » : 47,5) | « Ngalakh — recette du Sénégal \| Keur Cook » → « Ngalakh : recette du dessert de Pâques du Sénégal » |
+| /conseils/quest-ce-que-le-guedj | guedj poisson, guedji, guédji | 9,6, 9 vues | « Le guedj, qu'est-ce que c'est et comment l'utiliser ? » → « Guedj (guedji) : le poisson séché sénégalais, mode d'emploi » |
+| /recette/luwombo | luwombo, luwombo recipe | 8,9, 8 vues | « Luwombo de poulet — recette d'Ouganda \| Keur Cook » → « Luwombo : poulet en feuilles de bananier d'Ouganda » |
+| /conseils/enlever-amertume-du-ndole | comment enlever l'amertume d'un plat | 17, 5 vues | « Comment enlever l'amertume du ndolé ? \| Keur Cook » → « Comment enlever l'amertume du ndolé (ou d'un plat) ? » |
+| /conseils/par-quoi-remplacer-le-soumbala | par quoi remplacer le nététou | 7,2, 5 vues | « Par quoi remplacer le soumbala ? \| Keur Cook » → « Par quoi remplacer le soumbala (nététou) ? \| Keur Cook » |
+| /produit/fonio | fonio | 7, 3 vues | « Fonio précuit \| Keur Cook » → « Fonio précuit : la petite céréale d'Afrique de l'Ouest » |
+| /recette/ugali-sukuma-wiki | ugali recette, l'ugali | 17,3, 3 vues | « Ugali et sukuma wiki — recette du Kenya \| Keur Cook » → « Recette de l'ugali et du sukuma wiki (Kenya) \| Keur Cook » |
+
+Réponses ajoutées aux recherches sans vraie réponse (FAQ ou paragraphe, faits déjà sur le site) :
+- variantes d'orthographe : pondu / poundou / saka-saka, liboké / maboké, ngalakh / ngalax, puff-puff / bofrot, jus de bouye / jus de baobab, guedj / guedji / guédji (phrase dans l'article) ;
+- « plat gabonais » : FAQ du poulet nyembwe avec lien « plats gabonais » vers /pays/gabon (page travaillée le 20/10, non retouchée) ;
+- « poisson braisé cameroun » : FAQ du poisson braisé (le poivre de Penja relève le poisson braisé au Cameroun, fait déjà sur la fiche du poivre) ; « poisson braisé au four » : 220 °C, 10 à 12 minutes par face ;
+- « chocolat indigène » : FAQ de l'odika ; « comment enlever l'amertume d'un plat » : partie « Et pour un autre plat amer ? » dans l'article ;
+- le h1 des conseils guedj (« Le guedj (guedji), quel est ce poisson séché et comment l'utiliser ? ») et soumbala (« Par quoi remplacer le soumbala (nététou) ? ») reprend désormais la recherche.
+- Non traité : « jus de néré » (tô), « degue mali » (fonio), « shiro rezept », « suyq » : pas de réponse sûre à ajouter, ou recherche hors sujet.
+
+Liens internes ajoutés ou précisés (texte du lien = la recherche) :
+- entre recettes, dans les FAQ : koki ↔ akara, koki → ndolé, koki ↔ luwombo, ndolé → koki, nyembwe ↔ odika, puff-puff ↔ akara, fufu ↔ waakye, romazava ↔ ravitoto, pondu ↔ liboké, poisson braisé ↔ kedjenou, poisson braisé → alloco, tô ↔ ugali, jus de bouye ↔ ngalakh, shiro → injera ;
+- depuis les FAQ vers les conseils : ndolé → « comment enlever l'amertume du ndolé », tô → « par quoi remplacer le soumbala (nététou) », fufu → foufou sans grumeaux, suya → yaji, shiro → berbéré, ngalakh → couscous de mil, fonio aux légumes → « fonio » (/produit/fonio) et « qu'est-ce que le fonio » ;
+- depuis les conseils : « koki camerounais » et « pondu congolais » (remplacer l'huile de palme rouge) ; « ravitoto malgache », « waakye du Ghana », « recette du ndolé » (conserver les feuilles séchées) ; « puff-puff du Nigeria », « akara », « fonio aux légumes et sauce arachide », « shiro éthiopien », « guedj » (plats végétariens) ; « fufu and light soup » (foufou sans grumeaux, mortier bois ou pierre) ; « suya nigérian » (yaji) ; « poisson braisé à l'attiéké » (gari, attiéké, tapioca) ; « poisson braisé ou grillé » et « kedjenou de poulet » (réussir l'attiéké) ; « tô sauce gombo » et « par quoi remplacer le soumbala » (sauce gombo qui file) ; « shiro éthiopien » (berbéré) ; « jus de bouye (jus de baobab) » (jus de gingembre) ; « guedj, ou guedji » et « par quoi remplacer le soumbala » (remplacer le poisson fumé) ; « guedj » (riz rouge du thiéboudienne) ; « akara » (petit-déjeuner, en ligne le 23/12).
+- Peu de liens possibles vers le romazava, l'odika et le nyembwe : aucun conseil déjà paru ne parle de Madagascar ou du Gabon (liens seulement depuis les FAQ voisines et la page pays).
+
+### À revoir à partir du 19 novembre 2026
+
+Les 26 pages ci-dessus : noter leur nouvelle place et leurs clics.

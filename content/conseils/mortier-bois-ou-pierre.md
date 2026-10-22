@@ -38,4 +38,4 @@ Rincez le mortier en bois à l'eau claire sans le laisser tremper et faites-le s
 
 ## Selon vos recettes
 
-Pour les épices du [suya](/recette/suya) ou une pâte d'ail et de gingembre, la pierre est plus efficace. Pour préparer un foufou à l'ancienne, comme celui du [fufu et light soup](/recette/fufu-light-soup), ou écraser des feuilles, le bois reste le compagnon idéal. Pour la [sauce gombo du tô](/recette/to-sauce-gombo), un petit mortier de l'un ou l'autre suffit à écraser soumbala et piment.
+Pour les épices du [suya](/recette/suya) ou une pâte d'ail et de gingembre, la pierre est plus efficace. Pour préparer un foufou à l'ancienne, comme celui du [fufu and light soup du Ghana](/recette/fufu-light-soup), ou écraser des feuilles, le bois reste le compagnon idéal. Pour la [sauce gombo du tô](/recette/to-sauce-gombo), un petit mortier de l'un ou l'autre suffit à écraser soumbala et piment.

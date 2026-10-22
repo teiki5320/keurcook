@@ -19,7 +19,7 @@ import { getCatalog } from "@/lib/data/catalog";
 import { getRecipeBySlug, getRecipes, getRelatedRecipes } from "@/lib/data/recipes";
 import { getMaintenance } from "@/lib/data/settings";
 import { recipeNutrition } from "@/lib/nutrition";
-import { courseName, DIFFICULTY_LABELS, formatDuration, ingredientLine, isoDuration } from "@/lib/recipe-utils";
+import { courseName, DIFFICULTY_LABELS, faqParts, faqPlainText, formatDuration, ingredientLine, isoDuration } from "@/lib/recipe-utils";
 
 
 export async function generateStaticParams() {
@@ -139,7 +139,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
             __html: jsonLd({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              mainEntity: recipe.faq.map((q) => ({ "@type": "Question", name: q.question, acceptedAnswer: { "@type": "Answer", text: q.answer } })),
+              mainEntity: recipe.faq.map((q) => ({ "@type": "Question", name: q.question, acceptedAnswer: { "@type": "Answer", text: faqPlainText(q.answer) } })),
             }),
           }}
         />
@@ -274,7 +274,17 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
                 {recipe.faq.map((q) => (
                   <div key={q.question} className="border-t border-[#fbeee2]/12 pt-4">
                     <dt className="text-[17px] font-semibold">{q.question}</dt>
-                    <dd className="mt-1.5 text-[15px] leading-relaxed text-[#fbeee2]/85">{q.answer}</dd>
+                    <dd className="mt-1.5 text-[15px] leading-relaxed text-[#fbeee2]/85">
+                      {faqParts(q.answer).map((part, i) =>
+                        typeof part === "string" ? (
+                          part
+                        ) : (
+                          <Link key={i} href={part.href} className="font-semibold text-[#ffc46b] underline underline-offset-2 hover:text-[#ff7a3d]">
+                            {part.text}
+                          </Link>
+                        ),
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>

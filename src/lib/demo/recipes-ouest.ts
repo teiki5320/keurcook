@@ -178,6 +178,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Pays baoulé",
     course: "mijotes",
     shortDescription: "Poulet cuit à l'étouffée dans son jus, avec légumes et piment, sans ajout d'eau.",
+    seoTitle: "Kedjenou de poulet : recette ivoirienne à l'étouffée",
+    seoDescription: "Recette du kedjenou de poulet, plat baoulé de Côte d'Ivoire : poulet, légumes et piment cuits à l'étouffée, sans eau, en secouant la cocotte.",
+    faq: [
+      { question: "Que veut dire kedjenou ?", answer: "Le nom évoquerait le geste de secouer le canari, la marmite en terre cuite fermée par des feuilles de bananier, que l'on remue au lieu de l'ouvrir. Le plat vient du pays baoulé, au centre de la Côte d'Ivoire." },
+      { question: "Faut-il ajouter de l'eau au poulet kedjenou ?", answer: "Non : le poulet cuit dans sa propre eau et celle des légumes. Fermez bien la cocotte et secouez-la toutes les 10 minutes, sans l'ouvrir, pendant 55 à 60 minutes." },
+      { question: "Avec quoi servir le kedjenou de poulet ?", answer: "Avec de l'attiéké ou du riz blanc. L'attiéké est aussi le compagnon du [poisson braisé](/recette/poisson-braise-attieke) des maquis d'Abidjan." },
+    ],
     story:
       "Le kedjenou vient du pays baoulé, au centre de la Côte d'Ivoire. Son nom évoquerait le geste de secouer le canari, la marmite en terre cuite fermée par des feuilles de bananier, que l'on remue régulièrement au lieu d'ouvrir.\n\nLa viande cuit ainsi à l'étouffée, dans sa propre eau et celle des légumes, ce qui lui donne une chair tendre et une sauce courte, très parfumée.",
     prepMinutes: 20,
@@ -219,6 +226,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Plateau central",
     course: "accompagnements",
     shortDescription: "Pâte ferme de farine de maïs, découpée à la main et servie avec une sauce gombo filante parfumée au soumbala.",
+    seoTitle: "Tô sauce gombo : recette du plat du Burkina Faso",
+    seoDescription: "Recette du tô, plat de base du Burkina Faso : pâte ferme de farine de maïs servie avec une sauce gombo filante au soumbala, à la viande et au poisson fumé.",
+    faq: [
+      { question: "Qu'est-ce que le tô ?", answer: "La base des repas au Burkina Faso : une pâte ferme de farine de mil, de sorgho ou de maïs, que l'on découpe à la main et que l'on trempe dans la sauce. Au Kenya, l'[ugali](/recette/ugali-sukuma-wiki) est lui aussi une pâte ferme de maïs blanc." },
+      { question: "Pourquoi mettre du citron dans le tô ?", answer: "Le jus de citron ou de tamarin donne au tô sa légère acidité et l'empêche de coller." },
+      { question: "Par quoi remplacer le soumbala de la sauce gombo ?", answer: "Cherchez-le d'abord sous ses autres noms, dawadawa ou nététou. Sinon, voyez [par quoi remplacer le soumbala (nététou)](/conseils/par-quoi-remplacer-le-soumbala)." },
+    ],
     story:
       "Le tô est la base des repas au Burkina Faso : une pâte ferme de farine de mil, de sorgho ou de maïs, que l'on découpe à la main et que l'on trempe dans la sauce. Chaque soir, dans les cours familiales, les grandes marmites de tô se préparent au feu de bois.\n\nLa sauce gombo, légèrement filante, en est la compagne la plus courante. Le soumbala, condiment fermenté à base de graines de néré, lui apporte son parfum profond si caractéristique.",
     prepMinutes: 20,
@@ -345,6 +359,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Pays ashanti, Kumasi",
     course: "accompagnements",
     shortDescription: "Boule de foufou moelleuse plongée dans une soupe légère à la tomate et au piment.",
+    seoTitle: "Fufu and light soup (Ghana) : recette du foufou",
+    seoDescription: "Recette ghanéenne du fufu and light soup : boule de foufou au manioc et au plantain, servie dans une soupe légère à la tomate, au piment et à la viande.",
+    faq: [
+      { question: "Qu'est-ce que la light soup du Ghana ?", answer: "Un bouillon clair de tomate et de piment, sans pâte d'arachide ni noix de palme, d'où son nom de « soupe légère ». Avec le fufu, c'est un grand classique du déjeuner du dimanche au Ghana." },
+      { question: "Comment se mange le fufu ?", answer: "On ne le mâche pas : on en détache un morceau du bout des doigts et on l'avale avec la soupe. Autre classique ghanéen : le [waakye](/recette/waakye), riz aux haricots du matin." },
+      { question: "Comment faire un fufu sans grumeaux ?", answer: "Versez les farines en pluie hors du feu en remuant vigoureusement, puis travaillez la pâte 5 à 8 minutes sur feu doux jusqu'à ce qu'elle soit lisse et élastique. Toutes les astuces : [un foufou sans grumeaux](/conseils/foufou-sans-grumeaux)." },
+    ],
     story:
       "Au Ghana, le foufou (fufu) est traditionnellement obtenu en pilant manioc et plantain cuits dans un grand mortier, un travail à deux qui rythme la vie des cours ashanti. La « light soup », comme son nom l'indique, est un bouillon clair de tomate et de piment, sans pâte d'arachide ni noix de palme.\n\nL'association des deux est un grand classique du déjeuner du dimanche. On ne mâche pas le foufou : on en détache un morceau du bout des doigts et on l'avale avec la soupe.",
     prepMinutes: 25,
@@ -386,6 +407,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Nord du Ghana et Accra",
     course: "riz-cereales",
     shortDescription: "Riz et haricots cuits ensemble, teintés de rouge brun par les feuilles de sorgho.",
+    seoTitle: "Waakye : recette ghanéenne du riz aux haricots",
+    seoDescription: "Recette du waakye (prononcer « waa-tchi »), riz aux haricots du Ghana teinté par les feuilles de sorgho, servi avec shito, gari, œuf dur et poisson frit.",
+    faq: [
+      { question: "D'où vient la couleur du waakye ?", answer: "Des feuilles de sorgho séchées, cuites avec les haricots puis le riz : elles teintent l'eau en rouge sombre. Une demi-cuillère de bicarbonate accentue la couleur." },
+      { question: "Avec quoi servir le waakye ?", answer: "Au Ghana, on le sert le matin sur une feuille de bananier, avec du shito, du gari, des spaghettis, un œuf dur et du poisson frit." },
+      { question: "Que veut dire waakye ?", answer: "Le nom viendrait du haoussa wake, « haricots » : le plat serait né chez les Haoussas du nord du Ghana. Pour un autre plat ghanéen, essayez le [fufu and light soup](/recette/fufu-light-soup)." },
+    ],
     story:
       "Le waakye (prononcer « waa-tchi ») viendrait des peuples haoussas du nord du Ghana, avant de conquérir Accra et tout le pays. Son nom viendrait du haoussa wake, « haricots ».\n\nSa couleur brun-rouge caractéristique vient des feuilles de sorgho séchées que l'on fait cuire avec le riz. Le matin, les vendeuses le servent sur une feuille de bananier avec du shito, du gari, des spaghettis, un œuf dur et du poisson frit.",
     prepMinutes: 15,

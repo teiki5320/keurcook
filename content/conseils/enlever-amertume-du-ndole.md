@@ -1,5 +1,6 @@
 ---
 title: Comment enlever l'amertume du ndolé ?
+seoTitle: Comment enlever l'amertume du ndolé (ou d'un plat) ?
 description: Les feuilles de ndolé sont naturellement amères. Tremper, blanchir, rincer et presser : la méthode pour garder juste ce qu'il faut d'amertume.
 date: 2026-09-07
 theme: sauces
@@ -26,6 +27,10 @@ Certaines cuisinières ajoutent une pincée de sel ou de bicarbonate dans l'eau 
 ## Avec des feuilles fraîches
 
 Lavez-les, puis frottez-les entre vos mains sous l'eau pour faire sortir le jus amer, avant de les blanchir et de les presser de la même façon.
+
+## Et pour un autre plat amer ?
+
+La même méthode vaut pour les autres feuilles amères : rincer, blanchir puis presser avant de les cuisiner, en goûtant entre deux rinçages. Une fois dans la sauce, un ingrédient doux et onctueux comme la pâte d'arachide aide à équilibrer l'amertume qui reste.
 
 ## Dans la sauce
 

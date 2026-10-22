@@ -30,9 +30,9 @@ Ces huiles donnent l'aspect, mais pas le goût fruité propre à l'huile de palm
 
 ## Selon les plats
 
-- **Dans les sauces de feuilles** comme le [pondu](/recette/pondu) ou l'[eru](/recette/eru), l'huile de palme joue un rôle central. Un remplacement change nettement le plat : préférez la pulpe de noix de palme si vous en avez.
+- **Dans les sauces de feuilles** comme le [pondu congolais](/recette/pondu) ou l'[eru](/recette/eru), l'huile de palme joue un rôle central. Un remplacement change nettement le plat : préférez la pulpe de noix de palme si vous en avez.
 - **Dans la [soupe egusi](/recette/soupe-egusi)**, une huile colorée au paprika donne un résultat convenable.
-- **Dans le [koki](/recette/koki)**, où l'huile de palme donne la couleur et le moelleux, le remplacement est plus délicat : le résultat sera différent de la version traditionnelle.
+- **Dans le [koki camerounais](/recette/koki)**, où l'huile de palme donne la couleur et le moelleux, le remplacement est plus délicat : le résultat sera différent de la version traditionnelle.
 
 ## Un conseil
 

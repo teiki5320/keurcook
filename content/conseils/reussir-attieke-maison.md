@@ -27,4 +27,4 @@ L'attiéké se sert chaud. Passez-le quelques minutes à la vapeur, dans le haut
 
 ## Les accompagnements classiques
 
-L'attiéké accompagne le [poisson braisé](/recette/poisson-braise-attieke), servi avec des oignons, des tomates et du piment. Il est aussi la base du [garba](/recette/garba), le plat de rue d'Abidjan à base de thon frit.
+L'attiéké accompagne le [poisson braisé ou grillé](/recette/poisson-braise-attieke), servi avec des oignons, des tomates et du piment. Il est aussi la base du [garba](/recette/garba), le plat de rue d'Abidjan à base de thon frit, et se sert avec le [kedjenou de poulet](/recette/kedjenou), cuit à l'étouffée.

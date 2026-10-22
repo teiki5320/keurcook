@@ -24,7 +24,7 @@ Son goût est légèrement acidulé. On le mélange à de l'eau chaude pour obte
 
 L'attiéké, très répandu en Côte d'Ivoire, commence aussi par du manioc râpé et fermenté, puis pressé. La pulpe est ensuite roulée en petits grains et cuite à la vapeur. Le résultat est une semoule tendre et moelleuse, au goût acidulé, qui se mange comme un couscous.
 
-On le trouve frais ou déshydraté. L'[attiéké sec](/produit/attieke-sec) se réhydrate et se réchauffe à la vapeur : suivez les indications du paquet, ou consultez notre article pour [réussir un attiéké maison](/conseils/reussir-attieke-maison). Il accompagne le [poisson braisé](/recette/poisson-braise-attieke) ou le [garba](/recette/garba).
+On le trouve frais ou déshydraté. L'[attiéké sec](/produit/attieke-sec) se réhydrate et se réchauffe à la vapeur : suivez les indications du paquet, ou consultez notre article pour [réussir un attiéké maison](/conseils/reussir-attieke-maison). Il accompagne le [poisson braisé à l'attiéké](/recette/poisson-braise-attieke) ou le [garba](/recette/garba).
 
 ## Le tapioca : l'amidon du manioc
 

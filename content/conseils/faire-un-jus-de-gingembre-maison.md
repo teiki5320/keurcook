@@ -42,7 +42,7 @@ Le jus a tendance à devenir plus piquant en reposant. Mieux vaut donc rester un
 - **Ananas** : il adoucit le gingembre et donne un jus plus rond.
 - **Menthe** : quelques feuilles apportent de la fraîcheur.
 - **Miel** : il peut remplacer une partie du sucre.
-- **Mélange** : le gingembre se marie bien avec le [bissap](/recette/jus-de-bissap), à base de [fleurs d'hibiscus](/produit/fleurs-de-bissap), ou avec le [jus de bouye](/recette/jus-de-bouye) au baobab.
+- **Mélange** : le gingembre se marie bien avec le [bissap](/recette/jus-de-bissap), à base de [fleurs d'hibiscus](/produit/fleurs-de-bissap), ou avec le [jus de bouye (jus de baobab)](/recette/jus-de-bouye).
 
 ## La conservation
 

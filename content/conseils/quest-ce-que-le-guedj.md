@@ -1,6 +1,7 @@
 ---
-title: Le guedj, qu'est-ce que c'est et comment l'utiliser ?
-description: Le guedj, poisson fermenté et séché du Sénégal, donne son goût profond au thiéboudienne. Comment le préparer, le doser et le conserver.
+title: Le guedj (guedji), quel est ce poisson séché et comment l'utiliser ?
+seoTitle: Guedj (guedji) : le poisson séché sénégalais, mode d'emploi
+description: Le guedj (ou guedji), poisson fermenté et séché du Sénégal, donne son goût profond au thiéboudienne. Comment le préparer, le doser et le conserver.
 date: 2026-10-07
 theme: epicerie
 resume: Le guedj est un poisson fermenté puis séché au soleil, très utilisé au Sénégal. On en met un petit morceau dans le bouillon ou la sauce pour lui donner un goût marin puissant.
@@ -12,7 +13,7 @@ imagePrompt: Photographie culinaire, morceaux de guedj, poisson fermenté et sé
 ---
 ## Un poisson fermenté et séché
 
-Le guedj est un poisson que l'on laisse fermenter puis sécher au soleil. C'est un ingrédient de base de la cuisine sénégalaise, et on le retrouve plus largement sur la côte ouest-africaine. Il se présente en morceaux durs, à la peau brune, avec une odeur forte qui surprend la première fois.
+Le guedj, que l'on écrit aussi guedji ou guédji, est un poisson que l'on laisse fermenter puis sécher au soleil. C'est un ingrédient de base de la cuisine sénégalaise, et on le retrouve plus largement sur la côte ouest-africaine. Il se présente en morceaux durs, à la peau brune, avec une odeur forte qui surprend la première fois.
 
 Il ne se mange pas tel quel : c'est un assaisonnement. Comme le [soumbala](/produit/soumbala) (nététou), il sert à donner de la profondeur à un plat, un goût salé et marin qu'aucune épice ne remplace vraiment.
 

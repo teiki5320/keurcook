@@ -21,7 +21,7 @@ Les bouillies de mil, de maïs ou de riz sont très répandues. On les prépare 
 
 ## Les beignets
 
-Les beignets sont les compagnons des bouillies. On trouve des beignets de farine de blé levée, comme les [puff-puff](/recette/puff-puff) du Nigeria ou le bofrot ghanéen, et des beignets de haricots niébé, appelés akara ou accras selon les pays. Ils se vendent chauds, dans de petits sachets, au coin des rues et près des arrêts de bus.
+Les beignets sont les compagnons des bouillies. On trouve des beignets de farine de blé levée, comme les [puff-puff](/recette/puff-puff) du Nigeria ou le bofrot ghanéen, et des beignets de haricots niébé, appelés [akara](/recette/akara) ou accras selon les pays. Ils se vendent chauds, dans de petits sachets, au coin des rues et près des arrêts de bus.
 
 ## Pain, café et thé
 

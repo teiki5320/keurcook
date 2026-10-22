@@ -47,6 +47,13 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     region: "Hauts plateaux",
     course: "mijotes",
     shortDescription: "Une purée veloutée de farine de pois chiches, relevée au berbéré, que l'on sert bien chaude avec l'injera.",
+    seoTitle: "Shiro : recette éthiopienne aux pois chiches",
+    seoDescription: "Recette du shiro d'Éthiopie : purée veloutée de farine de pois chiches relevée au berbéré, servie bien chaude avec l'injera. Prêt en 40 minutes.",
+    faq: [
+      { question: "Qu'est-ce que le shiro éthiopien ?", answer: "Un plat présent dans presque tous les foyers d'Éthiopie et d'Érythrée : une purée de farine de pois chiches ou de fèves grillées, souvent déjà mélangée à des épices. Il est rapide et économique." },
+      { question: "Qu'est-ce que le shiro tegabino ?", answer: "Une spécialité des restaurants d'Addis-Abeba : le shiro servi fumant dans un petit plat en terre cuite, qui arrive encore bouillonnant à table." },
+      { question: "Avec quoi manger le shiro ?", answer: "Avec l'[injera](/recette/injera), la grande galette éthiopienne qui sert d'assiette et de couverts. Il est relevé au [berbéré](/conseils/quest-ce-que-le-berbere)." },
+    ],
     story:
       "Le shiro est présent dans presque tous les foyers d'Éthiopie et d'Érythrée. On le prépare à partir d'une farine de pois chiches ou de fèves grillées, souvent déjà mélangée à des épices, ce qui en fait un plat rapide et économique.\n\nServi fumant dans un petit plat en terre cuite, le shiro tegabino est une spécialité des restaurants d'Addis-Abeba : il arrive encore bouillonnant à table, accompagné d'injera.",
     prepMinutes: 10,
@@ -163,6 +170,13 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     region: "Nairobi",
     course: "accompagnements",
     shortDescription: "La pâte ferme de maïs blanc et ses feuilles de chou vert sautées à la tomate.",
+    seoTitle: "Recette de l'ugali et du sukuma wiki (Kenya)",
+    seoDescription: "Recette de l'ugali, pâte ferme de maïs blanc du Kenya, et du sukuma wiki, chou vert sauté à la tomate : le duo de base de Nairobi, en 40 minutes.",
+    faq: [
+      { question: "Qu'est-ce que l'ugali ?", answer: "L'accompagnement de base au Kenya et dans une grande partie de l'Afrique de l'Est : une pâte ferme de farine de maïs blanc, proche du [tô](/recette/to-sauce-gombo) du Burkina Faso." },
+      { question: "Que veut dire sukuma wiki ?", answer: "« Pousser la semaine » en swahili : ce chou vert sauté, bon marché et vite préparé, permettait de tenir jusqu'à la fin de la semaine." },
+      { question: "Comment manger l'ugali ?", answer: "À la kényane : prenez-en une petite boule, creusez-la avec le pouce et servez-vous-en comme d'une cuillère pour attraper sauces et légumes." },
+    ],
     story:
       "L'ugali est l'accompagnement de base au Kenya et dans une grande partie de l'Afrique de l'Est : une pâte ferme de farine de maïs blanc, que l'on roule en boulette dans la main pour attraper sauces et légumes.\n\nSukuma wiki signifie en swahili « pousser la semaine » : ce plat de chou vert (collard) sauté, bon marché et vite préparé, permettait de tenir jusqu'à la fin de la semaine. Le duo se retrouve aussi bien à la maison que dans les petites cantines de Nairobi.",
     prepMinutes: 15,
@@ -201,6 +215,13 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     region: "Buganda",
     course: "mijotes",
     shortDescription: "Poulet et sauce à l'arachide cuits à la vapeur dans des feuilles de bananier.",
+    seoTitle: "Luwombo : poulet en feuilles de bananier d'Ouganda",
+    seoDescription: "Recette du luwombo, plat de fête du Buganda, en Ouganda : poulet et sauce à l'arachide cuits à la vapeur dans des feuilles de bananier, avec du matoke.",
+    faq: [
+      { question: "Qu'est-ce que le luwombo ?", answer: "Un plat de cérémonie du royaume du Buganda, au centre de l'Ouganda. Il aurait été créé à la fin du XIXᵉ siècle par le cuisinier du kabaka, le roi, et reste le plat d'honneur des mariages et des fêtes de famille." },
+      { question: "Peut-on faire le luwombo sans feuilles de bananier ?", answer: "Oui : doublez du papier sulfurisé avec du papier aluminium. Le goût sera moins typique, mais la cuisson identique." },
+      { question: "Avec quoi servir le luwombo ?", answer: "Avec du matoke (bananes plantain vertes cuites à la vapeur et écrasées) ou du riz. Au Cameroun, le [koki](/recette/koki) cuit lui aussi à la vapeur en feuilles de bananier." },
+    ],
     story:
       "Le luwombo est un plat de cérémonie du royaume du Buganda, au centre de l'Ouganda. On raconte qu'il aurait été créé à la fin du XIXᵉ siècle par le cuisinier du kabaka (le roi), et il reste aujourd'hui le plat d'honneur des mariages et des fêtes de famille.\n\nChaque portion est enveloppée dans des feuilles de bananier assouplies au-dessus du feu, puis cuite longuement à la vapeur. La sauce à l'arachide s'imprègne alors du parfum végétal des feuilles.",
     prepMinutes: 45,
@@ -240,6 +261,13 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     region: "Hautes Terres, Antananarivo",
     course: "mijotes",
     shortDescription: "Le bouillon national malgache de viande et de brèdes, avec les fameuses brèdes mafane.",
+    seoTitle: "Romazava : recette du plat national malgache",
+    seoDescription: "Recette du romazava, bouillon national de Madagascar : bœuf (ou zébu) mijoté avec des brèdes, dont les brèdes mafane qui picotent la langue. Sur du riz.",
+    faq: [
+      { question: "Que sont les brèdes mafane du romazava ?", answer: "Le cresson de Pará. Leurs petites fleurs jaunes provoquent un léger picotement sur la langue : c'est la signature du romazava." },
+      { question: "Par quoi remplacer les brèdes mafane ?", answer: "Le cresson de fontaine, ou un mélange de cresson et d'épinards, les remplace correctement, sans l'effet picotant." },
+      { question: "Avec quoi servir le romazava ?", answer: "Versé sur un bol de riz blanc, souvent avec un sakay, condiment pimenté, et un rougail de tomates. Autre grand plat malgache : le [ravitoto](/recette/ravitoto), feuilles de manioc pilées au porc." },
+    ],
     story:
       "Souvent présenté comme le plat national de Madagascar, le romazava est un bouillon de viande de zébu mijoté avec plusieurs sortes de brèdes, ces feuilles vertes que l'on trouve sur tous les marchés de l'île. Son nom évoquerait un « bouillon clair ».\n\nSa signature, ce sont les brèdes mafane (cresson de Pará) : leurs petites fleurs jaunes provoquent un léger picotement sur la langue. Le romazava se sert en grande quantité, versé sur un bol de riz blanc, base de tous les repas malgaches.",
     prepMinutes: 25,
@@ -279,6 +307,13 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     region: "Hautes Terres",
     course: "mijotes",
     shortDescription: "Feuilles de manioc pilées mijotées avec du porc, à l'ail et au gingembre.",
+    seoTitle: "Ravitoto : recette malgache au porc (henakisoa)",
+    seoDescription: "Recette du ravitoto sy henakisoa, plat malgache : feuilles de manioc pilées mijotées avec du porc, de l'ail et du gingembre, parfois du lait de coco.",
+    faq: [
+      { question: "Que veut dire ravitoto ?", answer: "« Feuilles pilées » en malgache : ce sont des feuilles de manioc écrasées au pilon. Henakisoa désigne le porc avec lequel on les cuit." },
+      { question: "Faut-il du lait de coco dans le ravitoto ?", answer: "Ce n'est pas obligatoire : certaines familles en ajoutent, surtout sur la côte est. Dans cette recette, il est facultatif." },
+      { question: "Avec quoi servir le ravitoto ?", answer: "Avec du riz blanc. Il est encore meilleur réchauffé le lendemain. Autre plat malgache incontournable : le [romazava](/recette/romazava), bouillon de bœuf aux brèdes." },
+    ],
     story:
       "Ravitoto signifie littéralement « feuilles pilées » en malgache : ce sont des feuilles de manioc écrasées au pilon, puis cuites longuement avec du porc (henakisoa). C'est l'un des plats les plus aimés de Madagascar, que l'on prépare pour le repas dominical ou lorsque la famille est réunie.\n\nLe gras du porc fond dans les feuilles et leur donne une texture riche et soyeuse, relevée par l'ail et le gingembre. Certaines familles y ajoutent du lait de coco, surtout sur la côte est.",
     prepMinutes: 30,

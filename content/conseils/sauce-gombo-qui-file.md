@@ -25,7 +25,7 @@ Une sauce gombo file quand le gombo est finement coupé ou moulu, ajouté en fin
 
 ## Avec du gombo en poudre
 
-Le [gombo séché en poudre](/produit/gombo-seche) donne une sauce très filante, sans découpe. Versez-le en pluie dans la sauce frémissante en fouettant sans arrêt, pour éviter les grumeaux, puis laissez cuire quelques minutes. Suivez les indications du paquet pour la quantité. C'est la méthode de notre [sauce gombo du tô](/recette/to-sauce-gombo), parfumée au [soumbala](/produit/soumbala).
+Le [gombo séché en poudre](/produit/gombo-seche) donne une sauce très filante, sans découpe. Versez-le en pluie dans la sauce frémissante en fouettant sans arrêt, pour éviter les grumeaux, puis laissez cuire quelques minutes. Suivez les indications du paquet pour la quantité. C'est la méthode de notre [tô sauce gombo](/recette/to-sauce-gombo), parfumée au [soumbala](/produit/soumbala). Si vous n'en trouvez pas, voyez [par quoi remplacer le soumbala](/conseils/par-quoi-remplacer-le-soumbala).
 
 ## Les erreurs à éviter
 

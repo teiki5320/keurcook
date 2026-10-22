@@ -23,8 +23,8 @@ Les feuilles séchées se conservent longtemps justement parce qu'elles ont perd
 ## Selon les feuilles
 
 - **Le ndolé** : les [feuilles de ndolé séchées](/produit/feuilles-de-ndole) sont souvent déjà lavées et coupées. Gardez-les bien fermées pour qu'elles ne prennent pas les odeurs du placard. Avant cuisson, elles se réhydratent et se rincent, ce qui permet aussi de limiter leur amertume (voir [comment enlever l'amertume du ndolé](/conseils/enlever-amertume-du-ndole)).
-- **Le manioc** : pour le [pondu](/recette/pondu) ou le [ravitoto](/recette/ravitoto), les [feuilles de manioc](/produit/feuilles-de-manioc) se vendent surtout déjà pilées, en bocal ou en conserve. Suivez les indications de l'étiquette ; une fois ouvert, gardez le reste au réfrigérateur dans un récipient fermé et utilisez-le rapidement. Si vous trouvez des feuilles de manioc séchées, rangez-les comme les autres, dans un bocal bien étanche.
-- **Le sorgho** : les [feuilles de sorgho](/produit/feuilles-de-sorgho) servent surtout à colorer le [waakye](/recette/waakye). Elles sont grandes et cassantes : rangez-les à plat ou roulées sans les écraser, dans un sac bien fermé.
+- **Le manioc** : pour le [pondu](/recette/pondu) ou le [ravitoto malgache](/recette/ravitoto), les [feuilles de manioc](/produit/feuilles-de-manioc) se vendent surtout déjà pilées, en bocal ou en conserve. Suivez les indications de l'étiquette ; une fois ouvert, gardez le reste au réfrigérateur dans un récipient fermé et utilisez-le rapidement. Si vous trouvez des feuilles de manioc séchées, rangez-les comme les autres, dans un bocal bien étanche.
+- **Le sorgho** : les [feuilles de sorgho](/produit/feuilles-de-sorgho) servent surtout à colorer le [waakye du Ghana](/recette/waakye). Elles sont grandes et cassantes : rangez-les à plat ou roulées sans les écraser, dans un sac bien fermé.
 
 ## Et le congélateur ?
 
@@ -36,4 +36,4 @@ Des feuilles en bon état sont sèches, cassantes et sentent le végétal. Jetez
 
 ## Anticiper le trempage
 
-Pour le [ndolé](/recette/ndole) comme pour les autres plats de feuilles, pensez à anticiper le trempage avant de lancer la recette : suivez les indications du paquet, puis égouttez-les bien avant de les ajouter à la sauce.
+Pour la [recette du ndolé](/recette/ndole) comme pour les autres plats de feuilles, pensez à anticiper le trempage avant de lancer la recette : suivez les indications du paquet, puis égouttez-les bien avant de les ajouter à la sauce.

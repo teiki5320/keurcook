@@ -19,7 +19,7 @@ Beaucoup de plats africains sont végétariens par nature, en particulier dans l
 En Éthiopie, les longues périodes de jeûne religieux, pendant lesquelles on renonce aux produits animaux, ont donné une grande variété de plats végétaux. On les sert souvent ensemble, sur une grande [injera](/recette/injera) à la [farine de teff](/produit/farine-de-teff).
 
 - **Le [misir wat](/recette/misir-wat)** : des lentilles corail mijotées dans une sauce rouge au [berbéré](/produit/berbere).
-- **Le [shiro](/recette/shiro)** : une purée veloutée de farine de pois chiches, relevée elle aussi au berbéré.
+- **Le [shiro éthiopien](/recette/shiro)** : une purée veloutée de farine de pois chiches, relevée elle aussi au berbéré.
 
 Pour qu'ils restent entièrement végétaux, cuisinez-les à l'huile plutôt qu'au beurre clarifié épicé.
 
@@ -28,19 +28,19 @@ Pour qu'ils restent entièrement végétaux, cuisinez-les à l'huile plutôt qu'
 - **L'[alloco](/recette/alloco)** : des rondelles de plantain mûr frites, dorées et fondantes.
 - **Le [kelewele](/recette/kelewele)** : des dés de plantain marinés au gingembre et au piment, puis frits.
 - **La [chakalaka](/recette/chakalaka)** : un condiment sud-africain de poivrons, carottes et haricots, pimenté.
-- **Le [fonio aux légumes](/recette/fonio-aux-legumes)** : du [fonio](/produit/fonio) avec une sauce aux légumes et à l'arachide.
+- **Le [fonio aux légumes et sauce arachide](/recette/fonio-aux-legumes)** : du [fonio](/produit/fonio) avec une sauce aux légumes et à l'arachide.
 - **L'[ugali et sukuma wiki](/recette/ugali-sukuma-wiki)** : une pâte de maïs et des feuilles de chou sautées à la tomate. Choisissez un bouillon de légumes, ou n'en mettez pas.
 
 ## Côté sucré
 
-Les [puff-puff](/recette/puff-puff), beignets à la levure, ne contiennent ni viande ni poisson. Le [thiakry](/recette/thiakry) et le [dégué](/recette/degue), à base de mil et de lait caillé, conviennent aux végétariens mais pas aux végans.
+Les [puff-puff du Nigeria](/recette/puff-puff), beignets à la levure, ne contiennent ni viande ni poisson, pas plus que l'[akara](/recette/akara), beignet de haricots cornille (niébé). Le [thiakry](/recette/thiakry) et le [dégué](/recette/degue), à base de mil et de lait caillé, conviennent aux végétariens mais pas aux végans.
 
 ## Les ingrédients cachés à surveiller
 
 Certains plats semblent végétaux mais doivent leur goût à des produits de la mer :
 
 1. **Les crevettes séchées**, pilées dans de nombreuses sauces feuilles ou à l'arachide.
-2. **Le poisson fumé ou séché**, comme le guedj, souvent ajouté en petite quantité.
+2. **Le poisson fumé ou séché**, comme le [guedj](/conseils/quest-ce-que-le-guedj), souvent ajouté en petite quantité.
 3. **Les cubes de bouillon**, parfois à base de viande ou de poisson : lisez l'étiquette.
 4. **Le beurre ou le lait**, à écarter pour une version végane.
 

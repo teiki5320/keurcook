@@ -98,6 +98,14 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     region: "Littoral et Ouest",
     course: "accompagnements",
     shortDescription: "Gâteau de haricots cornille à l'huile de palme, cuit à la vapeur en feuilles de bananier.",
+    seoTitle: "Koki : recette camerounaise du gâteau de cornille",
+    seoDescription: "Recette du koki camerounais : gâteau de haricots cornille (niébé) battus à l'huile de palme, cuit à la vapeur dans des feuilles de bananier.",
+    faq: [
+      { question: "Qu'est-ce que le koki du Cameroun ?", answer: "Un mets très ancien du Cameroun, préparé sur la côte comme dans l'Ouest : un gâteau de haricots cornille écrasés et battus avec l'huile de palme, cuit longuement à la vapeur. Les mêmes haricots servent à l'[akara](/recette/akara), le beignet du Nigeria." },
+      { question: "Avec quoi manger le koki ?", answer: "Avec du plantain ou du macabo bouillis. Au Cameroun, on le partage lors des marchés et des fêtes de village, comme le [ndolé camerounais](/recette/ndole) les jours de fête." },
+      { question: "Peut-on faire le koki sans feuilles de bananier ?", answer: "Oui : utilisez des ramequins filmés ou du papier aluminium. En Ouganda, le [luwombo](/recette/luwombo) cuit lui aussi à la vapeur dans des feuilles de bananier." },
+      { question: "Comment savoir si le koki est cuit ?", answer: "Après environ 2 heures de cuisson à la vapeur, il doit être ferme au toucher. Laissez-le reposer 10 minutes avant d'ouvrir les paquets." },
+    ],
     story:
       "Le koki est un mets très ancien du Cameroun, préparé aussi bien sur la côte que dans l'Ouest du pays. Les haricots cornille, débarrassés de leur peau puis écrasés, sont battus avec l'huile de palme jusqu'à former une pâte orangée et soyeuse.\n\nEnveloppé dans des feuilles de bananier et cuit longuement à la vapeur, il accompagne volontiers le plantain ou le macabo bouillis. On le partage lors des marchés et des fêtes de village.",
     prepMinutes: 60,
@@ -177,6 +185,13 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     region: "Brazzaville et bords du fleuve Congo",
     course: "grillades",
     shortDescription: "Poisson aux tomates et aux aromates en papillote de feuilles de bananier, cuit sur la braise.",
+    seoTitle: "Liboké de poisson : recette congolaise en papillote",
+    seoDescription: "Recette du liboké de poisson (maboké au pluriel) : poisson, tomates et aromates cuits en feuilles de bananier sur la braise ou au four, à la congolaise.",
+    faq: [
+      { question: "Liboké ou maboké de poisson ?", answer: "Liboké est le singulier, maboké le pluriel. Le mot vient du lingala et désigne le paquet de feuilles de bananier où l'on enferme poisson, viande ou légumes avant de le poser sur les braises." },
+      { question: "Peut-on faire le liboké au four ?", answer: "Oui : comptez 35 minutes à 200 °C, papillotes posées sur une plaque." },
+      { question: "Avec quoi servir le liboké de poisson ?", answer: "Avec de la chikwangue ou des bananes plantains bouillies. La chikwangue accompagne aussi le [pondu](/recette/pondu), les feuilles de manioc pilées." },
+    ],
     story:
       "Le liboké (pluriel : maboké) est une technique de cuisson emblématique des deux rives du fleuve Congo. Le mot, issu du lingala, désigne le paquet de feuilles de bananier dans lequel on enferme poisson, viande ou légumes avant de le poser sur les braises.\n\nLes pêcheurs du fleuve préparent ainsi le capitaine, le silure ou la carpe, qui cuisent doucement dans leur propre jus. À Brazzaville, le liboké de poisson reste un incontournable des repas partagés en plein air.",
     prepMinutes: 25,
@@ -219,6 +234,13 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     region: "Libreville",
     course: "mijotes",
     shortDescription: "Poulet fumé mijoté dans une sauce sombre et onctueuse au « chocolat indigène ».",
+    seoTitle: "Poulet à l'odika : sauce au chocolat indigène du Gabon",
+    seoDescription: "Recette du poulet à l'odika, plat gabonais : poulet mijoté dans une sauce brune et veloutée à l'odika, le « chocolat indigène » à la mangue sauvage.",
+    faq: [
+      { question: "Qu'est-ce que l'odika, le « chocolat indigène » du Gabon ?", answer: "Une pâte faite des amandes grillées de la mangue sauvage, moulue puis moulée en pains sombres et vendue sur tous les marchés du Gabon. Les Gabonais la surnomment « chocolat indigène », mais elle ne contient pas de cacao." },
+      { question: "Quel goût a la sauce odika ?", answer: "Râpée dans la sauce, l'odika lui donne une couleur brune, une consistance veloutée et un goût légèrement fumé. Chauffez un peu le pain d'odika au-dessus d'une flamme : il se râpe plus facilement." },
+      { question: "Avec quoi servir le poulet à l'odika ?", answer: "Avec du bâton de manioc ou du riz. C'est l'un des plats les plus représentatifs de la cuisine gabonaise, avec le [poulet nyembwe](/recette/poulet-nyembwe) à la noix de palme." },
+    ],
     story:
       "L'odika, que les Gabonais surnomment volontiers « chocolat indigène », est une pâte faite des amandes grillées de la mangue sauvage. Moulue puis moulée en pains sombres, elle est vendue sur tous les marchés du Gabon.\n\nRâpée dans la sauce, elle lui donne une couleur brune, une consistance veloutée et un goût légèrement fumé. Le poulet à l'odika est l'un des plats les plus représentatifs de la cuisine gabonaise, souvent servi avec du manioc ou du riz.",
     prepMinutes: 20,

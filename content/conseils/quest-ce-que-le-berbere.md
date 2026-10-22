@@ -31,7 +31,7 @@ Dosez-le progressivement : les mélanges n'ont pas tous la même force. Goûtez 
 
 - **Le [doro wat](/recette/doro-wat)** : le ragoût de poulet aux œufs, plat de fête éthiopien, où le berbéré est utilisé généreusement.
 - **Le [misir wat](/recette/misir-wat)** : des lentilles corail mijotées dans une sauce rouge.
-- **Le [shiro](/recette/shiro)** : une purée veloutée de farine de pois chiches.
+- **Le [shiro éthiopien](/recette/shiro)** : une purée veloutée de farine de pois chiches.
 
 Tous se servent avec l'[injera](/recette/injera), la grande crêpe acidulée préparée avec de la [farine de teff](/produit/farine-de-teff).
 
