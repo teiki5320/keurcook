@@ -48,3 +48,6 @@ next-env.d.ts
 
 # Images de partage générées au build (scripts/og-images.mjs)
 /public/og/
+
+# Manifeste des épingles Pinterest, refait à chaque build (scripts/epingles.ts)
+/public/epingles.json

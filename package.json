@@ -8,7 +8,11 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
-    "prebuild": "node scripts/og-images.mjs"
+    "prebuild": "node scripts/og-images.mjs && tsx scripts/epingles.ts",
+    "epingles": "tsx scripts/epingles.ts",
+    "pinterest:auth": "node scripts/pinterest-auth.mjs",
+    "pinterest:secrets": "node scripts/pinterest-secrets.mjs",
+    "pinterest:publier": "node scripts/pinterest-publier.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.48.0",

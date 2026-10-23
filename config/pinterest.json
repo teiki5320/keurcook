@@ -1,0 +1,19 @@
+{
+  "_aide": "Réglages de la publication Pinterest (scripts/pinterest-publier.mjs, docs/PINTEREST.md). board_id vide : le script prend le tableau du compte qui porte exactement ce nom.",
+  "site": "Keur Cook",
+  "site_url": "https://keurcook.com/",
+  "depot": "teiki5320/keurcook",
+  "compte_pinterest": "Keur Cook",
+  "max_par_execution": 5,
+  "manifeste": "epingles.json",
+  "tableau_par_defaut": "mijotes",
+  "tableaux": {
+    "senegal": { "nom": "Recettes du Sénégal", "board_id": "" },
+    "cote-divoire": { "nom": "Recettes de Côte d'Ivoire", "board_id": "" },
+    "nigeria-ghana": { "nom": "Recettes du Nigeria et du Ghana", "board_id": "" },
+    "afrique-centrale": { "nom": "Recettes du Cameroun et d'Afrique centrale", "board_id": "" },
+    "est-australe": { "nom": "Recettes d'Afrique de l'Est et australe", "board_id": "" },
+    "mijotes": { "nom": "Mijotés et sauces africaines", "board_id": "" },
+    "douceurs": { "nom": "Beignets, douceurs et boissons africaines", "board_id": "" }
+  }
+}

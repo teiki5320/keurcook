@@ -1,0 +1,369 @@
+{
+  "_aide": "Épingles déjà publiées (scripts/pinterest-publier.mjs ne les reprend pas). Les 52 premières ont été épinglées du 2 au 14 octobre 2026 par la routine Claude keurcook-epingles-pinterest, dans le navigateur (pin_id inconnu).",
+  "publiees": [
+    {
+      "id": "thieboudienne-1",
+      "slug": "thieboudienne",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "poulet-yassa-1",
+      "slug": "poulet-yassa",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "alloco-1",
+      "slug": "alloco",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "riz-jollof-1",
+      "slug": "riz-jollof",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "ndole-1",
+      "slug": "ndole",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "doro-wat-1",
+      "slug": "doro-wat",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "mafe-1",
+      "slug": "mafe",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "puff-puff-1",
+      "slug": "puff-puff",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-02"
+    },
+    {
+      "id": "suya-1",
+      "slug": "suya",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "garba-1",
+      "slug": "garba",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "poulet-dg-1",
+      "slug": "poulet-dg",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "jus-de-bissap-1",
+      "slug": "jus-de-bissap",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "waakye-1",
+      "slug": "waakye",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "misir-wat-1",
+      "slug": "misir-wat",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "bobotie-1",
+      "slug": "bobotie",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "pilau-1",
+      "slug": "pilau",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-09"
+    },
+    {
+      "id": "cafe-touba-1",
+      "slug": "cafe-touba",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "sauce-graine-1",
+      "slug": "sauce-graine",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "soupe-egusi-1",
+      "slug": "soupe-egusi",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "eru-1",
+      "slug": "eru",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "akara-1",
+      "slug": "akara",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "kedjenou-1",
+      "slug": "kedjenou",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "injera-1",
+      "slug": "injera",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "nyama-choma-1",
+      "slug": "nyama-choma",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-10"
+    },
+    {
+      "id": "thiakry-1",
+      "slug": "thiakry",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "poisson-braise-attieke-1",
+      "slug": "poisson-braise-attieke",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "groundnut-soup-1",
+      "slug": "groundnut-soup",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "koki-1",
+      "slug": "koki",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "matoke-1",
+      "slug": "matoke",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "chakalaka-1",
+      "slug": "chakalaka",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "kelewele-1",
+      "slug": "kelewele",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "pepper-soup-1",
+      "slug": "pepper-soup",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-11"
+    },
+    {
+      "id": "caldou-1",
+      "slug": "caldou",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "jus-de-gingembre-1",
+      "slug": "jus-de-gingembre",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "mbongo-tchobi-1",
+      "slug": "mbongo-tchobi",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "moambe-1",
+      "slug": "moambe",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "ugali-sukuma-wiki-1",
+      "slug": "ugali-sukuma-wiki",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "shiro-1",
+      "slug": "shiro",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "fufu-light-soup-1",
+      "slug": "fufu-light-soup",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "degue-1",
+      "slug": "degue",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-12"
+    },
+    {
+      "id": "thiere-mbuum-1",
+      "slug": "thiere-mbuum",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "ngalakh-1",
+      "slug": "ngalakh",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "pondu-1",
+      "slug": "pondu",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "poulet-nyembwe-1",
+      "slug": "poulet-nyembwe",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "romazava-1",
+      "slug": "romazava",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "luwombo-1",
+      "slug": "luwombo",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "fonio-aux-legumes-1",
+      "slug": "fonio-aux-legumes",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "liboke-de-poisson-1",
+      "slug": "liboke-de-poisson",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-13"
+    },
+    {
+      "id": "jus-de-bouye-1",
+      "slug": "jus-de-bouye",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-14"
+    },
+    {
+      "id": "poulet-odika-1",
+      "slug": "poulet-odika",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-14"
+    },
+    {
+      "id": "ravitoto-1",
+      "slug": "ravitoto",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-14"
+    },
+    {
+      "id": "to-sauce-gombo-1",
+      "slug": "to-sauce-gombo",
+      "pin_id": null,
+      "mode": "navigateur",
+      "publie_le": "2026-10-14"
+    }
+  ]
+}
