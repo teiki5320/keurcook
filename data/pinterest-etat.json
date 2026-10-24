@@ -409,6 +409,15 @@
       "board_id": "1109855970611825345",
       "publie_le": "2026-10-24",
       "publie_a": "2026-10-24T03:13:07.289Z"
+    },
+    {
+      "id": "rooibos-glace-1",
+      "slug": "rooibos-glace",
+      "pin_id": "1109855901964476432",
+      "tableau": "est-australe",
+      "board_id": "1109855970611825374",
+      "publie_le": "2026-10-24",
+      "publie_a": "2026-10-24T08:53:58.050Z"
     }
   ]
 }
