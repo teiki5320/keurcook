@@ -11,8 +11,8 @@ const RELEVE = "2026-10-19";
  * Introduction des onglets classés selon la note des acheteurs ; le n° 1 est nommé à la suite.
  * `peuDAvis` (livres) : tous les produits sont gardés, même avec peu d'évaluations, et ceux sans note vont à la fin.
  */
-function introNote(quoi: string, feminin: boolean, peuDAvis?: { qui: string; suite: string }): string {
-  const date = new Date(`${RELEVE}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" });
+function introNote(quoi: string, feminin: boolean, peuDAvis?: { qui: string; suite: string }, releve: string = RELEVE): string {
+  const date = new Date(`${releve}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" });
   const debut = `Notre sélection de ${quoi}, parmi ${feminin ? "celles" : "ceux"} de la boutique, ${feminin ? "classées" : "classés"} selon la note moyenne des acheteurs sur Amazon.fr, relevée le ${date} ; à égalité, ${feminin ? "la plus évaluée" : "le plus évalué"} passe devant.`;
   if (peuDAvis) {
     return `${debut} Certains ${peuDAvis.qui} n'ont encore que quelques évaluations, parfois une seule : leur note est donc moins sûre, et ceux qui n'ont aucune note sont placés à la fin. Les notes servent à classer mais ne sont pas affichées, et nous n'avons pas testé ces ${peuDAvis.qui}. ${peuDAvis.suite}`;
@@ -888,10 +888,10 @@ const tops: Top10[] = [
     title: "Top 10 des thés et cafés d'Afrique",
     description:
       "Rooibos, thés du Kenya, cafés de Tanzanie, du Rwanda, d'Éthiopie et du Burundi, kinkeliba : notre top 10 des thés et cafés d'Afrique.",
-    intro: introNote("dix cafés, thés et infusions d'Afrique", false),
-    updated: "2026-10-19",
+    intro: introNote("dix cafés, thés et infusions d'Afrique", false, undefined, "2026-10-24"),
+    updated: "2026-10-24",
     rankBy: "note-acheteurs",
-    classementLe: RELEVE,
+    classementLe: "2026-10-24",
     items: [
       {
         product: "rooibos-vert",
@@ -938,17 +938,16 @@ const tops: Top10[] = [
         articles: ["ceremonie-du-cafe-ethiopienne", "cafes-ethiopie-kenya-rwanda"],
       },
       {
+        product: "citronnelle-sechee",
+        pourquoi:
+          "La citronnelle pousse dans de nombreuses cours d'Afrique de l'Ouest. Ses feuilles séchées ont un parfum frais et citronné. On l'infuse seule ou avec du kinkeliba et de la menthe. Elle parfume aussi les bouillons et les marinades de poisson.",
+        recettes: [],
+      },
+      {
         product: "kinkeliba",
         pourquoi:
           "Le kinkeliba est un arbuste du Sahel dont on infuse les feuilles séchées. Il donne une boisson ambrée au goût boisé et légèrement amer. Au Sénégal, on le boit le matin, sucré, avec du pain, et il est très présent au moment du ramadan. Notre recette explique comment le faire frémir puis le filtrer.",
         recettes: ["kinkeliba"],
-      },
-      {
-        product: "cafe-d-ethiopie-bio",
-        pourquoi:
-          "Ce café éthiopien vient de coopératives de petits producteurs, en agriculture biologique et commerce équitable. Il offre les notes florales et fruitées typiques des cafés d'Éthiopie. Il se prête à notre buna comme au filtre, au piston ou à l'expresso. Bien refermer le paquet après chaque usage.",
-        recettes: ["buna-cafe-ethiopien"],
-        articles: ["cafe-en-grains-ou-moulu"],
       },
       {
         product: "cafe-du-burundi",

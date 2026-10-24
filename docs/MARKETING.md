@@ -9,7 +9,7 @@ Mis à jour le 21 octobre 2026. Compagnon de INFRA.md.
 - **Contenu** :
   - 58 recettes de 16 pays (Afrique de l'Ouest, centrale, de l'Est, australe et Madagascar), dont six thés, cafés et infusions (ataya, kinkeliba, chai kényan, rooibos glacé, buna, kahawa chungu) depuis le 19 octobre 2026, avec histoire du plat, ingrédients, étapes, astuces et valeurs nutritionnelles estimées ; une section « La cuisine de … » sur chaque page pays ;
   - rubrique « Conseils » : 67 articles, dont 38 publiés et 29 programmés, trois par semaine (lundi, mercredi, vendredi) jusqu'au 28 décembre 2026 (`content/conseils/`, `docs/CONSEILS.md`, `docs/CONSEILS-CALENDRIER.md`) ;
-  - boutique de 131 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles (dont mortiers, marmites, mixeurs et objets de service), Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon ;
+  - boutique de 128 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles (dont mortiers, marmites, mixeurs et objets de service), Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon ;
   - « Top 10 » (depuis le 19 octobre 2026) : 10 classements de produits (ustensiles, ingrédients pour débuter, mortiers, marmites, mixeurs, épices, farines, livres, thés et cafés, service et thé), selon la note moyenne des acheteurs sur Amazon.fr, chacun relié aux recettes concernées.
 - **Lien recettes → boutique** : chaque ingrédient disponible en boutique est signalé « Produit rare » dans la recette, avec un bouton d'achat Amazon ; chaque fiche produit liste les recettes qui l'utilisent.
 - **Ton et image** : thème sombre « Braise », carte de l'Afrique en particules sur l'accueil (« Seize pays, une seule table. »), grandes photos, carrousels par type de plat.
@@ -26,7 +26,7 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 
 ## Rémunération par phases
 
-- [fait] **Aujourd'hui** : affiliation Amazon sur 131 produits et 10 Top 10, AdSense en place mais encore en examen (aucune annonce), audience mesurée depuis le 13
+- [fait] **Aujourd'hui** : affiliation Amazon sur 128 produits et 10 Top 10, AdSense en place mais encore en examen (aucune annonce), audience mesurée depuis le 13
 - [en cours] **Mesurer** : lire dans Cloudflare Web Analytics quelles pages attirent et rapportent
 - **Fidéliser** : newsletter « la recette de la semaine », outil à choisir
 - **Élargir** : vidéos de recettes sur TikTok et YouTube, comptes à rattacher à Keur Cook dans le Studio

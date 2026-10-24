@@ -6,7 +6,7 @@ date: 2026-10-02
 theme: cafe-the
 resume: Le café en grains garde son arôme plus longtemps, à condition de le moudre juste avant usage. Le café moulu est plus pratique mais s'évente vite. Dans les deux cas, rangez-le dans un contenant hermétique, au sec et à l'abri de la lumière.
 recettes: cafe-touba
-produits: cafe-d-ethiopie-bio, cafe-moka-sidamo
+produits: cafe-yirgacheffe, cafe-moka-sidamo
 image: /conseils/cafe-en-grains-ou-moulu.webp
 imageAlt: Des grains de café torréfiés à côté d'un petit tas de café moulu sur une planche en bois.
 imagePrompt: Photographie culinaire, grains de café torréfiés brun foncé à côté d'un petit tas de café moulu, moulin à café manuel en bois en arrière-plan, planche en bois sombre, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.

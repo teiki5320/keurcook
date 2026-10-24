@@ -476,6 +476,8 @@ const seeds: ProductSeed[] = [
  * 19 octobre 2026 : berbère remplacé (ancien produit indisponible).
  * 19 octobre 2026 : guedj (B0DK3SVDJN) et café Touba (B0B52RYJS8) masqués, indisponibles sur Amazon.fr
  * sans équivalent ; remettre leur offre quand ils reviennent.
+ * 24 octobre 2026 : feuilles de baobab (B0DFWZ6FR9), café d'Éthiopie bio (B08ZT3P8TH) et bitter kola (B0DBGJDGFX)
+ * masqués, indisponibles sur Amazon.fr sans équivalent (catalog-nouveautes.ts) ; remettre leur offre quand ils reviennent.
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {

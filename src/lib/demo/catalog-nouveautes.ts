@@ -50,7 +50,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Retirer la fine peau brune, puis croquer la noix nature, en petits morceaux. Son amertume se marie bien avec une boisson fraîche.",
     conservation: "Au frais et au sec, dans un sachet ou un bocal fermé.",
     tags: ["noix", "tradition", "Nigeria"],
-    amazon: { asin: "B0DBGJDGFX", label: "80 g", priceCents: 999 },
+    // Masqué le 24/10/2026 : B0DBGJDGFX (80 g, 9,99 €) indisponible sur Amazon.fr, sans équivalent en noix entières bien noté.
+    amazon: null,
   },
   {
     slug: "cafe-touba",
@@ -306,7 +307,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Pour le thiéré, délayer une cuillère de lalo dans un peu d'eau et en humecter le couscous avant la cuisson à la vapeur.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["baobab", "feuilles", "Sénégal"],
-    amazon: { asin: "B0DFWZ6FR9", label: "50 g", priceCents: 981 },
+    // Masqué le 24/10/2026 : B0DFWZ6FR9 (50 g, 9,81 €) indisponible sur Amazon.fr, sans équivalent noté (feuilles, pas fruit).
+    amazon: null,
   },
   {
     slug: "vanille-bourbon-de-madagascar",
@@ -891,7 +893,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Moudre juste avant la préparation pour garder les arômes ; bien refermer le paquet après chaque usage.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["café", "Éthiopie", "bio"],
-    amazon: { asin: "B08ZT3P8TH", label: "500 g grains", priceCents: 1233 },
+    // Masqué le 24/10/2026 : B08ZT3P8TH (500 g grains, 12,33 €) indisponible sur Amazon.fr, sans équivalent bio, équitable et bien noté.
+    amazon: null,
   },
   {
     slug: "cafe-de-tanzanie",
