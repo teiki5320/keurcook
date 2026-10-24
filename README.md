@@ -50,9 +50,9 @@ Données dans `src/lib/demo/top10.ts`, vérifiées par `tests/top10.test.ts`. Ch
 
 ### Pinterest
 
-Compte « Keur Cook », site revendiqué, bouton « Épingler » sur chaque recette. Images d'épingle dans `public/pins/` (58, créées par `scripts/pin-images.mjs`). 52 recettes ont été épinglées du 2 au 14 octobre 2026 par la routine Claude `keurcook-epingles-pinterest` ; les six recettes de boissons ajoutées le 19 octobre ont leur image depuis le 23 octobre et restent à épingler.
+Compte « Keur Cook », site revendiqué, bouton « Épingler » sur chaque recette. Images d'épingle dans `public/pins/` (58, créées par `scripts/pin-images.mjs`). 52 recettes ont été épinglées du 2 au 14 octobre 2026 par la routine Claude `keurcook-epingles-pinterest` ; les six recettes de boissons ajoutées le 19 octobre ont leur image depuis le 23 octobre : cinq ont été épinglées le 24 octobre 2026 (57 sur 58), le rooibos glacé reste à partir.
 
-Publication automatique (même système que Keur Déco, depuis le 23 octobre 2026) : `scripts/epingles.ts` écrit au build le manifeste `epingles.json` ; `.github/workflows/pinterest.yml` publie chaque jour à 4 h 17 UTC au plus 5 épingles (`config/pinterest.json`), jamais deux de la même recette le même jour, et note chacune dans `data/pinterest-etat.json`. Rien ne part tant que la clé du compte Keur Cook n'existe pas : `npm run pinterest:auth` puis `npm run pinterest:secrets` (voir `docs/PINTEREST.md`).
+Publication automatique (même système que Keur Déco, depuis le 23 octobre 2026) : `scripts/epingles.ts` écrit au build le manifeste `epingles.json` ; `.github/workflows/pinterest.yml` publie chaque jour à 4 h 17 UTC au plus 5 épingles (`config/pinterest.json`), jamais deux de la même recette le même jour, et note chacune dans `data/pinterest-etat.json`. La clé du compte Keur Cook a été créée le 23 octobre 2026 (`npm run pinterest:auth` puis `npm run pinterest:secrets`, voir `docs/PINTEREST.md`) ; à refaire avant son échéance, environ 60 jours plus tard.
 
 ### Conformité
 
