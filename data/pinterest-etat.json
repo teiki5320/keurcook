@@ -364,6 +364,51 @@
       "pin_id": null,
       "mode": "navigateur",
       "publie_le": "2026-10-14"
+    },
+    {
+      "id": "ataya-1",
+      "slug": "ataya",
+      "pin_id": "1109855901964455173",
+      "tableau": "senegal",
+      "board_id": "1109855970611825345",
+      "publie_le": "2026-10-24",
+      "publie_a": "2026-10-24T03:12:56.488Z"
+    },
+    {
+      "id": "buna-cafe-ethiopien-1",
+      "slug": "buna-cafe-ethiopien",
+      "pin_id": "1109855901964455176",
+      "tableau": "est-australe",
+      "board_id": "1109855970611825374",
+      "publie_le": "2026-10-24",
+      "publie_a": "2026-10-24T03:12:58.878Z"
+    },
+    {
+      "id": "chai-kenyan-1",
+      "slug": "chai-kenyan",
+      "pin_id": "1109855901964455179",
+      "tableau": "est-australe",
+      "board_id": "1109855970611825374",
+      "publie_le": "2026-10-24",
+      "publie_a": "2026-10-24T03:13:01.702Z"
+    },
+    {
+      "id": "kahawa-chungu-1",
+      "slug": "kahawa-chungu",
+      "pin_id": "1109855901964455185",
+      "tableau": "est-australe",
+      "board_id": "1109855970611825374",
+      "publie_le": "2026-10-24",
+      "publie_a": "2026-10-24T03:13:04.434Z"
+    },
+    {
+      "id": "kinkeliba-1",
+      "slug": "kinkeliba",
+      "pin_id": "1109855901964455189",
+      "tableau": "senegal",
+      "board_id": "1109855970611825345",
+      "publie_le": "2026-10-24",
+      "publie_a": "2026-10-24T03:13:07.289Z"
     }
   ]
 }
