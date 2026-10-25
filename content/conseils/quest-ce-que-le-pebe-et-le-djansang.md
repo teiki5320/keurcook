@@ -5,7 +5,7 @@ date: 2026-11-27
 theme: epices
 resume: Le pèbè est une graine aromatique au parfum proche de la muscade. Le djansang est une petite amande au goût de noisette qu'on écrase pour épaissir et parfumer les sauces.
 recettes:
-produits: pebe-moulu, akpi-djansang
+produits: akpi-djansang
 image: /conseils/quest-ce-que-le-pebe-et-le-djansang.webp
 imageAlt: Des graines de pèbè brunes et des amandes claires de djansang dans deux petites coupelles.
 imagePrompt: Photographie culinaire, deux petites coupelles en bois, l'une avec des graines de pèbè brunes et ovales, l'autre avec de petites amandes claires de djansang, mortier en pierre en arrière-plan, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.

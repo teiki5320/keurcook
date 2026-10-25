@@ -478,6 +478,7 @@ const seeds: ProductSeed[] = [
  * sans équivalent ; remettre leur offre quand ils reviennent.
  * 24 octobre 2026 : feuilles de baobab (B0DFWZ6FR9), café d'Éthiopie bio (B08ZT3P8TH) et bitter kola (B0DBGJDGFX)
  * masqués, indisponibles sur Amazon.fr sans équivalent (catalog-nouveautes.ts) ; remettre leur offre quand ils reviennent.
+ * 25 octobre 2026 : chips de plantain remplacées (B0919PM5F3) ; pèbè moulu (B0BV7HBJWZ) masqué, indisponible sans équivalent.
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {

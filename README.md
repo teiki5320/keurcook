@@ -1,6 +1,6 @@
 # Keur Cook — recettes africaines & produits rares
 
-Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 128 produits africains rares** en 9 gammes et des pages **Top 10** (10 classements de produits). Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
+Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 127 produits africains rares** en 9 gammes et des pages **Top 10** (10 classements de produits). Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
 
 - **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
 - **Éditeur** : ALOHASH (SAS). Contact : keurcook@toakeur.com.
@@ -29,7 +29,7 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 
 ### Boutique et Amazon Partenaires
 
-- 128 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
+- 127 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
 - Liens construits par `src/lib/amazon.ts` à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) et du tag partenaire `keurcookfr-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer). Ce tag vient du nouveau compte Amazon Partenaires ouvert le 18 octobre 2026 (l'ancien compte a été fermé par Amazon).
 - Prix **indicatifs**, relevés le 27/09/2026 : le prix affiché par Amazon fait foi.
 - Le site n'encaisse rien et ne gère aucun stock : achat, paiement et livraison se font sur Amazon.

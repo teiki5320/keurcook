@@ -187,7 +187,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "À servir nature à l'apéritif, ou avec une sauce pimentée pour tremper.",
     conservation: "Au sec ; une fois le sachet ouvert, bien refermer et consommer rapidement.",
     tags: ["plantain", "apéritif", "snack"],
-    amazon: { asin: "B0C6YLBNM4", label: "5 × 85 g", priceCents: 890 },
+    // Remplacé le 25/10/2026 : B0C6YLBNM4 (5 × 85 g) indisponible sur Amazon.fr.
+    amazon: { asin: "B0919PM5F3", label: "8 × 80 g", priceCents: 2392 },
   },
   {
     slug: "gari-jaune",
@@ -262,7 +263,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Mélanger à l'ail, au gingembre et au djansang pour mariner le poisson braisé, ou en ajouter une pincée dans le bouillon.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["épice", "Cameroun", "muscade"],
-    amazon: { asin: "B0BV7HBJWZ", label: "50 g", priceCents: 899 },
+    // Masqué le 25/10/2026 : B0BV7HBJWZ (50 g, 8,99 €) indisponible sur Amazon.fr, sans équivalent bien noté.
+    amazon: null,
   },
   {
     slug: "biltong",
