@@ -140,6 +140,13 @@ export const recipesNouvelles: RecipeSeed[] = [
     region: "Pays bassa, Littoral",
     course: "mijotes",
     shortDescription: "Poisson mijoté dans une sauce noire aux épices grillées (mbongo), au pèbè et au piment.",
+    seoTitle: "Mbongo tchobi : recette camerounaise du poisson sauce noire",
+    seoDescription: "Recette du mbongo tchobi, plat bassa du Cameroun : poisson mijoté dans une sauce noire aux épices grillées (mbongo), au pèbè et au piment.",
+    faq: [
+      { question: "Pourquoi la sauce du mbongo tchobi est-elle noire ?", answer: "À cause du mbongo, un mélange d'épices que l'on fait griller jusqu'à les noircir avant de les piler : il donne à la sauce un goût fumé et profond, sans amertume." },
+      { question: "Quel poisson pour le mbongo tchobi ?", answer: "Surtout du poisson frais en tronçons : bar, carpe ou mâchoiron. On le prépare parfois avec de la viande." },
+      { question: "Avec quoi servir le mbongo tchobi ?", answer: "Avec du plantain cuit à la vapeur, l'accompagnement le plus courant au Cameroun, du manioc ou des bâtons de manioc. Autre plat camerounais en sauce : le [ndolé](/recette/ndole)." },
+    ],
     story:
       "Le mbongo tchobi est un plat du peuple bassa, dans la région du Littoral au Cameroun. Sa couleur presque noire vient du mbongo, un mélange d'épices que l'on fait griller jusqu'à les noircir avant de les piler : il donne à la sauce un goût fumé et profond, sans amertume.\n\nOn le prépare surtout avec du poisson frais, parfois avec de la viande, et on le sert avec du plantain vapeur, du manioc ou des bâtons de manioc.",
     prepMinutes: 25,

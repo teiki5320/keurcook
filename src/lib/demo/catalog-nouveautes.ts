@@ -17,6 +17,10 @@ export interface NouveauProduit {
   usageTips: string | null;
   conservation: string | null;
   tags: string[];
+  /** Titre pour Google (60 caractères au plus avec « | Keur Cook »), s'il diffère du nom. */
+  seoTitle?: string;
+  /** Méta-description (155 caractères au plus). */
+  seoDescription?: string;
   /** null = produit masqué (plus en vente sur Amazon.fr). */
   amazon: { asin: string; label: string; priceCents: number } | null;
 }
@@ -918,6 +922,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     name: "Café en grains du Burundi",
     category: "cafes-thes",
     shortDescription: "Un café en grains du Burundi, au cœur de l'Afrique des Grands Lacs, sucré et fruité.",
+    seoTitle: "Café en grains du Burundi, sucré et fruité",
+    seoDescription: "Café arabica en grains du Burundi, cultivé en altitude par de petits producteurs : une tasse sucrée et fruitée, à l'acidité douce.",
     description: "Au Burundi, le café est cultivé en altitude par de petits producteurs sur les collines. Il donne une tasse sucrée et fruitée, à l'acidité douce.\n\nEn grains, il se moud selon la méthode choisie.",
     originCountry: "Burundi",
     originRegion: null,

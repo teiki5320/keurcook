@@ -21,7 +21,7 @@ En Éthiopie, les longues périodes de jeûne religieux, pendant lesquelles on r
 - **Le [misir wat](/recette/misir-wat)** : des lentilles corail mijotées dans une sauce rouge au [berbéré](/produit/berbere).
 - **Le [shiro éthiopien](/recette/shiro)** : une purée veloutée de farine de pois chiches, relevée elle aussi au berbéré.
 
-Pour qu'ils restent entièrement végétaux, cuisinez-les à l'huile plutôt qu'au beurre clarifié épicé.
+Pour qu'ils restent entièrement végétaux, cuisinez-les à l'huile plutôt qu'au beurre clarifié épicé. À la fin du jeûne, à Noël et à Pâques, la viande revient avec le [doro wat](/recette/doro-wat), le ragoût de poulet au berbéré et aux œufs durs.
 
 ## Plantain, légumes et céréales
 

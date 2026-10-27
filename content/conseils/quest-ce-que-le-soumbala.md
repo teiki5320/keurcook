@@ -1,6 +1,7 @@
 ---
 title: Qu'est-ce que le soumbala et comment l'utiliser ?
-description: Le soumbala, graines de néré fermentées, relève les sauces d'Afrique de l'Ouest. Comment le doser, à quel moment l'ajouter et comment le conserver.
+seoTitle: Soumbala (nététou, dawadawa) : qu'est-ce que c'est ?
+description: Le soumbala (nététou, dawadawa) : graines de néré fermentées qui relèvent les sauces d'Afrique de l'Ouest. Comment le doser, l'ajouter et le garder.
 date: 2026-08-10
 theme: epices
 resume: Le soumbala est un condiment fait de graines de néré fermentées. Son odeur est forte, mais une petite quantité suffit à donner de la profondeur à une sauce.

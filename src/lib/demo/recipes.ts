@@ -148,6 +148,13 @@ const seeds: RecipeSeed[] = [
     region: "Hauts plateaux",
     course: "mijotes",
     shortDescription: "Le ragoût de poulet au berbéré et aux œufs durs, mijoté sur un lit d'oignons : le plat de fête éthiopien.",
+    seoTitle: "Doro wat : recette du ragoût de poulet éthiopien",
+    seoDescription: "Recette du doro wat, plat de fête éthiopien : poulet mijoté au berbéré sur une compote d'oignons, avec des œufs durs. À servir avec l'injera.",
+    faq: [
+      { question: "Qu'est-ce que le doro wat ?", answer: "Le plat de fête de l'Éthiopie : un ragoût de poulet au berbéré et aux œufs durs, servi à Noël et à Pâques après les longues périodes de jeûne." },
+      { question: "Quelles épices dans le doro wat ?", answer: "Le berbéré, mélange d'épices rouge à base de piment, avec de l'ail et du gingembre. Pour tout savoir : [qu'est-ce que le berbéré](/conseils/quest-ce-que-le-berbere). Pour une version authentique, le beurre se remplace par du niter kibbeh, beurre clarifié épicé." },
+      { question: "Avec quoi servir le doro wat ?", answer: "Avec l'[injera](/recette/injera), la grande crêpe acidulée au teff, et on le mange à la main. À défaut, avec du riz." },
+    ],
     story:
       "Le doro wat est le plat de fête de l'Éthiopie, servi à Noël et à Pâques après les longues périodes de jeûne. Sa préparation commence par une montagne d'oignons cuits à sec pendant près d'une heure.\n\nIl se mange à la main, avec l'injera, la grande crêpe acidulée au teff.",
     prepMinutes: 30,

@@ -100,3 +100,49 @@ Liens internes ajoutés ou précisés (texte du lien = la recherche) :
 ### À revoir à partir du 19 novembre 2026
 
 Les 26 pages ci-dessus : noter leur nouvelle place et leurs clics.
+
+## 27 octobre 2026
+
+Chiffres : Search Console, 28 derniers jours (27/09 → 25/10/2026), via le Studio.
+
+### Pages améliorées
+
+Presque toutes les pages de la liste « 2e page » ont été travaillées le 20 ou le 22/10 : non retouchées. Travaillées aujourd'hui : les pages encore jamais travaillées qui ont une recherche fréquente, y compris celles que Google montre au-delà de la 20e place alors que le site a déjà la vraie page (pas de page nouvelle, voir plus bas).
+
+| Page | Recherches visées | Place et vues au moment du travail | Ancien titre → nouveau titre |
+| --- | --- | --- | --- |
+| /recette/garba | garba | 21,6, 33 vues | « Garba — recette de Côte d'Ivoire \| Keur Cook » → « Garba : recette de l'attiéké au thon frit d'Abidjan » |
+| /recette/doro-wat | doro wat, recette doro wat | 66,1, 24 vues (« recette doro wat » : 1, 6 vues) | « Doro wat — recette d'Éthiopie \| Keur Cook » → « Doro wat : recette du ragoût de poulet éthiopien \| Keur Cook » |
+| /produit/cafe-du-burundi | cafe en grain burundi | 57,9, 19 vues | « Café en grains du Burundi \| Keur Cook » → « Café en grains du Burundi, sucré et fruité \| Keur Cook » |
+| /conseils/quest-ce-que-le-soumbala | soumbala | 21,8, 12 vues (17 vues avec la fiche produit, place 67,6) | « Qu'est-ce que le soumbala et comment l'utiliser ? » → « Soumbala (nététou, dawadawa) : qu'est-ce que c'est ? » |
+| /conseils/quest-ce-que-le-fonio | le fonio, fonio | 9,8, 16 vues (« fonio » : 18,1, 19 vues) | « Qu'est-ce que le fonio et comment le cuire ? \| Keur Cook » → « Le fonio : qu'est-ce que c'est et comment le cuire ? » |
+| /recette/mbongo-tchobi | mbongo tchobi, mbongo tchobi recette | 18, 7 vues (« mbongo tchobi » : 59) | « Mbongo tchobi — recette du Cameroun \| Keur Cook » → « Mbongo tchobi : recette camerounaise du poisson sauce noire » |
+
+Pour les trois recettes : nouvelle méta-description et une FAQ visible de trois questions (avec données FAQPage), écrite uniquement avec des faits déjà présents dans la recette ou sur le site (garba : garbadromes, thon frit, attiéké ; doro wat : plat de fête après le jeûne, berbéré, niter kibbeh, injera ; mbongo tchobi : épices grillées, poissons, accompagnements). Le h1 (nom du plat) contient déjà la recherche : inchangé. Conseils soumbala et fonio : titre pour Google et description ; le h1 contient déjà la recherche. Café du Burundi : titre et description pour Google (les fiches des nouveautés acceptent désormais seoTitle et seoDescription).
+
+Liens internes ajoutés (texte du lien = la recherche) :
+- garba : depuis « Par quelle recette commencer » (« garba ») ; liens déjà présents depuis « Réussir l'attiéké maison » et « Gari, attiéké, tapioca » ;
+- doro wat : depuis « Plats africains végétariens » (« doro wat », fin du jeûne) et depuis l'injera (FAQ « Avec quoi servir l'injera ? », seul changement sur cette page) ; liens déjà présents depuis le berbéré et la cérémonie du café ;
+- café du Burundi : depuis « Cafés d'Éthiopie, du Kenya et du Rwanda » et « Café en grains ou moulu » (« café en grains du Burundi ») ;
+- mbongo tchobi : depuis « Remplacer l'huile de palme rouge » ; peu d'autres pages proches qui n'aient pas été travaillées il y a moins de 28 jours (koki, ndolé : non retouchés) ;
+- soumbala et fonio : déjà trois et deux liens depuis des conseils proches, rien ajouté.
+
+### Pages travaillées il y a 28 jours ou plus
+
+Aucune : les premières pages ont été travaillées le 20/10. Premier bilan à partir du 17 novembre 2026. Chiffres d'aujourd'hui pour mémoire (période 27/09 → 25/10, encore surtout avant le travail) : dégué 13,4 (282 vues), sauce graine 5,6 (151), ataya 10,2 (117), poulet DG 11,9 (96), alloco 11,3 (77).
+
+### Page nouvelle
+
+Aucune créée : chaque recherche fréquente (15 vues et plus) a déjà sa vraie page sur le site. Les plus mal placées (doro wat 66, café du Burundi 58, soumbala 22, garba 22) sont traitées ci-dessus. Aucune recherche ne demande une recette absente du site.
+
+### Fiches enrichies
+
+Vérifiées le 20/10/2026 (moins de 28 jours) : pas refait. Contrôlé dans les pages construites aujourd'hui : garba, doro wat, mbongo tchobi et injera ont Recipe + BreadcrumbList + FAQPage (FAQ visible), conseils soumbala et fonio Article + BreadcrumbList, JSON valide.
+
+### Socle
+
+Vérifié le 20/10/2026 (moins de 28 jours) : pas refait. Vitesse sur téléphone : PageSpeed refuse encore aujourd'hui (quota du jour dépassé) pour l'accueil, /recette/degue et /conseils/comment-preparer-l-ataya. À réessayer au prochain passage.
+
+### À revoir à partir du 24 novembre 2026
+
+Les 6 pages ci-dessus (et l'injera) : noter leur nouvelle place.

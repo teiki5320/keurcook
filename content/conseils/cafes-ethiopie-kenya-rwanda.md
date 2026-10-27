@@ -25,7 +25,7 @@ Les cafés kenyans sont réputés pour leur acidité franche et leur corps marqu
 
 ## Le Rwanda, doux et rond
 
-Le Rwanda produit surtout des cafés de variété bourbon, cultivés sur des collines élevées. Ils sont généralement plus doux, avec des notes de fruits rouges, de caramel ou de thé noir, et une acidité plus discrète que ceux du Kenya. Ce sont de bons cafés pour débuter.
+Le Rwanda produit surtout des cafés de variété bourbon, cultivés sur des collines élevées. Ils sont généralement plus doux, avec des notes de fruits rouges, de caramel ou de thé noir, et une acidité plus discrète que ceux du Kenya. Ce sont de bons cafés pour débuter. Chez son voisin, le [café en grains du Burundi](/produit/cafe-du-burundi) pousse lui aussi en altitude, sur les collines de petits producteurs : une tasse sucrée et fruitée, à l'acidité douce.
 
 ## Comment les goûter
 

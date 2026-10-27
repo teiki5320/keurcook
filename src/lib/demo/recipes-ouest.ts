@@ -140,6 +140,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Abidjan",
     course: "accompagnements",
     shortDescription: "Attiéké et thon frit croustillant, piment et oignon : le plat de rue d'Abidjan.",
+    seoTitle: "Garba : recette de l'attiéké au thon frit d'Abidjan",
+    seoDescription: "Recette du garba, le plat de rue d'Abidjan : attiéké à la vapeur, thon frit croustillant, oignon, tomate et piment. Prêt en 40 minutes pour 4.",
+    faq: [
+      { question: "Qu'est-ce que le garba ?", answer: "Le plat de rue d'Abidjan, en Côte d'Ivoire : une montagne d'attiéké, un morceau de thon frit et une poignée de piment, servis dans les petits kiosques appelés « garbadromes »." },
+      { question: "Quel poisson pour le garba ?", answer: "Du thon frais en tranches épaisses, assaisonné puis frit 6 à 8 minutes, jusqu'à ce qu'il soit bien doré et croustillant. L'attiéké se sert aussi avec le [poisson braisé](/recette/poisson-braise-attieke)." },
+      { question: "Comment préparer l'attiéké du garba ?", answer: "Arrosez l'attiéké sec d'eau tiède salée, laissez-le gonfler 10 minutes à couvert, puis passez-le 10 minutes à la vapeur. Tous les conseils : [réussir un attiéké maison](/conseils/reussir-attieke-maison)." },
+    ],
     story:
       "Le garba est né dans les petits kiosques d'Abidjan, les « garbadromes », tenus à l'origine par des vendeurs venus du Niger, selon la tradition populaire. Pour quelques pièces, on y sert une montagne d'attiéké, un morceau de thon frit et une poignée de piment.\n\nÉtudiants, travailleurs et noctambules en ont fait un véritable symbole de la ville, célébré jusque dans les chansons de coupé-décalé.",
     prepMinutes: 20,

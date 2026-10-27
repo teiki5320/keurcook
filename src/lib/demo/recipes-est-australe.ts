@@ -93,6 +93,9 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     region: "Hauts plateaux",
     course: "accompagnements",
     shortDescription: "La grande galette alvéolée et légèrement acidulée qui sert d'assiette et de couverts.",
+    faq: [
+      { question: "Avec quoi servir l'injera ?", answer: "Avec les plats en sauce éthiopiens, posés directement sur la galette : le [doro wat](/recette/doro-wat), ragoût de poulet de fête, le [misir wat](/recette/misir-wat) aux lentilles ou le [shiro](/recette/shiro). On en déchire un morceau pour saisir les sauces." },
+    ],
     story:
       "L'injera est au cœur du repas éthiopien et érythréen. Préparée à partir de teff, une toute petite céréale cultivée depuis des millénaires sur les hauts plateaux de la Corne de l'Afrique, elle sert à la fois de plateau, de pain et de couverts : on en déchire un morceau pour saisir les sauces.\n\nSa pâte fermente plusieurs jours, ce qui lui donne son goût acidulé et sa surface criblée de petits trous. On la cuit traditionnellement sur un mitad, une large plaque de terre cuite.",
     prepMinutes: 20,

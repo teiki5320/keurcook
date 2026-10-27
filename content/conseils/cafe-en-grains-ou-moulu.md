@@ -13,7 +13,7 @@ imagePrompt: Photographie culinaire, grains de café torréfiés brun foncé à 
 ---
 ## Le grain garde mieux son arôme
 
-Si vous pouvez le moudre vous-même, choisissez le café en grains : il conserve ses arômes bien plus longtemps. Dès que le grain est moulu, la surface en contact avec l'air se multiplie et les parfums s'échappent rapidement. Un café moulu juste avant la préparation a donc plus de goût qu'une mouture ouverte depuis plusieurs jours.
+Si vous pouvez le moudre vous-même, choisissez le café en grains, comme le [café en grains du Burundi](/produit/cafe-du-burundi) : il conserve ses arômes bien plus longtemps. Dès que le grain est moulu, la surface en contact avec l'air se multiplie et les parfums s'échappent rapidement. Un café moulu juste avant la préparation a donc plus de goût qu'une mouture ouverte depuis plusieurs jours.
 
 ## Quand préférer le moulu
 
