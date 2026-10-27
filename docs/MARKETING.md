@@ -41,7 +41,7 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 
 ## Canaux
 
-- **Référencement naturel** : sitemap (recettes, pays, produits, articles publiés, Top 10), données structurées (Recipe, Article, FAQPage, fil d'Ariane), textes alternatifs, titres et descriptions calibrés. Domaine déclaré dans Google Search Console (232 pages indexées sur 261 au relevé du 21 octobre 2026) ; pages signalées chaque lundi à Bing et aux autres moteurs par IndexNow ; depuis le 20 octobre 2026, titres, descriptions et FAQ retravaillés page par page d'après Search Console (journal `docs/referencement.md`). ✅
+- **Référencement naturel** : sitemap (recettes, pays, produits, articles publiés, Top 10), données structurées (Recipe, Article, FAQPage, fil d'Ariane), textes alternatifs, titres et descriptions calibrés. Domaine déclaré dans Google Search Console (248 pages indexées sur 259 au relevé du Studio du 27 octobre 2026) ; pages signalées chaque lundi à Bing et aux autres moteurs par IndexNow ; depuis le 20 octobre 2026, titres, descriptions et FAQ retravaillés page par page d'après Search Console (journal `docs/referencement.md`). ✅
 - **Contenu régulier** : trois articles « Conseils » par semaine (lundi, mercredi, vendredi), publiés automatiquement. ✅
 - **Actus** : depuis le 27 octobre 2026, rubrique « Actus de la cuisine africaine » (`/actus`), bloc sur l'accueil et sur chaque page pays, mis à jour 2 fois par jour par la veille actus ; contenu frais sans reconstruire le site. ✅
 - **Pinterest** : compte « Keur Cook » branché, site revendiqué, bouton « Épingler » sur chaque recette. 52 recettes épinglées du 2 au 14 octobre 2026 dans les tableaux par région par l'ancienne routine `keurcook-epingles-pinterest` (plus programmée). Publication automatique par l'API (comme Keur Déco, 5 épingles par jour au plus) : clé du compte créée le 23 octobre 2026, les six boissons épinglées le 24 octobre, les 58 recettes sont épinglées. ✅
@@ -52,7 +52,7 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 
 ## Mesures
 
-- **Pages indexées par Google** : 232 sur 261 ; 29 pas encore, dont 17 inconnues de Google et 12 détectées non explorées (Search Console, 21 octobre 2026)
+- **Pages indexées par Google** : 248 sur 259 ; 11 pas encore, dont 7 inconnues de Google et 4 détectées non explorées (relevé du Studio, 27 octobre 2026)
 - **Adresses du sitemap** : 260 (27 octobre 2026, avec la page Actus ; 259 le 26 octobre)
 - **Clics, achats et commissions Amazon** : à vérifier dans la console (partenaires.amazon.fr)
 - **Affichages et revenus des annonces** : aucun, site encore en examen chez Google (adsense.google.com)
@@ -63,4 +63,4 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 
 - Écrire de nouveaux articles « Conseils » : il en reste 27 en réserve, la réserve passe sous 20 vers le 13 novembre et se vide le 28 décembre 2026.
 - Relever à nouveau les prix indicatifs affichés : la date de relevé indiquée sur le site reste le 27 septembre 2026 et rien ne le refait automatiquement.
-- Faire indexer les pages manquantes : 29 adresses du sitemap n'étaient pas encore indexées par Google au 21 octobre (17 inconnues, 12 détectées non explorées) ; demander leur indexation dans Search Console.
+- Faire indexer les 11 pages manquantes (7 inconnues de Google, 4 détectées non explorées au 27 octobre 2026) ; demander leur indexation dans Search Console.
