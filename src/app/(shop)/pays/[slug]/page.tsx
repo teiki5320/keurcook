@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BlocActus } from "@/components/actus/BlocActus";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { anton } from "@/components/nuage/typography";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
@@ -97,6 +98,9 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
           </div>
         </section>
       )}
+
+      {/* Actus du pays (veille), après le texte sur la cuisine : un bloc d'écart avec l'annonce. Absent s'il n'y en a pas. */}
+      <BlocActus titre={`L'actu de la cuisine ${country.of}`} tailleTitre="moyen" limite={3} pays={country.code} className="mt-16" />
 
       {local.length > 0 && (
         <section aria-labelledby="produits-pays" className="mt-16">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
+import { BlocActus } from "@/components/actus/BlocActus";
 import { TLink } from "@/components/nuage/PageTransition";
 import { CountryCarousel } from "@/components/recipe/CountryCarousel";
 import { CountryMap } from "@/components/recipe/CountryMap";
@@ -59,6 +60,15 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Actus de la cuisine africaine, lues en direct depuis la veille (rien n'est affiché s'il n'y en a pas). */}
+      <BlocActus
+        titre="Actus de la cuisine africaine"
+        limite={4}
+        prioritaire
+        lien={{ href: "/actus", label: "Toutes les actus" }}
+        className="mx-auto max-w-[1320px] px-[clamp(20px,4vw,56px)] pb-16"
+      />
 
       {/* Un carrousel par type de plat. */}
       <div className="space-y-14 px-[clamp(20px,4vw,56px)] pb-16">

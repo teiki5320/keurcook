@@ -24,6 +24,7 @@ export function Footer() {
             <li><Link href="/boutique" className="hover:text-white">Produits rares</Link></li>
             <li><Link href="/conseils" className="hover:text-white">Conseils</Link></li>
             <li><Link href="/top-10" className="hover:text-white">Top 10</Link></li>
+            <li><Link href="/actus" className="hover:text-white">Actus de la cuisine africaine</Link></li>
             <li><Link href="/favoris" className="hover:text-white">Mes favoris</Link></li>
           </ul>
         </div>

@@ -31,15 +31,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/pays": latest(recipesAt),
     "/boutique": latest(productsAt),
     "/conseils": latest(conseilsAt),
+    // Actus lues en direct depuis la veille (2 passages par jour) : la page change chaque jour.
+    "/actus": new Date(),
     "/conditions": new Date(LEGAL_UPDATED),
     "/mentions-legales": new Date(LEGAL_UPDATED),
     "/confidentialite": new Date(LEGAL_UPDATED),
   };
-  const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
+  const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/actus", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
     url: `${base}${path}`,
     lastModified: pageUpdated[path],
-    changeFrequency: ["", "/recettes", "/boutique"].includes(path) ? ("daily" as const) : ["/pays", "/conseils"].includes(path) ? ("weekly" as const) : ("yearly" as const),
-    priority: path === "" ? 1 : ["/recettes", "/boutique"].includes(path) ? 0.9 : ["/pays", "/conseils"].includes(path) ? 0.7 : 0.3,
+    changeFrequency: ["", "/recettes", "/boutique", "/actus"].includes(path) ? ("daily" as const) : ["/pays", "/conseils"].includes(path) ? ("weekly" as const) : ("yearly" as const),
+    priority: path === "" ? 1 : ["/recettes", "/boutique"].includes(path) ? 0.9 : ["/pays", "/conseils", "/actus"].includes(path) ? 0.7 : 0.3,
   }));
   const entries: MetadataRoute.Sitemap = [
     ...staticPages,
