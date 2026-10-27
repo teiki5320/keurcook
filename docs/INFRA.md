@@ -17,7 +17,7 @@ Mis à jour le 27 octobre 2026 (veille actus) ; dernier scan complet du dépôt 
 - 📝 **Contenu** : 🐙 GitHub — 27 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 40 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
 - 🛒 **Affiliation** : 🌐 keurcook.com — boutons « Acheter · prix » [ok] → 🤝 Affiliation — Amazon Partenaires, tag keurcookfr-21 [ok] → 📦 Amazon.fr — Amazon encaisse et livre [ok]
 - 📰 **Veille actus** : 📡 Tâche de veille — 12 h et 19 h, 15 flux RSS [ok] → 🐙 Dépôt veille — actus/keurcook.json sur GitHub Pages [ok] → 🌍 keurcook.com — accueil (4), /actus (20), pages pays (3) [ok]
-- 📢 **Publicité** : 🌐 keurcook.com — cinq emplacements « Publicité » [ok] → 💰 AdSense (publicité web) — en examen depuis le 12 octobre, aucune annonce [à faire]
+- 📢 **Publicité** : 🌐 keurcook.com — cinq emplacements « Publicité » [ok] → 💰 AdSense (publicité web) — « En préparation » au 27 octobre (examen demandé le 12 octobre), aucune annonce [à faire]
 
 ## Vue d'ensemble
 

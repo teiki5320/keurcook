@@ -21,7 +21,7 @@ Mis à jour le 27 octobre 2026. Compagnon de INFRA.md.
 Deux sources, sans rien vendre soi-même :
 
 - **Affiliation Amazon Partenaires** : les boutons « Acheter · prix » mènent à Amazon.fr (tag `keurcookfr-21`, `src/lib/amazon.ts`) ; Amazon encaisse, livre et verse une commission sur les achats.
-- **Publicité Google AdSense** (en examen depuis le 12 octobre 2026) : emplacements titrés « Publicité » prêts sur les recettes, les articles « Conseils » et les pages pays ; aucune annonce ne s'affiche tant que Google n'a pas validé le site ; consentement recueilli par le message de Google.
+- **Publicité Google AdSense** (en examen depuis le 12 octobre 2026 ; « En préparation » dans la console AdSense, ni validé ni refusé (vérifié le 27 octobre 2026)) : emplacements titrés « Publicité » prêts sur les recettes, les articles « Conseils » et les pages pays ; aucune annonce ne s'affiche tant que Google n'a pas validé le site ; consentement recueilli par le message de Google.
 
 Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affichés indicatifs, relevés le 27 septembre 2026.
 

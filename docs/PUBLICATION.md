@@ -28,14 +28,14 @@
 3. ✅ **Ouverture au public** : maintenance coupée le 29 septembre 2026.
 4. ✅ **Référencement** : Search Console déclarée, IndexNow chaque lundi, Pinterest revendiqué.
 5. ✅ **AdSense préparé** : script, emplacements et ads.txt publiés le 12 octobre 2026, examen demandé le même jour.
-6. **Approbation AdSense** : site encore en examen, aucune annonce affichée ; suivre l'avis de Google dans la console.
+6. **Approbation AdSense** : site encore en examen, « En préparation » dans la console AdSense, ni validé ni refusé (vérifié le 27 octobre 2026), aucune annonce affichée ; suivre l'avis de Google dans la console.
 7. ✅ **Mesure d'audience** : Cloudflare Web Analytics autorisé dans la CSP le 13 octobre 2026.
 
 ## Web · Production
 
 | Version | En production ? | URL | Hébergeur |
 | --- | --- | --- | --- |
-| Web — Keur Cook (recettes, conseils, boutique) | **En ligne, ouvert au public** (maintenance désactivée) ; dernière publication réussie le 27 octobre 2026 (envoi du référencement sur main) ; AdSense en examen depuis le 12 octobre 2026, aucune annonce | https://keurcook.com (`www` redirigé) | Cloudflare Pages (projet `keurcook`) |
+| Web — Keur Cook (recettes, conseils, boutique) | **En ligne, ouvert au public** (maintenance désactivée) ; dernière publication réussie le 27 octobre 2026 (envoi du référencement sur main) ; AdSense en examen depuis le 12 octobre 2026, « En préparation » dans la console au 27 octobre 2026, aucune annonce | https://keurcook.com (`www` redirigé) | Cloudflare Pages (projet `keurcook`) |
 
 Site 100 % statique (Next.js `output: "export"`, dossier `out/`), sans serveur ni base de données. Il est construit et publié par GitHub Actions (`.github/workflows/deploy.yml`, « Publier le site ») :
 
@@ -68,7 +68,7 @@ Pendant une maintenance : écran « On prépare la marmite », pages en `noindex
 - **Google Search Console** : propriété de domaine `keurcook.com` déclarée ; 248 pages indexées sur 259 au relevé du Studio du 27 octobre 2026 ; 11 pas encore (7 inconnues de Google, 4 détectées mais non explorées) ; sitemap renvoyé le 20 octobre 2026, relu par Google le 26 octobre 2026. Une routine (`keurcook-demandes-indexation`) sert à demander l'indexation des nouvelles recettes.
 - **IndexNow** : sitemap signalé chaque lundi (`.github/workflows/indexnow.yml`) ; dernier envoi réussi le 26 octobre 2026.
 - **Pinterest** : site revendiqué sur le compte « Keur Cook » ; 52 recettes épinglées du 2 au 14 octobre 2026 ; publication automatique par l'API (`.github/workflows/pinterest.yml`, chaque jour à 4 h 17 UTC, 5 épingles au plus) en place depuis le 23 octobre 2026, clé du compte créée le même jour ; les 6 boissons épinglées le 24 octobre, soit les 58 recettes.
-- **Publicité** : Google AdSense en place depuis le 12 octobre 2026 ; site encore en examen, aucune annonce affichée.
+- **Publicité** : Google AdSense en place depuis le 12 octobre 2026 ; site encore en examen (« En préparation » dans la console AdSense, ni validé ni refusé (vérifié le 27 octobre 2026)), aucune annonce affichée.
 - **Analytics** : Cloudflare Web Analytics (sans cookie), balise constatée en ligne le 14 octobre 2026, chiffres à vérifier dans la console ; consentement aux cookies publicitaires recueilli par le message de Google, rouvert par le lien « Cookies » du pied de page.
 - **Newsletter** : aucune.
 
