@@ -8,7 +8,7 @@ import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
 import { findHealthClaims } from "../src/lib/compliance";
 import type { Actu } from "../src/lib/veille";
-import { BASE_ARTICLES, PAGE_SECOURS, chargerArticle, dateLongue, lienActu, nettoyerArticle, type ArticleActu } from "../src/lib/veille-articles";
+import { BASE_ARTICLES, PAGE_SECOURS, articlesAConstruire, chargerArticle, dateLongue, entreesIndex, lienActu, nettoyerArticle, type ArticleActu } from "../src/lib/veille-articles";
 
 const ID = "0634a1f512649530f376ea40256aee6efc045af7";
 const SLUG = "la-tunisie-fete-son-huile-olive-du-28-au-31-octobre-0634a1";
@@ -116,6 +116,33 @@ describe("articles des actus", () => {
     assert.match(readFileSync("src/app/(shop)/actus/article/page.tsx", "utf8"), /noindex: true/);
     const sitemap = readFileSync("src/app/sitemap.ts", "utf8").replace(/\/\/.*$/gm, "");
     assert.doesNotMatch(sitemap, /actus\/article/);
+  });
+
+  it("index des articles : entrées valides seulement, index illisible = []", () => {
+    const vieux = "a".repeat(40);
+    const index = entreesIndex({
+      version: 1,
+      articles: [
+        { id: vieux, slug: "vieil-article-aaaaaa", url: `${BASE_ARTICLES}${vieux}.json` },
+        { id: "b".repeat(40), slug: "autre-site-bbbbbb", url: "https://teiki5320.github.io/veille/articles/keurfoot/x.json" },
+        { id: "zz", slug: "mauvais-id" },
+        { id: "c".repeat(40), slug: "Pas Un Slug" },
+      ],
+    });
+    assert.deepEqual(index, [{ id: vieux, slug: "vieil-article-aaaaaa" }]);
+    assert.deepEqual(entreesIndex("<html>"), []);
+    assert.deepEqual(entreesIndex({ articles: "rien" }), []);
+  });
+
+  it("pages à construire : tout l'index (même les actus sorties du fichier), plus les actus récentes pas encore indexées", () => {
+    const vieux = { id: "a".repeat(40), slug: "vieil-article-aaaaaa" };
+    const sansArticle = actu({ id: "d".repeat(40), slug: undefined, article_url: undefined });
+    const liste = articlesAConstruire([vieux, { id: ID, slug: SLUG }], [actu(), sansArticle]);
+    assert.deepEqual(liste.map((e) => e.id), [vieux.id, ID]);
+    // Index injoignable : les actus récentes qui ont un article suffisent.
+    assert.deepEqual(articlesAConstruire([], [actu(), sansArticle]), [{ id: ID, slug: SLUG }]);
+    // Rien du tout (veille injoignable) : aucune page.
+    assert.deepEqual(articlesAConstruire([], []), []);
   });
 
   it("date longue en français", () => {

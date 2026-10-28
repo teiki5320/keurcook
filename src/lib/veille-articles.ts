@@ -157,3 +157,38 @@ export async function chargerArticle(id: unknown, lire: typeof fetch = fetch): P
     clearTimeout(minuteur);
   }
 }
+
+/** Index de tous les articles jamais publiés (articles/keurcook/index.json) : ils ne sont jamais supprimés. */
+export const URL_INDEX_ARTICLES = `${BASE_ARTICLES}index.json`;
+
+export interface EntreeArticle {
+  id: string;
+  slug: string;
+}
+
+/** Entrées valides de l'index (id, adresse et fichier de la veille de Keur Cook) ; [] si l'index est illisible. */
+export function entreesIndex(brut: unknown): EntreeArticle[] {
+  const liste = brut && typeof brut === "object" ? (brut as { articles?: unknown }).articles : null;
+  if (!Array.isArray(liste)) return [];
+  return liste
+    .filter((e): e is { id: string; slug: string; url?: unknown } => !!e && typeof e === "object" && idValide(e.id) && slugValide(e.slug))
+    .filter((e) => e.url === undefined || e.url === `${BASE_ARTICLES}${e.id}.json`)
+    .map((e) => ({ id: e.id, slug: e.slug }));
+}
+
+/**
+ * Articles à construire en page : tous ceux de l'index, plus ceux des actus récentes qui n'y seraient pas encore
+ * (index en retard ou injoignable). Une même actu n'apparaît qu'une fois (id) ; une adresse aussi (slug).
+ */
+export function articlesAConstruire(index: EntreeArticle[], actus: Actu[]): EntreeArticle[] {
+  const ids = new Set<string>();
+  const slugs = new Set<string>();
+  const liste: EntreeArticle[] = [];
+  for (const e of [...index, ...actus.filter(aUnArticle).map((a) => ({ id: a.id, slug: a.slug! }))]) {
+    if (ids.has(e.id) || slugs.has(e.slug)) continue;
+    ids.add(e.id);
+    slugs.add(e.slug);
+    liste.push(e);
+  }
+  return liste;
+}
