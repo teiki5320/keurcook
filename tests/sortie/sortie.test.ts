@@ -8,6 +8,7 @@ import assert from "node:assert/strict";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, it } from "node:test";
+import { CODES_SUIVI } from "../../src/lib/amazon";
 
 const out = join(import.meta.dirname, "..", "..", "out");
 const SITE = "https://keurcook.com";
@@ -76,9 +77,17 @@ describe("Site construit", () => {
         vus++;
         assert.match(m[0], /target="_blank"/, file.replace(out, ""));
         assert.match(m[0], /rel="[^"]*\bsponsored nofollow noopener\b[^"]*"/, file.replace(out, ""));
+        // Chaque lien porte un code de suivi de la table unique (src/lib/amazon.ts).
+        const tag = /[?&]tag=([^&"]+)/.exec(decoder(m[0]))?.[1];
+        assert.ok(tag && Object.values(CODES_SUIVI).includes(tag), `${file.replace(out, "")} : code de suivi ${tag ?? "absent"}`);
       }
     }
     assert.ok(vus > 0, "aucun lien Amazon trouvé");
+  });
+
+  it("l'accueil et les actus n'ont aucun lien Amazon", () => {
+    const fichiers = ["index.html", ...(existsSync(join(out, "actus")) ? htmlFiles(join(out, "actus")).map((f) => f.slice(out.length + 1)) : [])];
+    for (const f of fichiers) assert.doesNotMatch(lire(f), /href="https:\/\/(?:www\.)?amazon\./, f);
   });
 
   it("les données structurées (JSON-LD) ne contiennent jamais de « < » brut", () => {

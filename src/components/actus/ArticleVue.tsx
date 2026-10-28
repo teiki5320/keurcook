@@ -9,7 +9,7 @@ import { CreditImage } from "./CreditImage";
 
 interface Props {
   article: ArticleActu;
-  /** Fiches du site liées (recettes, pays, conseils) ; jamais de page boutique. */
+  /** Fiches du site liées (recettes, conseils, fiche produit et Top 10 du sujet, pays) : liens internes seulement. */
   fiches?: FicheLiee[];
   /** Trois autres actus, avec le lien que chaque carte ouvre. */
   autres?: Array<{ actu: Actu; lien: LienCarte }>;

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
+import { AlertTriangle, MapPin, Package, Tractor, Trophy } from "lucide-react";
 import { AmazonButton } from "@/components/product/AmazonButton";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { BOOK_ILLUSTRATION_NOTE, isBook, NORTH_AFRICAN_SLUGS } from "@/lib/catalog-utils";
@@ -11,6 +11,7 @@ import { VarietyCard } from "@/components/shop/VarietyCard";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
 import { getRecipesUsingProduct } from "@/lib/data/recipes";
 import { getConseilsForProduct } from "@/lib/data/conseils";
+import { topPourProduit } from "@/lib/data/top10";
 import { PRODUCT_GUIDES } from "@/lib/product-guides";
 import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
@@ -49,6 +50,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   const isFood = product.category.slug !== NON_FOOD_CATEGORY && !isBook(product);
   const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
   const conseils = getConseilsForProduct(product.slug);
+  const top = topPourProduit(product.slug);
 
   // Fil d'Ariane pour Google (une fiche « Product » sans offre ni avis serait signalée comme incomplète).
   const structuredData = {
@@ -85,9 +87,17 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
             {product.amazonAsin && product.variants[0] && (
               <>
                 <p className="text-sm text-muted">{product.variants[0].label}</p>
-                <AmazonButton asin={product.amazonAsin} name={product.name} className="btn-primary mt-3 h-12 w-full px-8 text-base sm:w-auto" />
+                <AmazonButton asin={product.amazonAsin} name={product.name} emplacement="fiche" className="btn-primary mt-3 h-12 w-full px-8 text-base sm:w-auto" />
                 <p className="mt-2 text-xs text-muted">Lien partenaire Amazon. Prix, disponibilité et vendeur sont indiqués sur Amazon.</p>
               </>
+            )}
+            {top && (
+              <p className="mt-4 flex items-start gap-2 text-[15px]">
+                <Trophy className="mt-1 h-4 w-4 shrink-0 text-[#ff7a3d]" aria-hidden />
+                <Link href={top.href} className="font-semibold text-[#ffc46b] underline underline-offset-2 hover:text-[#ff7a3d]">
+                  Il est dans notre {top.title.replace(/^Top 10/, "top 10")} (n° {top.rank}) →
+                </Link>
+              </p>
             )}
           </div>
 
@@ -197,7 +207,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
           <h2 className="mb-6 font-display text-2xl text-forest-900">Vous aimerez aussi</h2>
           <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
             {related.map((p) => (
-              <VarietyCard key={p.id} product={p} />
+              <VarietyCard key={p.id} product={p} emplacement="fiche" />
             ))}
           </div>
         </section>

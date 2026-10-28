@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 import { TLink } from "@/components/nuage/PageTransition";
 import { anton } from "@/components/nuage/typography";
 import { ProductImage } from "@/components/product/ProductImage";
-import { AMAZON_DISCLOSURE, amazonUrl } from "@/lib/amazon";
+import { AMAZON_DISCLOSURE, amazonUrl, LIGNE_PARTENAIRE } from "@/lib/amazon";
 import { BOOK_ILLUSTRATION_NOTE, isBook } from "@/lib/catalog-utils";
 import { siteConfig } from "@/lib/config";
 import type { ResolvedTop10Item } from "@/lib/data/top10";
@@ -147,17 +147,17 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
                     </ul>
                   </div>
                 )}
-                <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-2 pt-2">
+                <div className="mt-auto flex flex-col items-start gap-1.5 pt-2">
                   <a
-                    href={amazonUrl(it.asin)}
+                    href={amazonUrl(it.asin, "top")}
                     target="_blank"
                     rel="sponsored nofollow noopener"
                     aria-label={`Voir sur Amazon : ${it.productData.name}, lien partenaire (nouvel onglet)`}
-                    className="btn-primary px-6"
+                    className="btn-primary min-h-11 px-6"
                   >
                     Voir sur Amazon <ExternalLink className="h-4 w-4" aria-hidden />
                   </a>
-                  <span className="text-xs text-muted">Lien partenaire</span>
+                  <span className="text-xs text-muted">{LIGNE_PARTENAIRE}</span>
                 </div>
               </div>
             </article>

@@ -1,6 +1,6 @@
 # Keur Cook — recettes africaines & produits rares
 
-Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 127 produits africains rares** en 9 gammes des pages **Top 10** (10 classements de produits) et des **Actus de la cuisine africaine** lues en direct depuis la veille actus. Le site ne vend rien lui-même : les boutons « Voir sur Amazon » mènent à Amazon.fr (programme Partenaires).
+Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 126 produits africains rares** en 9 gammes des pages **Top 10** (10 classements de produits) et des **Actus de la cuisine africaine** lues en direct depuis la veille actus. Le site ne vend rien lui-même : les boutons « Voir sur Amazon » mènent à Amazon.fr (programme Partenaires).
 
 - **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
 - **Éditeur** : ALOHASH (SAS). Contact : keurcook@toakeur.com.
@@ -14,14 +14,14 @@ Le site est **100 % statique** : pas de serveur, pas de base de données. Recett
 
 ## Fonctionnalités
 
-- Accueil : carte de l'Afrique en particules (un point par pays), carrousels de recettes par type de plat, produits rares.
+- Accueil : carte de l'Afrique en particules (un point par pays), carrousel des pays, rangée « Nos Top 10 » (liens vers les 10 Top 10 et la boutique, sans bouton Amazon, depuis le 28 octobre 2026), carrousels de recettes par type de plat, produits rares.
 - Recettes : carrousel des types de plats, filtres (pays, difficulté), **recherche par plat, pays ou ingrédient**.
-- Fiche recette : histoire du plat, portions ajustables (quantités recalculées), étapes, astuces, **version imprimable**, **partage WhatsApp**, favori ; ingrédients disponibles en boutique signalés « Produit rare », avec bouton d'achat Amazon.
+- Fiche recette : histoire du plat, portions ajustables (quantités recalculées), étapes, astuces, **version imprimable**, **partage WhatsApp**, favori ; ingrédients disponibles en boutique signalés « Produit rare », avec un vrai bouton « Voir sur Amazon » (44 px de haut au moins) ; sur téléphone, encadré « Produits de cette recette » juste après les ingrédients ; liens vers les Top 10 liés (depuis le 28 octobre 2026).
 - Pages pays, **favoris sans compte** (stockés dans le navigateur).
 - **Conseils** : articles Markdown (`content/conseils/`), trois articles par semaine (lundi, mercredi, vendredi), publication programmée (voir `docs/CONSEILS.md`).
 - **Top 10** (`/top-10/<sujet>`) : 10 classements de dix produits de la boutique (voir « Top 10 » ci-dessous).
 - **Actus de la cuisine africaine** (`/actus`, 20 actus ; 4 sur l'accueil, 3 par page pays) : lues dans le navigateur depuis `https://teiki5320.github.io/veille/actus/keurcook.json` (`src/lib/veille.ts`, `src/components/actus/`), préparées 2 fois par jour (12 h et 19 h) par la veille actus (dépôt `teiki5320/veille`) ; rien ne s'affiche s'il n'y a pas d'actu. Depuis le 28 octobre 2026, toute la carte d'une actu ouvre son **article complet** (300 à 450 mots) sur le site : page `/actus/<adresse>` construite au build (`scripts/articles-veille.ts` télécharge tous les articles de l'index `articles/keurcook/index.json`, jamais supprimés, dans `.veille/articles.json`, `src/app/(shop)/actus/[slug]/`), sinon page de secours `/actus/article?id=…` lue dans le navigateur (noindex, hors sitemap), sinon la source quand l'article n'est pas encore rédigé. Veille injoignable au build : 0 page article, le build continue.
-- Boutique par gammes, fiche produit avec « Utilisé dans ces recettes », bouton « Voir sur Amazon » vers Amazon.fr.
+- Boutique : tout le catalogue affiché d'emblée (une gamme se choisit dans le carrousel, depuis le 28 octobre 2026) ; fiche produit avec « Utilisé dans ces recettes », bouton « Voir sur Amazon » vers Amazon.fr et lien « Il est dans notre top 10 des … » quand il y figure. Chaque carte produit : une ligne « pourquoi » (description courte), le bouton et la ligne « Lien partenaire Amazon… » dessous. Pages pays : 3 produits du pays dès le haut de la page ; conseils : un encadré produit après la première partie, « Les produits » avant « Les recettes » ; actus : lien interne vers la fiche produit ou le Top 10 du sujet (`SUJETS_ACTUS`, `src/lib/veille-articles.ts`), jamais de lien Amazon.
 - **Mode maintenance** : écran « On prépare la marmite », activé ou coupé depuis GitHub (voir « Maintenance » ci-dessous).
 
 Recettes et produits se modifient dans le code (`src/lib/demo/`), articles dans `content/conseils/` ; chaque modification envoyée sur `main` republie le site.
@@ -30,16 +30,17 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 
 ### Boutique et Amazon Partenaires
 
-- 127 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
-- Liens construits par `src/lib/amazon.ts` à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) et du tag partenaire `keurcookfr-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer). Ce tag vient du nouveau compte Amazon Partenaires ouvert le 18 octobre 2026 (l'ancien compte a été fermé par Amazon).
-- Prix **indicatifs**, relevés le 27/09/2026 : le prix affiché par Amazon fait foi.
+- 126 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
+- Liens construits par `amazonUrl(asin, emplacement)` (`src/lib/amazon.ts`) à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) ; le code de suivi est choisi dans une table unique, `CODES_SUIVI`, par emplacement (recette, conseil, top, fiche, rubrique = boutique et pays). Depuis le 28 octobre 2026, tous les emplacements utilisent encore le tag partenaire `keurcookfr-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer) ; un code par emplacement pourra y être écrit quand il sera créé dans Amazon Partenaires. `tests/amazon.test.ts` et `tests/sortie/` vérifient que chaque lien porte un code de la table. Ce tag vient du nouveau compte Amazon Partenaires ouvert le 18 octobre 2026 (l'ancien compte a été fermé par Amazon).
+- Aucun prix affiché sur le site : seul le prix d'Amazon fait foi.
+- **Disponibilité** : `npm run verifier-produits` (sur le Mac, pas sur GitHub ; `-- --ecrire` pour enregistrer, `--lot 30` pour un petit lot) ouvre chaque fiche Amazon.fr dans Chrome et note dans `src/lib/demo/verifications-amazon.json` la date et l'état (bouton « Ajouter au panier » présent ou non) ; une offre indisponible n'est plus affichée et revient d'elle-même quand elle redevient disponible. Premier passage sur tout le catalogue le 28 octobre 2026.
 - Le site n'encaisse rien et ne gère aucun stock : achat, paiement et livraison se font sur Amazon.
 
 ### Top 10
 
 Données dans `src/lib/demo/top10.ts`, vérifiées par `tests/top10.test.ts`. Chaque onglet compte exactement dix produits de la boutique avec un lien Amazon. Règle de classement :
 
-- **Cas général** : note moyenne des acheteurs sur Amazon.fr (relevé du 19 octobre 2026) ; à égalité, le produit le plus évalué passe devant. Seuls les produits disponibles avec **au moins 10 évaluations** sont retenus.
+- **Cas général** : note moyenne des acheteurs sur Amazon.fr (relevé du 19 octobre 2026 ; du 28 octobre 2026 pour l'onglet Mixeurs, quand le hachoir Choppeo indisponible a été remplacé par le H.Koenig LEO8) ; à égalité, le produit le plus évalué passe devant. Seuls les produits disponibles avec **au moins 10 évaluations** sont retenus.
 - **Onglet Livres** : les livres sont gardés même avec peu d'évaluations (choix de Jean le 19 octobre 2026) ; ceux qui n'ont aucune note sont placés à la fin.
 - **Onglet Farines** : classé selon le nombre de recettes du site qui emploient chaque produit.
 - Les notes servent seulement à classer : elles ne sont **jamais affichées** (pas de prix non plus).
@@ -138,6 +139,7 @@ Servis par Cloudflare Pages :
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Vérification TypeScript |
 | `npm test` | Tests (`tests/*.test.ts`) |
+| `npm run verifier-produits` | Vérifie sur amazon.fr que chaque produit est toujours achetable (sur le Mac ; `-- --ecrire` pour enregistrer) |
 | `npm run test:sortie` | Construit le site comme en production puis contrôle le dossier `out/` (`tests/sortie/sortie.test.ts`) ; `npm run test:sortie:controle` contrôle un `out/` déjà construit |
 
 **Avant chaque envoi** : `npm run lint`, `npm run typecheck`, `npm test`, `npm run test:sortie` (build compris).

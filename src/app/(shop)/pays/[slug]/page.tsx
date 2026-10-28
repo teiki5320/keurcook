@@ -8,6 +8,7 @@ import { AdSlot } from "@/components/ads/AdSlot";
 import { anton } from "@/components/nuage/typography";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
+import { ProduitEncart } from "@/components/product/ProduitEncart";
 import { COUNTRIES, countryBySlug } from "@/lib/countries";
 import { COUNTRY_CUISINE } from "@/lib/country-cuisine";
 import { getCatalog } from "@/lib/data/catalog";
@@ -47,6 +48,9 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
   const [recipes, { products }] = await Promise.all([getRecipes(), getCatalog()]);
   const own = recipes.filter((r) => r.countryCode === country.code);
   const local = products.filter((p) => p.originCountry === country.name);
+  // Encadré du haut : 3 produits au plus, seulement s'il y a des recettes pour le séparer de l'annonce.
+  const haut = own.length > 0 ? local.slice(0, 3) : [];
+  const autres = local.slice(haut.length);
 
   return (
     <div className="container-page">
@@ -73,6 +77,9 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
         <span className="text-[#ff7a3d]">.</span>
       </h1>
       <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[#fbeee2]/80">{country.description}</p>
+
+      {/* Trois produits du pays dès le haut de la page (loin de l'annonce, placée après les recettes). */}
+      <ProduitEncart id="produits-pays-haut" titre={`Produits rares ${country.of}`} produits={haut} emplacement="rubrique" className="mt-6 max-w-3xl" />
 
       {own.length > 0 ? (
         <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -105,15 +112,15 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
       {/* Actus du pays (veille), après le texte sur la cuisine : un bloc d'écart avec l'annonce. Absent s'il n'y en a pas. */}
       <BlocActus construits={getSlugsConstruits()} titre={`L'actu de la cuisine ${country.of}`} tailleTitre="moyen" limite={3} pays={country.code} className="mt-16" />
 
-      {local.length > 0 && (
+      {autres.length > 0 && (
         <section aria-labelledby="produits-pays" className="mt-16">
           <h2 id="produits-pays" className="font-display text-3xl">
-            Produits rares {country.of}
+            {haut.length > 0 ? "Autres produits rares" : "Produits rares"} {country.of}
             <span className="text-[#ff7a3d]">.</span>
           </h2>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
-            {local.map((p) => (
-              <VarietyCard key={p.id} product={p} />
+            {autres.map((p) => (
+              <VarietyCard key={p.id} product={p} emplacement="rubrique" />
             ))}
           </div>
         </section>

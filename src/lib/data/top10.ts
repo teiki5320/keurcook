@@ -51,3 +51,53 @@ export const resolveTop10 = cache(async (slug: string): Promise<ResolvedTop10Ite
     return { ...item, rank: i + 1, productData, asin: productData.amazonAsin, recipesData, articlesData };
   });
 });
+
+/** Lien interne vers un Top 10 (aucun lien Amazon). */
+export interface LienTop10 {
+  slug: string;
+  href: string;
+  title: string;
+}
+
+const lienTop = (t: Top10): LienTop10 => ({ slug: t.slug, href: `/top-10/${t.slug}`, title: t.title });
+
+/** Le Top 10 où figure un produit (le premier, dans l'ordre des onglets), avec son rang ; null s'il n'y est pas. */
+export function topPourProduit(productSlug: string): (LienTop10 & { rank: number }) | null {
+  for (const t of demoTop10) {
+    const i = t.items.findIndex((it) => it.product === productSlug);
+    if (i >= 0) return { ...lienTop(t), rank: i + 1 };
+  }
+  return null;
+}
+
+/**
+ * Top 10 liés à une recette (2 au plus) : d'abord ceux qui contiennent un produit de la recette,
+ * puis ceux dont le plus de produits citent la recette.
+ */
+export function topsPourRecette(recipe: Pick<Recipe, "slug" | "ingredients" | "equipment">): LienTop10[] {
+  const produits = new Set([...recipe.ingredients.flatMap((i) => (i.productSlug ? [i.productSlug] : [])), ...(recipe.equipment ?? [])]);
+  return demoTop10
+    .map((t) => ({
+      t,
+      direct: t.items.some((it) => produits.has(it.product)) ? 1 : 0,
+      cites: t.items.filter((it) => it.recettes.includes(recipe.slug)).length,
+    }))
+    .filter((x) => x.direct || x.cites)
+    .sort((a, b) => b.direct - a.direct || b.cites - a.cites)
+    .slice(0, 2)
+    .map((x) => lienTop(x.t));
+}
+
+/** Top 10 liés à un conseil (2 au plus) : ceux qui citent l'article, puis ceux qui contiennent un de ses produits. */
+export function topsPourConseil(conseil: { slug: string; produits: string[] }): LienTop10[] {
+  return demoTop10
+    .map((t) => ({
+      t,
+      cite: t.items.some((it) => it.articles?.includes(conseil.slug)) ? 1 : 0,
+      produits: t.items.filter((it) => conseil.produits.includes(it.product)).length,
+    }))
+    .filter((x) => x.cite || x.produits)
+    .sort((a, b) => b.cite - a.cite || b.produits - a.produits)
+    .slice(0, 2)
+    .map((x) => lienTop(x.t));
+}

@@ -1,11 +1,21 @@
 import Link from "next/link";
 import { Heart, MapPin } from "lucide-react";
-import { AmazonButton } from "@/components/product/AmazonButton";
+import { AmazonButton, LignePartenaire } from "@/components/product/AmazonButton";
 import { ProductImage } from "@/components/product/ProductImage";
+import type { EmplacementAmazon } from "@/lib/amazon";
 import type { ProductWithCategory } from "@/lib/types";
 
-/** Carte produit : photo, origine, format et bouton « Voir sur Amazon ». */
-export function VarietyCard({ product, priority }: { product: ProductWithCategory; priority?: boolean }) {
+/** Carte produit : photo, nom, une ligne « pourquoi », origine, format, bouton « Voir sur Amazon » et ligne « Lien partenaire ». */
+export function VarietyCard({
+  product,
+  priority,
+  emplacement,
+}: {
+  product: ProductWithCategory;
+  priority?: boolean;
+  /** Type de page, pour le code de suivi Amazon. */
+  emplacement: EmplacementAmazon;
+}) {
   const variant = product.variants[0];
   if (!variant) return null;
 
@@ -34,18 +44,20 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
             {product.name}
           </Link>
         </h3>
+        <p className="line-clamp-2 text-xs leading-snug text-[#fbeee2]/75">{product.shortDescription}</p>
         {(product.originCountry || product.originRegion) && (
           <p className="flex items-center gap-1 text-xs text-muted">
             <MapPin className="h-3.5 w-3.5 shrink-0" aria-hidden /> {[product.originCountry, product.originRegion].filter(Boolean).join(" · ")}
           </p>
         )}
-
-
         <p className="mt-auto pt-1">
           <span className="text-xs text-muted">{variant.label}</span>
         </p>
         {product.amazonAsin && (
-          <AmazonButton asin={product.amazonAsin} name={product.name} className="btn-primary mt-1 w-full py-2.5" />
+          <>
+            <AmazonButton asin={product.amazonAsin} name={product.name} emplacement={emplacement} className="btn-primary mt-1 w-full px-3 py-2.5" />
+            <LignePartenaire />
+          </>
         )}
       </div>
     </article>

@@ -24,8 +24,8 @@ interface Props {
 }
 
 /**
- * Boutique en une page : carrousel des gammes ; dessous, les produits de la gamme au centre.
- * `?gamme=tout` affiche tout le catalogue, `?q=` une recherche.
+ * Boutique en une page : carrousel des gammes ; dessous, tout le catalogue d'emblée.
+ * `?gamme=<gamme>` n'affiche que les produits de cette gamme, `?q=` une recherche.
  */
 const ALL = "tout";
 const chip =
@@ -47,7 +47,8 @@ function BoutiqueWithParams(props: Props) {
 function BoutiqueView({ gammes, allProducts, gammeKey, query }: Props & { gammeKey: string | null; query: string }) {
   const router = useRouter();
   const [sort, setSort] = useState<SortKey>("featured");
-  const showAll = gammeKey === ALL;
+  // Sans gamme choisie, tout le catalogue est affiché (et présent dans la page construite).
+  const showAll = gammeKey === ALL || !gammes.some((g) => g.key === gammeKey);
   const index = Math.max(0, gammes.findIndex((g) => g.key === gammeKey));
   const gamme = gammes[index];
   const choose = (i: number) => router.replace(`/boutique?gamme=${gammes[i].key}`, { scroll: false });
@@ -136,7 +137,7 @@ function BoutiqueView({ gammes, allProducts, gammeKey, query }: Props & { gammeK
         {list.length > 0 ? (
           <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
             {list.map((p, i) => (
-              <VarietyCard key={p.id} product={p} priority={i < 4} />
+              <VarietyCard key={p.id} product={p} priority={i < 4} emplacement="rubrique" />
             ))}
           </div>
         ) : (

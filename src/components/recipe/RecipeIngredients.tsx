@@ -53,21 +53,21 @@ export function RecipeIngredients({
           const { quantity, label } = ingredientLine(i, factor);
           const product = i.productSlug ? products[i.productSlug] : undefined;
           return (
-            <li key={k} className="flex items-start justify-between gap-3 py-2.5">
+            <li key={k} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 py-2.5">
               <span className="text-[15px] leading-snug">
                 {quantity && <strong className="font-semibold text-[#ffc46b]">{quantity} </strong>}
                 {label}
               </span>
               {product && (
-                <span className="flex shrink-0 items-center gap-1.5 print:hidden">
+                <span className="flex shrink-0 items-center gap-2 print:hidden">
                   <TLink href={`/produit/${product.slug}`} label={product.name} aria-label={`Produit rare : ${product.name}`} className="rounded-full bg-[#ff7a3d]/15 px-2.5 py-1 text-[11px] font-bold text-[#ffc46b] hover:bg-[#ff7a3d]/25">
                     Produit rare
                   </TLink>
                   <AmazonButton
                     asin={product.amazonAsin}
                     name={product.name}
-                    icon
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff7a3d] text-[#140a07] hover:bg-[#ffc46b]"
+                    emplacement="recette"
+                    className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#ff7a3d] px-3.5 text-xs font-bold text-[#140a07] hover:bg-[#ffc46b]"
                   />
                 </span>
               )}
@@ -75,8 +75,8 @@ export function RecipeIngredients({
           );
         })}
       </ul>
-      {Object.keys(products).length > 0 && (
-        <p className="mt-3 text-xs text-[#fbeee2]/60 print:hidden">Les paniers orange sont des liens partenaires Amazon.</p>
+      {ingredients.some((i) => i.productSlug && products[i.productSlug]) && (
+        <p className="mt-3 text-xs text-[#fbeee2]/60 print:hidden">Les boutons « Voir sur Amazon » sont des liens partenaires Amazon : prix et disponibilité sur Amazon.</p>
       )}
     </div>
   );

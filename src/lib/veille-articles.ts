@@ -208,3 +208,41 @@ export function descriptionCourte(texte: string, max = 155): string {
   return `${coupe.slice(0, coupe.lastIndexOf(" ")).replace(/[\s,;:.]+$/, "")}…`;
 }
 
+
+/**
+ * Sujets reconnus dans le titre et le chapô d'une actu : fiche produit et Top 10 du site qui en parlent.
+ * Sert uniquement à ajouter un lien interne (« Pour aller plus loin ») : jamais de lien Amazon dans une actu.
+ * Un mot entier suffit (« vanille », « fonio »…) ; le premier sujet trouvé l'emporte.
+ */
+export const SUJETS_ACTUS: Array<{ motif: RegExp; produit?: string; top?: string }> = [
+  { motif: /vanille/, produit: "vanille-bourbon-de-madagascar" },
+  { motif: /poivre de penja/, produit: "poivre-de-penja" },
+  { motif: /poivre de selim|poivre de guin[ée]e/, produit: "poivre-de-selim" },
+  { motif: /fonio/, produit: "fonio" },
+  { motif: /atti[ée]k[ée]/, produit: "attieke-sec" },
+  { motif: /teff|injera/, produit: "farine-de-teff" },
+  { motif: /rooibos/, produit: "rooibos" },
+  { motif: /kinkeliba/, produit: "kinkeliba" },
+  { motif: /bissap|hibiscus/, produit: "fleurs-de-bissap" },
+  { motif: /huile de palme/, produit: "huile-de-palme-rouge" },
+  { motif: /p[âa]te d'arachide|maf[ée]/, produit: "pate-d-arachide" },
+  { motif: /moringa/, produit: "feuilles-de-moringa" },
+  { motif: /egusi/, produit: "graines-d-egusi" },
+  { motif: /gombo/, produit: "gombo-seche" },
+  { motif: /soumbala|n[ée]t[ée]tou/, produit: "soumbala" },
+  { motif: /berb[ée]r[ée]/, produit: "berbere" },
+  { motif: /suya|yaji/, produit: "yaji-suya" },
+  { motif: /ndol[ée]/, produit: "feuilles-de-ndole" },
+  { motif: /caf[ée]s?/, top: "thes-et-cafes-africains" },
+  { motif: /th[ée]s?|ataya/, top: "thes-et-cafes-africains" },
+  { motif: /livres? de (cuisine|recettes)/, top: "livres-de-recettes-africaines" },
+  { motif: /mortiers?/, top: "mortiers-et-pilons" },
+  { motif: /[ée]pices?/, top: "epices-africaines" },
+];
+
+/** Sujets (fiche produit, Top 10) reconnus dans une actu, dans l'ordre de la liste ci-dessus. */
+export function sujetsDeLActu(article: Pick<ArticleActu, "titre" | "chapo">): Array<{ produit?: string; top?: string }> {
+  const texteActu = `${article.titre} ${article.chapo}`.toLowerCase();
+  // Mot entier : pas de lettre juste avant ni juste après (« thé » ne doit pas trouver « théâtre »).
+  return SUJETS_ACTUS.filter(({ motif }) => new RegExp(`(?<!\\p{L})(?:${motif.source})(?!\\p{L})`, "u").test(texteActu)).map(({ produit, top }) => ({ produit, top }));
+}

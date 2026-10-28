@@ -5,6 +5,9 @@ import { notFound } from "next/navigation";
 import { ChefHat, Clock, Flame, Lightbulb, MapPin, Users } from "lucide-react";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { ProductImage } from "@/components/product/ProductImage";
+import { ProduitEncart } from "@/components/product/ProduitEncart";
+import { LiensTop10 } from "@/components/top10/LiensTop10";
+import { topsPourRecette } from "@/lib/data/top10";
 import { RecipeActions } from "@/components/recipe/RecipeActions";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { RecipeIngredients, type LinkedProduct } from "@/components/recipe/RecipeIngredients";
@@ -56,7 +59,12 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   const country = countryByCode(recipe.countryCode);
 
   // Produits de la boutique utilisés par la recette (premier format proposé).
-  const used = products.filter((p) => recipe.ingredients.some((i) => i.productSlug === p.slug) || recipe.equipment?.includes(p.slug));
+  // Ingrédients d'abord, puis ustensiles.
+  const used = [
+    ...products.filter((p) => recipe.ingredients.some((i) => i.productSlug === p.slug)),
+    ...products.filter((p) => recipe.equipment?.includes(p.slug) && !recipe.ingredients.some((i) => i.productSlug === p.slug)),
+  ];
+  const tops = topsPourRecette(recipe);
   const linked: Record<string, LinkedProduct> = {};
   for (const p of used) {
     if (p.amazonAsin && p.variants[0]) linked[p.slug] = { slug: p.slug, name: p.name, amazonAsin: p.amazonAsin };
@@ -192,6 +200,9 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-14">
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <RecipeIngredients ingredients={recipe.ingredients} servings={recipe.servings} products={linked} />
+          {/* Sur téléphone, les produits de la recette juste après les ingrédients (sur grand écran : en bas de page). */}
+          <ProduitEncart id="produits-recette-mobile" titre="Produits de cette recette" produits={used} emplacement="recette" className="mt-4 lg:hidden" />
+          <LiensTop10 liens={tops} className="mt-4 px-1" />
           <section aria-labelledby="nutrition" className="card mt-4 p-5 sm:p-6">
             <h2 id="nutrition" className="text-xs font-bold tracking-[.16em] text-[#ffc46b] uppercase">Valeurs nutritionnelles estimées</h2>
             <p className="mt-1 text-xs text-[#fbeee2]/55">Par personne, calculées à partir des ingrédients (ordre de grandeur).</p>
@@ -293,14 +304,14 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       </div>
 
       {used.length > 0 && (
-        <section aria-labelledby="produits-recette" className="mt-16 print:hidden">
+        <section aria-labelledby="produits-recette" className={`mt-16 print:hidden ${used.length <= 3 ? "hidden lg:block" : ""}`}>
           <h2 id="produits-recette" className="font-display text-3xl">
             {recipe.equipment?.length ? "Produits et ustensiles de cette recette" : "Les produits rares de cette recette"}<span className="text-[#ff7a3d]">.</span>
           </h2>
           <p className="mt-1 text-sm text-muted">Liens partenaires Amazon : prix et disponibilité sont indiqués sur Amazon.</p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
             {used.map((p) => (
-              <VarietyCard key={p.id} product={p} />
+              <VarietyCard key={p.id} product={p} emplacement="recette" />
             ))}
           </div>
         </section>

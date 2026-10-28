@@ -8,7 +8,7 @@ import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
 import { findHealthClaims } from "../src/lib/compliance";
 import type { Actu } from "../src/lib/veille";
-import { BASE_ARTICLES, PAGE_SECOURS, articlesAConstruire, chargerArticle, dateLongue, entreesIndex, lienActu, nettoyerArticle, type ArticleActu } from "../src/lib/veille-articles";
+import { BASE_ARTICLES, PAGE_SECOURS, articlesAConstruire, chargerArticle, dateLongue, entreesIndex, lienActu, nettoyerArticle, sujetsDeLActu, type ArticleActu } from "../src/lib/veille-articles";
 
 const ID = "0634a1f512649530f376ea40256aee6efc045af7";
 const SLUG = "la-tunisie-fete-son-huile-olive-du-28-au-31-octobre-0634a1";
@@ -163,7 +163,18 @@ describe("articles des actus", () => {
     for (const f of fichiers) {
       const texte = readFileSync(f, "utf8").replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, "").replace(/className=(\{`[^`]*`\}|"[^"]*")/g, "");
       assert.deepEqual(findHealthClaims(texte), [], f);
-      assert.doesNotMatch(texte, /\bacheter\b|\bprix\b|disponible sur|amazon|amzn|\/boutique|\/produit/i, f);
+      // Depuis le 28 octobre 2026, une actu peut renvoyer vers la fiche produit de son sujet (lien interne),
+      // jamais vers Amazon ni la boutique.
+      assert.doesNotMatch(texte, /\bacheter\b|\bprix\b|disponible sur|amazon|amzn|\/boutique/i, f);
     }
+  });
+
+  it("sujet d'une actu : la vanille mène à la fiche de la vanille bourbon, le mot entier seulement", () => {
+    assert.deepEqual(sujetsDeLActu({ titre: "À São Tomé, la vanille prend le relais du cacao", chapo: "" })[0], {
+      produit: "vanille-bourbon-de-madagascar",
+      top: undefined,
+    });
+    assert.deepEqual(sujetsDeLActu({ titre: "Un festival de théâtre à Dakar", chapo: "" }), []);
+    assert.equal(sujetsDeLActu({ titre: "La cérémonie du café en Éthiopie", chapo: "" })[0].top, "thes-et-cafes-africains");
   });
 });

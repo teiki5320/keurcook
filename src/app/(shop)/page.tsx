@@ -9,6 +9,7 @@ import { RecipeRow } from "@/components/recipe/RecipeCard";
 import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
 import { getGammes } from "@/lib/data/gammes";
+import { getTop10s } from "@/lib/data/top10";
 import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
 import { getMaintenance } from "@/lib/data/settings";
 import { unitWord } from "@/lib/gamme-words";
@@ -60,6 +61,34 @@ export default async function HomePage() {
           <div className="mt-2">
             <CountryCarousel countries={countries} />
           </div>
+        </div>
+      </section>
+
+      {/* Nos Top 10 et la boutique : de simples liens vers les pages du site (aucun bouton Amazon sur l'accueil). */}
+      <section aria-labelledby="top10-accueil" className="overflow-x-clip px-[clamp(20px,4vw,56px)] pb-16">
+        <div className="mx-auto max-w-[1320px]">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 id="top10-accueil" className="uppercase" style={{ ...anton, fontSize: "clamp(36px,4.5vw,64px)" }}>
+                Nos Top 10<span className="text-[#ff7a3d]">.</span>
+              </h2>
+              <p className="mt-1 max-w-xl text-sm text-[#fbeee2]/65">Ustensiles, épices, farines, livres : nos sélections pour bien s&apos;équiper.</p>
+            </div>
+            <TLink href="/boutique" label="La boutique" className="text-sm font-bold text-[#ff7a3d] hover:text-[#ffc46b]">
+              Toute la boutique →
+            </TLink>
+          </div>
+          <ul className="-mx-[clamp(20px,4vw,56px)] flex snap-x gap-3 overflow-x-auto px-[clamp(20px,4vw,56px)] pb-2 sm:gap-4">
+            {getTop10s().map((t) => (
+              <li key={t.slug} className="w-[72vw] max-w-[300px] shrink-0 snap-start">
+                <TLink href={`/top-10/${t.slug}`} label={t.title} prefetch={false} className="group block overflow-hidden rounded-3xl border border-[#fbeee2]/10 bg-[#211209] hover:border-[#ff7a3d]/60">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={`/top10/${t.slug}.jpg`} alt="" width={1200} height={630} loading="lazy" decoding="async" className="aspect-[1200/630] w-full object-cover" />
+                  <span className="block p-4 text-sm leading-snug font-semibold group-hover:text-[#ffc46b]">{t.title}</span>
+                </TLink>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

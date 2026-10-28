@@ -6,7 +6,9 @@ import { countryByCode, countryBySlug } from "@/lib/countries";
 import { getConseilBySlug } from "@/lib/data/conseils";
 import { getRecipes } from "@/lib/data/recipes";
 import { nettoyerFichier, type Actu } from "@/lib/veille";
-import { nettoyerArticle, type ArticleActu, type FicheLiee } from "@/lib/veille-articles";
+import { getCatalog } from "@/lib/data/catalog";
+import { getTop10BySlug, topPourProduit } from "@/lib/data/top10";
+import { nettoyerArticle, sujetsDeLActu, type ArticleActu, type FicheLiee } from "@/lib/veille-articles";
 
 /**
  * Articles complets des actus, téléchargés juste avant le build par scripts/articles-veille.ts
@@ -51,8 +53,9 @@ export function getAutresActus(id: string, nombre = 3): Actu[] {
 
 /**
  * Fiches du site liées à un article : les tags qui correspondent à une page existante
- * (« recette:mafe », « pays:senegal », « conseil:… »), puis la page de chaque pays cité qui a des recettes.
- * Jamais de page boutique ni de produit (pas de lien d'achat dans une actu).
+ * (« recette:mafe », « pays:senegal », « conseil:… »), puis la fiche produit et le Top 10 du sujet de l'actu
+ * (ex. une actu sur la vanille → fiche de la vanille bourbon), puis la page de chaque pays cité qui a des recettes.
+ * Liens internes seulement : jamais de lien Amazon ni de bouton d'achat dans une actu.
  */
 export async function getFichesLiees(article: ArticleActu): Promise<FicheLiee[]> {
   const recipes = await getRecipes();
@@ -71,6 +74,22 @@ export async function getFichesLiees(article: ArticleActu): Promise<FicheLiee[]>
     } else if (type === "conseil") {
       const c = getConseilBySlug(slug);
       if (c) ajouter({ href: `/conseils/${c.slug}`, label: `Lire le conseil : ${c.title}` });
+    }
+  }
+  // Sujet de l'actu : une fiche produit du catalogue actif et un Top 10 au plus.
+  const { products } = await getCatalog();
+  let fiche = false;
+  let top = false;
+  for (const sujet of sujetsDeLActu(article)) {
+    const produit = sujet.produit ? products.find((p) => p.slug === sujet.produit) : undefined;
+    if (produit && !fiche) {
+      fiche = true;
+      ajouter({ href: `/produit/${produit.slug}`, label: `Découvrir la fiche : ${produit.name}` });
+    }
+    const t = sujet.top ? getTop10BySlug(sujet.top) : produit ? topPourProduit(produit.slug) : null;
+    if (t && !top) {
+      top = true;
+      ajouter({ href: `/top-10/${t.slug}`, label: `Voir notre ${t.title.replace(/^Top 10/, "top 10")}` });
     }
   }
   for (const code of article.pays ?? []) {
