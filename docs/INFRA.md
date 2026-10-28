@@ -51,7 +51,7 @@ Mis à jour le 28 octobre 2026 (articles complets des actus ; 41 articles « Con
 - **Rôle** : hébergement du site sur Cloudflare Pages (projet `keurcook`, envoi direct depuis GitHub Actions avec `wrangler`). Sert aussi les en-têtes (`public/_headers`) et les redirections (`public/_redirects`).
 - **Robots** : `keurcook.pages.dev` et les fichiers `.txt` internes de Next.js sont en `noindex` ; depuis le 28 octobre 2026, `ads.txt`, `robots.txt` et la clé IndexNow n'ont plus cet en-tête.
 - **Plan du site** : la date (`lastmod`) des trois pages légales est celle du dernier commit de leur fichier (historique complet récupéré par `deploy.yml`, `fetch-depth: 0`), depuis le 28 octobre 2026.
-- **Cache des pages** : pas encore de règle de cache Cloudflare pour les pages HTML (réponse `cf-cache-status: DYNAMIC` au 28 octobre 2026). Réglage proposé, à faire par Jean dans le tableau de bord (modèle Keurbook) : Caching → Cache Rules → règle « Pages HTML en cache 10 min » pour les adresses de keurcook.com sans point, durée 10 minutes, jamais pour les codes 300 et plus.
+- **Cache des pages** : règle Cloudflare « Pages HTML en cache 10 min » active depuis le 28 octobre 2026 (Caching → Cache Rules) : adresses de keurcook.com sans point, durée 10 minutes en ignorant cache-control, jamais pour les codes 300 et plus (« Aucun magasin »). Vérifié : `cf-cache-status: HIT` au 2e passage. Une page republiée peut rester à l'ancienne version 10 minutes au plus.
 - **Console** : https://dash.cloudflare.com (Workers & Pages → keurcook).
 - **Identifiants publics** : https://keurcook.com, adresse technique https://keurcook.pages.dev.
 - **Secrets** : jeton API et identifiant de compte, uniquement dans les secrets GitHub (voir ci-dessus).
