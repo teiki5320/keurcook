@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Politique de confidentialité" path="/confidentialite" updated="12 octobre 2026">
+    <LegalPage title="Politique de confidentialité" path="/confidentialite" updated="28 octobre 2026">
       <p>
         {legalConfig.companyName} (« nous ») attache une grande importance à la protection de vos données personnelles,
         traitées conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
 
       <h2>Liens vers Amazon</h2>
       <p>
-        Les boutons « Acheter » ouvrent Amazon.fr avec notre identifiant de partenaire, qui permet à Amazon de nous
+        Les boutons « Voir sur Amazon » ouvrent Amazon.fr avec notre identifiant de partenaire, qui permet à Amazon de nous
         rémunérer sur les achats. Nous ne recevons aucune donnée personnelle de votre part à cette occasion. Sur Amazon,
         vos données et les cookies déposés relèvent de la politique de confidentialité d&apos;Amazon.
       </p>

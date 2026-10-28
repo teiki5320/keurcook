@@ -27,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const conseilsAt = getConseils().map((c) => `${c.date}T00:00:00Z`);
   const tops = getTop10s();
   // Même date que « Dernière mise à jour » affichée sur les trois pages légales.
-  const LEGAL_UPDATED = "2026-10-01T00:00:00Z";
+  const LEGAL_UPDATED = "2026-10-28T00:00:00Z";
   const pageUpdated: Record<string, Date> = {
     "": latest([...recipesAt, ...productsAt, ...conseilsAt]),
     "/recettes": latest(recipesAt),

@@ -20,7 +20,7 @@ Mis à jour le 28 octobre 2026. Compagnon de INFRA.md.
 
 Deux sources, sans rien vendre soi-même :
 
-- **Affiliation Amazon Partenaires** : les boutons « Acheter · prix » mènent à Amazon.fr (tag `keurcookfr-21`, `src/lib/amazon.ts`) ; Amazon encaisse, livre et verse une commission sur les achats.
+- **Affiliation Amazon Partenaires** : les boutons « Voir sur Amazon » mènent à Amazon.fr (tag `keurcookfr-21`, `src/lib/amazon.ts`) ; Amazon encaisse, livre et verse une commission sur les achats.
 - **Publicité Google AdSense** (en examen depuis le 12 octobre 2026 ; « En préparation » dans la console AdSense, ni validé ni refusé (vérifié le 28 octobre 2026)) : emplacements titrés « Publicité » prêts sur les recettes, les articles « Conseils », les articles d'actus (depuis le 28 octobre 2026) et les pages pays ; aucune annonce ne s'affiche tant que Google n'a pas validé le site ; consentement recueilli par le message de Google.
 
 Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affichés indicatifs, relevés le 27 septembre 2026.
@@ -61,5 +61,4 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 ## Les 3 priorités
 
 - Écrire de nouveaux articles « Conseils » : il en reste 26 en réserve, la réserve passe sous 20 vers le 13 novembre et se vide le 28 décembre 2026.
-- Relever à nouveau les prix indicatifs affichés : la date de relevé indiquée sur le site reste le 27 septembre 2026 et rien ne le refait automatiquement.
 - Faire indexer les 11 pages manquantes (7 inconnues de Google, 4 détectées non explorées au 27 octobre 2026) ; demander leur indexation dans Search Console.

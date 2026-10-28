@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata({
 export default function TermsPage() {
   const l = legalConfig;
   return (
-    <LegalPage title="Conditions générales d'utilisation" path="/conditions" updated="1er octobre 2026">
+    <LegalPage title="Conditions générales d'utilisation" path="/conditions" updated="28 octobre 2026">
       <h2>Article 1 — Objet</h2>
       <p>
         Les présentes conditions générales d&apos;utilisation (CGU) encadrent l&apos;accès au site {siteConfig.url}, édité
@@ -31,16 +31,15 @@ export default function TermsPage() {
 
       <h2>Article 3 — Le site ne vend aucun produit</h2>
       <p>
-        L&apos;Éditeur ne vend, n&apos;expédie ni ne facture aucun produit. Les boutons « Acheter » renvoient vers des fiches
+        L&apos;Éditeur ne vend, n&apos;expédie ni ne facture aucun produit. Les boutons « Voir sur Amazon » renvoient vers des fiches
         Amazon.fr : la vente est conclue entre l&apos;acheteur et Amazon ou le vendeur tiers indiqué sur Amazon, selon leurs
         propres conditions. La livraison, le droit de rétractation, les garanties, le service client et l&apos;étiquetage
         des produits relèvent de ce vendeur.
       </p>
       <p>
         Les descriptions des produits sur le site sont données à titre d&apos;information générale ; seules les
-        informations de la fiche Amazon et de l&apos;emballage (composition, allergènes, conservation) font foi. Les prix
-        affichés sur le site sont indicatifs et relevés à une date donnée : seul le prix indiqué sur Amazon au moment de
-        l&apos;achat fait foi.
+        informations de la fiche Amazon et de l&apos;emballage (composition, allergènes, conservation) font foi. Le site
+        n&apos;affiche aucun prix : le prix est celui indiqué sur Amazon au moment de l&apos;achat.
       </p>
       <p>{AMAZON_DISCLOSURE}</p>
 

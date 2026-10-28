@@ -103,7 +103,7 @@ export function CookieBanner() {
       <div className="mx-auto flex max-w-3xl flex-col gap-4 rounded-2xl border border-sage-300 bg-white p-5 shadow-xl sm:flex-row sm:items-center" style={{ fontFamily: "var(--font-manrope), sans-serif" }}>
         <p className="text-sm text-muted">
           <strong className="text-forest-800">Cookies</strong> — Ce site n&apos;utilise qu&apos;un stockage local pour vos
-          favoris et un cookie pour mémoriser ce message. Aucun cookie de mesure d&apos;audience ni publicitaire. Les boutons « Acheter » ouvrent
+          favoris et un cookie pour mémoriser ce message. Aucun cookie de mesure d&apos;audience ni publicitaire. Les boutons « Voir sur Amazon » ouvrent
           Amazon.fr, qui dépose ses propres cookies.{" "}
           <Link href="/confidentialite#cookies" className="underline">En savoir plus</Link>
         </p>

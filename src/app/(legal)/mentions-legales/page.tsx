@@ -15,7 +15,7 @@ export default function LegalNoticePage() {
   const l = legalConfig;
   const contact = <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>;
   return (
-    <LegalPage title="Mentions légales" path="/mentions-legales" updated="12 octobre 2026">
+    <LegalPage title="Mentions légales" path="/mentions-legales" updated="28 octobre 2026">
       <p>
         Informations sur l&apos;éditeur et l&apos;hébergeur du site, l&apos;usage de vos données et les limites des
         informations publiées (loi n° 2004-575 du 21 juin 2004 pour la confiance dans l&apos;économie numérique).
@@ -69,12 +69,12 @@ export default function LegalNoticePage() {
 
       <h2>Liens sponsorisés (Amazon)</h2>
       <p>
-        Les boutons « Acheter » des recettes, des fiches produits et des conseils sont des liens d&apos;affiliation du
+        Les boutons « Voir sur Amazon » des recettes, des fiches produits et des conseils sont des liens d&apos;affiliation du
         programme Partenaires d&apos;Amazon.fr. {AMAZON_DISCLOSURE} Le prix payé est le même pour l&apos;acheteur.
       </p>
       <p>
         Le site ne vend aucun produit : la vente, la livraison et le service client relèvent d&apos;Amazon ou du vendeur
-        tiers. Les prix affichés sont indicatifs : seul le prix indiqué sur Amazon au moment de l&apos;achat fait foi.
+        tiers. Le site n&apos;affiche aucun prix : le prix est celui indiqué sur Amazon au moment de l&apos;achat.
         L&apos;étiquetage qui fait foi (ingrédients, allergènes, conservation) est celui du vendeur et de
         l&apos;emballage.
       </p>
@@ -87,7 +87,7 @@ export default function LegalNoticePage() {
       <p>
         Des annonces fournies par Google AdSense peuvent s&apos;afficher sur les recettes, les conseils et les pages des
         pays. Elles sont toujours signalées par la mention « Publicité » et ne sont pas choisies par l&apos;éditeur : leur
-        présence ne vaut pas recommandation. Elles sont distinctes des boutons « Acheter », qui mènent aux produits
+        présence ne vaut pas recommandation. Elles sont distinctes des boutons « Voir sur Amazon », qui mènent aux produits
         sélectionnés sur Amazon.
       </p>
 
@@ -107,7 +107,7 @@ export default function LegalNoticePage() {
       <h2>Limites de responsabilité</h2>
       <p>
         Les recettes et conseils sont donnés à titre indicatif, sans aucune allégation de santé. Les informations sur
-        les produits (composition, formats, prix) sont vérifiées avec soin mais peuvent évoluer : seules font foi les
+        les produits (composition, formats) sont vérifiées avec soin mais peuvent évoluer : seules font foi les
         informations affichées sur Amazon au moment de l&apos;achat. N&apos;hésitez pas à nous signaler une erreur à{" "}
         {contact}.
       </p>

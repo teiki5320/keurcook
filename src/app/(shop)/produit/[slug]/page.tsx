@@ -3,8 +3,7 @@ import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
-import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
-import { AMAZON_PRICES_CHECKED_ON } from "@/lib/amazon";
+import { AmazonButton } from "@/components/product/AmazonButton";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { BOOK_ILLUSTRATION_NOTE, isBook, NORTH_AFRICAN_SLUGS } from "@/lib/catalog-utils";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
@@ -86,8 +85,8 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
             {product.amazonAsin && product.variants[0] && (
               <>
                 <p className="text-sm text-muted">{product.variants[0].label}</p>
-                <AmazonBuyButton asin={product.amazonAsin} priceCents={product.variants[0].priceCents} name={product.name} className="btn-primary mt-3 h-12 w-full px-8 text-base sm:w-auto" />
-                <p className="mt-2 text-xs text-muted">Lien partenaire Amazon. Prix indicatif relevé le {AMAZON_PRICES_CHECKED_ON} : seul le prix affiché sur Amazon au moment de l&apos;achat fait foi.</p>
+                <AmazonButton asin={product.amazonAsin} name={product.name} className="btn-primary mt-3 h-12 w-full px-8 text-base sm:w-auto" />
+                <p className="mt-2 text-xs text-muted">Lien partenaire Amazon. Prix, disponibilité et vendeur sont indiqués sur Amazon.</p>
               </>
             )}
           </div>

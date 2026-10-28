@@ -9,11 +9,9 @@ import { RecipeActions } from "@/components/recipe/RecipeActions";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { RecipeIngredients, type LinkedProduct } from "@/components/recipe/RecipeIngredients";
 import { VarietyCard } from "@/components/shop/VarietyCard";
-import { minPriceCents } from "@/lib/catalog-utils";
 import { AD_SLOTS } from "@/lib/ads";
 import { siteConfig } from "@/lib/config";
 import { breadcrumbLd, jsonLd } from "@/lib/json-ld";
-import { formatPrice } from "@/lib/format";
 import { countryByCode } from "@/lib/countries";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipeBySlug, getRecipes, getRelatedRecipes } from "@/lib/data/recipes";
@@ -61,7 +59,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
   const used = products.filter((p) => recipe.ingredients.some((i) => i.productSlug === p.slug) || recipe.equipment?.includes(p.slug));
   const linked: Record<string, LinkedProduct> = {};
   for (const p of used) {
-    if (p.amazonAsin && p.variants[0]) linked[p.slug] = { slug: p.slug, name: p.name, priceCents: p.variants[0].priceCents, amazonAsin: p.amazonAsin };
+    if (p.amazonAsin && p.variants[0]) linked[p.slug] = { slug: p.slug, name: p.name, amazonAsin: p.amazonAsin };
   }
 
   const url = `${siteConfig.url}/recette/${recipe.slug}`;
@@ -299,7 +297,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
           <h2 id="produits-recette" className="font-display text-3xl">
             {recipe.equipment?.length ? "Produits et ustensiles de cette recette" : "Les produits rares de cette recette"}<span className="text-[#ff7a3d]">.</span>
           </h2>
-          <p className="mt-1 text-sm text-muted">À partir de {formatPrice(Math.min(...used.map(minPriceCents)))} sur Amazon (prix indicatifs).</p>
+          <p className="mt-1 text-sm text-muted">Liens partenaires Amazon : prix et disponibilité sont indiqués sur Amazon.</p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
             {used.map((p) => (
               <VarietyCard key={p.id} product={p} />

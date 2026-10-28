@@ -9,7 +9,7 @@ export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME || "Keur Cook",
   tagline: "Recettes africaines & produits rares",
   description:
-    "Recettes africaines pas à pas (ndolé, mafé, thiéboudienne, yassa…), conseils de cuisine et produits africains rares à acheter sur Amazon.",
+    "Recettes africaines pas à pas (ndolé, mafé, thiéboudienne, yassa…), conseils de cuisine et produits africains rares à retrouver sur Amazon.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://keurcook.com").replace(/\/$/, ""),
   locale: "fr_FR",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "keurcook@toakeur.com",

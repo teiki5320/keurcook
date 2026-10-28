@@ -1,6 +1,6 @@
 # Keur Cook — recettes africaines & produits rares
 
-Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 127 produits africains rares** en 9 gammes des pages **Top 10** (10 classements de produits) et des **Actus de la cuisine africaine** lues en direct depuis la veille actus. Le site ne vend rien lui-même : les boutons « Acheter · prix » mènent à Amazon.fr (programme Partenaires).
+Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 127 produits africains rares** en 9 gammes des pages **Top 10** (10 classements de produits) et des **Actus de la cuisine africaine** lues en direct depuis la veille actus. Le site ne vend rien lui-même : les boutons « Voir sur Amazon » mènent à Amazon.fr (programme Partenaires).
 
 - **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
 - **Éditeur** : ALOHASH (SAS). Contact : keurcook@toakeur.com.
@@ -21,7 +21,7 @@ Le site est **100 % statique** : pas de serveur, pas de base de données. Recett
 - **Conseils** : articles Markdown (`content/conseils/`), trois articles par semaine (lundi, mercredi, vendredi), publication programmée (voir `docs/CONSEILS.md`).
 - **Top 10** (`/top-10/<sujet>`) : 10 classements de dix produits de la boutique (voir « Top 10 » ci-dessous).
 - **Actus de la cuisine africaine** (`/actus`, 20 actus ; 4 sur l'accueil, 3 par page pays) : lues dans le navigateur depuis `https://teiki5320.github.io/veille/actus/keurcook.json` (`src/lib/veille.ts`, `src/components/actus/`), préparées 2 fois par jour (12 h et 19 h) par la veille actus (dépôt `teiki5320/veille`) ; rien ne s'affiche s'il n'y a pas d'actu. Depuis le 28 octobre 2026, toute la carte d'une actu ouvre son **article complet** (300 à 450 mots) sur le site : page `/actus/<adresse>` construite au build (`scripts/articles-veille.ts` télécharge tous les articles de l'index `articles/keurcook/index.json`, jamais supprimés, dans `.veille/articles.json`, `src/app/(shop)/actus/[slug]/`), sinon page de secours `/actus/article?id=…` lue dans le navigateur (noindex, hors sitemap), sinon la source quand l'article n'est pas encore rédigé. Veille injoignable au build : 0 page article, le build continue.
-- Boutique par gammes, fiche produit avec « Utilisé dans ces recettes », bouton « Acheter · prix » vers Amazon.fr.
+- Boutique par gammes, fiche produit avec « Utilisé dans ces recettes », bouton « Voir sur Amazon » vers Amazon.fr.
 - **Mode maintenance** : écran « On prépare la marmite », activé ou coupé depuis GitHub (voir « Maintenance » ci-dessous).
 
 Recettes et produits se modifient dans le code (`src/lib/demo/`), articles dans `content/conseils/` ; chaque modification envoyée sur `main` republie le site.
@@ -162,7 +162,7 @@ src/
   components/          UI (recipe/, conseils/, nuage/ = thème, carte et carrousels, product/, shop/, layout/, compliance/)
   lib/data/            accès aux données (recettes, catalogue, gammes, conseils, réglages de maintenance)
   lib/demo/            recettes, produits et Top 10
-  lib/amazon.ts        liens « Acheter » vers Amazon.fr (tag partenaire)
+  lib/amazon.ts        liens « Voir sur Amazon » vers Amazon.fr (tag partenaire)
   lib/conseils/        lecture des articles et thèmes
   lib/countries.ts     pays (nom, « de … », position sur la carte)
   lib/recipe-utils.ts  types de plats, durées, quantités, recherche

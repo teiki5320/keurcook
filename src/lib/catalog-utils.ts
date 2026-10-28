@@ -2,14 +2,14 @@
  * Fonctions pures de recherche / tri du catalogue.
  * Utilisables côté serveur comme côté navigateur (export statique).
  */
-import type { Product, ProductWithCategory } from "./types";
+import type { ProductWithCategory } from "./types";
 
-export type SortKey = "featured" | "price-asc" | "price-desc";
+export type SortKey = "featured" | "name";
 
 export const SORT_OPTIONS: { value: SortKey; label: string }[] = [
   { value: "featured", label: "Mis en avant" },
-  { value: "price-asc", label: "Prix croissant" },
-  { value: "price-desc", label: "Prix décroissant" },
+  // Pas de tri par prix : le site n'affiche aucun prix (seul celui d'Amazon fait foi).
+  { value: "name", label: "Ordre alphabétique" },
 ];
 
 export interface CatalogFilters {
@@ -20,7 +20,6 @@ export interface CatalogFilters {
 const normalize = (s: string) =>
   s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
-export const minPriceCents = (p: Product) => Math.min(...p.variants.map((v) => v.priceCents));
 
 export function filterProducts(products: ProductWithCategory[], f: CatalogFilters) {
   const terms = f.q ? normalize(f.q).split(/\s+/).filter(Boolean) : [];
@@ -38,8 +37,7 @@ export function filterProducts(products: ProductWithCategory[], f: CatalogFilter
   // Tri stable : à égalité, l'ordre d'origine (catégorie puis catalogue) est conservé.
   const sorters: Record<SortKey, (a: ProductWithCategory, b: ProductWithCategory) => number> = {
     featured: (a, b) => Number(b.featured) - Number(a.featured),
-    "price-asc": (a, b) => minPriceCents(a) - minPriceCents(b),
-    "price-desc": (a, b) => minPriceCents(b) - minPriceCents(a),
+    name: (a, b) => a.name.localeCompare(b.name, "fr"),
   };
   return result.sort(sorters[f.sort ?? "featured"]);
 }

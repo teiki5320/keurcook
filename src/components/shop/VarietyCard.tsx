@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { Heart, MapPin } from "lucide-react";
-import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
+import { AmazonButton } from "@/components/product/AmazonButton";
 import { ProductImage } from "@/components/product/ProductImage";
-import { formatPrice } from "@/lib/format";
 import type { ProductWithCategory } from "@/lib/types";
 
-/** Carte produit : photo, origine, format, prix indicatif et bouton « Acheter » (Amazon). */
+/** Carte produit : photo, origine, format et bouton « Voir sur Amazon ». */
 export function VarietyCard({ product, priority }: { product: ProductWithCategory; priority?: boolean }) {
   const variant = product.variants[0];
   if (!variant) return null;
@@ -43,11 +42,10 @@ export function VarietyCard({ product, priority }: { product: ProductWithCategor
 
 
         <p className="mt-auto pt-1">
-          <span className="text-base font-bold text-forest-800">{formatPrice(variant.priceCents)}</span>
-          <span className="ml-1.5 text-xs text-muted">{variant.label} · prix indicatif</span>
+          <span className="text-xs text-muted">{variant.label}</span>
         </p>
         {product.amazonAsin && (
-          <AmazonBuyButton asin={product.amazonAsin} priceCents={variant.priceCents} name={product.name} className="btn-primary mt-1 w-full py-2.5" />
+          <AmazonButton asin={product.amazonAsin} name={product.name} className="btn-primary mt-1 w-full py-2.5" />
         )}
       </div>
     </article>

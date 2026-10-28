@@ -8,9 +8,9 @@ import { siteConfig } from "@/lib/config";
 import { breadcrumbLd, itemListLd, JsonLdScript } from "@/lib/json-ld";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Produits africains à acheter sur Amazon",
+  title: "Produits africains rares, à retrouver sur Amazon",
   description:
-    "Épices, céréales, feuilles séchées, huiles, cafés, thés et ustensiles : une sélection de produits africains disponibles sur Amazon pour réussir nos recettes.",
+    "Épices, céréales, feuilles séchées, huiles, cafés, thés et ustensiles : une sélection de produits africains à retrouver sur Amazon pour réussir nos recettes.",
   path: "/boutique",
 });
 

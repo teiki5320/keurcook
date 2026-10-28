@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
+import { AmazonButton } from "@/components/product/AmazonButton";
 import { TLink } from "@/components/nuage/PageTransition";
 import { ingredientLine } from "@/lib/recipe-utils";
 import type { RecipeIngredient } from "@/lib/types";
@@ -11,7 +11,6 @@ import type { RecipeIngredient } from "@/lib/types";
 export interface LinkedProduct {
   slug: string;
   name: string;
-  priceCents: number;
   amazonAsin: string;
 }
 
@@ -64,9 +63,8 @@ export function RecipeIngredients({
                   <TLink href={`/produit/${product.slug}`} label={product.name} aria-label={`Produit rare : ${product.name}`} className="rounded-full bg-[#ff7a3d]/15 px-2.5 py-1 text-[11px] font-bold text-[#ffc46b] hover:bg-[#ff7a3d]/25">
                     Produit rare
                   </TLink>
-                  <AmazonBuyButton
+                  <AmazonButton
                     asin={product.amazonAsin}
-                    priceCents={product.priceCents}
                     name={product.name}
                     icon
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ff7a3d] text-[#140a07] hover:bg-[#ffc46b]"
