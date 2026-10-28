@@ -1,6 +1,6 @@
 # MARKETING — plan marketing & rémunération
 
-Mis à jour le 27 octobre 2026. Compagnon de INFRA.md.
+Mis à jour le 28 octobre 2026. Compagnon de INFRA.md.
 
 ## Positionnement
 
@@ -8,7 +8,7 @@ Mis à jour le 27 octobre 2026. Compagnon de INFRA.md.
 - **Promesse** : « Recettes africaines & produits rares » (`src/lib/config.ts`). Les grands plats d'Afrique expliqués pas à pas, et les ingrédients introuvables en grande surface pour les réussir chez soi.
 - **Contenu** :
   - 58 recettes de 16 pays (Afrique de l'Ouest, centrale, de l'Est, australe et Madagascar), dont six thés, cafés et infusions (ataya, kinkeliba, chai kényan, rooibos glacé, buna, kahawa chungu) depuis le 19 octobre 2026, avec histoire du plat, ingrédients, étapes, astuces et valeurs nutritionnelles estimées ; une section « La cuisine de … » sur chaque page pays ;
-  - rubrique « Conseils » : 67 articles, dont 40 publiés et 27 programmés, trois par semaine (lundi, mercredi, vendredi) jusqu'au 28 décembre 2026 (`content/conseils/`, `docs/CONSEILS.md`, `docs/CONSEILS-CALENDRIER.md`) ;
+  - rubrique « Conseils » : 67 articles, dont 41 publiés et 26 programmés, trois par semaine (lundi, mercredi, vendredi) jusqu'au 28 décembre 2026 (`content/conseils/`, `docs/CONSEILS.md`, `docs/CONSEILS-CALENDRIER.md`) ;
   - boutique de 127 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles (dont mortiers, marmites, mixeurs et objets de service), Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon ;
   - « Actus de la cuisine africaine » (depuis le 27 octobre 2026) : page `/actus` (20 actus), bloc de 4 actus sur l'accueil et 3 actus du pays sur chaque page pays, mis à jour 2 fois par jour (12 h et 19 h) par la veille actus ; chaque actu est résumée par nous, avec le lien vers sa source et le crédit de l'image ; depuis le 28 octobre 2026, toucher une actu ouvre son article complet (300 à 450 mots) sur sa propre page du site (`/actus/<adresse>`, trouvable par Google) ; jamais d'actu santé ni de vocabulaire de vente ;
   - « Top 10 » (depuis le 19 octobre 2026) : 10 classements de produits (ustensiles, ingrédients pour débuter, mortiers, marmites, mixeurs, épices, farines, livres, thés et cafés, service et thé), selon la note moyenne des acheteurs sur Amazon.fr, chacun relié aux recettes concernées.
@@ -21,7 +21,7 @@ Mis à jour le 27 octobre 2026. Compagnon de INFRA.md.
 Deux sources, sans rien vendre soi-même :
 
 - **Affiliation Amazon Partenaires** : les boutons « Acheter · prix » mènent à Amazon.fr (tag `keurcookfr-21`, `src/lib/amazon.ts`) ; Amazon encaisse, livre et verse une commission sur les achats.
-- **Publicité Google AdSense** (en examen depuis le 12 octobre 2026 ; « En préparation » dans la console AdSense, ni validé ni refusé (vérifié le 27 octobre 2026)) : emplacements titrés « Publicité » prêts sur les recettes, les articles « Conseils », les articles d'actus (depuis le 28 octobre 2026) et les pages pays ; aucune annonce ne s'affiche tant que Google n'a pas validé le site ; consentement recueilli par le message de Google.
+- **Publicité Google AdSense** (en examen depuis le 12 octobre 2026 ; « En préparation » dans la console AdSense, ni validé ni refusé (vérifié le 28 octobre 2026)) : emplacements titrés « Publicité » prêts sur les recettes, les articles « Conseils », les articles d'actus (depuis le 28 octobre 2026) et les pages pays ; aucune annonce ne s'affiche tant que Google n'a pas validé le site ; consentement recueilli par le message de Google.
 
 Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affichés indicatifs, relevés le 27 septembre 2026.
 
@@ -37,7 +37,6 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 - 🌍 **Seize pays, une seule table** : 58 recettes de 16 pays, avec l'histoire du plat, les étapes et les valeurs nutritionnelles.
 - 🛒 **De la recette au produit** : chaque ingrédient rare est signalé dans la recette et s'achète en un clic sur Amazon.fr.
 - 📰 **Des actus fraîches** : l'actualité de la cuisine africaine (plats, chefs, produits, festivals) deux fois par jour, en articles complets à lire sur le site, avec la source de chaque actu.
-- 📝 **Un contenu qui paraît seul** : trois articles « Conseils » par semaine, publiés automatiquement par GitHub Actions.
 
 ## Canaux
 
@@ -61,6 +60,6 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Prix affic
 
 ## Les 3 priorités
 
-- Écrire de nouveaux articles « Conseils » : il en reste 27 en réserve, la réserve passe sous 20 vers le 13 novembre et se vide le 28 décembre 2026.
+- Écrire de nouveaux articles « Conseils » : il en reste 26 en réserve, la réserve passe sous 20 vers le 13 novembre et se vide le 28 décembre 2026.
 - Relever à nouveau les prix indicatifs affichés : la date de relevé indiquée sur le site reste le 27 septembre 2026 et rien ne le refait automatiquement.
 - Faire indexer les 11 pages manquantes (7 inconnues de Google, 4 détectées non explorées au 27 octobre 2026) ; demander leur indexation dans Search Console.
