@@ -1,10 +1,14 @@
 # Signale les pages du site à Bing (et aux autres moteurs IndexNow : Yandex, Seznam…).
-# Chaque lundi, après la publication programmée de la nuit, et à la demande (onglet Actions →
-# « Signaler les pages (IndexNow) » → Run workflow). Pas à chaque commit : inutile de
-# signaler plusieurs fois par jour les mêmes pages.
+# Après chaque publication réussie de main, chaque lundi après la publication programmée de la nuit,
+# et à la demande (onglet Actions → « Signaler les pages (IndexNow) » → Run workflow).
 name: Signaler les pages (IndexNow)
 
 on:
+  # Après chaque publication réussie de main (« Publier le site »), en plus du lundi et du bouton.
+  workflow_run:
+    workflows: ["Publier le site"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   # Lundi 3 h 00 UTC (5 h à Paris en été, 4 h en hiver), après la publication de 0 h 15.
   schedule:
@@ -13,9 +17,17 @@ on:
 permissions:
   contents: read
 
+# Un seul envoi à la fois (plusieurs publications rapprochées).
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
 jobs:
   signaler:
+    # Après une publication : seulement si elle a réussi.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Récupérer le code
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5

@@ -118,7 +118,7 @@ Pendant la maintenance : écran « On prépare la marmite », pages en `noindex`
 
 ### Signaler les pages à Bing (IndexNow)
 
-Chaque lundi à 3 h UTC, après la publication de la nuit, le workflow `.github/workflows/indexnow.yml` (« Signaler les pages (IndexNow) ») lit le sitemap publié et envoie toutes ses adresses à IndexNow, qui les transmet à Bing, Yandex, Seznam… Pour le relancer à la main : onglet **Actions → Signaler les pages (IndexNow) → Run workflow**, ou en local `node scripts/indexnow.mjs`. La clé IndexNow (publique par conception) est écrite dans `scripts/indexnow.mjs` et servie à la racine du site (`public/<clé>.txt`). L'état de l'indexation se suit dans Bing Webmaster Tools.
+Après chaque publication réussie de main (depuis le 28 octobre 2026), chaque lundi à 3 h UTC et à la main, le workflow `.github/workflows/indexnow.yml` (« Signaler les pages (IndexNow) ») lit le sitemap publié et envoie toutes ses adresses à IndexNow, qui les transmet à Bing, Yandex, Seznam… Pour le relancer à la main : onglet **Actions → Signaler les pages (IndexNow) → Run workflow**, ou en local `node scripts/indexnow.mjs`. La clé IndexNow (publique par conception) est écrite dans `scripts/indexnow.mjs` et servie à la racine du site (`public/<clé>.txt`). L'état de l'indexation se suit dans Bing Webmaster Tools.
 
 ### En-têtes et redirections
 
@@ -142,7 +142,7 @@ Servis par Cloudflare Pages :
 
 **Avant chaque envoi** : `npm run lint`, `npm run typecheck`, `npm test`, `npm run test:sortie` (build compris).
 
-**Vitesse** (depuis le 28 octobre 2026) : 2 polices servies par le site (`next/font`, `display: swap`) : Anton en une seule graisse pour les titres et Manrope variable (un seul fichier) pour le texte ; Inter et Fraunces, qui n'étaient plus visibles, ont été retirées. Les très grosses listes (`/recettes`, `/boutique`, `/favoris`, `/conseils`) et les liens du menu et du pied de page ne sont pas préchargés (`prefetch={false}`, `src/lib/liens.ts`). Le CSS écrit dans la page (`experimental.inlineCss`) a été essayé puis écarté : pages et navigation bien plus lourdes pour un gain d'affichage faible.
+**Vitesse** (depuis le 28 octobre 2026) : 2 polices servies par le site (`next/font`, `display: swap`) : Anton en une seule graisse pour les titres et Manrope variable (un seul fichier) pour le texte ; Inter et Fraunces, qui n'étaient plus visibles, ont été retirées. Les très grosses listes (`/recettes`, `/boutique`, `/favoris`, `/conseils`) et les liens du menu et du pied de page ne sont pas préchargés (`prefetch={false}`, `src/lib/liens.ts`). Titres de page limités à 60 caractères : `seoTitle` court sur les fiches concernées, coupe propre en fin de mot en dernier recours (`couperTexte`, `src/lib/metadata.ts`), contrôlé par `tests/sortie/`. Le CSS écrit dans la page (`experimental.inlineCss`) a été essayé puis écarté : pages et navigation bien plus lourdes pour un gain d'affichage faible.
 
 ## Structure
 
@@ -150,7 +150,7 @@ Servis par Cloudflare Pages :
 .github/workflows/
   deploy.yml           publication sur Cloudflare Pages (push, lundi/mercredi/vendredi, 2 fois par jour après la veille, à la main, après maintenance)
   maintenance.yml      bouton « Maintenance » (modifie content/maintenance.json et republie)
-  indexnow.yml         signale les pages à Bing via IndexNow (lundi 3 h UTC et à la main)
+  indexnow.yml         signale les pages à Bing via IndexNow (après chaque publication réussie, lundi 3 h UTC et à la main)
 content/
   conseils/            articles « Conseils » en Markdown (date de publication dans l'en-tête)
   maintenance.json     mode maintenance (activé ou non, message affiché)

@@ -1118,6 +1118,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "mortier-granit-socle-acacia",
+    seoTitle: "Mortier et pilon en granit, socle en acacia",
     name: "Mortier et pilon en granit sur socle en acacia 15,5 cm (ECENCE)",
     category: "ustensiles",
     shortDescription: "Un mortier en granit foncé posé sur un socle en bois d'acacia, avec un pilon extra-long.",
@@ -1179,6 +1180,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "petit-mortier-hetre",
+    seoTitle: "Petit mortier et pilon en bois de hêtre 10,5 cm",
     name: "Petit mortier et pilon en bois de hêtre 10,5 cm (Wooden World)",
     category: "ustensiles",
     shortDescription: "Un petit mortier léger en bois de hêtre de 10,5 cm, pour moudre les épices entières juste avant usage.",
@@ -1209,6 +1211,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "faitout-fonte-aluminium-36-cm",
+    seoTitle: "Marmite faitout en fonte d'aluminium 36 cm, 13 L",
     name: "Grande marmite faitout en fonte d'aluminium 36 cm, 13 L (Kamberg)",
     category: "ustensiles",
     shortDescription: "Un très grand faitout de 36 cm en fonte d'aluminium à revêtement type pierre, pour les mijotés en grande quantité.",
@@ -1361,6 +1364,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "livre-plats-express-saveurs-d-afrique",
+    seoTitle: "Plats express aux saveurs d'Afrique, de Cheikh Niang",
     name: "Plats express aux saveurs d'Afrique (Cheikh Niang, @niangcook)",
     category: "livres",
     shortDescription: "60 recettes en 30 minutes maximum, entre goûts d'Afrique et saveurs du monde, par le cuisinier @niangcook.",
@@ -1557,6 +1561,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "robot-moulinex-easy-force",
+    seoTitle: "Robot multifonction Moulinex Easy Force 800 W",
     name: "Robot multifonction compact Easy Force 800 W, bol 3 L (Moulinex)",
     category: "ustensiles",
     shortDescription: "Un robot de cuisine compact de 800 W avec bol de 3 litres et accessoires pour trancher, râper, hacher et pétrir.",
@@ -1587,6 +1592,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "hachoir-moulinex-choppeo",
+    seoTitle: "Hachoir électrique Moulinex Choppeo 500 W",
     name: "Hachoir électrique Choppeo 500 W, bol en verre 1 L (Moulinex)",
     category: "ustensiles",
     shortDescription: "Un hachoir de 500 W au bol en verre (1 litre utile), pour hacher oignons, ail, piment et herbes.",
@@ -1632,6 +1638,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "plateau-acacia-amazon-basics",
+    seoTitle: "Plateau de service en bois d'acacia 43 × 30 cm",
     name: "Plateau de service en bois d'acacia 43 × 30 cm (Amazon Basics)",
     category: "ustensiles",
     shortDescription: "Un plateau en acacia à poignées intégrées, pour porter le thé, les beignets ou les petits plats à table.",
@@ -1677,6 +1684,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "bols-noix-de-coco-lot-de-2",
+    seoTitle: "Bols en noix de coco avec cuillères, lot de 2",
     name: "Lot de 2 bols en noix de coco avec cuillères (Jungle Culture)",
     category: "ustensiles",
     shortDescription: "Deux bols taillés dans des coquilles de noix de coco, avec cuillères, pour les fruits et les desserts.",

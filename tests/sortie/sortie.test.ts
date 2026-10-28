@@ -21,6 +21,12 @@ function htmlFiles(dir: string): string[] {
 }
 
 const lire = (fichier: string) => readFileSync(join(out, fichier), "utf8");
+const decoder = (s: string) =>
+  s
+    .replace(/&#x([0-9a-f]+);/gi, (_, h: string) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d: string) => String.fromCodePoint(Number(d)))
+    .replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+
 describe("Site construit", () => {
   it("le dossier out/ existe", () => assert.ok(existsSync(join(out, "index.html")), "lancer npm run test:sortie"));
 
@@ -50,6 +56,17 @@ describe("Site construit", () => {
       if (!html.includes(`<link rel="canonical" href="${url}"`)) erreurs.push(`${chemin} : adresse canonique différente`);
     }
     assert.deepEqual(erreurs.slice(0, 20), []);
+  });
+
+  it("chaque page a un titre de 60 caractères au plus", () => {
+    const longs: string[] = [];
+    for (const file of htmlFiles(out)) {
+      const brut = readFileSync(file, "utf8").match(/<title>([^<]*)<\/title>/)?.[1];
+      if (brut === undefined) continue;
+      const titre = decoder(brut);
+      if ([...titre].length > 60) longs.push(`${file.replace(out, "")} (${[...titre].length}) : ${titre}`);
+    }
+    assert.deepEqual(longs, []);
   });
 
   it("les liens Amazon s'ouvrent dans un nouvel onglet, signalés « sponsored nofollow noopener »", () => {

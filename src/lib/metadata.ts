@@ -15,6 +15,20 @@ function shareImage(image: string, alt: string) {
   return m ? { url: `/og/${m[1]}/${m[2]}.jpg`, width: 1200, height: 630, alt } : { url: image, alt };
 }
 
+/** Longueur maximale d'un titre de page (au-delà, Google le coupe). */
+export const TITRE_MAX = 60;
+
+/**
+ * Coupe un texte trop long en fin de mot, avec « … » (filet de sécurité : les titres trop longs
+ * ont normalement un seoTitle court écrit à la main). Modèle : keurkado/src/lib/metadata.ts.
+ */
+export function couperTexte(texte: string, max: number): string {
+  if (texte.length <= max) return texte;
+  const coupe = texte.slice(0, max - 1);
+  const espace = coupe.lastIndexOf(" ");
+  return `${(espace > max / 2 ? coupe.slice(0, espace) : coupe).replace(/[\s,;:.!?«»–—-]+$/, "")}…`;
+}
+
 interface PageMetadataInput {
   title: string;
   description: string;
@@ -37,11 +51,11 @@ interface PageMetadataInput {
 export function pageMetadata({ title, description, path, image, imageAlt, type = "website", publishedTime, noindex, absoluteTitle }: PageMetadataInput): Metadata {
   // Titre complet limité à 60 caractères (au-delà, Google le coupe) : sans le suffixe s'il est trop long.
   const suffixed = `${title} | ${siteConfig.name}`;
-  const absolute = absoluteTitle || suffixed.length > 60;
-  const fullTitle = absolute ? title : suffixed;
+  const absolute = absoluteTitle || suffixed.length > TITRE_MAX;
+  const fullTitle = absolute ? couperTexte(title, TITRE_MAX) : suffixed;
   const images = image ? [shareImage(image, imageAlt ?? title)] : [DEFAULT_SHARE_IMAGE];
   return {
-    title: absolute ? { absolute: title } : title,
+    title: absolute ? { absolute: fullTitle } : title,
     description,
     alternates: { canonical: path },
     openGraph: {
