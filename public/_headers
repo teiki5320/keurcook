@@ -24,5 +24,15 @@ https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex
 
 # Fichiers .txt créés par Next.js pour chaque page (navigation interne) : utiles au navigateur, pas à Google.
+# Les .txt publics n'ont pas cet en-tête (règles « ! » ci-dessous) : ads.txt (AdSense), robots.txt et la clé IndexNow.
 /*.txt
   X-Robots-Tag: noindex
+
+/ads.txt
+  ! X-Robots-Tag
+
+/robots.txt
+  ! X-Robots-Tag
+
+/1966e925dc52073a412c1203dc2860be.txt
+  ! X-Robots-Tag

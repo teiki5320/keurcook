@@ -123,6 +123,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
                 key={item.href}
                 href={item.href}
                 label={item.label}
+                prefetch={false}
                 aria-current={active ? "page" : undefined}
                 className="rounded-full px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition"
                 style={active ? { background: "#fbeee2", color: "#140a07" } : { color: "#fbeee2" }}
@@ -190,6 +191,7 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
                   <TLink
                     href={item.href}
                     label={item.label}
+                    prefetch={false}
                     aria-current={isActive(item.href) ? "page" : undefined}
                     className={`block py-4 text-3xl uppercase ${isActive(item.href) ? "text-[#ff7a3d]" : "text-[#fbeee2]"}`}
                     style={anton}

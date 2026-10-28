@@ -103,7 +103,7 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
     <article className="container-page pb-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted">
-        <Link href="/" className="hover:underline">Accueil</Link> / <Link href="/conseils" className="hover:underline">Conseils</Link> /{" "}
+        <Link href="/" className="hover:underline">Accueil</Link> / <Link prefetch={false} href="/conseils" className="hover:underline">Conseils</Link> /{" "}
         <span className="text-ink">{conseil.title}</span>
       </nav>
 

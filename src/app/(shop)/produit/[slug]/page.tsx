@@ -66,7 +66,7 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
       <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-muted">
         <Link href="/" className="hover:underline">Accueil</Link> /{" "}
-        <Link href={`/boutique?gamme=${product.category.slug}`} className="hover:underline">{product.category.name}</Link> /{" "}
+        <Link prefetch={false} href={`/boutique?gamme=${product.category.slug}`} className="hover:underline">{product.category.name}</Link> /{" "}
         <span className="text-ink">{product.name}</span>
       </nav>
 

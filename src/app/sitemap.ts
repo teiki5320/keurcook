@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import type { MetadataRoute } from "next";
 import { COUNTRIES } from "@/lib/countries";
 import { getArticles } from "@/lib/data/articles";
@@ -11,6 +12,20 @@ import { NORTH_AFRICAN_SLUGS } from "@/lib/catalog-utils";
 import { estActuMaghreb } from "@/lib/veille-articles";
 
 export const dynamic = "force-static";
+
+/**
+ * Date du dernier commit d'un fichier (historique git complet : fetch-depth: 0 dans deploy.yml).
+ * À défaut (git absent ou fichier jamais commité), le jour du build.
+ */
+function dateGit(fichier: string): Date {
+  try {
+    const iso = execFileSync("git", ["log", "-1", "--format=%cI", "--", fichier], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+    if (iso) return new Date(iso);
+  } catch {
+    // pas de git : date du build
+  }
+  return new Date();
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Site en maintenance : rien à indexer.
@@ -26,8 +41,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const productsAt = products.map((p) => p.createdAt);
   const conseilsAt = getConseils().map((c) => `${c.date}T00:00:00Z`);
   const tops = getTop10s();
-  // Même date que « Dernière mise à jour » affichée sur les trois pages légales.
-  const LEGAL_UPDATED = "2026-10-28T00:00:00Z";
+  // Pages légales : date du dernier commit de leur fichier (rien à recopier à la main ; voir dateGit).
+  const legal = (page: string) => dateGit(`src/app/(legal)/${page}/page.tsx`);
   const pageUpdated: Record<string, Date> = {
     "": latest([...recipesAt, ...productsAt, ...conseilsAt]),
     "/recettes": latest(recipesAt),
@@ -36,9 +51,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/conseils": latest(conseilsAt),
     // Actus lues en direct depuis la veille (2 passages par jour) : la page change chaque jour.
     "/actus": new Date(),
-    "/conditions": new Date(LEGAL_UPDATED),
-    "/mentions-legales": new Date(LEGAL_UPDATED),
-    "/confidentialite": new Date(LEGAL_UPDATED),
+    "/conditions": legal("conditions"),
+    "/mentions-legales": legal("mentions-legales"),
+    "/confidentialite": legal("confidentialite"),
   };
   const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/actus", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
     url: `${base}${path}`,

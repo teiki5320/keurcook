@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { estListeLourde } from "@/lib/liens";
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 
 type Phase = "idle" | "in" | "out";
@@ -116,6 +117,8 @@ export function TLink({
   return (
     <Link
       href={href}
+      // Pas de préchargement des très grosses listes (voir src/lib/liens.ts) ; un prefetch passé en option l'emporte.
+      prefetch={estListeLourde(href) ? false : undefined}
       onClick={(e) => {
         onClick?.(e);
         if (e.defaultPrevented || !navigate || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;

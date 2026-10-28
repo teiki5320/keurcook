@@ -104,7 +104,7 @@ Workflow GitHub Actions `.github/workflows/deploy.yml` (« Publier le site »), 
 - à la main (onglet **Actions → Publier le site → Run workflow**) ;
 - après le bouton « Maintenance ».
 
-Étapes : lint, types, tests, build (`out/`), puis `wrangler pages deploy out --project-name=keurcook` vers Cloudflare Pages. La publication n'a lieu que si les secrets GitHub `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` sont présents (**Settings → Secrets and variables → Actions**) ; sinon le workflow affiche un avertissement et ne publie rien.
+Étapes : lint, types, tests, build (`out/`), contrôle du site construit (`npm run test:sortie:controle`), puis `wrangler pages deploy out --project-name=keurcook` vers Cloudflare Pages. La publication n'a lieu que si les secrets GitHub `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` sont présents (**Settings → Secrets and variables → Actions**) ; sinon le workflow affiche un avertissement et ne publie rien.
 
 Les secrets ne sont donnés qu'à l'étape d'envoi ; `wrangler` est figé dans `package-lock.json`. GitHub coupant les tâches programmées d'un dépôt public après 60 jours sans activité, chaque publication programmée réactive elle-même la tâche.
 
@@ -124,7 +124,7 @@ Chaque lundi à 3 h UTC, après la publication de la nuit, le workflow `.github/
 
 Servis par Cloudflare Pages :
 
-- `public/_headers` : politique de sécurité du contenu (CSP), HSTS, `X-Frame-Options`, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, cache long des fichiers `/_next/static/`.
+- `public/_headers` : politique de sécurité du contenu (CSP), HSTS, `X-Frame-Options`, `nosniff`, `Referrer-Policy`, `Permissions-Policy`, cache long des fichiers `/_next/static/`, `noindex` sur `keurcook.pages.dev` et sur les fichiers `.txt` internes de Next.js (sauf `ads.txt`, `robots.txt` et la clé IndexNow, depuis le 28 octobre 2026).
 - `public/_redirects` : `/cgv` → `/conditions`, `/categorie/<gamme>` → `/boutique?gamme=<gamme>` (une règle par gamme : Cloudflare ne recopie pas les variables après « ? »), anciennes pages (`/panier`, `/commande`, `/accessoires`, `/avertissements`, `/admin`…) vers la boutique, les conditions ou l'accueil.
 
 ---
@@ -138,8 +138,11 @@ Servis par Cloudflare Pages :
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Vérification TypeScript |
 | `npm test` | Tests (`tests/*.test.ts`) |
+| `npm run test:sortie` | Construit le site comme en production puis contrôle le dossier `out/` (`tests/sortie/sortie.test.ts`) ; `npm run test:sortie:controle` contrôle un `out/` déjà construit |
 
-**Avant chaque envoi** : `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`.
+**Avant chaque envoi** : `npm run lint`, `npm run typecheck`, `npm test`, `npm run test:sortie` (build compris).
+
+**Vitesse** (depuis le 28 octobre 2026) : 2 polices servies par le site (`next/font`, `display: swap`) : Anton en une seule graisse pour les titres et Manrope variable (un seul fichier) pour le texte ; Inter et Fraunces, qui n'étaient plus visibles, ont été retirées. Les très grosses listes (`/recettes`, `/boutique`, `/favoris`, `/conseils`) et les liens du menu et du pied de page ne sont pas préchargés (`prefetch={false}`, `src/lib/liens.ts`). Le CSS écrit dans la page (`experimental.inlineCss`) a été essayé puis écarté : pages et navigation bien plus lourdes pour un gain d'affichage faible.
 
 ## Structure
 
@@ -168,7 +171,7 @@ src/
   lib/recipe-utils.ts  types de plats, durées, quantités, recherche
   lib/compliance.ts    détection des allégations de santé
 docs/                  INFRA, MARKETING, PUBLICATION, CONSEILS, CONSEILS-CALENDRIER
-tests/                 tests (articles « Conseils », contenus)
+tests/                 tests (articles « Conseils », contenus) ; tests/sortie/ = contrôle du site construit
 ```
 
 Photos (`public/recipes/*.webp`, `public/products/*.webp`, `public/conseils/`) : photos OpenArt.

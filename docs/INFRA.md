@@ -38,7 +38,7 @@ Mis à jour le 28 octobre 2026 (articles complets des actus ; 41 articles « Con
 ## 1. GitHub
 
 - **Rôle** : dépôt du code et publication automatique.
-  - `.github/workflows/deploy.yml` (« Publier le site ») : lint, types, tests, build, puis `wrangler pages deploy out --project-name=keurcook` ; à chaque push sur `main`, chaque lundi, mercredi et vendredi à 0 h 15 (cron, articles programmés), chaque jour à 11 h 50 et 18 h 50 UTC (cron `50 11,18 * * *`, depuis le 28 octobre 2026 : pages des articles d'actus après la veille), à la main et après la maintenance.
+  - `.github/workflows/deploy.yml` (« Publier le site ») : lint, types, tests, build, contrôle du site construit (`tests/sortie/sortie.test.ts`, depuis le 28 octobre 2026), puis `wrangler pages deploy out --project-name=keurcook` ; à chaque push sur `main`, chaque lundi, mercredi et vendredi à 0 h 15 (cron, articles programmés), chaque jour à 11 h 50 et 18 h 50 UTC (cron `50 11,18 * * *`, depuis le 28 octobre 2026 : pages des articles d'actus après la veille), à la main et après la maintenance.
   - `.github/workflows/indexnow.yml` (« Signaler les pages (IndexNow) ») : chaque lundi à 3 h UTC et à la main, `node scripts/indexnow.mjs` envoie les adresses du sitemap publié à IndexNow (Bing, Yandex, Seznam…). Clé publique dans le script et dans `public/<clé>.txt`.
   - `.github/workflows/maintenance.yml` (« Maintenance ») : choix Oui/Non et message facultatif ; modifie `content/maintenance.json`, l'enregistre sur `main` et relance la publication.
 - **Console** : https://github.com/teiki5320/keurcook (Actions, Settings → Secrets and variables → Actions).
@@ -49,6 +49,9 @@ Mis à jour le 28 octobre 2026 (articles complets des actus ; 41 articles « Con
 ## 2. Hébergement web (GitHub Pages / Cloudflare Pages)
 
 - **Rôle** : hébergement du site sur Cloudflare Pages (projet `keurcook`, envoi direct depuis GitHub Actions avec `wrangler`). Sert aussi les en-têtes (`public/_headers`) et les redirections (`public/_redirects`).
+- **Robots** : `keurcook.pages.dev` et les fichiers `.txt` internes de Next.js sont en `noindex` ; depuis le 28 octobre 2026, `ads.txt`, `robots.txt` et la clé IndexNow n'ont plus cet en-tête.
+- **Plan du site** : la date (`lastmod`) des trois pages légales est celle du dernier commit de leur fichier (historique complet récupéré par `deploy.yml`, `fetch-depth: 0`), depuis le 28 octobre 2026.
+- **Cache des pages** : pas encore de règle de cache Cloudflare pour les pages HTML (réponse `cf-cache-status: DYNAMIC` au 28 octobre 2026). Réglage proposé, à faire par Jean dans le tableau de bord (modèle Keurbook) : Caching → Cache Rules → règle « Pages HTML en cache 10 min » pour les adresses de keurcook.com sans point, durée 10 minutes, jamais pour les codes 300 et plus.
 - **Console** : https://dash.cloudflare.com (Workers & Pages → keurcook).
 - **Identifiants publics** : https://keurcook.com, adresse technique https://keurcook.pages.dev.
 - **Secrets** : jeton API et identifiant de compte, uniquement dans les secrets GitHub (voir ci-dessus).

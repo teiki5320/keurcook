@@ -1,14 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Anton, Fraunces, Inter, Manrope } from "next/font/google";
+import { Anton, Manrope } from "next/font/google";
 import { ADSENSE_CLIENT } from "@/lib/ads";
 import { siteConfig } from "@/lib/config";
 import { DEFAULT_SHARE_IMAGE } from "@/lib/metadata";
 import "./globals.css";
 import "./nuage.css";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
-const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], display: "swap" });
-// Polices du thème « Braise » (site, bannière cookies).
+// Polices du thème « Braise », servies par le site (next/font, aucune requête vers Google Fonts), 2 fichiers en tout :
+// - titres : Anton, une seule graisse (400) ;
+// - texte : Manrope en police variable, un seul fichier (environ 24 Ko) pour toutes les graisses utilisées
+//   (normal, medium, semibold, bold) : plus léger que deux fichiers à graisse fixe.
+// Inter et Fraunces (ancien thème clair) ont été retirées le 28 octobre 2026 : le thème Braise les remplaçait partout.
 const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
 
@@ -44,7 +46,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className={`${inter.variable} ${fraunces.variable} ${anton.variable} ${manrope.variable} antialiased`} suppressHydrationWarning>
+    <html lang="fr" className={`${anton.variable} ${manrope.variable} antialiased`} suppressHydrationWarning>
       <head>
         {/* AdSense : annonces et message de consentement de Google (Confidentialité et messages). */}
         <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossOrigin="anonymous" />

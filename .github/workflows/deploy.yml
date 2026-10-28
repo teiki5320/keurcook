@@ -36,6 +36,8 @@ jobs:
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           ref: main
+          # Historique complet : le plan du site (sitemap) date les pages légales par leur dernier commit.
+          fetch-depth: 0
 
       - name: Installer Node.js
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
@@ -59,6 +61,11 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://keurcook.com
           NEXT_TELEMETRY_DISABLED: 1
+
+      # Le site construit (out/) est contrôlé avant d'être publié : pages du plan du site, liens Amazon,
+      # données structurées, polices, clé IndexNow, en-têtes (tests/sortie/sortie.test.ts).
+      - name: Contrôler le site construit (tests/sortie)
+        run: npm run test:sortie:controle
 
       # Repère propre à cette publication : la dernière étape vérifie que keurcook.com le sert bien.
       - name: Marquer la version publiée

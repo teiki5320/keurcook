@@ -144,7 +144,7 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       ) : null}
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted print:hidden">
         <Link href="/" className="hover:underline">Accueil</Link> /{" "}
-        <Link href={`/recettes?type=${recipe.course}`} className="hover:underline">{courseName(recipe.course)}</Link> /{" "}
+        <Link prefetch={false} href={`/recettes?type=${recipe.course}`} className="hover:underline">{courseName(recipe.course)}</Link> /{" "}
         <span className="text-ink">{recipe.name}</span>
       </nav>
 

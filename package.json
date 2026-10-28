@@ -8,6 +8,8 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
+    "test:sortie": "NEXT_PUBLIC_SITE_URL=https://keurcook.com NEXT_TELEMETRY_DISABLED=1 npm run build && npm run test:sortie:controle",
+    "test:sortie:controle": "tsx --test tests/sortie/*.test.ts",
     "prebuild": "node scripts/og-images.mjs && node scripts/images-responsives.mjs && tsx scripts/epingles.ts && tsx scripts/articles-veille.ts",
     "epingles": "tsx scripts/epingles.ts",
     "articles": "tsx scripts/articles-veille.ts",

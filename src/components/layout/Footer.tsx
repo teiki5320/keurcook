@@ -19,21 +19,21 @@ export function Footer() {
         <div>
           <p className="font-semibold text-cream">Explorer</p>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><Link href="/recettes" className="hover:text-white">Toutes les recettes</Link></li>
-            <li><Link href="/pays" className="hover:text-white">Cuisines par pays</Link></li>
-            <li><Link href="/boutique" className="hover:text-white">Produits rares</Link></li>
-            <li><Link href="/conseils" className="hover:text-white">Conseils</Link></li>
-            <li><Link href="/top-10" className="hover:text-white">Top 10</Link></li>
-            <li><Link href="/actus" className="hover:text-white">Actus de la cuisine africaine</Link></li>
-            <li><Link href="/favoris" className="hover:text-white">Mes favoris</Link></li>
+            <li><Link prefetch={false} href="/recettes" className="hover:text-white">Toutes les recettes</Link></li>
+            <li><Link prefetch={false} href="/pays" className="hover:text-white">Cuisines par pays</Link></li>
+            <li><Link prefetch={false} href="/boutique" className="hover:text-white">Produits rares</Link></li>
+            <li><Link prefetch={false} href="/conseils" className="hover:text-white">Conseils</Link></li>
+            <li><Link prefetch={false} href="/top-10" className="hover:text-white">Top 10</Link></li>
+            <li><Link prefetch={false} href="/actus" className="hover:text-white">Actus de la cuisine africaine</Link></li>
+            <li><Link prefetch={false} href="/favoris" className="hover:text-white">Mes favoris</Link></li>
           </ul>
         </div>
         <div>
           <p className="font-semibold text-cream">Informations</p>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><Link href="/conditions" className="hover:text-white">Conditions d&apos;utilisation</Link></li>
-            <li><Link href="/mentions-legales" className="hover:text-white">Mentions légales</Link></li>
-            <li><Link href="/confidentialite" className="hover:text-white">Politique de confidentialité</Link></li>
+            <li><Link prefetch={false} href="/conditions" className="hover:text-white">Conditions d&apos;utilisation</Link></li>
+            <li><Link prefetch={false} href="/mentions-legales" className="hover:text-white">Mentions légales</Link></li>
+            <li><Link prefetch={false} href="/confidentialite" className="hover:text-white">Politique de confidentialité</Link></li>
             <li><CookieSettingsButton className="hover:text-white" /></li>
           </ul>
         </div>
