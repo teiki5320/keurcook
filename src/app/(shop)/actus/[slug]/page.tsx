@@ -8,7 +8,7 @@ import { getArticleBySlug, getArticles, getAutresActus, getFichesLiees, getSlugs
 import { getMaintenance } from "@/lib/data/settings";
 import { breadcrumbLd, JsonLdScript, newsArticleLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/metadata";
-import { lienActu } from "@/lib/veille-articles";
+import { descriptionCourte, estActuMaghreb, lienActu } from "@/lib/veille-articles";
 
 /** Seules les pages construites existent : une actu plus récente s'ouvre sur la page de secours /actus/article?id=… */
 export const dynamicParams = false;
@@ -30,12 +30,13 @@ export async function generateMetadata({ params }: PageProps<"/actus/[slug]">): 
   if (!article) return { robots: { index: false, follow: true } };
   return pageMetadata({
     title: article.titre,
-    description: article.chapo,
+    description: descriptionCourte(article.chapo),
     path: `/actus/${article.slug}`,
     image: article.image.url,
     imageAlt: article.image.alt,
     type: "article",
     publishedTime: article.publie_le,
+    noindex: estActuMaghreb(article),
   });
 }
 

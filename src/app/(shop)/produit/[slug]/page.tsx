@@ -6,7 +6,7 @@ import { AlertTriangle, MapPin, Package, Tractor } from "lucide-react";
 import { AmazonBuyButton } from "@/components/product/AmazonBuyButton";
 import { AMAZON_PRICES_CHECKED_ON } from "@/lib/amazon";
 import { ProductGallery } from "@/components/product/ProductGallery";
-import { BOOK_ILLUSTRATION_NOTE, isBook } from "@/lib/catalog-utils";
+import { BOOK_ILLUSTRATION_NOTE, isBook, NORTH_AFRICAN_SLUGS } from "@/lib/catalog-utils";
 import { RecipeCard } from "@/components/recipe/RecipeCard";
 import { VarietyCard } from "@/components/shop/VarietyCard";
 import { getCatalog, getProductBySlug, getRelatedProducts } from "@/lib/data/catalog";
@@ -35,6 +35,8 @@ export async function generateMetadata({ params }: PageProps<"/produit/[slug]">)
     path: `/produit/${product.slug}`,
     image: image && !image.endsWith(".svg") ? image : null,
     imageAlt: product.name,
+    // Produits d'Afrique du Nord : fiches gardées en ligne, mais hors de Google (le site vise l'Afrique subsaharienne).
+    noindex: NORTH_AFRICAN_SLUGS.has(product.slug),
   });
 }
 

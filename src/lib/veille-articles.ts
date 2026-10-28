@@ -192,3 +192,19 @@ export function articlesAConstruire(index: EntreeArticle[], actus: Actu[]): Entr
   }
   return liste;
 }
+
+/** Codes pays et noms de l'Afrique du Nord : ces actus restent sur le site, mais hors de Google (Keur Cook vise l'Afrique subsaharienne). */
+const PAYS_MAGHREB = new Set(["MA", "TN", "DZ", "LY", "EG", "MR", "EH"]);
+const MOTS_MAGHREB = /\b(maghreb|maroc|marocaine?s?|tunisie|tunisiene?s?|alg[ée]rie|alg[ée]riene?s?|libye|libyene?s?|[ée]gypte|[ée]gyptiene?s?|mauritanie|mauritaniene?s?)\b/i;
+
+export function estActuMaghreb(article: Pick<ArticleActu, "titre" | "chapo" | "pays">): boolean {
+  return (article.pays ?? []).some((p) => PAYS_MAGHREB.has(p.toUpperCase())) || MOTS_MAGHREB.test(`${article.titre} ${article.chapo}`);
+}
+
+/** Description pour Google : 155 caractères au plus, coupée entre deux mots. */
+export function descriptionCourte(texte: string, max = 155): string {
+  if (texte.length <= max) return texte;
+  const coupe = texte.slice(0, max - 1);
+  return `${coupe.slice(0, coupe.lastIndexOf(" ")).replace(/[\s,;:.]+$/, "")}…`;
+}
+

@@ -7,6 +7,8 @@ import { getRecipes } from "@/lib/data/recipes";
 import { getTop10s } from "@/lib/data/top10";
 import { getMaintenance } from "@/lib/data/settings";
 import { siteConfig } from "@/lib/config";
+import { NORTH_AFRICAN_SLUGS } from "@/lib/catalog-utils";
+import { estActuMaghreb } from "@/lib/veille-articles";
 
 export const dynamic = "force-static";
 
@@ -78,14 +80,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       images: imgs(...t.items.slice(0, 3).map((it) => products.find((p) => p.slug === it.product)?.images[0])),
     })),
     // Articles complets des actus construits au build (la page de secours /actus/article n'est pas listée).
-    ...getArticles().map((a) => ({
+    ...getArticles().filter((a) => !estActuMaghreb(a)).map((a) => ({
       url: `${base}/actus/${a.slug}`,
       lastModified: new Date(a.redige_le),
       changeFrequency: "monthly" as const,
       priority: 0.5,
       images: imgs(a.image.url),
     })),
-    ...products.map((p) => ({
+    // Produits d'Afrique du Nord : hors de Google (fiches en noindex), donc hors du sitemap.
+    ...products.filter((p) => !NORTH_AFRICAN_SLUGS.has(p.slug)).map((p) => ({
       url: `${base}/produit/${p.slug}`,
       lastModified: new Date(p.createdAt),
       changeFrequency: "weekly" as const,

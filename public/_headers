@@ -14,3 +14,15 @@
 # Fichiers de build versionnés : mis en cache longtemps.
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Copie technique du site sur keurcook.pages.dev (et ses versions de publication) : jamais dans Google,
+# seule keurcook.com doit être indexée.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+# Fichiers .txt créés par Next.js pour chaque page (navigation interne) : utiles au navigateur, pas à Google.
+/*.txt
+  X-Robots-Tag: noindex
