@@ -1022,7 +1022,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Infuser une poignée dans l'eau bouillante, sucrer à son goût ; ou en glisser quelques brins dans un bouillon de poisson.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["citronnelle", "infusion", "Afrique de l'Ouest"],
-    amazon: { asin: "B0D8WT28DC", label: "300 g", priceCents: 1295 },
+    // Remplacé le 28/10/2026 : B0D8WT28DC (300 g) indisponible sur Amazon.fr.
+    amazon: { asin: "B0D5DSY1TQ", label: "200 g", priceCents: 1090 },
   },
   {
     slug: "the-noir-du-kenya",
