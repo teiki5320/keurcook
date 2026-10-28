@@ -6,6 +6,8 @@ import { demoProducts } from "./catalog";
  * enregistrées ni affichées : seul l'ordre des produits en découle. À relever de nouveau avant de modifier un classement.
  */
 const RELEVE = "2026-10-19";
+/** Mixeurs : notes relevées de nouveau le 28 octobre 2026, quand le hachoir Choppeo (indisponible) a été remplacé. */
+const RELEVE_MIXEURS = "2026-10-28";
 
 /**
  * Introduction des onglets classés selon la note des acheteurs ; le n° 1 est nommé à la suite.
@@ -464,21 +466,15 @@ const tops: Top10[] = [
     seoTitle: "Top 10 des mixeurs pour sauces africaines",
     description:
       "Blenders de 2000 à 800 W, robot, mixeur plongeant et hachoir : notre top 10 des mixeurs pour les sauces, la pâte d'arachide et les jus de la cuisine africaine.",
-    intro: introNote("dix mixeurs", false),
-    updated: "2026-10-19",
+    intro: introNote("dix mixeurs", false, undefined, RELEVE_MIXEURS),
+    updated: "2026-10-28",
     rankBy: "note-acheteurs",
-    classementLe: RELEVE,
+    classementLe: RELEVE_MIXEURS,
     items: [
       {
         product: "blender-ninja-2-en-1",
         pourquoi:
           "Ce Ninja de 1200 W associe un pichet de 2,1 litres et un gobelet de 700 ml. Ses programmes « hacher » et « réduire en purée » conviennent aux oignons et au piment comme aux bases de sauce. Le gobelet sert pour un jus de gingembre individuel.",
-        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "hachoir-moulinex-choppeo",
-        pourquoi:
-          "Le moins puissant de notre sélection, mais le plus simple pour hacher : 500 W et un bol en verre d'un litre utile. Par impulsions, il garde des morceaux d'oignon ou de piment ; plus longtemps, il donne une purée d'ail et de gingembre. Il se range facilement.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
@@ -488,9 +484,21 @@ const tops: Top10[] = [
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
+        product: "hachoir-h-koenig-leo8",
+        pourquoi:
+          "Le moins puissant de notre sélection, mais le plus simple pour hacher : 320 W et un bol en verre gradué d'un litre. Par impulsions, il garde des morceaux d'oignon ou de piment ; plus longtemps, il donne une purée d'ail et de gingembre. Il se range facilement.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
         product: "blender-magimix-power-4",
         pourquoi:
           "Ce blender Magimix de 1300 W a un bol en verre thermorésistant de 1,8 litre, qui accepte les préparations chaudes comme froides. Il mixe, hache et pile la glace, avec cinq programmes automatiques. Pratique pour mixer la base d'une sauce encore tiède.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-amzchef-2000w",
+        pourquoi:
+          "Le plus puissant de notre sélection avec le Springlane : 2000 W et jusqu'à 25 000 tours par minute. Ses huit lames en inox entraînent les ingrédients vers le bas, utile pour les bases ail-oignon-piment, les graines d'egusi ou les haricots trempés des akara. Le bol contient 2 litres.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
@@ -502,25 +510,19 @@ const tops: Top10[] = [
       {
         product: "blender-springlane-hanno-2000w",
         pourquoi:
-          "Même puissance, 2000 W, mais avec un atout pour la pâte d'arachide : un petit bol en inox de 750 ml prévu pour les purées de noix. Le grand bol mixe les sauces et les soupes, le petit broie les arachides grillées. Il pile aussi la glace pour les jus.",
-        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "blender-moulinex-blendforce",
-        pourquoi:
-          "Ce Moulinex Blendforce de 800 W mixe jusqu'à trois minutes en continu, et son moteur est refroidi par air. Le bol en verre de 1,75 litre supporte jusqu'à 80 °C. Un bon premier blender pour les bases tomate-oignon et les soupes.",
-        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
-      },
-      {
-        product: "blender-amzchef-2000w",
-        pourquoi:
-          "Le plus puissant de notre sélection avec le Springlane : 2000 W et jusqu'à 25 000 tours par minute. Ses huit lames en inox entraînent les ingrédients vers le bas, utile pour les bases ail-oignon-piment, les graines d'egusi ou les haricots trempés des akara. Le bol contient 2 litres.",
+          "Comme l'AMZCHEF, 2000 W, mais avec un atout pour la pâte d'arachide : un petit bol en inox de 750 ml prévu pour les purées de noix. Le grand bol mixe les sauces et les soupes, le petit broie les arachides grillées. Il pile aussi la glace pour les jus.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
         product: "robot-moulinex-easy-force",
         pourquoi:
           "Plus qu'un blender : ce robot Moulinex de 800 W hache, émince, râpe, pétrit et mixe grâce à six accessoires. Il prépare en quelques secondes les oignons du yassa ou les légumes d'une sauce. Son bol de 3 litres range la plupart des accessoires.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-moulinex-blendforce",
+        pourquoi:
+          "Ce Moulinex Blendforce de 800 W mixe jusqu'à trois minutes en continu, et son moteur est refroidi par air. Le bol en verre de 1,75 litre supporte jusqu'à 80 °C. Un bon premier blender pour les bases tomate-oignon et les soupes.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {

@@ -8,6 +8,20 @@
  */
 import type { Category, Product, Variant } from "../types";
 import { nouveauxProduits } from "./catalog-nouveautes";
+import verificationsAmazon from "./verifications-amazon.json";
+
+/**
+ * Dernière vérification de chaque offre sur Amazon.fr (écrite par `npm run verifier-produits`, lancé sur le Mac) :
+ * date et état lus sur la fiche (bouton « Ajouter au panier » présent ou non). Une offre « indisponible »
+ * n'est plus affichée ; elle revient d'elle-même quand une vérification la retrouve disponible.
+ */
+export interface VerificationAmazon {
+  asin: string;
+  /** Date de la dernière vérification (AAAA-MM-JJ, heure de Paris). */
+  verifieLe: string;
+  statut: "disponible" | "indisponible";
+}
+export const verifications = verificationsAmazon as Record<string, VerificationAmazon>;
 
 const id = (prefix: string, n: number) =>
   `${prefix}0000000-0000-4000-a000-${n.toString(16).padStart(12, "0")}`;
@@ -479,6 +493,9 @@ const seeds: ProductSeed[] = [
  * 24 octobre 2026 : feuilles de baobab (B0DFWZ6FR9), café d'Éthiopie bio (B08ZT3P8TH) et bitter kola (B0DBGJDGFX)
  * masqués, indisponibles sur Amazon.fr sans équivalent (catalog-nouveautes.ts) ; remettre leur offre quand ils reviennent.
  * 25 octobre 2026 : chips de plantain remplacées (B0919PM5F3) ; pèbè moulu (B0BV7HBJWZ) masqué, indisponible sans équivalent.
+ * 28 octobre 2026 : crevettes séchées et farine de plantain remplacées ; hachoir Choppeo remplacé par le H.Koenig LEO8 ;
+ * réchaud jiko masqué (indisponibles). La disponibilité est ensuite vérifiée par `npm run verifier-produits`
+ * (état et date de vérification dans src/lib/demo/verifications-amazon.json).
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
@@ -500,7 +517,8 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "gombo-seche": { asin: "B0C66R4FWK", label: "100 g", priceCents: 490 },
   "feuilles-de-moringa": { asin: "B086JBQJ1J", label: "250 g", priceCents: 999 },
   "feuilles-de-sorgho": { asin: "B0F922WGDC", label: "130 g", priceCents: 1499 },
-  "crevettes-sechees": { asin: "B0BVGJQC39", label: "50 g", priceCents: 490 },
+  // 28/10/2026 : B0BVGJQC39 indisponible ; remplacé par des crevettes entières séchées (fiche vérifiée le 28/10/2026).
+  "crevettes-sechees": { asin: "B0GRPL3N51", label: "50 g", priceCents: 990 },
   "huile-de-palme-rouge": { asin: "B0962X7DNX", label: "75 cl", priceCents: 1499, name: "Huile de palme rouge" },
   "pate-d-arachide": { asin: "B07VX8JBYN", label: "425 g", priceCents: 1349, name: "Pâte d'arachide" },
   "pulpe-de-noix-de-palme": { asin: "B07C1KX53F", label: "800 g", priceCents: 1200, name: "Pulpe de noix de palme" },
@@ -531,10 +549,18 @@ function takePosition(): number {
   return nextPosition;
 }
 
+/** Toutes les offres Amazon du catalogue (produit et ASIN), y compris celles marquées indisponibles : la liste à vérifier. */
+export function offresAVerifier(): Array<{ slug: string; asin: string }> {
+  return Object.entries(amazonOffers).map(([slug, o]) => ({ slug, asin: o.asin }));
+}
+
 export const demoProducts: Product[] = seeds.map((seed) => {
   const index = takePosition() - 1;
   const productId = id("2", index + 1);
-  const offer = amazonOffers[seed.slug];
+  const verif = verifications[seed.slug];
+  const listed = amazonOffers[seed.slug];
+  // Offre vue indisponible lors de la dernière vérification (même ASIN) : produit masqué.
+  const offer = listed && !(verif && verif.asin === listed.asin && verif.statut === "indisponible") ? listed : undefined;
   return {
     ...seed,
     id: productId,

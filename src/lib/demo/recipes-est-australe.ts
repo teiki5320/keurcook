@@ -164,6 +164,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       "Les oignons doivent être bien caramélisés sans brûler, sinon le riz sera amer.",
     ],
     tags: ["épices", "riz", "fête"],
+    equipment: ["faitout-en-fonte-d-aluminium", "mortier-en-granit"],
     featured: true,
   },
   {
@@ -301,6 +302,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       "À Madagascar, on accompagne souvent le romazava d'un sakay, un condiment pimenté, et d'un rougail de tomates.",
     ],
     tags: ["bouillon", "brèdes", "zébu"],
+    equipment: ["faitout-en-fonte-d-aluminium", "mortier-en-granit"],
     featured: false,
   },
   {
@@ -432,6 +434,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
       "Pour une version plus douce, retirez les graines des piments ou n'en mettez qu'un seul.",
     ],
     tags: ["braai", "légumes", "épicé"],
+    equipment: ["faitout-inox-24-cm"],
     featured: false,
   },
 ];

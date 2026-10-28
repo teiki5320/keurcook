@@ -70,6 +70,7 @@ export const recipesDouceurs: RecipeSeed[] = [
       "Pour un goût plus doux, remplacez une partie du sucre par du miel ou allongez avec un peu plus d'eau.",
     ],
     tags: ["boisson", "gingembre", "fête"],
+    equipment: ["tamis-en-bois", "saladier-en-bois"],
     featured: false,
   },
   {
@@ -202,6 +203,7 @@ export const recipesDouceurs: RecipeSeed[] = [
       "Une cuillère trempée dans l'eau permet aussi de former des boules régulières.",
     ],
     tags: ["beignets", "street food", "goûter"],
+    equipment: ["araignee-a-friture", "saladier-en-bois"],
     featured: true,
   },
   {
@@ -245,6 +247,7 @@ export const recipesDouceurs: RecipeSeed[] = [
       "Pour un dégué plus épais, à déguster à la cuillère, réduisez simplement la quantité de lait caillé.",
     ],
     tags: ["mil", "lait caillé", "dessert frais"],
+    equipment: ["couscoussier"],
     featured: false,
   },
 ];

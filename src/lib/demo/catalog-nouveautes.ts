@@ -222,7 +222,9 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Délayer la farine dans l'eau froide, puis cuire à feu moyen en tournant sans cesse jusqu'à obtenir une pâte ferme et lisse.",
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["plantain", "foufou", "Ghana"],
-    amazon: { asin: "B003UUBDG2", label: "2 × 500 g", priceCents: 2899 },
+    // 28/10/2026 : B003UUBDG2 (Hanneforth, 2 × 500 g) indisponible ; remplacé par la farine de plantain African Beauty
+    // (fiche vérifiée le 28/10/2026 : bouton d'achat présent, 5/5).
+    amazon: { asin: "B0F288TX7D", label: "680 g", priceCents: 990 },
   },
   {
     slug: "chikwangue",
@@ -690,7 +692,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "À utiliser uniquement à l'extérieur ou dans un lieu très bien aéré. Vider les cendres une fois refroidies et brosser la grille.",
     conservation: null,
     tags: ["charbon", "grillade", "Kenya"],
-    amazon: { asin: "B0BCXN4K59", label: "1 pièce", priceCents: 7500 },
+    // Masqué le 28/10/2026 : B0BCXN4K59 (Jikokoa) indisponible sur Amazon.fr, sans vrai jiko en vente à la place.
+    amazon: null,
   },
   {
     slug: "araignee-a-friture",
@@ -1604,7 +1607,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Couper les oignons en quartiers, hacher par impulsions pour garder des morceaux, plus longtemps pour une purée.",
     conservation: null,
     tags: ["hachoir", "verre"],
-    amazon: { asin: "B0DJ19QSQD", label: "500 W, 1 L", priceCents: 4999 },
+    // Masqué le 28/10/2026 : B0DJ19QSQD indisponible sur Amazon.fr ; remplacé par le hachoir H.Koenig LEO8 (fin de liste).
+    amazon: null,
   },
   {
     slug: "saladiers-acacia-lot-de-2",
@@ -1697,5 +1701,23 @@ export const nouveauxProduits: NouveauProduit[] = [
     conservation: null,
     tags: ["bols", "noix de coco", "service"],
     amazon: { asin: "B07Q8DWSFF", label: "2 bols", priceCents: 1999 },
+  },
+  {
+    // Ajouté le 28/10/2026 à la place du hachoir Moulinex Choppeo (indisponible) ; fiche vérifiée le 28/10/2026
+    // (bouton d'achat présent, 4,5/5 sur 685 avis). Illustration : celle du hachoir à bol en verre déjà dessinée.
+    slug: "hachoir-h-koenig-leo8",
+    seoTitle: "Mini hachoir électrique H.Koenig LEO8, bol en verre 1 L",
+    name: "Mini hachoir électrique LEO8, bol en verre 1 L (H.Koenig)",
+    category: "ustensiles",
+    shortDescription: "Un petit hachoir au bol en verre gradué d'un litre, pour hacher oignons, ail, piment et herbes.",
+    description: "Ce mini hachoir H.Koenig LEO8 a un bol en verre gradué d'un litre, dont environ 500 ml de hachage, et des lames en inox. Son moteur de 320 W suffit pour les petites quantités.\n\nIl convient aux oignons, à l'ail, au gingembre, au piment et aux herbes, pour les bases de sauce et les marinades.",
+    originCountry: null,
+    originRegion: null,
+    composition: null,
+    allergens: [],
+    usageTips: "Couper les oignons en quartiers, hacher par impulsions pour garder des morceaux, plus longtemps pour une purée. Laver le bol et les lames à la main.",
+    conservation: null,
+    tags: ["hachoir", "verre"],
+    amazon: { asin: "B07YVGDBHF", label: "320 W, 1 L", priceCents: 2499 },
   },
 ];

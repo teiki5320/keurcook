@@ -463,6 +463,7 @@ const seeds: RecipeSeed[] = [
     ],
     tips: ["Plus le plantain est mûr, plus l'alloco est sucré et fondant."],
     tags: ["végétarien", "street food"],
+    equipment: ["araignee-a-friture"],
     featured: false,
   },
   {

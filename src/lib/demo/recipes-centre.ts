@@ -49,6 +49,7 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
       "Ajoutez les plantains en dernier et remuez à peine pour qu'ils gardent leur forme.",
     ],
     tags: ["fête", "plantain", "poulet"],
+    equipment: ["araignee-a-friture"],
     featured: true,
   },
   {

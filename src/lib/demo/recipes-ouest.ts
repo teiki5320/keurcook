@@ -130,6 +130,7 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
       "Accompagnez de riz blanc ou de foutou banane.",
     ],
     tags: ["noix de palme", "poulet", "dimanche"],
+    equipment: ["faitout-en-fonte-d-aluminium"],
     featured: false,
   },
   // ---------------------------------------------------------- Garba
