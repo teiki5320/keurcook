@@ -2,6 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { demoCategories, demoProducts } from "../demo/catalog";
 import { NORTH_AFRICAN_SLUGS } from "../catalog-utils";
+import { COUPS_DE_COEUR } from "../coups-de-coeur";
 import type { Category, Product, ProductWithCategory } from "../types";
 
 export interface Catalog {
@@ -37,4 +38,10 @@ export async function getRelatedProducts(product: ProductWithCategory, limit = 4
   const start = sameRange.findIndex((p) => p.id === product.id);
   const next = sameRange.slice(start + 1).concat(sameRange.slice(0, Math.max(start, 0))).filter((p) => p.id !== product.id);
   return next.concat(candidates.filter((p) => p.categoryId !== product.categoryId)).slice(0, limit);
+}
+
+/** Produits « Nos coups de cœur » de l'accueil, dans l'ordre choisi ; les produits masqués sont omis. */
+export async function getCoupsDeCoeur() {
+  const { products } = await getCatalog();
+  return COUPS_DE_COEUR.flatMap((slug) => products.filter((p) => p.slug === slug));
 }

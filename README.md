@@ -14,7 +14,7 @@ Le site est **100 % statique** : pas de serveur, pas de base de données. Recett
 
 ## Fonctionnalités
 
-- Accueil : carte de l'Afrique en particules (un point par pays), carrousel des pays, rangée « Nos Top 10 » (liens vers les 10 Top 10 et la boutique, sans bouton Amazon, depuis le 28 octobre 2026), carrousels de recettes par type de plat, produits rares.
+- Accueil : carte de l'Afrique en particules (un point par pays), carrousel des pays, bloc « Nos coups de cœur » (depuis le 28 octobre 2026 : 8 produits des Top 10 avec leur illustration, chacun relié à sa fiche `/produit/…`, lien « Tout voir » vers `/top-10`, aucun lien Amazon ; liste dans `src/lib/coups-de-coeur.ts`, un produit masqué en sort tout seul), rangée « Nos Top 10 » (liens vers les 10 Top 10 et la boutique, sans bouton Amazon, depuis le 28 octobre 2026), carrousels de recettes par type de plat, produits rares.
 - Recettes : carrousel des types de plats, filtres (pays, difficulté), **recherche par plat, pays ou ingrédient**.
 - Fiche recette : histoire du plat, portions ajustables (quantités recalculées), étapes, astuces, **version imprimable**, **partage WhatsApp**, favori ; ingrédients disponibles en boutique signalés « Produit rare », avec un vrai bouton « Voir sur Amazon » (44 px de haut au moins) ; sur téléphone, encadré « Produits de cette recette » juste après les ingrédients ; liens vers les Top 10 liés (depuis le 28 octobre 2026).
 - Pages pays, **favoris sans compte** (stockés dans le navigateur).

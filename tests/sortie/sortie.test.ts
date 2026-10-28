@@ -90,6 +90,16 @@ describe("Site construit", () => {
     for (const f of fichiers) assert.doesNotMatch(lire(f), /href="https:\/\/(?:www\.)?amazon\./, f);
   });
 
+  it("l'accueil : le bloc « Nos coups de cœur » montre au moins 4 produits reliés à leur fiche", () => {
+    const html = lire("index.html");
+    const debut = html.indexOf('id="coups-de-coeur"');
+    assert.ok(debut > 0, "bloc absent");
+    const bloc = html.slice(debut, html.indexOf("</section>", debut));
+    const fiches = new Set([...bloc.matchAll(/href="\/produit\/([^"/]+)\/?"/g)].map((x) => x[1]));
+    assert.ok(fiches.size >= 4, `${fiches.size} fiches`);
+    assert.doesNotMatch(bloc, /amazon\./i);
+  });
+
   it("les données structurées (JSON-LD) ne contiennent jamais de « < » brut", () => {
     for (const file of htmlFiles(out)) {
       for (const m of readFileSync(file, "utf8").matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {

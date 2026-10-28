@@ -12,6 +12,7 @@ import { getGammes } from "@/lib/data/gammes";
 import { getTop10s } from "@/lib/data/top10";
 import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
 import { getMaintenance } from "@/lib/data/settings";
+import { getCoupsDeCoeur } from "@/lib/data/catalog";
 import { unitWord } from "@/lib/gamme-words";
 import { photoSrcSet } from "@/lib/image-loader";
 
@@ -29,7 +30,7 @@ const WORDS = ["Ndolé", "Mafé", "Yassa", "Thiéboudienne", "Pondu", "Suya", "D
 export default async function HomePage() {
   // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
   if (getMaintenance().enabled) return null;
-  const [groups, countries, gammes] = await Promise.all([getRecipeGroups(), getCountriesWithRecipes(), getGammes()]);
+  const [groups, countries, gammes, coups] = await Promise.all([getRecipeGroups(), getCountriesWithRecipes(), getGammes(), getCoupsDeCoeur()]);
   const structuredData = [
     { "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name, url: siteConfig.url, description: siteConfig.description },
     { "@context": "https://schema.org", "@type": "Organization", name: siteConfig.name, url: siteConfig.url, logo: `${siteConfig.url}/brand/keurcook-logo-complet.png` },
@@ -61,6 +62,37 @@ export default async function HomePage() {
           <div className="mt-2">
             <CountryCarousel countries={countries} />
           </div>
+        </div>
+      </section>
+
+      {/* Nos coups de cœur : des produits en images dès le haut de page, chacun mène à sa fiche sur le site (aucun lien Amazon sur l'accueil). */}
+      <section aria-labelledby="coups-de-coeur" className="overflow-x-clip px-[clamp(20px,4vw,56px)] pb-16">
+        <div className="mx-auto max-w-[1320px]">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 id="coups-de-coeur" className="uppercase" style={{ ...anton, fontSize: "clamp(36px,4.5vw,64px)" }}>
+                Nos coups de cœur<span className="text-[#ff7a3d]">.</span>
+              </h2>
+              <p className="mt-1 max-w-xl text-sm text-[#fbeee2]/65">Ustensiles, épices, cafés et thés de nos Top 10.</p>
+            </div>
+            <TLink href="/top-10" label="Nos Top 10" className="text-sm font-bold text-[#ff7a3d] hover:text-[#ffc46b]">
+              Tout voir →
+            </TLink>
+          </div>
+          <ul className="-mx-[clamp(20px,4vw,56px)] flex snap-x gap-3 overflow-x-auto px-[clamp(20px,4vw,56px)] pb-2 sm:gap-4">
+            {coups.map((p) => (
+              <li key={p.slug} className="w-[42vw] max-w-[220px] shrink-0 snap-start">
+                <TLink href={`/produit/${p.slug}`} label={p.name} prefetch={false} className="group block overflow-hidden rounded-3xl border border-[#fbeee2]/10 bg-[#211209] hover:border-[#ff7a3d]/60">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={p.images[0]} srcSet={photoSrcSet(p.images[0])} sizes="(min-width: 640px) 220px, 42vw" alt="" width={600} height={600} loading="lazy" decoding="async" className="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <span className="block p-3">
+                    <span className="block text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{p.category.name}</span>
+                    <span className="mt-1 block text-sm leading-snug font-semibold group-hover:text-[#ffc46b]">{p.name}</span>
+                  </span>
+                </TLink>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
