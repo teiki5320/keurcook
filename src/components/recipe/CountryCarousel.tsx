@@ -87,7 +87,7 @@ export function CountryCarousel({ countries }: { countries: CarouselCountry[] })
           Les recettes {cur.of} →
         </TLink>
       </div>
-      <div className="mt-5 flex flex-wrap justify-center gap-1.5" role="tablist" aria-label="Pays">
+      <div className="mt-4 flex flex-wrap justify-center" role="tablist" aria-label="Pays">
         {countries.map((c, i) => (
           <button
             key={c.code}
@@ -96,9 +96,15 @@ export function CountryCarousel({ countries }: { countries: CarouselCountry[] })
             aria-selected={i === active}
             aria-label={c.name}
             onClick={() => setActive(i)}
-            className="h-1.5 rounded-md transition-[width] duration-300"
-            style={{ width: i === active ? 28 : 8, background: i === active ? "#ff7a3d" : "rgba(251,238,226,.25)" }}
-          />
+            // Zone à toucher de 24 px au moins (accessibilité), le trait visible reste fin.
+            className="flex h-6 min-w-6 items-center justify-center"
+          >
+            <span
+              aria-hidden
+              className="block h-1.5 rounded-md transition-[width] duration-300"
+              style={{ width: i === active ? 28 : 8, background: i === active ? "#ff7a3d" : "rgba(251,238,226,.25)" }}
+            />
+          </button>
         ))}
       </div>
     </div>

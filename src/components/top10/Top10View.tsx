@@ -152,7 +152,7 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
                     href={amazonUrl(it.asin)}
                     target="_blank"
                     rel="sponsored nofollow noopener"
-                    aria-label={`Voir ${it.productData.name} sur Amazon, lien partenaire (nouvel onglet)`}
+                    aria-label={`Voir sur Amazon : ${it.productData.name}, lien partenaire (nouvel onglet)`}
                     className="btn-primary px-6"
                   >
                     Voir sur Amazon <ExternalLink className="h-4 w-4" aria-hidden />

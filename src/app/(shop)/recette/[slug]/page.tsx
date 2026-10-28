@@ -178,12 +178,13 @@ export default async function RecipePage({ params }: PageProps<"/recette/[slug]"
       <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
         <dl className="flex flex-wrap gap-2">
           {facts.map((f) => (
-            <div key={f.label} className="flex items-center gap-2.5 rounded-2xl border border-[#fbeee2]/12 bg-[#211209] px-4 py-2.5">
-              <f.icon className="h-4 w-4 text-[#ff7a3d]" aria-hidden />
-              <div>
-                <dt className="text-[10px] font-bold tracking-[.14em] text-[#fbeee2]/55 uppercase">{f.label}</dt>
-                <dd className="text-sm font-semibold">{f.value}</dd>
-              </div>
+            // Un <div> par couple terme / valeur, sans autre élément, pour une liste de définitions valide (lecteurs d'écran).
+            <div key={f.label} className="rounded-2xl border border-[#fbeee2]/12 bg-[#211209] px-4 py-2.5">
+              <dt className="flex items-center gap-1.5 text-[10px] font-bold tracking-[.14em] text-[#fbeee2]/55 uppercase">
+                <f.icon className="h-3.5 w-3.5 text-[#ff7a3d]" aria-hidden />
+                {f.label}
+              </dt>
+              <dd className="text-sm font-semibold">{f.value}</dd>
             </div>
           ))}
         </dl>
