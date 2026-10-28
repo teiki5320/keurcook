@@ -8,7 +8,7 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
-    "prebuild": "node scripts/og-images.mjs && tsx scripts/epingles.ts && tsx scripts/articles-veille.ts",
+    "prebuild": "node scripts/og-images.mjs && node scripts/images-responsives.mjs && tsx scripts/epingles.ts && tsx scripts/articles-veille.ts",
     "epingles": "tsx scripts/epingles.ts",
     "articles": "tsx scripts/articles-veille.ts",
     "pinterest:auth": "node scripts/pinterest-auth.mjs",

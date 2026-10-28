@@ -12,6 +12,7 @@ import { getGammes } from "@/lib/data/gammes";
 import { getCountriesWithRecipes, getRecipeGroups } from "@/lib/data/recipes";
 import { getMaintenance } from "@/lib/data/settings";
 import { unitWord } from "@/lib/gamme-words";
+import { photoSrcSet } from "@/lib/image-loader";
 
 
 export const metadata: Metadata = pageMetadata({
@@ -128,7 +129,7 @@ export default async function HomePage() {
                 <TLink href={g.href} label={g.name} className="group relative block aspect-[3/4] overflow-hidden rounded-3xl border border-[#fbeee2]/10 bg-[#211209]">
                   {g.image && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={g.image} alt={g.name} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                    <img src={g.image} srcSet={photoSrcSet(g.image)} sizes="(min-width: 1024px) 20vw, (min-width: 768px) 33vw, 50vw" loading="lazy" decoding="async" alt={g.name} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                   )}
                   <span className="absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent to-[#140a07]/95 p-4 pt-14">
                     <span className="block text-[11px] font-bold tracking-[.16em] text-[#ffc46b] uppercase">{unitWord(g.products.length)}</span>

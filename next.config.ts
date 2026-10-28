@@ -7,7 +7,8 @@ import type { NextConfig } from "next";
  */
 const nextConfig: NextConfig = {
   output: "export",
-  images: { unoptimized: true },
+  // Photos servies en plusieurs largeurs, créées au build (scripts/images-responsives.mjs, src/lib/image-loader.ts).
+  images: { loader: "custom", loaderFile: "./src/lib/image-loader.ts", deviceSizes: [640, 960, 1280, 1800], imageSizes: [384] },
   poweredByHeader: false,
 };
 
