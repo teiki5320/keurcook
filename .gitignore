@@ -51,3 +51,6 @@ next-env.d.ts
 
 # Manifeste des épingles Pinterest, refait à chaque build (scripts/epingles.ts)
 /public/epingles.json
+
+# Articles complets des actus, téléchargés avant chaque build (scripts/articles-veille.ts)
+/.veille/

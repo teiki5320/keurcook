@@ -1,6 +1,7 @@
 # Vérifie, construit et publie le site statique sur Cloudflare Pages (projet « keurcook »).
 # Se lance à chaque push sur main, chaque lundi, mercredi et vendredi (articles « Conseils » programmés),
-# à la main (onglet Actions) et après le bouton « Maintenance ».
+# 2 fois par jour après la veille actus (pages des articles d'actus), à la main (onglet Actions)
+# et après le bouton « Maintenance ».
 name: Publier le site
 
 on:
@@ -13,6 +14,9 @@ on:
   # Chaque lundi, mercredi et vendredi à 0 h 15 (heure de Paris en hiver, 1 h 15 en été) : publie les articles programmés.
   schedule:
     - cron: "15 23 * * 0,2,4"
+    # Chaque jour à 11 h 50 et 18 h 50 UTC (12 h 50 et 19 h 50 à Paris l'hiver), après les passages de la veille
+    # de 12 h et 19 h : chaque nouvel article d'actu devient sa page /actus/<adresse> (scripts/articles-veille.ts).
+    - cron: "50 11,18 * * *"
 
 permissions:
   contents: read

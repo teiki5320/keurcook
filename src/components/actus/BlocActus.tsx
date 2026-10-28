@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { TLink } from "@/components/nuage/PageTransition";
 import { anton } from "@/components/nuage/typography";
 import { chargerFichier, filtrerParPays, type FichierActus } from "@/lib/veille";
+import { lienActu } from "@/lib/veille-articles";
 import { ActuBandeau } from "./ActuBandeau";
 import { ActuVignette } from "./ActuVignette";
 
@@ -13,6 +14,8 @@ interface Props {
   /** Taille du titre : « grand » comme les sections de l'accueil, « moyen » comme les sections d'une page pays. */
   tailleTitre?: "grand" | "moyen";
   limite: number;
+  /** Slugs des pages /actus/<slug> construites au build (getSlugsConstruits) : les cartes y renvoient. */
+  construits: string[];
   /** Seulement les actus d'un pays (code ISO2, ex. « SN »). */
   pays?: string;
   /** Lien « Toutes les actus → ». */
@@ -48,10 +51,11 @@ function Squelette({ className }: { className: string }) {
 
 /**
  * Bloc d'actus lu en direct depuis la veille : la 1re en bandeau, les suivantes en vignettes.
+ * Chaque carte ouvre l'article complet sur le site (page construite, sinon page de secours), ou la source s'il n'y en a pas encore.
  * Aucune actu, ou fichier injoignable : rien n'est affiché (ou le texte « siVide »).
  * Jamais de lien Amazon, de bouton d'achat ni de produit de la boutique ici.
  */
-export function BlocActus({ titre, tailleTitre = "grand", limite, pays, lien, prioritaire = false, avecMiseAJour = false, siVide, className = "" }: Props) {
+export function BlocActus({ titre, tailleTitre = "grand", limite, construits, pays, lien, prioritaire = false, avecMiseAJour = false, siVide, className = "" }: Props) {
   const [fichier, setFichier] = useState<FichierActus | null | undefined>(undefined);
 
   useEffect(() => {
@@ -67,6 +71,8 @@ export function BlocActus({ titre, tailleTitre = "grand", limite, pays, lien, pr
   if (actus.length === 0) return siVide ? <p className={`text-[15px] text-[#fbeee2]/65 ${className}`}>{siVide}</p> : null;
 
   const [une, ...suite] = actus;
+  const dejaConstruits = new Set(construits);
+  const lienDe = (a: (typeof actus)[number]) => lienActu(a, dejaConstruits);
   // Peu d'actus (accueil, page pays) : le bandeau à gauche, les vignettes en colonne à droite.
   // Beaucoup (page /actus) : le bandeau sur toute la largeur, puis les vignettes sur deux colonnes ;
   // un nombre impair laisse la dernière seule : elle prend toute la ligne (jamais de case vide).
@@ -105,24 +111,24 @@ export function BlocActus({ titre, tailleTitre = "grand", limite, pays, lien, pr
         // Deux actus seulement : sur grand écran, deux bandeaux côte à côte de même hauteur
         // (une vignette seule, étirée à la hauteur du bandeau, aurait l'air vide).
         <div className="grid gap-4 lg:grid-cols-2">
-          <ActuBandeau actu={une} prioritaire={prioritaire} Titre={Titre} />
+          <ActuBandeau actu={une} lien={lienDe(une)} prioritaire={prioritaire} Titre={Titre} />
           <div className="min-w-0 lg:hidden">
-            <ActuVignette actu={suite[0]} Titre={Titre} />
+            <ActuVignette actu={suite[0]} lien={lienDe(suite[0])} Titre={Titre} />
           </div>
           <div className="hidden min-w-0 lg:block">
-            <ActuBandeau actu={suite[0]} Titre={Titre} />
+            <ActuBandeau actu={suite[0]} lien={lienDe(suite[0])} Titre={Titre} />
           </div>
         </div>
       ) : (
         // À côté des vignettes (55 % / 45 %), les deux colonnes finissent à la même hauteur :
         // l'image du bandeau prend la hauteur restante, les vignettes se partagent la colonne à parts égales.
         <div className={large ? "space-y-4" : `grid gap-4 ${suite.length ? "lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]" : ""}`}>
-          <ActuBandeau actu={une} prioritaire={prioritaire} Titre={Titre} colonne={!large && suite.length > 0} horizontal={large || suite.length === 0} />
+          <ActuBandeau actu={une} lien={lienDe(une)} prioritaire={prioritaire} Titre={Titre} colonne={!large && suite.length > 0} horizontal={large || suite.length === 0} />
           {suite.length > 0 && (
             <ul className={large ? "grid gap-4 md:grid-cols-2 md:[&>:last-child:nth-child(odd)]:col-span-2" : "grid gap-4 lg:auto-rows-fr"}>
               {suite.map((a) => (
                 <li key={a.id} className="flex min-w-0">
-                  <ActuVignette actu={a} Titre={Titre} />
+                  <ActuVignette actu={a} lien={lienDe(a)} Titre={Titre} />
                 </li>
               ))}
             </ul>

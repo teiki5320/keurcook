@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { COUNTRIES } from "@/lib/countries";
+import { getArticles } from "@/lib/data/articles";
 import { getCatalog } from "@/lib/data/catalog";
 import { getConseils } from "@/lib/data/conseils";
 import { getRecipes } from "@/lib/data/recipes";
@@ -75,6 +76,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.7,
       images: imgs(...t.items.slice(0, 3).map((it) => products.find((p) => p.slug === it.product)?.images[0])),
+    })),
+    // Articles complets des actus construits au build (la page de secours /actus/article n'est pas listée).
+    ...getArticles().map((a) => ({
+      url: `${base}/actus/${a.slug}`,
+      lastModified: new Date(a.redige_le),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+      images: imgs(a.image.url),
     })),
     ...products.map((p) => ({
       url: `${base}/produit/${p.slug}`,

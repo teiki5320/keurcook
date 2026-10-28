@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { BlocActus } from "@/components/actus/BlocActus";
+import { getSlugsConstruits } from "@/lib/data/articles";
 import { TLink } from "@/components/nuage/PageTransition";
 import { CountryCarousel } from "@/components/recipe/CountryCarousel";
 import { CountryMap } from "@/components/recipe/CountryMap";
@@ -63,6 +64,7 @@ export default async function HomePage() {
 
       {/* Actus de la cuisine africaine, lues en direct depuis la veille (rien n'est affiché s'il n'y en a pas). */}
       <BlocActus
+        construits={getSlugsConstruits()}
         titre="Actus de la cuisine africaine"
         limite={4}
         prioritaire

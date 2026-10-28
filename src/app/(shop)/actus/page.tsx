@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BlocActus } from "@/components/actus/BlocActus";
+import { getSlugsConstruits } from "@/lib/data/articles";
 import { anton } from "@/components/nuage/typography";
 import { siteConfig } from "@/lib/config";
 import { getMaintenance } from "@/lib/data/settings";
@@ -10,7 +11,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = pageMetadata({
   title: "Actus de la cuisine africaine",
   description:
-    "Plats, chefs, produits du continent, fêtes et festivals : l'actualité de la cuisine africaine, résumée deux fois par jour avec un lien vers chaque source.",
+    "Plats, chefs, produits du continent, fêtes et festivals : l'actualité de la cuisine africaine en articles complets, deux fois par jour, avec un lien vers chaque source.",
   path: "/actus",
 });
 
@@ -31,10 +32,10 @@ export default function ActusPage() {
       </h1>
       <p className="mt-4 mb-8 max-w-3xl text-lg leading-relaxed text-[#fbeee2]/80">
         Plats et traditions, chefs et restaurants, produits du continent, fêtes, festivals et livres de cuisine : l&apos;actualité de la cuisine
-        africaine et de sa diaspora. Chaque actu est résumée par nos soins, avec un lien vers l&apos;article d&apos;origine. Mise à jour deux fois
-        par jour.
+        africaine et de sa diaspora. Touchez une actu pour lire l&apos;article complet, rédigé par nos soins, avec un lien vers chacune de ses sources.
+        Mise à jour deux fois par jour.
       </p>
-      <BlocActus limite={20} avecMiseAJour siVide="Les actus arrivent bientôt : revenez dans quelques heures." />
+      <BlocActus construits={getSlugsConstruits()} limite={20} avecMiseAJour siVide="Les actus arrivent bientôt : revenez dans quelques heures." />
     </div>
   );
 }

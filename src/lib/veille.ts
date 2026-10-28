@@ -7,7 +7,7 @@
 export const URL_VEILLE = "https://teiki5320.github.io/veille/actus/keurcook.json";
 
 /** Adresse de base des images de la veille (seule origine autorisée pour les images d'actus). */
-const BASE_IMAGES = "https://teiki5320.github.io/veille/";
+export const BASE_IMAGES = "https://teiki5320.github.io/veille/";
 
 export interface ImageActu {
   url: string;
@@ -38,6 +38,12 @@ export interface Actu {
   collecte_le?: string;
   langue?: string;
   image: ImageActu;
+  /** Adresse de l'article complet sur le site (« /actus/<slug> ») : présente quand la veille a rédigé l'article. */
+  slug?: string;
+  /** Fichier de l'article complet (articles/keurcook/<id>.json) ; absent = pas encore d'article. */
+  article_url?: string;
+  /** Durée de lecture de l'article complet, en minutes. */
+  lecture_min?: number;
 }
 
 export interface FichierActus {

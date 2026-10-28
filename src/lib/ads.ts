@@ -20,6 +20,8 @@ export const AD_SLOTS = {
   conseilMilieu: KEUR_COOK_UNIT,
   /** Conseil : en fin de page, après « À lire aussi ». */
   conseilFin: KEUR_COOK_UNIT,
+  /** Article complet d'une actu (/actus/<slug>) : un seul, après l'article, avant « Autres actus ». */
+  actuFin: KEUR_COOK_UNIT,
   /** Pays : entre les recettes et la présentation de la cuisine. */
   pays: KEUR_COOK_UNIT,
 } as const;

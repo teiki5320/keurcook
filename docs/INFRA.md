@@ -1,6 +1,6 @@
 # INFRA — fiche technique
 
-Mis à jour le 27 octobre 2026 (veille actus) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
+Mis à jour le 28 octobre 2026 (articles complets des actus) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
 
 ## En bref
 
@@ -16,8 +16,8 @@ Mis à jour le 27 octobre 2026 (veille actus) ; dernier scan complet du dépôt 
 - 🌐 **Web** : 🐙 GitHub — main · publication au vert [ok] → ☁️ Hébergement web — Cloudflare Pages, projet keurcook [ok] → 🔗 Nom de domaine — keurcook.com, SSL Cloudflare [ok] → 👥 Visiteurs — site ouvert au public [ok]
 - 📝 **Contenu** : 🐙 GitHub — 27 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 40 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
 - 🛒 **Affiliation** : 🌐 keurcook.com — boutons « Acheter · prix » [ok] → 🤝 Affiliation — Amazon Partenaires, tag keurcookfr-21 [ok] → 📦 Amazon.fr — Amazon encaisse et livre [ok]
-- 📰 **Veille actus** : 📡 Tâche de veille — 12 h et 19 h, 15 flux RSS [ok] → 🐙 Dépôt veille — actus/keurcook.json sur GitHub Pages [ok] → 🌍 keurcook.com — accueil (4), /actus (20), pages pays (3) [ok]
-- 📢 **Publicité** : 🌐 keurcook.com — cinq emplacements « Publicité » [ok] → 💰 AdSense (publicité web) — « En préparation » au 27 octobre (examen demandé le 12 octobre), aucune annonce [à faire]
+- 📰 **Veille actus** : 📡 Tâche de veille — 12 h et 19 h, 15 flux RSS [ok] → 🐙 Dépôt veille — actus/keurcook.json sur GitHub Pages [ok] → 🏗️ Build GitHub Actions — 12 h 50 et 19 h 50, une page /actus/<adresse> par article [ok] → 🌍 keurcook.com — accueil (4), /actus (20), pages pays (3), articles complets [ok]
+- 📢 **Publicité** : 🌐 keurcook.com — six emplacements « Publicité » [ok] → 💰 AdSense (publicité web) — « En préparation » au 27 octobre (examen demandé le 12 octobre), aucune annonce [à faire]
 
 ## Vue d'ensemble
 
@@ -38,7 +38,7 @@ Mis à jour le 27 octobre 2026 (veille actus) ; dernier scan complet du dépôt 
 ## 1. GitHub
 
 - **Rôle** : dépôt du code et publication automatique.
-  - `.github/workflows/deploy.yml` (« Publier le site ») : lint, types, tests, build, puis `wrangler pages deploy out --project-name=keurcook` ; à chaque push sur `main`, chaque lundi, mercredi et vendredi à 0 h 15 (cron, articles programmés), à la main et après la maintenance.
+  - `.github/workflows/deploy.yml` (« Publier le site ») : lint, types, tests, build, puis `wrangler pages deploy out --project-name=keurcook` ; à chaque push sur `main`, chaque lundi, mercredi et vendredi à 0 h 15 (cron, articles programmés), chaque jour à 11 h 50 et 18 h 50 UTC (cron `50 11,18 * * *`, depuis le 28 octobre 2026 : pages des articles d'actus après la veille), à la main et après la maintenance.
   - `.github/workflows/indexnow.yml` (« Signaler les pages (IndexNow) ») : chaque lundi à 3 h UTC et à la main, `node scripts/indexnow.mjs` envoie les adresses du sitemap publié à IndexNow (Bing, Yandex, Seznam…). Clé publique dans le script et dans `public/<clé>.txt`.
   - `.github/workflows/maintenance.yml` (« Maintenance ») : choix Oui/Non et message facultatif ; modifie `content/maintenance.json`, l'enregistre sur `main` et relance la publication.
 - **Console** : https://github.com/teiki5320/keurcook (Actions, Settings → Secrets and variables → Actions).
@@ -89,7 +89,7 @@ Mis à jour le 27 octobre 2026 (veille actus) ; dernier scan complet du dépôt 
 
 ## 7. AdSense (publicité web)
 
-- **Rôle** : annonces display Google sur cinq emplacements titrés « Publicité » (`src/components/ads/AdSlot.tsx`, `src/lib/ads.ts`) : au milieu et en fin de recette, au milieu et en fin d'article « Conseils », et sur les pages pays ; un seul bloc d'annonces « Keur Cook » sert les cinq. Script `adsbygoogle.js` et balise `google-adsense-account` dans `src/app/layout.tsx`, fichier `public/ads.txt`. Le message de consentement de Google (Confidentialité et messages) gère les cookies publicitaires. Mis en place le 12 octobre 2026 (demande d'examen le même jour) ; le site est encore en examen, aucune annonce ne s'affiche pour l'instant.
+- **Rôle** : annonces display Google sur six emplacements titrés « Publicité » (`src/components/ads/AdSlot.tsx`, `src/lib/ads.ts`) : au milieu et en fin de recette, au milieu et en fin d'article « Conseils », en fin d'article d'actu (depuis le 28 octobre 2026) et sur les pages pays ; un seul bloc d'annonces « Keur Cook » sert les six. Script `adsbygoogle.js` et balise `google-adsense-account` dans `src/app/layout.tsx`, fichier `public/ads.txt`. Le message de consentement de Google (Confidentialité et messages) gère les cookies publicitaires. Mis en place le 12 octobre 2026 (demande d'examen le même jour) ; le site est encore en examen, aucune annonce ne s'affiche pour l'instant.
 - **Console** : https://adsense.google.com (compte `pub-2680784147246798`, géré avec `admin@toakeur.com`).
 - **Identifiants publics** : identifiant d'éditeur `ca-pub-…` et numéro de bloc d'annonces dans `src/lib/ads.ts` et `public/ads.txt` (publics par nature).
 - **Secrets** : aucun.
@@ -108,5 +108,6 @@ Mis à jour le 27 octobre 2026 (veille actus) ; dernier scan complet du dépôt 
 - **Rôle** : actus de la cuisine africaine (titre reformulé, résumé réécrit, lien vers la source, image libre de droits avec son crédit), en ligne depuis le 27 octobre 2026. Une tâche Claude sur le Mac mini les prépare 2 fois par jour (12 h et 19 h) à partir de 15 flux RSS, dans le dépôt public `teiki5320/veille` ; jamais d'actu santé ni de vocabulaire de vente.
 - **Lecture** : le site lit `https://teiki5320.github.io/veille/actus/keurcook.json` (schéma v3) directement dans le navigateur du visiteur, sans reconstruction (`src/lib/veille.ts` : délai de 8 s, cache de 15 min dans `sessionStorage`). Fichier injoignable ou vide : aucun bloc ne s'affiche, la page reste intacte. Images servies par `teiki5320.github.io` (photos WebP 16:9 et carrées, ou carte générée).
 - **Emplacements** : bloc « Actus de la cuisine africaine » sur l'accueil (4 actus, après « Cuisiner par pays »), page `/actus` (20 actus, dans le menu, le pied de page et le sitemap), bloc « L'actu de la cuisine du … » sur chaque page pays (3 actus dont le champ `pays` contient le code du pays ; absent s'il n'y en a pas), placé après « La cuisine du … », un bloc après l'annonce. Composants dans `src/components/actus/`. Jamais de lien Amazon, de bouton d'achat ni de produit de la boutique dans ces blocs.
+- **Articles complets** (depuis le 28 octobre 2026) : la veille rédige pour chaque actu un article de 300 à 450 mots (`https://teiki5320.github.io/veille/articles/keurcook/<id>.json`, schéma article v1). Avant chaque build, `scripts/articles-veille.ts` les télécharge dans `.veille/articles.json` (non versionné) ; chacun devient une page `/actus/<adresse>` (`src/app/(shop)/actus/[slug]/page.tsx` : titre, chapô, date et durée de lecture, image et crédit, intertitres, encadré « Sources », fiches liées, 3 autres actus, une annonce en fin d'article ; NewsArticle en JSON-LD ; dans le sitemap, donc signalée par IndexNow le lundi). Toute la carte d'une actu ouvre cette page ; une actu plus récente que le dernier build s'ouvre sur la page de secours `/actus/article?id=…` (lue dans le navigateur, noindex, hors sitemap) ; sans article, la carte ouvre la source. Veille injoignable au build : 0 page article, le build continue. Le site est reconstruit chaque jour à 12 h 50 et 19 h 50 (heure d'hiver) par `deploy.yml`, sans clé ni secret de plus.
 - **Console** : https://github.com/teiki5320/veille (aucune clé, aucun secret).
 - **Coût** : gratuit (GitHub Pages et abonnement Claude existant).

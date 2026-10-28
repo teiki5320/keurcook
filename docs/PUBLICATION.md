@@ -41,6 +41,7 @@ Site 100 % statique (Next.js `output: "export"`, dossier `out/`), sans serveur n
 
 - à chaque push sur `main` ;
 - chaque lundi, mercredi et vendredi à 0 h 15, heure de Paris en hiver (1 h 15 en été ; cron), pour publier les articles « Conseils » programmés ;
+- chaque jour à 12 h 50 et 19 h 50, heure de Paris en hiver (13 h 50 et 20 h 50 en été ; cron `50 11,18 * * *`), après la veille actus : chaque nouvel article d'actu devient sa page `/actus/<adresse>` ;
 - à la main (onglet **Actions → Publier le site → Run workflow**) ;
 - après le bouton « Maintenance ».
 
@@ -64,7 +65,7 @@ Pendant une maintenance : écran « On prépare la marmite », pages en `noindex
 
 ## Visibilité
 
-- **Référencement** : sitemap en ligne (`/sitemap.xml`, 260 adresses au 27 octobre 2026, dont 40 articles « Conseils » et la page Actus : recettes, pays, produits, articles publiés, Top 10, Actus, pages légales), robots.txt, balise robots « max-image-preview:large », métadonnées Open Graph et données JSON-LD (Recipe, Article, BreadcrumbList, FAQPage, ItemList, WebSite et Organization ; pas de Product sur les fiches produit). Journal des retouches page par page : `docs/referencement.md` (premières retouches le 20 octobre 2026). Le build de production utilise `NEXT_PUBLIC_SITE_URL=https://keurcook.com`.
+- **Référencement** : sitemap en ligne (`/sitemap.xml`, 264 adresses au 28 octobre 2026 (260 le 27 octobre), dont 41 articles « Conseils », la page Actus et 3 articles d'actus : recettes, pays, produits, articles publiés, Top 10, Actus et articles d'actus, pages légales ; les articles d'actus s'ajoutent 2 fois par jour), robots.txt, balise robots « max-image-preview:large », métadonnées Open Graph et données JSON-LD (Recipe, Article, NewsArticle, BreadcrumbList, FAQPage, ItemList, WebSite et Organization ; pas de Product sur les fiches produit). Journal des retouches page par page : `docs/referencement.md` (premières retouches le 20 octobre 2026). Le build de production utilise `NEXT_PUBLIC_SITE_URL=https://keurcook.com`.
 - **Google Search Console** : propriété de domaine `keurcook.com` déclarée ; 248 pages indexées sur 259 au relevé du Studio du 27 octobre 2026 ; 11 pas encore (7 inconnues de Google, 4 détectées mais non explorées) ; sitemap renvoyé le 20 octobre 2026, relu par Google le 26 octobre 2026. Une routine (`keurcook-demandes-indexation`) sert à demander l'indexation des nouvelles recettes.
 - **IndexNow** : sitemap signalé chaque lundi (`.github/workflows/indexnow.yml`) ; dernier envoi réussi le 26 octobre 2026.
 - **Pinterest** : site revendiqué sur le compte « Keur Cook » ; 52 recettes épinglées du 2 au 14 octobre 2026 ; publication automatique par l'API (`.github/workflows/pinterest.yml`, chaque jour à 4 h 17 UTC, 5 épingles au plus) en place depuis le 23 octobre 2026, clé du compte créée le même jour ; les 6 boissons épinglées le 24 octobre, soit les 58 recettes.
