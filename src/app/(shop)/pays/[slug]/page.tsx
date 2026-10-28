@@ -15,7 +15,7 @@ import { getRecipes } from "@/lib/data/recipes";
 import { AD_SLOTS } from "@/lib/ads";
 import { siteConfig } from "@/lib/config";
 import { getMaintenance } from "@/lib/data/settings";
-import { breadcrumbLd, jsonLd } from "@/lib/json-ld";
+import { breadcrumbLd, itemListLd, jsonLd } from "@/lib/json-ld";
 
 
 export async function generateStaticParams() {
@@ -53,13 +53,15 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: jsonLd(
+          __html: jsonLd([
             breadcrumbLd([
               { name: "Accueil", url: siteConfig.url },
               { name: "Pays", url: `${siteConfig.url}/pays` },
               { name: country.name, url: `${siteConfig.url}/pays/${country.slug}` },
             ]),
-          ),
+            // Recettes du pays, dans l'ordre de la page.
+            ...(own.length > 0 ? [itemListLd(`Recettes ${country.of}`, own.map((r) => ({ name: r.name, url: `${siteConfig.url}/recette/${r.slug}` })))] : []),
+          ]),
         }}
       />
       <nav aria-label="Fil d'Ariane" className="mb-5 text-sm text-muted">

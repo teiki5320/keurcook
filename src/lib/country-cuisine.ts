@@ -9,11 +9,15 @@ Les saveurs viennent de condiments fermentés ou séchés : le guedj (poisson s�
 
   ML: `Traversé par le fleuve Niger, le Mali cuisine les céréales du Sahel : mil, sorgho, fonio et riz, cultivé le long du fleuve. Le tô, pâte de mil ou de maïs, se mange avec une sauce aux feuilles ou au gombo ; le riz au gras et le poisson du fleuve, comme le capitaine, sont servis lors des repas de fête.
 
-Le mafé, que les Maliens appellent aussi tigadèguèna (« sauce à la pâte d'arachide » en bambara), est le grand classique : viande et légumes mijotés dans une sauce épaisse à l'arachide. Le soumbala, graine de néré fermentée, parfume la plupart des sauces, et les feuilles de baobab séchées leur donnent une texture liée. On partage le repas autour d'un plat commun, en mangeant de la main droite.`,
+Le mafé, que les Maliens appellent aussi tigadèguèna (« sauce à la pâte d'arachide » en bambara), est le grand classique : viande et légumes mijotés dans une sauce épaisse à l'arachide. Le soumbala, graine de néré fermentée, parfume la plupart des sauces, et les feuilles de baobab séchées leur donnent une texture liée. On partage le repas autour d'un plat commun, en mangeant de la main droite.
+
+Après le repas, le thé à la menthe se prépare lentement sur un petit fourneau et se sert en trois verres, du plus fort au plus sucré ; c'est le moment des discussions entre amis, le « grin ». Pour se rafraîchir, on boit du jus de bissap, appelé dabileni en bambara, et du jus de gingembre.`,
 
   BF: `Au Burkina Faso, le repas de tous les jours, c'est le tô : une pâte ferme de maïs, de mil ou de sorgho, servie avec une sauce. Sauce gombo, sauce aux feuilles de baobab, sauce à l'oseille de Guinée ou sauce arachide : c'est elle qui change d'un repas à l'autre, souvent relevée de soumbala, le condiment de graine de néré fermentée.
 
-Le pays est aussi une terre de fonio, petite céréale ancienne du Sahel qui cuit en quelques minutes, et de riz gras pour les jours de fête. Dans les rues de Ouagadougou et de Bobo-Dioulasso, on trouve le poulet bicyclette grillé et, pour se rafraîchir, le dégué : granulés de mil mélangés à du lait caillé sucré.`,
+Le pays est aussi une terre de fonio, petite céréale ancienne du Sahel qui cuit en quelques minutes, et de riz gras pour les jours de fête. Dans les rues de Ouagadougou et de Bobo-Dioulasso, on trouve le poulet bicyclette grillé et, pour se rafraîchir, le dégué : granulés de mil mélangés à du lait caillé sucré.
+
+Le babenda, plat de feuilles vertes cuites avec du soumbala, de la farine ou des brisures de céréales et parfois du poisson séché, est l'un des plats les plus anciens du pays. Pour boire, le zoom-koom, une boisson à base de farine de mil, de gingembre et de tamarin, est servi bien frais.`,
 
   CI: `La cuisine ivoirienne se vit dans les maquis, ces petits restaurants en plein air où l'on mange autour du grill. Le poisson braisé servi avec de l'attiéké, une semoule de manioc fermenté, et l'alloco, la banane plantain bien mûre frite, en sont les classiques. À Abidjan, le garba (attiéké et thon frit, piment et oignon) est le repas rapide le plus populaire.
 
@@ -53,7 +57,9 @@ Les graines de courge moulues, les mbika, servent à épaissir et à enrichir le
 
   UG: `En Ouganda, le matoké est bien plus qu'un aliment : cette banane verte à cuire, cultivée autour du lac Victoria, est servie presque chaque jour, surtout au Buganda. On la cuit traditionnellement à la vapeur dans des feuilles de bananier avant de l'écraser, ou on la mijote avec de la viande et des tomates.
 
-Le luwombo, plat de fête du Buganda, consiste à cuire du poulet ou de la viande dans un paquet de feuilles de bananier pour qu'il mijote dans son jus. Le posho (pâte de maïs), les haricots, la sauce à l'arachide et le poisson du lac complètent les repas, et le « rolex », une omelette roulée dans un chapati, est devenu l'en-cas le plus populaire des rues de Kampala.`,
+Le luwombo, plat de fête du Buganda, consiste à cuire du poulet ou de la viande dans un paquet de feuilles de bananier pour qu'il mijote dans son jus. Le posho (pâte de maïs), les haricots, la sauce à l'arachide et le poisson du lac complètent les repas, et le « rolex », une omelette roulée dans un chapati, est devenu l'en-cas le plus populaire des rues de Kampala.
+
+Au petit-déjeuner, le katogo associe le matoké à des abats, à de la viande ou à des haricots, mijotés dans une même marmite. Le soir, dans les quartiers animés, on partage le muchomo, de la viande grillée en brochettes, avec des bananes plantains rôties et une bière fraîche.`,
 
   KE: `Au Kenya, l'ugali, une pâte ferme de farine de maïs blanc, est la base des repas. On le mange à la main, avec du sukuma wiki, des feuilles de chou vert sautées aux oignons et aux tomates, ou avec un ragoût de viande ou de haricots.
 
@@ -61,11 +67,15 @@ La nyama choma, viande de chèvre ou de bœuf grillée lentement sur la braise e
 
   TZ: `La cuisine tanzanienne mêle les traditions de l'intérieur du pays et celles de la côte swahilie. Sur le continent, l'ugali (pâte de maïs), les haricots, les légumes verts et la viande grillée composent les repas de tous les jours ; les chipsi mayai, une omelette aux frites, sont l'en-cas favori des villes.
 
-Zanzibar, surnommée « l'île aux épices », a donné au pays ses plats les plus parfumés. Le pilau de Zanzibar est un riz cuit avec de la viande, du clou de girofle, de la cardamome, de la cannelle et du cumin. Le lait de coco, le poisson et les fruits de mer, le gingembre et le tamarin marquent toute la cuisine de la côte.`,
+Zanzibar, surnommée « l'île aux épices », a donné au pays ses plats les plus parfumés. Le pilau de Zanzibar est un riz cuit avec de la viande, du clou de girofle, de la cardamome, de la cannelle et du cumin. Le lait de coco, le poisson et les fruits de mer, le gingembre et le tamarin marquent toute la cuisine de la côte.
+
+Le soir, sur la côte, on grille les mishkaki, des brochettes de bœuf marinées aux épices, servies avec une sauce au piment. À Zanzibar, le marché nocturne des jardins de Forodhani est célèbre pour sa « pizza de Zanzibar », une galette fine garnie puis pliée et dorée sur la plaque.`,
 
   MG: `À Madagascar, le riz est servi à chaque repas, matin compris : il constitue le « vary », et ce qui l'accompagne s'appelle le « laoka ». Le romazava, bouillon de viande aux brèdes (feuilles vertes) dont certaines, comme les brèdes mafana, picotent la langue, est souvent présenté comme le plat national.
 
-Le ravitoto, feuilles de manioc pilées longuement mijotées avec du porc, est un autre grand classique. On assaisonne avec des achards de légumes, du rougail et du sakay, un piment pilé. L'île est aussi réputée pour ses épices : la vanille bourbon, le poivre sauvage voatsiperifery et le clou de girofle.`,
+Le ravitoto, feuilles de manioc pilées longuement mijotées avec du porc, est un autre grand classique. On assaisonne avec des achards de légumes, du rougail et du sakay, un piment pilé. L'île est aussi réputée pour ses épices : la vanille bourbon, le poivre sauvage voatsiperifery et le clou de girofle.
+
+Le matin, on achète dans la rue des mofo gasy, petits pains de farine de riz cuits dans des moules ronds, avec un café ou un thé. Le koba, pâte de riz, de banane et d'arachide enveloppée dans une feuille de bananier, se vend en tranches sur les marchés, et le ranon'apango, eau parfumée au riz grillé, accompagne souvent le repas.`,
 
   ZA: `L'Afrique du Sud a une cuisine à son image, faite de nombreuses influences. Le braai, barbecue au feu de bois, est un rituel du week-end ; on y grille des saucisses (boerewors) et de la viande, servies avec du pap, une pâte de maïs, et le chakalaka, une poêlée de légumes épicée aux haricots.
 

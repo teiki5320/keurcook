@@ -273,6 +273,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   {
     slug: "biltong",
     name: "Biltong",
+    seoTitle: "Biltong, la viande séchée d'Afrique du Sud",
     category: "snacks",
     shortDescription: "La viande de bœuf séchée et épicée d'Afrique du Sud, à grignoter en fines lamelles à l'apéritif.",
     description: "Le biltong est une viande marinée dans le vinaigre et les épices (coriandre, poivre, sel), puis séchée à l'air. Tradition sud-africaine, il se déguste en fines lamelles, à la main.\n\nOn le sert à l'apéritif, lors des braais, ou en randonnée ; il s'émiette aussi dans les salades et les pâtes.",
@@ -1163,6 +1164,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   {
     slug: "mortier-marbre-blanc",
     name: "Petit mortier et pilon en marbre blanc 11 cm (Silk Route Spice Company)",
+    seoTitle: "Petit mortier et pilon en marbre blanc 11 cm",
     category: "ustensiles",
     shortDescription: "Un petit mortier en marbre blanc massif de 11 cm, compact, pour une pincée d'épices ou une gousse d'ail.",
     description: "Ce mortier de Silk Route Spice Company en marbre massif mesure 11 cm de côté pour 8 cm de haut. Lourd pour sa taille, il reste stable pendant qu'on écrase.\n\nSes dimensions compactes conviennent aux petites cuisines, pour l'ail, les herbes et les épices.",
@@ -1313,6 +1315,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   {
     slug: "livre-la-cuisine-congolaise",
     name: "La cuisine congolaise (Fidèle Mialoundama et Isabelle Goma Mouyokani)",
+    seoTitle: "La cuisine congolaise, de Fidèle Mialoundama",
     category: "livres",
     shortDescription: "Un ouvrage de référence qui recense les recettes les plus courantes de toutes les régions du Congo.",
     description: "Fidèle Mialoundama et Isabelle Goma Mouyokani recensent et décrivent les recettes des différentes régions du Congo, en ne retenant que les plus fréquentes. Le livre se veut une mémoire des recettes et des aliments traditionnels.\n\nBroché de 216 pages, publié aux éditions L'Harmattan en 2001.",
@@ -1343,6 +1346,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   {
     slug: "livre-dans-ma-cuisine-congolaise",
     name: "Dans ma cuisine congolaise, du Kivu à Kinshasa (Gisèle Mbeku Andjelani)",
+    seoTitle: "Dans ma cuisine congolaise, du Kivu à Kinshasa",
     category: "livres",
     shortDescription: "Plus de 70 recettes de la RD Congo, du Kivu à Kinshasa, chacune accompagnée d'une petite histoire.",
     description: "Gisèle Mbeku Andjelani partage les goûts qui ont marqué son enfance, des rives du Kivu à Kinshasa : sombe, madesu, liboke, sambaza, ndazi, mikate… Plus de 70 recettes accessibles, chacune avec sa petite histoire.\n\nLivre relié de 178 pages, paru en avril 2026 (édition indépendante).",
@@ -1463,6 +1467,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   {
     slug: "blender-springlane-hanno-2000w",
     name: "Blender Hanno 2000 W avec bol inox pour purées de noix (Springlane)",
+    seoTitle: "Blender Springlane Hanno 2000 W, bol inox",
     category: "ustensiles",
     shortDescription: "Un blender de 2000 W livré avec un petit bol en inox de 750 ml pour les purées de noix, le pesto et les pâtes.",
     description: "Ce blender Springlane Hanno de 2000 W mixe fruits et légumes, broie les noix et pile la glace. Il est livré avec un bol en inox de 750 ml prévu pour les purées de noix, le pesto et les dips, et une gourde de 500 ml.\n\nSix lames en inox équipent le bol principal.",
