@@ -675,7 +675,7 @@ const tops: Top10[] = [
       "Couscous de mil, attiéké, farine de maïs blanc, fonio, gari, farine de teff : notre top 10, classé selon le nombre de recettes du site qui les emploient.",
     intro:
       "Notre sélection de dix céréales, semoules et farines d'Afrique, parmi celles de la boutique. Elles sont classées selon le nombre de recettes du site qui les emploient. À égalité, la plus courante passe devant. N° 1 : Couscous de mil (thiéré), en tête car quatre recettes du site l'emploient, du thiéré mbuum au thiakry, au ngalakh et au dégué.",
-    updated: "2026-10-19",
+    updated: "2026-10-30",
     rankBy: "recettes",
     items: [
       {
@@ -720,10 +720,10 @@ const tops: Top10[] = [
         articles: ["foufou-sans-grumeaux"],
       },
       {
-        product: "farine-de-plantain-pour-fufu",
+        product: "farine-de-pois-chiches",
         pourquoi:
-          "Au Ghana, le foufou se pile traditionnellement au mortier à partir de plantain et de manioc cuits. Cette farine de plantain séché permet d'obtenir une pâte lisse directement à la casserole. Elle sert dans notre foufou et light soup, avec la farine de manioc.",
-        recettes: ["fufu-light-soup"],
+          "La farine de pois chiches est faite de pois chiches secs finement moulus. En Éthiopie et en Érythrée, elle sert de base au shiro, une purée relevée au berbéré que l'on sert bien chaude avec l'injera. Notre recette de shiro l'emploie. Versée en pluie dans l'eau frémissante en fouettant, elle épaissit sans grumeaux.",
+        recettes: ["shiro"],
       },
       {
         product: "farine-de-teff",

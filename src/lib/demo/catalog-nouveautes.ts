@@ -223,8 +223,9 @@ export const nouveauxProduits: NouveauProduit[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["plantain", "foufou", "Ghana"],
     // 28/10/2026 : B003UUBDG2 (Hanneforth, 2 × 500 g) indisponible ; remplacé par la farine de plantain African Beauty
-    // (fiche vérifiée le 28/10/2026 : bouton d'achat présent, 5/5).
-    amazon: { asin: "B0F288TX7D", label: "680 g", priceCents: 990 },
+    // (B0F288TX7D, 680 g, 9,90 €). Masqué le 30/10/2026 (choix de Jean) : une seule évaluation sur Amazon.fr, sous la règle
+    // des 50 avis ; remplacée dans le Top 10 des farines par la farine de pois chiches.
+    amazon: null,
   },
   {
     slug: "chikwangue",
@@ -1719,5 +1720,22 @@ export const nouveauxProduits: NouveauProduit[] = [
     conservation: null,
     tags: ["hachoir", "verre"],
     amazon: { asin: "B07YVGDBHF", label: "320 W, 1 L", priceCents: 2499 },
+  },
+  {
+    // Ajouté le 30/10/2026 à la place de la farine de plantain dans le Top 10 des farines (choix de Jean) ;
+    // fiche MARKAL vérifiée le 30/10/2026 sur Amazon.fr (bouton d'achat présent, 4,6/5 sur 95 avis).
+    slug: "farine-de-pois-chiches",
+    name: "Farine de pois chiches bio",
+    category: "cereales",
+    shortDescription: "La farine de pois chiches secs moulus, base du shiro d'Éthiopie et d'Érythrée.",
+    description: "La farine de pois chiches est obtenue en moulant finement des pois chiches secs. En Éthiopie et en Érythrée, elle sert de base au shiro, une purée relevée au berbéré que l'on sert bien chaude avec l'injera.\n\nVersée en pluie dans un liquide frémissant, elle épaissit en une purée veloutée.",
+    originCountry: null,
+    originRegion: null,
+    composition: "Pois chiches moulus, issus de l'agriculture biologique.",
+    allergens: [],
+    usageTips: "Verser la farine en pluie dans l'eau frémissante en fouettant sans arrêt pour éviter les grumeaux. Pour un goût plus parfumé, la torréfier d'abord à sec dans une poêle.",
+    conservation: "Au sec, dans un contenant fermé.",
+    tags: ["pois chiches", "shiro", "Éthiopie"],
+    amazon: { asin: "B00OHZ3K38", label: "500 g", priceCents: 335 },
   },
 ];

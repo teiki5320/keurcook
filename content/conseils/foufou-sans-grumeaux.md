@@ -5,7 +5,7 @@ date: 2026-10-02
 theme: cereales
 resume: Versez la farine en pluie fine sur l'eau très chaude en remuant vigoureusement, puis travaillez la pâte en l'écrasant contre la paroi de la marmite. Délayer une partie de la farine à froid au départ aide aussi beaucoup.
 recettes: fufu-light-soup, soupe-egusi, eru
-produits: farine-de-foufou, farine-de-plantain-pour-fufu
+produits: farine-de-foufou
 image: /conseils/foufou-sans-grumeaux.webp
 imageAlt: Une boule de foufou lisse et brillante posée dans un bol en bois.
 imagePrompt: Photographie culinaire, boule de foufou blanc crème lisse et brillante dans un bol en bois, spatule en bois posée à côté, bol de soupe rouge en arrière-plan, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.

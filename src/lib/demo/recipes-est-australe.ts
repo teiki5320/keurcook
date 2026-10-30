@@ -61,7 +61,7 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     servings: 4,
     difficulty: 1,
     ingredients: [
-      [120, "g", "farine de pois chiches"],
+      [120, "g", "farine de pois chiches", "farine-de-pois-chiches"],
       [2, null, "oignons rouges"],
       [3, "gousses", "ail"],
       [1, "c. à soupe", "berbéré", "berbere"],
