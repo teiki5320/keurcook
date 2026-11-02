@@ -270,8 +270,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Mélanger à l'ail, au gingembre et au djansang pour mariner le poisson braisé, ou en ajouter une pincée dans le bouillon.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["épice", "Cameroun", "muscade"],
-    // Masqué le 25/10/2026 : B0BV7HBJWZ (50 g, 8,99 €) indisponible sur Amazon.fr, sans équivalent bien noté.
-    amazon: null,
+    // Masqué le 25/10/2026 (indisponible), remis le 02/11/2026 : B0BV7HBJWZ de nouveau en vente sur Amazon.fr (50 g, 8,99 €).
+    amazon: { asin: "B0BV7HBJWZ", label: "50 g", priceCents: 899 },
   },
   {
     slug: "biltong",
