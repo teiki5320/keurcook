@@ -10,6 +10,14 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Lagos",
     course: "riz-cereales",
     shortDescription: "Riz cuit dans une sauce tomate et poivron pimentée, légèrement fumé au fond de la marmite : le riz des fêtes de Lagos.",
+    seoTitle: "Riz jollof : recette du jollof rice nigérian",
+    seoDescription: "Recette du riz jollof (jollof rice, riz djolof) du Nigeria : riz cuit dans une sauce tomate et poivron pimentée, légèrement fumé au fond de la marmite.",
+    faq: [
+      { question: "D'où vient le nom « riz jollof » (ou riz djolof) ?", answer: "Il tiendrait son nom de l'ancien royaume wolof du Djolof, au Sénégal, où serait né l'ancêtre du plat, le [thiéboudienne](/recette/thieboudienne). Le plat a ensuite voyagé le long de la côte jusqu'au Nigeria et au Ghana." },
+      { question: "Jollof rice du Nigeria ou du Ghana ?", answer: "C'est un plat de fête dans les deux pays, qui se disputent avec humour le titre du « meilleur jollof ». Cette recette est celle du Nigeria, le riz des mariages et des fêtes de Lagos." },
+      { question: "Comment obtenir le goût fumé du riz jollof ?", answer: "Le « party jollof » cuit au feu de bois dans de grandes marmites. À la maison, montez le feu 3 à 4 minutes en fin de cuisson pour laisser le fond accrocher légèrement : c'est le « bottom pot » que se disputent les connaisseurs." },
+      { question: "Avec quoi servir le riz jollof ?", answer: "Avec du plantain frit (dodo) et du poulet grillé, comme dans les fêtes de Lagos. Pour le relever, une pincée de [yaji](/conseils/quest-ce-que-le-yaji) dans la sauce tomate." },
+    ],
     story:
       "Le riz jollof tiendrait son nom de l'ancien royaume wolof (Djolof), au Sénégal, où serait né l'ancêtre du plat, le thiéboudienne. Il a voyagé le long de la côte et s'est imposé au Nigeria et au Ghana, qui se disputent aujourd'hui, avec beaucoup d'humour, le titre du « meilleur jollof ».\n\nAu Nigeria, c'est le plat incontournable des « parties » : mariages, anniversaires et fêtes de quartier. Le « party jollof », cuit au feu de bois dans de grandes marmites, est réputé pour son goût légèrement fumé. Quant au riz qui accroche au fond de la marmite, le « bottom pot », les connaisseurs se le disputent.",
     prepMinutes: 25,

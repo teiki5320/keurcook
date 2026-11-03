@@ -146,3 +146,46 @@ Vérifié le 20/10/2026 (moins de 28 jours) : pas refait. Vitesse sur téléphon
 ### À revoir à partir du 24 novembre 2026
 
 Les 6 pages ci-dessus (et l'injera) : noter leur nouvelle place.
+
+## 3 novembre 2026
+
+Chiffres : Search Console, 28 derniers jours (04/10 → 01/11/2026), via le Studio (liste « 2e page » et recherches).
+
+### Pages améliorées
+
+Presque toute la liste « 2e page » a été travaillée les 20, 22 et 27/10 (moins de 28 jours) : non retouchée. Travaillées aujourd'hui : les seules pages de la liste encore jamais travaillées qui ont des vues, plus une fiche produit montrée au-delà de la 20e place pour une recherche fréquente.
+
+| Page | Recherches visées | Place et vues au moment du travail | Ancien titre → nouveau titre |
+| --- | --- | --- | --- |
+| /recette/eru | eru, recette eru cameroun, ingrédients du eru, okok cameroun | 16,8, 39 vues (« eru » : 8, 10 vues ; « recette eru cameroun » : 23,2 ; « ingrédients du eru » : 54,8) | « Eru — recette du Cameroun \| Keur Cook » → « Eru : recette camerounaise aux feuilles d'okok \| Keur Cook » |
+| /recette/riz-jollof | riz jollof recette, riz jollof, riz djolof, jollof rice | 16,2, 36 vues (« riz jollof recette » : 2,6 ; « riz jollof » : 8,1 ; « jollof rice » : 73) | « Riz jollof — recette du Nigeria \| Keur Cook » → « Riz jollof : recette du jollof rice nigérian \| Keur Cook » |
+| /produit/the-noir-du-kenya | thé du kenya | 43,4, 16 vues | « Thé noir du Kenya \| Keur Cook » → « Thé du Kenya : le thé noir corsé des hauts plateaux » |
+
+- Eru et riz jollof : nouvelle méta-description et FAQ visible « Questions fréquentes » (avec données FAQPage), écrite uniquement avec des faits déjà présents dans la recette ou sur le site. Eru : ce qu'est l'eru (et l'okok), la liste des ingrédients (réponse à « ingrédients du eru »), avec quoi le manger. Riz jollof : origine du nom (Djolof, variante « riz djolof »), Nigeria ou Ghana, goût fumé (« bottom pot »), accompagnements. Le h1 (nom du plat) contient déjà la recherche : inchangé.
+- Thé du Kenya : titre et description pour Google (faits déjà sur la fiche).
+
+Liens internes (texte du lien = la recherche) :
+- eru : « eru camerounais » dans « Un foufou sans grumeaux » (lien existant, texte précisé) ; 5 autres liens existaient déjà (huile de palme, poisson fumé, crevettes séchées…) ;
+- riz jollof : « recette du riz jollof » dans « Réussir le riz rouge du thiéboudienne » (texte précisé) ; liens déjà présents depuis le yaji, riz brisé ou riz long, ingrédients du placard ; depuis sa FAQ : liens vers le thiéboudienne et le yaji ;
+- thé du Kenya : nouvelle phrase avec le lien « thé du Kenya » dans « Cafés d'Éthiopie, du Kenya et du Rwanda » (fait déjà sur la fiche : grand producteur, thé corsé, bu en chai) ; lien déjà présent depuis la recette du chai kényan. L'article « Comment infuser le thé noir du Kenya » paraîtra le 25/12 et renforcera la page.
+- Non traités : le yaji (5 vues, place 6,4) et la recette d'ataya (4 vues) : trop peu de vues.
+
+### Pages travaillées il y a 28 jours ou plus
+
+Aucune encore (premières pages travaillées le 20/10). Premier bilan à partir du 17 novembre 2026. Chiffres d'aujourd'hui pour mémoire : dégué 11,2 (279 vues, contre 13,4 le 27/10), ataya 10,5 (118), poulet DG 9,5 (89, contre 11,9), alloco 7 (86, contre 11,3 ; « alloco recette » 2,9), odika 7,8 (117), ndolé 6,5 (« ndolé recette » 1), romazava 10,1 (« romazava » 2), garba 22,1 et doro wat 66,4 (travaillées le 27/10, encore trop tôt).
+
+### Page nouvelle
+
+Aucune créée. Seule recherche fréquente (15 vues et plus) mal servie : « thé du kenya » (16 vues), qui montre la fiche produit à la 43e place. Le site a déjà les vraies pages (fiche du thé, recette du chai kényan, article programmé le 25/12) : fiche améliorée ci-dessus plutôt qu'une page de plus. Les autres recherches fréquentes ont leur vraie page entre la 1re et la 12e place (garba 22 et doro wat 66 travaillées le 27/10).
+
+### Fiches enrichies
+
+Vérifiées le 20/10/2026 (moins de 28 jours) : pas refait. Contrôlé dans les pages construites aujourd'hui : eru et riz jollof ont Recipe + BreadcrumbList + FAQPage (FAQ visible), fiche du thé du Kenya BreadcrumbList ; JSON valide, « max-image-preview:large » présent.
+
+### Socle
+
+Vérifié le 20/10/2026 (moins de 28 jours) : pas refait. Vitesse sur téléphone : PageSpeed refuse encore aujourd'hui (quota du jour dépassé, 3e fois) pour l'accueil, /recette/degue et /conseils/comment-preparer-l-ataya. À réessayer au prochain passage ; une clé PageSpeed gratuite au nom de Jean réglerait le problème.
+
+### À revoir à partir du 1er décembre 2026
+
+Les 3 pages ci-dessus : noter leur nouvelle place.

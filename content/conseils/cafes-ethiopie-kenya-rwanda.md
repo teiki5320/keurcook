@@ -23,6 +23,8 @@ L'Éthiopie est considérée comme le berceau de l'arabica. On y cultive une gra
 
 Les cafés kenyans sont réputés pour leur acidité franche et leur corps marqué. On y trouve souvent des notes de cassis, de groseille ou d'agrumes, parfois une touche légèrement acidulée qui rappelle la tomate mûre. Les lots sont classés selon la taille des grains : la mention AA désigne les plus gros.
 
+Le Kenya est aussi l'un des grands producteurs de thé noir au monde : le [thé du Kenya](/produit/the-noir-du-kenya), corsé et très coloré, se boit sur place en chai, bouilli avec du lait et du sucre.
+
 ## Le Rwanda, doux et rond
 
 Le Rwanda produit surtout des cafés de variété bourbon, cultivés sur des collines élevées. Ils sont généralement plus doux, avec des notes de fruits rouges, de caramel ou de thé noir, et une acidité plus discrète que ceux du Kenya. Ce sont de bons cafés pour débuter. Chez son voisin, le [café en grains du Burundi](/produit/cafe-du-burundi) pousse lui aussi en altitude, sur les collines de petits producteurs : une tasse sucrée et fruitée, à l'acidité douce.

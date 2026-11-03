@@ -42,4 +42,4 @@ Le riz qui accroche légèrement au fond de la marmite forme une croûte dorée,
 - **Trop remuer** : les grains se cassent et le riz devient collant.
 - **Un feu trop fort** : le fond brûle avant que le dessus soit cuit.
 
-La même logique vaut pour le [riz jollof](/recette/riz-jollof), autre grand riz rouge d'Afrique de l'Ouest, cuit lui aussi dans une sauce tomate bien revenue.
+La même logique vaut pour la [recette du riz jollof](/recette/riz-jollof), autre grand riz rouge d'Afrique de l'Ouest, cuit lui aussi dans une sauce tomate bien revenue.

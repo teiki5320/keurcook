@@ -59,6 +59,13 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     region: "Sud-Ouest, Mamfé",
     course: "mijotes",
     shortDescription: "Feuilles d'okok finement émincées, mijotées avec waterleaf, huile de palme, viande et poisson fumé.",
+    seoTitle: "Eru : recette camerounaise aux feuilles d'okok",
+    seoDescription: "Recette de l'eru du Cameroun : feuilles d'okok et waterleaf mijotées à l'huile de palme avec viande, poisson fumé et crevettes séchées.",
+    faq: [
+      { question: "Qu'est-ce que l'eru du Cameroun ?", answer: "La grande spécialité des Bayangi, de la région de Mamfé, dans le Sud-Ouest du Cameroun. Le mot désigne à la fois le plat et la liane sauvage dont on récolte les feuilles, appelée okok dans d'autres régions du pays." },
+      { question: "Quels sont les ingrédients de l'eru ?", answer: "Des feuilles d'okok (eru) séchées et émincées, du waterleaf frais (ou des épinards), du bœuf ou de la peau de bœuf (kanda), du poisson fumé, des crevettes séchées, de l'huile de palme rouge, un oignon, un piment et un cube de bouillon. Pas d'huile de palme sous la main ? Voir [par quoi remplacer l'huile de palme rouge](/conseils/remplacer-huile-de-palme-rouge)." },
+      { question: "Avec quoi manger l'eru ?", answer: "Traditionnellement avec du foufou à l'eau (water fufu), une boule de manioc fermenté, ou avec du gari. Pour une boule bien lisse : [un foufou sans grumeaux](/conseils/foufou-sans-grumeaux)." },
+    ],
     story:
       "L'eru est la grande spécialité des Bayangi, peuple de la région de Mamfé, dans le Sud-Ouest du Cameroun. Son nom désigne à la fois le plat et la liane sauvage dont on récolte les feuilles, appelée okok dans d'autres régions du pays.\n\nOn le sert traditionnellement avec du foufou à l'eau (water fufu), une boule de manioc fermenté, lors des réunions de famille et des cérémonies. Sa texture fondante et son goût fumé en font l'un des plats les plus appréciés du Cameroun anglophone.",
     prepMinutes: 30,

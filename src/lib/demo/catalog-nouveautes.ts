@@ -1035,6 +1035,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     name: "Thé noir du Kenya",
     category: "cafes-thes",
     shortDescription: "Un thé noir corsé, à la couleur intense, comme on le boit en Afrique de l'Est.",
+    seoTitle: "Thé du Kenya : le thé noir corsé des hauts plateaux",
+    seoDescription: "Le thé noir du Kenya, cultivé sur les hauts plateaux, donne une infusion corsée et très colorée. Au Kenya, il se boit en chai, bouilli avec lait et sucre.",
     description: "Le Kenya est l'un des grands producteurs de thé noir au monde. Ses thés, cultivés sur les hauts plateaux, sont corsés et donnent une infusion très colorée.\n\nAu Kenya, il se prépare en chai : bouilli avec du lait, du sucre et parfois des épices.",
     originCountry: "Kenya",
     originRegion: null,
