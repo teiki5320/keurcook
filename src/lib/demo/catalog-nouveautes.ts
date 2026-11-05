@@ -438,7 +438,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Dénoyauter et farcir de pâte d'amande, ou ajouter aux tajines d'agneau en fin de cuisson.",
     conservation: "Au frais et au sec, dans une boîte fermée.",
     tags: ["dattes", "Tunisie", "fruits secs"],
-    amazon: { asin: "B08LZYGRL8", label: "1 kg", priceCents: 1090 },
+    // Remplacé le 05/11/2026 : B08LZYGRL8 (1 kg) indisponible sur Amazon.fr.
+    amazon: { asin: "B0CM6RMSGF", label: "500 g", priceCents: 999 },
   },
   {
     slug: "mortier-et-pilon-en-bois",
@@ -528,7 +529,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Superposer viande, légumes et épices sans remuer et laisser mijoter doucement sur les braises. Après usage, laver à l'eau chaude, sécher au feu et huiler légèrement l'intérieur.",
     conservation: null,
     tags: ["fonte", "feu de bois", "Afrique du Sud"],
-    amazon: { asin: "B0CZXS1ZHN", label: "1 pièce", priceCents: 5940 },
+    // Remplacé le 05/11/2026 : B0CZXS1ZHN (HENDI 6 L) indisponible sur Amazon.fr.
+    amazon: { asin: "B08DHJC6ZW", label: "8 L", priceCents: 4995 },
   },
   {
     slug: "mortier-en-granit",
@@ -543,7 +545,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Écraser ail, gingembre, piment et oignon pour les marinades de poulet yassa ou de poisson braisé. Rincer à l'eau chaude et laisser sécher à l'air.",
     conservation: null,
     tags: ["mortier", "granit", "épices"],
-    amazon: { asin: "B0BD8NMF5C", label: "14 cm", priceCents: 2899 },
+    // Remplacé le 05/11/2026 : B0BD8NMF5C (Praknu) indisponible sur Amazon.fr.
+    amazon: { asin: "B00MQSMT0I", label: "14 cm", priceCents: 2195 },
   },
   {
     slug: "couscoussier",

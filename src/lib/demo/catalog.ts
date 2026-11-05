@@ -494,6 +494,8 @@ const seeds: ProductSeed[] = [
  * masqués, indisponibles sur Amazon.fr sans équivalent (catalog-nouveautes.ts) ; remettre leur offre quand ils reviennent.
  * 25 octobre 2026 : chips de plantain remplacées (B0919PM5F3) ; pèbè moulu (B0BV7HBJWZ) masqué, indisponible sans équivalent.
  * 2 novembre 2026 : pèbè moulu (B0BV7HBJWZ) remis, de nouveau en vente sur Amazon.fr.
+ * 5 novembre 2026 : marmite potjie (BBQ-Toro n° 3, 8 L), dattes Deglet Nour (Munchilycious bio 500 g) et mortier en granit
+ * (Zeller 14 cm) remplacés, anciens produits indisponibles (catalog-nouveautes.ts).
  * 28 octobre 2026 : crevettes séchées et farine de plantain remplacées ; hachoir Choppeo remplacé par le H.Koenig LEO8 ;
  * réchaud jiko masqué (indisponibles). La disponibilité est ensuite vérifiée par `npm run verifier-produits`
  * (état et date de vérification dans src/lib/demo/verifications-amazon.json).

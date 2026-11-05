@@ -401,7 +401,7 @@ const tops: Top10[] = [
       {
         product: "marmite-potjie",
         pourquoi:
-          "Le potjie est une marmite ventrue en fonte d'environ 6 litres, montée sur trois pieds, héritée des cuisines de plein air d'Afrique du Sud. Posée sur les braises, elle mijote lentement viande, légumes et épices. Le potjiekos, ragoût en couches cuit sans remuer, en est le plat emblématique.",
+          "Le potjie est une marmite ventrue en fonte de 8 litres, montée sur trois pieds, héritée des cuisines de plein air d'Afrique du Sud. Posée sur les braises, elle mijote lentement viande, légumes et épices. Le potjiekos, ragoût en couches cuit sans remuer, en est le plat emblématique.",
         recettes: [],
       },
       {
