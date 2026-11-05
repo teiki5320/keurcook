@@ -24,6 +24,8 @@ export function AmazonButton({
       target="_blank"
       rel="sponsored nofollow noopener"
       aria-label={`Voir sur Amazon : ${name}, lien partenaire (nouvel onglet)`}
+      data-umami-event="Clic Amazon"
+      data-umami-event-produit={name}
       className={`min-h-11 ${className}`}
     >
       Voir sur Amazon <ExternalLink className="h-4 w-4" aria-hidden />

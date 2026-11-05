@@ -103,7 +103,13 @@ Mis à jour le 5 novembre 2026 (examen AdSense refusé le 31 octobre 2026, rien 
 
 - **Rôle** : Cloudflare Web Analytics, mesure de fréquentation sans cookie (pages vues, pays, type d'appareil). La balise est ajoutée par Cloudflare aux pages servies ; depuis le 13 octobre 2026, `public/_headers` autorise son script (`static.cloudflareinsights.com`) et son envoi (`cloudflareinsights.com`), bloqués jusque-là. Balise constatée en ligne le 14 octobre 2026 ; la page Confidentialité décrit cette mesure.
 - **Console** : https://dash.cloudflare.com (Analytics & Logs → Web Analytics).
-- **Identifiants publics** : aucun dans le dépôt.
+- **Umami (essai depuis le 5 novembre 2026)** : Umami Cloud, offre gratuite (1 site, 100 000 événements par mois,
+  pas d'accès API), région UE, sans cookie. Un seul « site » Umami partagé par tous les sites Keur : filtrer par
+  nom de domaine (hostname) dans la console. Balise dans `src/app/layout.tsx` (identifiant public `UMAMI_WEBSITE_ID`
+  dans `src/lib/config.ts`, limitée à `keurcook.com`) ; `public/_headers` autorise `cloud.umami.is` (script) et
+  `gateway.umami.is` (envoi). Clics comptés : « Clic Amazon » (avec le nom du produit) et « Menu sites Keur » (avec
+  le site). Console : https://cloud.umami.is. Cloudflare reste en place.
+- **Identifiants publics** : identifiant du site Umami (`UMAMI_WEBSITE_ID`, visible dans chaque page).
 - **Secrets** : aucun.
 - **Coût** : gratuit.
 

@@ -15,6 +15,9 @@ export const siteConfig = {
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "keurcook@toakeur.com",
 };
 
+/** Umami Cloud (offre gratuite, région UE) : identifiant public du site, visible dans chaque page (pas un secret). Un seul « site » Umami partagé par tous les sites Keur (filtrer par nom de domaine), depuis le 5 novembre 2026. */
+export const UMAMI_WEBSITE_ID = "d1715415-5452-48af-a9fa-69e3e2de06f3";
+
 /**
  * Informations légales de l'éditeur (annuaire-entreprises.data.gouv.fr), affichées dans les mentions légales
  * et les conditions d'utilisation. La société ALOHASH édite le site Keur Cook.

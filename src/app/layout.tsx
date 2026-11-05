@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Manrope } from "next/font/google";
 import { ADSENSE_CLIENT } from "@/lib/ads";
-import { siteConfig } from "@/lib/config";
+import { UMAMI_WEBSITE_ID, siteConfig } from "@/lib/config";
 import { DEFAULT_SHARE_IMAGE } from "@/lib/metadata";
 import "./globals.css";
 import "./nuage.css";
@@ -48,6 +48,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${anton.variable} ${manrope.variable} antialiased`} suppressHydrationWarning>
       <head>
+        {/* Mesure d'audience Umami, sans cookie : visites, et clics marqués data-umami-event (Amazon, menu des sites Keur). */}
+        <script defer src="https://cloud.umami.is/script.js" data-website-id={UMAMI_WEBSITE_ID} data-domains="keurcook.com" />
         {/* AdSense : annonces et message de consentement de Google (Confidentialité et messages). */}
         <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossOrigin="anonymous" />
       </head>

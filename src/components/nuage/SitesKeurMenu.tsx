@@ -82,7 +82,7 @@ export function SitesKeurMenu({ variant }: { variant: "bureau" | "mobile" }) {
         <ul>
           {SITES_KEUR.map((s) => (
             <li key={s.href}>
-              <a href={s.href} className={lien}>
+              <a href={s.href} className={lien} data-umami-event="Menu sites Keur" data-umami-event-site={s.nom}>
                 <span className="font-semibold">{s.nom}</span>
                 <span className="text-[#fbeee2]/65"> — {s.detail}</span>
               </a>
@@ -90,7 +90,7 @@ export function SitesKeurMenu({ variant }: { variant: "bureau" | "mobile" }) {
           ))}
         </ul>
         <div className="mt-1 border-t border-[#fbeee2]/15 pt-1">
-          <a href="https://toakeur.com/" className={lien}>
+          <a href="https://toakeur.com/" className={lien} data-umami-event="Menu sites Keur" data-umami-event-site="toakeur.com">
             Toute la maison : <span className="font-semibold">toakeur.com</span>
           </a>
         </div>
