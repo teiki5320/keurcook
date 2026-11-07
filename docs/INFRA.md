@@ -1,6 +1,6 @@
 # INFRA — fiche technique
 
-Mis à jour le 6 novembre 2026 (examen AdSense refusé le 31 octobre 2026 pour « contenu à faible valeur informative », motif lu dans la console le 6 novembre ; 45 articles « Conseils » en ligne ; sitemap de 266 adresses ; dernière publication le 6 novembre 2026) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
+Mis à jour le 7 novembre 2026 (23 articles « Conseils » programmés dont un Black Friday le 20 novembre ; examen AdSense refusé le 31 octobre 2026 pour « contenu à faible valeur informative », motif lu dans la console le 6 novembre ; 45 articles « Conseils » en ligne ; sitemap de 266 adresses ; dernière publication le 6 novembre 2026) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
 
 ## En bref
 
@@ -14,7 +14,7 @@ Mis à jour le 6 novembre 2026 (examen AdSense refusé le 31 octobre 2026 pour �
 ## Parcours
 
 - 🌐 **Web** : 🐙 GitHub — main · publication au vert [ok] → ☁️ Hébergement web — Cloudflare Pages, projet keurcook [ok] → 🔗 Nom de domaine — keurcook.com, SSL Cloudflare [ok] → 👥 Visiteurs — site ouvert au public [ok]
-- 📝 **Contenu** : 🐙 GitHub — 22 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 45 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
+- 📝 **Contenu** : 🐙 GitHub — 23 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 45 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
 - 🛒 **Affiliation** : 🌐 keurcook.com — boutons « Voir sur Amazon » [ok] → 🤝 Affiliation — Amazon Partenaires, tag keurcookfr-21 [ok] → 📦 Amazon.fr — Amazon encaisse et livre [ok]
 - 📰 **Veille actus** : 📡 Tâche de veille — 12 h et 19 h, 15 flux RSS [ok] → 🐙 Dépôt veille — actus/keurcook.json sur GitHub Pages [ok] → 🏗️ Build GitHub Actions — 12 h 50 et 19 h 50, une page /actus/<adresse> par article [ok] → 🌍 keurcook.com — accueil (4), /actus (20), pages pays (3), articles complets [ok]
 - 📢 **Publicité** : 🌐 keurcook.com — six emplacements « Publicité » [ok] → 💰 AdSense (publicité web) — refusé le 31 oct. : contenu à faible valeur [bloquant]

@@ -45,6 +45,7 @@ Validé avec l'utilisateur le 26/09/2026. Depuis le 05/10/2026 : trois articles 
 | 2026-11-16 | ustensiles | Comment culotter une marmite en fonte ? |
 | 2026-11-18 | epicerie | Pourquoi la sauce graine est-elle vendue en conserve ? |
 | 2026-11-20 | cereales | Comment réchauffer le foufou ou l'attiéké ? |
+| 2026-11-20 | ustensiles | Black Friday : que surveiller pour équiper sa cuisine africaine ? (article saisonnier, en plus de celui du jour) |
 | 2026-11-23 | remplacer | Peut-on remplacer le fonio par du couscous ? |
 | 2026-11-25 | sauces | Comment utiliser la pulpe de noix de palme ? |
 | 2026-11-27 | epices | Qu'est-ce que le pèbè et le djansang ? |
