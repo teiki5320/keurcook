@@ -14,9 +14,12 @@ theme: epicerie             # epicerie, cereales, remplacer, sauces, epices, boi
 resume: Réponse courte, affichée en chapeau.
 recettes: ndole, mafe       # slugs de recettes liées (facultatif)
 produits: fonio             # slugs de produits liés (facultatif)
-image: /conseils/<slug>.webp  # à ajouter quand la photo existe (public/conseils/)
+image: /conseils/<slug>.webp  # à ajouter quand la photo existe (public/conseils/, webp 1800 px de large, 16:9)
 imageAlt: Description de la photo.
-imagePrompt: Consigne de génération de la photo (OpenArt, Seedream 4.5, 2K, 16:9).
+imageCredit: Auteur de la photo (obligatoire pour une photo libre CC BY / CC BY-SA)
+imageLicense: CC BY-SA 4.0
+imageSource: https://commons.wikimedia.org/wiki/File:… (page d'origine)
+imagePrompt: (anciens articles) consigne de génération de la photo (OpenArt, Seedream 4.5, 2K, 16:9).
 ---
 ```
 

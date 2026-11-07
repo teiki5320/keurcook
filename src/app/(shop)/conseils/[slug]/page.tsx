@@ -161,6 +161,18 @@ export default async function ConseilPage({ params }: PageProps<"/conseils/[slug
             </span>
           )}
         </div>
+        {conseil.image && conseil.imageCredit ? (
+          <figcaption className="mt-2 text-[11.5px] break-words text-[#fbeee2]/50">
+            Photo :{" "}
+            {conseil.imageSource ? (
+              <a href={conseil.imageSource} target="_blank" rel="noopener nofollow" className="underline decoration-[#fbeee2]/25 underline-offset-2 hover:text-[#fbeee2]">
+                {[conseil.imageCredit, conseil.imageLicense].filter(Boolean).join(" · ")}
+              </a>
+            ) : (
+              [conseil.imageCredit, conseil.imageLicense].filter(Boolean).join(" · ")
+            )}
+          </figcaption>
+        ) : null}
       </figure>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.2fr)] lg:gap-14">

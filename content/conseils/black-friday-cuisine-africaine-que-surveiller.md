@@ -7,7 +7,11 @@ theme: ustensiles
 resume: Le Black Friday a lieu le vendredi 27 novembre 2026. Des offres peuvent apparaître sur Amazon, sans garantie. Dressez d'abord la liste de ce qui vous manque, puis vérifiez le prix et l'offre sur Amazon.
 recettes: kedjenou, mafe, thieboudienne
 produits: marmite-potjie, mortier-en-granit, couscoussier, theiere-a-ataya, livre-grain-d-afrique
-imagePrompt: Photographie culinaire, table de cuisine en bois avec marmite en fonte à trois pieds, mortier en granit, théière inox et livre de recettes ouvert, lumière chaude du matin, sans texte ni logo, format 16:9.
+image: /conseils/black-friday-cuisine-africaine-que-surveiller.webp
+imageAlt: Cuisine en plein air au Botswana : grandes marmites en fonte à trois pieds posées sur un feu, avec des cuisinières autour.
+imageCredit: Oratile Leipego
+imageLicense: CC BY-SA 4.0
+imageSource: https://commons.wikimedia.org/wiki/File:Cooking_using_African_pots_in_Motokwe.jpg
 ---
 ## Quand a lieu le Black Friday ?
 

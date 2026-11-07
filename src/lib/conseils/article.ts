@@ -17,6 +17,10 @@ export interface Conseil {
   /** Photo (ex. /conseils/<slug>.webp) : absente tant qu'elle n'est pas générée. */
   image: string | null;
   imageAlt: string | null;
+  /** Crédit d'une photo libre (auteur, licence, page d'origine) : affiché sous la photo quand il existe. */
+  imageCredit: string | null;
+  imageLicense: string | null;
+  imageSource: string | null;
   /** Recettes et produits du site liés à l'article (slugs). */
   recettes: string[];
   produits: string[];
@@ -51,6 +55,9 @@ export function parseConseil(slug: string, raw: string): Conseil {
     resume: meta.resume ?? "",
     image: meta.image || null,
     imageAlt: meta.imageAlt || null,
+    imageCredit: meta.imageCredit || null,
+    imageLicense: meta.imageLicense || null,
+    imageSource: meta.imageSource || null,
     recettes: list(meta.recettes),
     produits: list(meta.produits),
     body: match[2].trim(),
