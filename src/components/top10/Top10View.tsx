@@ -155,6 +155,7 @@ export function Top10View({ tops, active, items }: { tops: Top10[]; active: Top1
                     aria-label={`Voir sur Amazon : ${it.productData.name}, lien partenaire (nouvel onglet)`}
                     data-umami-event="Clic Amazon"
                     data-umami-event-produit={it.productData.name}
+                    data-umami-event-emplacement="top"
                     className="btn-primary min-h-11 px-6"
                   >
                     Voir sur Amazon <ExternalLink className="h-4 w-4" aria-hidden />
