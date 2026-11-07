@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BlocActus } from "@/components/actus/BlocActus";
 import { getArticles, getSlugsConstruits } from "@/lib/data/articles";
+import { getRecipes } from "@/lib/data/recipes";
+import { countryByCode } from "@/lib/countries";
 import { estActuMaghreb } from "@/lib/veille-articles";
 import { anton } from "@/components/nuage/typography";
 import { siteConfig } from "@/lib/config";
@@ -16,11 +18,18 @@ export const metadata: Metadata = pageMetadata({
   path: "/actus",
 });
 
+const datePublication = (iso: string) =>
+  new Date(iso).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" });
+
 /** Page « Actus » : les 20 dernières actus de la cuisine africaine, lues en direct depuis la veille. */
-export default function ActusPage() {
+export default async function ActusPage() {
   // Maintenance : l'écran d'attente remplace la page, rien n'est produit.
   if (getMaintenance().enabled) return null;
   const articles = getArticles().filter((a) => !estActuMaghreb(a));
+  // Pays cités par les articles qui ont des recettes sur le site : liens internes vers leur page.
+  const recipes = await getRecipes();
+  const codes = [...new Set(articles.flatMap((a) => a.pays ?? []))].filter((code) => recipes.some((r) => r.countryCode === code));
+  const paysCites = codes.map((code) => countryByCode(code)).filter((c): c is NonNullable<typeof c> => !!c);
   return (
     <div className="container-page">
       <JsonLdScript
@@ -50,12 +59,39 @@ export default function ActusPage() {
                 <Link href={`/actus/${a.slug}`} className="text-lg font-bold hover:text-[#ff7a3d]">
                   {a.titre}
                 </Link>
+                <p className="mt-1 text-sm text-[#fbeee2]/55">
+                  <time dateTime={a.publie_le}>{datePublication(a.publie_le)}</time> · {a.lecture_min} min de lecture
+                </p>
                 <p className="mt-1 leading-relaxed text-[#fbeee2]/75">{a.chapo}</p>
               </li>
             ))}
           </ul>
         </section>
       )}
+      <section aria-labelledby="aller-plus-loin" className="mt-14 max-w-3xl">
+        <h2 id="aller-plus-loin" className="font-display text-3xl">
+          Passer en cuisine<span className="text-[#ff7a3d]">.</span>
+        </h2>
+        <p className="mt-4 leading-relaxed text-[#fbeee2]/80">
+          Une actu vous a donné envie de cuisiner ? Retrouvez nos <Link href="/recettes" className="font-bold text-[#ff7a3d] hover:underline">recettes africaines</Link>,
+          la <Link href="/pays" className="font-bold text-[#ff7a3d] hover:underline">cuisine pays par pays</Link> et
+          nos <Link href="/conseils" className="font-bold text-[#ff7a3d] hover:underline">conseils pour bien cuisiner</Link>.
+        </p>
+        {paysCites.length > 0 && (
+          <>
+            <h3 className="mt-6 text-lg font-bold">Les pays de ces actus</h3>
+            <ul className="mt-2 flex flex-wrap gap-x-5 gap-y-2">
+              {paysCites.map((c) => (
+                <li key={c.code}>
+                  <Link href={`/pays/${c.slug}`} className="text-[#ff7a3d] hover:underline">
+                    La cuisine {c.of}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </section>
     </div>
   );
 }
