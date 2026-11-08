@@ -48,7 +48,7 @@ Données dans `src/lib/demo/top10.ts`, vérifiées par `tests/top10.test.ts`. Ch
 ### Publicité (Google AdSense)
 
 - Compte AdSense `pub-2680784147246798` (comptes de gestion sur `admin@toakeur.com`). Script chargé dans `src/app/layout.tsx`, emplacements « Publicité » (`src/components/ads/AdSlot.tsx`, `src/lib/ads.ts`) et `public/ads.txt` en place.
-- **Examen refusé par Google le 31 octobre 2026** (demande faite le 12 octobre 2026) : Google demande de corriger des problèmes sur le site avant d'y diffuser des annonces (e-mail AdSense du 31 octobre 2026, aucun nouvel e-mail au 7 novembre 2026 ; motif revérifié dans la console, page Sites, le 7 novembre 2026 : « contenu à faible valeur informative »). Aucune annonce ne s'affiche ; il faudra corriger puis redemander l'examen.
+- **Examen refusé par Google le 31 octobre 2026** (demande faite le 12 octobre 2026) : Google demande de corriger des problèmes sur le site avant d'y diffuser des annonces (e-mail AdSense du 31 octobre 2026, aucun nouvel e-mail au 8 novembre 2026 ; motif revérifié dans la console, page Sites, le 8 novembre 2026 : « contenu à faible valeur informative »). Aucune annonce ne s'affiche ; il faudra corriger puis redemander l'examen.
 
 ### Pinterest
 
