@@ -266,4 +266,179 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], CountryDetail>> = {
       },
     ],
   },
+
+  ethiopie: {
+    histoire:
+      "Pays de hauts plateaux, l'Éthiopie culmine à plus de 4 500 mètres dans le massif du Simien et descend sous le niveau de la mer dans la plaine du Danakil. C'est l'un des rares pays d'Afrique à n'avoir jamais été colonisé, malgré l'occupation italienne de 1936 à 1941. Le pays suit son propre calendrier, avec treize mois, et le christianisme y est présent depuis le IVe siècle.\n\nLes Oromos et les Amharas sont les peuples les plus nombreux, suivis des Somalis, des Tigréens et de dizaines d'autres. Le teff, minuscule céréale domestiquée sur ces plateaux, et le café, né dans les forêts du sud-ouest, sont les deux grands cadeaux de l'Éthiopie à la cuisine du monde.",
+    regions:
+      "Au nord, en pays tigréen, l'injera accompagne le tsebhi, un ragoût épicé. Chez les Gouragués, au sud-ouest d'Addis-Abeba, on prépare le kitfo, bœuf haché assaisonné de mitmita et de beurre épicé, servi cru ou à peine saisi avec un fromage frais, l'ayib. La région de Harar, à l'est, cultive un café aux arômes fruités et garde une cuisine marquée par l'islam. Chez les Oromos, le chechebsa, galette émiettée au beurre et au berbéré, se mange volontiers au petit-déjeuner.",
+    produits:
+      "Le [berbéré](/produit/berbere), mélange de piment et d'épices, est la base de presque tous les wat. La [farine de teff](/produit/farine-de-teff) sert à l'injera, qu'on cuit sur une [plaque de cuisson](/produit/plaque-a-injera) large et plate. La [farine de pois chiches](/produit/farine-de-pois-chiches) est la base du shiro, que les familles éthiopiennes relèvent d'ail, d'oignon et d'épices.\n\nPour le café, trois origines montrent la diversité du pays : le [Harrar](/produit/cafe-harrar), cultivé dans l'est, le [Yirgacheffe](/produit/cafe-yirgacheffe), floral et léger, et le [Moka Sidamo](/produit/cafe-moka-sidamo), venu du sud. Torréfiés devant les invités, ces grains sont au cœur de la cérémonie du café.",
+    table:
+      "On mange de la main droite, en déchirant l'injera pour attraper la sauce. Porter une bouchée directement à la bouche de son voisin, la gursha, est un geste d'affection et d'amitié. Les fidèles orthodoxes jeûnent le mercredi et le vendredi, ainsi que pendant plusieurs longues périodes de l'année : ces jours-là, ni viande, ni lait, ni œufs. Les fêtes, comme Genna, le Noël éthiopien, ou Fasika, Pâques, voient le retour du doro wat et du tej, un vin de miel. Dans les campagnes, on brasse la tella, une bière d'orge ou de teff.",
+    commencer:
+      "L'[injera](/recette/injera) demande quelques jours de fermentation : lisez d'abord [Qu'est-ce que la farine de teff et que peut-on en faire ?](/conseils/que-faire-avec-la-farine-de-teff). Les plats de jeûne sont les plus simples : le [misir wat](/recette/misir-wat) de lentilles et le [shiro](/recette/shiro). Le [doro wat](/recette/doro-wat) est plus long, mais [Qu'est-ce que le berbéré ?](/conseils/quest-ce-que-le-berbere) vous aidera à doser l'épice. Pour finir, préparez le [buna, café éthiopien](/recette/buna-cafe-ethiopien), en suivant [Comment se déroule la cérémonie du café éthiopienne ?](/conseils/ceremonie-du-cafe-ethiopienne), et comparez les origines avec [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda).",
+    faq: [
+      {
+        question: "Pourquoi trouve-t-on autant de plats sans viande en Éthiopie ?",
+        reponse:
+          "À cause du jeûne orthodoxe, qui exclut les produits animaux pendant de nombreux jours de l'année. Les cuisinières ont développé une grande variété de plats de légumineuses et de légumes, réunis sur un même plateau sous le nom de beyaynetu.",
+      },
+      {
+        question: "Le café vient-il vraiment d'Éthiopie ?",
+        reponse:
+          "Oui, l'arabica est originaire des forêts du sud-ouest du pays, notamment de la région de Kaffa. Une légende raconte qu'un berger, Kaldi, remarqua l'agitation de ses chèvres après qu'elles eurent mangé les fruits rouges du caféier.",
+      },
+    ],
+  },
+
+  congo: {
+    histoire:
+      "La République du Congo, souvent appelée Congo-Brazzaville, s'étend de la côte atlantique, autour de Pointe-Noire, jusqu'aux forêts du nord, que traversent la Sangha et l'Oubangui. Brazzaville et Kinshasa se font face de part et d'autre du fleuve Congo : ce sont les deux capitales les plus proches du monde, si l'on met à part Rome et le Vatican. Le pays est devenu indépendant le 15 août 1960.\n\nLe français est la langue officielle, et le lingala et le kituba sont les deux langues nationales. Les Kongos, au sud, les Tékés, sur les plateaux du centre, et les Mbochis, au nord, comptent parmi les peuples les plus nombreux. La forêt couvre une grande partie du territoire, et le fleuve fournit depuis toujours poissons et voies d'échange.",
+    regions:
+      "Au sud, dans le Pool et autour de Brazzaville, le saka-saka et le poisson salé reviennent presque chaque jour. Les plateaux Tékés, au centre, sont une terre de manioc. Dans le nord forestier, la cuisine fait une large place au poisson d'eau douce, aux chenilles et aux champignons de saison, et l'on fume le poisson pour le conserver pendant des semaines. Sur la côte du Kouilou, autour de Pointe-Noire, le poisson de mer et les crevettes remplacent ceux du fleuve.",
+    produits:
+      "Les [feuilles de manioc pilées](/produit/feuilles-de-manioc) font le saka-saka, et la [chikwangue](/produit/chikwangue), roulée dans ses feuilles, l'accompagne. L'[egusi moulu](/produit/graines-d-egusi), proche des mbika, épaissit les sauces au poisson. La [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme) donne la sauce moambé, et l'[huile de palme rouge](/produit/huile-de-palme-rouge) colore le saka-saka.\n\nPour le liboké, les [feuilles de bananier fraîches](/produit/feuilles-de-bananier-fraiches) sont indispensables, et le [piment oiseau](/produit/piment-pili-pili) se glisse dans le paquet avant la cuisson. Le livre [La cuisine congolaise](/produit/livre-la-cuisine-congolaise), de Fidèle Mialoundama et Isabelle Goma Mouyokani, réunit les recettes du pays.",
+    table:
+      "Le repas s'organise autour du manioc, servi en foufou ou en chikwangue, d'une sauce et d'un poisson. Les Congolais aiment se retrouver dans les nganda, les buvettes de quartier où l'on grille poisson et viande. Le safou, fruit violet du safoutier, se mange attendri à l'eau chaude ou sur la braise, souvent avec du manioc. Les cérémonies familiales, mariages, retraits de deuil ou retours au village, se fêtent avec de grandes marmites de sauce et du vin de palme fraîchement récolté.",
+    commencer:
+      "Le [liboké de poisson](/recette/liboke-de-poisson) est la recette la plus emblématique, et elle se réussit très bien au four quand on n'a pas de braise. Le [pondu](/recette/pondu) de la rive voisine se prépare comme le saka-saka. La [moambé](/recette/moambe) et le [poulet nyembwe](/recette/poulet-nyembwe) partagent la même base de noix de palme. Pour ajuster le piment, lisez [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment), et pour le poisson, [Par quoi remplacer le poisson fumé dans une sauce ?](/conseils/remplacer-le-poisson-fume).",
+    faq: [
+      {
+        question: "Saka-saka et pondu, est-ce la même chose ?",
+        reponse:
+          "Oui, ce sont deux noms des feuilles de manioc pilées et mijotées. On dit plutôt saka-saka à Brazzaville et pondu à Kinshasa, avec de petites variantes d'une famille à l'autre.",
+      },
+      {
+        question: "Pourquoi cuire en feuilles de bananier ?",
+        reponse:
+          "La feuille enferme la vapeur et les jus : le poisson cuit dans son propre bouillon sans se dessécher, et prend un léger parfum végétal. C'est tout le principe du liboké.",
+      },
+    ],
+  },
+
+  ouganda: {
+    histoire:
+      "L'Ouganda est un pays de hauts plateaux sans accès à la mer, bordé au sud par le lac Victoria. Le Nil Blanc en sort à Jinja pour commencer son long voyage vers la Méditerranée. Winston Churchill, de passage en 1907, l'avait surnommé « la perle de l'Afrique » pour ses paysages verdoyants. Indépendant depuis 1962, le pays a pour langues officielles l'anglais et le swahili.\n\nLe royaume du Buganda, qui a donné son nom au pays, reste un pilier culturel autour de Kampala. Les sols volcaniques et les deux saisons des pluies permettent de récolter presque toute l'année bananes, haricots, maïs, patates douces et arachides.",
+    regions:
+      "Le centre, pays des Bagandas, mange le matoké et le luwombo. Au nord, chez les Acholis et les Langis, on cuisine le mil, le sorgho et le sésame, appelé simsim, dont la pâte enrichit les sauces de feuilles ; le malakwang, légume-feuille acidulé, y est très apprécié. À l'ouest, en Ankole, pays d'éleveurs aux vaches à longues cornes, le lait et le ghee sont essentiels. À l'est, sur les pentes du mont Elgon, les Bagisus préparent le malewa, des pousses de bambou fumées, et cultivent un café arabica.",
+    produits:
+      "La [pâte d'arachide](/produit/pate-d-arachide) sert à la sauce binyebwa, qui nappe le matoké ou les patates douces. Les [feuilles de bananier fraîches](/produit/feuilles-de-bananier-fraiches) sont indispensables pour le luwombo et pour cuire le matoké à la vapeur, comme dans les cuisines de Kampala. La [farine de maïs blanc](/produit/farine-de-mais-blanc) donne le posho, la pâte ferme servie dans les cantines et les écoles.\n\nUne [marmite en aluminium](/produit/marmite-en-aluminium), comme celles qu'on pose sur le feu de bois, convient aux longues cuissons. Un [mortier en bois](/produit/mortier-et-pilon-en-bois) permet d'écraser soi-même les arachides grillées ou le sésame pour une sauce plus rustique.",
+    table:
+      "Le repas de midi est souvent le plus copieux, et le matoké, écrasé puis enveloppé dans sa feuille, garde la chaleur jusqu'au moment de servir. Les familles posent plusieurs féculents sur la table, matoké, patate douce, manioc ou posho, avec une seule sauce. Le chapati, hérité des communautés indiennes, se vend à chaque coin de rue. Le soir, on boit volontiers une bière locale ou le waragi, un alcool distillé à partir de banane ou de mil.",
+    commencer:
+      "Le [matoké](/recette/matoke) est le plat à essayer en premier ; à défaut de bananes à cuire d'Afrique de l'Est, le plantain vert s'en approche. Le [luwombo](/recette/luwombo) demande un peu plus d'organisation, mais la cuisson se fait toute seule. Le posho se prépare comme l'[ugali du Kenya](/recette/ugali-sukuma-wiki). Pour la sauce arachide, lisez [Comment épaissir une sauce arachide ?](/conseils/comment-epaissir-une-sauce-arachide), et pour les repas sans viande, [Quels plats africains sont naturellement végétariens ?](/conseils/plats-africains-vegetariens).",
+    faq: [
+      {
+        question: "Le matoké est-il une banane plantain ?",
+        reponse:
+          "Pas exactement. C'est une banane des hauts plateaux d'Afrique de l'Est, récoltée verte et cuisinée comme un légume. Une fois cuite, elle est plus tendre que le plantain.",
+      },
+      {
+        question: "Que sont les nsenene ?",
+        reponse:
+          "Des sauterelles à longues antennes, capturées la nuit à la lumière pendant les saisons des pluies, surtout en mai et en novembre. On leur retire ailes et pattes avant de les faire revenir avec de l'oignon : c'est l'un des en-cas préférés des Ougandais.",
+      },
+    ],
+  },
+
+  kenya: {
+    histoire:
+      "Le Kenya s'étend de l'océan Indien jusqu'au lac Victoria, coupé du nord au sud par la vallée du Rift. Le mont Kenya, qui a donné son nom au pays, dépasse 5 000 mètres. Indépendant depuis 1963, le pays a deux langues officielles, l'anglais et le swahili. Nairobi, la capitale, est née d'un dépôt du chemin de fer qui reliait Mombasa à l'Ouganda, à la fin du XIXe siècle.\n\nPlus de quarante peuples y vivent : Kikuyus, Luhyas, Kalenjins, Luos, Kambas, Massaïs et Swahilis de la côte. Le maïs, venu d'Amérique, s'est imposé au XXe siècle comme la céréale de base, tandis que les plateaux d'altitude se couvraient de plantations de thé et de café.",
+    regions:
+      "Les Kikuyus du centre préparent le githeri, maïs et haricots mijotés, et le mukimo, purée de pommes de terre, de maïs et de légumes verts. Les Luos des rives du lac Victoria mangent le tilapia frit ou séché avec l'ugali. Les Massaïs et d'autres peuples d'éleveurs vivent surtout du lait et de la viande de leurs troupeaux. Sur la côte, la cuisine swahilie mêle influences arabes, indiennes et africaines : viazi karai, pommes de terre en beignets épicés, mandazi au lait de coco et poisson au curry de coco.",
+    produits:
+      "La [farine de maïs blanc](/produit/farine-de-mais-blanc) est la base de l'ugali : fine et bien blanche, elle donne la texture attendue. Le [thé noir du Kenya](/produit/the-noir-du-kenya), cultivé sur les hauts plateaux de Kericho et du mont Kenya, sert au chai, et le [thé noir à la cardamome](/produit/the-noir-du-kenya-cardamome) apporte d'emblée le parfum épicé. Le [café en grains du Kenya](/produit/cafe-du-kenya), connu pour son acidité vive, pousse sur les sols volcaniques du centre.\n\nPour la nyama choma, des [brochettes en métal](/produit/brochettes-en-metal) suffisent si l'on préfère la viande en morceaux. Le [piment oiseau](/produit/piment-pili-pili), que les Kényans appellent pilipili, relève le kachumbari.",
+    table:
+      "Le chai, thé noir bouilli avec du lait et du sucre, se boit dès le matin, souvent avec un mandazi ou une tranche de pain. Le midi, dans les cantines de Nairobi, on sert ugali, haricots et légumes verts, ou du riz au ragoût. Le week-end, les amis se retrouvent dans les bars à nyama choma, où l'on choisit sa viande crue avant qu'elle ne passe sur le gril. Le chapati, hérité des communautés indiennes, accompagne les repas de fête.",
+    commencer:
+      "L'[ugali et son sukuma wiki](/recette/ugali-sukuma-wiki) forment le repas le plus simple et le plus représentatif. La [nyama choma](/recette/nyama-choma) se prépare au barbecue comme au four. Le [chai kényan](/recette/chai-kenyan) se fait en quelques minutes, et le [kahawa chungu](/recette/kahawa-chungu), café amer de la côte, rappelle les vendeurs ambulants de Mombasa. Pour le café, [Café en grains ou moulu : que choisir et comment le conserver ?](/conseils/cafe-en-grains-ou-moulu) vous guidera. Le [pilau](/recette/pilau) de la côte swahilie complète le tableau.",
+    faq: [
+      {
+        question: "Le Kenya produit-il beaucoup de thé ?",
+        reponse:
+          "Oui. C'est l'un des premiers exportateurs mondiaux de thé noir, presque entièrement produit selon la méthode CTC, qui donne de petits grains et une infusion corsée.",
+      },
+      {
+        question: "Que veut dire « nyama choma » ?",
+        reponse:
+          "En swahili, nyama signifie viande et choma veut dire grillé. L'expression désigne la viande cuite lentement sur la braise, le plus souvent de la chèvre ou du bœuf.",
+      },
+    ],
+  },
+
+  tanzanie: {
+    histoire:
+      "La Tanzanie est née en 1964 de l'union du Tanganyika, sur le continent, et de l'archipel de Zanzibar. Julius Nyerere, son premier président, a fait du swahili la langue commune d'un pays qui compte plus de cent vingt peuples. Dodoma est la capitale officielle, mais Dar es Salaam reste la plus grande ville et le premier port.\n\nLe pays abrite le Kilimandjaro, plus haut sommet d'Afrique avec 5 895 mètres, une partie du lac Victoria et le lac Tanganyika. Sur la côte, des siècles de commerce avec l'Arabie, la Perse et l'Inde ont façonné la langue et la cuisine swahilies. Au XIXe siècle, le sultan d'Oman installa sa capitale à Zanzibar, et l'île devint l'un des premiers producteurs mondiaux de clou de girofle.",
+    regions:
+      "Au nord, sur les pentes du Kilimandjaro, les Chaggas cultivent la banane et le café ; ils préparent le mtori, une soupe de bananes et de viande, et une bière de banane, le mbege. Les Massaïs de la steppe vivent de leurs troupeaux. Autour du lac Victoria, le tilapia et la perche du Nil se mangent avec l'ugali. Sur la côte et à Zanzibar, la cuisine est la plus parfumée du pays : poisson au lait de coco, biryani, et urojo, une soupe acidulée vendue le soir dans les rues de Zanzibar.",
+    produits:
+      "Le [café en grains de Tanzanie](/produit/cafe-de-tanzanie) vient surtout des pentes du Kilimandjaro et des hauts plateaux du sud. La [farine de maïs blanc](/produit/farine-de-mais-blanc) donne l'ugali de tous les jours. L'[infusion de tamarin](/produit/infusion-de-tamarin) rappelle l'acidité de l'urojo et des sauces côtières, et la [citronnelle séchée](/produit/citronnelle-sechee) sert au chai ya mchaichai, le thé à la citronnelle.\n\nPour les brochettes mishkaki, des [brochettes en métal](/produit/brochettes-en-metal) permettent de griller la viande marinée comme sur les marchés de nuit. Le [piment oiseau](/produit/piment-pili-pili) sert à la sauce pilipili qui accompagne grillades et frites. Pour le pilau, une [marmite en aluminium](/produit/marmite-en-aluminium) à fond épais évite que le riz attache.",
+    table:
+      "Le matin, on boit le chai avec des chapatis ou des maandazi, beignets légèrement sucrés. Le midi, l'ugali ou le riz accompagnent les haricots, les légumes verts et un peu de viande. À Zanzibar, des vendeurs ambulants servent dans les rues le kahawa, un café noir très fort versé dans de minuscules tasses depuis une cafetière en cuivre. Pendant le ramadan, très suivi sur la côte, le repas de rupture du jeûne réunit familles et voisins autour des beignets, des fruits et du thé.",
+    commencer:
+      "Le [pilau](/recette/pilau) est le plat tanzanien par excellence : faites revenir les épices entières, ce sont elles qui portent tout le parfum. L'[ugali au sukuma wiki](/recette/ugali-sukuma-wiki) se mange aussi bien à Dar es Salaam qu'à Nairobi. La [nyama choma](/recette/nyama-choma) rappelle les grillades du soir, et le [kahawa chungu](/recette/kahawa-chungu) le café des rues de Zanzibar. Pour ajuster le piquant, lisez [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment) ; pour le café, [Comment torréfier du café vert à la maison ?](/conseils/torrefier-cafe-vert-maison).",
+    faq: [
+      {
+        question: "D'où vient le nom Tanzanie ?",
+        reponse:
+          "Il réunit les premières syllabes de Tanganyika et de Zanzibar, les deux États qui ont fusionné en 1964.",
+      },
+      {
+        question: "Le pilau de Zanzibar est-il un biryani ?",
+        reponse:
+          "Non. Dans le pilau, le riz cuit directement avec la viande et les épices, dans une seule marmite. Le biryani, lui, superpose un riz et une sauce préparés séparément.",
+      },
+    ],
+  },
+
+  madagascar: {
+    histoire:
+      "Quatrième plus grande île du monde, Madagascar est séparée de l'Afrique par le canal du Mozambique. Ses premiers habitants sont venus d'Asie du Sud-Est, probablement de la région de Bornéo, il y a plus de mille ans, puis des populations bantoues d'Afrique de l'Est les ont rejoints. La langue malgache appartient d'ailleurs à la famille austronésienne, comme l'indonésien.\n\nCe double héritage se retrouve à table : la riziculture en terrasses des hauts plateaux rappelle l'Asie, tandis que l'élevage du zébu tient une place centrale dans la vie et les cérémonies. Le royaume merina, centré sur Antananarivo, a unifié une grande partie de l'île au XIXe siècle, avant la colonisation française. Le pays est indépendant depuis 1960.",
+    regions:
+      "Les hauts plateaux, autour d'Antananarivo et d'Antsirabe, sont le pays du riz, du ravitoto et du romazava. La côte est, humide, produit le litchi autour de Toamasina, le clou de girofle et le café, et cuisine volontiers au lait de coco. Le nord-est, région de la Sava, fournit l'essentiel de la vanille du pays. Dans l'ouest et le sud, plus secs, l'élevage du zébu domine, et le manioc, le maïs et le sorgho complètent ou remplacent le riz.",
+    produits:
+      "La [vanille bourbon de Madagascar](/produit/vanille-bourbon-de-madagascar), cultivée dans la Sava, est le produit le plus célèbre de l'île ; on l'emploie aussi dans des plats salés, avec le poisson ou le poulet. Le [poivre sauvage voatsiperifery](/produit/poivre-sauvage-voatsiperifery), cueilli sur des lianes de la forêt, a un parfum boisé et frais. Les [feuilles de manioc pilées](/produit/feuilles-de-manioc) font le ravitoto sans des heures de pilon.\n\nLe [piment oiseau](/produit/piment-pili-pili), écrasé avec du sel, donne un sakay maison. Les [feuilles de bananier fraîches](/produit/feuilles-de-bananier-fraiches) servent à envelopper le koba et d'autres préparations cuites à l'eau. Un [mortier en bois](/produit/mortier-et-pilon-en-bois) reste l'outil des cuisines malgaches pour broyer feuilles et épices.",
+    table:
+      "Le riz se mange matin, midi et soir. Au petit-déjeuner, beaucoup de familles prennent le vary sosoa, une bouillie de riz, parfois accompagnée de viande ou de brèdes. Le mi sao, nouilles sautées héritées de la communauté chinoise, et les sambos, cousins des samoussas, se vendent dans les petites gargotes appelées hotely. Le zébu se prépare en hen'omby ritra, viande mijotée jusqu'à ce que toute la sauce se soit évaporée.",
+    commencer:
+      "Le [romazava](/recette/romazava) est le plat idéal pour commencer : un bouillon de viande et de feuilles vertes, servi avec un grand bol de riz. Le [ravitoto](/recette/ravitoto) demande une cuisson longue, mais très peu de travail. Les feuilles séchées se gardent longtemps si l'on suit [Comment conserver les feuilles séchées ?](/conseils/conserver-feuilles-sechees). Pour le sakay, voyez [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment), et si vous débutez, [Par quelle recette africaine commencer quand on débute ?](/conseils/par-quelle-recette-commencer) propose d'autres pistes.",
+    faq: [
+      {
+        question: "Pourquoi le riz compte-t-il autant à Madagascar ?",
+        reponse:
+          "Il est cultivé sur l'île depuis l'arrivée des premiers habitants venus d'Asie, et les Malgaches comptent parmi les plus grands mangeurs de riz du monde par habitant. Un repas sans riz n'y est pas considéré comme un vrai repas.",
+      },
+      {
+        question: "Qu'est-ce que le voatsiperifery ?",
+        reponse:
+          "Un poivre sauvage récolté sur des lianes du genre Piper dans les forêts de l'île. Ses grains gardent une petite queue, et son goût est plus frais et plus résineux que celui du poivre noir.",
+      },
+    ],
+  },
+
+  "afrique-du-sud": {
+    histoire:
+      "À la pointe sud du continent, l'Afrique du Sud est baignée par l'Atlantique et l'océan Indien. Depuis 2023, le pays compte douze langues officielles, dont le zoulou, le xhosa, l'afrikaans, l'anglais et la langue des signes sud-africaine. En 1652, la Compagnie néerlandaise des Indes orientales installa au Cap une station de ravitaillement pour ses navires ; elle y fit venir des esclaves d'Asie du Sud-Est, dont les descendants forment la communauté malaise du Cap. Des huguenots français arrivèrent en 1688 et développèrent la vigne.\n\nÀ partir de 1860, des travailleurs indiens furent amenés au Natal pour les plantations de canne à sucre. Après la fin de l'apartheid et l'élection de Nelson Mandela en 1994, le pays a pris le surnom de nation arc-en-ciel.",
+    regions:
+      "Au Cap, la cuisine malaise parfume les plats au curcuma, à la cannelle et aux fruits secs : bobotie, bredie de mouton, koesisters épicés. À Durban, la grande communauté indienne a inventé le bunny chow, un demi-pain évidé rempli de curry. Dans le Highveld, autour de Johannesburg, le pap et la viande grillée dominent. Les cuisines zouloue et xhosa reposent sur le maïs, les haricots et le lait caillé, l'amasi ; l'umngqusho, maïs concassé cuit avec des haricots, passait pour le plat préféré de Nelson Mandela.",
+    produits:
+      "Le [biltong](/produit/biltong), viande séchée au vinaigre et à la coriandre, se grignote devant les matchs de rugby. Le [rooibos](/produit/rooibos) et le [rooibos vert](/produit/rooibos-vert), non fermenté, viennent du Cederberg, et le [honeybush](/produit/honeybush), une autre plante infusée, pousse dans les montagnes du Cap. La [farine de maïs blanc](/produit/farine-de-mais-blanc) sert au pap, et la [marmite potjie](/produit/marmite-potjie), en fonte à trois pieds, se pose directement sur les braises.\n\nLa [sauce peri-peri](/produit/sauce-peri-peri), venue du Mozambique voisin et de l'héritage portugais, relève le poulet grillé, très populaire dans tout le pays. Des [brochettes en métal](/produit/brochettes-en-metal) suffisent pour les sosaties, brochettes marinées de la cuisine du Cap.",
+    table:
+      "Le braai dépasse le simple repas : le 24 septembre, jour du Patrimoine, beaucoup de Sud-Africains le rebaptisent National Braai Day. Le petit-déjeuner peut être une bouillie de maïs, du pain ou des rusks, biscuits secs qu'on trempe dans le café. Dans les townships, on vend le kota, quart de pain garni de frites et de saucisse, et le vetkoek, pain frit fourré de viande hachée. Au dessert, la melktert, tarte au lait à la cannelle, et le malva pudding, gâteau à l'abricot nappé d'un sirop crémeux, se disputent les faveurs du pays.",
+    commencer:
+      "Le [chakalaka](/recette/chakalaka) est rapide, se garde bien et accompagne aussi bien le pap que les grillades. Le [bobotie](/recette/bobotie) fait découvrir la cuisine malaise du Cap avec des ingrédients faciles à trouver. Pour finir sur une note fraîche, le [rooibos glacé](/recette/rooibos-glace) se prépare la veille ; [Qu'est-ce que le rooibos et comment l'infuser ?](/conseils/quest-ce-que-le-rooibos) explique le temps d'infusion. Si vous avez une cocotte en fonte, lisez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces) avant votre premier potjie.",
+    faq: [
+      {
+        question: "Quelle différence entre le biltong et une viande séchée ordinaire ?",
+        reponse:
+          "Le biltong est mariné au vinaigre et aux épices, surtout la coriandre, puis séché à l'air sans être fumé ni cuit. Il est souvent coupé en lamelles épaisses.",
+      },
+      {
+        question: "Le rooibos est-il un thé ?",
+        reponse:
+          "Non. C'est une plante de la famille des légumineuses, Aspalathus linearis, qui pousse dans les montagnes du Cederberg, au nord du Cap. Ce n'est donc pas un thé au sens botanique, même si on l'infuse de la même façon.",
+      },
+    ],
+  },
 };
