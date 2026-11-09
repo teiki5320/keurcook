@@ -673,4 +673,196 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "rooibos-vert": {
+    origine:
+      "Le rooibos, Aspalathus linearis, est un arbuste aux feuilles en aiguilles de la famille des légumineuses, qui ne pousse guère ailleurs que dans les montagnes du Cederberg et les environs de Clanwilliam, au nord du Cap. Son nom signifie « buisson rouge » en afrikaans, à cause de la couleur que prennent ses feuilles une fois fermentées.\n\nLe rooibos vert suit une autre voie. Aussitôt coupées, les feuilles sont séchées rapidement, sans passer par l'étape d'oxydation qui les ferait rougir. Elles restent vert olive et gardent un goût végétal, proche du foin frais, avec une légère note de miel. Cette version, plus récente que le rooibos rouge, reste moins répandue.",
+    choisir:
+      "La différence avec le [rooibos bio en vrac](/produit/rooibos), qui est fermenté, se voit et se goûte : infusion jaune doré d'un côté, rouge ambré de l'autre ; goût herbacé et vif d'un côté, rond et vanillé de l'autre. Le [honeybush](/produit/honeybush), autre plante du Cap, est plus mielleux. Si vous aimez le thé vert sans son amertume, le rooibos vert est un bon compromis.\n\nIssu de l'agriculture biologique, il doit présenter des brins verts uniformes, sans trop de poussière ni de bouts de tige.",
+    conserver:
+      "Le rooibos vert est plus fragile que le rouge : sa couleur et son parfum végétal s'estompent à la lumière. Une boîte métallique opaque, bien fermée, rangée loin des épices et du café, le protège le mieux. Prévoyez de le terminer dans l'année qui suit l'ouverture.",
+    remplacer:
+      "Le rooibos rouge le remplace sans difficulté, avec un goût plus doux et plus boisé. Pour garder une note herbacée, un thé vert japonais léger, infusé brièvement à basse température, s'en rapproche, mais il contient de la théine. Le honeybush donne une boisson plus sucrée.",
+    enCuisine:
+      "Il se prête au [rooibos glacé au citron](/recette/rooibos-glace), pour une version plus claire et plus fraîche que l'originale. Pour tout savoir sur la plante et son infusion, lisez [Qu'est-ce que le rooibos et comment l'infuser ?](/conseils/quest-ce-que-le-rooibos). L'eau peut chauffer dans la [bouilloire émaillée](/produit/bouilloire-emaillee), sans attendre l'ébullition franche.",
+    faq: [
+      {
+        question: "Le rooibos vert est-il un thé vert ?",
+        reponse:
+          "Non. C'est la même plante que le rooibos rouge, simplement séchée sans fermentation. Il n'a rien à voir avec le théier, d'où vient le thé vert.",
+      },
+      {
+        question: "Pourquoi le rooibos vert est-il plus rare ?",
+        reponse:
+          "Son séchage doit être très rapide pour éviter que les feuilles ne s'oxydent, ce qui demande plus de soin et de matériel que la fabrication du rooibos rouge.",
+      },
+    ],
+  },
+  "the-vert-gunpowder": {
+    origine:
+      "Le gunpowder vient de Chine, et en particulier de la province du Zhejiang. Chaque feuille de thé vert est roulée en une petite perle serrée, qui se déplie dans l'eau chaude. Les marchands anglais lui ont donné ce nom de « poudre à canon » à cause de sa ressemblance avec les grains de poudre noire ; en chinois, on parle plutôt de thé perlé.\n\nCe thé s'est diffusé au Maroc au XIXe siècle par le commerce britannique, puis a traversé le Sahara avec les caravanes jusqu'en Mauritanie, au Mali et au Sénégal. Le mot wolof ataaya vient d'ailleurs de l'arabe atay, « thé ». Aujourd'hui, l'Afrique de l'Ouest et le Maghreb comptent parmi les grands importateurs de thé vert chinois.",
+    choisir:
+      "Pour l'ataya, choisissez des perles bien serrées, d'un vert sombre et brillant, sans poussière : elles supportent l'ébullition prolongée et les trois tournées. Les perles plus grosses donnent un thé plus doux, les petites un thé plus corsé. Sur les paquets, des numéros de grade distinguent les qualités.\n\nDans la boutique, c'est le seul thé fait pour bouillir. Le [thé noir du Kenya](/produit/the-noir-du-kenya) sert au chai ; le [kinkeliba](/produit/kinkeliba) et le [rooibos](/produit/rooibos) ne sont pas des thés mais des infusions de plantes.",
+    conserver:
+      "Les perles serrées conservent bien leur arôme, à condition d'être protégées de l'humidité et des odeurs. Gardez-les dans une boîte métallique hermétique, à l'abri de la lumière, loin des épices. Un paquet ouvert garde sa fraîcheur plusieurs mois, surtout si l'on évite d'y plonger une cuillère humide.",
+    remplacer:
+      "Un thé vert chinois dit chun mee, aux feuilles en fines virgules, est l'autre grand thé de l'ataya et peut le remplacer. Un thé vert ordinaire en vrac fonctionne aussi, mais il supporte moins bien l'ébullition et devient vite très amer. Les thés en sachets conviennent mal à cette préparation.",
+    enCuisine:
+      "C'est le thé de l'[ataya](/recette/ataya), servi en trois verres de plus en plus sucrés. Le rituel complet, de la première tournée à la mousse, est raconté dans [Comment préparer l'ataya, le thé sénégalais en trois services ?](/conseils/comment-preparer-l-ataya). Pour servir de haut, il faut la [théière à ataya](/produit/theiere-a-ataya) à long bec et des [verres à thé](/produit/verres-a-the) assez épais pour la chaleur.",
+    faq: [
+      {
+        question: "Pourquoi l'ataya se sert-il en trois verres ?",
+        reponse:
+          "Les feuilles sont réutilisées à chaque tournée en ajoutant du sucre : le premier verre est fort et amer, le troisième doux et sucré. Le rituel laisse le temps de discuter.",
+      },
+      {
+        question: "Gunpowder et thé à la menthe, est-ce le même thé ?",
+        reponse:
+          "Oui, le thé à la menthe du Maghreb se prépare généralement avec du gunpowder, auquel on ajoute de la menthe fraîche et du sucre.",
+      },
+    ],
+  },
+  kinkeliba: {
+    origine:
+      "Le kinkeliba, Combretum micranthum, est un arbuste des savanes sèches d'Afrique de l'Ouest, que l'on trouve du Sénégal jusqu'au Niger. Ses rameaux portent de petites feuilles ovales qui virent au brun-vert en séchant. On les cueille, on les fait sécher à l'ombre, puis on les vend en bottes ou en vrac sur les marchés.\n\nAu Sénégal, il est indissociable du petit-déjeuner, que l'on appelle ndekki en wolof : on le boit chaud et sucré, avec du pain. Pendant le ramadan, il est aussi l'une des boissons du ndogou, le repas de rupture du jeûne au coucher du soleil, à côté des dattes et du café Touba.",
+    choisir:
+      "Le kinkeliba a un goût boisé et légèrement amer qui le distingue des autres infusions de la boutique. La [citronnelle séchée](/produit/citronnelle-sechee), qu'on lui associe souvent, apporte une fraîcheur citronnée ; le [rooibos](/produit/rooibos) est plus doux et plus rond ; le [thé vert gunpowder](/produit/the-vert-gunpowder) est un vrai thé, réservé à l'ataya.\n\nUn bon kinkeliba sent le bois sec et le foin. Préférez des feuilles entières aux brisures et à la poussière, qui donnent une infusion trouble et plus amère.",
+    conserver:
+      "Les feuilles séchées se gardent longtemps si elles restent au sec, dans un sac en papier fermé ou un bocal, loin de la cuisinière. L'infusion préparée se boit chaude le matin ; le reste peut attendre au réfrigérateur dans une bouteille fermée jusqu'au lendemain.",
+    remplacer:
+      "Rien n'imite vraiment son goût boisé. Pour une boisson chaude du matin, un rooibos nature ou un thé noir léger prennent sa place, avec un goût différent. Une infusion de citronnelle relevée d'une feuille de menthe garde l'esprit sénégalais et se sucre de la même façon.",
+    enCuisine:
+      "La recette du [kinkeliba du petit-déjeuner](/recette/kinkeliba) en donne la préparation complète. Pour un petit-déjeuner à la sénégalaise, servez-le avec du pain beurré ou des [puff-puff](/recette/puff-puff). Les feuilles se gardent comme les autres plantes séchées : voyez [Comment conserver les feuilles séchées (ndolé, manioc, sorgho) ?](/conseils/conserver-feuilles-sechees).",
+    faq: [
+      {
+        question: "Le kinkeliba contient-il de la théine ?",
+        reponse:
+          "Ce n'est pas un thé : il provient d'un autre arbuste que le théier. On le boit donc comme une infusion de plantes, à toute heure.",
+      },
+      {
+        question: "Faut-il faire bouillir le kinkeliba ?",
+        reponse:
+          "Au Sénégal, on le fait généralement frémir quelques minutes plutôt que de l'infuser simplement : ses feuilles épaisses libèrent mieux leur goût.",
+      },
+    ],
+  },
+  rooibos: {
+    origine:
+      "Les Khoïkhoï et les San récoltaient déjà le rooibos sauvage dans les montagnes du Cederberg, au nord du Cap, bien avant l'arrivée des Européens. Son commerce débute en 1904 avec Benjamin Ginsberg, un immigrant russe installé dans la région, qui le vend comme « thé de montagne ». Dans les années 1930, des essais menés autour de Clanwilliam parviennent à le mettre en culture, malgré des graines difficiles à faire germer.\n\nPour le rooibos rouge, les tiges sont coupées, hachées et légèrement écrasées, puis laissées en tas humides : elles fermentent et prennent leur couleur rouge, avant de sécher au soleil. Depuis 2021, le nom « Rooibos » est protégé dans l'Union européenne : c'est le premier produit alimentaire africain à recevoir cette appellation d'origine.",
+    choisir:
+      "Ce rooibos est fermenté et issu de l'agriculture biologique. Le [rooibos vert](/produit/rooibos-vert), non fermenté, donne une infusion plus claire et plus végétale ; le [honeybush](/produit/honeybush), cousin du Cap, est plus mielleux. Le [kinkeliba](/produit/kinkeliba), autre infusion du matin, est plus boisé et plus amer.\n\nUn bon rooibos en vrac contient surtout de fines aiguilles rouges, avec peu de morceaux de tige. Son parfum doit évoquer le miel, la vanille et le bois doux.",
+    conserver:
+      "Le rooibos se garde bien, mais il perd peu à peu son parfum à l'air libre. Versez-le dans une boîte hermétique, à l'abri de la lumière, et gardez-la loin des épices dont il pourrait prendre l'odeur. Une carafe de rooibos glacé se conserve deux jours au réfrigérateur.",
+    remplacer:
+      "Le honeybush est le remplaçant le plus proche, plus sucré. Le rooibos vert convient si vous aimez une boisson plus légère. Une infusion de cosses de cacao ou de fruits secs peut aussi dépanner le soir, mais le goût de bois doux disparaît.",
+    enCuisine:
+      "Il fait le [rooibos glacé au citron](/recette/rooibos-glace), à servir bien froid. Pour connaître l'histoire de la plante et réussir l'infusion, lisez [Qu'est-ce que le rooibos et comment l'infuser ?](/conseils/quest-ce-que-le-rooibos). En Afrique du Sud, il accompagne volontiers une part de [bobotie](/recette/bobotie) au déjeuner.",
+    faq: [
+      {
+        question: "Que veut dire rooibos ?",
+        reponse:
+          "C'est un mot afrikaans qui signifie « buisson rouge ». Il fait référence à la couleur des feuilles après fermentation.",
+      },
+      {
+        question: "Le rooibos est-il un thé ?",
+        reponse:
+          "Non. Il vient d'un arbuste de la famille des légumineuses, sans lien avec le théier. On l'appelle souvent thé rouge par commodité.",
+      },
+    ],
+  },
+  honeybush: {
+    origine:
+      "Le honeybush regroupe plusieurs espèces d'arbustes du genre Cyclopia, qui poussent dans le fynbos, la végétation des montagnes du sud de l'Afrique du Sud, entre la province du Cap-Occidental et celle du Cap-Oriental. Au printemps austral, ils se couvrent de fleurs jaunes au parfum de miel, qui leur ont donné leur nom.\n\nLongtemps, il a été cueilli à l'état sauvage par les habitants de ces montagnes, qui en faisaient leur infusion quotidienne. Sa culture s'est développée plus récemment. Comme le rooibos, les feuilles et les tiges sont coupées, mises à fermenter pour développer leur couleur et leur goût, puis séchées au soleil.",
+    choisir:
+      "Le honeybush est plus sucré et plus fruité que le [rooibos](/produit/rooibos), dont il est souvent présenté comme le cousin. Le [rooibos vert](/produit/rooibos-vert) est plus végétal. Pour une boisson acidulée, mieux vaut se tourner vers les [fleurs de bissap](/produit/fleurs-de-bissap) ou l'[infusion de tamarin](/produit/infusion-de-tamarin).\n\nCe honeybush est issu de l'agriculture biologique. Il se présente comme un mélange de feuilles et de tiges brunes : c'est normal, les tiges participent au goût.",
+    conserver:
+      "Gardez-le dans un contenant opaque et hermétique, dans un placard sec. Son parfum de miel est plus volatil que celui du rooibos : refermez la boîte aussitôt après usage. Une infusion préparée à froid se conserve un à deux jours au réfrigérateur.",
+    remplacer:
+      "Le rooibos rouge est le remplaçant le plus évident, avec un goût moins mielleux ; une cuillère de miel compense en partie. Une infusion de fleurs de tilleul ou de camomille offre une douceur comparable, avec un profil plus floral.",
+    enCuisine:
+      "Il remplace le rooibos dans le [rooibos glacé au citron](/recette/rooibos-glace), pour une version plus douce qui demande moins de sucre. Pour comparer les deux plantes du Cap, lisez [Qu'est-ce que le rooibos et comment l'infuser ?](/conseils/quest-ce-que-le-rooibos). Il accompagne bien un dessert sud-africain ou une tranche de cake.",
+    faq: [
+      {
+        question: "Honeybush et rooibos, quelle différence ?",
+        reponse:
+          "Ce sont deux arbustes différents du Cap. Le honeybush a un goût plus sucré et mielleux, le rooibos un goût plus boisé et vanillé.",
+      },
+      {
+        question: "Pourquoi trouve-t-on des tiges dans le honeybush ?",
+        reponse:
+          "Parce qu'on récolte les rameaux entiers, feuilles et tiges ensemble. Les tiges coupées fin apportent une partie de la douceur de l'infusion.",
+      },
+    ],
+  },
+  "citronnelle-sechee": {
+    origine:
+      "La citronnelle, Cymbopogon citratus, est une grande herbe vivace originaire d'Asie du Sud et du Sud-Est. Elle s'est répandue dans toutes les régions tropicales et pousse aujourd'hui en touffes dans de nombreuses cours d'Afrique de l'Ouest et centrale, où l'on coupe quelques feuilles au besoin pour l'infusion du soir ou le bouillon.\n\nIl ne faut pas la confondre avec la citronnelle de Ceylan ou de Java, Cymbopogon nardus, surtout cultivée pour son huile essentielle. Séchée, la citronnelle culinaire garde l'essentiel de son parfum de citron et de gingembre, ce qui permet d'en avoir toute l'année.",
+    choisir:
+      "Elle apporte la note fraîche parmi les infusions de la boutique : le [kinkeliba](/produit/kinkeliba) est boisé, le [rooibos](/produit/rooibos) doux et rond, l'[infusion de gingembre](/produit/infusion-de-gingembre) piquante. Mélangée au kinkeliba ou au gingembre, elle donne une boisson plus complexe.\n\nUne citronnelle séchée de qualité est d'un vert pâle, sans parties brunies, et dégage un parfum net quand on froisse les brins. Une odeur faible signale un produit ancien.",
+    conserver:
+      "Son parfum vient d'huiles volatiles qui s'échappent vite : gardez-la dans un bocal hermétique, à l'abri de la chaleur et de la lumière. Évitez de la laisser dans un sachet ouvert près de la cuisinière. Un brin froissé entre les doigts vous dira si elle a encore du parfum.",
+    remplacer:
+      "La citronnelle fraîche, plus parfumée, se trouve dans les épiceries asiatiques ; une tige suffit pour une théière. Un zeste de citron vert ou une feuille de combava donnent une note proche dans un bouillon, moins herbacée. La verveine citronnée convient pour une infusion.",
+    enCuisine:
+      "Quelques brins parfument le bouillon d'un [caldou de poisson](/recette/caldou) ou d'une [pepper soup de chèvre](/recette/pepper-soup). En infusion, elle accompagne la recette du [kinkeliba du petit-déjeuner](/recette/kinkeliba). Pour garder son parfum, suivez les conseils de [Comment conserver les feuilles séchées (ndolé, manioc, sorgho) ?](/conseils/conserver-feuilles-sechees).",
+    faq: [
+      {
+        question: "La citronnelle séchée remplace-t-elle la fraîche ?",
+        reponse:
+          "Oui pour les infusions et les bouillons, où elle infuse longtemps. Pour une marinade ou une pâte d'épices, la fraîche, hachée fin, reste préférable.",
+      },
+      {
+        question: "La citronnelle de cuisine éloigne-t-elle les moustiques ?",
+        reponse:
+          "C'est une autre espèce, la citronnelle de Java ou de Ceylan, dont on tire l'huile utilisée contre les moustiques. La citronnelle de cuisine sert surtout à parfumer.",
+      },
+    ],
+  },
+  "the-noir-du-kenya": {
+    origine:
+      "Le thé est arrivé au Kenya en 1903 : un colon, G. W. L. Caine, en planta quelques pieds près de Limuru, au nord-ouest de Nairobi, d'abord comme plante d'ornement. La culture commerciale commença dans les années 1920 autour de Kericho, sur les hauts plateaux de l'ouest. Le pays est aujourd'hui l'un des tout premiers exportateurs de thé noir au monde.\n\nUne grande partie de la récolte vient de petits planteurs, qui livrent leurs feuilles à des usines collectives. La plupart du thé kényan est produit selon la méthode CTC, pour « crush, tear, curl » : les feuilles sont broyées, déchirées et roulées en petits granulés, qui infusent vite et donnent une tasse très colorée. Il se vend en grande partie aux enchères de Mombasa.",
+    choisir:
+      "Ce thé noir en sachets est fait pour une infusion corsée qui supporte le lait. Le [thé noir à la cardamome](/produit/the-noir-du-kenya-cardamome) est déjà épicé, pratique pour un chai rapide. Le [thé vert gunpowder](/produit/the-vert-gunpowder) répond à un tout autre usage, l'ataya. Si vous cherchez une boisson chaude qui ne soit pas un thé, le [rooibos](/produit/rooibos) est l'alternative la plus proche en couleur.\n\nNature, il peut paraître âpre : c'est un thé pensé pour le lait et le sucre.",
+    conserver:
+      "Les sachets craignent l'humidité et les odeurs. Gardez-les dans leur boîte fermée ou dans une boîte à thé métallique, loin du café et des épices. Ne les rangez pas au-dessus de la bouilloire ou de la cuisinière, où la vapeur et la chaleur les ramollissent.",
+    remplacer:
+      "Un thé noir corsé d'une autre origine, comme un assam indien ou un English breakfast, prend sa place dans le chai. Un thé noir en vrac à feuilles brisées convient aussi ; prévoyez simplement une passoire. Les thés noirs très délicats, comme le darjeeling, se perdent dans le lait.",
+    enCuisine:
+      "C'est le thé du [chai kényan (chai ya maziwa)](/recette/chai-kenyan), bouilli avec le lait, la cardamome et le gingembre. Il accompagne le [puff-puff](/recette/puff-puff), cousin des mandazi d'Afrique de l'Est, ou un petit-déjeuner à base d'[ugali et sukuma wiki](/recette/ugali-sukuma-wiki). Pour l'eau du thé nature, la [bouilloire émaillée](/produit/bouilloire-emaillee) se pose directement sur le feu.",
+    faq: [
+      {
+        question: "Que veut dire chai ya maziwa ?",
+        reponse:
+          "C'est du swahili : « thé au lait ». Au Kenya, le thé, le lait et le sucre bouillent ensemble dans la même casserole.",
+      },
+      {
+        question: "Qu'est-ce qu'un thé CTC ?",
+        reponse:
+          "Un thé dont les feuilles ont été broyées, déchirées et roulées en granulés. Il infuse vite et donne une boisson foncée et corsée, idéale avec du lait.",
+      },
+    ],
+  },
+  "the-noir-du-kenya-cardamome": {
+    origine:
+      "La cardamome verte est le fruit d'une plante de la famille du gingembre, originaire du sud de l'Inde. Elle a gagné la côte d'Afrique de l'Est par les routes commerciales de l'océan Indien, qui relient depuis des siècles l'Inde, la péninsule Arabique et les ports swahilis de Mombasa, Lamu ou Zanzibar.\n\nC'est là que le thé épicé s'est imposé, dans le sillage des communautés venues d'Inde, nombreuses en Afrique de l'Est depuis la fin du XIXe siècle. Associer la cardamome au thé noir corsé du Kenya, c'est retrouver le goût des chais de la côte, sans avoir à concasser les gousses soi-même.",
+    choisir:
+      "Ce thé est déjà aromatisé : pratique pour une tasse rapide, il offre un goût plus régulier qu'un mélange maison. Le [thé noir du Kenya](/produit/the-noir-du-kenya) nature laisse plus de liberté pour doser les épices soi-même. L'[infusion de gingembre](/produit/infusion-de-gingembre) apporte le piquant, sans feuilles de thé.\n\nSi vous aimez les boissons épicées, il se marie avec un morceau de gingembre frais ou un clou de girofle ajouté au moment de faire bouillir le lait.",
+    conserver:
+      "La cardamome perd son parfum plus vite que le thé. Gardez les sachets dans une boîte bien fermée, à l'abri de la chaleur, et préférez une boîte réservée à ce thé : son parfum se transmet aux autres thés rangés à côté.",
+    remplacer:
+      "Un thé noir corsé nature, accompagné de deux ou trois gousses de cardamome écrasées au mortier, donne un résultat très proche, plus frais. Un mélange pour chai masala apporte une palette plus large, avec cannelle, gingembre, clou de girofle et poivre.",
+    enCuisine:
+      "Il simplifie le [chai kényan (chai ya maziwa)](/recette/chai-kenyan), puisque la cardamome est déjà là. Les gousses de cardamome parfument aussi le [kahawa chungu](/recette/kahawa-chungu), le café de la côte swahilie, et le [pilau de Zanzibar](/recette/pilau). Pour concasser d'autres gousses, le [mortier en granit](/produit/mortier-en-granit) est l'outil idéal.",
+    faq: [
+      {
+        question: "Faut-il ajouter de la cardamome à ce thé ?",
+        reponse:
+          "Ce n'est pas nécessaire : elle est déjà présente. Une gousse supplémentaire, juste écrasée, renforce le parfum pour ceux qui l'aiment très marqué.",
+      },
+      {
+        question: "Peut-on préparer ce thé sans lait ?",
+        reponse:
+          "Oui, il se boit aussi nature, éventuellement sucré. Le lait adoucit simplement sa puissance et arrondit la cardamome.",
+      },
+    ],
+  },
 };
