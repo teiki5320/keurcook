@@ -753,4 +753,172 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "ras-el-hanout": {
+    origine:
+      "Le ras el hanout appartient surtout à la cuisine marocaine, mais l'Algérie et la Tunisie en utilisent des versions voisines. Il n'existe aucune recette officielle : les formules les plus simples réunissent une dizaine d'épices, d'autres en comptent plusieurs dizaines, avec parfois des boutons de rose, de la cardamome, du macis ou du poivre long.\n\nDeux pots venus de deux marchands ne se ressemblent donc jamais tout à fait. Cette liberté fait son intérêt : le mélange reflète le goût de celui qui le compose, et chaque cuisinier finit par trouver la formule qu'il préfère.",
+    choisir:
+      "Un bon ras el hanout est d'un brun doré, très odorant, avec des notes à la fois sucrées et poivrées. Une poudre terne a perdu l'essentiel de son parfum. Lisez l'étiquette : certaines formules contiennent du sel ou du piment.\n\nIl ne se confond pas avec le [tabel karouia](/produit/epices-tunisiennes) tunisien, plus simple et plus franc, centré sur la coriandre et le carvi. Le [berbéré](/produit/berbere) éthiopien est lui aussi un mélange complexe, mais rouge et piquant. Le ras el hanout est plus chaud que fort : il parfume sans brûler.",
+    conserver:
+      "Un mélange aussi riche s'évente vite, car ses épices n'ont pas toutes la même tenue. Mieux vaut un petit pot renouvelé souvent qu'un grand sachet qui traîne. Gardez-le dans un bocal bien fermé, à l'abri de la lumière, et sentez-le avant usage : s'il ne sent plus grand-chose, augmentez légèrement la dose.",
+    remplacer:
+      "Un mélange de quatre-épices et de cumin, relevé d'une pointe de curcuma, donne une impression proche dans un tajine. Un curry doux dépanne aussi, avec une note plus indienne. Le [tabel karouia](/produit/epices-tunisiennes) convient pour un couscous, mais il apporte l'anis du carvi au lieu de la chaleur de la cannelle.",
+    enCuisine:
+      "Il est fait pour la cuisson lente du [tajine en argile](/produit/tajine-en-argile), avec de l'agneau, du poulet, des pruneaux ou des [citrons beldi confits](/produit/citrons-beldi-confits). Dans un couscous cuit au [couscoussier](/produit/couscoussier), il parfume le bouillon de légumes. Plus au sud, une pincée peut remplacer une partie des épices du [pilau de Zanzibar](/recette/pilau), déjà parfumé à la cannelle et à la cardamome.",
+    faq: [
+      {
+        question: "Le ras el hanout est-il piquant ?",
+        reponse:
+          "Rarement. Il est chaud et parfumé, mais contient peu ou pas de piment selon les marques : vérifiez la composition.",
+      },
+      {
+        question: "Peut-on l'utiliser sans cuisson ?",
+        reponse:
+          "Oui, en petite quantité, dans une vinaigrette ou sur des légumes rôtis. Il reste toutefois plus aromatique après un bref passage dans un corps gras chaud.",
+      },
+    ],
+  },
+  "epices-tunisiennes": {
+    origine:
+      "En arabe tunisien, tabel signifie « assaisonnement », et le mot désignait autrefois la seule coriandre. Karouia est le nom du carvi, une graine anisée de la même famille que le cumin. Avec l'ail et le piment, ils forment le mélange de base de la cuisine tunisienne, que l'on retrouve aussi en Algérie.\n\nLa Tunisie aime les saveurs nettes et relevées : à côté du tabel, elle a donné au monde la harissa, inscrite en 2022 au patrimoine culturel immatériel de l'humanité par l'UNESCO.",
+    choisir:
+      "Regardez la couleur : un tabel bien rouge contient une part généreuse de piment, un mélange plus beige sera plus doux. Le parfum doit être vif, avec l'anis du carvi bien reconnaissable. Certains se vendent en graines entières, à moudre soi-même.\n\nIl n'a pas la complexité du [ras el hanout](/produit/ras-el-hanout) marocain, plus sucré et plus chaud. Associé à la [harissa artisanale](/produit/harissa-artisanale), qui apporte la force du piment pilé, il compose l'assaisonnement typique d'un couscous tunisien. Le [berbéré](/produit/berbere), autre mélange rouge, est bien plus piquant et chargé en fenugrec.",
+    conserver:
+      "Le carvi et la coriandre moulus perdent vite leur fraîcheur. Préférez de petites quantités, ou gardez des graines entières que vous moudrez au mortier au fil des besoins. Le mélange se range dans un bocal hermétique, loin de la cuisinière : l'ail en poudre qu'il contient craint particulièrement l'humidité.",
+    remplacer:
+      "Un mélange maison se prépare en quelques minutes : deux parts de coriandre en graines pour une part de carvi, torréfiées puis moulues, avec de l'ail et du piment en poudre. Sans carvi, un peu de cumin donne un résultat plus terrien. Le ras el hanout, lui, changerait l'accent du plat, qui deviendrait marocain.",
+    enCuisine:
+      "Il assaisonne le bouillon d'un couscous cuit au [couscoussier](/produit/couscoussier), une chakchouka de poivrons et d'œufs ou une marinade de poisson grillé. Hors de Tunisie, une pincée relève le [chakalaka](/recette/chakalaka) sud-africain, à la place d'une partie du piment. Pour choisir le bon ustensile de cuisson à la vapeur, lisez [Faut-il un couscoussier pour cuire le fonio ou l'attiéké ?](/conseils/couscoussier-fonio-attieke).",
+    faq: [
+      {
+        question: "Tabel et harissa, quelle différence ?",
+        reponse:
+          "Le tabel est un mélange sec d'épices en poudre ; la harissa est une pâte de piment pilé couverte d'huile. On utilise souvent les deux dans le même plat.",
+      },
+      {
+        question: "Le tabel karouia est-il piquant ?",
+        reponse:
+          "Un peu, selon la part de piment. Pour un plat doux, utilisez-le en petite quantité et laissez la harissa sur la table.",
+      },
+    ],
+  },
+  dukkah: {
+    origine:
+      "Le nom vient d'un verbe arabe qui signifie « piler » ou « écraser » : le dukkah est d'abord une affaire de mortier. En Égypte, on le prépare à la maison depuis longtemps, en concassant ensemble fruits à coque grillés, sésame, coriandre et cumin, avec du sel et du poivre. Selon les familles, d'autres noix ou des herbes séchées s'y ajoutent.\n\nOn le pose sur la table avec du pain et de l'huile d'olive, au petit-déjeuner comme à l'heure de l'en-cas. Il a depuis gagné les cuisines du monde entier, où il sert surtout à donner du croquant aux plats.",
+    choisir:
+      "Un bon dukkah reste grossier : on y distingue des morceaux de noisette et des graines entières. Une poudre trop fine a perdu son intérêt. Lisez l'étiquette, surtout en cas d'allergie : selon les marques, il contient noisettes, amandes, pistaches ou arachides.\n\nIl ressemble peu aux autres mélanges de la boutique, qui sont des épices de cuisson : le [ras el hanout](/produit/ras-el-hanout) ou le [tabel karouia](/produit/epices-tunisiennes) parfument les sauces, alors que le dukkah se sert en fin de préparation. Son équivalent ouest-africain serait plutôt le yaji, mélange d'arachide et d'épices qui enrobe le suya.",
+    conserver:
+      "Riche en fruits à coque, il peut rancir. Gardez-le dans un bocal hermétique, au frais, et consommez-le dans les semaines qui suivent l'ouverture. Par temps chaud, le réfrigérateur prolonge sa fraîcheur ; laissez-le simplement revenir à température ambiante avant de servir.",
+    remplacer:
+      "Sans dukkah, un mélange de sésame grillé et de za'atar donne une trempette voisine, plus herbacée. Des noisettes concassées avec du sel et une pincée de cumin font aussi l'affaire. Pour une version africaine, mêlez arachides grillées, sel et piment, à la manière du yaji.",
+    enCuisine:
+      "Il apporte du croquant aux plats de légumineuses : une cuillère sur le [shiro](/recette/shiro) éthiopien ou le [misir wat](/recette/misir-wat) au moment de servir. Il se parsème aussi sur une salade de [fonio](/produit/fonio) ou sur l'[alloco](/recette/alloco) encore chaud. Pour découvrir le yaji, son cousin d'Afrique de l'Ouest, lisez [Qu'est-ce que le yaji (épice à suya) ?](/conseils/quest-ce-que-le-yaji).",
+    faq: [
+      {
+        question: "Le dukkah se cuit-il ?",
+        reponse:
+          "Non, il se sert tel quel, en fin de préparation. On peut seulement le réchauffer à sec un instant pour raviver son parfum.",
+      },
+      {
+        question: "Le dukkah contient-il des arachides ?",
+        reponse:
+          "Cela dépend de la recette : la plupart utilisent des noisettes ou des amandes, mais certaines y mettent des arachides. Vérifiez la composition en cas d'allergie.",
+      },
+    ],
+  },
+  "harissa-artisanale": {
+    origine:
+      "Le mot vient de l'arabe harasa, « piler » : la harissa naît au mortier, où l'on écrase les piments séchés avec l'ail et les épices. Le piment, venu d'Amérique, s'est implanté en Tunisie au XVIe siècle, et la pâte est devenue le condiment national.\n\nLe 1er décembre 2022, l'UNESCO a inscrit la harissa tunisienne au patrimoine culturel immatériel de l'humanité, pour les savoirs et les pratiques familiales liés à sa préparation. La région de Nabeul, au cap Bon, réputée pour ses piments, lui consacre même un festival.",
+    choisir:
+      "Une harissa artisanale a une texture un peu granuleuse, une couleur rouge sombre et une odeur de piment séché et d'ail. Les versions industrielles en tube sont souvent plus lisses. Lisez la composition : piment, ail, épices, sel et huile suffisent.\n\nElle est le pendant nord-africain de la [sauce peri-peri](/produit/sauce-peri-peri), plus liquide et acidulée au citron, et du [piment pili-pili](/produit/piment-pili-pili) séché, qui ne donne que la chaleur. Le [tabel karouia](/produit/epices-tunisiennes) en reprend les épices sous forme sèche.",
+    conserver:
+      "La couche d'huile à la surface la protège de l'air : après chaque usage, lissez la pâte et reversez un peu d'huile d'olive pour la recouvrir. Elle se garde ainsi plusieurs semaines au réfrigérateur. Si une moisissure apparaît, jetez le pot entier plutôt que de retirer la partie abîmée.",
+    remplacer:
+      "Un piment pili-pili réhydraté, mixé avec une gousse d'ail, une pincée de tabel et un filet d'huile d'olive, donne une harissa express. Un sambal oelek ou une autre pâte de piment d'épicerie asiatique dépanne aussi, sans le parfum du carvi. Du paprika fort détendu à l'huile fonctionne en dernier recours.",
+    enCuisine:
+      "Elle relève le bouillon du couscous et la chakchouka, mais voyage bien au-delà du Maghreb. Une cuillère dans la marinade du [suya](/recette/suya) ou du [nyama choma](/recette/nyama-choma) change agréablement le goût des brochettes, et elle peut remplacer le piment du [chakalaka](/recette/chakalaka) sud-africain. Pour régler la force de tous ces plats, lisez [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment).",
+    faq: [
+      {
+        question: "La harissa se mange-t-elle crue ?",
+        reponse:
+          "Oui, c'est d'abord un condiment. Ajoutée à une sauce, elle cuit quelques minutes et perd un peu de son mordant.",
+      },
+      {
+        question: "Pourquoi la harissa est-elle inscrite à l'UNESCO ?",
+        reponse:
+          "Pour les savoir-faire qui l'entourent : séchage des piments, préparation en famille, place dans les repas tunisiens. C'est une tradition vivante, transmise de génération en génération.",
+      },
+    ],
+  },
+  "huile-d-argan": {
+    origine:
+      "L'arganier (Argania spinosa) ne pousse naturellement que dans le sud-ouest du Maroc, autour d'Essaouira et d'Agadir. Cet arbre épineux, adapté à la sécheresse, couvre une vaste région classée par l'UNESCO en 1998 comme réserve de biosphère de l'Arganeraie.\n\nLe travail de l'argan revient traditionnellement aux femmes : récolter les fruits, retirer la pulpe, casser la coque très dure entre deux pierres, torréfier les amandons puis les moudre. Une grande partie de l'huile est aujourd'hui produite dans des coopératives féminines, et les savoir-faire liés à l'arganier sont inscrits au patrimoine culturel immatériel de l'UNESCO depuis 2014.",
+    choisir:
+      "Vérifiez que l'étiquette indique bien l'usage alimentaire, et préférez une bouteille en verre teinté. Le nom est protégé au Maroc par une indication géographique, dont la mention peut figurer sur l'emballage. Une petite bouteille suffit : on l'emploie par filets.\n\nAu rayon des huiles, elle n'a rien de commun avec l'[huile de palme rouge](/produit/huile-de-palme-rouge), faite pour cuire les sauces : l'argan est une huile d'assaisonnement, comme une huile de noix. Elle s'accorde avec les [dattes Deglet Nour](/produit/dattes-deglet-nour) et le pain chaud au petit-déjeuner.",
+    conserver:
+      "Comme toutes les huiles vierges grillées, elle rancit à la lumière et à la chaleur. Gardez-la dans un placard frais, loin du four, et utilisez-la dans les mois qui suivent l'ouverture. Une odeur de vieux beurre ou une amertume inhabituelle signale qu'elle a tourné.",
+    remplacer:
+      "Elle n'a pas de vrai équivalent. Pour l'amlou, une huile de noix ou d'amande grillée donne tout de même un résultat honnête. En assaisonnement, quelques gouttes d'huile de sésame grillé mêlées à de l'huile d'olive rappellent son côté torréfié, avec un accent plus asiatique.",
+    enCuisine:
+      "Versez-en un filet sur un couscous de légumes au sortir du [couscoussier](/produit/couscoussier), ou sur un tajine cuit dans un [tajine en argile](/produit/tajine-en-argile), juste avant de servir. Elle relève aussi une salade de [fonio](/produit/fonio) ou une purée de pois chiches. Au goûter, elle accompagne pain et miel, avec un thé à la menthe préparé comme dans [Comment préparer l'ataya ?](/conseils/comment-preparer-l-ataya).",
+    faq: [
+      {
+        question: "Huile d'argan alimentaire et cosmétique, peut-on les échanger ?",
+        reponse:
+          "Non. L'huile cosmétique n'est pas torréfiée et n'est pas prévue pour la cuisine ; seule l'huile alimentaire est faite pour être consommée.",
+      },
+      {
+        question: "Qu'est-ce que l'amlou ?",
+        reponse:
+          "Une pâte marocaine d'amandes grillées, de miel et d'huile d'argan, que l'on tartine sur du pain au petit-déjeuner.",
+      },
+    ],
+  },
+  "citrons-beldi-confits": {
+    origine:
+      "Beldi signifie « du pays », « traditionnel », en arabe marocain : le mot désigne les variétés locales, par opposition à celles venues d'ailleurs. Petit, rond et à peau fine, le citron beldi est celui que l'on préfère pour le confisage.\n\nLes citrons sont fendus en croix, garnis de gros sel, puis tassés dans un bocal avec leur jus. Après au moins un mois de macération, l'écorce devient tendre et translucide, perd son amertume et prend un goût concentré, salé et très parfumé.",
+    choisir:
+      "En bocal, les citrons doivent être entiers, jaunes à légèrement brunis, baignant dans leur saumure. Une écorce tendre sous le doigt indique un confisage abouti. Lisez la composition : citron, sel et eau suffisent.\n\nIls forment avec le [ras el hanout](/produit/ras-el-hanout) le duo du tajine marocain. Les [dattes Deglet Nour](/produit/dattes-deglet-nour) apportent la douceur des tajines sucrés-salés, les citrons la note salée et parfumée. Pour la cuisson, le [tajine en argile](/produit/tajine-en-argile) reste l'outil naturel.",
+    conserver:
+      "Tant que les citrons restent immergés, ils se conservent très longtemps. Si le niveau baisse, ajoutez un peu d'eau salée pour les recouvrir. Un voile blanc à la surface de la saumure est fréquent et part au rinçage ; une odeur désagréable ou une moisissure colorée, en revanche, impose de jeter le bocal.",
+    remplacer:
+      "Une version rapide se prépare en quelques jours : coupez un citron non traité en fines rondelles, couvrez-les de sel et de jus de citron et laissez-les au réfrigérateur. Le goût sera plus acide et moins fondu qu'un vrai confit, mais il dépannera pour un tajine.",
+    enCuisine:
+      "Ils parfument le tajine de poulet aux olives, cuit doucement dans un [tajine en argile](/produit/tajine-en-argile). Hors du Maghreb, quelques dés d'écorce relèvent la marinade du [poulet yassa](/recette/poulet-yassa), déjà riche en citron et en oignon, ou un [poisson braisé et attiéké](/recette/poisson-braise-attieke). Réduisez alors le sel prévu, et lisez [Pourquoi faire mariner le poulet yassa une nuit ?](/conseils/mariner-poulet-yassa) si vous tentez l'essai.",
+    faq: [
+      {
+        question: "Faut-il rincer les citrons confits ?",
+        reponse:
+          "Oui, sous l'eau froide, pour retirer l'excès de sel. Un rinçage rapide suffit à garder leur parfum.",
+      },
+      {
+        question: "Combien de temps faut-il pour confire des citrons ?",
+        reponse:
+          "Au moins un mois dans le sel. Plus ils attendent, plus leur écorce devient tendre et douce.",
+      },
+    ],
+  },
+  "dattes-deglet-nour": {
+    origine:
+      "La Deglet Nour vient des oasis du Sahara algérien, dans la vallée de l'oued Righ, et s'est répandue jusqu'au Djérid tunisien. L'Algérie et la Tunisie produisent presque toute la récolte mondiale de cette variété. Son nom associe un mot maghrébin désignant la datte ou le doigt au mot arabe nour, la lumière.\n\nTenue face au soleil, la datte laisse voir une chair ambrée et translucide où se dessine l'ombre du noyau. La cueillette se fait à la main, d'octobre à décembre selon les régions, en plusieurs passages pour cueillir chaque datte à point.",
+    choisir:
+      "Les dattes en branches, encore attachées à leur tige, ont été moins manipulées que celles vendues en vrac. Une Deglet Nour doit être dorée et mi-molle, ni collante ni sèche.\n\nPlus ferme et moins sucrée que la Medjool, elle se coupe facilement en cuisine. Elle accompagne bien les [citrons beldi confits](/produit/citrons-beldi-confits) et le [ras el hanout](/produit/ras-el-hanout) dans un tajine sucré-salé. Le [souchet](/produit/souchet), autre en-cas sucré de la boutique, se mixe avec elle pour préparer le kunun aya nigérian.",
+    conserver:
+      "À température ambiante, elles se gardent quelques semaines dans une boîte fermée ; au réfrigérateur, plusieurs mois. Elles se congèlent aussi très bien, et leur chair reste tendre à la sortie du congélateur. Éloignez-les des aliments odorants, dont elles prennent facilement le goût.",
+    remplacer:
+      "Pour une pâtisserie, des figues sèches mixées ou des raisins secs réhydratés offrent une douceur comparable. Dans un tajine, des pruneaux ou des abricots secs prennent volontiers leur place. Pour grignoter, la Mech Degla, une variété algérienne plus sèche, se garde encore plus longtemps.",
+    enCuisine:
+      "Au Maghreb, on rompt souvent le jeûne du ramadan avec une datte et un verre de lait. Elles accompagnent aussi le thé : servez-les avec un [ataya](/recette/ataya) versé dans des [verres à thé](/produit/verres-a-the), en suivant [Comment préparer l'ataya ?](/conseils/comment-preparer-l-ataya). Hachées, elles sucrent un [thiakry](/recette/thiakry) ou un [dégué](/recette/degue).",
+    faq: [
+      {
+        question: "Pourquoi les dattes Deglet Nour sont-elles translucides ?",
+        reponse:
+          "Leur chair fine laisse passer la lumière, surtout à maturité. C'est cette particularité qui leur a valu leur nom.",
+      },
+      {
+        question: "Faut-il laver les dattes ?",
+        reponse:
+          "Un rapide passage sous l'eau, suivi d'un séchage, suffit pour les dattes en vrac. Celles en barquette se mangent telles quelles.",
+      },
+    ],
+  },
 };
