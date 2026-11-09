@@ -865,4 +865,244 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "livre-200-recettes-camerounaises": {
+    origine:
+      "Avec 200 recettes, ce recueil d'Estelle Tiani est le plus copieux des livres de cuisine de la boutique. Il puise dans les différentes régions du Cameroun, un pays souvent surnommé « l'Afrique en miniature » pour la variété de ses paysages et de ses peuples : forêts du Sud, hauts plateaux de l'Ouest, savanes du Nord, côte du Littoral.\n\nÀ côté des plats traditionnels, l'autrice propose des versions revisitées, et chaque recette est détaillée étape par étape, avec des astuces de préparation. Le livre est paru en août 2026 en édition indépendante.",
+    choisir:
+      "C'est un livre de référence pour qui veut cuisiner camerounais au quotidien et varier les plats sur la durée. Le nombre de recettes en fait un bon choix pour une famille d'origine camerounaise qui cherche à retrouver des plats de toutes les régions, ou pour un cuisinier curieux qui a déjà réussi un ndolé et veut aller plus loin.\n\nPour une première approche plus courte de l'Afrique centrale, les livres consacrés aux deux Congo, comme [Le meilleur de la cuisine congolaise](/produit/livre-le-meilleur-de-la-cuisine-congolaise), offrent une sélection plus resserrée.",
+    conserver:
+      "Avant de vous lancer, vérifiez les ingrédients du placard : beaucoup de plats camerounais demandent des produits séchés à prévoir. Les [feuilles de ndolé](/produit/feuilles-de-ndole), le [poivre de Penja](/produit/poivre-de-penja), le [pèbè moulu](/produit/pebe-moulu) et les [crevettes séchées](/produit/crevettes-sechees) reviennent souvent et se gardent longtemps. Avoir ces bases sous la main évite de renoncer à une recette faute d'un ingrédient.",
+    remplacer:
+      "La page [Cameroun](/pays/cameroun) présente les grandes régions culinaires du pays et ses produits typiques. Pour les feuilles amères, lisez [Comment enlever l'amertume du ndolé ?](/conseils/enlever-amertume-du-ndole), et si vous n'en trouvez pas, [Par quoi remplacer les feuilles de ndolé ?](/conseils/par-quoi-remplacer-les-feuilles-de-ndole). Ces lectures aident à adapter les recettes du livre à ce que l'on trouve en France.",
+    enCuisine:
+      "Plusieurs grands classiques du pays sont déjà sur le site : le [ndolé aux crevettes](/recette/ndole), le [poulet DG](/recette/poulet-dg), l'[eru](/recette/eru), le [koki](/recette/koki) cuit dans les feuilles de bananier et le [mbongo tchobi](/recette/mbongo-tchobi) au poisson. De quoi s'entraîner avant d'ouvrir le livre, puis comparer les tours de main de l'autrice avec les nôtres.",
+    faq: [
+      {
+        question: "Ce livre convient-il aux débutants ?",
+        reponse:
+          "Les recettes sont expliquées étape par étape, avec des astuces. Un débutant peut s'y retrouver, à condition de commencer par les plats les plus simples.",
+      },
+      {
+        question: "Les recettes viennent-elles de tout le Cameroun ?",
+        reponse:
+          "Oui, il rassemble des plats traditionnels des différentes régions du pays, ainsi que des versions revisitées.",
+      },
+    ],
+  },
+  "livre-la-cuisine-congolaise": {
+    origine:
+      "Publié aux éditions L'Harmattan en 2001, cet ouvrage est consacré à la cuisine de la République du Congo, celle de Brazzaville. Fidèle Mialoundama et Isabelle Goma Mouyokani, présentée par la Bibliothèque nationale de France comme nutritionniste, y ont recensé les recettes des différentes régions du pays, en ne gardant que celles que l'on prépare le plus souvent.\n\nLeur démarche est celle d'un inventaire : décrire les plats et les aliments traditionnels pour en garder la mémoire. C'est ce qui distingue ce livre des recueils plus récents, davantage tournés vers la cuisine de tous les jours en France.",
+    choisir:
+      "Ce livre s'adresse à ceux qui s'intéressent à la culture culinaire autant qu'aux recettes : étudiants, familles congolaises soucieuses de transmettre, curieux d'histoire de l'alimentation. Il est plus documentaire que [Dans ma cuisine congolaise](/produit/livre-dans-ma-cuisine-congolaise), qui raconte un parcours personnel en RD Congo, et que [Le meilleur de la cuisine congolaise](/produit/livre-le-meilleur-de-la-cuisine-congolaise), pensé comme un livre de techniques.\n\nAttention à la confusion fréquente entre les deux pays : ici, il s'agit du Congo-Brazzaville.",
+    conserver:
+      "Les recettes congolaises reposent sur quelques produits de base. La [chikwangue](/produit/chikwangue), les [feuilles de manioc](/produit/feuilles-de-manioc) pour le saka-saka, la [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme) pour la moambé et la [pâte d'arachide](/produit/pate-d-arachide) reviennent d'une région à l'autre. Ce sont aussi ceux que l'on retrouve sur les marchés de Brazzaville et de Pointe-Noire.",
+    remplacer:
+      "La page [Congo](/pays/congo) présente la cuisine du pays et ses produits du placard ; la page [RD Congo](/pays/rd-congo) permet de comparer avec la rive d'en face. Pour les sauces au poisson fumé, lisez [Par quoi remplacer le poisson fumé dans une sauce ?](/conseils/remplacer-le-poisson-fume).",
+    enCuisine:
+      "Sur le site, le [poulet à la moambé](/recette/moambe), le [liboké de poisson](/recette/liboke-de-poisson) cuit en papillote de feuilles et le [pondu au poisson fumé](/recette/pondu), appelé saka-saka à Brazzaville, donnent un premier aperçu des plats décrits dans le livre. Ils permettent de se familiariser avec les feuilles, le manioc et la noix de palme.",
+    faq: [
+      {
+        question: "Ce livre parle-t-il du Congo-Brazzaville ou de la RD Congo ?",
+        reponse:
+          "Il est consacré à la République du Congo, dont la capitale est Brazzaville. Les deux pays partagent cependant de nombreux plats.",
+      },
+      {
+        question: "Est-ce un livre de recettes illustré ?",
+        reponse:
+          "C'est surtout un ouvrage de recensement, qui décrit les recettes et les aliments traditionnels des régions du pays.",
+      },
+    ],
+  },
+  "livre-senegal-cuisine-intime-et-gourmande": {
+    origine:
+      "Youssou N'Dour, né à Dakar en 1959, est la grande voix du mbalax et l'un des musiciens africains les plus célèbres au monde. Dans ce livre publié en 2014 aux éditions de La Martinière, il ne parle pas de musique mais de table : il raconte le Dakar de son enfance, les marchés, le repas préparé entre femmes et la famille réunie autour du grand plat commun.\n\nLes recettes sont celles qui lui rappellent sa mère. Les photographies d'Isabelle Rozenbaum accompagnent ces souvenirs et montrent les plats comme les scènes de vie.",
+    choisir:
+      "C'est un beau livre autant qu'un livre de cuisine : à offrir à un amateur de musique africaine, à quelqu'un qui revient du Sénégal ou qui s'apprête à y partir. Ceux qui cherchent un manuel plus exhaustif, avec de nombreuses recettes et des substitutions, se tourneront vers [Cuisine du Sénégal, 81 recettes traditionnelles](/produit/livre-cuisine-du-senegal-81-recettes).\n\nPour une approche plus moderne des saveurs sénégalaises, [Grain d'Afrique](/produit/livre-grain-d-afrique) mêle cuisine du quotidien et ingrédients africains.",
+    conserver:
+      "La cuisine sénégalaise demande quelques produits de base : gardez au moins du [soumbala](/produit/soumbala), du [poivre de Selim](/produit/poivre-de-selim), de la [pâte d'arachide](/produit/pate-d-arachide) et du [thé vert gunpowder](/produit/the-vert-gunpowder) pour l'ataya d'après le repas. Avec ces produits, la plupart des plats familiaux évoqués par le chanteur deviennent possibles à la maison.",
+    remplacer:
+      "La page [Sénégal](/pays/senegal) présente les grands plats du pays, du riz au poisson aux douceurs au mil. Pour comprendre le rituel qui clôt le repas, lisez [Comment préparer l'ataya, le thé sénégalais en trois services ?](/conseils/comment-preparer-l-ataya), et pour le plat national, [Comment réussir le riz rouge du thiéboudienne ?](/conseils/reussir-le-riz-rouge-du-thieboudienne).",
+    enCuisine:
+      "Le [thiéboudienne](/recette/thieboudienne), le [poulet yassa](/recette/poulet-yassa), le [mafé de bœuf](/recette/mafe) et le [thiakry](/recette/thiakry) sont déjà sur le site, ainsi que le [jus de bissap](/recette/jus-de-bissap) et l'[ataya](/recette/ataya) qui accompagnent les repas de famille. Ils permettent de prolonger la lecture en cuisinant, en suivant pas à pas des recettes testées.",
+    faq: [
+      {
+        question: "Qu'est-ce que le grand plat commun dont parle le livre ?",
+        reponse:
+          "Au Sénégal, la famille mange souvent dans un même grand plat posé au centre. Chacun se sert dans la portion placée devant lui, et l'on partage les meilleurs morceaux avec les invités.",
+      },
+      {
+        question: "Qui a pris les photos du livre ?",
+        reponse:
+          "La photographe Isabelle Rozenbaum, spécialiste de la photographie culinaire, signe les images du livre.",
+      },
+    ],
+  },
+  "livre-dans-ma-cuisine-congolaise": {
+    origine:
+      "Gisèle Mbeku Andjelani raconte dans ce livre les goûts de son enfance, des rives du lac Kivu, à l'est de la RD Congo, jusqu'à Kinshasa, la capitale, à l'autre bout du pays. Plus de 70 recettes accessibles y sont réunies, chacune précédée d'une petite histoire.\n\nOn y croise le sombe, nom swahili des feuilles de manioc pilées que Kinshasa appelle pondu, le madesu, les haricots en sauce, le liboke, cuit en papillote de feuilles, les sambaza, petits poissons frits du lac Kivu, ou encore les ndazi et les mikate, beignets du goûter. Le livre est paru en avril 2026 en édition indépendante.",
+    choisir:
+      "C'est le livre idéal pour découvrir la diversité de la RD Congo, avec un regard personnel : l'est swahiliphone et l'ouest lingalaphone n'ont pas tout à fait la même cuisine. Il complète [Le meilleur de la cuisine congolaise](/produit/livre-le-meilleur-de-la-cuisine-congolaise), plus axé sur les techniques, et se distingue de [La cuisine congolaise](/produit/livre-la-cuisine-congolaise), consacrée au Congo-Brazzaville.\n\nLes récits qui accompagnent les recettes en font aussi une lecture agréable pour ceux qui ont grandi au pays.",
+    conserver:
+      "Les recettes congolaises supposent quelques produits du placard. Les [feuilles de manioc](/produit/feuilles-de-manioc) pour le sombe, l'[huile de palme rouge](/produit/huile-de-palme-rouge), la [chikwangue](/produit/chikwangue) pour accompagner, et le [café moulu du Kivu](/produit/cafe-du-kivu) pour finir le repas sur une note de la région. Tous se gardent bien au placard.",
+    remplacer:
+      "La page [RD Congo](/pays/rd-congo) présente la cuisine du pays d'une région à l'autre. Pour préparer les feuilles de manioc séchées, lisez [Comment conserver les feuilles séchées (ndolé, manioc, sorgho) ?](/conseils/conserver-feuilles-sechees), et pour le poisson fumé de la sauce, [Comment conserver le poisson fumé ?](/conseils/comment-conserver-le-poisson-fume).",
+    enCuisine:
+      "Sur le site, le [pondu au poisson fumé](/recette/pondu), le [liboké de poisson](/recette/liboke-de-poisson) et le [poulet à la moambé](/recette/moambe) donnent un avant-goût du livre. Les beignets [puff-puff](/recette/puff-puff), cousins des mikate, se préparent avec la même pâte levée. Une bonne façon de goûter à la cuisine de l'autrice avant d'ouvrir son livre.",
+    faq: [
+      {
+        question: "Qu'est-ce que le sombe ?",
+        reponse:
+          "C'est le nom swahili, utilisé dans l'est de la RD Congo, du plat de feuilles de manioc pilées que l'on appelle pondu à Kinshasa.",
+      },
+      {
+        question: "Que sont les sambaza ?",
+        reponse:
+          "De petits poissons du lac Kivu, servis frits et croustillants, très populaires à Goma, à Bukavu et de l'autre côté de la frontière, au Rwanda.",
+      },
+    ],
+  },
+  "livre-plats-express-saveurs-d-afrique": {
+    origine:
+      "Cheikh Niang est né au Sénégal et a grandi en France, où il est arrivé enfant. Sous le nom de @niangcook, il publie sur les réseaux sociaux des vidéos de cuisine suivies par une large communauté, qui mêlent saveurs africaines et influences du monde.\n\nCe deuxième livre, publié chez Solar en 2024 avec des photographies de Laurent Moynat, réunit 60 recettes inédites, toutes prêtes en 30 minutes au plus. On y trouve un riz à la tomate express, des pancakes de plantain ou un afro burger : des plats du quotidien qui gardent le goût de l'Afrique sans y passer l'après-midi.",
+    choisir:
+      "C'est le livre des soirs de semaine. Il convient aux jeunes actifs, aux étudiants et aux familles pressées qui aiment les saveurs africaines mais n'ont pas le temps de laisser mijoter une sauce pendant deux heures. Ceux qui découvrent l'auteur peuvent commencer par son premier livre, [Cuisine d'Afrique et d'ailleurs](/produit/livre-cuisine-d-afrique-et-d-ailleurs), centré sur ses grands classiques.\n\nPour des plats plus traditionnels et plus longs, les recueils consacrés au Sénégal ou au Cameroun sont plus adaptés.",
+    conserver:
+      "La cuisine rapide repose sur un placard bien garni. Une [pâte d'arachide](/produit/pate-d-arachide), un [assaisonnement jollof](/produit/assaisonnement-jollof), du [piment pili-pili](/produit/piment-pili-pili) et de la [sauce peri-peri](/produit/sauce-peri-peri) permettent de donner du caractère à un plat en quelques minutes. Ils se gardent longtemps une fois ouverts, ce qui convient bien aux cuisiniers pressés.",
+    remplacer:
+      "Pour savoir quels produits garder sous la main, lisez [Quels ingrédients avoir toujours dans son placard ?](/conseils/ingredients-placard-cuisine-africaine). Si vous débutez, [Par quelle recette africaine commencer quand on débute ?](/conseils/par-quelle-recette-commencer) propose des plats simples pour prendre confiance. Les deux articles se lisent en quelques minutes.",
+    enCuisine:
+      "Sur le site, plusieurs recettes se font en peu de temps : l'[alloco](/recette/alloco), le [kelewele](/recette/kelewele) au gingembre, les [akara](/recette/akara) de niébé ou le [riz jollof](/recette/riz-jollof), parfait pour s'entraîner avant la version express du livre. Tous se préparent sans longue cuisson.",
+    faq: [
+      {
+        question: "Les recettes se font-elles vraiment en 30 minutes ?",
+        reponse:
+          "C'est le principe du livre : toutes les recettes sont annoncées prêtes en 30 minutes maximum.",
+      },
+      {
+        question: "Qui est @niangcook ?",
+        reponse:
+          "C'est le nom sous lequel Cheikh Niang, cuisinier né au Sénégal et arrivé enfant en France, partage ses recettes en vidéo sur les réseaux sociaux.",
+      },
+    ],
+  },
+  "livre-le-meilleur-de-la-cuisine-congolaise": {
+    origine:
+      "Lukusa Jessica présente dans ce livre publié chez Dashbook en 2025 une sélection de plats emblématiques de la cuisine congolaise. Le parcours va des accompagnements, ces bases sans lesquelles une sauce n'est pas complète, jusqu'à la pâtisserie.\n\nChaque recette est accompagnée d'une histoire, d'anecdotes et de conseils pour maîtriser les techniques essentielles. L'autrice s'adresse aussi bien aux débutants qu'aux cuisiniers qui ont déjà l'habitude des marmites.",
+    choisir:
+      "C'est le plus pédagogique des livres congolais de la boutique : à conseiller à ceux qui veulent comprendre les gestes, la cuisson des feuilles, la préparation des accompagnements, plutôt que de suivre une liste d'ingrédients. [Dans ma cuisine congolaise](/produit/livre-dans-ma-cuisine-congolaise) est plus personnel, centré sur un parcours du Kivu à Kinshasa ; [La cuisine congolaise](/produit/livre-la-cuisine-congolaise) plus documentaire.\n\nUn bon cadeau pour un jeune de la diaspora qui veut apprendre les plats de famille.",
+    conserver:
+      "Les accompagnements du livre reposent sur le manioc sous toutes ses formes. La [chikwangue](/produit/chikwangue) se garde quelques jours au frais, la [farine de manioc pour foufou](/produit/farine-de-foufou) des mois au placard. Les [feuilles de manioc](/produit/feuilles-de-manioc) séchées complètent la base. Avec eux, on peut s'exercer aux gestes décrits par l'autrice.",
+    remplacer:
+      "Pour éviter les grumeaux dans le foufou, lisez [Comment préparer un foufou sans qu'il fasse de grumeaux ?](/conseils/foufou-sans-grumeaux). La page [RD Congo](/pays/rd-congo) présente les spécialités du pays, et la page [Congo](/pays/congo) celles de la rive de Brazzaville, très proches. Les deux pages listent aussi les produits du placard à prévoir.",
+    enCuisine:
+      "Sur le site, le [pondu au poisson fumé](/recette/pondu), le [poulet à la moambé](/recette/moambe) et le [liboké de poisson](/recette/liboke-de-poisson) sont de bons exercices pour appliquer les techniques du livre. Les [puff-puff](/recette/puff-puff) font un premier pas vers la pâtisserie. Chaque recette du site détaille les quantités et les temps de cuisson.",
+    faq: [
+      {
+        question: "Ce livre convient-il à un débutant ?",
+        reponse:
+          "Oui, il s'adresse aux débutants comme aux cuisiniers confirmés, avec des conseils pour maîtriser les techniques de base.",
+      },
+      {
+        question: "Y a-t-il des desserts ?",
+        reponse:
+          "Oui, le livre va des accompagnements jusqu'à la pâtisserie congolaise.",
+      },
+    ],
+  },
+  "livre-cuisine-d-afrique-et-d-ailleurs": {
+    origine:
+      "Premier livre de Cheikh Niang, publié chez Solar en 2022, il reprend les grands classiques des vidéos qui l'ont fait connaître sous le nom de @niangcook. Né au Sénégal et installé en France depuis l'enfance, le cuisinier y défend une cuisine qui mêle les saveurs d'Afrique de l'Ouest et d'Afrique centrale aux influences du monde entier.\n\nLes recettes sont expliquées pas à pas, avec la volonté de rester simples et accessibles, comme dans ses vidéos. Le livre fait le lien entre la cuisine de famille et celle d'une génération qui a grandi entre deux continents.",
+    choisir:
+      "C'est une bonne porte d'entrée pour ceux qui suivent déjà l'auteur sur les réseaux sociaux, ou pour un jeune qui veut se mettre aux plats africains sans livre trop technique. Son second livre, [Plats express aux saveurs d'Afrique](/produit/livre-plats-express-saveurs-d-afrique), va plus loin dans la rapidité, avec des recettes en 30 minutes.\n\nPour une approche centrée sur un seul pays, les livres consacrés au Sénégal, au Cameroun ou au Congo seront plus complets.",
+    conserver:
+      "Pour suivre ses recettes, quelques produits reviennent souvent : la [pâte d'arachide](/produit/pate-d-arachide) pour le mafé, l'[huile de palme rouge](/produit/huile-de-palme-rouge) pour les sauces d'Afrique centrale, l'[assaisonnement jollof](/produit/assaisonnement-jollof) et le [poivre de Selim](/produit/poivre-de-selim). Tous se conservent longtemps et suffisent pour la plupart des classiques de l'auteur.",
+    remplacer:
+      "Si une sauce arachide reste trop liquide, lisez [Comment épaissir une sauce arachide ?](/conseils/comment-epaissir-une-sauce-arachide). Pour doser le piment selon les invités, [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment) donne des repères utiles. Ces conseils valent pour toutes les sauces du livre.",
+    enCuisine:
+      "Sur le site, le [mafé de bœuf](/recette/mafe), le [poulet yassa](/recette/poulet-yassa), le [riz jollof](/recette/riz-jollof) et la [sauce graine au poulet](/recette/sauce-graine) couvrent les deux régions dont s'inspire le livre, l'Afrique de l'Ouest et l'Afrique centrale. Chaque recette du site précise les produits utilisés et leurs remplacements.",
+    faq: [
+      {
+        question: "Quel livre de @niangcook choisir en premier ?",
+        reponse:
+          "Celui-ci, paru en 2022, reprend ses grands classiques. Le second, Plats express aux saveurs d'Afrique, se concentre sur des recettes rapides.",
+      },
+      {
+        question: "Les recettes sont-elles uniquement africaines ?",
+        reponse:
+          "Non, elles mêlent les saveurs d'Afrique de l'Ouest et centrale à des influences venues d'autres cuisines du monde.",
+      },
+    ],
+  },
+  "livre-grain-d-afrique": {
+    origine:
+      "Aïssatou Mbaye tient depuis 2015 un blog de cuisine consacré aux ingrédients d'Afrique subsaharienne et au patrimoine culinaire sénégalais. Elle a déjà publié Saveurs subsahariennes et Yassa et Pastels. Avec Grain d'Afrique, paru en 2026 aux éditions Marie Claire, elle propose plus de 60 recettes qui glissent une touche africaine dans la cuisine de tous les jours.\n\nLes exemples donnent le ton : pancakes à la farine de mil, houmous de niébé et de cajou, chips de banane plantain, madeleines au manioc ou chocolat chaud épicé.",
+    choisir:
+      "C'est le livre des curieux qui veulent intégrer les produits africains à leurs habitudes plutôt que de cuisiner des plats traditionnels. Il plaira aussi aux familles qui cherchent des idées de petit-déjeuner, de goûter ou d'apéritif. Pour les grands plats sénégalais, [Cuisine du Sénégal, 81 recettes traditionnelles](/produit/livre-cuisine-du-senegal-81-recettes) est plus adapté ; pour un récit de vie, [Sénégal, cuisine intime et gourmande](/produit/livre-senegal-cuisine-intime-et-gourmande).\n\nSon approche se rapproche de celle d'[Afro Vegan](/produit/livre-afro-vegan), en plus généraliste.",
+    conserver:
+      "Les recettes font appel à des produits faciles à garder au placard : le [couscous de mil](/produit/couscous-de-mil), les [chips de plantain](/produit/chips-de-plantain), le [tapioca de manioc](/produit/tapioca-de-manioc) ou le [pain de singe](/produit/poudre-de-baobab), qui parfume aussi les desserts. Ces produits secs se gardent plusieurs mois au placard.",
+    remplacer:
+      "Pour d'autres idées autour du baobab, lisez [Que faire avec la poudre de baobab (pain de singe) ?](/conseils/que-faire-avec-la-poudre-de-baobab). Les plats sans viande du continent sont réunis dans [Quels plats africains sont naturellement végétariens ?](/conseils/plats-africains-vegetariens). On y retrouve plusieurs ingrédients chers à l'autrice, comme le niébé et le mil.",
+    enCuisine:
+      "Sur le site, l'[alloco](/recette/alloco), les [akara](/recette/akara) de niébé, le [jus de bouye](/recette/jus-de-bouye) et le [thiakry](/recette/thiakry) partagent le même esprit : des préparations simples qui mettent en valeur un produit africain. Elles se glissent facilement dans un repas de tous les jours, comme les recettes du livre.",
+    faq: [
+      {
+        question: "Grain d'Afrique est-il un livre de cuisine traditionnelle ?",
+        reponse:
+          "Pas vraiment : il associe cuisine du quotidien et saveurs africaines, avec des recettes comme les pancakes au mil ou les madeleines au manioc.",
+      },
+      {
+        question: "L'autrice a-t-elle écrit d'autres livres ?",
+        reponse:
+          "Oui, Aïssatou Mbaye a publié auparavant Saveurs subsahariennes et Yassa et Pastels, et elle tient un blog de cuisine depuis 2015.",
+      },
+    ],
+  },
+  "livre-cuisine-du-senegal-81-recettes": {
+    origine:
+      "Kaya N'Dor rassemble dans ce livre 81 recettes traditionnelles du Sénégal, de quoi faire le tour des grands plats que l'on sert dans les familles. Chaque recette est expliquée pas à pas, avec des astuces de réussite.\n\nLe livre prête aussi attention à une difficulté bien connue de ceux qui cuisinent loin du pays : il propose des substitutions d'ingrédients, pour réussir le thiéboudienne, le yassa ou le mafé même quand certains ingrédients manquent. Il est paru en juin 2026 en édition indépendante.",
+    choisir:
+      "C'est un manuel pratique, à conseiller à ceux qui veulent cuisiner sénégalais régulièrement, en France ou ailleurs. Les substitutions proposées le rendent utile aux débutants comme aux familles de la diaspora qui n'ont pas d'épicerie africaine à côté. Pour un récit plus intime, [Sénégal, cuisine intime et gourmande](/produit/livre-senegal-cuisine-intime-et-gourmande) de Youssou N'Dour complète bien la lecture.\n\nSa liste de recettes est plus courte que celle des 200 recettes camerounaises, mais centrée sur un seul pays.",
+    conserver:
+      "Le placard sénégalais tient en quelques produits : [soumbala](/produit/soumbala), [poivre de Selim](/produit/poivre-de-selim), [pâte d'arachide](/produit/pate-d-arachide), [couscous de mil](/produit/couscous-de-mil) et [fleurs de bissap](/produit/fleurs-de-bissap). Avec eux, la plupart des grands classiques deviennent possibles. Ils se gardent longtemps, ce qui permet de cuisiner sénégalais même loin d'une épicerie africaine.",
+    remplacer:
+      "Le site propose lui aussi des solutions de remplacement : [Par quoi remplacer le soumbala (nététou) ?](/conseils/par-quoi-remplacer-le-soumbala) et [Le guedj (guedji), quel est ce poisson séché et comment l'utiliser ?](/conseils/quest-ce-que-le-guedj). La page [Sénégal](/pays/senegal) présente la cuisine du pays et ses produits typiques.",
+    enCuisine:
+      "Le [thiéboudienne](/recette/thieboudienne), le [poulet yassa](/recette/poulet-yassa), le [mafé de bœuf](/recette/mafe) et le [caldou de poisson](/recette/caldou) sont déjà sur le site. Pour le yassa, lisez [Pourquoi faire mariner le poulet yassa une nuit ?](/conseils/mariner-poulet-yassa). Ces pages permettent de comparer les méthodes avec celles du livre.",
+    faq: [
+      {
+        question: "Le livre propose-t-il des alternatives aux ingrédients ?",
+        reponse:
+          "Oui, il donne des substitutions d'ingrédients pour réussir les recettes même sans certains produits typiques.",
+      },
+      {
+        question: "Y trouve-t-on le thiéboudienne ?",
+        reponse:
+          "Oui, le plat national figure parmi les grands classiques du livre, avec le yassa et le mafé.",
+      },
+    ],
+  },
+  "livre-afro-vegan": {
+    origine:
+      "Aurélie Payet et Blandine Mayissa proposent dans ce livre, paru en 2023 en édition indépendante, 50 recettes afro véganes : entrées, plats, desserts et boissons. Chaque recette est expliquée pas à pas et illustrée d'une photo en couleur.\n\nLa cuisine africaine se prête bien à cette démarche. Beaucoup de plats du quotidien reposent déjà sur les légumineuses, les céréales, les tubercules et les feuilles, et la viande ou le poisson n'y jouent souvent qu'un rôle d'assaisonnement, facile à remplacer.",
+    choisir:
+      "C'est le livre à offrir à un proche végétalien qui veut découvrir les saveurs africaines, ou à un amateur de cuisine africaine qui souhaite manger moins de viande. Son format court en fait une bonne introduction. [Grain d'Afrique](/produit/livre-grain-d-afrique) propose une autre approche des produits africains au quotidien, sans être végétalien.\n\nPour les plats de viande ou de poisson traditionnels, les livres consacrés au Sénégal, au Cameroun ou au Congo restent plus complets.",
+    conserver:
+      "Une cuisine afro végane s'appuie sur les produits secs de la boutique : [fonio](/produit/fonio), [farine de pois chiches](/produit/farine-de-pois-chiches), [graines d'egusi](/produit/graines-d-egusi), [pâte d'arachide](/produit/pate-d-arachide) et [soumbala](/produit/soumbala), qui apporte la profondeur d'un bouillon sans viande. Tous se gardent bien et servent dans de nombreuses recettes.",
+    remplacer:
+      "Le site réunit les plats sans viande du continent dans [Quels plats africains sont naturellement végétariens ?](/conseils/plats-africains-vegetariens). Pour retrouver le goût fumé sans poisson, lisez [Par quoi remplacer le poisson fumé dans une sauce ?](/conseils/remplacer-le-poisson-fume). Ces deux articles aident à adapter n'importe quelle recette africaine.",
+    enCuisine:
+      "Sur le site, le [misir wat](/recette/misir-wat), le [shiro](/recette/shiro), les [akara](/recette/akara), le [kelewele](/recette/kelewele) et le [fonio aux légumes et sauce arachide](/recette/fonio-aux-legumes) sont déjà végétaliens ou faciles à adapter. Ils montrent combien la cuisine du continent fait de place aux légumineuses et aux légumes.",
+    faq: [
+      {
+        question: "La cuisine africaine peut-elle être végane ?",
+        reponse:
+          "Oui, de nombreux plats reposent sur les légumineuses, les céréales et les légumes. Il suffit souvent de remplacer le bouillon ou le poisson séché.",
+      },
+      {
+        question: "Le livre contient-il des desserts ?",
+        reponse:
+          "Oui, il propose des entrées, des plats, des desserts et des boissons, tous sans produits d'origine animale.",
+      },
+    ],
+  },
 };
