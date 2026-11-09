@@ -62,6 +62,6 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Aucun prix
 
 ## Les 3 priorités
 
-- Corriger le motif du refus AdSense du 31 octobre 2026, « contenu à faible valeur informative » (revérifié dans la console le 8 novembre) : étoffer les pages les plus minces, puis redemander l'examen.
+- Corriger le motif du refus AdSense du 31 octobre 2026, « contenu à faible valeur informative » (revérifié dans la console le 8 novembre) : étoffer les pages les plus minces, puis redemander l'examen. Le 9 novembre 2026, les 10 articles « Conseils » les plus courts ont été enrichis (origine, étapes, astuces, erreurs à éviter : de 165-255 mots à 350-430 mots) ; le site est prêt pour une nouvelle demande d'examen, que Jean envoie lui-même.
 - Écrire de nouveaux articles « Conseils » : il en reste 23 en réserve, la réserve passe sous 20 le 16 novembre et se vide le 28 décembre 2026.
 - Créer dans Amazon Partenaires un code de suivi par emplacement (recette, conseil, top, fiche, rubrique) : la table `CODES_SUIVI` est prête, tous encore à `keurcookfr-21`.

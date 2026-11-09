@@ -15,6 +15,10 @@ imagePrompt: Photographie culinaire, bol en terre cuite rempli de fonio cuit aux
 
 Le fonio est cultivé depuis très longtemps dans les pays du Sahel et de l'Afrique de l'Ouest : Mali, Burkina Faso, Guinée, Sénégal. Ses grains sont bien plus petits que ceux du couscous. Il a un goût doux, légèrement de noisette, et il accompagne aussi bien les sauces que les légumes.
 
+## Bien le rincer
+
+Le fonio traditionnel, vendu en vrac ou non précuit, peut contenir un peu de sable. Rincez-le plusieurs fois dans un grand saladier d'eau : les grains flottent puis retombent, le sable reste au fond. Versez l'eau doucement en retenant le fonio, et recommencez jusqu'à ce que l'eau soit claire.
+
 ## La cuisson du fonio précuit
 
 Le [fonio précuit](/produit/fonio) vendu en sachet est le plus simple à utiliser : il est déjà décortiqué et lavé. Suivez les proportions d'eau indiquées sur le paquet, car elles varient d'une marque à l'autre.
@@ -30,3 +34,17 @@ Pour un grain encore plus léger, humidifiez le fonio, puis faites-le cuire dans
 ## Avec quoi le servir
 
 Le fonio remplace le riz ou la semoule sous une sauce. Essayez-le dans le [fonio aux légumes et sauce arachide](/recette/fonio-aux-legumes), un plat complet du Burkina Faso.
+
+## Les erreurs à éviter
+
+- **Trop d'eau** : le fonio devient vite une pâte. Respectez les proportions du paquet, quitte à ajouter un peu d'eau ensuite.
+- **Le remuer pendant qu'il gonfle** : laissez-le couvert, sans y toucher, puis égrenez-le seulement à la fin.
+- **Le laisser refroidir en bloc** : égrenez-le dès qu'il a gonflé pour garder des grains détachés.
+
+## En version sucrée
+
+Le fonio se cuisine aussi en dessert : cuit dans du lait sucré, parfumé à la vanille ou à la muscade, il se mange comme un riz au lait. On peut aussi le mélanger à du lait caillé, à la manière du [thiakry](/recette/thiakry).
+
+## Le conserver
+
+Gardez le fonio sec dans un bocal fermé, au sec. Cuit, il se garde au réfrigérateur dans une boîte fermée ; réchauffez-le à la vapeur et égrenez-le de nouveau.

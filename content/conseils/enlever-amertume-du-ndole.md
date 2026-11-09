@@ -15,6 +15,10 @@ imagePrompt: Photographie culinaire, mains pressant une boule de feuilles de ndo
 
 Le ndolé tire son nom de ses feuilles, issues d'un arbuste du genre Vernonia. Leur amertume fait partie du plat : l'objectif n'est pas de la supprimer, mais de l'adoucir pour qu'elle s'équilibre avec l'arachide.
 
+## Le ndolé, grand plat du Cameroun
+
+Le ndolé est souvent présenté comme le plat national du Cameroun. Il vient de la région du littoral, autour de Douala. On le sert avec du plantain mûr frit ou bouilli, des bâtons de manioc (miondo ou bobolo) ou du riz. Ses feuilles, vendues séchées ou surgelées en France, en sont l'ingrédient central.
+
 ## Avec des feuilles séchées
 
 1. Faites tremper les [feuilles de ndolé séchées](/produit/feuilles-de-ndole) dans de l'eau tiède pour les réhydrater.
@@ -35,3 +39,11 @@ La même méthode vaut pour les autres feuilles amères : rincer, blanchir puis 
 ## Dans la sauce
 
 Une fois pressées, les feuilles cuisent dans la sauce aux arachides avec les [crevettes séchées](/produit/crevettes-sechees). La douceur de l'arachide adoucit encore l'amertume. Suivez notre [ndolé aux crevettes](/recette/ndole) pas à pas.
+
+## Préparer les feuilles à l'avance
+
+Le lavage des feuilles prend du temps. Vous pouvez le faire la veille et garder les feuilles pressées au réfrigérateur, dans une boîte fermée. Pour plusieurs repas, formez des boules de feuilles bien pressées et congelez-les : elles seront prêtes à l'emploi.
+
+## Les feuilles surgelées
+
+Certaines feuilles de ndolé surgelées sont vendues déjà lavées. Elles demandent moins de rinçages : goûtez-en une après décongélation avant de décider s'il faut les blanchir de nouveau.

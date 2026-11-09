@@ -21,6 +21,10 @@ Le poisson fumé et le poisson séché se conservent parce qu'ils ont perdu leur
 
 Les produits très secs comme les [crevettes séchées](/produit/crevettes-sechees) ou le guedj se gardent de la même façon, dans un bocal bien fermé.
 
+## Bien le choisir
+
+Choisissez un poisson ferme et sec au toucher, à l'odeur de fumée franche. Une odeur aigre, une surface poisseuse ou des points blancs ou verts doivent vous faire renoncer. Dans les épiceries africaines, on trouve surtout du maquereau, du chinchard, du machoiron ou du poisson-chat fumés, entiers ou en morceaux.
+
 ## Le préparer avant cuisson
 
 Faites tremper le poisson fumé quelques minutes dans de l'eau chaude : il s'assouplit et perd une partie de son sel et de la fumée en surface. Retirez ensuite la peau et les arêtes, puis émiettez-le dans la sauce.
@@ -32,3 +36,11 @@ Des taches de moisissure, une odeur rance ou une texture collante sont des signe
 ## Où l'utiliser
 
 Le poisson fumé parfume le [pondu](/recette/pondu), l'[eru](/recette/eru) ou le [liboké de poisson](/recette/liboke-de-poisson).
+
+## Limiter l'odeur dans la cuisine
+
+Le poisson fumé a une odeur puissante. Faites-le tremper dans un récipient couvert, et rangez-le toujours dans une boîte hermétique, à l'écart du beurre et des fromages qui prennent facilement les odeurs. Après l'avoir émietté, lavez la planche et vos mains à l'eau froide savonneuse.
+
+## Le cuire au bon moment
+
+Ajoutez le poisson fumé émietté dans la sauce qui mijote, plutôt qu'au tout début avec l'huile : il se défait et parfume la sauce sans devenir trop sec. Goûtez avant de saler, car il apporte déjà du sel.

@@ -10,6 +10,10 @@ image: /conseils/huile-de-palme-rouge-ou-raffinee.webp
 imageAlt: Un bocal d'huile de palme rouge orangée à côté de noix de palme fraîches.
 imagePrompt: Photographie culinaire, bocal en verre d'huile de palme rouge orangée intense, régime de noix de palme rouges et orange à côté, table en bois sombre, lumière chaude orangée, fond sombre, sans texte ni logo, format 16:9.
 ---
+## Le palmier à huile, un arbre africain
+
+Le palmier à huile est originaire d'Afrique de l'Ouest et d'Afrique centrale, où il est cultivé et utilisé depuis très longtemps. Ses fruits poussent en grosses grappes : chacun contient une pulpe orangée et huileuse, autour d'un noyau dur. De ce seul fruit, on tire deux huiles différentes.
+
 ## L'huile de palme rouge
 
 L'[huile de palme rouge](/produit/huile-de-palme-rouge) est obtenue en pressant la pulpe des fruits du palmier à huile, puis en la décantant, sans raffinage. Elle garde sa couleur orange vif et un goût marqué, légèrement fruité. C'est elle qui colore et parfume de nombreuses sauces d'Afrique centrale et de l'Ouest.
@@ -29,3 +33,11 @@ Pour la [moambé](/recette/moambe), l'[eru](/recette/eru) ou la [sauce graine au
 ## Bien l'utiliser
 
 Chauffez-la doucement, sans la laisser fumer. Elle se fige quand il fait frais : c'est normal. Réchauffez le pot au bain-marie pour la rendre liquide, et conservez-la bien fermée, à l'abri de la lumière.
+
+## Bien la choisir
+
+Une bonne huile de palme rouge a une couleur orange à rouge profond et une odeur fruitée. Sa texture varie selon la température et selon l'origine : certaines sont plus épaisses ou plus foncées que d'autres. Lisez l'étiquette pour vérifier qu'il s'agit bien d'huile de palme non raffinée.
+
+## Par quoi la remplacer
+
+Aucun produit ne la remplace vraiment. À défaut, une huile neutre avec une pointe de paprika doux donnera la couleur, mais pas le goût : le plat sera différent de la recette d'origine. Mieux vaut garder un pot d'huile rouge pour les sauces où elle joue le premier rôle.
