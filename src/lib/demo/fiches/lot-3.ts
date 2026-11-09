@@ -307,7 +307,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     remplacer:
       "Une épicerie ghanéenne ou nigériane le propose parfois sous le nom de prekese ou d'aidan, en gousses entières : c'est le même fruit. Sinon, une pincée de quatre-épices donne une note douce et chaude au bouillon, sans reproduire son goût.",
     enCuisine:
-      "Peu de recettes l'exigent, mais il trouve sa place dans les soupes de poisson ou de viande. Une pincée enrichit le bouillon de la [pepper soup de chèvre](/recette/pepper-soup), à côté du pèbè, ou la sauce du [mbongo tchobi](/recette/mbongo-tchobi). Il s'accorde aussi au [poivre de Penja](/produit/poivre-de-penja) dans un [kedjenou de poulet](/recette/kedjenou) cuit à l'étouffée. Pour mieux connaître la cuisine dont il vient, voyez la page [Cameroun](/pays/cameroun).",
+      "Peu de recettes l'exigent, mais il trouve sa place dans les soupes de poisson ou de viande. Une pincée enrichit le bouillon de la [pepper soup de chèvre](/recette/pepper-soup), à côté du pèbè, ou la sauce du [mbongo tchobi](/recette/mbongo-tchobi). Au Cameroun, on met aussi la gousse en morceaux, en petite quantité, dans les sauces au poisson et à la viande. Pour mieux connaître la cuisine dont il vient, voyez la page [Cameroun](/pays/cameroun).",
     faq: [
       {
         question: "Pourquoi l'appelle-t-on « quatre côtés » ?",

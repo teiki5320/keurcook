@@ -871,11 +871,11 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     choisir:
       "C'est un livre de référence pour qui veut cuisiner camerounais au quotidien et varier les plats sur la durée. Le nombre de recettes en fait un bon choix pour une famille d'origine camerounaise qui cherche à retrouver des plats de toutes les régions, ou pour un cuisinier curieux qui a déjà réussi un ndolé et veut aller plus loin.\n\nPour une première approche plus courte de l'Afrique centrale, les livres consacrés aux deux Congo, comme [Le meilleur de la cuisine congolaise](/produit/livre-le-meilleur-de-la-cuisine-congolaise), offrent une sélection plus resserrée.",
     conserver:
-      "Avant de vous lancer, vérifiez les ingrédients du placard : beaucoup de plats camerounais demandent des produits séchés à prévoir. Les [feuilles de ndolé](/produit/feuilles-de-ndole), le [poivre de Penja](/produit/poivre-de-penja), le [pèbè moulu](/produit/pebe-moulu) et les [crevettes séchées](/produit/crevettes-sechees) reviennent souvent et se gardent longtemps. Avoir ces bases sous la main évite de renoncer à une recette faute d'un ingrédient.",
+      "Avant de vous lancer, vérifiez les ingrédients du placard : beaucoup de plats camerounais demandent des produits séchés à prévoir. Les [feuilles de ndolé](/produit/feuilles-de-ndole), le [poivre de Penja](/produit/poivre-de-penja), le [pèbè moulu](/produit/pebe-moulu) et les [crevettes séchées](/produit/crevettes-sechees) reviennent souvent et se gardent longtemps. Le livre se termine par des bonus : des marinades pour le poisson et la viande, des jus et des yaourts maison, des pâtisseries et des desserts simples.",
     remplacer:
-      "La page [Cameroun](/pays/cameroun) présente les grandes régions culinaires du pays et ses produits typiques. Pour les feuilles amères, lisez [Comment enlever l'amertume du ndolé ?](/conseils/enlever-amertume-du-ndole), et si vous n'en trouvez pas, [Par quoi remplacer les feuilles de ndolé ?](/conseils/par-quoi-remplacer-les-feuilles-de-ndole). Ces lectures aident à adapter les recettes du livre à ce que l'on trouve en France.",
+      "La page [Cameroun](/pays/cameroun) présente les grandes régions culinaires du pays et ses produits typiques. Pour les feuilles amères, lisez [Comment enlever l'amertume du ndolé ?](/conseils/enlever-amertume-du-ndole), et si vous n'en trouvez pas, [Par quoi remplacer les feuilles de ndolé ?](/conseils/par-quoi-remplacer-les-feuilles-de-ndole). Le ndolé, par exemple, demande de laver et de faire bouillir les feuilles plusieurs fois avant de les cuisiner.",
     enCuisine:
-      "Plusieurs grands classiques du pays sont déjà sur le site : le [ndolé aux crevettes](/recette/ndole), le [poulet DG](/recette/poulet-dg), l'[eru](/recette/eru), le [koki](/recette/koki) cuit dans les feuilles de bananier et le [mbongo tchobi](/recette/mbongo-tchobi) au poisson. De quoi s'entraîner avant d'ouvrir le livre, puis comparer les tours de main de l'autrice avec les nôtres.",
+      "Plusieurs grands classiques du pays sont déjà sur le site : le [ndolé aux crevettes](/recette/ndole), le [poulet DG](/recette/poulet-dg), l'[eru](/recette/eru), le [koki](/recette/koki) cuit dans les feuilles de bananier et le [mbongo tchobi](/recette/mbongo-tchobi) au poisson. Ils couvrent le Littoral, avec le ndolé et le mbongo tchobi, comme le Sud-Ouest anglophone, d'où vient l'eru.",
     faq: [
       {
         question: "Ce livre convient-il aux débutants ?",
@@ -899,7 +899,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     remplacer:
       "La page [Congo](/pays/congo) présente la cuisine du pays et ses produits du placard ; la page [RD Congo](/pays/rd-congo) permet de comparer avec la rive d'en face. Pour les sauces au poisson fumé, lisez [Par quoi remplacer le poisson fumé dans une sauce ?](/conseils/remplacer-le-poisson-fume).",
     enCuisine:
-      "Sur le site, le [poulet à la moambé](/recette/moambe), le [liboké de poisson](/recette/liboke-de-poisson) cuit en papillote de feuilles et le [pondu au poisson fumé](/recette/pondu), appelé saka-saka à Brazzaville, donnent un premier aperçu des plats décrits dans le livre. Ils permettent de se familiariser avec les feuilles, le manioc et la noix de palme.",
+      "Sur le site, le [poulet à la moambé](/recette/moambe), le [liboké de poisson](/recette/liboke-de-poisson) cuit en papillote de feuilles et le [pondu au poisson fumé](/recette/pondu), appelé saka-saka à Brazzaville, donnent un premier aperçu des plats décrits dans le livre. Le livre, broché, compte 216 pages ; la Bibliothèque nationale de France le date de 2001.",
     faq: [
       {
         question: "Ce livre parle-t-il du Congo-Brazzaville ou de la RD Congo ?",
@@ -923,7 +923,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     remplacer:
       "La page [Sénégal](/pays/senegal) présente les grands plats du pays, du riz au poisson aux douceurs au mil. Pour comprendre le rituel qui clôt le repas, lisez [Comment préparer l'ataya, le thé sénégalais en trois services ?](/conseils/comment-preparer-l-ataya), et pour le plat national, [Comment réussir le riz rouge du thiéboudienne ?](/conseils/reussir-le-riz-rouge-du-thieboudienne).",
     enCuisine:
-      "Le [thiéboudienne](/recette/thieboudienne), le [poulet yassa](/recette/poulet-yassa), le [mafé de bœuf](/recette/mafe) et le [thiakry](/recette/thiakry) sont déjà sur le site, ainsi que le [jus de bissap](/recette/jus-de-bissap) et l'[ataya](/recette/ataya) qui accompagnent les repas de famille. Ils permettent de prolonger la lecture en cuisinant, en suivant pas à pas des recettes testées.",
+      "Le [thiéboudienne](/recette/thieboudienne), le [poulet yassa](/recette/poulet-yassa), le [mafé de bœuf](/recette/mafe) et le [thiakry](/recette/thiakry) sont déjà sur le site, ainsi que le [jus de bissap](/recette/jus-de-bissap) et l'[ataya](/recette/ataya) qui accompagnent les repas de famille. Le livre en compte une cinquantaine, dont le thiéboudienne, le yassa et le mafé, préparés comme chez sa mère, Sokhna.",
     faq: [
       {
         question: "Qu'est-ce que le grand plat commun dont parle le livre ?",
@@ -943,11 +943,11 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     choisir:
       "C'est le livre idéal pour découvrir la diversité de la RD Congo, avec un regard personnel : l'est swahiliphone et l'ouest lingalaphone n'ont pas tout à fait la même cuisine. Il complète [Le meilleur de la cuisine congolaise](/produit/livre-le-meilleur-de-la-cuisine-congolaise), plus axé sur les techniques, et se distingue de [La cuisine congolaise](/produit/livre-la-cuisine-congolaise), consacrée au Congo-Brazzaville.\n\nLes récits qui accompagnent les recettes en font aussi une lecture agréable pour ceux qui ont grandi au pays.",
     conserver:
-      "Les recettes congolaises supposent quelques produits du placard. Les [feuilles de manioc](/produit/feuilles-de-manioc) pour le sombe, l'[huile de palme rouge](/produit/huile-de-palme-rouge), la [chikwangue](/produit/chikwangue) pour accompagner, et le [café moulu du Kivu](/produit/cafe-du-kivu) pour finir le repas sur une note de la région. Tous se gardent bien au placard.",
+      "Les recettes congolaises supposent quelques produits du placard. Les [feuilles de manioc](/produit/feuilles-de-manioc) pour le sombe, l'[huile de palme rouge](/produit/huile-de-palme-rouge), la [chikwangue](/produit/chikwangue) pour accompagner, et le [café moulu du Kivu](/produit/cafe-du-kivu) pour finir le repas sur une note de la région. Parmi ses recettes, le livre cite aussi le mfumbwa et le kihembe.",
     remplacer:
       "La page [RD Congo](/pays/rd-congo) présente la cuisine du pays d'une région à l'autre. Pour préparer les feuilles de manioc séchées, lisez [Comment conserver les feuilles séchées (ndolé, manioc, sorgho) ?](/conseils/conserver-feuilles-sechees), et pour le poisson fumé de la sauce, [Comment conserver le poisson fumé ?](/conseils/comment-conserver-le-poisson-fume).",
     enCuisine:
-      "Sur le site, le [pondu au poisson fumé](/recette/pondu), le [liboké de poisson](/recette/liboke-de-poisson) et le [poulet à la moambé](/recette/moambe) donnent un avant-goût du livre. Les beignets [puff-puff](/recette/puff-puff), cousins des mikate, se préparent avec la même pâte levée. Une bonne façon de goûter à la cuisine de l'autrice avant d'ouvrir son livre.",
+      "Sur le site, le [pondu au poisson fumé](/recette/pondu), le [liboké de poisson](/recette/liboke-de-poisson) et le [poulet à la moambé](/recette/moambe) donnent un avant-goût du livre. Les beignets [puff-puff](/recette/puff-puff), cousins des mikate, se préparent avec la même pâte levée. Le livre, relié, compte 178 pages.",
     faq: [
       {
         question: "Qu'est-ce que le sombe ?",
@@ -969,9 +969,9 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     conserver:
       "La cuisine rapide repose sur un placard bien garni. Une [pâte d'arachide](/produit/pate-d-arachide), un [assaisonnement jollof](/produit/assaisonnement-jollof), du [piment pili-pili](/produit/piment-pili-pili) et de la [sauce peri-peri](/produit/sauce-peri-peri) permettent de donner du caractère à un plat en quelques minutes. Ils se gardent longtemps une fois ouverts, ce qui convient bien aux cuisiniers pressés.",
     remplacer:
-      "Pour savoir quels produits garder sous la main, lisez [Quels ingrédients avoir toujours dans son placard ?](/conseils/ingredients-placard-cuisine-africaine). Si vous débutez, [Par quelle recette africaine commencer quand on débute ?](/conseils/par-quelle-recette-commencer) propose des plats simples pour prendre confiance. Les deux articles se lisent en quelques minutes.",
+      "Pour savoir quels produits garder sous la main, lisez [Quels ingrédients avoir toujours dans son placard ?](/conseils/ingredients-placard-cuisine-africaine). Si vous débutez, [Par quelle recette africaine commencer quand on débute ?](/conseils/par-quelle-recette-commencer) propose des plats simples pour prendre confiance. Le livre, de 160 pages, est paru en août 2024.",
     enCuisine:
-      "Sur le site, plusieurs recettes se font en peu de temps : l'[alloco](/recette/alloco), le [kelewele](/recette/kelewele) au gingembre, les [akara](/recette/akara) de niébé ou le [riz jollof](/recette/riz-jollof), parfait pour s'entraîner avant la version express du livre. Tous se préparent sans longue cuisson.",
+      "Sur le site, plusieurs recettes se font en peu de temps : l'[alloco](/recette/alloco), le [kelewele](/recette/kelewele) au gingembre, les [akara](/recette/akara) de niébé ou le [riz jollof](/recette/riz-jollof), parfait pour s'entraîner avant la version express du livre. L'alloco et le kelewele partent de la même banane plantain bien mûre.",
     faq: [
       {
         question: "Les recettes se font-elles vraiment en 30 minutes ?",
@@ -993,9 +993,9 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     conserver:
       "Les accompagnements du livre reposent sur le manioc sous toutes ses formes. La [chikwangue](/produit/chikwangue) se garde quelques jours au frais, la [farine de manioc pour foufou](/produit/farine-de-foufou) des mois au placard. Les [feuilles de manioc](/produit/feuilles-de-manioc) séchées complètent la base. Avec eux, on peut s'exercer aux gestes décrits par l'autrice.",
     remplacer:
-      "Pour éviter les grumeaux dans le foufou, lisez [Comment préparer un foufou sans qu'il fasse de grumeaux ?](/conseils/foufou-sans-grumeaux). La page [RD Congo](/pays/rd-congo) présente les spécialités du pays, et la page [Congo](/pays/congo) celles de la rive de Brazzaville, très proches. Les deux pages listent aussi les produits du placard à prévoir.",
+      "Pour éviter les grumeaux dans le foufou, lisez [Comment préparer un foufou sans qu'il fasse de grumeaux ?](/conseils/foufou-sans-grumeaux). La page [RD Congo](/pays/rd-congo) présente les spécialités du pays, et la page [Congo](/pays/congo) celles de la rive de Brazzaville, très proches. Le livre, broché, compte 155 pages et il est paru en octobre 2025.",
     enCuisine:
-      "Sur le site, le [pondu au poisson fumé](/recette/pondu), le [poulet à la moambé](/recette/moambe) et le [liboké de poisson](/recette/liboke-de-poisson) sont de bons exercices pour appliquer les techniques du livre. Les [puff-puff](/recette/puff-puff) font un premier pas vers la pâtisserie. Chaque recette du site détaille les quantités et les temps de cuisson.",
+      "Sur le site, le [pondu au poisson fumé](/recette/pondu), le [poulet à la moambé](/recette/moambe) et le [liboké de poisson](/recette/liboke-de-poisson) sont de bons exercices pour appliquer les techniques du livre. Les [puff-puff](/recette/puff-puff) font un premier pas vers la pâtisserie. Le pondu et la moambé demandent tous deux une longue cuisson, ce qui laisse le temps de travailler les gestes.",
     faq: [
       {
         question: "Ce livre convient-il à un débutant ?",
@@ -1017,9 +1017,9 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     conserver:
       "Pour suivre ses recettes, quelques produits reviennent souvent : la [pâte d'arachide](/produit/pate-d-arachide) pour le mafé, l'[huile de palme rouge](/produit/huile-de-palme-rouge) pour les sauces d'Afrique centrale, l'[assaisonnement jollof](/produit/assaisonnement-jollof) et le [poivre de Selim](/produit/poivre-de-selim). Tous se conservent longtemps et suffisent pour la plupart des classiques de l'auteur.",
     remplacer:
-      "Si une sauce arachide reste trop liquide, lisez [Comment épaissir une sauce arachide ?](/conseils/comment-epaissir-une-sauce-arachide). Pour doser le piment selon les invités, [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment) donne des repères utiles. Ces conseils valent pour toutes les sauces du livre.",
+      "Si une sauce arachide reste trop liquide, lisez [Comment épaissir une sauce arachide ?](/conseils/comment-epaissir-une-sauce-arachide). Pour doser le piment selon les invités, [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment) donne des repères utiles. Le mafé et la sauce graine sont justement deux sauces épaisses, l'une à l'arachide, l'autre à la noix de palme.",
     enCuisine:
-      "Sur le site, le [mafé de bœuf](/recette/mafe), le [poulet yassa](/recette/poulet-yassa), le [riz jollof](/recette/riz-jollof) et la [sauce graine au poulet](/recette/sauce-graine) couvrent les deux régions dont s'inspire le livre, l'Afrique de l'Ouest et l'Afrique centrale. Chaque recette du site précise les produits utilisés et leurs remplacements.",
+      "Sur le site, le [mafé de bœuf](/recette/mafe), le [poulet yassa](/recette/poulet-yassa), le [riz jollof](/recette/riz-jollof) et la [sauce graine au poulet](/recette/sauce-graine) couvrent les deux régions dont s'inspire le livre, l'Afrique de l'Ouest et l'Afrique centrale. Le yassa et le mafé viennent du Sénégal, pays natal de l'auteur, la sauce graine de Côte d'Ivoire.",
     faq: [
       {
         question: "Quel livre de @niangcook choisir en premier ?",
@@ -1035,15 +1035,15 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
   },
   "livre-grain-d-afrique": {
     origine:
-      "Aïssatou Mbaye tient depuis 2015 un blog de cuisine consacré aux ingrédients d'Afrique subsaharienne et au patrimoine culinaire sénégalais. Elle a déjà publié Saveurs subsahariennes et Yassa et Pastels. Avec Grain d'Afrique, paru en 2026 aux éditions Marie Claire, elle propose plus de 60 recettes qui glissent une touche africaine dans la cuisine de tous les jours.\n\nLes exemples donnent le ton : pancakes à la farine de mil, houmous de niébé et de cajou, chips de banane plantain, madeleines au manioc ou chocolat chaud épicé.",
+      "Aïssatou Mbaye tient depuis 2015 un blog de cuisine consacré aux ingrédients d'Afrique subsaharienne et au patrimoine culinaire sénégalais. Elle a déjà publié Saveurs subsahariennes et Yassa et Pastels. Avec Grain d'Afrique, paru en 2026 aux éditions Marie Claire, elle propose plus de 60 recettes qui glissent une touche africaine dans la cuisine de tous les jours.\n\nLes exemples donnent le ton : pancakes à la farine de mil, houmous de niébé et de cajou, chips de banane plantain, madeleines au manioc, pizza yassa ou hot-dog à la sauce moyo.",
     choisir:
       "C'est le livre des curieux qui veulent intégrer les produits africains à leurs habitudes plutôt que de cuisiner des plats traditionnels. Il plaira aussi aux familles qui cherchent des idées de petit-déjeuner, de goûter ou d'apéritif. Pour les grands plats sénégalais, [Cuisine du Sénégal, 81 recettes traditionnelles](/produit/livre-cuisine-du-senegal-81-recettes) est plus adapté ; pour un récit de vie, [Sénégal, cuisine intime et gourmande](/produit/livre-senegal-cuisine-intime-et-gourmande).\n\nSon approche se rapproche de celle d'[Afro Vegan](/produit/livre-afro-vegan), en plus généraliste.",
     conserver:
-      "Les recettes font appel à des produits faciles à garder au placard : le [couscous de mil](/produit/couscous-de-mil), les [chips de plantain](/produit/chips-de-plantain), le [tapioca de manioc](/produit/tapioca-de-manioc) ou le [pain de singe](/produit/poudre-de-baobab), qui parfume aussi les desserts. Ces produits secs se gardent plusieurs mois au placard.",
+      "Les recettes font appel à des produits faciles à garder au placard : le [couscous de mil](/produit/couscous-de-mil), les [chips de plantain](/produit/chips-de-plantain), le [tapioca de manioc](/produit/tapioca-de-manioc) ou le [pain de singe](/produit/poudre-de-baobab), qui parfume aussi les desserts. Le livre, de 127 pages, est paru le 5 mai 2026.",
     remplacer:
       "Pour d'autres idées autour du baobab, lisez [Que faire avec la poudre de baobab (pain de singe) ?](/conseils/que-faire-avec-la-poudre-de-baobab). Les plats sans viande du continent sont réunis dans [Quels plats africains sont naturellement végétariens ?](/conseils/plats-africains-vegetariens). On y retrouve plusieurs ingrédients chers à l'autrice, comme le niébé et le mil.",
     enCuisine:
-      "Sur le site, l'[alloco](/recette/alloco), les [akara](/recette/akara) de niébé, le [jus de bouye](/recette/jus-de-bouye) et le [thiakry](/recette/thiakry) partagent le même esprit : des préparations simples qui mettent en valeur un produit africain. Elles se glissent facilement dans un repas de tous les jours, comme les recettes du livre.",
+      "Sur le site, l'[alloco](/recette/alloco), les [akara](/recette/akara) de niébé, le [jus de bouye](/recette/jus-de-bouye) et le [thiakry](/recette/thiakry) partagent le même esprit : des préparations simples qui mettent en valeur un produit africain. Le jus de bouye se fait d'ailleurs avec le même pain de singe que les desserts du livre.",
     faq: [
       {
         question: "Grain d'Afrique est-il un livre de cuisine traditionnelle ?",
@@ -1067,7 +1067,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     remplacer:
       "Le site propose lui aussi des solutions de remplacement : [Par quoi remplacer le soumbala (nététou) ?](/conseils/par-quoi-remplacer-le-soumbala) et [Le guedj (guedji), quel est ce poisson séché et comment l'utiliser ?](/conseils/quest-ce-que-le-guedj). La page [Sénégal](/pays/senegal) présente la cuisine du pays et ses produits typiques.",
     enCuisine:
-      "Le [thiéboudienne](/recette/thieboudienne), le [poulet yassa](/recette/poulet-yassa), le [mafé de bœuf](/recette/mafe) et le [caldou de poisson](/recette/caldou) sont déjà sur le site. Pour le yassa, lisez [Pourquoi faire mariner le poulet yassa une nuit ?](/conseils/mariner-poulet-yassa). Ces pages permettent de comparer les méthodes avec celles du livre.",
+      "Le [thiéboudienne](/recette/thieboudienne), le [poulet yassa](/recette/poulet-yassa), le [mafé de bœuf](/recette/mafe) et le [caldou de poisson](/recette/caldou) sont déjà sur le site. Pour le yassa, lisez [Pourquoi faire mariner le poulet yassa une nuit ?](/conseils/mariner-poulet-yassa). Le livre, broché, compte 109 pages et il est paru le 29 juin 2026.",
     faq: [
       {
         question: "Le livre propose-t-il des alternatives aux ingrédients ?",
@@ -1087,9 +1087,9 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     choisir:
       "C'est le livre à offrir à un proche végétalien qui veut découvrir les saveurs africaines, ou à un amateur de cuisine africaine qui souhaite manger moins de viande. Son format court en fait une bonne introduction. [Grain d'Afrique](/produit/livre-grain-d-afrique) propose une autre approche des produits africains au quotidien, sans être végétalien.\n\nPour les plats de viande ou de poisson traditionnels, les livres consacrés au Sénégal, au Cameroun ou au Congo restent plus complets.",
     conserver:
-      "Une cuisine afro végane s'appuie sur les produits secs de la boutique : [fonio](/produit/fonio), [farine de pois chiches](/produit/farine-de-pois-chiches), [graines d'egusi](/produit/graines-d-egusi), [pâte d'arachide](/produit/pate-d-arachide) et [soumbala](/produit/soumbala), qui apporte la profondeur d'un bouillon sans viande. Tous se gardent bien et servent dans de nombreuses recettes.",
+      "Une cuisine afro végane s'appuie sur les produits secs de la boutique : [fonio](/produit/fonio), [farine de pois chiches](/produit/farine-de-pois-chiches), [graines d'egusi](/produit/graines-d-egusi), [pâte d'arachide](/produit/pate-d-arachide) et [soumbala](/produit/soumbala), qui apporte la profondeur d'un bouillon sans viande. Le livre déborde d'ailleurs du continent : il propose des dombrés aux lentilles des Antilles et un gâteau à la patate douce de La Réunion.",
     remplacer:
-      "Le site réunit les plats sans viande du continent dans [Quels plats africains sont naturellement végétariens ?](/conseils/plats-africains-vegetariens). Pour retrouver le goût fumé sans poisson, lisez [Par quoi remplacer le poisson fumé dans une sauce ?](/conseils/remplacer-le-poisson-fume). Ces deux articles aident à adapter n'importe quelle recette africaine.",
+      "Le site réunit les plats sans viande du continent dans [Quels plats africains sont naturellement végétariens ?](/conseils/plats-africains-vegetariens). Pour retrouver le goût fumé sans poisson, lisez [Par quoi remplacer le poisson fumé dans une sauce ?](/conseils/remplacer-le-poisson-fume). Le livre, lui, propose en version végane un mafé d'Afrique de l'Ouest et des beignets farcis du Sénégal.",
     enCuisine:
       "Sur le site, le [misir wat](/recette/misir-wat), le [shiro](/recette/shiro), les [akara](/recette/akara), le [kelewele](/recette/kelewele) et le [fonio aux légumes et sauce arachide](/recette/fonio-aux-legumes) sont déjà végétaliens ou faciles à adapter. Ils montrent combien la cuisine du continent fait de place aux légumineuses et aux légumes.",
     faq: [

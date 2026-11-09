@@ -617,7 +617,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
   },
   "verres-a-the-et-soucoupes-pasabahce": {
     origine:
-      "Pasabahçe est une verrerie turque fondée en 1935 à Beykoz, sur la rive asiatique du Bosphore à Istanbul. Elle fait aujourd'hui partie du groupe Şişecam. Ses verres à thé reprennent la silhouette du verre turc traditionnel, appelé « ince belli », c'est-à-dire « à taille fine », apparu à la fin du XIXe siècle.\n\nEn Turquie, le thé noir se sert dans ces petits verres posés sur une soucoupe, et l'on en boit plusieurs au fil de la journée. Le thé y vient surtout des plantations de la région de Rize, au bord de la mer Noire.",
+      "Pasabahçe est une verrerie turque fondée en 1935 à Beykoz, sur la rive asiatique du Bosphore à Istanbul. Elle fait aujourd'hui partie du groupe Şişecam. Ses verres à thé reprennent la silhouette du verre turc traditionnel, appelé « ince belli », c'est-à-dire « à taille fine », dont on ignore la date exacte d'apparition.\n\nEn Turquie, le thé noir se sert dans ces petits verres posés sur une soucoupe, et l'on en boit plusieurs au fil de la journée. Le thé y vient surtout des plantations de la région de Rize, au bord de la mer Noire.",
     choisir:
       "Avec environ 155 ml, ces verres sont faits pour un thé bu chaud, en plusieurs tournées. La taille marquée permet de les tenir par le haut sans se brûler, et la soucoupe accueille la cuillère et le sucre. Pour l'ataya, où l'on fait passer le thé d'un verre à l'autre, les [verres facettés](/produit/verres-a-the) droits sont plus pratiques. Pour présenter le service, le [plateau rond en bambou](/produit/plateau-rond-bambou-40-cm) accueille aisément les six verres et leurs soucoupes.",
     conserver:
