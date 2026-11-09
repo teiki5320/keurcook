@@ -345,4 +345,244 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "vanille-bourbon-de-madagascar": {
+    origine:
+      "La vanille vient du Mexique, où les Totonaques la cultivaient bien avant l'arrivée des Espagnols. Plantée ailleurs, l'orchidée fleurissait sans donner de fruits, faute de l'insecte qui la pollinise. En 1841, sur l'île Bourbon, l'actuelle Réunion, un garçon esclave de douze ans, Edmond Albius, mit au point un geste simple pour féconder chaque fleur à la main avec une fine baguette.\n\nLa technique gagna ensuite Madagascar. Le nom « bourbon » rappelle cette histoire : il désigne aujourd'hui la vanille de l'océan Indien. L'essentiel de la récolte malgache vient de la région SAVA, au nord-est, autour de Sambava, Antalaha, Vohémar et Andapa.",
+    choisir:
+      "Une belle gousse est noire et brillante, assez souple pour s'enrouler autour d'un doigt sans casser. Un fin givre blanc à sa surface n'est pas un défaut : c'est de la vanilline cristallisée, signe d'une gousse riche. Des taches grises et duveteuses, en revanche, trahissent une moisissure.\n\nC'est le seul produit franchement sucré parmi les épices de la boutique. Elle partage avec le [poivre sauvage voatsiperifery](/produit/poivre-sauvage-voatsiperifery) son origine malgache, et les deux s'accordent très bien sur un fruit rôti. Elle parfume aussi volontiers une boisson à base de [fleurs de bissap](/produit/fleurs-de-bissap).",
+    conserver:
+      "Le froid humide du réfrigérateur favorise les moisissures et durcit les gousses. Gardez-les plutôt dans leur tube ou dans un bocal en verre bien fermé, dans un placard à température stable, et ouvrez-le de temps en temps pour vérifier leur souplesse. Une gousse un peu sèche se réhydrate en quelques minutes dans du lait tiède.",
+    remplacer:
+      "L'extrait de vanille pure est le meilleur remplaçant : une cuillère à café correspond à peu près à une gousse dans une crème. L'arôme ou le sucre vanilliné, souvent à base de vanilline de synthèse, donne un goût plus plat. Pour un dessert de mil ou de riz, une pincée de muscade ou de cannelle change l'accent sans décevoir.",
+    enCuisine:
+      "Le [dégué](/recette/degue) burkinabè, mil et lait caillé, en demande un peu, tout comme son cousin sénégalais, le [thiakry](/recette/thiakry), qui la supporte très bien. Quelques graines grattées dans le [jus de bissap](/recette/jus-de-bissap) remplacent la fleur d'oranger, une variante courante au Sénégal. Pour découvrir la cuisine de son île, voyez la page [Madagascar](/pays/madagascar).",
+    faq: [
+      {
+        question: "Pourquoi la vanille demande-t-elle autant de travail ?",
+        reponse:
+          "Chaque fleur ne s'ouvre qu'un jour et doit être fécondée à la main ce jour-là. Les gousses demandent ensuite plusieurs mois de préparation avant d'être prêtes.",
+      },
+      {
+        question: "Vanille bourbon et vanille de Tahiti, quelle différence ?",
+        reponse:
+          "Ce sont deux espèces différentes. La bourbon (Vanilla planifolia) est ronde et chaude ; la tahitensis, plus florale, évoque l'anis et les fruits.",
+      },
+    ],
+  },
+  "sauce-peri-peri": {
+    origine:
+      "Le nom vient du petit piment africain, appelé piri-piri par les Portugais. Ce sont eux qui, dans leurs anciennes colonies d'Afrique australe, ont associé ce piment à l'ail, au citron et au vinaigre pour mariner le poulet. L'Angola revendique aussi la sauce, mais c'est au Mozambique que le poulet grillé au piri-piri est devenu un classique.\n\nAprès l'indépendance du Mozambique, en 1975, de nombreux Portugais du pays se sont installés en Afrique du Sud avec leurs recettes. L'orthographe peri-peri vient de là, et des chaînes de restaurants sud-africaines ont ensuite fait connaître la sauce dans le monde entier.",
+    choisir:
+      "Les sauces vendues sous ce nom vont du doux au très fort : repérez le niveau de piquant indiqué sur l'étiquette avant d'en napper tout un plat. Une sauce où le piment figure en tête de liste sera plus franche.\n\nElle est la version prête à l'emploi du [piment pili-pili](/produit/piment-pili-pili), qui donne la chaleur sans l'acidité. La [harissa artisanale](/produit/harissa-artisanale), pâte de piment d'Afrique du Nord parfumée au carvi et à la coriandre, est plus épaisse et sans citron : elle convient mieux à un couscous qu'à une grillade acidulée.",
+    conserver:
+      "Fermée, la bouteille se garde dans un placard jusqu'à la date indiquée. Ouverte, elle passe au réfrigérateur, goulot essuyé et bouchon bien vissé. Ne trempez jamais dans la bouteille le pinceau qui a touché le poulet cru : versez d'abord la quantité utile dans un bol à part.",
+    remplacer:
+      "Pour une version express, écrasez un ou deux piments pili-pili avec une gousse d'ail et du sel, puis détendez avec du jus de citron et un filet d'huile d'olive. Laissez reposer une demi-heure pour que le piment infuse. Ce n'est pas tout à fait la sauce en bouteille, mais l'esprit y est.",
+    enCuisine:
+      "Elle est à son aise sur le gril : badigeonnez-en les brochettes du [nyama choma](/recette/nyama-choma) kényan ou du [suya](/recette/suya) nigérian en fin de cuisson. Elle relève aussi le [chakalaka](/recette/chakalaka), la sauce de légumes épicée d'Afrique du Sud. Pour éviter qu'elle ne brûle au four, lisez [Comment griller des brochettes suya au four ?](/conseils/griller-des-brochettes-suya-au-four), et pour le pays qui l'a rendue célèbre, la page [Afrique du Sud](/pays/afrique-du-sud).",
+    faq: [
+      {
+        question: "Peri-peri, piri-piri, pili-pili : quelle différence ?",
+        reponse:
+          "Aucune sur le fond : ce sont trois façons d'écrire le nom du même petit piment. Peri-peri est la graphie sud-africaine, piri-piri la portugaise.",
+      },
+      {
+        question: "La sauce peri-peri est-elle très forte ?",
+        reponse:
+          "Elle pique franchement, mais le citron et le vinaigre font passer la chaleur. Mélangée à de la crème fraîche, elle devient accessible à toute la table.",
+      },
+    ],
+  },
+  "poivre-sauvage-voatsiperifery": {
+    origine:
+      "Son nom malgache associe voa, « fruit », à tsiperifery, le nom de la liane qui le porte. Cette cousine du poivrier grimpe sur les grands arbres des forêts humides de l'est et du sud de Madagascar et peut atteindre une quinzaine de mètres. Les baies poussent surtout sur les jeunes rameaux, souvent à dix mètres du sol ou plus.\n\nLa cueillette est donc acrobatique et la récolte reste très modeste. Certains cueilleurs coupent la liane au lieu de grimper, ce qui menace la plante : la fondation Slow Food l'a inscrite à son Arche du goût, qui recense les produits en danger de disparition.",
+    choisir:
+      "Les baies entières, brun foncé, portent encore leur petite queue, qui vaut à ce poivre le surnom de poivre à queue. Un sachet très parfumé, aux notes d'agrume et de bois, est récent.\n\nIl se place à l'opposé du [poivre de Penja](/produit/poivre-de-penja) : le Penja est net et franc, le voatsiperifery plus doux et plus aromatique. La [maniguette](/produit/maniguette) partage ses notes citronnées, avec un piquant plus vif. Le [poivre de Selim](/produit/poivre-de-selim), enfin, s'infuse dans les bouillons au lieu de se moudre sur l'assiette.",
+    conserver:
+      "Comme tous les poivres, il se garde en grains entiers, dans un bocal fermé, loin de la lumière et de la chaleur. Ne remplissez pas tout le moulin d'un coup : des baies laissées dans un moulin transparent, près d'une fenêtre, perdent leur parfum frais bien plus vite. Moulu, il s'évente en peu de temps.",
+    remplacer:
+      "Un mélange de poivre noir et de quelques baies roses s'approche de son côté fruité. Le poivre de Penja convient pour la force, mais il lui manque la fraîcheur d'agrume ; un zeste de citron vert râpé au même moment compense en partie.",
+    enCuisine:
+      "Moulu au dernier moment, il réveille un [romazava](/recette/romazava), le bouillon de viande et de brèdes de Madagascar, ou le poisson du [caldou](/recette/caldou) sénégalais. Il s'accorde aussi au poulet du [kedjenou](/recette/kedjenou) et aux bananes du [matoke](/recette/matoke) ougandais. Sur une salade de mangue ou d'ananas, avec un peu de [vanille bourbon](/produit/vanille-bourbon-de-madagascar), il fait un dessert tout simple. Voyez aussi la page [Madagascar](/pays/madagascar).",
+    faq: [
+      {
+        question: "Pourquoi les baies ont-elles une queue ?",
+        reponse:
+          "C'est le petit pédoncule qui les reliait à l'épi. Il se broie avec le grain et ne change rien au goût.",
+      },
+      {
+        question: "Le voatsiperifery est-il un vrai poivre ?",
+        reponse:
+          "Oui, il appartient au même genre que le poivre noir, Piper. Il pousse simplement à l'état sauvage, sur une liane propre à l'océan Indien.",
+      },
+    ],
+  },
+  "feuilles-de-ndole": {
+    origine:
+      "Le ndolé est d'abord le plat des Sawa, les peuples de la côte camerounaise autour de Douala, avant de devenir un symbole de tout le pays, souvent présenté comme plat national. Ses feuilles viennent de plusieurs espèces de vernonia, des arbustes de la famille des marguerites : Vernonia amygdalina, très amère, appelée bitterleaf en anglais, et des espèces plus douces comme Vernonia hymenolepis.\n\nFraîches, les feuilles se lavent et se pressent longuement avant la cuisson. Séchées, elles voyagent et se gardent des mois, ce qui permet de cuisiner le ndolé loin du Cameroun.",
+    choisir:
+      "Les feuilles séchées doivent être vertes, pas brunes, et sans poussière. Lisez l'emballage : certaines ont déjà perdu une partie de leur amertume, d'autres demandent plusieurs rinçages.\n\nParmi les feuilles de la boutique, le ndolé est la plus amère. Les [feuilles de manioc](/produit/feuilles-de-manioc) pilées donnent une sauce plus douce et plus verte, cuite à l'huile de palme ; les [feuilles de moringa](/produit/feuilles-de-moringa) ont un goût herbacé léger et cuisent en quelques minutes. Le ndolé, lui, appelle la [pâte d'arachide](/produit/pate-d-arachide) ou des arachides fraîches pour équilibrer son caractère.",
+    conserver:
+      "Fermé, le sachet se range dans un placard sec. Une fois ouvert, transvasez les feuilles dans une boîte hermétique : elles reprennent vite l'humidité de la cuisine. Réhydratées et pressées, elles se gardent deux jours au réfrigérateur ou se congèlent en portions. Plus de détails dans [Comment conserver les feuilles séchées ?](/conseils/conserver-feuilles-sechees).",
+    remplacer:
+      "Des épinards associés à une poignée de roquette ou de feuilles de pissenlit reproduisent l'équilibre entre douceur et amertume. Le plat sera moins typé, mais la sauce d'arachide fera le reste. Notre article [Par quoi remplacer les feuilles de ndolé ?](/conseils/par-quoi-remplacer-les-feuilles-de-ndole) passe en revue les options.",
+    enCuisine:
+      "Notre [ndolé aux crevettes](/recette/ndole) en donne la version classique, avec arachides, viande et [crevettes séchées](/produit/crevettes-sechees). Au Cameroun, on le sert avec du plantain frit, du miondo ou du riz. Avant de commencer, lisez [Comment enlever l'amertume du ndolé ?](/conseils/enlever-amertume-du-ndole) : c'est l'étape qui fait la différence. Pour aller plus loin, voyez la page [Cameroun](/pays/cameroun).",
+    faq: [
+      {
+        question: "Les feuilles de ndolé sont-elles toujours amères ?",
+        reponse:
+          "Oui, c'est leur caractère. Le lavage et la cuisson en retirent une grande partie, et la sauce aux arachides arrondit ce qui reste.",
+      },
+      {
+        question: "Peut-on préparer le ndolé à l'avance ?",
+        reponse:
+          "Oui, il est même souvent meilleur le lendemain, une fois les saveurs fondues. Réchauffez-le doucement avec un peu d'eau.",
+      },
+    ],
+  },
+  "feuilles-de-manioc": {
+    origine:
+      "Le manioc est arrivé d'Amérique du Sud avec les navires portugais au XVIe siècle, et l'Afrique centrale a appris à en manger aussi les feuilles. Pilées au mortier, elles donnent le pondu de RD Congo, appelé saka-saka au Congo-Brazzaville, le ravitoto de Madagascar et bien d'autres sauces vertes, de la Sierra Leone à la Tanzanie.\n\nCrues, les feuilles contiennent des composés qui libèrent de l'acide cyanhydrique. C'est pourquoi on les cuit toujours longuement, dans une marmite découverte, avant de les manger.",
+    choisir:
+      "En conserve ou en bocal, les feuilles sont déjà pilées et souvent précuites : vérifiez sur l'étiquette le temps de cuisson conseillé, qui varie beaucoup d'une marque à l'autre. On en trouve aussi surgelées dans les épiceries africaines.\n\nComparées au [ndolé](/produit/feuilles-de-ndole), elles sont douces, sans amertume. Les [feuilles de moringa](/produit/feuilles-de-moringa) cuisent bien plus vite mais donnent moins de corps. Le pondu réclame de l'[huile de palme rouge](/produit/huile-de-palme-rouge), et un [mortier en bois](/produit/mortier-et-pilon-en-bois) reste utile pour piler l'ail, l'oignon et le piment qu'on y ajoute.",
+    conserver:
+      "Une boîte entamée ne se garde pas dans son métal : transvasez le reste dans un récipient en verre fermé, au réfrigérateur, et cuisinez-le dans les deux jours. Le pondu cuit, lui, se congèle très bien en portions et se réchauffe à feu doux avec un peu d'eau.",
+    remplacer:
+      "Des épinards hachés finement, cuits avec un peu d'oseille ou de feuilles de patate douce, s'en rapprochent par la couleur et la texture. Le goût sera plus léger. Avec l'huile de palme et le poisson fumé, le plat garde pourtant son caractère.",
+    enCuisine:
+      "Notre [pondu au poisson fumé](/recette/pondu) mijote longuement à l'huile de palme. Le [ravitoto sy henakisoa](/recette/ravitoto) malgache associe les mêmes feuilles à la viande de porc et se sert avec du riz. Le pondu accompagne volontiers la [chikwangue](/produit/chikwangue) ou un foufou ; pour la bonne marmite, lisez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "Faut-il recuire les feuilles en conserve ?",
+        reponse:
+          "Oui, suivez le temps indiqué sur l'emballage. Même précuites, elles gagnent à mijoter avec les aromates pour prendre le goût de la sauce.",
+      },
+      {
+        question: "Pondu et saka-saka, est-ce le même plat ?",
+        reponse:
+          "Oui : pondu est le nom courant en RD Congo, saka-saka celui du Congo-Brazzaville. Les recettes varient surtout d'une famille à l'autre.",
+      },
+    ],
+  },
+  "fleurs-de-bissap": {
+    origine:
+      "Ce que l'on appelle fleurs de bissap sont en réalité les calices charnus qui entourent le fruit de l'Hibiscus sabdariffa, aussi nommé oseille de Guinée. Chaque pays leur donne son nom : bissap au Sénégal, au Burkina Faso et en Côte d'Ivoire, wonjo en Gambie, foléré au Cameroun, zobo au Nigeria, sobolo au Ghana, karkadé en Égypte et au Soudan.\n\nLa boisson a voyagé bien au-delà du continent. On la boit sous le nom de sorrel dans les Caraïbes, où elle accompagne les fêtes de Noël, et sous celui d'agua de Jamaica au Mexique.",
+    choisir:
+      "Choisissez des calices entiers, d'un rouge sombre presque violet, secs et cassants, sans poussière ni brindilles. Les calices brisés colorent plus vite mais donnent une boisson plus trouble.\n\nPour d'autres boissons fraîches, la boutique propose l'[infusion de gingembre](/produit/infusion-de-gingembre), plus piquante, et l'[infusion de tamarin](/produit/infusion-de-tamarin), au goût acidulé. La [poudre de baobab](/produit/poudre-de-baobab) sert à une autre boisson sénégalaise, le bouye, plus épaisse et lactée. Le bissap reste la plus colorée et la plus simple à préparer.",
+    conserver:
+      "Les calices séchés se gardent de longs mois dans un bocal bien fermé, à l'abri de la lumière qui ternit leur couleur. Le jus préparé se conserve deux à trois jours au réfrigérateur, en bouteille fermée ; au-delà, il commence à fermenter et prend un goût piquant.",
+    remplacer:
+      "Les fleurs d'hibiscus vendues en herboristerie pour les infusions sont souvent la même plante : vérifiez le nom latin, Hibiscus sabdariffa, sur l'emballage. Pour une boisson rouge acidulée sans hibiscus, un mélange de jus de cranberry et de grenade, parfumé à la menthe, rappelle la couleur, pas le goût.",
+    enCuisine:
+      "Notre [jus de bissap](/recette/jus-de-bissap) donne les proportions pour une carafe, avec menthe et sucre. Il accompagne parfaitement un [thiéboudienne](/recette/thieboudienne) ou un [poulet yassa](/recette/poulet-yassa). Toutes les astuces sont dans [Comment préparer le bissap ?](/conseils/comment-preparer-le-bissap), et l'article [Par quelle recette africaine commencer quand on débute ?](/conseils/par-quelle-recette-commencer) le cite parmi les premiers essais.",
+    faq: [
+      {
+        question: "Infusion chaude ou froide : laquelle choisir ?",
+        reponse:
+          "À froid, une nuit au réfrigérateur, le goût est plus doux et moins âpre. À chaud, la boisson est prête bien plus vite, avec une couleur plus intense.",
+      },
+      {
+        question: "Peut-on réutiliser les calices ?",
+        reponse:
+          "Oui, une seconde infusion donne une boisson plus légère. Les calices épuisés peuvent ensuite servir pour une confiture ou une sauce.",
+      },
+    ],
+  },
+  "gombo-seche": {
+    origine:
+      "Le gombo est une plante de la famille des mauves, cultivée depuis des siècles en Afrique ; son berceau se situerait du côté de l'Éthiopie, même si les botanistes en débattent encore. Il a traversé l'Atlantique avec la traite, et ses noms en gardent la trace : okra viendrait de l'igbo ókùrù, gombo d'une langue bantoue d'Angola, le kimbundu. Le gumbo de Louisiane lui doit aussi son nom.\n\nSéché puis moulu, il permet de préparer la sauce gombo quand les fruits frais manquent, par exemple pendant la saison sèche au Sahel.",
+    choisir:
+      "La poudre doit être vert pâle à vert olive, fine et sèche. Une teinte brune signale un gombo vieilli, qui filera moins. Le gombo frais ou surgelé donne des rondelles croquantes ; la poudre offre une sauce lisse et homogène.\n\nPour lier une sauce, il joue un autre rôle que l'[egusi](/produit/graines-d-egusi), qui épaissit en formant des flocons, ou que la [pâte d'arachide](/produit/pate-d-arachide), qui donne une sauce grasse. Le gombo rend la sauce filante, une texture recherchée au Sahel. Il s'associe souvent au [soumbala](/produit/soumbala), qui lui apporte de la profondeur.",
+    conserver:
+      "Rangez la poudre dans un bocal parfaitement sec : au contact de l'humidité, elle devient collante et forme des grumeaux, exactement comme dans la sauce. Utilisez une cuillère sèche et ouvrez le bocal loin de la vapeur de la marmite. Ainsi protégée, elle se garde plusieurs mois.",
+    remplacer:
+      "Du gombo frais ou surgelé, coupé en fines rondelles, fait évidemment l'affaire, avec une cuisson un peu plus longue. Des feuilles de corète, appelées ademe au Togo ou ewedu au Nigeria, filent elles aussi. D'autres pistes figurent dans [Par quoi remplacer le gombo ?](/conseils/par-quoi-remplacer-le-gombo).",
+    enCuisine:
+      "Il donne sa texture à la [sauce gombo du tô](/recette/to-sauce-gombo), servie au Burkina Faso avec une pâte de mil ou de maïs ; pour le tô, prenez de la [farine de maïs blanc](/produit/farine-de-mais-blanc). Notre article [Comment réussir une sauce gombo qui file ?](/conseils/sauce-gombo-qui-file) explique comment obtenir la bonne consistance. Une cuillère de poudre peut aussi lier une [fufu light soup](/recette/fufu-light-soup) trop liquide.",
+    faq: [
+      {
+        question: "Pourquoi la sauce gombo file-t-elle ?",
+        reponse:
+          "Le gombo contient un mucilage, une substance qui gonfle dans le liquide chaud et le rend visqueux. C'est voulu : cette texture aide à saisir la sauce avec la boule de tô.",
+      },
+      {
+        question: "Comment éviter les grumeaux ?",
+        reponse:
+          "Délayez d'abord la poudre dans un peu de bouillon tiède, puis versez ce mélange dans la marmite en remuant sans cesse.",
+      },
+    ],
+  },
+  "feuilles-de-moringa": {
+    origine:
+      "Le moringa (Moringa oleifera) est originaire des contreforts de l'Himalaya, dans le nord de l'Inde. Il s'est répandu dans toute la zone tropicale, et l'Afrique de l'Ouest l'a adopté pour sa robustesse : coupé ou brûlé par le soleil, il repart aux premières pluies.\n\nAu Sénégal, on l'appelle nébédaye. Selon une explication souvent citée, ce nom viendrait de l'anglais never die, « qui ne meurt jamais », mais l'étymologie reste discutée. En Inde, on cuisine surtout ses longues gousses, les drumsticks ; en Afrique de l'Ouest, plutôt ses petites feuilles.",
+    choisir:
+      "Des feuilles séchées d'un vert franc, entières ou en brisures, gardent leur goût ; une couleur jaunie trahit un produit ancien. La poudre fine convient aux sauces, les feuilles entières aux couscous où on aime les voir.\n\nParmi les feuilles de la boutique, c'est la plus rapide à cuire et la plus douce. Le [ndolé](/produit/feuilles-de-ndole) est franchement amer et demande des rinçages ; les [feuilles de manioc](/produit/feuilles-de-manioc) exigent une longue cuisson. Le moringa, lui, se contente de quelques minutes en fin de préparation.",
+    conserver:
+      "Le moringa séché craint la lumière autant que l'humidité : elle fait virer sa couleur au jaune. Un bocal opaque ou une boîte métallique bien fermée, rangée dans un placard, lui convient parfaitement. Voyez aussi nos conseils dans [Comment conserver les feuilles séchées ?](/conseils/conserver-feuilles-sechees).",
+    remplacer:
+      "Des épinards frais hachés finement, ajoutés en fin de cuisson, donnent une couleur et une douceur proches. Pour le thiéré mbuum, quelques feuilles de persil plat et de blettes conviennent aussi. Le goût herbacé du moringa, légèrement poivré comme le cresson, sera simplement moins présent.",
+    enCuisine:
+      "Le [thiéré mbuum](/recette/thiere-mbuum) sénégalais associe ses feuilles à l'arachide et au [couscous de mil](/produit/couscous-de-mil) ; pour réussir la graine, lisez [Comment cuire le couscous de mil ?](/conseils/cuire-le-couscous-de-mil). Une poignée de feuilles réhydratées enrichit aussi une [sauce gombo](/recette/to-sauce-gombo) ou un [pondu](/recette/pondu) en fin de cuisson. D'autres idées de feuilles figurent dans [Par quoi remplacer les feuilles de ndolé ?](/conseils/par-quoi-remplacer-les-feuilles-de-ndole).",
+    faq: [
+      {
+        question: "Faut-il faire tremper les feuilles de moringa ?",
+        reponse:
+          "Pour les feuilles entières, un court bain d'eau tiède suffit. La poudre, elle, se verse directement dans la sauce.",
+      },
+      {
+        question: "Le moringa a-t-il un goût fort ?",
+        reponse:
+          "Non. Il est herbacé, avec une pointe poivrée qui rappelle le cresson, et se marie très bien à l'arachide.",
+      },
+    ],
+  },
+  "feuilles-de-sorgho": {
+    origine:
+      "Le waakye est né dans le nord du Ghana et s'est répandu avec les communautés haoussa installées dans les quartiers zongo du sud du pays. C'est aujourd'hui l'un des plats de rue les plus populaires du Ghana, d'Accra à Tamale.\n\nSa couleur vient des feuilles séchées d'une variété de sorgho rouge, la céréale que l'on cultive aussi pour ses grains dans tout le Sahel. Bouillies avec les haricots puis le riz, elles libèrent un pigment brun-rouge qui teinte les grains. Elles ne se mangent pas et servent uniquement à colorer et parfumer.",
+    choisir:
+      "Les feuilles doivent être sèches, d'un rouge brun profond, sans moisissure. Plus elles sont foncées, plus elles colorent. Une petite poignée suffit pour une grande marmite : le paquet dure longtemps.\n\nElles n'ont rien de commun avec les autres feuilles de la boutique. Le [ndolé](/produit/feuilles-de-ndole), le [moringa](/produit/feuilles-de-moringa) ou le [manioc](/produit/feuilles-de-manioc) sont des légumes ; le sorgho est un colorant, un peu comme un sachet de thé. Les [fleurs de bissap](/produit/fleurs-de-bissap) teintent aussi, mais en rouge vif et avec leur acidité.",
+    conserver:
+      "Gardez-les dans un sac fermé ou une boîte, dans un placard sec et loin de la vapeur. Elles ne craignent presque rien d'autre que l'humidité, qui les ferait moisir, et se conservent ainsi très longtemps. Pour plus de conseils, lisez [Comment conserver les feuilles séchées ?](/conseils/conserver-feuilles-sechees).",
+    remplacer:
+      "Sans feuilles, beaucoup de cuisiniers ajoutent une pointe de bicarbonate de soude à l'eau de cuisson : il fonce les haricots et donne une teinte proche. Le parfum sera absent et la nuance moins rouge. Quelques calices de bissap colorent davantage, mais leur acidité change le goût du plat.",
+    enCuisine:
+      "Notre [waakye](/recette/waakye) détaille la cuisson du riz et des haricots avec les feuilles. Pour un repas ghanéen complet, ajoutez des [kelewele](/recette/kelewele), bananes plantains frites et épicées, ou préparez une [groundnut soup](/recette/groundnut-soup) un autre jour. Pour comparer avec un autre riz coloré d'Afrique de l'Ouest, essayez le [riz jollof](/recette/riz-jollof), et pour la cuisine dont il vient, voyez la page [Ghana](/pays/ghana).",
+    faq: [
+      {
+        question: "Les feuilles de sorgho donnent-elles du goût ?",
+        reponse:
+          "Un peu : un léger parfum végétal, presque de thé. Leur rôle principal reste la couleur.",
+      },
+      {
+        question: "Quand ajouter les feuilles ?",
+        reponse:
+          "Dès le début, avec les haricots, pour qu'elles aient le temps de teinter l'eau avant l'arrivée du riz.",
+      },
+    ],
+  },
+  "huile-de-palme-rouge": {
+    origine:
+      "Le palmier à huile, Elaeis guineensis, est originaire d'Afrique de l'Ouest, où son huile est utilisée depuis des temps très anciens. L'huile rouge est extraite de la pulpe orangée des fruits ; il ne faut pas la confondre avec l'huile de palmiste, tirée de l'amande. Sa couleur vient de sa richesse en caroténoïdes, les pigments de la carotte.\n\nLe raffinage industriel retire ces pigments et le goût : c'est l'huile de palme pâle de l'industrie alimentaire. L'huile rouge, non raffinée, garde au contraire son parfum fruité et sa couleur, qui teinte les sauces de toute l'Afrique de l'Ouest et centrale.",
+    choisir:
+      "Une bonne huile rouge est d'un orange profond, au parfum de fruit et de noisette. Elle devient pâteuse dès que la cuisine se rafraîchit, ce qui ne dit rien de sa qualité.\n\nElle ne fait pas double emploi avec la [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme) ni avec la [base de soupe de noix de palme](/produit/base-soupe-noix-de-palme). Ces deux-là sont des concentrés de fruit, qui épaississent la sauce graine ou la palm nut soup ; l'huile est une matière grasse de cuisson, pour faire revenir et parfumer. L'article [Quelle différence entre huile de palme rouge et raffinée ?](/conseils/huile-de-palme-rouge-ou-raffinee) détaille le reste.",
+    conserver:
+      "Inutile de la mettre au réfrigérateur, où elle durcirait comme du beurre. Gardez le pot bien fermé, dans un placard sombre, car la lumière fait pâlir sa couleur et rancir son goût. Si elle s'est solidifiée, posez le récipient quelques minutes dans de l'eau chaude.",
+    remplacer:
+      "Aucune huile ne l'imite vraiment. Une huile neutre dans laquelle on a fait infuser des graines de roucou, ou teintée d'un peu de paprika doux, donne la couleur ; la pulpe de noix de palme apporte en plus le goût du fruit. Notre article [Par quoi remplacer l'huile de palme rouge ?](/conseils/remplacer-huile-de-palme-rouge) compare les solutions.",
+    enCuisine:
+      "Elle est la base du [pondu au poisson fumé](/recette/pondu), de l'[eru](/recette/eru) et du [koki](/recette/koki) camerounais, ce gâteau de haricots cuit à la vapeur. Elle colore aussi la [soupe egusi](/recette/soupe-egusi), le [poulet à l'odika](/recette/poulet-odika) du Gabon et le [mbongo tchobi](/recette/mbongo-tchobi). Pour les sauces les plus longues, lisez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "Pourquoi mon huile de palme est-elle solide ?",
+        reponse:
+          "Parce qu'elle contient beaucoup de graisses qui se figent dès qu'il fait frais. Elle redevient liquide en chauffant, sans rien perdre.",
+      },
+      {
+        question: "Huile de palme rouge et huile de palmiste, quelle différence ?",
+        reponse:
+          "La première vient de la pulpe du fruit, la seconde de son amande. L'huile de palmiste, plus claire, n'a pas le même goût et ne remplace pas l'huile rouge dans les sauces.",
+      },
+    ],
+  },
 };
