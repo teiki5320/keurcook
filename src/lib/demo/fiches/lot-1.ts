@@ -440,4 +440,148 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "faitout-inox-24-cm": {
+    origine:
+      "La marque Beka est née en 1899 à Betzingen, en Allemagne, où Daniel Braun et Jakob Kemmler fabriquaient leurs premiers ustensiles de cuisson. Elle appartient depuis 2000 au groupe familial belge Allinox, spécialiste de l'acier inoxydable. La ligne Polo regroupe ses modèles en inox pour la cuisine de tous les jours.\n\nLa mention 18/10 désigne la composition de l'acier : environ 18 % de chrome, qui le protège de la rouille, et 10 % de nickel, qui lui donne son éclat et sa résistance aux aliments acides.",
+    choisir:
+      "Avec ses 24 cm et environ 5,4 litres, ce faitout répond aux repas de quatre personnes : une sauce, une soupe, des légumes mijotés. L'inox sans revêtement accepte le fouet et la cuillère en métal, et ne s'use pas avec le temps comme un antiadhésif.\n\nEn contrepartie, il attache plus facilement qu'une surface revêtue si l'on ne chauffe pas assez la matière grasse. Le [faitout en fonte d'aluminium de 28 cm](/produit/faitout-en-fonte-d-aluminium) offre plus de surface pour les grandes familles. Pour les mijotés de plusieurs heures, une cocotte comme l'[Amazon Basics de 4,1 litres](/produit/cocotte-fonte-emaillee-4-litres) garde mieux la chaleur, à volume comparable.",
+    conserver:
+      "Pour un fond qui a légèrement brûlé, versez de l'eau et une cuillère de bicarbonate, portez à ébullition quelques minutes, puis frottez. Les traces arc-en-ciel laissées par une forte chauffe partent avec un peu de vinaigre blanc. Ne salez pas l'eau froide : le sel posé au fond peut piquer l'inox ; ajoutez-le une fois l'eau chaude.",
+    remplacer:
+      "Une casserole haute de taille proche convient pour les soupes et les sauces. Une [cocotte en fonte émaillée](/produit/cocotte-fonte-emaillee-28-cm) le remplace pour les plats mijotés, avec une montée en chaleur plus lente. Pour les sauces qui doivent réduire, une sauteuse large va plus vite.",
+    enCuisine:
+      "Il convient au [chakalaka](/recette/chakalaka) sud-africain, au [misir wat](/recette/misir-wat) aux lentilles corail, à la [groundnut soup](/recette/groundnut-soup) ou à la [light soup du fufu](/recette/fufu-light-soup). L'inox ne réagit pas avec la tomate : c'est un bon choix pour les sauces qui en contiennent beaucoup. Pour comparer les matières, lisez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "Comment éviter que les oignons attachent dans l'inox ?",
+        reponse:
+          "Chauffez le faitout à vide, ajoutez l'huile, attendez qu'elle soit chaude, puis versez les oignons. Ils se décollent d'eux-mêmes en dorant.",
+      },
+      {
+        question: "Que signifie fond capsulé ?",
+        reponse:
+          "C'est un disque rapporté sous le faitout, qui enferme une couche conductrice entre deux plaques d'acier pour mieux répartir la chaleur.",
+      },
+    ],
+  },
+  "cocotte-staub-28-cm": {
+    origine:
+      "Francis Staub dessine sa première cocotte en 1974, en Alsace. L'entreprise, longtemps installée à Turckheim, au pied des Vosges, est devenue l'un des grands noms de la fonte émaillée. Elle appartient depuis 2008 au groupe allemand Zwilling, tout en restant une marque à part, et ses cocottes sont toujours fabriquées en France.\n\nLa fonte de fer est coulée dans un moule de sable, puis recouverte d'émail, une fine couche de verre fondue sur le métal à très haute température. Chez Staub, l'intérieur reçoit un émail noir mat, légèrement rugueux.",
+    choisir:
+      "Deux détails distinguent cette cocotte. L'émail noir mat permet de bien saisir la viande et les oignons, là où un émail clair et lisse colore moins. Les picots sous le couvercle recueillent la vapeur condensée et la font retomber en gouttes régulières sur les aliments.\n\nL'[Overmont de 28 cm](/produit/cocotte-fonte-emaillee-28-cm) offre un volume presque identique, avec un émail intérieur clair qui permet de surveiller la couleur d'une sauce. La [cocotte Amazon Basics de 4,1 litres](/produit/cocotte-fonte-emaillee-4-litres) convient aux foyers de deux à quatre personnes. Pour cuire sur les braises, le [potjie](/produit/marmite-potjie) en fonte nue est fait pour ça.",
+    conserver:
+      "Laissez-la tiédir avant de la laver : un choc thermique peut faire sauter l'émail. Un trempage à l'eau chaude suffit à décoller les sucs. Avec le temps, l'émail noir se patine et attache de moins en moins. Rangez-la couvercle posé de travers, un torchon glissé entre les deux pour protéger l'émail.",
+    remplacer:
+      "Toute cocotte en fonte, émaillée ou non, la remplace pour les longs mijotés. Un faitout à fond épais fonctionne aussi, à condition de baisser davantage le feu et de surveiller le niveau de liquide, qui s'évapore plus vite sous un couvercle léger.",
+    enCuisine:
+      "Elle est taillée pour le [doro wat](/recette/doro-wat), dont les oignons cuisent longuement à sec, le [poulet DG](/recette/poulet-dg), le [kedjenou](/recette/kedjenou) ou le [poulet à l'odika](/recette/poulet-odika). Pour un plat épicé à l'éthiopienne, découvrez [Qu'est-ce que le berbéré et avec quoi le cuisiner ?](/conseils/quest-ce-que-le-berbere).",
+    faq: [
+      {
+        question: "Faut-il culotter une cocotte Staub ?",
+        reponse:
+          "Non, l'émail la protège déjà. Les premières cuissons grasses suffisent à patiner l'émail noir de l'intérieur.",
+      },
+      {
+        question: "Peut-on l'utiliser au four ?",
+        reponse:
+          "La fonte s'y prête très bien : on démarre sur le feu pour saisir, puis on termine au four, couvercle posé.",
+      },
+    ],
+  },
+  "cocotte-fonte-emaillee-28-cm": {
+    origine:
+      "La cocotte en fonte descend des marmites de fer que l'on suspendait autrefois dans l'âtre ou que l'on enfouissait sous la cendre. L'émail, ajouté plus tard, a permis de cuisiner sur le feu de la cuisinière sans craindre la rouille ni le goût du métal.\n\nCette cocotte Overmont reprend ce principe : un corps en fonte de fer de 28 cm, recouvert d'émail vitrifié, pour une contenance de 6,6 litres. Elle convient à tous les feux, induction comprise.",
+    choisir:
+      "Son diamètre et son volume sont presque ceux de la [cocotte Staub de 28 cm](/produit/cocotte-staub-28-cm). La Staub y ajoute un émail intérieur noir mat et des picots sous le couvercle ; l'Overmont s'en tient à l'essentiel de la fonte émaillée : une forte inertie, un couvercle lourd et une compatibilité avec tous les feux.\n\nPour deux à quatre personnes, la [cocotte de 4,1 litres](/produit/cocotte-fonte-emaillee-4-litres) suffit et pèse moins lourd. Si vous cherchez un ustensile plus léger pour des sauces de tous les jours, le [faitout en fonte d'aluminium](/produit/faitout-en-fonte-d-aluminium) chauffe plus vite. Le [potjie](/produit/marmite-potjie) reste réservé à la cuisine sur les braises.",
+    conserver:
+      "L'émail finit par se teinter avec les sauces à la tomate ou à l'huile de palme. Pour l'éclaircir, laissez agir une nuit un mélange d'eau chaude et de bicarbonate, puis rincez. Évitez les éponges métalliques, qui rayent l'émail, et ne chauffez jamais la cocotte vide à feu vif.",
+    remplacer:
+      "Un faitout épais avec un couvercle bien ajusté convient à la plupart des mijotés. Pour les plats qui finissent au four, un plat profond en céramique couvert de papier d'aluminium fait l'affaire, avec une cuisson un peu moins régulière. Prévoyez alors un peu plus de liquide.",
+    enCuisine:
+      "Elle accueille les sauces longues du Cameroun et du Congo, comme le [ndolé aux crevettes](/recette/ndole) ou le [poulet à la moambé](/recette/moambe), mais aussi la [soupe egusi](/recette/soupe-egusi) nigériane ou le [caldou de poisson](/recette/caldou). Pour préparer un ndolé sans amertume, lisez [Comment enlever l'amertume du ndolé ?](/conseils/enlever-amertume-du-ndole).",
+    faq: [
+      {
+        question: "Pourquoi une cocotte en fonte est-elle si lourde ?",
+        reponse:
+          "Ses parois épaisses stockent la chaleur et la rendent ensuite peu à peu aux aliments. Pleine, une cocotte de cette taille se porte à deux mains, avec des maniques.",
+      },
+      {
+        question: "Comment éviter d'écailler l'émail ?",
+        reponse:
+          "Utilisez des ustensiles en bois ou en silicone, évitez les chocs contre l'évier et laissez la cocotte refroidir avant de la passer sous l'eau.",
+      },
+    ],
+  },
+  "cocotte-fonte-emaillee-4-litres": {
+    origine:
+      "L'émail vitrifié est une couche de verre fondue sur la fonte, qui forme une surface lisse et inerte : elle ne réagit ni avec la tomate ni avec le citron, et ne transmet aucun goût de métal. C'est ce qui permet de faire mariner, cuire et garder un plat dans le même récipient.\n\nCette cocotte de la gamme Amazon Basics contient 4,1 litres. Son émail est blanc, elle convient à tous les feux, dont l'induction, et elle supporte le four jusqu'à 260 °C.",
+    choisir:
+      "C'est la plus petite cocotte de la boutique. Ses 4,1 litres conviennent à un plat pour deux à quatre personnes : un ragoût de lentilles, un poulet découpé, un mijoté de légumes. Moins lourde que les modèles de 28 cm, elle se manie plus facilement, surtout pleine.\n\nPour les familles nombreuses ou les plats qui se gardent plusieurs jours, la [Staub](/produit/cocotte-staub-28-cm) ou l'[Overmont de 28 cm](/produit/cocotte-fonte-emaillee-28-cm) offrent plus de 6,5 litres. Le [faitout en inox de 24 cm](/produit/faitout-inox-24-cm), de volume voisin, chauffe plus vite mais garde moins la chaleur une fois sur la table.",
+    conserver:
+      "L'émail blanc se colore avec le curcuma, le berbéré ou l'huile de palme rouge. Un trempage à l'eau chaude additionnée de bicarbonate atténue ces traces. Ne la mettez pas au four vide à température maximale et laissez-la refroidir avant de la laver. Le couvercle pose à plat sur un torchon.",
+    remplacer:
+      "Une casserole épaisse munie d'un couvercle convient pour les mijotés sur le feu, à condition de garder une flamme très douce. Pour les recettes qui finissent au four, un plat creux en terre cuite ou en verre fait l'affaire, couvert d'une feuille de papier d'aluminium bien serrée.",
+    enCuisine:
+      "Son format convient au [misir wat](/recette/misir-wat) aux lentilles corail, au [shiro](/recette/shiro) éthiopien, au [poulet nyembwe](/recette/poulet-nyembwe) pour quatre ou au [bobotie](/recette/bobotie), qui passe au four. Pour relever ces plats éthiopiens, voyez [Qu'est-ce que le berbéré et avec quoi le cuisiner ?](/conseils/quest-ce-que-le-berbere).",
+    faq: [
+      {
+        question: "Peut-on conserver un plat au réfrigérateur dans la cocotte ?",
+        reponse:
+          "Oui, l'émail ne réagit pas avec les aliments. Laissez le plat refroidir, couvrez et réchauffez-le ensuite à feu doux dans la même cocotte.",
+      },
+      {
+        question: "La cocotte va-t-elle sur une plaque vitrocéramique ?",
+        reponse:
+          "Oui, elle convient à tous les feux. Soulevez-la plutôt que de la faire glisser, pour ne pas rayer la plaque.",
+      },
+    ],
+  },
+  "couscoussier": {
+    origine:
+      "La cuisson des graines à la vapeur, dans un panier percé posé sur une marmite, est au cœur du couscous maghrébin. En décembre 2020, l'Algérie, le Maroc, la Mauritanie et la Tunisie ont fait inscrire ensemble les savoirs et pratiques liés au couscous au patrimoine culturel immatériel de l'UNESCO.\n\nLe même principe voyage bien au-delà du Maghreb. Au Sénégal et au Mali, on cuit ainsi le couscous de mil ; en Côte d'Ivoire, on réchauffe l'attiéké ; en Guinée, au Mali ou au Burkina Faso, le fonio cuit de la même manière. Ce modèle en inox associe la marmite et son panier.",
+    choisir:
+      "Vérifiez d'abord que le panier s'emboîte bien : la vapeur doit passer à travers les grains, pas sur les côtés. L'inox ne réagit pas avec les sauces tomate et supporte le lavage énergique nécessaire pour déboucher les trous.\n\nSi vous avez déjà une grande marmite, la [passoire à couscous](/produit/passoire-a-couscous) se pose dessus et remplace le panier. Pour égrener les graines entre deux cuissons, un large [saladier en bois](/produit/saladier-en-bois) est plus agréable qu'un plat creux. Pour un repas de grande famille, la marmite peut aussi servir seule, comme un faitout.",
+    conserver:
+      "Les petits trous du panier retiennent facilement des grains de mil ou de fonio. Un trempage dans l'eau chaude, puis un passage à la brosse sur l'envers, les décolle. Séchez bien les deux parties avant de les ranger emboîtées, pour éviter les traces de calcaire et les odeurs.",
+    remplacer:
+      "Une passoire métallique fine posée sur une casserole, et coiffée d'un torchon, permet de cuire une petite quantité à la vapeur. Pour le fonio, une cuisson par absorption dans un peu d'eau dépanne, avec des grains moins aérés. L'attiéké se réchauffe aussi au micro-ondes, couvert, avec une cuillère d'eau.",
+    enCuisine:
+      "Il cuit le couscous de mil du [thiéré mbuum](/recette/thiere-mbuum), du [ngalakh](/recette/ngalakh) et du [dégué](/recette/degue), et réchauffe l'attiéké du [garba](/recette/garba). Pour savoir s'il est vraiment indispensable, lisez [Faut-il un couscoussier pour cuire le fonio ou l'attiéké ?](/conseils/couscoussier-fonio-attieke), puis [Comment cuire le couscous de mil (thiéré) ?](/conseils/cuire-le-couscous-de-mil).",
+    faq: [
+      {
+        question: "Pourquoi cuire la semoule deux fois à la vapeur ?",
+        reponse:
+          "Le premier passage gonfle les grains, qui s'agglomèrent. On les égrène, on les humecte, puis le second passage les rend légers et bien séparés.",
+      },
+      {
+        question: "Peut-on y cuire du fonio ?",
+        reponse:
+          "Oui, mais les grains du [fonio](/produit/fonio) sont très fins : tapissez le panier d'un linge propre et humide pour qu'ils ne passent pas à travers les trous.",
+      },
+    ],
+  },
+  "plaque-a-injera": {
+    origine:
+      "En Éthiopie et en Érythrée, l'injera se cuit sur une grande plaque ronde appelée mitad en amharique et mogogo en tigrinya. Traditionnellement, c'est un disque d'argile épais posé sur trois pierres au-dessus d'un feu de bois. Les versions électriques, qui chauffent par une résistance placée sous la plaque, se sont largement répandues dans les villes et la diaspora.\n\nL'injera est faite de farine de teff, une céréale aux grains minuscules cultivée sur les hauts plateaux éthiopiens. La pâte fermente plusieurs jours avant la cuisson, ce qui lui donne son goût acidulé.",
+    choisir:
+      "Une plaque de 30 cm donne des injeras plus petites que celles des restaurants, mais faciles à retirer et à empiler à la maison. La régularité de la chaleur compte plus que la puissance : une plaque qui chauffe inégalement donne des crêpes cuites au centre et pâles au bord.\n\nPour réussir la pâte elle-même, partez d'une [farine de teff](/produit/farine-de-teff) pure ou mélangée à un peu de farine de blé. Le [berbéré](/produit/berbere) servira ensuite à relever les ragoûts posés sur l'injera. Une poêle à crêpes ne la remplace qu'en partie : sa surface plus petite oblige à des galettes très fines.",
+    conserver:
+      "Rangez la plaque à plat, dans son carton ou sous un torchon, pour protéger la surface des rayures et de la poussière. Enroulez le cordon sans le serrer. Avant chaque usage, un simple essuyage au papier absorbant suffit si elle a été bien nettoyée la fois précédente.",
+    remplacer:
+      "Une grande poêle antiadhésive à fond épais, munie d'un couvercle, permet de cuire des injeras plus petites. Chauffez-la bien, versez la pâte, couvrez aussitôt et ne retournez pas : la vapeur cuit le dessus. Une crêpière électrique ronde convient aussi, couverte d'un grand couvercle.",
+    enCuisine:
+      "Elle cuit l'[injera au teff](/recette/injera) qui accompagne le [doro wat](/recette/doro-wat), le [misir wat](/recette/misir-wat) et le [shiro](/recette/shiro). Pour comprendre cette farine et ses autres usages, lisez [Qu'est-ce que la farine de teff et que peut-on en faire ?](/conseils/que-faire-avec-la-farine-de-teff), et pour l'épice des ragoûts, [Qu'est-ce que le berbéré et avec quoi le cuisiner ?](/conseils/quest-ce-que-le-berbere).",
+    faq: [
+      {
+        question: "Pourquoi ne retourne-t-on pas l'injera ?",
+        reponse:
+          "Elle cuit d'un seul côté, couverte : la vapeur cuit le dessus, qui garde ses petits trous. Ce sont eux qui retiennent la sauce des ragoûts.",
+      },
+      {
+        question: "Que faire si l'injera colle à la plaque ?",
+        reponse:
+          "La plaque n'était sans doute pas assez chaude, ou la pâte trop épaisse. Allongez-la d'un peu d'eau et attendez qu'une goutte grésille avant de verser.",
+      },
+    ],
+  },
 };
