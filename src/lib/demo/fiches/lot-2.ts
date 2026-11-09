@@ -495,5 +495,197 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "plateau-acacia-amazon-basics": {
+    origine:
+      "Porter le thé, les beignets ou le café sur un plateau est un geste d'accueil dans bien des maisons africaines. Au Sénégal, les petits verres de l'ataya circulent sur un plateau d'un invité à l'autre ; au Kenya, la théière de chai et les tasses arrivent ensemble à table.\n\nCe plateau de la gamme Amazon Basics, la marque de produits courants d'Amazon, est taillé dans le bois d'acacia. Ce bois dur aux veines marquées donne à chaque pièce un dessin propre, et sa densité le rend moins sensible aux taches qu'un bois tendre.",
+    choisir:
+      "Sa forme rectangulaire et ses poignées intégrées en font un plateau de transport : on le saisit à deux mains, chargé, sans risquer de tout renverser. Pour un service de thé posé au centre d'une table basse, le [plateau rond en bambou](/produit/plateau-rond-bambou-40-cm) est plus grand et plus léger. Pour présenter des petits plats ou des sauces, associez-le aux [bols en manguier](/produit/bols-manguier-lot-de-3), et pour le thé, aux [verres à thé facettés](/produit/verres-a-the).",
+    conserver:
+      "Le plateau supporte mal le trempage, mais aussi les verres mouillés posés longtemps au même endroit, qui laissent des cercles clairs. Essuyez les gouttes au fil du service. Si le bois perd son éclat, une fine couche d'huile alimentaire neutre, appliquée au chiffon puis essuyée après quelques heures, ravive les veines. Rangez-le à plat ou debout contre un mur, à l'abri de la chaleur.",
+    remplacer:
+      "Une grande planche à découper bien propre dépanne pour apporter quelques verres ou une assiette de beignets. Un plateau en métal ou en mélamine, plus léger, supporte mieux les liquides renversés. Pour un service de thé, l'essentiel est une surface stable et plate, où les petits verres ne glissent pas.",
+    enCuisine:
+      "Il porte le service de l'[ataya](/recette/ataya), les tasses de [chai kényan](/recette/chai-kenyan) ou de [café Touba](/recette/cafe-touba), et les [puff-puff](/recette/puff-puff) encore chauds, posés sur une serviette en papier. Pour réussir les trois services du thé sénégalais, suivez [Comment préparer l'ataya, le thé sénégalais en trois services ?](/conseils/comment-preparer-l-ataya).",
+    faq: [
+      {
+        question: "Peut-on poser une théière brûlante sur ce plateau ?",
+        reponse:
+          "Mieux vaut glisser un dessous de plat ou un petit torchon plié sous une théière qui sort du feu, pour éviter une marque sombre sur le bois.",
+      },
+      {
+        question: "Comment enlever une tache de thé sur le bois ?",
+        reponse:
+          "Frottez-la rapidement avec un chiffon humide et une pointe de bicarbonate, rincez, séchez, puis nourrissez la zone d'un peu d'huile.",
+      },
+    ],
+  },
+  "plateau-rond-bambou-40-cm": {
+    origine:
+      "Le bambou n'est pas un arbre mais une graminée géante, cousine des herbes, dont certaines espèces poussent de plusieurs dizaines de centimètres par jour. Ses tiges creuses sont découpées en lamelles, puis pressées et collées pour former des panneaux pleins, comme celui de ce plateau rond de la marque 5five.\n\nLe plateau rond partagé a une longue histoire en Afrique. En Éthiopie et en Érythrée, l'injera se pose sur un grand plat rond, garnie de ragoûts, et chacun en déchire un morceau pour se servir. Ailleurs, le grand plateau accueille les verres de thé ou les tasses de café de la cérémonie.",
+    choisir:
+      "Ses 40 cm de diamètre accueillent un service complet pour six : théière, verres, sucrier et petite assiette. Rond, il se pose au centre d'une table basse et chacun y accède. Le bambou est léger, ce qui compte une fois le plateau chargé. Pour porter un repas d'une pièce à l'autre, le [plateau rectangulaire en acacia](/produit/plateau-acacia-amazon-basics) se tient mieux à deux mains. Côté verres, les [verres Pasabahce et leurs soucoupes](/produit/verres-a-the-et-soucoupes-pasabahce) y trouvent leur place.",
+    conserver:
+      "Le bambou craint les longs contacts avec l'eau, qui peuvent faire gonfler les joints entre les lamelles. Essuyez-le après chaque service avec un chiffon à peine humide, puis séchez-le. Ne le laissez pas au soleil derrière une vitre : il pâlit et peut se voiler. Une goutte d'huile alimentaire, deux ou trois fois par an, garde sa surface douce.",
+    remplacer:
+      "Un grand plat rond en métal, comme ceux que l'on utilise pour le plat commun, convient aussi pour le thé. Pour l'injera, une grande assiette plate ou une plaque à pizza fait l'affaire, recouverte d'une première galette. Ce qui compte, c'est une surface large et plate que tout le monde peut atteindre.",
+    enCuisine:
+      "Il sert de base à l'[injera](/recette/injera) garnie de [doro wat](/recette/doro-wat), de [misir wat](/recette/misir-wat) ou de [shiro](/recette/shiro), et au service du [buna](/recette/buna-cafe-ethiopien), le café éthiopien servi en trois tournées. Pour comprendre ce rituel, lisez [Comment se déroule la cérémonie du café éthiopienne ?](/conseils/ceremonie-du-cafe-ethiopienne).",
+    faq: [
+      {
+        question: "Peut-on poser l'injera directement sur le bambou ?",
+        reponse:
+          "Oui, pour le temps du repas. Essuyez ensuite le plateau, car les sauces au berbéré peuvent laisser une teinte orangée si elles restent longtemps.",
+      },
+      {
+        question: "Le bambou va-t-il au lave-vaisselle ?",
+        reponse:
+          "Non : la chaleur et l'humidité prolongée décollent les lamelles. Un nettoyage rapide à la main suffit.",
+      },
+    ],
+  },
+  "bols-manguier-lot-de-3": {
+    origine:
+      "Le manguier est originaire d'Asie du Sud, où on le cultive depuis des millénaires, et il s'est largement répandu en Afrique tropicale, où ses fruits rythment la saison chaude. Son bois, clair et veiné, se travaille facilement et se prête bien à la sculpture : on en fait des meubles, des planches et de la vaisselle.\n\nCes trois bols Samhita sont sculptés à la main, ce qui explique les légères différences de forme et de dessin de l'un à l'autre. Ils rappellent les petites coupes de bois qui, sur les tables africaines, accompagnent le plat principal.",
+    choisir:
+      "Ces bols ronds sont faits pour les petites portions : une sauce pimentée, des arachides grillées, des dattes ou un condiment posé à côté du plat. Pour un plat individuel complet, les [saladiers en acacia de 20 cm](/produit/saladiers-acacia-lot-de-2) sont plus grands. Pour un dessert ou une salade de fruits servie avec style, regardez les [bols en noix de coco](/produit/bols-noix-de-coco-lot-de-2). Sur un [plateau en acacia](/produit/plateau-acacia-amazon-basics), ils composent un bel assortiment de petits plats.",
+    conserver:
+      "Le bois de manguier, plus tendre que l'acacia, marque plus vite. Évitez d'y couper quoi que ce soit au couteau et ne les empilez pas avec des objets lourds. Après une sauce grasse ou à l'huile de palme, essuyez d'abord l'intérieur avec un papier absorbant, puis lavez rapidement. Une fois secs, nourrissez-les de temps en temps avec une huile alimentaire neutre.",
+    remplacer:
+      "Des ramequins en céramique ou de petites coupelles en verre font le même travail pour les sauces et les condiments, et supportent mieux le piment et l'huile. Pour une table plus rustique, de petites calebasses décoratives peuvent aussi présenter les arachides ou les fruits secs.",
+    enCuisine:
+      "Ils accueillent la sauce crue du [poisson braisé et attiéké](/recette/poisson-braise-attieke), le kachumbari de la [nyama choma](/recette/nyama-choma), ou une poignée de [dattes Deglet Nour](/produit/dattes-deglet-nour). Pour régler la force d'une sauce pimentée servie à part, voyez [Comment doser le piment dans la cuisine africaine ?](/conseils/comment-doser-le-piment).",
+    faq: [
+      {
+        question: "Peut-on y servir une sauce au piment et à l'huile ?",
+        reponse:
+          "Oui, pour la durée du repas. Ne la laissez pas des heures dans le bol : l'huile rouge et le piment finissent par imprégner le bois.",
+      },
+      {
+        question: "Pourquoi les trois bols ne sont-ils pas identiques ?",
+        reponse:
+          "Ils sont sculptés à la main, et chaque morceau de bois a ses propres veines. Ces écarts font partie du charme de ce type de vaisselle.",
+      },
+    ],
+  },
+  "bols-noix-de-coco-lot-de-2": {
+    origine:
+      "La noix de coco est présente depuis des siècles sur les côtes de l'océan Indien, de la Somalie au Mozambique en passant par Zanzibar et Madagascar. Sur la côte swahilie, on râpe sa chair assis sur le mbuzi, un tabouret muni d'une lame dentée, pour en tirer le lait qui parfume riz, haricots et poissons. La coque dure, elle, a longtemps servi de louche ou de récipient.\n\nLa marque Jungle Culture indique faire tailler ces bols dans des coques récupérées dans la région de Bến Tre, au sud du Vietnam, connue pour ses cocoteraies.",
+    choisir:
+      "Chaque coque a sa taille et sa forme : ces bols sont plutôt faits pour une portion de fruits, de dessert, de céréales ou de salade froide. Leur fond arrondi les rend moins stables qu'un bol tourné. Pour un plat complet, les [saladiers en acacia](/produit/saladiers-acacia-lot-de-2) ont plus de contenance. Pour des sauces ou des condiments, les [bols en manguier](/produit/bols-manguier-lot-de-3), à fond plat, se posent plus facilement sur la table.",
+    conserver:
+      "La coque supporte mal la chaleur et les écarts de température : pas de liquide bouillant, pas de micro-ondes, pas de lave-vaisselle. Après lavage, séchez-la tout de suite et laissez-la à l'air libre. Quand elle paraît terne, frottez l'intérieur avec un peu d'huile de coco ou d'huile neutre, comme lors de son polissage d'origine. La brosse en fibre de coco fournie sert à ce nettoyage.",
+    remplacer:
+      "Un petit bol en bois ou en céramique remplit le même usage, sans l'aspect naturel de la coque. Pour un dessert lacté comme le thiakry, de simples verrines permettent aussi de voir les couches de mil et de crème. L'important est un récipient qui tienne bien en main.",
+    enCuisine:
+      "Ils conviennent au [thiakry](/recette/thiakry) et au [dégué](/recette/degue), desserts de mil au lait caillé, ou à une salade de fruits arrosée de [jus de bouye](/recette/jus-de-bouye). Pour connaître la pulpe de baobab qui parfume ces boissons, lisez [Que faire avec la poudre de baobab (pain de singe) ?](/conseils/que-faire-avec-la-poudre-de-baobab).",
+    faq: [
+      {
+        question: "Peut-on y servir un plat chaud ?",
+        reponse:
+          "Tiède seulement. La chaleur forte peut fendre la coque ou altérer son vernis à l'huile.",
+      },
+      {
+        question: "Les bols gardent-ils un goût de coco ?",
+        reponse:
+          "Non, l'odeur est très discrète. Elle s'estompe après les premiers lavages et ne passe pas dans les aliments.",
+      },
+    ],
+  },
+  "verres-a-the": {
+    origine:
+      "Le thé vert a gagné le Maroc vers le XVIIIe siècle, puis la Mauritanie, avant d'atteindre le Sénégal : selon un récit répandu, des étudiants partis apprendre le Coran en Mauritanie l'auraient rapporté. Le mot attaya vient d'ailleurs de « atay », le nom du thé au Maghreb. Avec la boisson ont voyagé la théière à long bec et les petits verres.\n\nLe verre facetté est épais et solide, ce qui convient aux versements répétés. Ses facettes accrochent la lumière et renforcent la couleur ambrée du thé, et sa petite taille oblige à boire par gorgées.",
+    choisir:
+      "Avec 210 ml, ces verres sont un peu plus grands que les verres d'ataya habituels : on les remplit à moitié pour le thé, et jusqu'en haut pour un jus froid. Leur forme droite et leur épaisseur supportent bien les versements répétés. Si vous préférez un service avec soucoupes, les [verres Pasabahce Aurora](/produit/verres-a-the-et-soucoupes-pasabahce) ont une forme plus galbée. Pour compléter le service, il vous faut une [théière à ataya](/produit/theiere-a-ataya) et du [thé vert gunpowder](/produit/the-vert-gunpowder).",
+    conserver:
+      "Le calcaire et le tanin du thé laissent un voile sur le verre. Un bain d'eau chaude avec un peu de vinaigre blanc, une fois par mois, le fait disparaître. Ne passez pas un verre froid sous l'eau bouillante d'un coup : même épais, il peut se fêler. Rangez-les en piles de deux ou trois au plus, ou alignés sur un plateau.",
+    remplacer:
+      "Des verres à liqueur ou de petits verres à eau de 10 à 15 cl conviennent pour le thé, à condition qu'ils supportent la chaleur. Évitez le verre très fin, qui chauffe vite les doigts. Pour la mousse, l'essentiel est de verser de haut, quel que soit le verre.",
+    enCuisine:
+      "Ils servent l'[ataya](/recette/ataya), dont le rituel est expliqué dans [Comment préparer l'ataya, le thé sénégalais en trois services ?](/conseils/comment-preparer-l-ataya), mais aussi le [café Touba](/recette/cafe-touba), le [kinkeliba](/recette/kinkeliba) du matin ou un [jus de bissap](/recette/jus-de-bissap) bien frais, préparé avec les [fleurs de bissap](/produit/fleurs-de-bissap).",
+    faq: [
+      {
+        question: "Combien de verres faut-il pour l'ataya ?",
+        reponse:
+          "Un par invité, plus un ou deux pour faire la mousse. Un lot de six suffit pour quatre à cinq personnes.",
+      },
+      {
+        question: "Les verres facettés supportent-ils le thé bouillant ?",
+        reponse:
+          "Oui, leur verre épais résiste bien à la chaleur. Rincez-les à l'eau chaude avant le service pour éviter un choc thermique.",
+      },
+    ],
+  },
+  "verres-a-the-et-soucoupes-pasabahce": {
+    origine:
+      "Pasabahçe est une verrerie turque fondée en 1935 à Beykoz, sur la rive asiatique du Bosphore à Istanbul. Elle fait aujourd'hui partie du groupe Şişecam. Ses verres à thé reprennent la silhouette du verre turc traditionnel, appelé « ince belli », c'est-à-dire « à taille fine », apparu à la fin du XIXe siècle.\n\nEn Turquie, le thé noir se sert dans ces petits verres posés sur une soucoupe, et l'on en boit plusieurs au fil de la journée. Le thé y vient surtout des plantations de la région de Rize, au bord de la mer Noire.",
+    choisir:
+      "Avec environ 155 ml, ces verres sont faits pour un thé bu chaud, en plusieurs tournées. La taille marquée permet de les tenir par le haut sans se brûler, et la soucoupe accueille la cuillère et le sucre. Pour l'ataya, où l'on fait passer le thé d'un verre à l'autre, les [verres facettés](/produit/verres-a-the) droits sont plus pratiques. Pour présenter le service, le [plateau rond en bambou](/produit/plateau-rond-bambou-40-cm) accueille aisément les six verres et leurs soucoupes.",
+    conserver:
+      "Le verre fin de la taille est le point fragile : lavez les verres un par un, sans les entrechoquer dans l'évier. Séchez-les avec un torchon de coton non pelucheux pour garder leur transparence. Rangez les soucoupes empilées et les verres debout, côte à côte, plutôt qu'emboîtés les uns dans les autres.",
+    remplacer:
+      "De petits verres droits ou des tasses à expresso conviennent pour un thé bu en petites quantités. Sans soucoupe, posez les verres sur un plateau garni d'un petit linge, qui absorbe les gouttes. La forme change l'allure du service, pas le goût du thé.",
+    enCuisine:
+      "Ils conviennent au [chai kényan](/recette/chai-kenyan) préparé avec le [thé noir du Kenya](/produit/the-noir-du-kenya), au [rooibos glacé](/recette/rooibos-glace) servi l'été ou au [kinkeliba](/recette/kinkeliba) du petit-déjeuner sénégalais. Pour infuser la plante sud-africaine dans les règles, lisez [Qu'est-ce que le rooibos et comment l'infuser ?](/conseils/quest-ce-que-le-rooibos).",
+    faq: [
+      {
+        question: "Ces verres conviennent-ils pour l'ataya ?",
+        reponse:
+          "Oui pour le servir, moins pour faire la mousse : leur col étroit rend les versements de haut moins faciles qu'avec des verres droits.",
+      },
+      {
+        question: "Pourquoi le verre turc a-t-il cette taille fine ?",
+        reponse:
+          "Elle permet de tenir le verre par le haut, là où il est moins chaud, et laisse le thé refroidir un peu à la surface. Son origine exacte reste discutée.",
+      },
+    ],
+  },
+  "theiere-a-ataya": {
+    origine:
+      "La théière ventrue à long bec vient de la tradition maghrébine du thé vert, passée en Mauritanie puis au Sénégal, en Gambie et au Mali. Au Sénégal, elle est au cœur de l'ataya, le thé que l'on prépare lentement sur un petit fourneau à charbon, entre amis ou en famille, après le repas ou pendant les longues heures de la journée.\n\nCette version en inox de 1,2 litre peut aller directement sur le feu. On y fait réellement bouillir le thé, ce qui le distingue d'une théière à infuser.",
+    choisir:
+      "Le bec allongé est le critère principal : plus il est fin et long, plus le jet est précis quand on sert de haut. Avec 1,2 litre, cette théière permet un service pour un groupe. L'inox résiste mieux aux chocs et à la flamme directe que la porcelaine ou l'émail. Pour chauffer l'eau à côté, la [bouilloire émaillée](/produit/bouilloire-emaillee) est la compagne habituelle de la théière, et les [verres à thé facettés](/produit/verres-a-the) complètent le service.",
+    conserver:
+      "Les feuilles de thé gunpowder et le sucre laissent un dépôt brun à l'intérieur. Videz la théière dès la fin du dernier service et rincez-la à l'eau chaude. Une fois par mois, faites bouillir de l'eau additionnée de bicarbonate pour décoller le tanin, puis rincez abondamment. Rangez-la couvercle posé de travers, pour que l'air circule.",
+    remplacer:
+      "Une petite casserole à bec verseur permet de faire bouillir le thé, puis de le verser dans les verres. Le jet est moins précis, mais la mousse se forme quand même si l'on verse de haut. Une théière en émail allant sur le feu fonctionne aussi, avec un peu plus de précaution.",
+    enCuisine:
+      "Elle est faite pour l'[ataya](/recette/ataya) et le [thé vert gunpowder](/produit/the-vert-gunpowder), parfumé ou non de menthe fraîche. Le rituel des trois services et le dosage du sucre sont détaillés dans [Comment préparer l'ataya, le thé sénégalais en trois services ?](/conseils/comment-preparer-l-ataya). Elle convient aussi pour faire bouillir le [kinkeliba](/recette/kinkeliba).",
+    faq: [
+      {
+        question: "Peut-on utiliser cette théière sur une plaque à induction ?",
+        reponse:
+          "Cela dépend du fond de la théière : vérifiez avec un aimant. S'il accroche, le fond est compatible ; sinon, utilisez le gaz ou une plaque classique.",
+      },
+      {
+        question: "Faut-il de la menthe dans l'ataya ?",
+        reponse:
+          "Ce n'est pas obligatoire. Beaucoup la préparent avec du thé vert seul ; d'autres ajoutent de la menthe fraîche ou du nana au deuxième service.",
+      },
+    ],
+  },
+  "bouilloire-emaillee": {
+    origine:
+      "L'émail de cuisine est une fine couche de verre fondue à haute température sur une tôle d'acier. Il donne un récipient léger, qui chauffe vite, ne rouille pas tant qu'il reste intact et ne transmet aucun goût à l'eau. La vaisselle émaillée, souvent décorée de fleurs aux couleurs vives, est très présente sur les marchés d'Afrique de l'Ouest.\n\nBouilloires, cuvettes et plats émaillés font aujourd'hui partie du décor familier des cuisines, posés près du fourneau pour le thé ou l'infusion du matin.",
+    choisir:
+      "Avec 2,4 litres, cette bouilloire chauffe l'eau d'un service d'ataya complet ou de plusieurs tasses d'infusion. Elle ne sert pas à faire bouillir le thé lui-même, qui se prépare à part, dans la [théière à ataya](/produit/theiere-a-ataya). Vérifiez que l'émail est uniforme, sans éclat au bord du bec ni au fond, et que la poignée est bien fixée. Pour le service, accompagnez-la des [verres Pasabahce](/produit/verres-a-the-et-soucoupes-pasabahce) ou des [verres facettés](/produit/verres-a-the).",
+    conserver:
+      "Le calcaire se dépose vite dans une eau dure. Si une croûte blanche apparaît, laissez tremper une nuit un mélange d'eau et d'acide citrique, puis rincez. Ne frappez jamais la bouilloire contre l'évier : un éclat d'émail met l'acier à nu, et la rouille gagne. En cas d'éclat, séchez toujours bien la zone et limitez son usage à l'eau.",
+    remplacer:
+      "Une casserole à bec ou une bouilloire électrique remplissent le même rôle pour chauffer l'eau. Pour le kinkeliba, une casserole couverte permet de faire frémir les feuilles, puis de filtrer l'infusion dans une passoire fine. Seule la bouilloire sur le feu garde l'eau chaude près du fourneau pendant tout le service.",
+    enCuisine:
+      "Elle chauffe l'eau de l'[ataya](/recette/ataya) et du [café Touba](/recette/cafe-touba), et prépare le [kinkeliba](/recette/kinkeliba) avec les feuilles de [kinkeliba](/produit/kinkeliba). Elle sert aussi pour le [rooibos](/produit/rooibos) ou le [kahawa chungu](/recette/kahawa-chungu). Pour le café épicé sénégalais, lisez [Qu'est-ce que le café Touba et comment le préparer ?](/conseils/quest-ce-que-le-cafe-touba).",
+    faq: [
+      {
+        question: "Peut-on poser la bouilloire émaillée sur l'induction ?",
+        reponse:
+          "L'émail recouvre de l'acier, en général compatible. Vérifiez avec un aimant sous le fond et chauffez progressivement.",
+      },
+      {
+        question: "Que faire si l'émail s'écaille à l'intérieur ?",
+        reponse:
+          "Gardez-la pour l'eau, séchez-la après chaque usage et surveillez la rouille. Si elle s'étend, mieux vaut la remplacer.",
+      },
+    ],
+  },
 // FICHES
 };
