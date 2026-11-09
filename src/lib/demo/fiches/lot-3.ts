@@ -585,4 +585,172 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "pate-d-arachide": {
+    origine:
+      "L'arachide vient d'Amérique du Sud, du pied des Andes orientales. Les Portugais l'ont introduite sur la côte occidentale de l'Afrique au XVIe siècle, et elle s'y est cultivée très tôt. Au XIXe siècle, le Sénégal en a fait une grande culture d'exportation, dans le bassin arachidier du centre-ouest du pays, autour de Kaolack, Diourbel et Thiès.\n\nGrillée puis broyée, la graine est devenue la base d'innombrables sauces : mafé au Mali et au Sénégal, groundnut soup au Ghana, luwombo en Ouganda. Elle entre même dans certains desserts, comme le ngalakh des Pâques sénégalaises.",
+    choisir:
+      "Lisez la composition : la meilleure pâte ne contient que des arachides grillées, éventuellement un peu de sel. Les beurres de cacahuète faits pour la tartine renferment souvent du sucre et des huiles ajoutées, qui donnent un mafé trop doux. Une pâte bien torréfiée est brun foncé et sent la cacahuète grillée.\n\nElle ne joue pas le même rôle que la [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme), autre base de sauce, plus fruitée et plus orangée. L'[egusi](/produit/graines-d-egusi) et l'[akpi](/produit/akpi-djansang) épaississent aussi, mais avec un autre goût : l'arachide donne la sauce la plus ronde et la plus onctueuse.",
+    conserver:
+      "Fermé, le pot se garde à température ambiante jusqu'à sa date. Ouvert, il reste dans un placard frais s'il est vite utilisé ; pour un usage espacé, le réfrigérateur ralentit le rancissement, au prix d'une pâte plus ferme. Les durées exactes sont dans [Combien de temps se garde la pâte d'arachide ouverte ?](/conseils/combien-de-temps-se-garde-la-pate-d-arachide).",
+    remplacer:
+      "Un beurre de cacahuète nature, dont l'étiquette ne mentionne que des arachides, fait un très bon remplaçant. À défaut, des arachides grillées non salées, mixées longuement avec un filet d'huile, donnent une pâte maison. Pour une personne allergique, une purée de graines de tournesol ou de sésame garde une sauce onctueuse, avec un autre goût.",
+    enCuisine:
+      "Elle fait le [mafé de bœuf](/recette/mafe), la [groundnut soup](/recette/groundnut-soup) ghanéenne et le [luwombo de poulet](/recette/luwombo) ougandais. On la retrouve dans le [thiéré mbuum](/recette/thiere-mbuum), le [fonio aux légumes et sauce arachide](/recette/fonio-aux-legumes), le [poulet à la moambé](/recette/moambe) et le [ngalakh](/recette/ngalakh). Si la sauce reste trop liquide, lisez [Comment épaissir une sauce arachide ?](/conseils/comment-epaissir-une-sauce-arachide).",
+    faq: [
+      {
+        question: "Pourquoi ma sauce arachide accroche-t-elle au fond ?",
+        reponse:
+          "La pâte brûle facilement. Baissez le feu et remuez régulièrement, surtout en fin de cuisson, quand la sauce épaissit.",
+      },
+      {
+        question: "Pourquoi de l'huile remonte-t-elle à la surface de la sauce ?",
+        reponse:
+          "C'est le signe que l'arachide est cuite : sa matière grasse se sépare et vient napper la sauce. On peut en retirer une partie à la cuillère si on la trouve trop riche.",
+      },
+    ],
+  },
+  "pulpe-de-noix-de-palme": {
+    origine:
+      "Les noix de palme sont les fruits du palmier à huile, de petites drupes rouge orangé groupées en lourds régimes. Pour en tirer la pulpe, on les fait bouillir, on les pile au mortier, puis on les malaxe dans l'eau chaude pour séparer la chair des noyaux et des fibres. Le jus épais obtenu forme la base de la sauce.\n\nCette préparation change de nom avec les pays : sauce graine en Côte d'Ivoire, où « graine » désigne la noix de palme, abenkwan chez les Akan du Ghana, banga chez les Urhobo du delta du Niger, mbanga au Cameroun, nyembwe au Gabon.",
+    choisir:
+      "Une bonne pulpe est épaisse, d'un orange vif, et sent le fruit. Vérifiez l'étiquette : certaines contiennent un peu de sel ou d'eau ajoutée. Le grand format convient à ceux qui cuisinent souvent la sauce graine ; pour une seule marmite, la petite [base de soupe de noix de palme](/produit/base-soupe-noix-de-palme), plus fluide, est plus pratique.\n\nÀ ne pas confondre avec l'[huile de palme rouge](/produit/huile-de-palme-rouge) : l'huile sert à cuire, alors que la pulpe constitue la sauce elle-même. En réduisant, elle libère sa propre matière grasse, si bien qu'on n'ajoute en général aucune huile.",
+    conserver:
+      "Une grande boîte entamée ne se finit pas toujours en une fois. Répartissez le reste dans de petites boîtes ou un bac à glaçons et congelez-le : chaque portion suffira pour une sauce. Au réfrigérateur, dans un récipient en verre fermé, elle ne tient que quelques jours.",
+    remplacer:
+      "Sans pulpe, on peut revenir à la méthode d'origine avec des noix de palme fraîches ou surgelées, bouillies puis pilées : comptez une bonne heure de travail en plus. En dernier recours, de l'huile de palme rouge liée d'un peu de pâte d'arachide donne une sauce colorée, mais bien différente. Voyez aussi [Par quoi remplacer l'huile de palme rouge ?](/conseils/remplacer-huile-de-palme-rouge).",
+    enCuisine:
+      "Elle fait la [sauce graine au poulet](/recette/sauce-graine) ivoirienne, le [poulet nyembwe](/recette/poulet-nyembwe) du Gabon et le [poulet à la moambé](/recette/moambe) congolais. Ces sauces mijotent longtemps : lisez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces) avant de vous lancer, et [Quelle différence entre huile de palme rouge et raffinée ?](/conseils/huile-de-palme-rouge-ou-raffinee) pour bien distinguer les produits du palmier.",
+    faq: [
+      {
+        question: "Comment savoir si la sauce graine est cuite ?",
+        reponse:
+          "Quand une fine couche d'huile rouge recouvre la surface et que la sauce nappe la cuillère. Il faut en général plus d'une heure de mijotage.",
+      },
+      {
+        question: "Faut-il ajouter de l'huile à la pulpe ?",
+        reponse:
+          "Non. La pulpe contient déjà sa matière grasse, qui se libère pendant la cuisson et suffit largement.",
+      },
+    ],
+  },
+  "base-soupe-noix-de-palme": {
+    origine:
+      "Au Ghana, la soupe de noix de palme s'appelle abenkwan chez les Akan et dedetsi dans la région de la Volta. On la sert avec un foufou ou avec l'omo tuo, des boules de riz écrasé, garnie de poisson fumé, de crabe ou de viande de chèvre.\n\nAu Nigeria voisin, la même base donne le banga des Urhobo, dans le delta du Niger, et l'ofe akwu des Igbo, servi sur du riz. Préparée à la maison, la pulpe demande de faire bouillir, piler et presser les fruits du palmier : la conserve épargne ce travail sans changer la nature de la soupe.",
+    choisir:
+      "Lisez la composition : une base ghanéenne contient le plus souvent la seule pulpe de noix de palme, parfois avec du sel. Le petit format correspond à une marmite familiale, sans reste à conserver.\n\nPar rapport à la [pulpe de noix de palme](/produit/pulpe-de-noix-de-palme) en grande boîte, plus concentrée, elle est plus liquide et se délaye plus vite. Elle ne remplace pas l'[huile de palme rouge](/produit/huile-de-palme-rouge), matière grasse de cuisson des sauces de feuilles. Pour une soupe au goût fumé, associez-la à du poisson fumé ou à des [crevettes séchées](/produit/crevettes-sechees).",
+    conserver:
+      "Rangez les boîtes fermées dans un placard sec et vérifiez la date avant usage ; une boîte bombée ou rouillée ne s'utilise pas. Une fois ouverte, versez le reste dans un récipient en verre au réfrigérateur et cuisinez-le dans les deux jours, ou congelez-le en portions.",
+    remplacer:
+      "La grande boîte de pulpe de noix de palme convient parfaitement, allongée d'un peu plus d'eau. Des noix fraîches, bouillies, pilées puis pressées dans l'eau chaude, donnent la version d'origine au prix d'un long travail. L'huile de palme seule, en revanche, ne suffit pas à faire une palm nut soup.",
+    enCuisine:
+      "Elle se cuisine comme la pulpe de la [sauce graine au poulet](/recette/sauce-graine) ou du [poulet nyembwe](/recette/poulet-nyembwe), avec moins de réduction. Servez la soupe avec un foufou de [farine de foufou](/produit/farine-de-foufou), comme la [fufu light soup](/recette/fufu-light-soup) ghanéenne, et lisez [Comment faire un foufou sans grumeaux ?](/conseils/foufou-sans-grumeaux). La page [Ghana](/pays/ghana) présente le reste de cette cuisine.",
+    faq: [
+      {
+        question: "Base de soupe et pulpe de noix de palme, quelle différence ?",
+        reponse:
+          "C'est le même fruit. La base ghanéenne est plus fluide et vendue en petit format ; la pulpe, plus épaisse, se dilue davantage.",
+      },
+      {
+        question: "Faut-il écumer la soupe ?",
+        reponse:
+          "Oui, en partie : l'huile rouge qui remonte en fin de cuisson peut être retirée à la louche si la soupe vous paraît trop riche.",
+      },
+    ],
+  },
+  "crevettes-sechees": {
+    origine:
+      "Le Cameroun leur doit presque son nom. En 1472, le navigateur portugais Fernão do Pó entra dans l'estuaire du Wouri et y trouva tant de crevettes qu'il l'appela Rio dos Camarões, la rivière des crevettes ; le mot a fini par désigner tout le pays.\n\nDans toute l'Afrique de l'Ouest et centrale, les petites crevettes pêchées en estuaire sont séchées au soleil ou fumées pour se conserver sans froid. Au Nigeria, on les appelle crayfish en anglais, même s'il s'agit de crevettes et non d'écrevisses.",
+    choisir:
+      "Les crevettes doivent être sèches, d'un rose orangé, avec une odeur marine franche mais jamais ammoniaquée. Les petites se pilent facilement ; les plus grosses, entières, restent visibles dans le plat. Une version fumée a une couleur plus sombre et un goût plus marqué.\n\nElles jouent un rôle proche du [soumbala](/produit/soumbala) : donner de la profondeur à une sauce. Le soumbala apporte un goût fermenté et terrien, les crevettes une note iodée, et les deux s'associent volontiers dans une sauce feuille. Avec le [ndolé](/produit/feuilles-de-ndole), elles forment un couple classique de la cuisine camerounaise.",
+    conserver:
+      "Leur odeur gagne vite tout un placard : un bocal en verre bien fermé s'impose. Pour une longue conservation, le congélateur les garde parfaitement, sans changer leur texture. Si elles ont ramolli avec l'humidité, quelques minutes à sec dans une poêle leur rendent leur croquant.",
+    remplacer:
+      "Un peu de poisson fumé émietté, comme le hareng fumé, apporte une profondeur comparable. Une cuillère de pâte de crevettes d'épicerie asiatique, ou quelques gouttes de sauce poisson, dépanne aussi, à condition de réduire le sel. Pour d'autres idées, lisez [Par quoi remplacer le poisson fumé dans une sauce ?](/conseils/remplacer-le-poisson-fume).",
+    enCuisine:
+      "Elles garnissent le [ndolé aux crevettes](/recette/ndole), relèvent la [soupe egusi](/recette/soupe-egusi) nigériane et l'[eru](/recette/eru), plat de feuilles du sud-ouest du Cameroun. Pour le ndolé, voyez aussi [Comment enlever l'amertume du ndolé ?](/conseils/enlever-amertume-du-ndole) ; pour leur stockage, les conseils de [Comment conserver le poisson fumé ?](/conseils/comment-conserver-le-poisson-fume) valent aussi pour elles.",
+    faq: [
+      {
+        question: "Faut-il décortiquer les crevettes séchées ?",
+        reponse:
+          "Pas les petites : on les pile ou on les utilise entières avec leur carapace. Les plus grosses peuvent être décortiquées si l'on préfère une texture plus fine.",
+      },
+      {
+        question: "Les crevettes séchées sont-elles salées ?",
+        reponse:
+          "Souvent un peu, selon le séchage. Goûtez la sauce avant de saler et rincez-les brièvement si besoin.",
+      },
+    ],
+  },
+  "chips-de-plantain": {
+    origine:
+      "La banane plantain, venue d'Asie du Sud-Est il y a très longtemps, est devenue un aliment de base en Afrique centrale et de l'Ouest, où l'on en cultive une grande diversité. On la mange bouillie, frite, braisée ou pilée, à tous les stades de maturité.\n\nLes chips se font avec le plantain vert, encore ferme et peu sucré, coupé en tranches très fines puis frit. Au Cameroun, au Nigeria ou au Ghana, des vendeurs les proposent en petits sachets aux carrefours et aux arrêts de bus, à côté des arachides grillées.",
+    choisir:
+      "Lisez la liste d'ingrédients : plantain, huile et sel suffisent. Certaines versions sont sucrées, faites avec du plantain mûr, ou relevées au piment. Des chips dorées et régulières ont été frites à bonne température.\n\nElles ne remplacent pas un plat de plantain : l'[alloco](/recette/alloco) ivoirien et le [kelewele](/recette/kelewele) ghanéen se préparent avec du plantain mûr, frit en morceaux. Pour l'apéritif, les chips voisinent bien avec le [biltong](/produit/biltong) sud-africain et le [souchet](/produit/souchet), deux autres en-cas de la boutique, l'un salé, l'autre sucré.",
+    conserver:
+      "Une fois le sachet ouvert, l'air humide ramollit les chips assez vite. Refermez-le avec une pince ou transvasez-les dans une boîte hermétique. Gardez-les loin de la chaleur et de la lumière, qui font rancir l'huile de friture et donnent un goût de vieux.",
+    remplacer:
+      "Pour les faire soi-même, choisissez un plantain bien vert, coupez-le en tranches très fines à la mandoline et faites-les frire dans une huile bien chaude jusqu'à ce qu'elles dorent ; une [araignée à friture](/produit/araignee-a-friture) aide à les sortir sans casse. Salez à la sortie. À défaut de plantain, des chips de manioc ou de patate douce donnent un en-cas voisin.",
+    enCuisine:
+      "Elles complètent un plateau de [puff-puff](/recette/puff-puff) et d'[akara](/recette/akara), les beignets du Nigeria, servis avec un [jus de bissap](/recette/jus-de-bissap). Concassées, elles ajoutent du croquant à un [garba](/recette/garba) ivoirien. Pour la boisson, l'article [Comment faire un jus de gingembre maison ?](/conseils/faire-un-jus-de-gingembre-maison) donne une autre idée bien fraîche.",
+    faq: [
+      {
+        question: "Chips de plantain et alloco, quelle différence ?",
+        reponse:
+          "L'alloco se fait avec du plantain mûr coupé en morceaux et se mange chaud, en plat. Les chips viennent du plantain vert, tranché finement, et se grignotent froides.",
+      },
+      {
+        question: "Les chips de plantain sont-elles sucrées ?",
+        reponse:
+          "Non, le plantain vert contient peu de sucre : elles ont un goût proche de la pomme de terre, avec une note de banane. Il existe toutefois des versions au plantain mûr.",
+      },
+    ],
+  },
+  biltong: {
+    origine:
+      "Le mot vient du néerlandais, devenu l'afrikaans : bil désigne la croupe, d'où l'on tirait la viande, et tong la languette ou la bande. Il apparaît dans les textes au début du XIXe siècle, mais l'habitude de sécher la viande au vent est bien plus ancienne en Afrique australe.\n\nLe biltong se distingue du jerky américain par sa fabrication : la viande est marinée dans le vinaigre et les épices, puis séchée à l'air libre, sans cuisson ni fumage. Coriandre, poivre noir, sel et souvent un peu de sucre roux forment la recette classique.",
+    choisir:
+      "Un bon biltong est rouge sombre à l'intérieur, sec en surface mais encore souple, parfois bordé d'une fine couche de gras. On le trouve en bâtons entiers ou déjà tranché ; les bâtons se gardent mieux et se coupent à la demande. Son cousin, le droëwors, est une saucisse séchée de la même façon.\n\nC'est le seul en-cas de viande de la boutique. Les [chips de plantain](/produit/chips-de-plantain) apportent le croquant et le [souchet](/produit/souchet) la douceur : réunis sur une planche, ils forment un apéritif varié. La [sauce peri-peri](/produit/sauce-peri-peri), autre saveur d'Afrique australe, fait une trempette relevée.",
+    conserver:
+      "Évitez le sac plastique fermé pour un biltong entamé : l'humidité y reste prisonnière et favorise les moisissures. Un sac en papier, au réfrigérateur, le garde mieux, et il continue même à sécher doucement. S'il devient trop dur, tranchez-le simplement plus finement.",
+    remplacer:
+      "La viande des Grisons ou un jambon cru très sec s'en approchent par la texture, sans les notes de coriandre et de vinaigre. Pour retrouver ces parfums, saupoudrez les tranches d'un peu de coriandre moulue et de poivre concassé. Le kilishi, viande séchée et épicée du Nigeria et du Niger, est un cousin ouest-africain.",
+    enCuisine:
+      "Pour un repas sud-africain, servez-le à l'apéritif avant le [bobotie](/recette/bobotie), hachis de bœuf au curry gratiné sous une crème à l'œuf, accompagné du [chakalaka](/recette/chakalaka). Côté boisson, un [rooibos glacé](/recette/rooibos-glace) lui va bien. La page [Afrique du Sud](/pays/afrique-du-sud) présente le reste de cette cuisine, du braai aux plats mijotés en [marmite potjie](/produit/marmite-potjie).",
+    faq: [
+      {
+        question: "Le biltong est-il cuit ?",
+        reponse:
+          "Non. Le vinaigre, le sel et un long séchage à l'air le transforment et assurent sa conservation, sans passage au feu.",
+      },
+      {
+        question: "Biltong et jerky, quelle différence ?",
+        reponse:
+          "Le jerky est cuit ou fumé, souvent en fines lamelles ; le biltong est mariné au vinaigre puis séché à l'air, en morceaux épais.",
+      },
+    ],
+  },
+  souchet: {
+    origine:
+      "Le souchet est le petit tubercule d'une plante cousine du papyrus, Cyperus esculentus. Il compte parmi les plus anciennes plantes consommées : les Égyptiens le connaissaient dès la période prédynastique, et une peinture de tombe du XVe siècle avant notre ère montre la préparation de gâteaux de souchet.\n\nEn Afrique de l'Ouest, il se cultive au Sahel ; en haoussa, on l'appelle aya, d'où le nom du kunun aya nigérian. En Espagne, introduit par les Arabes au Moyen Âge, il est devenu la chufa, qui sert à préparer l'horchata de Valence.",
+    choisir:
+      "Les tubercules secs sont ridés et durs comme des noisettes : c'est normal, ils regonflent au trempage. Choisissez-les entiers, propres, sans odeur de moisi. On trouve des variétés brunes et d'autres jaunes, plus grosses et plus tendres.\n\nDans la boutique, il se rapproche de la [poudre de baobab](/produit/poudre-de-baobab) : deux produits secs qui donnent des boissons épaisses et sucrées. Les [chips de plantain](/produit/chips-de-plantain) et le [biltong](/produit/biltong) font des en-cas salés ; le souchet, lui, est l'en-cas doux, à croquer après trempage.",
+    conserver:
+      "Secs, les tubercules se gardent très longtemps dans un bocal fermé, à l'abri de l'humidité. Une fois trempés, ils se gardent au réfrigérateur dans un peu d'eau et doivent être mangés ou mixés dans les deux jours. Gardez quelques poignées sèches d'avance pour pouvoir lancer un trempage à tout moment.",
+    remplacer:
+      "Pour le goût de noisette, des noisettes ou des noix de cajou trempées puis mixées font une boisson voisine. Une horchata de chufa en bouteille, d'origine espagnole, est déjà prête : c'est le même tubercule, souvent plus sucré. Pour le grignotage, des amandes grillées le remplacent sans peine.",
+    enCuisine:
+      "Le kunun aya se boit bien frais, comme le [jus de bouye](/recette/jus-de-bouye) ou le [jus de gingembre](/recette/jus-de-gingembre). Quelques souchets trempés et concassés ajoutent du croquant à un [dégué](/recette/degue) ou à un [thiakry](/recette/thiakry). Pour une autre boisson à base de produit sec, lisez [Que faire avec la poudre de baobab ?](/conseils/que-faire-avec-la-poudre-de-baobab).",
+    faq: [
+      {
+        question: "Le souchet est-il une noix ?",
+        reponse:
+          "Non, malgré son nom anglais de tiger nut, c'est un tubercule. Il ne vient pas d'un arbre mais d'une petite plante herbacée.",
+      },
+      {
+        question: "Faut-il éplucher le souchet ?",
+        reponse:
+          "Non, la peau se mange et se mixe avec la chair. Un bon rinçage après le trempage suffit.",
+      },
+    ],
+  },
 };
