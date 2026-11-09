@@ -303,5 +303,197 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "tamis-en-bois": {
+    origine:
+      "Bien avant les toiles métalliques, on séparait la farine du son avec des vanneries finement tressées ou des tissus tendus sur un cadre. En Afrique de l'Ouest, les femmes vannent encore le mil et le fonio dans de larges plateaux de paille, en faisant sauter les grains pour que le vent emporte les balles.\n\nLe tamis à cadre en bois reprend ce principe sous une forme plus précise : une toile à maille fine, tendue sur un cercle de bois, laisse passer la poudre et retient les grumeaux, les fibres et les petites impuretés.",
+    choisir:
+      "Le diamètre de 24 cm convient à la plupart des saladiers et permet de tamiser une quantité de farine pour une famille. Une maille fine sert aux farines de [teff](/produit/farine-de-teff), de [maïs blanc](/produit/farine-de-mais-blanc) ou de [foufou](/produit/farine-de-foufou), et aux jus que l'on veut sans fibres. Ne le confondez pas avec la [passoire à couscous](/produit/passoire-a-couscous), percée de trous plus larges : elle sert à cuire à la vapeur et à égoutter, pas à affiner une poudre.",
+    conserver:
+      "Les farines attirent les petits insectes du placard. Tapotez bien le tamis après chaque usage pour qu'il ne reste aucune poudre dans les angles du cadre, puis rangez-le dans un sac en tissu ou un tiroir fermé. Si vous l'avez utilisé pour un jus, rincez la toile aussitôt à l'eau froide, sans savon, et laissez-le sécher debout, loin d'une source de chaleur qui pourrait fendre le bois.",
+    remplacer:
+      "Une passoire fine en inox fait l'affaire pour une petite quantité de farine, en remuant avec une cuillère. Pour filtrer un jus de baobab ou de gingembre, un linge propre en coton fin, pressé à la main, retient encore mieux les fibres. À défaut de tout cela, fouettez simplement la farine à sec pour l'aérer.",
+    enCuisine:
+      "Il filtre la boisson de pain de singe du [jus de bouye](/recette/jus-de-bouye) et la crème du [ngalakh](/recette/ngalakh), le [jus de gingembre](/recette/jus-de-gingembre), et affine les légumes de la [fufu et light soup](/recette/fufu-light-soup). Pour la farine éthiopienne, lisez [Qu'est-ce que la farine de teff et que peut-on en faire ?](/conseils/que-faire-avec-la-farine-de-teff), puis lancez-vous dans l'[injera](/recette/injera).",
+    faq: [
+      {
+        question: "Faut-il tamiser la farine de teff pour l'injera ?",
+        reponse:
+          "Ce n'est pas obligatoire, mais une farine tamisée se délaye sans grumeaux et donne une pâte plus homogène, qui fermente de façon régulière.",
+      },
+      {
+        question: "Peut-on filtrer un jus avec un tamis en bois ?",
+        reponse:
+          "Oui, ponctuellement. Rincez-le tout de suite et laissez-le bien sécher ; si vous filtrez souvent des jus, un linge ou une passoire en inox s'abîme moins.",
+      },
+    ],
+  },
+  "passoire-a-couscous": {
+    origine:
+      "La cuisson à la vapeur des grains roulés est née en Afrique du Nord et a gagné le Sahel. Au Sénégal ou au Mali, le couscous de mil se cuit de la même manière, au-dessus de la marmite où mijote la sauce. En Côte d'Ivoire, l'attiéké de manioc suit le même principe.\n\nCette passoire de 23 cm reprend ce montage simple : un fond percé qui se pose sur une marmite et laisse monter la vapeur à travers les grains, sans qu'ils trempent dans le liquide.",
+    choisir:
+      "Le point essentiel est le diamètre : la passoire doit reposer sur le bord de la marmite sans tomber dedans. Mesurez l'ouverture de votre [marmite en aluminium](/produit/marmite-en-aluminium) ou de votre [faitout](/produit/faitout-en-fonte-d-aluminium) avant de l'utiliser. Si vous cuisez souvent pour une grande tablée, un [couscoussier](/produit/couscoussier) complet, avec son panier ajusté, évite les fuites de vapeur. Pour affiner une farine, prenez plutôt le [tamis en bois](/produit/tamis-en-bois), dont la maille est bien plus serrée.",
+    conserver:
+      "Les grains de fonio, très fins, se coincent facilement dans les trous. Faites tremper la passoire quelques minutes dans l'eau chaude avant de la brosser, puis tapotez-la à l'envers au-dessus de l'évier. Séchez-la bien avant de la ranger, surtout si elle est en métal, et empilez-la à l'envers sur la marmite qui lui correspond pour ne plus chercher la bonne paire.",
+    remplacer:
+      "Une passoire à pâtes en métal, posée sur une marmite de même taille, peut servir de panier vapeur. Si les trous sont trop larges pour le fonio, tapissez le fond d'un linge fin humide. Le [couscous de mil](/produit/couscous-de-mil) précuit et l'[attiéké sec](/produit/attieke-sec) se réhydratent aussi à l'eau chaude, couverts, quand on manque de temps.",
+    enCuisine:
+      "Elle cuit le mil du [thiéré mbuum](/recette/thiere-mbuum), du [thiakry](/recette/thiakry) et du [dégué](/recette/degue), le [fonio aux légumes](/recette/fonio-aux-legumes) et l'attiéké du [garba](/recette/garba). L'article [Faut-il un couscoussier pour cuire le fonio ou l'attiéké ?](/conseils/couscoussier-fonio-attieke) compare les deux solutions, et [Comment cuire le couscous de mil (thiéré) ?](/conseils/cuire-le-couscous-de-mil) détaille les passages à la vapeur.",
+    faq: [
+      {
+        question: "Comment éviter que la vapeur s'échappe sur les côtés ?",
+        reponse:
+          "Entourez la jointure entre la passoire et la marmite d'une bande de tissu humide ou d'un boudin de pâte faite de farine et d'eau.",
+      },
+      {
+        question: "Faut-il couvrir la passoire pendant la cuisson ?",
+        reponse:
+          "Posez un couvercle ou un torchon propre sans tasser les grains. La vapeur doit traverser la semoule, pas rester bloquée en dessous.",
+      },
+    ],
+  },
+  "araignee-a-friture": {
+    origine:
+      "L'araignée doit son nom à son panier de fils métalliques, qui rappelle une toile. On la retrouve aussi bien dans les cuisines d'Asie que dans celles d'Afrique, partout où l'on frit beaucoup et vite.\n\nEn Afrique de l'Ouest, la friture est l'art de la rue : bananes plantains de l'alloco ivoirien et du kelewele ghanéen, beignets de haricots akara, boules de pâte levée puff-puff. Les vendeuses plongent et ressortent des dizaines de pièces à la minute, et un ustensile qui égoutte d'un seul geste fait gagner un temps précieux.",
+    choisir:
+      "Un panier de 14 cm convient à une marmite ou une sauteuse familiale : il ramasse plusieurs beignets à la fois sans être encombrant. Comparée à une écumoire pleine percée de petits trous, l'araignée laisse l'huile s'écouler bien plus vite, et les fritures restent croustillantes. Le manche doit être assez long pour garder la main loin des projections. Pour sortir des légumes d'une eau de cuisson, une [passoire à couscous](/produit/passoire-a-couscous) reste plus pratique.",
+    conserver:
+      "L'huile figée et les miettes de pâte se logent entre les fils. Trempez la tête de l'araignée dans une eau très chaude et savonneuse quelques minutes avant de la frotter avec une brosse à vaisselle. Séchez-la aussitôt avec un torchon, puis suspendez-la par son manche : le panier ne se déforme pas et sèche complètement.",
+    remplacer:
+      "Une écumoire ou une grande cuillère percée fonctionne, en égouttant un peu plus longtemps au-dessus de la marmite. Pour les grosses pièces comme les morceaux de poulet ou de poisson, une pince de cuisine est même plus sûre. Évitez les cuillères en plastique, qui fondent au contact d'une huile de friture.",
+    enCuisine:
+      "Elle sort de l'huile l'[alloco](/recette/alloco), les [kelewele](/recette/kelewele), les [puff-puff](/recette/puff-puff) et les [akara](/recette/akara), ainsi que les plantains frits du [poulet DG](/recette/poulet-dg). En accompagnement, les [chips de plantain](/produit/chips-de-plantain) donnent une idée du croustillant à atteindre. Pour un premier essai, voyez [Par quelle recette africaine commencer quand on débute ?](/conseils/par-quelle-recette-commencer).",
+    faq: [
+      {
+        question: "À quelle température frire l'alloco ou les puff-puff ?",
+        reponse:
+          "Autour de 170 à 180 °C. Sans thermomètre, plongez un petit morceau de pâte : il doit remonter aussitôt en grésillant, sans brunir trop vite.",
+      },
+      {
+        question: "Pourquoi mes beignets sont-ils gras ?",
+        reponse:
+          "L'huile n'est pas assez chaude, souvent parce qu'on en met trop à la fois. Faites de petites fournées et égouttez-les sur du papier absorbant.",
+      },
+    ],
+  },
+  "spatules-en-bois": {
+    origine:
+      "Tourner une pâte de céréales ou de tubercules jusqu'à la rendre lisse est un geste commun à presque toute l'Afrique. En Afrique de l'Est, on se sert d'un bâton plat en bois appelé mwiko en swahili pour l'ugali ; au Burkina Faso et au Mali, une spatule semblable sert au tô. Le bois résiste à la force du poignet et ne casse pas dans une pâte épaisse.\n\nCe lot de huit spatules reprend ces formes simples : des modèles larges pour les pâtes, d'autres plus fins ou percés pour les sauces et le riz.",
+    choisir:
+      "Pour les pâtes fermes, foufou, tô ou ugali, prenez la spatule la plus large et la plus épaisse du lot : elle écrase les grumeaux contre la paroi sans plier. Les modèles plus étroits conviennent aux sauces, au riz et aux mijotés. Une spatule à bout droit racle mieux le fond d'un [faitout](/produit/faitout-en-fonte-d-aluminium) qu'une cuillère ronde. Pour sortir des fritures, préférez l'[araignée](/produit/araignee-a-friture), et pour servir, le [saladier en acacia](/produit/saladier-en-bois).",
+    conserver:
+      "Une spatule qui sent encore l'oignon ou le poisson se frotte avec un demi-citron et un peu de gros sel, puis se rince à l'eau claire. Si le bois devient rugueux après plusieurs lavages, un léger ponçage au papier de verre fin le rend lisse. Rangez-les debout dans un pot, pas dans un tiroir humide.",
+    remplacer:
+      "Une cuillère en bois classique suffit pour les sauces, mais plie parfois dans une pâte de foufou. Une spatule en silicone épais convient aux pâtes plus souples. Évitez les ustensiles en métal sur une marmite antiadhésive ou émaillée, qu'ils risquent de rayer.",
+    enCuisine:
+      "Elles servent à tourner le tô du [tô et sauce gombo](/recette/to-sauce-gombo), le fufu de la [fufu et light soup](/recette/fufu-light-soup) et l'ugali de l'[ugali et sukuma wiki](/recette/ugali-sukuma-wiki), avec la [farine de foufou](/produit/farine-de-foufou) ou la [farine de maïs blanc](/produit/farine-de-mais-blanc). L'article [Comment préparer un foufou sans qu'il fasse de grumeaux ?](/conseils/foufou-sans-grumeaux) détaille le geste.",
+    faq: [
+      {
+        question: "Quelle spatule pour tourner le foufou ?",
+        reponse:
+          "La plus large et la plus rigide du lot. Tenez la marmite d'une main avec un torchon et écrasez la pâte contre la paroi de l'autre.",
+      },
+      {
+        question: "Pourquoi le bois noircit-il par endroits ?",
+        reponse:
+          "Le bois absorbe l'humidité et les sauces colorées. Ce n'est pas gênant tant qu'il ne se fend pas ; un séchage à l'air après chaque lavage limite ces taches.",
+      },
+    ],
+  },
+  "brochettes-en-metal": {
+    origine:
+      "Griller de la viande enfilée sur une pique au-dessus des braises est une pratique très ancienne. En Afrique de l'Ouest, le suya en est l'exemple le plus célèbre : il est associé aux Haoussas du nord du Nigeria, où il porte aussi le nom de tsire, et on le trouve aussi au Niger, au nord du Cameroun et au Ghana. Le soir, les grilleurs alignent les brochettes de fines lamelles de bœuf enrobées de poudre d'arachide épicée.\n\nAu Sénégal, les dibiteries servent le dibi, du mouton grillé sur la braise, et au Kenya la nyama choma est le grand plat des braises.",
+    choisir:
+      "Des brochettes longues de 40 cm laissent les mains loin du feu et permettent d'enfiler une portion entière. Le métal ne brûle pas comme le bambou, n'a pas besoin de tremper avant usage et se réutilise sans fin. Il conduit aussi la chaleur au cœur des morceaux, ce qui aide les gros cubes à cuire. Pour une cuisson au four, vérifiez simplement que leur longueur tient dans votre plaque, ou posez-les en travers d'un plat creux.",
+    conserver:
+      "Les sucs caramélisés de la marinade collent au métal en refroidissant. Faites tremper les brochettes dans une bassine d'eau très chaude dès la fin du repas, puis frottez-les avec une éponge grattante. Séchez-les une à une avant de les ranger, attachées par un élastique ou dans un étui, pointes du même côté.",
+    remplacer:
+      "Des piques en bambou font l'affaire, à condition de les faire tremper trente minutes dans l'eau avant la cuisson pour qu'elles ne brûlent pas. Au four, vous pouvez aussi poser les lamelles de viande à plat sur une grille, au-dessus d'une plaque. Une poêle en fonte bien chaude donne un résultat proche pour quelques morceaux.",
+    enCuisine:
+      "Elles sont faites pour le [suya de bœuf](/recette/suya), dont l'épice est présentée dans [Qu'est-ce que le yaji (épice à suya) ?](/conseils/quest-ce-que-le-yaji). Sans barbecue, suivez [Comment faire griller des brochettes façon suya au four ?](/conseils/griller-des-brochettes-suya-au-four). Pour relever les morceaux, le [piment pili-pili](/produit/piment-pili-pili) et le [poivre de Selim](/produit/poivre-de-selim) ont leur place dans la marinade.",
+    faq: [
+      {
+        question: "Faut-il huiler les brochettes en métal ?",
+        reponse:
+          "Un léger film d'huile aide la viande à glisser au moment de servir, surtout avec une marinade sucrée ou à base de pâte d'arachide.",
+      },
+      {
+        question: "Pourquoi couper la viande en lamelles pour le suya ?",
+        reponse:
+          "Les lamelles fines cuisent en quelques minutes et retiennent beaucoup d'épices. C'est la découpe des grilleurs nigérians.",
+      },
+    ],
+  },
+  "feuilles-de-bananier-fraiches": {
+    origine:
+      "Le bananier a été domestiqué en Nouvelle-Guinée il y a plusieurs millénaires, puis s'est diffusé vers l'Asie du Sud-Est et l'Afrique. Des traces archéologiques au Cameroun montrent que le plantain y était déjà présent il y a environ 2 500 ans. Depuis, ses grandes feuilles souples sont devenues l'emballage de cuisson naturel de toute l'Afrique humide.\n\nAu Cameroun, on y cuit le koki ; au Congo, le liboké ; en Ouganda, le luwombo. En Côte d'Ivoire, elles ferment le canari du kedjenou, et au Ghana elles enveloppent le kenkey fanti.",
+    choisir:
+      "Les feuilles fraîches se reconnaissent à leur vert franc et à leur souplesse. Une feuille qui craque quand on la plie a commencé à sécher : réservez-la pour tapisser le fond d'une marmite. Si vous en trouvez surgelées dans les épiceries asiatiques ou africaines, elles conviennent aussi, une fois décongelées et essuyées. Prévoyez large : il faut souvent deux épaisseurs pour un koki, et les bords se déchirent facilement le long des nervures.",
+    conserver:
+      "Les feuilles se gardent quelques jours dans le bac à légumes du réfrigérateur, roulées dans un linge légèrement humide puis dans un sac. Pour une conservation longue, coupez-les à la taille de vos papillotes, empilez-les à plat et congelez-les : elles en ressortent assouplies et prêtes à plier. Évitez de les laisser au soleil, où elles brunissent en quelques heures.",
+    remplacer:
+      "Au Ghana, le kenkey ga est enveloppé dans des feuilles de maïs séchées, que l'on trouve parfois en épicerie latino-américaine : elles conviennent aux petites papillotes cuites à la vapeur. Pour un koki, des ramequins couverts cuits au bain-marie donnent la bonne texture, sans le parfum végétal. Et pour un poisson, une papillote de papier cuisson reste la solution la plus simple.",
+    enCuisine:
+      "Elles enveloppent le [koki](/recette/koki), le [liboké de poisson](/recette/liboke-de-poisson) et le [luwombo de poulet](/recette/luwombo), et servent d'assiette au [waakye](/recette/waakye) ghanéen. Pour l'esprit des cuisines qui les utilisent, voyez les pages [Cameroun](/pays/cameroun) et [Ouganda](/pays/ouganda), et la recette du [kedjenou](/recette/kedjenou) ivoirien, cuit à l'étouffée.",
+    faq: [
+      {
+        question: "Peut-on manger la feuille de bananier ?",
+        reponse:
+          "Non, elle est trop fibreuse. Elle sert d'emballage et de plat : on l'ouvre à table et on mange ce qu'elle contient.",
+      },
+      {
+        question: "Pourquoi passer la feuille sur une flamme ?",
+        reponse:
+          "La chaleur la rend souple et brillante, ce qui évite qu'elle se fende quand on la plie. Quelques secondes suffisent, en la déplaçant sans cesse.",
+      },
+    ],
+  },
+  "saladier-en-bois": {
+    origine:
+      "Avant la vaisselle industrielle, la table africaine était faite de calebasses, ces courges séchées et évidées, et de bols taillés dans le bois. On y servait le plat commun que chacun partage, à la main ou à la cuillère, assis autour du même récipient.\n\nCe grand saladier en acacia s'inscrit dans cette tradition. L'acacia est un bois dense, au grain serré et aux veines contrastées, apprécié pour la vaisselle parce qu'il absorbe peu les liquides.",
+    choisir:
+      "Avec 26 cm de diamètre, il convient à un plat principal pour quatre à six personnes ou à une grande salade. Pour des portions individuelles, le [lot de deux saladiers de 20 cm](/produit/saladiers-acacia-lot-de-2) est plus adapté. Pour servir des sauces ou des accompagnements en petite quantité, les [bols en manguier](/produit/bols-manguier-lot-de-3) complètent bien la table. Et pour apporter boissons et beignets, pensez au [plateau en acacia](/produit/plateau-acacia-amazon-basics).",
+    conserver:
+      "Si le bois devient terne ou rêche, poncez très légèrement l'intérieur au papier de verre fin, dépoussiérez, puis nourrissez-le avec une huile alimentaire neutre. Laissez pénétrer une nuit et essuyez l'excédent. Rangez-le à l'abri du soleil direct et loin du four : la chaleur sèche peut le fendre. Une petite fente se rebouche rarement, d'où l'intérêt de l'entretenir avant.",
+    remplacer:
+      "Un grand plat creux en céramique ou en émail remplit le même rôle de plat commun, et supporte mieux les sauces chaudes. Pour le service à la mode d'Afrique de l'Ouest, une grande calebasse décorative peut aussi accueillir des fruits ou du pain. L'essentiel est un récipient large et peu profond, où chacun accède facilement.",
+    enCuisine:
+      "Il accueille le [thiakry](/recette/thiakry) bien frais, l'attiéké du [poisson braisé et attiéké](/recette/poisson-braise-attieke), le [kachumbari](/recette/nyama-choma) qui accompagne la nyama choma ou le [chakalaka](/recette/chakalaka) servi froid. Pour composer un repas sans viande, l'article [Quels plats africains sont naturellement végétariens ?](/conseils/plats-africains-vegetariens) donne des idées.",
+    faq: [
+      {
+        question: "Peut-on servir une sauce chaude dans un saladier en bois ?",
+        reponse:
+          "Tiède, oui, pour peu de temps. Une sauce brûlante ou très grasse risque de marquer le bois ; servez-la plutôt dans un plat en céramique.",
+      },
+      {
+        question: "Quelle huile utiliser pour l'entretenir ?",
+        reponse:
+          "Une huile alimentaire neutre, comme l'huile de tournesol ou de pépins de raisin. Évitez l'huile d'olive en couche épaisse, qui peut rancir.",
+      },
+    ],
+  },
+  "saladiers-acacia-lot-de-2": {
+    origine:
+      "Manger dans un bol de bois est une habitude ancienne sur tout le continent, des bols sculptés du Sahel aux écuelles des hauts plateaux de l'Est. Le bois isole bien : un plat tiède le reste plus longtemps, et le bol ne brûle pas les doigts.\n\nCes deux bols en acacia sont recouverts d'un revêtement alimentaire qui protège la surface. L'acacia fait partie des bois durs les plus utilisés pour la vaisselle, grâce à sa densité et à son grain serré qui limite les infiltrations.",
+    choisir:
+      "Ces bols de taille généreuse servent de bol individuel pour un plat complet : riz et sauce, attiéké et poisson, salade composée. Pour un plat commun posé au centre, le [grand saladier de 26 cm](/produit/saladier-en-bois) convient mieux. Pour les petites portions, sauces ou arachides grillées, regardez les [bols en manguier](/produit/bols-manguier-lot-de-3) ; pour les desserts et les fruits, les [bols en noix de coco](/produit/bols-noix-de-coco-lot-de-2) apportent une touche différente.",
+    conserver:
+      "Le revêtement alimentaire protège le bois, mais s'use avec les lavages. Quand l'intérieur paraît sec ou blanchâtre, passez une fine couche d'huile alimentaire neutre avec un chiffon, laissez agir quelques heures, puis essuyez. Ne laissez jamais un bol sale dans l'évier jusqu'au lendemain : l'eau stagnante gonfle les fibres et fait apparaître des fissures.",
+    remplacer:
+      "Des bols creux en céramique ou en grès de même contenance font le même usage et supportent le lave-vaisselle. Pour un service plus léger, notamment en extérieur, une assiette creuse en émail convient aussi. Seule différence notable : la chaleur passe davantage dans les mains, et la céramique pèse plus lourd sur un plateau chargé.",
+    enCuisine:
+      "Ils conviennent au [garba](/recette/garba) d'Abidjan, au [riz jollof](/recette/riz-jollof) servi en portion, au [thiakry](/recette/thiakry) ou au [dégué](/recette/degue) en dessert. L'attiéké, semoule de manioc fermentée de Côte d'Ivoire, y trouve aussi sa place : l'article [Comment réussir un attiéké maison ?](/conseils/reussir-attieke-maison) explique comment le préparer.",
+    faq: [
+      {
+        question: "Ces bols vont-ils au lave-vaisselle ?",
+        reponse:
+          "Non. Comme tout bois, ils se lavent rapidement à la main et se sèchent aussitôt, faute de quoi ils se fendillent.",
+      },
+      {
+        question: "Peut-on y servir de la soupe ?",
+        reponse:
+          "Une soupe froide ou tiède, oui. Pour une soupe brûlante, laissez-la refroidir un peu avant de la verser.",
+      },
+    ],
+  },
 // FICHES
 };
