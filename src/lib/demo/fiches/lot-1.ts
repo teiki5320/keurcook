@@ -296,4 +296,148 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "marmite-en-aluminium": {
+    origine:
+      "Le mot caldero vient de l'espagnol et désigne un chaudron. Dans les Caraïbes et en Amérique latine, c'est la marmite à riz de tous les foyers, aux parois arrondies et au couvercle bien ajusté. Les cuisinières d'Afrique de l'Ouest connaissent une marmite très proche, en aluminium épais, sur laquelle mijotent le riz au poisson et les sauces.\n\nCette marmite est en fonte d'aluminium : le métal est coulé dans un moule, ce qui donne des parois et un fond plus épais qu'une casserole emboutie dans une simple tôle.",
+    choisir:
+      "Pour un riz avec une belle croûte au fond, l'épaisseur du métal est le critère principal : un fond mince brûle le riz avant qu'il ne dore. La forme haute et le couvercle lourd gardent la vapeur pendant que les grains finissent de gonfler.\n\nPour les grandes tablées, le [caldero IMUSA de 7 litres](/produit/caldero-aluminium-7-litres) reprend la même forme en plus grand. Si vous cuisinez surtout des sauces longues, le [faitout en fonte d'aluminium de 28 cm](/produit/faitout-en-fonte-d-aluminium), plus large, laisse mieux réduire. Sur une plaque à induction, choisissez plutôt une [marmite en inox](/produit/marmite-inox-13-litres) ou une [cocotte en fonte](/produit/cocotte-fonte-emaillee-28-cm).",
+    conserver:
+      "L'aluminium noircit et se tache au contact des produits alcalins : évitez les pastilles pour lave-vaisselle et les détergents agressifs. Une éponge douce et un peu de liquide vaisselle suffisent. Si l'intérieur se ternit, faire bouillir de l'eau additionnée d'un peu de vinaigre lui redonne de la clarté.",
+    remplacer:
+      "Toute casserole haute à fond épais, munie d'un couvercle qui ferme bien, peut cuire le riz. Une cocotte en fonte donne aussi un fond doré, avec un peu plus d'attention au feu. Avec une casserole fine, on renonce plutôt à la croûte et on cuit le riz à feu très doux.",
+    enCuisine:
+      "Elle est faite pour le [thiéboudienne](/recette/thieboudienne), le [riz jollof](/recette/riz-jollof) ou le [waakye](/recette/waakye) ghanéen, et elle accueille aussi la [groundnut soup](/recette/groundnut-soup) ou le [matoké au bœuf](/recette/matoke). Pour la cuisson du riz dans la sauce, lisez [Comment réussir le riz rouge du thiéboudienne ?](/conseils/reussir-le-riz-rouge-du-thieboudienne).",
+    faq: [
+      {
+        question: "Qu'est-ce que le xoon ?",
+        reponse:
+          "C'est le nom wolof de la croûte de riz dorée qui se forme au fond de la marmite pendant la cuisson du thiéboudienne. Beaucoup la considèrent comme le meilleur morceau.",
+      },
+      {
+        question: "Cette marmite fonctionne-t-elle sur induction ?",
+        reponse:
+          "L'aluminium seul n'est pas magnétique. Sans fond spécial, il faut un disque adaptateur pour l'utiliser sur une plaque à induction.",
+      },
+    ],
+  },
+  "caldero-aluminium-7-litres": {
+    origine:
+      "IMUSA est une entreprise colombienne fondée en 1934 dans la région de Medellín. Elle fabrique dès ses débuts des ustensiles en aluminium, un métal alors rare dans les cuisines du pays, et fait aujourd'hui partie du groupe français SEB. Son caldero est devenu un classique dans les foyers d'Amérique latine.\n\nEn République dominicaine, la couche de riz croustillant qui reste au fond s'appelle concón ; à Porto Rico, on parle de pegao, mot qui vient de l'espagnol « collé ». La même idée existe au Sénégal avec le xoon.",
+    choisir:
+      "Avec près de 7 litres, ce caldero vise les grandes portions : riz pour huit à dix personnes, haricots en quantité, ragoûts pour plusieurs repas. Sa finition en aluminium poli le rend facile à surveiller et à nettoyer.\n\nLa [marmite type caldero](/produit/marmite-en-aluminium) reprend le même principe dans un format plus courant. Pour encore plus de volume ou une cuisson sur induction, la [marmite traiteur en inox de 13,5 litres](/produit/marmite-inox-13-litres) est adaptée. Les sauces qui doivent réduire longtemps, comme le mafé, trouvent davantage de surface dans le [grand faitout de 36 cm](/produit/faitout-fonte-aluminium-36-cm).",
+    conserver:
+      "L'aluminium poli garde son éclat si on le lave à la main, à l'eau chaude savonneuse, et qu'on le sèche aussitôt. Le lave-vaisselle le ternit et le noircit. Pour décoller un fond de riz, laissez simplement tremper un moment au lieu de gratter avec un ustensile métallique.",
+    remplacer:
+      "Une grande marmite à fond épais et un couvercle lourd font le même travail. Pour obtenir une croûte au fond sans caldero, versez un filet d'huile dans la casserole avant le riz et laissez les dernières minutes de cuisson se faire à feu doux, sans remuer.",
+    enCuisine:
+      "Il convient aux recettes de riz pour les grandes tablées : [riz jollof](/recette/riz-jollof), [waakye](/recette/waakye), [thiéboudienne](/recette/thieboudienne). On y prépare aussi les plats en sauce qui se gardent bien, comme la [pepper soup de chèvre](/recette/pepper-soup) ou l'[eru](/recette/eru). Pour bien choisir selon le plat, voyez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "Faut-il huiler le caldero avant la première cuisson ?",
+        reponse:
+          "Un lavage à l'eau savonneuse suffit. Un peu d'huile au fond, au moment de cuire le riz, aide ensuite à former la croûte et à la décoller.",
+      },
+      {
+        question: "Peut-on le mettre au four ?",
+        reponse:
+          "La fiche du produit ne le précise pas pour ce modèle. Dans le doute, réservez-le à la cuisson sur le feu.",
+      },
+    ],
+  },
+  "marmite-potjie": {
+    origine:
+      "Potjie veut dire « petit pot » en afrikaans. Les marmites en fonte sont arrivées au Cap avec les colons européens, et sont devenues indissociables des longs voyages en chariot des Voortrekkers, qui quittent la colonie du Cap dans les années 1830 : à chaque halte, la marmite était posée sur le feu de camp.\n\nLe potjiekos, littéralement « nourriture du petit pot », est né de cette cuisine de plein air. Aujourd'hui encore, en Afrique du Sud, préparer un potjie entre amis est un moment de convivialité qui dure tout l'après-midi.",
+    choisir:
+      "Ses trois pieds sont faits pour les braises : la marmite tient seule au-dessus du feu, sans grille. Sa forme ventrue et son couvercle épais gardent la vapeur, et la fonte de fer garde la chaleur bien après que le feu a baissé.\n\nPour une cuisson en intérieur, une cocotte en fonte émaillée comme la [Staub de 28 cm](/produit/cocotte-staub-28-cm) ou l'[Overmont de 28 cm](/produit/cocotte-fonte-emaillee-28-cm) offre la même inertie sans entretien du métal nu. Le [tajine en argile](/produit/tajine-en-argile) cuit aussi lentement, mais il redoute les flammes vives. Pour les [brochettes](/produit/brochettes-en-metal), le même feu de bois sert de gril.",
+    conserver:
+      "La fonte nue rouille si elle reste humide. Après lavage, remettez la marmite quelques minutes sur le feu pour chasser l'eau, puis huilez légèrement l'intérieur encore tiède. Rangez-la dans un endroit sec, avec un papier absorbant glissé sous le couvercle pour capter l'humidité.",
+    remplacer:
+      "Sur un barbecue ou un brasero, une cocotte en fonte sans pieds posée sur une grille fait le même travail. En cuisine, un plat en fonte au four à 150 °C reproduit la cuisson lente et enveloppante. Gardez le principe des couches : la viande au fond, les légumes au-dessus.",
+    enCuisine:
+      "Au-delà du potjiekos, elle convient au [mafé de bœuf](/recette/mafe) cuit au feu de bois, au [kedjenou de poulet](/recette/kedjenou), qui mijote sans eau en secouant la marmite, ou au [chakalaka](/recette/chakalaka) sud-africain. Pour régler la cuisson d'une sauce sur les braises, relisez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "Pourquoi ne remue-t-on pas un potjiekos ?",
+        reponse:
+          "Chaque ingrédient cuit à son rythme dans sa propre couche : la viande au fond, les légumes plus fragiles au-dessus. Remuer mélangerait tout et écraserait les légumes.",
+      },
+      {
+        question: "Peut-on utiliser le potjie sur une cuisinière ?",
+        reponse:
+          "Ses pieds le rendent instable sur une plaque. Il est pensé pour les braises ou un réchaud de plein air.",
+      },
+    ],
+  },
+  "marmite-inox-13-litres": {
+    origine:
+      "Baumalu est une entreprise alsacienne fondée en 1971 à Baldenheim, dans le Bas-Rhin. Réputée pour ses ustensiles en cuivre, elle travaille aussi l'aluminium, la fonte émaillée et l'acier inoxydable. Ses marmites dites « traiteur » sont pensées pour les grandes quantités des cuisines collectives et des repas de famille.\n\nCelle-ci mesure 28 cm de diamètre pour 13,5 litres. Son fond est composé de trois couches : un cœur conducteur pris entre deux épaisseurs d'inox, qui diffuse la chaleur sur toute la surface au lieu de la concentrer au centre.",
+    choisir:
+      "C'est la plus grande marmite de la boutique, avec le [faitout Kamberg de 36 cm](/produit/faitout-fonte-aluminium-36-cm) et ses 13 litres. La différence tient à la forme : la Baumalu est haute et étroite, idéale pour les bouillons et le riz, qui ont besoin de profondeur ; le Kamberg est large et bas, mieux adapté aux sauces qui doivent réduire.\n\nL'inox ne réagit pas avec la tomate ni le citron, et il convient à l'induction, ce qui n'est pas le cas de la [marmite en aluminium type caldero](/produit/marmite-en-aluminium). Pour un usage quotidien à quatre, le [faitout en inox de 24 cm](/produit/faitout-inox-24-cm) sera plus maniable.",
+    conserver:
+      "L'inox supporte le lavage énergique. Des reflets bleutés ou des auréoles blanches peuvent apparaître après une forte chauffe ou une eau calcaire : un peu de vinaigre blanc sur une éponge les fait disparaître. Pleine, elle pèse lourd : posez-la sur le feu avant de la remplir d'eau.",
+    remplacer:
+      "Pour une grande tablée, deux marmites moyennes sur deux feux remplacent une grande, en partageant la sauce à la fin. Le [caldero IMUSA de 7 litres](/produit/caldero-aluminium-7-litres) suffit pour une dizaine de portions de riz. Pour les bouillons, une grande cocotte en fonte fait aussi l'affaire.",
+    enCuisine:
+      "Sa contenance accueille le [thiéboudienne](/recette/thieboudienne) des jours de fête, le [riz jollof](/recette/riz-jollof) pour une grande famille ou les paquets de [koki](/recette/koki), qui cuisent deux heures sur un lit de feuilles de bananier. Pour choisir le bon contenant selon la recette, voyez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "À quoi sert le trou du couvercle ?",
+        reponse:
+          "Il laisse s'échapper un filet de vapeur. Le couvercle ne se soulève pas sous la pression et le liquide déborde moins.",
+      },
+      {
+        question: "Les poignées chauffent-elles ?",
+        reponse:
+          "Elles sont en métal : utilisez des maniques pour déplacer la marmite après une longue cuisson.",
+      },
+    ],
+  },
+  "faitout-en-fonte-d-aluminium": {
+    origine:
+      "Le faitout doit son nom à sa polyvalence : une seule casserole large, à deux anses, capable de faire revenir, de mijoter et de bouillir. En Afrique de l'Ouest et du Centre, c'est la forme qui accueille les sauces du quotidien, celles que l'on prépare en grande quantité pour toute la maison.\n\nCe modèle est en fonte d'aluminium, c'est-à-dire en aluminium coulé dans un moule. Ce procédé donne des parois épaisses qui répartissent la chaleur, pour un poids bien moindre que la fonte de fer.",
+    choisir:
+      "Avec 28 cm de diamètre, il offre une large surface de fond : les oignons dorent sans s'entasser et la sauce réduit plus vite qu'en marmite haute. C'est un format adapté à une famille de quatre à six personnes.\n\nPour les grandes réunions, le [faitout Kamberg de 36 cm](/produit/faitout-fonte-aluminium-36-cm) contient 13 litres. Le [faitout en inox de 24 cm](/produit/faitout-inox-24-cm), sans revêtement, convient à ceux qui préfèrent un métal nu qui supporte les ustensiles métalliques. Pour les plats qui mijotent plusieurs heures, une cocotte en fonte de fer comme la [Staub](/produit/cocotte-staub-28-cm) garde encore mieux la chaleur.",
+    conserver:
+      "Évitez de le poser chaud sous l'eau froide, qui pourrait le voiler. Lavez-le à l'eau tiède avec une éponge douce, sans poudre abrasive. Si une sauce a attaché, laissez tremper avec un peu de liquide vaisselle : le fond se décolle tout seul. Pour remuer, des [spatules en bois](/produit/spatules-en-bois) ménagent le fond mieux qu'une cuillère en métal.",
+    remplacer:
+      "Une grande sauteuse profonde avec couvercle peut le remplacer pour les sauces. Une cocotte en fonte émaillée fait aussi l'affaire, avec une montée en chaleur plus lente : on fait alors revenir à feu moyen un peu plus longtemps. Une marmite haute convient aussi, mais la sauce y réduit moins vite.",
+    enCuisine:
+      "On y prépare le [romazava](/recette/romazava) malgache, la [sauce graine au poulet](/recette/sauce-graine), le [mafé de bœuf](/recette/mafe) ou le [ndolé aux crevettes](/recette/ndole). Pour réussir la texture des sauces à l'arachide, lisez [Comment épaissir une sauce arachide ?](/conseils/comment-epaissir-une-sauce-arachide), et pour comparer les matières, [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "Quelle différence entre fonte d'aluminium et fonte de fer ?",
+        reponse:
+          "La fonte d'aluminium chauffe plus vite et pèse moins lourd. La fonte de fer met plus de temps à chauffer mais garde la chaleur plus longtemps.",
+      },
+      {
+        question: "Peut-on y faire frire des beignets ?",
+        reponse:
+          "Pour une friture profonde, une marmite haute est plus sûre. Le faitout convient mieux aux cuissons en sauce.",
+      },
+    ],
+  },
+  "faitout-fonte-aluminium-36-cm": {
+    origine:
+      "Les grandes marmites larges sont au cœur des repas de fête en Afrique : baptêmes, mariages ou fins de ramadan réunissent des dizaines de convives autour d'un même plat. Ce faitout Kamberg reprend cette idée dans un format adapté aux cuisines européennes.\n\nIl est en fonte d'aluminium, avec un revêtement intérieur d'aspect pierre qui limite l'attache. Son diamètre de 36 cm et ses 13 litres en font l'ustensile de cuisson le plus large de la boutique. Ses poignées sont gainées de silicone et son couvercle en verre porte une soupape vapeur.",
+    choisir:
+      "Avant de le choisir, mesurez votre plus grand feu : un fond de 36 cm déborde largement d'un brûleur ordinaire, et la chaleur risque de se concentrer au centre. Il trouve sa place sur une grande zone d'induction ou un réchaud de forte puissance.\n\nPour une famille, le [faitout de 28 cm](/produit/faitout-en-fonte-d-aluminium) dans la même matière est plus simple à manier. Si vous cherchez la même contenance en forme haute, pour un bouillon ou du riz, la [marmite Baumalu de 13,5 litres](/produit/marmite-inox-13-litres) est plus étroite. Pour un riz en grande quantité avec croûte, préférez le [caldero de 7 litres](/produit/caldero-aluminium-7-litres).",
+    conserver:
+      "Le revêtement craint les ustensiles métalliques et les éponges abrasives : remuez avec une spatule en bois ou en silicone. Même s'il passe au lave-vaisselle, sa taille rend le lavage à la main souvent plus pratique. Pour le ranger, glissez un torchon entre la cuve et le couvercle afin de protéger le revêtement.",
+    remplacer:
+      "Deux faitouts plus petits sur deux feux permettent de préparer la même quantité. Pour un repas de fête, on peut aussi cuire la viande et la sauce séparément, puis tout réunir dans le plat de service au dernier moment. Un traiteur ou une salle des fêtes prête parfois ses grandes marmites.",
+    enCuisine:
+      "Il est à l'aise avec les sauces des grandes tablées : [mafé de bœuf](/recette/mafe), [poulet à la moambé](/recette/moambe), [sauce graine](/recette/sauce-graine) ou [soupe egusi](/recette/soupe-egusi). Pour une sauce à l'arachide qui reste onctueuse en grande quantité, lisez [Comment épaissir une sauce arachide ?](/conseils/comment-epaissir-une-sauce-arachide).",
+    faq: [
+      {
+        question: "Combien de personnes peut-on servir avec 13 litres ?",
+        reponse:
+          "Une sauce remplie aux deux tiers donne largement de quoi nourrir une quinzaine de convives, accompagnée de riz ou de foufou.",
+      },
+      {
+        question: "Fonctionne-t-il sur induction ?",
+        reponse:
+          "Oui, la fiche du fabricant indique qu'il convient à tous les feux, induction comprise.",
+      },
+    ],
+  },
 };
