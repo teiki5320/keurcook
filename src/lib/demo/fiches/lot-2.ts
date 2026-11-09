@@ -26,9 +26,9 @@
  *   - plateau-rond-bambou-40-cm — Plateau de service rond en bambou 40 cm (5five)
  *   - bols-manguier-lot-de-3 — Lot de 3 bols ronds en bois de manguier (Samhita)
  *   - bols-noix-de-coco-lot-de-2 — Lot de 2 bols en noix de coco avec cuillères (Jungle Culture)
- *   - verres-a-the — Verres à thé facettés 210 ml (lot de 6)
+ *   - verres-a-the — Verres à thé facettés à anse 210 ml (lot de 6)
  *   - verres-a-the-et-soucoupes-pasabahce — Lot de 6 verres à thé et 6 soucoupes Aurora (Pasabahce)
- *   - theiere-a-ataya — Théière à ataya inox 1,2 L
+ *   - theiere-a-ataya — Théière à ataya inox 1 L (Ibili El Yadida)
  *   - bouilloire-emaillee — Bouilloire émaillée 2,4 L
  */
 import type { ProductDetail } from "../../types";
@@ -641,9 +641,9 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
   },
   "theiere-a-ataya": {
     origine:
-      "La théière ventrue à long bec vient de la tradition maghrébine du thé vert, passée en Mauritanie puis au Sénégal, en Gambie et au Mali. Au Sénégal, elle est au cœur de l'ataya, le thé que l'on prépare lentement sur un petit fourneau à charbon, entre amis ou en famille, après le repas ou pendant les longues heures de la journée.\n\nCette version en inox de 1,2 litre peut aller directement sur le feu. On y fait réellement bouillir le thé, ce qui le distingue d'une théière à infuser.",
+      "La théière ventrue à long bec vient de la tradition maghrébine du thé vert, passée en Mauritanie puis au Sénégal, en Gambie et au Mali. Au Sénégal, elle est au cœur de l'ataya, le thé que l'on prépare lentement sur un petit fourneau à charbon, entre amis ou en famille, après le repas ou pendant les longues heures de la journée.\n\nCe modèle El Yadida de la marque Ibili, en inox, contient 1 litre ; le fabricant le donne compatible avec le gaz, les plaques électriques et la vitrocéramique. On y fait réellement bouillir le thé, ce qui le distingue d'une théière à infuser.",
     choisir:
-      "Le bec allongé est le critère principal : plus il est fin et long, plus le jet est précis quand on sert de haut. Avec 1,2 litre, cette théière permet un service pour un groupe. L'inox résiste mieux aux chocs et à la flamme directe que la porcelaine ou l'émail. Pour chauffer l'eau à côté, la [bouilloire émaillée](/produit/bouilloire-emaillee) est la compagne habituelle de la théière, et les [verres à thé facettés](/produit/verres-a-the) complètent le service.",
+      "Le bec allongé est le critère principal : plus il est fin et long, plus le jet est précis quand on sert de haut. Avec 1 litre, cette théière sert quatre à six petits verres par tournée. L'inox résiste mieux aux chocs et à la flamme directe que la porcelaine ou l'émail. Pour chauffer l'eau à côté, la [bouilloire émaillée](/produit/bouilloire-emaillee) est la compagne habituelle de la théière, et les [verres à thé facettés](/produit/verres-a-the) complètent le service.",
     conserver:
       "Les feuilles de thé gunpowder et le sucre laissent un dépôt brun à l'intérieur. Videz la théière dès la fin du dernier service et rincez-la à l'eau chaude. Une fois par mois, faites bouillir de l'eau additionnée de bicarbonate pour décoller le tanin, puis rincez abondamment. Rangez-la couvercle posé de travers, pour que l'air circule.",
     remplacer:
@@ -654,7 +654,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       {
         question: "Peut-on utiliser cette théière sur une plaque à induction ?",
         reponse:
-          "Cela dépend du fond de la théière : vérifiez avec un aimant. S'il accroche, le fond est compatible ; sinon, utilisez le gaz ou une plaque classique.",
+          "Le fabricant cite le gaz, les plaques électriques et la vitrocéramique, mais pas l'induction. Testez le fond avec un aimant : s'il n'accroche pas, gardez-la pour le gaz ou une plaque classique.",
       },
       {
         question: "Faut-il de la menthe dans l'ataya ?",

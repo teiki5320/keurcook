@@ -5,7 +5,7 @@ date: 2026-12-07
 theme: ustensiles
 resume: Nettoyez les feuilles, assouplissez-les à la flamme ou à l'eau chaude, retirez la nervure centrale, puis pliez-les en papillote bien fermée. Elles se cuisent à la vapeur, au four ou sur la braise.
 recettes: koki, liboke-de-poisson, luwombo
-produits: feuilles-de-bananier-fraiches
+produits: couscoussier
 image: /conseils/cuisiner-avec-feuilles-de-bananier.webp
 imageAlt: Des papillotes de feuilles de bananier ficelées posées sur une grille au-dessus des braises.
 imagePrompt: Photographie culinaire, papillotes vertes en feuilles de bananier ficelées avec de la ficelle de cuisine, posées sur une grille au-dessus de braises rougeoyantes, légère fumée, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.

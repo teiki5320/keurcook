@@ -416,7 +416,7 @@ const seeds: ProductSeed[] = [
     shortDescription: "Feuilles de sorgho séchées qui donnent au waakye ghanéen sa couleur brun-rouge caractéristique.",
     description:
       "Au Ghana, le waakye, un plat de riz et de haricots, cuit avec des feuilles de sorgho séchées. Elles lui donnent sa couleur brun-rouge caractéristique et un léger parfum.\n\nLes feuilles ne se mangent pas : on les retire avant de servir. Le waakye s'accompagne de sauce pimentée, d'œufs, de gari ou de spaghettis.",
-    originCountry: "Ghana",
+    originCountry: "Bénin",
     originRegion: null,
     producer: null,
     composition: "Feuilles de sorgho séchées.",
@@ -513,7 +513,7 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "attieke-sec": { asin: "B09239KJ74", label: "3 × 500 g", priceCents: 3140 },
   "couscous-de-mil": { asin: "B0DWKQHXLN", label: "500 g", priceCents: 990 },
   "farine-de-teff": { asin: "B0C1TBB24S", label: "1 kg", priceCents: 2496 },
-  "poudre-de-baobab": { asin: "B06Y3L4CP1", label: "1 kg", priceCents: 3399 },
+  "poudre-de-baobab": { asin: "B06Y3L4CP1", label: "500 g", priceCents: 2199 },
   "farine-de-foufou": { asin: "B0GBPVP3XM", label: "300 g", priceCents: 1290, name: "Farine de manioc pour foufou" },
   "feuilles-de-ndole": { asin: "B0FQQXJ23P", label: "100 g", priceCents: 1490 },
   "feuilles-de-manioc": { asin: "B092379XP9", label: "3 × 420 g", priceCents: 3299, name: "Feuilles de manioc pilées (pondu, ravitoto)" },

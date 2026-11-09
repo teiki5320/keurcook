@@ -268,7 +268,7 @@ const tops: Top10[] = [
       {
         product: "mortier-en-granit",
         pourquoi:
-          "Lourd et non poreux, ce mortier en granit de 14 cm écrase les aromates frais sans glisser. On y prépare la base ail-gingembre-piment des marinades, les pâtes de piment frais ou les mélanges d'épices en graines. Il se rince à l'eau chaude et sèche à l'air.",
+          "Lourd et non poreux, ce mortier en granit de 13 cm écrase les aromates frais sans glisser. On y prépare la base ail-gingembre-piment des marinades, les pâtes de piment frais ou les mélanges d'épices en graines. Il se rince à l'eau chaude et sèche à l'air.",
         recettes: ["soupe-egusi", "eru", "liboke-de-poisson", "pilau", "romazava", "ravitoto", "cafe-touba", "pepper-soup", "mbongo-tchobi"],
         articles: ["mortier-bois-ou-pierre"],
       },
@@ -922,13 +922,13 @@ const tops: Top10[] = [
       {
         product: "cafe-de-tanzanie",
         pourquoi:
-          "La Tanzanie cultive le café sur les pentes de ses montagnes, notamment autour du Kilimandjaro. Ses cafés sont vifs et équilibrés, avec un goût fruité. En grains, ils se moulent juste avant la préparation et conviennent bien au filtre et à la cafetière à piston.",
+          "La Tanzanie cultive le café sur les pentes de ses montagnes, notamment autour du Kilimandjaro. Celui-ci, torréfié en douceur, donne une tasse fruitée et peu acide. En grains, ils se moulent juste avant la préparation et conviennent bien au filtre et à la cafetière à piston.",
         recettes: [],
       },
       {
         product: "cafe-du-rwanda",
         pourquoi:
-          "Au Rwanda, le café pousse sur les collines, en altitude, et est cueilli par de petits producteurs. Il offre une tasse douce, fruitée et sucrée. Il donne une version plus ronde de notre kahawa chungu, et se prête à toutes les méthodes, du filtre à l'expresso.",
+          "Au Rwanda, le café pousse sur les collines, en altitude, et est cueilli par de petits producteurs. Celui-ci, issu d'une seule ferme près du lac Kivu, donne une tasse corsée aux notes de chocolat amer et de mandarine. Il convient à notre kahawa chungu, et se prête à toutes les méthodes, du filtre à l'expresso.",
         recettes: ["kahawa-chungu"],
         articles: ["cafes-ethiopie-kenya-rwanda"],
       },
@@ -1065,7 +1065,7 @@ const tops: Top10[] = [
       {
         product: "theiere-a-ataya",
         pourquoi:
-          "La théière de l'ataya : en inox, de 1,2 litre, avec une forme ventrue et un long bec qui permet de verser le thé de haut pour former la mousse. Elle se pose directement sur le feu. Notre recette et notre article expliquent comment préparer l'ataya en trois tournées.",
+          "La théière de l'ataya : en inox, d'un litre, avec une forme ventrue et un long bec qui permet de verser le thé de haut pour former la mousse. Le fabricant la donne compatible avec le gaz, les plaques électriques et la vitrocéramique. Notre recette et notre article expliquent comment préparer l'ataya en trois tournées.",
         recettes: ["ataya"],
         articles: ["comment-preparer-l-ataya"],
       },
