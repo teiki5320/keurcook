@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Politique de confidentialité" path="/confidentialite" updated="28 octobre 2026">
+    <LegalPage title="Politique de confidentialité" path="/confidentialite" updated="5 novembre 2026">
       <p>
         {legalConfig.companyName} (« nous ») attache une grande importance à la protection de vos données personnelles,
         traitées conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
       <h2>Destinataires et sous-traitants</h2>
       <p>
         Vos données sont destinées à nos services internes et à nos sous-traitants techniques : hébergement du site et
-        acheminement des e-mails de contact ({legalConfig.hostName}), messagerie (IONOS). Pour la publicité, Google
+        acheminement des e-mails de contact ({legalConfig.hostName}), messagerie (IONOS), mesure d&apos;audience sans cookie (Cloudflare et Umami Cloud, Union européenne). Pour la publicité, Google
         Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irlande) et, avec votre accord, ses partenaires
         publicitaires, dont la liste figure dans le message de consentement. Lorsque des données sont transférées hors
         de l&apos;Union européenne (Cloudflare et Google, États-Unis), ce transfert est encadré par le cadre de

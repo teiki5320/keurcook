@@ -7,7 +7,7 @@ import { demoProducts } from "./catalog";
  */
 const RELEVE = "2026-10-19";
 /** Mixeurs : notes relevées de nouveau le 28 octobre 2026, quand le hachoir Choppeo (indisponible) a été remplacé. */
-const RELEVE_MIXEURS = "2026-10-28";
+const RELEVE_MIXEURS = "2026-11-09";
 
 /**
  * Introduction des onglets classés selon la note des acheteurs ; le n° 1 est nommé à la suite.
@@ -467,16 +467,10 @@ const tops: Top10[] = [
     description:
       "Blenders de 2000 à 800 W, robot, mixeur plongeant et hachoir : notre top 10 des mixeurs pour les sauces, la pâte d'arachide et les jus de la cuisine africaine.",
     intro: introNote("dix mixeurs", false, undefined, RELEVE_MIXEURS),
-    updated: "2026-10-28",
+    updated: "2026-11-09",
     rankBy: "note-acheteurs",
     classementLe: RELEVE_MIXEURS,
     items: [
-      {
-        product: "blender-ninja-2-en-1",
-        pourquoi:
-          "Ce Ninja de 1200 W associe un pichet de 2,1 litres et un gobelet de 700 ml. Ses programmes « hacher » et « réduire en purée » conviennent aux oignons et au piment comme aux bases de sauce. Le gobelet sert pour un jus de gingembre individuel.",
-        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
-      },
       {
         product: "mixeur-plongeant-moulinex-daily-chef",
         pourquoi:
@@ -487,6 +481,12 @@ const tops: Top10[] = [
         product: "hachoir-h-koenig-leo8",
         pourquoi:
           "Le moins puissant de notre sélection, mais le plus simple pour hacher : 320 W et un bol en verre gradué d'un litre. Par impulsions, il garde des morceaux d'oignon ou de piment ; plus longtemps, il donne une purée d'ail et de gingembre. Il se range facilement.",
+        recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
+      },
+      {
+        product: "blender-moulinex-perfectmix",
+        pourquoi:
+          "Le Moulinex PerfectMix Plus, 1200 W, a un bol en verre de 2 litres et des lames Powelix pour un mixage rapide. Son programme de nettoyage automatique évite de démonter les lames après une sauce au piment. Une valeur sûre pour les mixages du quotidien.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
@@ -502,9 +502,9 @@ const tops: Top10[] = [
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
-        product: "blender-moulinex-perfectmix",
+        product: "blender-ninja-detect-3-en-1",
         pourquoi:
-          "Le Moulinex PerfectMix Plus, 1200 W, a un bol en verre de 2 litres et des lames Powelix pour un mixage rapide. Son programme de nettoyage automatique évite de démonter les lames après une sauce au piment. Une valeur sûre pour les mixages du quotidien.",
+          "Ce Ninja Detect de 1200 W fait aussi robot. Son pichet de 2 litres mixe les bases de sauce et les jus, et son bol de 1,8 litre hache les oignons et le piment sans les réduire en purée. Le gobelet de 680 ml sert pour un jus de gingembre individuel.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
@@ -514,9 +514,9 @@ const tops: Top10[] = [
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
-        product: "robot-moulinex-easy-force",
+        product: "blender-philips-5000",
         pourquoi:
-          "Plus qu'un blender : ce robot Moulinex de 800 W hache, émince, râpe, pétrit et mixe grâce à six accessoires. Il prépare en quelques secondes les oignons du yassa ou les légumes d'une sauce. Son bol de 3 litres range la plupart des accessoires.",
+          "Simple et peu encombrant, ce Philips de 1000 W fait circuler les ingrédients grâce à son bol nervuré pour une texture lisse. Le bol contient 2 litres, dont 1,5 litre utile. Il suffit pour les sauces et les jus d'une famille.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
@@ -526,9 +526,9 @@ const tops: Top10[] = [
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
       {
-        product: "blender-philips-5000",
+        product: "robot-moulinex-easy-force",
         pourquoi:
-          "Simple et peu encombrant, ce Philips de 1000 W fait circuler les ingrédients grâce à son bol nervuré pour une texture lisse. Le bol contient 2 litres, dont 1,5 litre utile. Il suffit pour les sauces et les jus d'une famille.",
+          "Plus qu'un blender : ce robot Moulinex de 800 W hache, émince, râpe, pétrit et mixe grâce à six accessoires. Il prépare en quelques secondes les oignons du yassa ou les légumes d'une sauce. Son bol de 3 litres range la plupart des accessoires.",
         recettes: ["ndole", "poisson-braise-attieke", "thieboudienne", "kelewele", "riz-jollof", "soupe-egusi", "fufu-light-soup", "poulet-dg", "koki", "liboke-de-poisson", "misir-wat", "jus-de-gingembre", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi"],
       },
     ],

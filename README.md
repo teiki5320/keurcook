@@ -1,6 +1,6 @@
 # Keur Cook — recettes africaines & produits rares
 
-Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 127 produits africains rares** en 9 gammes des pages **Top 10** (10 classements de produits) et des **Actus de la cuisine africaine** lues en direct depuis la veille actus. Le site ne vend rien lui-même : les boutons « Voir sur Amazon » mènent à Amazon.fr (programme Partenaires).
+Site en français de **recettes de plats africains** (58 recettes, 16 pays), avec une rubrique **Conseils** (trois articles par semaine : lundi, mercredi, vendredi), une **boutique de 126 produits africains rares** en 9 gammes des pages **Top 10** (10 classements de produits) et des **Actus de la cuisine africaine** lues en direct depuis la veille actus. Le site ne vend rien lui-même : les boutons « Voir sur Amazon » mènent à Amazon.fr (programme Partenaires).
 
 - **Site** : https://keurcook.com (`www.keurcook.com` y redirige).
 - **Éditeur** : ALOHASH (SAS). Contact : keurcook@toakeur.com.
@@ -30,7 +30,7 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 
 ### Boutique et Amazon Partenaires
 
-- 127 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
+- 126 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
 - Liens construits par `amazonUrl(asin, emplacement)` (`src/lib/amazon.ts`) à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) ; le code de suivi est choisi dans une table unique, `CODES_SUIVI`, par emplacement (recette, conseil, top, fiche, rubrique = boutique et pays). Depuis le 28 octobre 2026, tous les emplacements utilisent encore le tag partenaire `keurcookfr-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer) ; un code par emplacement pourra y être écrit quand il sera créé dans Amazon Partenaires. `tests/amazon.test.ts` et `tests/sortie/` vérifient que chaque lien porte un code de la table. Ce tag vient du nouveau compte Amazon Partenaires ouvert le 18 octobre 2026 (l'ancien compte a été fermé par Amazon).
 - Aucun prix affiché sur le site : seul le prix d'Amazon fait foi.
 - **Disponibilité** : `npm run verifier-produits` (sur le Mac, pas sur GitHub ; `-- --ecrire` pour enregistrer, `--lot 30` pour un petit lot) ouvre chaque fiche Amazon.fr dans Chrome et note dans `src/lib/demo/verifications-amazon.json` la date et l'état (bouton « Ajouter au panier » présent ou non) ; une offre indisponible n'est plus affichée et revient d'elle-même quand elle redevient disponible. Premier passage sur tout le catalogue le 28 octobre 2026.

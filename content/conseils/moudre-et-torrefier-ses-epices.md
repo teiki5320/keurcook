@@ -5,7 +5,7 @@ date: 2026-12-18
 theme: epices
 resume: Faites griller les épices entières à sec dans une poêle, à feu doux, jusqu'à ce qu'elles embaument, laissez-les refroidir, puis moulez-les au mortier ou au moulin juste avant de les utiliser.
 recettes: cafe-touba, misir-wat, shiro, suya
-produits: poivre-de-selim, berbere, yaji-suya
+produits: poivre-de-selim, berbere
 image: /conseils/moudre-et-torrefier-ses-epices.webp
 imageAlt: Des épices entières qui grillent dans une poêle en fonte, à côté d'un mortier en bois.
 imagePrompt: Photographie culinaire, poêle en fonte contenant des graines de coriandre, des grains de poivre et des gousses de poivre de Selim en train de griller, mortier et pilon en bois à côté avec des épices moulues, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -33,7 +33,7 @@ Attendez que les épices soient bien froides avant de les moudre, sinon la poudr
 
 ## Dans la cuisine africaine
 
-On torréfie de la même façon le café et le [poivre de Selim](/produit/poivre-de-selim) pour le [café Touba](/recette/cafe-touba). Les mélanges prêts à l'emploi comme le [berbéré](/produit/berbere), indispensable au [misir wat](/recette/misir-wat) et au [shiro](/recette/shiro), gagnent à être réchauffés quelques instants dans l'huile chaude en début de cuisson : leur parfum s'ouvre de la même manière. Le [yaji](/produit/yaji-suya), lui, s'utilise plutôt en enrobage sur la viande, comme dans le [suya](/recette/suya).
+On torréfie de la même façon le café et le [poivre de Selim](/produit/poivre-de-selim) pour le [café Touba](/recette/cafe-touba). Les mélanges prêts à l'emploi comme le [berbéré](/produit/berbere), indispensable au [misir wat](/recette/misir-wat) et au [shiro](/recette/shiro), gagnent à être réchauffés quelques instants dans l'huile chaude en début de cuisson : leur parfum s'ouvre de la même manière. Le [yaji](/conseils/quest-ce-que-le-yaji), lui, s'utilise plutôt en enrobage sur la viande, comme dans le [suya](/recette/suya).
 
 ## Conserver
 

@@ -1536,7 +1536,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Utiliser le programme « réduire en purée » pour les bases de sauce, « hacher » pour les oignons et le piment.",
     conservation: null,
     tags: ["blender", "1200 W"],
-    amazon: { asin: "B08CRTKLX4", label: "1200 W, 2,1 L", priceCents: 10999 },
+    // Masqué le 09/11/2026 : B08CRTKLX4 indisponible sur Amazon.fr ; remplacé par le Ninja Detect 3-en-1 (fin de liste).
+    amazon: null,
   },
   {
     slug: "blender-philips-5000",
@@ -1742,5 +1743,23 @@ export const nouveauxProduits: NouveauProduit[] = [
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["pois chiches", "shiro", "Éthiopie"],
     amazon: { asin: "B00OHZ3K38", label: "500 g", priceCents: 335 },
+  },
+  {
+    // Ajouté le 09/11/2026 à la place du blender Ninja 2-en-1 (B08CRTKLX4, indisponible) dans le Top 10 des mixeurs ;
+    // fiche vérifiée le 09/11/2026 sur Amazon.fr (bouton d'achat présent, 4,4/5 sur 671 évaluations).
+    slug: "blender-ninja-detect-3-en-1",
+    seoTitle: "Blender Ninja Detect 3-en-1 1200 W",
+    name: "Blender Detect 3-en-1 1200 W, pichet 2 L, bol et gobelet (Ninja)",
+    category: "ustensiles",
+    shortDescription: "Un blender de 1200 W qui fait aussi robot et mixeur individuel : un pichet de 2 litres, un bol de 1,8 litre et un gobelet de 680 ml.",
+    description: "Ce blender Ninja Detect de 1200 W réunit trois appareils : un pichet de 2 litres (1,9 litre de liquide au plus) pour les sauces et les jus, un bol de 1,8 litre avec ses lames pour hacher, trancher ou pétrir, et un gobelet de 680 ml pour une portion.\n\nSa technologie BlendSense ajuste la vitesse et la durée selon le contenu ; un cadran donne aussi accès à 10 vitesses et à des programmes préréglés.",
+    originCountry: null,
+    originRegion: null,
+    composition: null,
+    allergens: [],
+    usageTips: "Utiliser le pichet pour les bases de sauce tomate-oignon-piment, le bol pour hacher les oignons sans les réduire en purée, et le gobelet pour un jus de gingembre individuel.",
+    conservation: null,
+    tags: ["blender", "1200 W", "robot"],
+    amazon: { asin: "B0D8QQ2LY5", label: "1200 W, 2 L", priceCents: 23000 },
   },
 ];

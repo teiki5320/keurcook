@@ -499,13 +499,14 @@ const seeds: ProductSeed[] = [
  * 28 octobre 2026 : crevettes séchées et farine de plantain remplacées ; hachoir Choppeo remplacé par le H.Koenig LEO8 ;
  * réchaud jiko masqué (indisponibles). La disponibilité est ensuite vérifiée par `npm run verifier-produits`
  * (état et date de vérification dans src/lib/demo/verifications-amazon.json).
+ * 9 novembre 2026 : yaji (B0CTTM79ZR, 180 g, 24,99 €) masqué, indisponible sur Amazon.fr sans équivalent bien noté ;
+ * blender Ninja 2-en-1 remplacé par le Ninja Detect 3-en-1 (catalog-nouveautes.ts).
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
   "poivre-de-penja": { asin: "B000PBXHBS", label: "70 g", priceCents: 2105 },
   soumbala: { asin: "B0CQKHMT2Y", label: "50 g", priceCents: 899 },
   berbere: { asin: "B0B576RTWD", label: "65 g", priceCents: 850 },
-  "yaji-suya": { asin: "B0CTTM79ZR", label: "180 g", priceCents: 2499 },
   "poivre-de-selim": { asin: "B0FGDXL99W", label: "50 g", priceCents: 999 },
   "graines-d-egusi": { asin: "B0DLV721PS", label: "50 g", priceCents: 899, name: "Egusi moulu (pistache africaine)" },
   fonio: { asin: "B0C78LFHJS", label: "1 kg", priceCents: 990 },

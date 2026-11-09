@@ -9,7 +9,7 @@ Mis à jour le 9 novembre 2026. Compagnon de INFRA.md.
 - **Contenu** :
   - 58 recettes de 16 pays (Afrique de l'Ouest, centrale, de l'Est, australe et Madagascar), dont six thés, cafés et infusions (ataya, kinkeliba, chai kényan, rooibos glacé, buna, kahawa chungu) depuis le 19 octobre 2026, avec histoire du plat, ingrédients, étapes, astuces et valeurs nutritionnelles estimées ; une section « La cuisine de … » sur chaque page pays ;
   - rubrique « Conseils » : 68 articles, dont 46 publiés et 22 programmés, trois par semaine (lundi, mercredi, vendredi) jusqu'au 28 décembre 2026 (`content/conseils/`, `docs/CONSEILS.md`, `docs/CONSEILS-CALENDRIER.md`) ;
-  - boutique de 127 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles (dont mortiers, marmites, mixeurs et objets de service), Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon ;
+  - boutique de 126 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles (dont mortiers, marmites, mixeurs et objets de service), Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon ;
   - « Actus de la cuisine africaine » (depuis le 27 octobre 2026) : page `/actus` (20 actus), bloc de 4 actus sur l'accueil et 3 actus du pays sur chaque page pays, mis à jour 2 fois par jour (12 h et 19 h) par la veille actus ; chaque actu est résumée par nous, avec le lien vers sa source et le crédit de l'image ; depuis le 28 octobre 2026, toucher une actu ouvre son article complet (300 à 450 mots) sur sa propre page du site (`/actus/<adresse>`, trouvable par Google) ; jamais d'actu santé ni de vocabulaire de vente ;
   - « Top 10 » (depuis le 19 octobre 2026) : 10 classements de produits (ustensiles, ingrédients pour débuter, mortiers, marmites, mixeurs, épices, farines, livres, thés et cafés, service et thé), selon la note moyenne des acheteurs sur Amazon.fr, chacun relié aux recettes concernées.
 - **Lien recettes → boutique** : chaque ingrédient disponible en boutique est signalé « Produit rare » dans la recette, avec un bouton d'achat Amazon ; chaque fiche produit liste les recettes qui l'utilisent.
@@ -27,7 +27,7 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Aucun prix
 
 ## Rémunération par phases
 
-- [fait] **Aujourd'hui** : affiliation Amazon sur 127 produits et 10 Top 10, AdSense en place mais examen refusé le 31 octobre (aucune annonce), audience mesurée depuis le 13 octobre (Umami en essai depuis le 5 novembre)
+- [fait] **Aujourd'hui** : affiliation Amazon sur 126 produits et 10 Top 10, AdSense en place mais examen refusé le 31 octobre (aucune annonce), audience mesurée depuis le 13 octobre (Umami en essai depuis le 5 novembre)
 - [en cours] **Faire valider AdSense** : corriger le « contenu à faible valeur » signalé le 31 octobre puis redemander l'examen
 - **Mesurer** : lire dans Cloudflare Web Analytics et Umami quelles pages attirent et rapportent
 - **Fidéliser** : newsletter « la recette de la semaine », outil à choisir
