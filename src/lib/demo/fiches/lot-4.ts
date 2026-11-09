@@ -1105,4 +1105,28 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "tajine-en-argile": {
+    origine:
+      "Le tajine désigne à la fois un plat de terre et le mijoté que l'on y prépare. Le principe est resté le même depuis des siècles : un plat rond et peu profond, coiffé d'un haut couvercle conique. La vapeur monte, se refroidit contre les parois du cône et retombe en gouttes sur les aliments, qui cuisent longtemps dans très peu de liquide.\n\nAu Maroc, en Algérie et en Tunisie, les tajines de cuisson sont façonnés dans une argile tournée puis cuite au four de potier. Ceux qui sont laissés bruts, sans émail, supportent mieux la chaleur du feu ; les modèles très décorés servent plutôt à présenter les plats à table.",
+    choisir:
+      "Avec 30 cm de diamètre, ce tajine convient à un repas pour quatre à six personnes. Pour savoir s'il se pose sur le feu, regardez l'intérieur : une terre nue ou simplement vernissée est faite pour cuire, une peinture décorative épaisse signale un tajine de service.\n\nComparé à la [cocotte en fonte émaillée](/produit/cocotte-fonte-emaillee-28-cm), il demande plus de précautions mais donne une cuisson plus douce et une présentation spectaculaire. La [marmite potjie](/produit/marmite-potjie) en fonte, à trois pieds, se pose directement sur les braises, ce que l'argile supporte mal.",
+    conserver:
+      "L'argile est poreuse : elle boit l'eau et les odeurs. Lavez le tajine à l'eau chaude, avec une brosse douce, sans le laisser tremper longtemps. Avant de le ranger, laissez sécher séparément le plat et le couvercle à l'air libre, sinon une odeur de moisi peut apparaître. Une fêlure qui traverse la terre rend le plat inutilisable sur le feu.",
+    remplacer:
+      "Une cocotte en fonte à couvercle lourd, utilisée à feu très doux, donne un mijoté proche, avec moins d'évaporation que dans une casserole. Pour garder la cuisson à l'étouffée, on peut aussi poser une feuille de papier sulfurisé directement sur les aliments sous le couvercle.",
+    enCuisine:
+      "Le tajine se prête aux mijotés lents, comme le [kedjenou de poulet](/recette/kedjenou) ivoirien, traditionnellement cuit à l'étouffée dans un canari en terre. Côté épices, le [ras el hanout](/produit/ras-el-hanout) et les [citrons beldi confits](/produit/citrons-beldi-confits) sont ses compagnons naturels. Pour choisir le bon récipient selon la recette, lisez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
+    faq: [
+      {
+        question: "Peut-on poser un tajine en argile sur une plaque électrique ?",
+        reponse:
+          "Mieux vaut glisser un diffuseur de chaleur entre la plaque et le plat, et chauffer progressivement. Sur l'induction, l'argile ne chauffe pas sans disque adapté.",
+      },
+      {
+        question: "Pourquoi le couvercle du tajine est-il conique ?",
+        reponse:
+          "La forme en cône fait condenser la vapeur, qui retombe sur les aliments. On cuit ainsi avec très peu d'eau, en gardant les jus et les parfums.",
+      },
+    ],
+  },
 };
