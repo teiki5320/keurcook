@@ -76,7 +76,9 @@ Chaque partie présente : 50 mots au moins. Ne pas redire `country-cuisine.ts` (
 3. **Comparer aux produits voisins** de la boutique, avec des liens `/produit/…` : c'est ce qui rend la fiche utile.
 4. **Lier les recettes et conseils existants** qui utilisent le produit (le test vérifie chaque lien).
 5. **Aucune allégation de santé** : pas de « bienfaits », « vertus », « digestion », « santé », « soigner »,
-   « apaisant »… La liste complète est dans `src/lib/compliance.ts` (attention : « soigneusement » est refusé aussi).
+   « apaisant »… La liste complète est dans `src/lib/compliance.ts` (attention : « soigneusement » est refusé aussi). Depuis le 9 novembre 2026, les mots sont repérés en entier,
+   lettres accentuées comprises : « récurer » n'est plus pris pour « cure », et la « dépression » géographique
+   (« dépression du Danakil », « dépression de l'Afar ») est acceptée ; la dépression au sens médical reste refusée.
 6. **Pas de vocabulaire de vente** : acheter, achat, promo, meilleur prix, pas cher, en stock, livraison… et
    **jamais « disponible sur… »** (le site ne vend rien, aucun prix n'est affiché).
 7. **Chaque phrase est unique** : aucune phrase de 8 mots ou plus répétée d'une fiche à l'autre, ni reprise de la
