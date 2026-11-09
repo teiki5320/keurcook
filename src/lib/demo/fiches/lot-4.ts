@@ -385,4 +385,292 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       },
     ],
   },
+  "infusion-de-tamarin": {
+    origine:
+      "Le tamarinier, Tamarindus indica, est un grand arbre des savanes d'Afrique tropicale, d'où il a gagné l'Asie et l'Amérique. Son nom français vient de l'arabe tamr hindi, « datte de l'Inde », car les Arabes le tenaient pour un fruit venu d'Inde. Au Sénégal, on l'appelle dakhar en wolof.\n\nSes gousses brunes renferment une pulpe collante, à la fois sucrée et franchement acide. En Afrique de l'Ouest, elle sert à préparer des boissons de fête et apporte aussi de l'acidité à certaines sauces, à la manière d'un jus de citron. Le tamarin séché en sachets permet de retrouver ce goût sans avoir à dénoyauter ni à filtrer la pulpe.",
+    choisir:
+      "Parmi les boissons de la boutique, le tamarin se place du côté acidulé et fruité, comme les [fleurs de bissap](/produit/fleurs-de-bissap), qui donnent une boisson rouge plus florale, et le [pain de singe](/produit/poudre-de-baobab), dont on tire un jus crémeux. Le [kinkeliba](/produit/kinkeliba) et la [citronnelle séchée](/produit/citronnelle-sechee) sont plus herbacés, l'[infusion de gingembre](/produit/infusion-de-gingembre) plus piquante.\n\nLes sachets offrent un dosage régulier et une préparation sans résidus. Pour un goût plus intense et une boisson épaisse, la pulpe de tamarin en bloc, que l'on trouve dans les épiceries asiatiques, reste une alternative.",
+    conserver:
+      "Les sachets craignent l'humidité, qui ramollit le tamarin et lui fait perdre son parfum. Refermez la boîte après usage et rangez-la loin de la bouilloire ou de l'évier. Une carafe préparée se garde au réfrigérateur, couverte, et se boit de préférence le jour même, car son goût s'affadit ensuite.",
+    remplacer:
+      "La pulpe de tamarin en bloc, délayée dans l'eau chaude puis filtrée, donne une boisson plus dense. À défaut de tamarin, un jus de bissap légèrement sucré ou une citronnade au citron vert apportent une acidité comparable, sans le goût de fruit sec. En cuisine, un trait de citron remplace l'eau de tamarin dans les sauces.",
+    enCuisine:
+      "Au Burkina Faso, l'eau de tamarin peut acidifier la sauce du [tô et sauce gombo](/recette/to-sauce-gombo), à la place du citron. Pour une table de boissons, servez-la à côté du [jus de bissap](/recette/jus-de-bissap), du [jus de gingembre](/recette/jus-de-gingembre) et du [jus de bouye](/recette/jus-de-bouye). Le secret de la sauce qui file est expliqué dans [Comment réussir une sauce gombo qui file ?](/conseils/sauce-gombo-qui-file).",
+    faq: [
+      {
+        question: "Le tamarin est-il sucré ou acide ?",
+        reponse:
+          "Les deux à la fois. Sa pulpe mêle une note de fruit sec et une acidité marquée ; l'infusion s'adoucit avec un peu de sucre ou de miel.",
+      },
+      {
+        question: "Que signifie dakhar ?",
+        reponse:
+          "C'est le nom wolof du tamarinier et de son fruit. Au Sénégal, on parle aussi de jus de dakhar pour la boisson au tamarin.",
+      },
+    ],
+  },
+  "infusion-de-gingembre": {
+    origine:
+      "Le gingembre, Zingiber officinale, est originaire d'Asie du Sud-Est. Il a gagné l'Afrique par les routes commerciales anciennes et s'y cultive aujourd'hui largement : le Nigeria compte parmi les premiers producteurs mondiaux, avec une grande zone de culture dans le sud de l'État de Kaduna. On utilise le rhizome, cette tige souterraine noueuse que l'on appelle souvent racine.\n\nEn Afrique de l'Ouest, le gingembre se boit plus qu'il ne se mange. En Côte d'Ivoire, le gnamankoudji est un jus de gingembre frais râpé, pressé et sucré, souvent relevé d'ananas ou de citron. Séché et coupé en sachets, il se prête à une préparation plus rapide.",
+    choisir:
+      "Cette infusion est la plus piquante des boissons de la boutique. Le [bissap](/produit/fleurs-de-bissap) et le [tamarin](/produit/infusion-de-tamarin) misent sur l'acidité, la [citronnelle séchée](/produit/citronnelle-sechee) sur la fraîcheur ; le [thé noir à la cardamome](/produit/the-noir-du-kenya-cardamome) associe épice et théine.\n\nLe gingembre séché a un goût plus chaud et moins citronné que le frais. Pour un jus de fête bien relevé, le rhizome frais reste irremplaçable ; pour une tasse chaude en quelques minutes, les sachets sont plus pratiques.",
+    conserver:
+      "Comme toutes les plantes séchées, il perd son piquant à la lumière et à l'air. Gardez la boîte fermée dans un placard sec. Une infusion préparée se conserve au réfrigérateur dans une bouteille en verre bien bouchée ; consommez-la dans les deux jours pour garder son mordant.",
+    remplacer:
+      "Quelques rondelles de gingembre frais, frémies dix minutes dans l'eau, font une infusion plus vive. Le gingembre en poudre dépanne, mais il trouble la boisson. Pour une boisson chaude épicée sans gingembre, la cannelle et le clou de girofle donnent une chaleur différente, plus douce.",
+    enCuisine:
+      "Elle reprend la saveur du [jus de gingembre (gnamankoudji)](/recette/jus-de-gingembre), dont la recette complète est détaillée dans [Comment faire un jus de gingembre maison ?](/conseils/faire-un-jus-de-gingembre-maison). Le gingembre relève aussi le [chai kényan](/recette/chai-kenyan) et le [kahawa chungu](/recette/kahawa-chungu), le café épicé de la côte swahilie.",
+    faq: [
+      {
+        question: "Gingembre séché ou frais pour une boisson ?",
+        reponse:
+          "Le frais donne un goût plus vif et citronné, idéal pour les jus. Le séché, plus chaud et plus rond, convient bien aux infusions chaudes.",
+      },
+      {
+        question: "Qu'est-ce que le gnamankoudji ?",
+        reponse:
+          "C'est le jus de gingembre ivoirien, préparé avec du gingembre frais râpé, de l'eau et du sucre, souvent avec de l'ananas, du citron ou de la menthe.",
+      },
+    ],
+  },
+  "cafe-du-kivu": {
+    origine:
+      "Le lac Kivu s'étire entre la RD Congo et le Rwanda, à près de 1 500 mètres d'altitude, au pied de volcans actifs comme le Nyiragongo. Les caféiers arabica y ont été plantés à l'époque coloniale belge, sur les collines du Nord et du Sud-Kivu et sur l'île d'Idjwi. Les terres volcaniques, l'altitude et les pluies régulières conviennent particulièrement à cette espèce.\n\nLes guerres qui ont frappé l'est du pays ont longtemps désorganisé la filière. Depuis les années 2010, des coopératives ont relancé la culture et le lavage du café, et les cafés du Kivu reviennent dans les dégustations spécialisées.",
+    choisir:
+      "Le café du Kivu se rapproche de ses voisins des Grands Lacs, le [café du Rwanda](/produit/cafe-du-rwanda) et le [café du Burundi](/produit/cafe-du-burundi), avec qui il partage les mêmes paysages de collines. Il est plus rond et moins acide qu'un [café du Kenya](/produit/cafe-du-kenya), plus doux qu'un [Harrar](/produit/cafe-harrar) d'Éthiopie.\n\nC'est l'un des rares cafés moulus de la boutique, avec le [Moka Sidamo](/produit/cafe-moka-sidamo) : un choix pratique si vous n'avez pas de moulin. Les autres origines sont proposées en grains, plus longues à garder fraîches une fois le paquet ouvert.",
+    conserver:
+      "Le café moulu s'évente vite, car sa surface au contact de l'air est immense. Une fois le paquet entamé, chassez l'air avant de le refermer avec une pince, ou transvasez la mouture dans une boîte opaque et étanche. Évitez le réfrigérateur : les allers-retours créent de la condensation qui altère l'arôme.",
+    remplacer:
+      "Un café moulu du Rwanda ou du Burundi offre un profil très proche. À défaut, choisissez un arabica d'Amérique centrale, doux et peu acide. Si vous préparez un café éthiopien à la place, attendez-vous à une tasse plus florale et plus légère.",
+    enCuisine:
+      "Pour situer son goût parmi les grandes origines africaines, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda). Pour choisir entre grains et mouture, [Café en grains ou moulu : que choisir et comment le conserver ?](/conseils/cafe-en-grains-ou-moulu) répond à l'essentiel. La [bouilloire émaillée](/produit/bouilloire-emaillee) chauffe l'eau d'un café filtre.",
+    faq: [
+      {
+        question: "Le café du Kivu vient-il du Congo ou du Rwanda ?",
+        reponse:
+          "Le lac Kivu borde les deux pays. Ce café vient de la rive congolaise, dans l'est de la RD Congo ; le Rwanda produit lui aussi des cafés sur l'autre rive.",
+      },
+      {
+        question: "Peut-on préparer ce café moulu en expresso ?",
+        reponse:
+          "Sa mouture est prévue pour le filtre et la cafetière italienne. Pour l'expresso, il faudrait une mouture plus fine, donc plutôt des grains moulus sur place.",
+      },
+    ],
+  },
+  "cafe-vert-du-cameroun": {
+    origine:
+      "Le Cameroun cultive les deux grandes espèces de caféier : le robusta dans les régions de basse altitude, et l'arabica sur les hauts plateaux de l'Ouest et du Nord-Ouest. Le café vert est le grain tel qu'il sort de la plantation, débarrassé de sa pulpe et de sa parche puis séché, mais pas encore grillé. Il est dur, gris-vert et sent la céréale plus que le café.\n\nDans de nombreux foyers camerounais, on le torréfie encore à la poêle ou dans une marmite, en remuant longuement au-dessus du feu. Le grain vert sert aussi au café Touba sénégalais : il est grillé avec du poivre de Selim, le djar, avant d'être moulu.",
+    choisir:
+      "Le grain vert s'adresse à ceux qui veulent torréfier eux-mêmes et choisir la couleur de leur café. Pour un café prêt à moudre, le [café en grains du Cameroun (Bamoun)](/produit/cafe-du-cameroun) a déjà été torréfié. Pour le café Touba, associez-le au [poivre de Selim](/produit/poivre-de-selim), qui donne son parfum fumé.\n\nUn bon lot présente des grains de taille régulière, sans grains noirs, cassés ou piqués d'insectes. Ils doivent être bien secs et sans odeur de moisi.",
+    conserver:
+      "C'est la grande force du café vert : non torréfié, il se garde bien plus longtemps qu'un café grillé, à condition de rester au sec, au frais et à l'abri de la lumière, dans un sac en toile ou un bocal. Une fois torréfié, il redevient fragile : laissez-le dégazer quelques heures, puis gardez-le dans un contenant hermétique et consommez-le dans les semaines qui suivent.",
+    remplacer:
+      "Sans grains verts, un café torréfié clair, moulu au dernier moment, donne une tasse comparable. Pour le café Touba, on trouve aussi le mélange déjà grillé et moulu ; à défaut, un café robusta corsé mélangé à une pincée de poivre de Selim pilé s'en approche.",
+    enCuisine:
+      "Il sert à préparer le [café Touba](/recette/cafe-touba), dont l'histoire est racontée dans [Qu'est-ce que le café Touba et comment le préparer ?](/conseils/quest-ce-que-le-cafe-touba). La méthode à la poêle ou au four est détaillée dans [Comment torréfier du café vert à la maison ?](/conseils/torrefier-cafe-vert-maison), et le [mortier en granit](/produit/mortier-en-granit) peut concasser les grains grillés.",
+    faq: [
+      {
+        question: "Peut-on boire du café vert sans le torréfier ?",
+        reponse:
+          "On peut l'infuser, mais il n'a pas le goût du café : la torréfaction développe les arômes et la couleur. Pour un vrai café, il faut le griller.",
+      },
+      {
+        question: "Comment savoir quand la torréfaction est terminée ?",
+        reponse:
+          "Les grains craquent une première fois en gonflant, puis prennent une couleur brune. Arrêtez quand la teinte vous convient : plus le grain est foncé, plus le café est amer.",
+      },
+    ],
+  },
+  "cafe-moka-sidamo": {
+    origine:
+      "L'Éthiopie est le pays d'origine de l'arabica : le caféier y pousse encore à l'état sauvage dans les forêts du sud-ouest. C'est aussi le premier producteur de café du continent. Sidamo, au sud de la vallée du Rift, est l'une de ses grandes régions caféières ; elle tire son nom du peuple sidama, qui a obtenu en 2020 son propre État régional au sein de la fédération.\n\nLe mot « moka » rappelle le port de Mocha, au Yémen, par lequel les cafés de la mer Rouge ont été exportés pendant des siècles. Il désigne encore aujourd'hui, en France, les cafés d'Éthiopie et du Yémen. La plupart des caféiers de Sidamo sont cultivés par de petits paysans, à l'ombre d'autres arbres.",
+    choisir:
+      "Le Sidamo offre une tasse florale et fruitée, un peu plus ronde que le [Yirgacheffe](/produit/cafe-yirgacheffe), sa région voisine, plus léger et plus citronné. Le [Harrar](/produit/cafe-harrar), séché dans son fruit, est plus corsé et chocolaté. Parmi les cafés des autres pays, le [café du Kenya](/produit/cafe-du-kenya) se montre plus acide.\n\nCe Sidamo est vendu moulu, comme le [café du Kivu](/produit/cafe-du-kivu) : c'est la solution la plus simple si vous n'avez pas de moulin. Les autres cafés éthiopiens de la boutique sont en grains.",
+    conserver:
+      "La mouture d'un café floral perd ses notes délicates en premier. Gardez le paquet dans un placard sombre et tempéré, refermé aussitôt après usage, et prévoyez de le finir en deux à trois semaines après ouverture. Une boîte à café munie d'une valve ou d'un couvercle étanche fait très bien l'affaire.",
+    remplacer:
+      "Un autre café d'Éthiopie, Yirgacheffe ou Guji, garde l'esprit floral. Si vous préférez un café d'un autre pays, un arabica lavé du Rwanda donne une tasse douce et fruitée, moins parfumée. Évitez les robustas, trop amers pour remplacer un moka.",
+    enCuisine:
+      "Il convient à une cérémonie du café préparée à la maison, décrite dans [Comment se déroule la cérémonie du café éthiopienne ?](/conseils/ceremonie-du-cafe-ethiopienne) ; la recette du [buna, le café éthiopien](/recette/buna-cafe-ethiopien), en donne les étapes. Pour comparer les grandes origines, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda).",
+    faq: [
+      {
+        question: "Moka, est-ce une variété de café ?",
+        reponse:
+          "Non. Le mot vient du port yéménite de Mocha et désigne, par tradition, des cafés d'Éthiopie ou du Yémen. Il ne correspond ni à une variété ni à une cafetière.",
+      },
+      {
+        question: "Sidamo et Sidama, quelle différence ?",
+        reponse:
+          "C'est la même région. Sidama est le nom du peuple et de l'État régional ; Sidamo est la forme utilisée depuis longtemps dans le commerce du café.",
+      },
+    ],
+  },
+  "cafe-du-kenya": {
+    origine:
+      "Au Kenya, le café pousse sur les hauts plateaux volcaniques autour du mont Kenya, dans les comtés de Nyeri, Kirinyaga ou Murang'a, souvent entre 1 400 et 2 000 mètres. Les variétés les plus réputées, SL28 et SL34, ont été sélectionnées dans les années 1930 par les Scott Agricultural Laboratories, d'où leurs initiales.\n\nLe café kényan est presque toujours lavé : la pulpe est retirée, les grains fermentent dans l'eau, puis sèchent sur de grandes tables surélevées. Il est ensuite classé selon la taille des grains : AA pour les plus gros, AB pour les suivants, PB pour les caracolis, ces grains ronds nés seuls dans la cerise. Une bonne partie se vend chaque semaine aux enchères de Nairobi.",
+    choisir:
+      "C'est le plus vif des cafés de la boutique. Il partage l'altitude et le lavage avec le [café de Tanzanie](/produit/cafe-de-tanzanie), son voisin, plus équilibré. Le [café du Rwanda](/produit/cafe-du-rwanda) et le [café du Burundi](/produit/cafe-du-burundi) sont plus doux et plus sucrés ; les cafés d'Éthiopie, comme le [Yirgacheffe](/produit/cafe-yirgacheffe), plus floraux.\n\nSur un paquet kényan, la mention AA renseigne sur la taille, pas directement sur le goût. L'indication d'une région ou d'une coopérative est souvent un meilleur repère.",
+    conserver:
+      "En grains, il garde son acidité éclatante si vous le protégez de l'air. Choisissez un bocal opaque fermant bien, dans un placard loin du four. Ne moulez que pour une ou deux préparations : la mouture perd en quelques jours ce que le grain garde plusieurs semaines.",
+    remplacer:
+      "Un café de Tanzanie lavé est la solution la plus proche, un peu plus doux. Pour retrouver des notes de fruits rouges, un café du Burundi convient aussi. Le kahawa chungu, très épicé, se prépare sans difficulté avec un autre arabica corsé.",
+    enCuisine:
+      "Il sert au [kahawa chungu](/recette/kahawa-chungu), le café amer à la cardamome et au gingembre de la côte swahilie. Pour comprendre ce qui le distingue des cafés éthiopiens et rwandais, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda), puis [Café en grains ou moulu : que choisir et comment le conserver ?](/conseils/cafe-en-grains-ou-moulu).",
+    faq: [
+      {
+        question: "Que signifie AA sur un café du Kenya ?",
+        reponse:
+          "C'est une catégorie de taille : les grains AA sont les plus gros du tri kényan. La note ne garantit pas à elle seule la qualité de la tasse.",
+      },
+      {
+        question: "Pourquoi le café du Kenya est-il si acide ?",
+        reponse:
+          "L'altitude, les sols volcaniques, les variétés SL28 et SL34 et un lavage minutieux concourent à cette acidité vive, souvent comparée au cassis ou aux agrumes.",
+      },
+    ],
+  },
+  "cafe-harrar": {
+    origine:
+      "Harrar est le nom d'une région de café des hautes terres de l'est éthiopien, autour de la vieille ville fortifiée de Harar, inscrite au patrimoine mondial de l'UNESCO en 2006. Le café y est cultivé de longue date par de petits paysans, souvent sur des terrasses sèches. Il est presque toujours préparé « nature » : les cerises sèchent entières au soleil, et le grain s'imprègne du fruit.\n\nLe nom est protégé avec soin par l'Éthiopie. À partir de 2005, le pays a déposé les marques Harrar, Sidamo et Yirgacheffe dans de nombreux pays ; un accord signé en 2007 avec Starbucks a reconnu que ces noms appartiennent à l'Éthiopie.",
+    choisir:
+      "Le Harrar est le plus corsé des cafés éthiopiens de la boutique. Le [Yirgacheffe](/produit/cafe-yirgacheffe), lavé, est léger et floral ; le [Moka Sidamo](/produit/cafe-moka-sidamo) se situe entre les deux. Si vous aimez les cafés chocolatés, le [café du Cameroun (Bamoun)](/produit/cafe-du-cameroun) offre une autre voie, plus ronde et moins fruitée.\n\nLe séchage nature donne parfois des grains de couleur un peu irrégulière après torréfaction : c'est normal pour ce type de café et cela n'indique pas un défaut.",
+    conserver:
+      "Gardez les grains dans leur sachet à valve, bien roulé, ou dans un bocal opaque. Un café nature conserve longtemps ses notes de fruits secs, mais il craint lui aussi la chaleur et l'humidité. Ne le stockez pas près des épices : le grain capte facilement les odeurs voisines.",
+    remplacer:
+      "Un autre café éthiopien nature, comme un Guji ou un Sidamo nature, donne un profil fruité comparable, avec la même impression de confiture de fruits rouges. Pour retrouver le corps et le chocolat, un café du Cameroun ou du Brésil peut convenir, avec moins de fruit.",
+    enCuisine:
+      "Il s'accorde avec la [cérémonie du café éthiopienne](/conseils/ceremonie-du-cafe-ethiopienne), où l'on torréfie et moud les grains devant les invités ; la recette du [buna, le café éthiopien](/recette/buna-cafe-ethiopien) en donne la marche à suivre. Pour comparer avec d'autres origines, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda).",
+    faq: [
+      {
+        question: "Que veut dire café « nature » ?",
+        reponse:
+          "Les cerises de café sèchent entières, avec leur pulpe, avant qu'on en retire le grain. Ce séchage donne des notes plus fruitées et plus corsées qu'un café lavé.",
+      },
+      {
+        question: "Harrar ou Harar ?",
+        reponse:
+          "Harar est la ville, Harrar l'orthographe la plus courante sur les paquets de café de la région. Les deux renvoient au même terroir de l'est éthiopien.",
+      },
+    ],
+  },
+  "cafe-yirgacheffe": {
+    origine:
+      "Yirgacheffe est une petite ville du sud de l'Éthiopie, dans la zone Gedeo, entourée de collines couvertes de caféiers. Les paysans y cultivent de vieilles variétés locales, regroupées sous le nom d'« heirloom », sur des parcelles minuscules, souvent à l'ombre de faux bananiers et d'autres arbres. Les cerises sont portées à des stations de lavage qui traitent la récolte de centaines de familles.\n\nLe café de Yirgacheffe est surtout connu en version lavée, ce qui lui donne une tasse claire et précise. Son nom, comme ceux de Harrar et de Sidamo, fait partie des appellations que l'Éthiopie a fait enregistrer comme marques dans les années 2000.",
+    choisir:
+      "C'est le plus léger et le plus floral des cafés de la boutique. Le [Moka Sidamo](/produit/cafe-moka-sidamo) est plus rond, le [Harrar](/produit/cafe-harrar) plus corsé et chocolaté. Hors d'Éthiopie, le [café du Rwanda](/produit/cafe-du-rwanda) partage sa douceur, avec moins de parfum de fleur ; le [café du Kenya](/produit/cafe-du-kenya) est plus acide.\n\nPour le découvrir, préférez une torréfaction claire à moyenne : une torréfaction trop poussée efface les notes de jasmin et d'agrumes qui font sa réputation.",
+    conserver:
+      "Ses arômes délicats sont les premiers à disparaître. Prenez-le en petite quantité, gardez les grains dans un contenant opaque et étanche, et prévoyez de les utiliser dans le mois qui suit l'ouverture. Un placard tempéré vaut mieux que le dessus du réfrigérateur, souvent chaud.",
+    remplacer:
+      "Un autre café lavé du sud éthiopien, Sidamo ou Guji, est le remplacement naturel. À défaut, un café lavé du Rwanda ou du Burundi donne une tasse douce et fruitée. Pour le buna, n'importe quel arabica éthiopien convient, puisque la recette compte surtout sur la torréfaction faite à la maison.",
+    enCuisine:
+      "C'est le café de la recette du [buna, le café éthiopien](/recette/buna-cafe-ethiopien), servi en trois tournées lors de la [cérémonie du café](/conseils/ceremonie-du-cafe-ethiopienne). Pour comprendre son profil, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda). L'eau peut chauffer dans la [bouilloire émaillée](/produit/bouilloire-emaillee).",
+    faq: [
+      {
+        question: "Que signifie « heirloom » sur un café éthiopien ?",
+        reponse:
+          "Le mot regroupe les nombreuses variétés locales d'arabica cultivées en Éthiopie, souvent mêlées dans une même parcelle et difficiles à distinguer.",
+      },
+      {
+        question: "Quelle méthode convient le mieux au Yirgacheffe ?",
+        reponse:
+          "Les méthodes douces, filtre ou cafetière à piston, mettent en valeur ses notes florales. En expresso, il donne une tasse vive, parfois surprenante.",
+      },
+    ],
+  },
+  "cafe-du-cameroun": {
+    origine:
+      "Le pays Bamoun, dont la capitale historique est Foumban, s'étend sur les hauts plateaux de l'Ouest camerounais. L'arabica y a été développé pendant la période coloniale française, autour de Foumbot, Koutaba et Kouti, sur des terres volcaniques fertiles. L'administration y créa une coopérative des planteurs de « café d'Arabie » du pays Bamoun, et un moulin hydraulique installé près de Foumban servit à décortiquer les premières récoltes.\n\nAujourd'hui, l'arabica ne représente qu'une petite part du café camerounais, dominé par le robusta des basses terres. Celui de l'Ouest, cultivé en altitude par de petits producteurs, est le plus recherché pour la tasse.",
+    choisir:
+      "Ce café en grains donne une tasse ronde et chocolatée, plus proche du [Harrar](/produit/cafe-harrar) que des cafés floraux d'Éthiopie, mais moins fruitée. Comparé au [café du Kenya](/produit/cafe-du-kenya), il est bien moins acide. Pour torréfier vous-même, le [café vert du Cameroun](/produit/cafe-vert-du-cameroun) existe en grains non grillés.\n\nSi vous buvez surtout du café au lait, c'est l'un des choix les plus sûrs de la boutique : son corps tient bien face au lait.",
+    conserver:
+      "Les grains se gardent mieux dans un bocal opaque que dans un pot en verre exposé à la lumière. Refermez le sachet en chassant l'air et tenez-le loin des sources de chaleur. Si vous en avez beaucoup, divisez-les en petites portions et n'ouvrez qu'une portion à la fois.",
+    remplacer:
+      "Un café du Brésil ou un autre arabica d'altitude au profil chocolaté remplace bien ce café. Pour rester en Afrique, le Harrar éthiopien apporte du corps avec davantage de fruit. Un robusta camerounais, plus amer et plus corsé, convient aux amateurs de café très fort.",
+    enCuisine:
+      "Il se prête à toutes les méthodes, de l'expresso à la cafetière à piston. Pour savoir s'il vaut mieux le garder en grains, lisez [Café en grains ou moulu : que choisir et comment le conserver ?](/conseils/cafe-en-grains-ou-moulu). Pour griller vos propres grains à la camerounaise, voyez [Comment torréfier du café vert à la maison ?](/conseils/torrefier-cafe-vert-maison).",
+    faq: [
+      {
+        question: "Le Cameroun produit-il surtout de l'arabica ?",
+        reponse:
+          "Non, le robusta y domine largement. L'arabica pousse surtout sur les hauts plateaux de l'Ouest et du Nord-Ouest, dont le pays Bamoun.",
+      },
+      {
+        question: "Où se trouve le pays Bamoun ?",
+        reponse:
+          "Dans la région de l'Ouest du Cameroun, autour de Foumban, ancienne capitale du royaume bamoun, à quelques heures de route de Douala.",
+      },
+    ],
+  },
+  "cafe-du-rwanda": {
+    origine:
+      "Le café serait arrivé au Rwanda au début du XXe siècle avec des missionnaires allemands, à Mibirizi, près du lac Kivu. Il a longtemps été une culture imposée et exportée sans distinction de qualité. Les choses ont changé dans les années 2000, avec la construction de nombreuses stations de lavage qui permettent aux petits producteurs de traiter leurs cerises le jour même de la cueillette.\n\nLa grande majorité des caféiers rwandais appartiennent à la famille Bourbon, une lignée d'arabica réputée pour sa douceur. Ils poussent sur les collines du pays, souvent entre 1 500 et 2 000 mètres, où les nuits fraîches ralentissent la maturation des cerises.",
+    choisir:
+      "Le café du Rwanda est doux, sucré et fruité. Il ressemble beaucoup au [café du Burundi](/produit/cafe-du-burundi), son voisin, et au [café du Kivu](/produit/cafe-du-kivu), cultivé sur l'autre rive du lac. Il est moins acide que le [café du Kenya](/produit/cafe-du-kenya) et moins floral que le [Yirgacheffe](/produit/cafe-yirgacheffe).\n\nC'est un bon café pour commencer si vous découvrez les origines africaines : il plaît aussi bien nature qu'avec un peu de lait.",
+    conserver:
+      "Comme tout café torréfié en grains, il donne le meilleur de lui-même dans les semaines qui suivent sa torréfaction. Rangez-le dans un pot hermétique à l'abri de la lumière, et évitez le congélateur si vous devez l'ouvrir souvent. Ne moulez que la dose du jour.",
+    remplacer:
+      "Le café du Burundi est son remplaçant naturel, avec un profil très proche. Le café du Kivu, moulu, convient si vous n'avez pas de moulin. Un arabica d'Amérique centrale, doux et sucré, peut aussi faire l'affaire si vous ne trouvez aucun café des Grands Lacs.",
+    enCuisine:
+      "Pour comprendre ce qui le distingue des cafés d'Éthiopie et du Kenya, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda). Le choix entre grains et mouture est expliqué dans [Café en grains ou moulu : que choisir et comment le conserver ?](/conseils/cafe-en-grains-ou-moulu). Il accompagne volontiers les [puff-puff](/recette/puff-puff) du goûter.",
+    faq: [
+      {
+        question: "Qu'est-ce qu'une station de lavage ?",
+        reponse:
+          "C'est un atelier où les cerises fraîches sont dépulpées, fermentées, lavées puis séchées. Au Rwanda, elles ont permis aux petits producteurs de mieux valoriser leur récolte.",
+      },
+      {
+        question: "Le café du Rwanda est-il un arabica ?",
+        reponse:
+          "Oui, la quasi-totalité du café rwandais est de l'arabica, surtout de la famille Bourbon.",
+      },
+    ],
+  },
+  "cafe-de-tanzanie": {
+    origine:
+      "En Tanzanie, l'arabica représente environ les deux tiers de la production. Il pousse surtout sur les pentes du Kilimandjaro et du mont Meru, dans le nord, où les Chagga ont fait du café leur grande culture dès la fin du XIXe siècle ; ils fondèrent en 1925 l'une des premières coopératives de planteurs africains. D'autres régions caféières se trouvent au sud, autour de Mbeya.\n\nLe robusta, lui, est chez lui dans la région de Kagera, à l'ouest du lac Victoria. Les Haya y cultivaient le caféier bien avant l'époque coloniale : les cerises bouillies puis fumées s'offraient en cadeau et servaient même de monnaie d'échange.",
+    choisir:
+      "Le café de Tanzanie est vif mais équilibré, à mi-chemin entre le [café du Kenya](/produit/cafe-du-kenya), plus acide, et les cafés doux du [Rwanda](/produit/cafe-du-rwanda) ou du [Burundi](/produit/cafe-du-burundi). Il a moins de notes florales que le [Yirgacheffe](/produit/cafe-yirgacheffe).\n\nLa Tanzanie est aussi connue pour ses caracolis, appelés peaberry en anglais : des grains ronds, nés seuls dans la cerise, triés à part. Un paquet portant la mention « PB » en contient.",
+    conserver:
+      "Gardez les grains au sec et au frais, dans leur sachet bien refermé ou dans une boîte hermétique. Évitez de les laisser dans un moulin à trémie pendant plusieurs jours : exposés à l'air et à la lumière, ils perdent vite leur vivacité et leurs notes de fruits.",
+    remplacer:
+      "Un café du Kenya donne un profil proche, en plus acide et plus marqué. Pour une tasse plus douce, choisissez un café du Burundi ou du Rwanda. Hors d'Afrique, un arabica lavé de Colombie présente le même équilibre entre vivacité et rondeur.",
+    enCuisine:
+      "Il convient au [kahawa chungu](/recette/kahawa-chungu), le café épicé de la côte swahilie, que l'on boit aussi à Zanzibar. Pour situer son goût, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda), et pour bien le garder, [Café en grains ou moulu : que choisir et comment le conserver ?](/conseils/cafe-en-grains-ou-moulu).",
+    faq: [
+      {
+        question: "Qu'est-ce qu'un caracoli ?",
+        reponse:
+          "Un grain de café rond, formé seul dans la cerise au lieu des deux grains habituels. On le trie à part ; la Tanzanie en exporte régulièrement.",
+      },
+      {
+        question: "Le café de Tanzanie pousse-t-il sur le Kilimandjaro ?",
+        reponse:
+          "En partie : les pentes du Kilimandjaro et du mont Meru sont les régions d'arabica les plus connues, mais le pays produit aussi du café au sud et à l'ouest.",
+      },
+    ],
+  },
+  "cafe-du-burundi": {
+    origine:
+      "Petit pays sans accès à la mer, au cœur de l'Afrique des Grands Lacs, le Burundi a vu le café s'implanter sous l'administration belge, dans les années 1930, comme culture obligatoire. Il est devenu l'une de ses principales sources de devises. Les caféiers, en grande majorité de la famille Bourbon, sont cultivés par des centaines de milliers de petites exploitations sur les collines.\n\nLes cerises sont livrées à des stations de lavage, longtemps regroupées en sociétés de gestion, où l'on dépulpe, fermente et sèche le café sur des claies. Depuis les réformes des années 2000, certaines stations séparent leurs lots, ce qui a permis aux cafés burundais de se faire connaître pour leur qualité.",
+    choisir:
+      "Le café du Burundi est sucré, fruité, avec une acidité douce. Il partage beaucoup avec le [café du Rwanda](/produit/cafe-du-rwanda), son voisin du nord, et le [café du Kivu](/produit/cafe-du-kivu). Plus doux que le [café du Kenya](/produit/cafe-du-kenya), il est moins corsé que le [café du Cameroun (Bamoun)](/produit/cafe-du-cameroun).\n\nUn bon point de départ pour ceux qui trouvent les cafés éthiopiens trop floraux ou les kényans trop acides.",
+    conserver:
+      "Gardez les grains dans un récipient opaque, au sec, et refermez-le aussitôt. Le café absorbe les odeurs : ne le rangez pas à côté des épices ou de l'ail. Si vous en avez beaucoup, congelez des portions bien emballées et sortez-les une à une.",
+    remplacer:
+      "Le café du Rwanda est le remplaçant le plus proche. Le café du Kivu, déjà moulu, dépanne si vous n'avez pas de moulin. Pour un goût sucré et fruité venu d'ailleurs, un arabica lavé du Guatemala ou du Costa Rica fait un bon substitut.",
+    enCuisine:
+      "Pour le comparer aux autres origines du continent, lisez [Quelle différence entre les cafés d'Éthiopie, du Kenya et du Rwanda ?](/conseils/cafes-ethiopie-kenya-rwanda) ; ses arômes sont proches de ceux du Rwanda. Pour la conservation, [Café en grains ou moulu : que choisir et comment le conserver ?](/conseils/cafe-en-grains-ou-moulu) donne les bons réflexes.",
+    faq: [
+      {
+        question: "Le Burundi et le Rwanda produisent-ils le même café ?",
+        reponse:
+          "Ils sont très proches : mêmes collines d'altitude, mêmes variétés Bourbon, même lavage. Les différences tiennent surtout à chaque station et à chaque récolte.",
+      },
+      {
+        question: "Ce café convient-il à l'expresso ?",
+        reponse:
+          "Oui. Torréfié un peu plus foncé, il donne un expresso doux et sucré, qui se marie aussi avec le lait.",
+      },
+    ],
+  },
 };
