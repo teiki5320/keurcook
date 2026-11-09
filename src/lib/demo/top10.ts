@@ -55,7 +55,7 @@ const tops: Top10[] = [
       {
         product: "spatules-en-bois",
         pourquoi:
-          "Le tô, le foufou ou l'ugali se tournent avec énergie contre la paroi de la marmite : six recettes du site demandent une spatule ou une cuillère en bois. Solides, ces spatules ne rayent pas le fond. Le lot de huit sert aussi à remuer les sauces, le riz et les mijotés. Elles se lavent à la main, se sèchent bien et s'huilent de temps en temps.",
+          "Le tô, le foufou ou l'ugali se tournent avec énergie contre la paroi de la marmite : six recettes du site demandent une spatule ou une cuillère en bois. En hêtre, ces ustensiles ne rayent pas le fond. Le lot de quatre (cuillère à sauce, deux spatules de 30 cm et une maryse) sert aussi à remuer les sauces, le riz et les mijotés. Ils se lavent à la main, se sèchent bien et s'huilent de temps en temps.",
         recettes: ["to-sauce-gombo", "fufu-light-soup", "ugali-sukuma-wiki", "cafe-touba", "puff-puff", "akara"],
       },
       {

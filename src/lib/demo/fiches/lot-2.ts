@@ -17,7 +17,7 @@
  *   - tamis-en-bois — Tamis en bois 24 cm maille fine
  *   - passoire-a-couscous — Passoire à couscous 23 cm
  *   - araignee-a-friture — Araignée à friture 14 cm
- *   - spatules-en-bois — Spatules en bois (lot de 8)
+ *   - spatules-en-bois — Ustensiles de cuisine en bois de hêtre (lot de 4)
  *   - brochettes-en-metal — Brochettes en métal 40 cm (lot de 30)
  *   - feuilles-de-bananier-fraiches — Feuilles de bananier fraîches (lot de 100)
  *   - saladier-en-bois — Grand saladier en bois d'acacia 26 cm
@@ -163,7 +163,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     origine:
       "Moulinex est née en France d'un ustensile tout simple, le moulin-légumes à manivelle, breveté en 1932 par Jean Mantelet. L'entreprise prend le nom de Moulinex en 1957, pour « moulin express », et la marque appartient aujourd'hui au groupe SEB. Le PerfectMix Plus perpétue cette histoire avec un bol en verre de grande contenance.\n\nDans beaucoup de familles africaines, le blender est devenu l'appareil des grandes marmites : on y prépare en une fois la base d'une sauce pour huit ou dix personnes, là où le mortier demandait plusieurs tournées.",
     choisir:
-      "Ses 2 litres en verre en font un bon choix pour les familles nombreuses qui veulent éviter le plastique. Le [Magimix Power 4](/produit/blender-magimix-power-4), un peu plus petit, ajoute des programmes automatiques. Le [Moulinex Blendforce](/produit/blender-moulinex-blendforce), de la même marque, est plus modeste en puissance et en volume. Si le poids du verre vous gêne, le [Philips 5000](/produit/blender-philips-5000) a un bol en plastique plus léger.",
+      "Ses 2 litres en verre en font un bon choix pour les familles nombreuses qui veulent éviter le plastique. Le [Magimix Power 4](/produit/blender-magimix-power-4), un peu plus petit avec 1,8 litre, a un moteur plus puissant de 1 300 W et cinq programmes automatiques. Le [Moulinex Blendforce](/produit/blender-moulinex-blendforce), de la même marque, est plus modeste en puissance et en volume. Si le poids du verre vous gêne, le [Philips 5000](/produit/blender-philips-5000) a un bol en plastique plus léger.",
     conserver:
       "Le programme de nettoyage se lance juste après le mixage, avant que les restes ne sèchent. Démontez ensuite les lames de temps en temps pour rincer le joint, où se logent souvent des fibres de gingembre ou des peaux de tomate. Séchez bien chaque pièce avant de remonter le bol, et posez l'appareil loin du bord du plan de travail.",
     remplacer:
@@ -209,7 +209,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
   },
   "blender-moulinex-blendforce": {
     origine:
-      "Le Blendforce est l'un des blenders les plus simples de Moulinex, marque française issue du moulin-légumes des années 1930. Son moteur est refroidi par un flux d'air, ce qui lui permet de tourner quelques minutes d'affilée sans chauffer.\n\nIl illustre bien la place qu'a prise le blender dans les foyers africains et de la diaspora : un appareil sans fioritures, sorti chaque jour pour la base de la sauce, puis rangé. Beaucoup de cuisinières l'utilisent en complément du mortier, qui garde la main sur les épices et les graines.",
+      "Le Blendforce est l'un des blenders les plus simples de Moulinex, marque française issue du moulin-légumes des années 1930. Son moteur est refroidi par un flux d'air, ce qui lui permet de tourner quelques minutes d'affilée sans chauffer.\n\nMoulinex annonce jusqu'à trois minutes de mixage continu, à toutes les vitesses, pour un moteur de 800 W et un bol en verre de 1,75 litre. Beaucoup de cuisinières l'utilisent en complément du mortier, qui garde la main sur les épices et les graines.",
     choisir:
       "C'est un bon premier blender, pour un couple ou une petite famille, si vous voulez un bol en verre sans investir dans un appareil très puissant. Il convient aux tomates, aux oignons, aux piments frais et aux jus. Son bol supporte une préparation chaude jusqu'à 80 °C, pas une soupe sortant du feu. Le [Magimix Power 4](/produit/blender-magimix-power-4) accepte les préparations plus chaudes et offre des programmes. Le [PerfectMix](/produit/blender-moulinex-perfectmix) de la même marque monte à 2 litres. Pour les graines dures, préférez l'[AMZCHEF](/produit/blender-amzchef-2000w).",
     conserver:
@@ -377,9 +377,9 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
   },
   "spatules-en-bois": {
     origine:
-      "Tourner une pâte de céréales ou de tubercules jusqu'à la rendre lisse est un geste commun à presque toute l'Afrique. En Afrique de l'Est, on se sert d'un bâton plat en bois appelé mwiko en swahili pour l'ugali ; au Burkina Faso et au Mali, une spatule semblable sert au tô. Le bois résiste à la force du poignet et ne casse pas dans une pâte épaisse.\n\nCe lot de huit spatules reprend ces formes simples : des modèles larges pour les pâtes, d'autres plus fins ou percés pour les sauces et le riz.",
+      "Tourner une pâte de céréales ou de tubercules jusqu'à la rendre lisse est un geste commun à presque toute l'Afrique. En Afrique de l'Est, on se sert d'un bâton plat en bois appelé mwiko en swahili pour l'ugali ; au Burkina Faso et au Mali, une spatule semblable sert au tô. Le bois résiste à la force du poignet et ne casse pas dans une pâte épaisse.\n\nCe lot de la marque MIAMM, fabriqué en Europe dans du hêtre, réunit quatre ustensiles : une grande cuillère à sauce, une spatule à mortaise et une spatule biseautée, toutes trois de 30 cm, et une maryse pour racler les bols.",
     choisir:
-      "Pour les pâtes fermes, foufou, tô ou ugali, prenez la spatule la plus large et la plus épaisse du lot : elle écrase les grumeaux contre la paroi sans plier. Les modèles plus étroits conviennent aux sauces, au riz et aux mijotés. Une spatule à bout droit racle mieux le fond d'un [faitout](/produit/faitout-en-fonte-d-aluminium) qu'une cuillère ronde. Pour sortir des fritures, préférez l'[araignée](/produit/araignee-a-friture), et pour servir, le [saladier en acacia](/produit/saladier-en-bois).",
+      "Pour les pâtes fermes, foufou, tô ou ugali, prenez la spatule biseautée : son bord plat écrase les grumeaux contre la paroi sans plier. La cuillère à sauce convient aux sauces, au riz et aux mijotés, et la spatule à mortaise, percée en son centre, remue sans pousser tout le contenu. Une spatule à bout droit racle mieux le fond d'un [faitout](/produit/faitout-en-fonte-d-aluminium) qu'une cuillère ronde. Pour sortir des fritures, préférez l'[araignée](/produit/araignee-a-friture), et pour servir, le [saladier en acacia](/produit/saladier-en-bois).",
     conserver:
       "Une spatule qui sent encore l'oignon ou le poisson se frotte avec un demi-citron et un peu de gros sel, puis se rince à l'eau claire. Si le bois devient rugueux après plusieurs lavages, un léger ponçage au papier de verre fin le rend lisse. Rangez-les debout dans un pot, pas dans un tiroir humide.",
     remplacer:
@@ -390,7 +390,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       {
         question: "Quelle spatule pour tourner le foufou ?",
         reponse:
-          "La plus large et la plus rigide du lot. Tenez la marmite d'une main avec un torchon et écrasez la pâte contre la paroi de l'autre.",
+          "La spatule biseautée, la plus adaptée à cet effort. Tenez la marmite d'une main avec un torchon et écrasez la pâte contre la paroi de l'autre.",
       },
       {
         question: "Pourquoi le bois noircit-il par endroits ?",

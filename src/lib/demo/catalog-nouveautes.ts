@@ -530,7 +530,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     conservation: null,
     tags: ["fonte", "feu de bois", "Afrique du Sud"],
     // Remplacé le 05/11/2026 : B0CZXS1ZHN (HENDI 6 L) indisponible sur Amazon.fr.
-    amazon: { asin: "B08DHJC6ZW", label: "8 L", priceCents: 4995 },
+    // 09/11/2026 : B08DHJC6ZW était la version « sans pieds » ; remplacé par la même marmite avec ses trois pieds (B00V4T790K, 4,4/5 sur 1 210 évaluations).
+    amazon: { asin: "B00V4T790K", label: "8 L", priceCents: 4995 },
   },
   {
     slug: "mortier-en-granit",
@@ -716,10 +717,12 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "spatules-en-bois",
-    name: "Spatules en bois (lot de 8)",
+    // Remplacé le 09/11/2026 : B006677VQ2 était un lot de 8 petites spatules à raclette de 13 cm (Lagrange), pas des
+    // spatules de cuisine ; remplacé par le set MIAMM en hêtre (B01NAPFPOO, 4,4/5 sur 867 évaluations, 39,99 €).
+    name: "Ustensiles de cuisine en bois de hêtre (lot de 4)",
     category: "ustensiles",
     shortDescription: "Des spatules en bois solides pour tourner le tô, le foufou et l'amala, et remuer les sauces.",
-    description: "Tourner une pâte de tô, de foufou ou d'amala demande un ustensile solide qui ne rayera pas la marmite. Ce lot de spatules en bois couvre tous les usages.\n\nElles servent aussi pour remuer les sauces, le riz et les mijotés.",
+    description: "Tourner une pâte de tô, de foufou ou d'amala demande un ustensile solide qui ne rayera pas la marmite. Ce lot MIAMM en hêtre, fabriqué en Europe, réunit une cuillère à sauce de 30 cm, une spatule à mortaise de 30 cm, une spatule biseautée de 30 cm et une maryse.\n\nIls servent aussi pour remuer les sauces, le riz et les mijotés.",
     originCountry: null,
     originRegion: null,
     composition: null,
@@ -727,7 +730,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Tourner vivement la pâte contre la paroi de la marmite pour la rendre lisse. Laver à la main, bien sécher et huiler de temps en temps.",
     conservation: null,
     tags: ["spatules", "bois", "foufou"],
-    amazon: { asin: "B006677VQ2", label: "lot de 8", priceCents: 860 },
+    amazon: { asin: "B01NAPFPOO", label: "lot de 4", priceCents: 3999 },
   },
   {
     slug: "saladier-en-bois",
@@ -1131,7 +1134,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     name: "Mortier et pilon en granit sur socle en acacia 15,5 cm (ECENCE)",
     category: "ustensiles",
     shortDescription: "Un mortier en granit foncé posé sur un socle en bois d'acacia, avec un pilon extra-long.",
-    description: "Ce mortier ECENCE en granit foncé mesure 15,5 cm de diamètre et 10,5 cm de haut, avec un pilon de 16 cm. Il est posé sur un socle en bois d'acacia qui protège le plan de travail.\n\nLe pilon extra-long permet d'écraser facilement herbes et épices.",
+    description: "Ce mortier ECENCE en granit foncé mesure 15,5 cm de diamètre, avec un pilon extra-long lui aussi en granit. Il est posé sur un socle en bois d'acacia qui protège le plan de travail.\n\nLe pilon extra-long permet d'écraser facilement herbes et épices.",
     originCountry: null,
     originRegion: null,
     composition: null,
