@@ -11,6 +11,9 @@ import { VarietyCard } from "@/components/shop/VarietyCard";
 import { ProduitEncart } from "@/components/product/ProduitEncart";
 import { COUNTRIES, countryBySlug } from "@/lib/countries";
 import { COUNTRY_CUISINE } from "@/lib/country-cuisine";
+import { COUNTRY_DETAILS } from "@/lib/demo/fiches";
+import { partiesPays } from "@/lib/fiches";
+import { FicheDetail } from "@/components/product/FicheDetail";
 import { getCatalog } from "@/lib/data/catalog";
 import { getRecipes } from "@/lib/data/recipes";
 import { AD_SLOTS } from "@/lib/ads";
@@ -107,6 +110,17 @@ export default async function CountryPage({ params }: PageProps<"/pays/[slug]">)
             ))}
           </div>
         </section>
+      )}
+
+      {/* Fiche détaillée du pays (docs/FICHES.md) : rien ne s'affiche tant qu'elle n'est pas écrite. */}
+      {COUNTRY_DETAILS[country.slug] && (
+        <FicheDetail
+          id="pays-en-detail"
+          titre={`La cuisine ${country.of} en détail`}
+          parties={partiesPays(COUNTRY_DETAILS[country.slug])}
+          faq={COUNTRY_DETAILS[country.slug].faq}
+          className="mt-16"
+        />
       )}
 
       {/* Actus du pays (veille), après le texte sur la cuisine : un bloc d'écart avec l'annonce. Absent s'il n'y en a pas. */}

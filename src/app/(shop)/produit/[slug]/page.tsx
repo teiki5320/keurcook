@@ -13,6 +13,9 @@ import { getRecipesUsingProduct } from "@/lib/data/recipes";
 import { getConseilsForProduct } from "@/lib/data/conseils";
 import { topPourProduit } from "@/lib/data/top10";
 import { PRODUCT_GUIDES } from "@/lib/product-guides";
+import { PRODUCT_DETAILS } from "@/lib/demo/fiches";
+import { partiesProduit } from "@/lib/fiches";
+import { FicheDetail } from "@/components/product/FicheDetail";
 import { siteConfig } from "@/lib/config";
 import { jsonLd } from "@/lib/json-ld";
 import { getMaintenance } from "@/lib/data/settings";
@@ -51,6 +54,8 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
   const [related, recipes] = await Promise.all([getRelatedProducts(product), getRecipesUsingProduct(product.slug)]);
   const conseils = getConseilsForProduct(product.slug);
   const top = topPourProduit(product.slug);
+  // Fiche détaillée (docs/FICHES.md) : rien ne s'affiche tant qu'elle n'est pas écrite.
+  const fiche = PRODUCT_DETAILS[product.slug];
 
   // Fil d'Ariane pour Google (une fiche « Product » sans offre ni avis serait signalée comme incomplète).
   const structuredData = {
@@ -171,6 +176,16 @@ export default async function ProductPage({ params }: PageProps<"/produit/[slug]
             ))}
           </div>
         </section>
+      )}
+
+      {fiche && (
+        <FicheDetail
+          id="produit-en-detail"
+          titre="Le produit en détail"
+          parties={partiesProduit(fiche, isBook(product) ? "livre" : isFood ? "epicerie" : "ustensile")}
+          faq={fiche.faq}
+          className="mt-14"
+        />
       )}
 
       {recipes.length > 0 && (

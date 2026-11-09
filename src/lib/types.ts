@@ -118,3 +118,48 @@ export interface Country {
   lon: number;
   lat: number;
 }
+
+/** Question fréquente d'une fiche détaillée ; la réponse peut contenir des liens « [texte](/chemin) ». */
+export interface FicheQuestion {
+  question: string;
+  reponse: string;
+}
+
+/**
+ * Fiche détaillée d'un produit (section « Le produit en détail », règles docs/FICHES.md).
+ * Chaque texte : paragraphes séparés par une ligne vide, liens internes écrits « [texte](/recette/slug) ».
+ * Total 250 à 450 mots (vérifié par tests/fiches.test.ts).
+ */
+export interface ProductDetail {
+  /** Origine et histoire (épicerie), ou origine, matière et fabrication (ustensile), ou le livre et son auteur. */
+  origine: string;
+  /** Comment le choisir, en le comparant aux produits voisins de la boutique (liens /produit/…). */
+  choisir: string;
+  /** Conservation (épicerie) ou entretien et rangement (ustensile). Facultatif pour les livres. */
+  conserver?: string;
+  /** Par quoi le remplacer (épicerie) ou que faire sans lui (ustensile). Facultatif pour les livres. */
+  remplacer?: string;
+  /** Avec nos recettes et nos conseils : liens vers les recettes et articles « Conseils » publiés. */
+  enCuisine: string;
+  /** 2 ou 3 questions fréquentes (affichées et données FAQPage pour Google). Facultatif. */
+  faq?: FicheQuestion[];
+}
+
+/**
+ * Fiche détaillée d'un pays (section « La cuisine du … en détail » des pages /pays/…, règles docs/FICHES.md).
+ * Ne répète pas le texte de src/lib/country-cuisine.ts. Total 400 à 700 mots.
+ */
+export interface CountryDetail {
+  /** Histoire, géographie et influences qui ont façonné la cuisine. */
+  histoire: string;
+  /** D'une région à l'autre : les spécialités locales. Facultatif. */
+  regions?: string;
+  /** Les produits du placard, avec des liens vers les fiches produits du site. */
+  produits: string;
+  /** À table : repas du quotidien, cuisine de rue, boissons, coutumes. */
+  table: string;
+  /** Par où commencer : recettes et conseils du site à essayer d'abord. */
+  commencer: string;
+  /** 2 ou 3 questions fréquentes (affichées et données FAQPage). Facultatif. */
+  faq?: FicheQuestion[];
+}
