@@ -189,3 +189,46 @@ Vérifié le 20/10/2026 (moins de 28 jours) : pas refait. Vitesse sur téléphon
 ### À revoir à partir du 1er décembre 2026
 
 Les 3 pages ci-dessus : noter leur nouvelle place.
+
+## 10 novembre 2026
+
+Chiffres : Search Console, 28 derniers jours, via le Studio (liste « 2e page » et recherches).
+
+### Pages améliorées
+
+Toute la liste « 2e page » a déjà été travaillée les 20, 22 et 27/10 et le 3/11 (moins de 28 jours), sauf quatre recettes : ce sont les seules travaillées aujourd'hui.
+
+| Page | Recherches visées | Place et vues au moment du travail | Ancien titre → nouveau titre |
+| --- | --- | --- | --- |
+| /recette/caldou | caldou casamance, caldou poisson, caldou | 10,4, 39 vues (« caldou casamance » : 9,2, 13 vues ; « caldou poisson » : 4,6, 12 vues) | « Caldou de poisson — recette du Sénégal \| Keur Cook » → « Caldou de poisson : recette de Casamance (Sénégal) » |
+| /recette/moambe | recette poulet moambe congo, poulet moambe, moambe recette | 20, 21 vues (« recette poulet moambe congo » : 34,3) | « Poulet à la moambé — recette de la RD Congo \| Keur Cook » → « Poulet moambé : recette congolaise à la noix de palme » |
+| /recette/thieboudienne | thieboudienne, thiéboudienne, recette thieboudienne | 16,2, 21 vues (« thieboudienne » : 10,6 ; « thiéboudienne » : 39,5) | « Thiéboudienne — recette du Sénégal \| Keur Cook » → « Thiéboudienne : recette sénégalaise du riz au poisson » |
+| /recette/bobotie | recette bobotie afrique du sud, recette bobotie du cap | 16,9, 10 vues (« recette bobotie du cap » : 72) | « Bobotie — recette d'Afrique du Sud \| Keur Cook » → « Bobotie : recette du plat national d'Afrique du Sud » |
+
+Pour les quatre : nouvelle méta-description et FAQ visible « Questions fréquentes » de trois questions (avec données FAQPage), écrite uniquement avec des faits déjà présents dans la recette ou sur le site (caldou : Casamance, « caldo », poisson et cuisson ; moambé : sauce de noix de palme, pays, pâte d'arachide, accompagnements ; thiéboudienne : sens du nom et graphies thieboudienne / ceebu jën, UNESCO, riz brisé, xoon ; bobotie : Cape Malay, riz jaune et chutney). Le h1 (nom du plat) contient déjà la recherche : inchangé.
+
+Liens internes (texte du lien = la recherche) :
+- caldou : nouveau lien « caldou de poisson de Casamance » dans « Par quoi remplacer le gombo ? » ; lien déjà présent depuis le guedj ; lien vers le thiéboudienne depuis sa FAQ ;
+- moambé : textes précisés « poulet moambé » (« Mafé ou sauce arachide », en ligne le 02/12) et « poulet à la moambé » (« Utiliser la pulpe de noix de palme », en ligne le 25/11) ; trois liens déjà en ligne (huile de palme, pulpe en conserve, pâte d'arachide) ;
+- thiéboudienne : déjà six liens depuis les conseils ; lien depuis la FAQ du caldou ;
+- bobotie (seulement relié par la page Afrique du Sud) : nouveaux liens depuis « Qu'est-ce que le rooibos ? » (« bobotie ») et « Plats à préparer à l'avance » (« bobotie sud-africain », en ligne le 11/11).
+
+### Pages travaillées il y a 28 jours ou plus
+
+Aucune encore (premières le 20/10 : bilan à partir du 17/11). Chiffres d'aujourd'hui pour mémoire : dégué 10,5 (214 vues ; 13,4 le 27/10, 11,2 le 3/11), ataya 10,6 (91), alloco 6,7 (67 ; « alloco recette » 1re place), poulet DG 10 (59), odika 7,5 (145 ; « chocolat indigène » 7,1), sauce graine (« sauce graine recette » 1,2), garba 16,3 (22,1 le 3/11), doro wat 63,2 (66,4 le 3/11).
+
+### Page nouvelle
+
+Aucune créée : les 18 recherches de 15 vues et plus ont leur vraie page (« chocolat indigène » et « plat gabonais » montrent l'odika et le nyembwe, qui en parlent ; la page /pays/gabon existe). Café du Burundi (61), doro wat (63) et thé du Kenya (43) restent loin malgré leurs pages, travaillées il y a moins de 28 jours.
+
+### Fiches enrichies
+
+Vérifiées le 20/10/2026 (moins de 28 jours) : pas refait. Contrôlé dans les pages construites aujourd'hui : caldou, moambé, thiéboudienne et bobotie ont Recipe + BreadcrumbList + FAQPage, JSON valide.
+
+### Socle
+
+Vérifié le 20/10/2026 (moins de 28 jours) : pas refait. Vitesse sur téléphone : PageSpeed refuse encore (quota du jour dépassé, 4e fois) pour l'accueil, /recette/degue et /conseils/comment-preparer-l-ataya.
+
+### À revoir à partir du 8 décembre 2026
+
+Les 4 pages ci-dessus : noter leur nouvelle place.

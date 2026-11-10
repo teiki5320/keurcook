@@ -356,6 +356,13 @@ export const recipesAfriqueEstAustrale: RecipeSeed[] = [
     region: "Le Cap",
     course: "mijotes",
     shortDescription: "Un hachis de bœuf doucement épicé au curry, fruité, et gratiné sous une crème à l'œuf.",
+    seoTitle: "Bobotie : recette du plat national d'Afrique du Sud",
+    seoDescription: "Recette du bobotie du Cap (Afrique du Sud) : hachis de bœuf au curry, raisins secs et abricot, gratiné sous une crème aux œufs. Pour 6 personnes.",
+    faq: [
+      { question: "Qu'est-ce que le bobotie ?", answer: "Un hachis de bœuf doucement épicé au curry, légèrement sucré par la confiture d'abricot et les raisins secs, gratiné sous une crème d'œufs battus au lait. Il est souvent présenté comme le plat national sud-africain." },
+      { question: "D'où vient le bobotie ?", answer: "De la cuisine du Cap, et en particulier de la communauté dite Cape Malay, dont les ancêtres venaient d'Asie du Sud-Est et d'Inde. Le mariage des épices, des fruits secs et de la viande hachée témoigne de ce métissage." },
+      { question: "Avec quoi servir le bobotie ?", answer: "Avec un riz jaune cuit avec du curcuma, un bâton de cannelle et quelques raisins secs, et un chutney de fruits. Autre recette d'Afrique du Sud : le [chakalaka](/recette/chakalaka), condiment pimenté de poivrons, carottes et haricots." },
+    ],
     story:
       "Le bobotie est souvent présenté comme le plat national sud-africain. Il est étroitement associé à la cuisine du Cap, et en particulier à la communauté dite Cape Malay, dont les ancêtres venaient d'Asie du Sud-Est et d'Inde. Le mariage des épices, des fruits secs et de la viande hachée témoigne de ce long métissage culinaire.\n\nSous sa couche dorée d'œufs battus au lait, le hachis parfumé au curry, légèrement sucré par la confiture d'abricot et les raisins secs, se sert avec un riz jaune au curcuma et un chutney de fruits.",
     prepMinutes: 25,

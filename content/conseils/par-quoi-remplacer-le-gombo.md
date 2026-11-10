@@ -36,7 +36,7 @@ La farine ou la fécule épaississent, mais ne donnent pas l'effet filant : la s
 
 ## Régler le côté gluant
 
-Le gombo libère plus ou moins de liquide filant selon la façon de le couper. En fines rondelles ou haché, il est très gluant : c'est ce qu'on recherche dans une sauce gombo. Coupé en gros morceaux ou laissé entier, il l'est beaucoup moins. Un ingrédient acide, comme la tomate ou un filet de citron, atténue aussi cet effet.
+Le gombo libère plus ou moins de liquide filant selon la façon de le couper. En fines rondelles ou haché, il est très gluant : c'est ce qu'on recherche dans une sauce gombo. Coupé en gros morceaux ou laissé entier, il l'est beaucoup moins. Un ingrédient acide, comme la tomate ou un filet de citron, atténue aussi cet effet : dans le [caldou de poisson de Casamance](/recette/caldou), les gombos cuisent dans un bouillon relevé de citron vert.
 
 ## Le gombo dans les cuisines africaines
 

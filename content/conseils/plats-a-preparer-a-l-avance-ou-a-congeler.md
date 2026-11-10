@@ -12,7 +12,7 @@ imagePrompt: Photographie culinaire, boîtes de conservation en verre remplies d
 ---
 ## Les plats mijotés, les meilleurs candidats
 
-La plupart des sauces et ragoûts mijotés se préparent à l'avance, et beaucoup sont même meilleurs le lendemain : les épices et les saveurs ont le temps de se mélanger. C'est le cas du [mafé](/recette/mafe), du [ndolé](/recette/ndole), de la [sauce graine](/recette/sauce-graine), de la [soupe egusi](/recette/soupe-egusi) ou des ragoûts éthiopiens comme le doro wat. Ces plats se congèlent aussi très bien.
+La plupart des sauces et ragoûts mijotés se préparent à l'avance, et beaucoup sont même meilleurs le lendemain : les épices et les saveurs ont le temps de se mélanger. C'est le cas du [mafé](/recette/mafe), du [ndolé](/recette/ndole), de la [sauce graine](/recette/sauce-graine), de la [soupe egusi](/recette/soupe-egusi) ou des ragoûts éthiopiens comme le doro wat. Le hachis du [bobotie sud-africain](/recette/bobotie) gagne lui aussi à être préparé la veille : les épices ont le temps de se marier. Ces plats se congèlent aussi très bien.
 
 ## Ce qui se prête moins bien au congélateur
 

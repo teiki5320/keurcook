@@ -153,6 +153,13 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     region: "Kinshasa",
     course: "mijotes",
     shortDescription: "Poulet mijoté dans une sauce onctueuse à la noix de palme et à la pâte d'arachide.",
+    seoTitle: "Poulet moambé : recette congolaise à la noix de palme",
+    seoDescription: "Recette du poulet à la moambé, plat national de la RD Congo : poulet mijoté dans une sauce de noix de palme et pâte d'arachide, servi avec riz ou foufou.",
+    faq: [
+      { question: "Qu'est-ce que la moambé ?", answer: "La sauce obtenue à partir de la pulpe des noix de palme. Le poulet à la moambé est souvent présenté comme le plat national de la RD Congo ; on le retrouve aussi au Congo-Brazzaville, en Angola et en Centrafrique." },
+      { question: "Faut-il de la pâte d'arachide dans la moambé ?", answer: "Chaque famille a sa version : certaines ajoutent de la pâte d'arachide pour une sauce plus ronde, d'autres la préfèrent nature. Ici, elle s'ajoute 15 minutes avant la fin, délayée dans une louche de sauce. Pour la conserver : [combien de temps se garde la pâte d'arachide](/conseils/combien-de-temps-se-garde-la-pate-d-arachide)." },
+      { question: "Avec quoi servir le poulet moambé ?", answer: "Avec du riz blanc, du foufou ou de la [chikwangue](/produit/chikwangue). Pour un foufou bien lisse : [un foufou sans grumeaux](/conseils/foufou-sans-grumeaux)." },
+    ],
     story:
       "La moambé est souvent présentée comme le plat national de la République démocratique du Congo, et on la retrouve aussi au Congo-Brazzaville, en Angola et en Centrafrique. Son nom désigne la sauce obtenue à partir de la pulpe des noix de palme.\n\nChaque famille a sa version : certaines y ajoutent de la pâte d'arachide pour une sauce plus ronde, d'autres la préfèrent nature. On la sert avec du riz, du foufou ou de la chikwangue.",
     prepMinutes: 25,

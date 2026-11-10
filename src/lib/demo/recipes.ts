@@ -349,6 +349,13 @@ const seeds: RecipeSeed[] = [
     region: "Saint-Louis",
     course: "riz-cereales",
     shortDescription: "Le riz au poisson du Sénégal, cuit dans un bouillon rouge de tomate et de légumes, avec son fond croustillant.",
+    seoTitle: "Thiéboudienne : recette sénégalaise du riz au poisson",
+    seoDescription: "Recette du thiéboudienne (thieboudienne), le riz au poisson du Sénégal inscrit à l'UNESCO : poisson farci, légumes et riz cuits dans un bouillon rouge.",
+    faq: [
+      { question: "Que veut dire thiéboudienne ?", answer: "« Riz au poisson » en wolof. On l'écrit aussi thieboudienne ou ceebu jën. Le plat serait né à Saint-Louis au XIXᵉ siècle, dans la cuisine de Penda Mbaye, et il est inscrit au patrimoine culturel immatériel de l'UNESCO." },
+      { question: "Quel riz pour le thiéboudienne ?", answer: "Du riz brisé, lavé puis cuit 15 minutes à la vapeur avant d'être versé dans le bouillon, qui doit juste le couvrir." },
+      { question: "Comment réussir le riz rouge et le xoon ?", answer: "Le concentré de tomate colore le bouillon, puis le riz y cuit 25 minutes à couvert et à feu doux ; la couche croustillante du fond, le « xoon », est la plus recherchée. Tous les conseils : [réussir le riz rouge du thiéboudienne](/conseils/reussir-le-riz-rouge-du-thieboudienne)." },
+    ],
     story:
       "Le thiéboudienne (« riz au poisson » en wolof) serait né à Saint-Louis, au XIXᵉ siècle, dans la cuisine de Penda Mbaye. Il est aujourd'hui inscrit au patrimoine culturel immatériel de l'UNESCO.\n\nLe poisson farci au persil, les légumes et le riz cuisent successivement dans le même bouillon rouge, relevé de guedj et de yeet.",
     prepMinutes: 45,

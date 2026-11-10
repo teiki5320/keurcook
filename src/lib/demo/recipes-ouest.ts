@@ -334,6 +334,13 @@ export const recipesAfriqueOuest: RecipeSeed[] = [
     region: "Casamance, Ziguinchor",
     course: "mijotes",
     shortDescription: "Poisson poché dans un bouillon citronné, relevé de piment et de gombo.",
+    seoTitle: "Caldou de poisson : recette de Casamance (Sénégal)",
+    seoDescription: "Recette du caldou de poisson de Casamance : poisson poché dans un bouillon au citron vert, piment et gombo, versé sur du riz blanc. Pour 4 personnes.",
+    faq: [
+      { question: "Qu'est-ce que le caldou de Casamance ?", answer: "Un plat emblématique de la Casamance, au sud du Sénégal : du poisson poché dans un bouillon léger au citron, relevé de piment, que l'on verse sur du riz blanc. Son nom viendrait du portugais « caldo », bouillon." },
+      { question: "Quel poisson pour le caldou ?", answer: "Un poisson blanc à chair ferme, en tranches : thiof, capitaine ou dorade. Pochez-le 12 à 15 minutes à feu doux dans le bouillon, sans remuer, pour qu'il ne se brise pas." },
+      { question: "Avec quoi servir le caldou de poisson ?", answer: "Avec du riz blanc bien cuit, généreusement arrosé de bouillon. Une cuillerée de [guedj](/conseils/quest-ce-que-le-guedj) parfume le bouillon, comme dans le [thiéboudienne](/recette/thieboudienne), l'autre grand plat de poisson du Sénégal." },
+    ],
     story:
       "Le caldou est un plat emblématique de la Casamance, au sud du Sénégal. Son nom viendrait du portugais « caldo », bouillon, un héritage des échanges anciens avec les comptoirs portugais de la région.\n\nFrais et acidulé, il met en valeur le poisson du fleuve et de la côte : un bouillon léger au citron, relevé de piment, que l'on verse sur un riz blanc bien cuit.",
     prepMinutes: 20,

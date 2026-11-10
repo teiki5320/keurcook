@@ -31,7 +31,7 @@ Notre [recette de mafé](/recette/mafe) suit ce modèle.
 Ailleurs, la [pâte d'arachide](/produit/pate-d-arachide) s'emploie de bien d'autres façons :
 
 - **En papillote** : en Ouganda, le [luwombo](/recette/luwombo) fait cuire le poulet et sa sauce arachide à la vapeur dans des feuilles de bananier.
-- **Associée à la noix de palme** : en Afrique centrale, la [moambé](/recette/moambe) mêle pulpe de noix de palme et pâte d'arachide.
+- **Associée à la noix de palme** : en Afrique centrale, le [poulet moambé](/recette/moambe) mêle pulpe de noix de palme et pâte d'arachide.
 - **Avec des feuilles ou du gombo** : certaines sauces arachide intègrent des légumes-feuilles ou du gombo et s'accompagnent de tô, de foufou ou de pâte de maïs.
 - **Sans tomate** : il existe des versions plus claires, où l'arachide est presque seule avec l'oignon et le piment.
 
