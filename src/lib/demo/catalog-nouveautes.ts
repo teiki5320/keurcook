@@ -667,7 +667,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Faire bouillir le thé vert directement dans la théière, ajouter sucre et menthe, puis servir de haut. Rincer à l'eau chaude et bien sécher.",
     conservation: null,
     tags: ["théière", "ataya", "Sénégal"],
-    // 09/11/2026 : B0DJVCC3C6 (3,6/5, rien ne disait qu'elle allait sur le feu) remplacée par la théière Ibili El Yadida (4,3/5, 103 avis).
+    // 09/11/2026 : ancienne théière (3,6/5, rien ne disait qu'elle allait sur le feu) remplacée par la théière Ibili El Yadida (4,3/5, 103 avis).
     amazon: { asin: "B09GYRZQRM", label: "1 l", priceCents: 2864 },
   },
   {
