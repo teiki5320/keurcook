@@ -177,4 +177,4 @@ docs/                  INFRA, MARKETING, PUBLICATION, CONSEILS, CONSEILS-CALENDR
 tests/                 tests (articles « Conseils », contenus) ; tests/sortie/ = contrôle du site construit
 ```
 
-Photos (`public/recipes/*.webp`, `public/products/*.webp`, `public/conseils/`) : photos OpenArt.
+Photos (`public/recipes/*.webp`, `public/products/*.webp`, `public/conseils/`) : photos OpenArt ; depuis le 11 novembre 2026, les nouveaux articles « Conseils » prennent d'abord des photos libres de droits (Wikimedia Commons) avec crédit affiché sous la photo (trois articles de Noël du 13 novembre).

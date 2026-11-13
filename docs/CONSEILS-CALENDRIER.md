@@ -50,10 +50,13 @@ Validé avec l'utilisateur le 26/09/2026. Depuis le 05/10/2026 : trois articles 
 | 2026-11-25 | sauces | Comment utiliser la pulpe de noix de palme ? |
 | 2026-11-27 | epices | Qu'est-ce que le pèbè et le djansang ? |
 | 2026-11-30 | boissons | Comment préparer le thiakry ? |
+| 2026-11-30 | decouvrir | Quel menu de réveillon africain pour Noël ? (article saisonnier ajouté le 13/11/2026, en plus de celui du jour) |
 | 2026-12-02 | decouvrir | Quelle différence entre mafé et sauce arachide ? |
 | 2026-12-04 | cafe-the | Comment faire un thé à la menthe qui mousse ? |
+| 2026-12-04 | boissons | Quelles boissons africaines servir pour les fêtes ? (article saisonnier ajouté le 13/11/2026, en plus de celui du jour) |
 | 2026-12-07 | ustensiles | Comment cuisiner avec des feuilles de bananier ? |
 | 2026-12-09 | epicerie | Faut-il rincer les crevettes séchées avant de cuisiner ? |
+| 2026-12-09 | decouvrir | Quels desserts africains servir à Noël ? (article saisonnier ajouté le 13/11/2026, en plus de celui du jour) |
 | 2026-12-11 | cereales | Riz brisé ou riz long : lequel pour le thiéboudienne ? |
 | 2026-12-14 | remplacer | Par quoi remplacer le poivre de Selim ? |
 | 2026-12-16 | sauces | Comment rattraper une sauce trop salée ou trop pimentée ? |

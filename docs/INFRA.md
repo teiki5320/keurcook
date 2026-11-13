@@ -1,6 +1,6 @@
 # INFRA — fiche technique
 
-Mis à jour le 13 novembre 2026 (20 articles « Conseils » programmés dont un Black Friday le 20 novembre ; examen AdSense refusé le 31 octobre 2026 pour « contenu à faible valeur informative », motif revérifié dans la console le 12 novembre, aucun nouvel e-mail AdSense pour keurcook.com au 13 novembre ; 48 articles « Conseils » en ligne ; sitemap de 269 adresses ; dernière publication le 13 novembre 2026 à 4 h 27) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
+Mis à jour le 13 novembre 2026 (23 articles « Conseils » programmés dont un Black Friday le 20 novembre et trois articles de Noël ajoutés le 13 novembre : 30 novembre, 4 et 9 décembre ; examen AdSense refusé le 31 octobre 2026 pour « contenu à faible valeur informative », motif revérifié dans la console le 12 novembre, aucun nouvel e-mail AdSense pour keurcook.com au 13 novembre ; 48 articles « Conseils » en ligne ; sitemap de 269 adresses ; dernière publication le 13 novembre 2026 à 4 h 27) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
 
 ## En bref
 
@@ -9,12 +9,12 @@ Mis à jour le 13 novembre 2026 (20 articles « Conseils » programmés dont un 
 - **Backend** : aucun, site 100 % statique sans base de données
 - **Distribution** : Cloudflare Pages, publié par GitHub Actions
 - **Site** : https://keurcook.com (www redirigé)
-- **IA et outils** : photos OpenArt · Amazon Partenaires · AdSense · Cloudflare Web Analytics · Umami (essai) · veille actus
+- **IA et outils** : photos OpenArt et photos libres de droits (Wikimedia Commons) · Amazon Partenaires · AdSense · Cloudflare Web Analytics · Umami (essai) · veille actus
 
 ## Parcours
 
 - 🌐 **Web** : 🐙 GitHub — main · publication au vert [ok] → ☁️ Hébergement web — Cloudflare Pages, projet keurcook [ok] → 🔗 Nom de domaine — keurcook.com, SSL Cloudflare [ok] → 👥 Visiteurs — site ouvert au public [ok]
-- 📝 **Contenu** : 🐙 GitHub — 20 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 48 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
+- 📝 **Contenu** : 🐙 GitHub — 23 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 48 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
 - 🛒 **Affiliation** : 🌐 keurcook.com — boutons « Voir sur Amazon » [ok] → 🤝 Affiliation — Amazon Partenaires, tag keurcookfr-21 [ok] → 📦 Amazon.fr — Amazon encaisse et livre [ok]
 - 📰 **Veille actus** : 📡 Tâche de veille — 12 h et 19 h, 15 flux RSS [ok] → 🐙 Dépôt veille — actus/keurcook.json sur GitHub Pages [ok] → 🏗️ Build GitHub Actions — 12 h 50 et 19 h 50, une page /actus/<adresse> par article [ok] → 🌍 keurcook.com — accueil (4), /actus (20), pages pays (3), articles complets [ok]
 - 📢 **Publicité** : 🌐 keurcook.com — six emplacements « Publicité » [ok] → 💰 AdSense (publicité web) — refusé le 31 oct. : contenu à faible valeur [bloquant]
@@ -85,7 +85,7 @@ Mis à jour le 13 novembre 2026 (20 articles « Conseils » programmés dont un 
 
 ## 6. API d'IA (OpenArt, photos)
 
-- **Rôle** : photos générées avec OpenArt pour les recettes, les produits et les articles « Conseils », converties en WebP dans `public/recipes`, `public/products` et `public/conseils`.
+- **Rôle** : photos générées avec OpenArt pour les recettes, les produits et les articles « Conseils », converties en WebP dans `public/recipes`, `public/products` et `public/conseils`. Depuis le 11 novembre 2026, les nouveaux articles « Conseils » utilisent d'abord des photos libres de droits (Wikimedia Commons) avec crédit affiché sous la photo (`imageCredit`, `imageLicense`, `imageSource`) : c'est le cas des trois articles de Noël du 13 novembre.
 - **Console** : https://openart.ai.
 - **Identifiants publics** : aucun.
 - **Secrets** : aucun dans le dépôt.

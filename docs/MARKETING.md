@@ -8,13 +8,13 @@ Mis à jour le 13 novembre 2026. Compagnon de INFRA.md.
 - **Promesse** : « Recettes africaines & produits rares » (`src/lib/config.ts`). Les grands plats d'Afrique expliqués pas à pas, et les ingrédients introuvables en grande surface pour les réussir chez soi.
 - **Contenu** :
   - 58 recettes de 16 pays (Afrique de l'Ouest, centrale, de l'Est, australe et Madagascar), dont six thés, cafés et infusions (ataya, kinkeliba, chai kényan, rooibos glacé, buna, kahawa chungu) depuis le 19 octobre 2026, avec histoire du plat, ingrédients, étapes, astuces et valeurs nutritionnelles estimées ; une section « La cuisine de … » sur chaque page pays ;
-  - rubrique « Conseils » : 68 articles, dont 48 publiés et 20 programmés, trois par semaine (lundi, mercredi, vendredi) jusqu'au 28 décembre 2026 (`content/conseils/`, `docs/CONSEILS.md`, `docs/CONSEILS-CALENDRIER.md`) ;
+  - rubrique « Conseils » : 71 articles, dont 48 publiés au 13 novembre et 23 programmés, trois par semaine (lundi, mercredi, vendredi) jusqu'au 28 décembre 2026 (`content/conseils/`, `docs/CONSEILS.md`, `docs/CONSEILS-CALENDRIER.md`) ;
   - boutique de 125 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles (dont mortiers, marmites, mixeurs et objets de service), Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon ;
   - « Actus de la cuisine africaine » (depuis le 27 octobre 2026) : page `/actus` (20 actus), bloc de 4 actus sur l'accueil et 3 actus du pays sur chaque page pays, mis à jour 2 fois par jour (12 h et 19 h) par la veille actus ; chaque actu est résumée par nous, avec le lien vers sa source et le crédit de l'image ; depuis le 28 octobre 2026, toucher une actu ouvre son article complet (300 à 450 mots) sur sa propre page du site (`/actus/<adresse>`, trouvable par Google) ; jamais d'actu santé ni de vocabulaire de vente ;
   - « Top 10 » (depuis le 19 octobre 2026) : 10 classements de produits (ustensiles, ingrédients pour débuter, mortiers, marmites, mixeurs, épices, farines, livres, thés et cafés, service et thé), selon la note moyenne des acheteurs sur Amazon.fr, chacun relié aux recettes concernées.
 - **Lien recettes → boutique** : chaque ingrédient disponible en boutique est signalé « Produit rare » dans la recette, avec un bouton d'achat Amazon ; chaque fiche produit liste les recettes qui l'utilisent.
 - **Ton et image** : thème sombre « Braise », carte de l'Afrique en particules sur l'accueil (« Seize pays, une seule table. »), grandes photos, carrousels par type de plat.
-- **Photos** : photos OpenArt.
+- **Photos** : photos OpenArt ; photos libres de droits (Wikimedia Commons, crédit sous la photo) pour les articles « Conseils » récents, dont les trois articles de Noël.
 
 ## Modèle de rémunération
 
@@ -63,5 +63,5 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Aucun prix
 ## Les 3 priorités
 
 - Corriger le motif du refus AdSense du 31 octobre 2026, « contenu à faible valeur informative » (revérifié dans la console le 12 novembre) : étoffer les pages les plus minces, puis redemander l'examen. Le 9 novembre 2026, les 10 articles « Conseils » les plus courts ont été enrichis (origine, étapes, astuces, erreurs à éviter : de 165-255 mots à 350-430 mots) ; le site est prêt pour une nouvelle demande d'examen, que Jean envoie lui-même.
-- Écrire de nouveaux articles « Conseils » : il en reste 20 en réserve, qui se vide le 28 décembre 2026.
+- Écrire de nouveaux articles « Conseils » : il en reste 23 en réserve, qui se vide le 28 décembre 2026. Trois articles de Noël (menu de réveillon le 30 novembre, boissons de fête le 4 décembre, desserts le 9 décembre) y ont été ajoutés le 13 novembre 2026, en plus de l'article du jour (comme le Black Friday du 20 novembre) ; aucun autre article n'a été décalé.
 - Créer dans Amazon Partenaires un code de suivi par emplacement (recette, conseil, top, fiche, rubrique) : la table `CODES_SUIVI` est prête, tous encore à `keurcookfr-21`.
