@@ -503,6 +503,7 @@ const seeds: ProductSeed[] = [
  * blender Ninja 2-en-1 remplacé par le Ninja Detect 3-en-1 (catalog-nouveautes.ts).
  * 14 novembre 2026 : fonio précuit 1 kg (B0C78LFHJS) remplacé par le fonio bio Aduna 6 × 250 g (B0862DPW4P, en stock,
  * 4,3/5, 117 avis, 29,99 €), ancien produit indisponible.
+ * 14 novembre 2026 : yaji (B0CTTM79ZR) remis, de nouveau en vente sur Amazon.fr.
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
@@ -528,6 +529,8 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "huile-de-palme-rouge": { asin: "B0962X7DNX", label: "75 cl", priceCents: 1499, name: "Huile de palme rouge" },
   "pate-d-arachide": { asin: "B07VX8JBYN", label: "425 g", priceCents: 1349, name: "Pâte d'arachide" },
   "pulpe-de-noix-de-palme": { asin: "B07C1KX53F", label: "800 g", priceCents: 1200, name: "Pulpe de noix de palme" },
+  // Masqué le 09/11/2026 (indisponible), remis le 14/11/2026 : B0CTTM79ZR de nouveau en vente sur Amazon.fr (180 g, 24,99 €, 4,4/5).
+  "yaji-suya": { asin: "B0CTTM79ZR", label: "180 g", priceCents: 2499 },
 };
 
 // Produits ajoutés le 27/09/2026 (catalog-nouveautes.ts), à la suite pour garder les identifiants existants.

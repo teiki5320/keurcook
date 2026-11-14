@@ -5,7 +5,7 @@ date: 2026-10-16
 theme: epices
 resume: Le yaji est le mélange d'épices du suya, la brochette grillée du Nigeria. Il associe de l'arachide torréfiée moulue, du piment, du gingembre et d'autres épices, et forme une croûte relevée sur la viande.
 recettes: suya, riz-jollof, kelewele
-produits: poivre-de-selim
+produits: yaji-suya, poivre-de-selim
 image: /conseils/quest-ce-que-le-yaji.webp
 imageAlt: Une coupelle de poudre de yaji ocre à côté de brochettes de bœuf grillées.
 imagePrompt: Photographie culinaire, coupelle en bois remplie de poudre de yaji ocre et granuleuse, brochettes de bœuf grillées enrobées d'épices à côté, rondelles d'oignon rouge, fond sombre, lumière chaude orangée de braises, sans texte ni logo, format 16:9.
@@ -18,7 +18,7 @@ Le yaji est le mélange d'épices qui enrobe le [suya nigérian](/recette/suya),
 
 Sa base est l'arachide torréfiée et moulue, souvent sous forme de kuli-kuli, une galette d'arachide pressée puis réduite en poudre. On y ajoute du piment en poudre, du gingembre, et selon les recettes de l'ail, de l'oignon séché, du bouillon en poudre ou d'autres épices. Chaque vendeur garde un peu sa propre formule, plus ou moins piquante.
 
-Le yaji a une texture granuleuse et un goût à la fois grillé, piquant et légèrement sucré. À la cuisson, l'arachide dore et forme une croûte savoureuse autour de la viande.
+Le [yaji](/produit/yaji-suya) a une texture granuleuse et un goût à la fois grillé, piquant et légèrement sucré. À la cuisson, l'arachide dore et forme une croûte savoureuse autour de la viande.
 
 À noter : comme il est fait à base d'arachide, pensez à le signaler à vos invités allergiques.
 

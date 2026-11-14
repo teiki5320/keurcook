@@ -5,7 +5,7 @@ date: 2026-11-04
 theme: sauces
 resume: Utilisez la fonction gril, placez les brochettes près de la résistance sur une grille au-dessus d'une plaque, et retournez-les à mi-cuisson en surveillant le yaji.
 recettes: suya, alloco, kelewele
-produits: brochettes-en-metal
+produits: yaji-suya, brochettes-en-metal
 image: /conseils/griller-des-brochettes-suya-au-four.webp
 imageAlt: Des brochettes de bœuf enrobées d'épices rouges sur une grille de four, avec oignon rouge et tomates.
 imagePrompt: Photographie culinaire, brochettes de bœuf finement tranché enrobées d'épices yaji rouge brun sur une grille de four, rondelles d'oignon rouge et de tomate à côté, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -19,7 +19,7 @@ Pour un suya au four, utilisez la fonction gril (la résistance du haut) plutôt
 1. Taillez la viande en tranches très fines, c'est la clé d'une cuisson rapide. Un passage au congélateur juste assez pour la raffermir aide à la couper.
 2. Si vous utilisez des pics en bois, faites-les tremper dans l'eau avant usage pour qu'ils ne brûlent pas.
 3. Enfilez la viande en accordéon, sans trop serrer, pour que la chaleur circule.
-4. Badigeonnez d'huile, salez, puis enrobez généreusement de yaji. Laissez reposer le temps de préchauffer le four. Pour la composition du mélange et ses autres usages, lisez [qu'est-ce que le yaji](/conseils/quest-ce-que-le-yaji).
+4. Badigeonnez d'huile, salez, puis enrobez généreusement de [yaji](/produit/yaji-suya). Laissez reposer le temps de préchauffer le four. Pour la composition du mélange et ses autres usages, lisez [qu'est-ce que le yaji](/conseils/quest-ce-que-le-yaji).
 
 ## La cuisson au four
 

@@ -27,7 +27,7 @@ Ajoutez toujours peu à peu : on peut en remettre, jamais en retirer.
 
 ## Les mélanges d'épices pimentés
 
-Certains mélanges contiennent déjà du piment. Le [berbéré](/produit/berbere) du [doro wat](/recette/doro-wat) et le [yaji](/conseils/quest-ce-que-le-yaji) du [suya](/recette/suya) peuvent être plus ou moins forts selon les lots. Goûtez une pincée avant de cuisiner, et commencez par une quantité réduite si vous découvrez le produit.
+Certains mélanges contiennent déjà du piment. Le [berbéré](/produit/berbere) du [doro wat](/recette/doro-wat) et le [yaji](/produit/yaji-suya) du [suya](/recette/suya) peuvent être plus ou moins forts selon les lots. Goûtez une pincée avant de cuisiner, et commencez par une quantité réduite si vous découvrez le produit.
 
 ## Servir le piment à part
 
