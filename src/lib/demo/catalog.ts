@@ -501,6 +501,8 @@ const seeds: ProductSeed[] = [
  * (état et date de vérification dans src/lib/demo/verifications-amazon.json).
  * 9 novembre 2026 : yaji (B0CTTM79ZR, 180 g, 24,99 €) masqué, indisponible sur Amazon.fr sans équivalent bien noté ;
  * blender Ninja 2-en-1 remplacé par le Ninja Detect 3-en-1 (catalog-nouveautes.ts).
+ * 14 novembre 2026 : fonio précuit 1 kg (B0C78LFHJS) remplacé par le fonio bio Aduna 6 × 250 g (B0862DPW4P, en stock,
+ * 4,3/5, 117 avis, 29,99 €), ancien produit indisponible.
  * Les produits sans offre sont masqués de la boutique.
  */
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
@@ -509,7 +511,7 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   berbere: { asin: "B0B576RTWD", label: "65 g", priceCents: 850 },
   "poivre-de-selim": { asin: "B0FGDXL99W", label: "50 g", priceCents: 999 },
   "graines-d-egusi": { asin: "B0DLV721PS", label: "50 g", priceCents: 899, name: "Egusi moulu (pistache africaine)" },
-  fonio: { asin: "B0C78LFHJS", label: "1 kg", priceCents: 990 },
+  fonio: { asin: "B0862DPW4P", label: "6 × 250 g", priceCents: 2999, name: "Fonio bio Aduna (lavé, cuit en 3 minutes)" },
   "attieke-sec": { asin: "B09239KJ74", label: "3 × 500 g", priceCents: 3140 },
   "couscous-de-mil": { asin: "B0DWKQHXLN", label: "500 g", priceCents: 990 },
   "farine-de-teff": { asin: "B0C1TBB24S", label: "1 kg", priceCents: 2496 },
