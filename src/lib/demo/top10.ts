@@ -431,7 +431,7 @@ const tops: Top10[] = [
       {
         product: "caldero-aluminium-7-litres",
         pourquoi:
-          "La grande version du caldero : près de 7 litres d'aluminium poli, pour les grandes portions de riz, de haricots et de ragoûts. L'aluminium répartit la chaleur, ce qui aide le riz à cuire de façon régulière. On cuit le riz à feu doux, couvercle fermé.",
+          "La grande version du caldero : près de 7 litres d'aluminium avec un couvercle en verre, pour les grandes portions de riz, de haricots et de ragoûts. L'aluminium répartit la chaleur, ce qui aide le riz à cuire de façon régulière. On cuit le riz à feu doux, couvercle fermé.",
         recettes: ["riz-jollof", "thiere-mbuum", "fufu-light-soup", "waakye", "eru", "koki", "poulet-odika", "akara", "pepper-soup", "groundnut-soup", "mbongo-tchobi", "matoke"],
       },
     ],

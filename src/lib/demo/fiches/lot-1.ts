@@ -20,7 +20,7 @@
  *   - faitout-en-fonte-d-aluminium — Faitout en fonte d'aluminium 28 cm
  *   - faitout-fonte-aluminium-36-cm — Grande marmite faitout en fonte d'aluminium 36 cm, 13 L (Kamberg)
  *   - faitout-inox-24-cm — Faitout en inox 18/10 24 cm (Beka Polo)
- *   - caldero-aluminium-7-litres — Caldero traditionnel en aluminium poli 7 L (IMUSA)
+ *   - caldero-aluminium-7-litres — Caldero en aluminium 7 L avec couvercle en verre (Alpine Cuisine)
  *   - cocotte-staub-28-cm — Cocotte ronde en fonte 28 cm, 6,7 L (Staub)
  *   - cocotte-fonte-emaillee-28-cm — Cocotte ronde en fonte émaillée 28 cm, 6,6 L (Overmont)
  *   - cocotte-fonte-emaillee-4-litres — Cocotte ronde en fonte émaillée 4,1 L (Amazon Basics)
@@ -300,7 +300,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     origine:
       "Le mot caldero vient de l'espagnol et désigne un chaudron. Dans les Caraïbes et en Amérique latine, c'est la marmite à riz de tous les foyers, aux parois arrondies et au couvercle bien ajusté. Les cuisinières d'Afrique de l'Ouest connaissent une marmite très proche, en aluminium épais, sur laquelle mijotent le riz au poisson et les sauces.\n\nCette marmite est en fonte d'aluminium : le métal est coulé dans un moule, ce qui donne des parois et un fond plus épais qu'une casserole emboutie dans une simple tôle.",
     choisir:
-      "Pour un riz avec une belle croûte au fond, l'épaisseur du métal est le critère principal : un fond mince brûle le riz avant qu'il ne dore. La forme haute et le couvercle lourd gardent la vapeur pendant que les grains finissent de gonfler.\n\nPour les grandes tablées, le [caldero IMUSA de 7 litres](/produit/caldero-aluminium-7-litres) reprend la même forme en plus grand. Si vous cuisinez surtout des sauces longues, le [faitout en fonte d'aluminium de 28 cm](/produit/faitout-en-fonte-d-aluminium), plus large, laisse mieux réduire. Sur une plaque à induction, choisissez plutôt une [marmite en inox](/produit/marmite-inox-13-litres) ou une [cocotte en fonte](/produit/cocotte-fonte-emaillee-28-cm).",
+      "Pour un riz avec une belle croûte au fond, l'épaisseur du métal est le critère principal : un fond mince brûle le riz avant qu'il ne dore. La forme haute et le couvercle lourd gardent la vapeur pendant que les grains finissent de gonfler.\n\nPour les grandes tablées, le [caldero de 7 litres](/produit/caldero-aluminium-7-litres) reprend la même forme en plus grand. Si vous cuisinez surtout des sauces longues, le [faitout en fonte d'aluminium de 28 cm](/produit/faitout-en-fonte-d-aluminium), plus large, laisse mieux réduire. Sur une plaque à induction, choisissez plutôt une [marmite en inox](/produit/marmite-inox-13-litres) ou une [cocotte en fonte](/produit/cocotte-fonte-emaillee-28-cm).",
     conserver:
       "L'aluminium noircit et se tache au contact des produits alcalins : évitez les pastilles pour lave-vaisselle et les détergents agressifs. Une éponge douce et un peu de liquide vaisselle suffisent. Si l'intérieur se ternit, faire bouillir de l'eau additionnée d'un peu de vinaigre lui redonne de la clarté.",
     remplacer:
@@ -322,11 +322,11 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
   },
   "caldero-aluminium-7-litres": {
     origine:
-      "IMUSA est une entreprise colombienne fondée en 1934 dans la région de Medellín. Elle fabrique dès ses débuts des ustensiles en aluminium, un métal alors rare dans les cuisines du pays, et fait aujourd'hui partie du groupe français SEB. Son caldero est devenu un classique dans les foyers d'Amérique latine.\n\nEn République dominicaine, la couche de riz croustillant qui reste au fond s'appelle concón ; à Porto Rico, on parle de pegao, mot qui vient de l'espagnol « collé ». La même idée existe au Sénégal avec le xoon.",
+      "Le caldero est la marmite à riz des cuisines d'Amérique latine et des Caraïbes : une forme haute et ronde, en aluminium épais, avec un couvercle qui garde la vapeur. Celui-ci, de la marque Alpine Cuisine, est en aluminium, avec un couvercle en verre et une poignée en bakélite.\n\nEn République dominicaine, la couche de riz croustillant qui reste au fond s'appelle concón ; à Porto Rico, on parle de pegao, mot qui vient de l'espagnol « collé ». La même idée existe au Sénégal avec le xoon.",
     choisir:
-      "Avec près de 7 litres, ce caldero vise les grandes portions : riz pour huit à dix personnes, haricots en quantité, ragoûts pour plusieurs repas. Sa finition en aluminium poli le rend facile à surveiller et à nettoyer.\n\nLa [marmite type caldero](/produit/marmite-en-aluminium) reprend le même principe dans un format plus courant. Pour encore plus de volume ou une cuisson sur induction, la [marmite traiteur en inox de 13,5 litres](/produit/marmite-inox-13-litres) est adaptée. Les sauces qui doivent réduire longtemps, comme le mafé, trouvent davantage de surface dans le [grand faitout de 36 cm](/produit/faitout-fonte-aluminium-36-cm).",
+      "Avec près de 7 litres, ce caldero vise les grandes portions : riz pour huit à dix personnes, haricots en quantité, ragoûts pour plusieurs repas. Son couvercle en verre permet de suivre la cuisson sans le soulever.\n\nLa [marmite type caldero](/produit/marmite-en-aluminium) reprend le même principe dans un format plus courant. Pour encore plus de volume ou une cuisson sur induction, la [marmite traiteur en inox de 13,5 litres](/produit/marmite-inox-13-litres) est adaptée. Les sauces qui doivent réduire longtemps, comme le mafé, trouvent davantage de surface dans le [grand faitout de 36 cm](/produit/faitout-fonte-aluminium-36-cm).",
     conserver:
-      "L'aluminium poli garde son éclat si on le lave à la main, à l'eau chaude savonneuse, et qu'on le sèche aussitôt. Le lave-vaisselle le ternit et le noircit. Pour décoller un fond de riz, laissez simplement tremper un moment au lieu de gratter avec un ustensile métallique.",
+      "Sa fiche Amazon le dit lavable au lave-vaisselle ; un lavage à la main, à l'eau chaude savonneuse, suivi d'un séchage aussitôt, ménage toutefois mieux l'aluminium. Pour décoller un fond de riz, laissez simplement tremper un moment au lieu de gratter avec un ustensile métallique.",
     remplacer:
       "Une grande marmite à fond épais et un couvercle lourd font le même travail. Pour obtenir une croûte au fond sans caldero, versez un filet d'huile dans la casserole avant le riz et laissez les dernières minutes de cuisson se faire à feu doux, sans remuer.",
     enCuisine:
@@ -340,7 +340,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
       {
         question: "Peut-on le mettre au four ?",
         reponse:
-          "La fiche du produit ne le précise pas pour ce modèle. Dans le doute, réservez-le à la cuisson sur le feu.",
+          "Sa fiche Amazon l'indique compatible avec le four. Sa poignée est en bakélite : vérifiez sur la notice la température conseillée avant de l'enfourner.",
       },
     ],
   },
@@ -376,7 +376,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     conserver:
       "L'inox supporte le lavage énergique. Des reflets bleutés ou des auréoles blanches peuvent apparaître après une forte chauffe ou une eau calcaire : un peu de vinaigre blanc sur une éponge les fait disparaître. Pleine, elle pèse lourd : posez-la sur le feu avant de la remplir d'eau.",
     remplacer:
-      "Pour une grande tablée, deux marmites moyennes sur deux feux remplacent une grande, en partageant la sauce à la fin. Le [caldero IMUSA de 7 litres](/produit/caldero-aluminium-7-litres) suffit pour une dizaine de portions de riz. Pour les bouillons, une grande cocotte en fonte fait aussi l'affaire.",
+      "Pour une grande tablée, deux marmites moyennes sur deux feux remplacent une grande, en partageant la sauce à la fin. Le [caldero de 7 litres](/produit/caldero-aluminium-7-litres) suffit pour une dizaine de portions de riz. Pour les bouillons, une grande cocotte en fonte fait aussi l'affaire.",
     enCuisine:
       "Sa contenance accueille le [thiéboudienne](/recette/thieboudienne) des jours de fête, le [riz jollof](/recette/riz-jollof) pour une grande famille ou les paquets de [koki](/recette/koki), qui cuisent deux heures sur un lit de feuilles de bananier. Pour choisir le bon contenant selon la recette, voyez [Quelle marmite pour mijoter les sauces africaines ?](/conseils/quelle-marmite-pour-les-sauces).",
     faq: [

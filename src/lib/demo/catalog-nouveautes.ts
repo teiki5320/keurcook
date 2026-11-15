@@ -1242,10 +1242,10 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "caldero-aluminium-7-litres",
-    name: "Caldero traditionnel en aluminium poli 7 L (IMUSA)",
+    name: "Caldero en aluminium 7 L avec couvercle en verre (Alpine Cuisine)",
     category: "ustensiles",
-    shortDescription: "Le caldero en aluminium poli de 7 litres, pour le riz, les haricots et les ragoûts en grande portion.",
-    description: "Ce caldero IMUSA en aluminium poli, avec couvercle, contient près de 7 litres. Conçu pour répartir la chaleur, il permet de préparer de grandes portions de riz, de soupes, de haricots et de ragoûts.\n\nC'est la grande version de la marmite type caldero de notre boutique.",
+    shortDescription: "Un caldero en aluminium de près de 7 litres, avec couvercle en verre, pour le riz, les haricots et les ragoûts en grande portion.",
+    description: "Ce caldero Alpine Cuisine en aluminium contient près de 7 litres (6,6 litres selon sa fiche). Son couvercle en verre permet de surveiller la cuisson, et l'aluminium répartit la chaleur : il convient aux grandes portions de riz, de soupes, de haricots et de ragoûts.\n\nC'est la grande version de la marmite type caldero de notre boutique.",
     originCountry: null,
     originRegion: null,
     composition: null,
@@ -1253,7 +1253,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Cuire le riz à feu doux, couvercle fermé. Laver à l'eau chaude savonneuse et bien sécher.",
     conservation: null,
     tags: ["marmite", "aluminium", "riz"],
-    amazon: { asin: "B0DQ9H8QVL", label: "7 L", priceCents: 4970 },
+    // 15/11/2026 : B0DQ9H8QVL (IMUSA 7 L) indisponible ; remplacé par le caldero Alpine Cuisine 7 L (fiche vérifiée le 15/11/2026, 4,3/5 sur 731 évaluations).
+    amazon: { asin: "B0CBVZQZGN", label: "7 L", priceCents: 7941 },
   },
   {
     slug: "cocotte-staub-28-cm",
