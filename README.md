@@ -31,7 +31,7 @@ Pas de newsletter pour l'instant : le formulaire a été retiré en attendant le
 ### Boutique et Amazon Partenaires
 
 - 126 produits en 9 gammes : Épices & aromates, Farines & céréales, Feuilles & fleurs séchées, Poissons & fumés, Huiles & pâtes, Snacks & fruits secs, Cafés & thés, Ustensiles, Livres de cuisine. Produits retenus : plus de 3,5 étoiles sur Amazon.
-- Depuis le 9 novembre 2026, chaque fiche produit (125 en ligne) a une section « Le produit en détail » (250 à 450 mots) et chaque page pays (16) une section « La cuisine du … en détail » (400 à 700 mots), écrites dans `src/lib/demo/fiches/` (règles : `docs/FICHES.md`).
+- Depuis le 9 novembre 2026, chaque fiche produit (126 en ligne) a une section « Le produit en détail » (250 à 450 mots) et chaque page pays (16) une section « La cuisine du … en détail » (400 à 700 mots), écrites dans `src/lib/demo/fiches/` (règles : `docs/FICHES.md`).
 - Liens construits par `amazonUrl(asin, emplacement)` (`src/lib/amazon.ts`) à partir du champ `amazonAsin` (rempli depuis les offres de `src/lib/demo/catalog*.ts`) ; le code de suivi est choisi dans une table unique, `CODES_SUIVI`, par emplacement (recette, conseil, top, fiche, rubrique = boutique et pays). Depuis le 28 octobre 2026, tous les emplacements utilisent encore le tag partenaire `keurcookfr-21` (`NEXT_PUBLIC_AMAZON_TAG` pour le changer) ; un code par emplacement pourra y être écrit quand il sera créé dans Amazon Partenaires. `tests/amazon.test.ts` et `tests/sortie/` vérifient que chaque lien porte un code de la table. Ce tag vient du nouveau compte Amazon Partenaires ouvert le 18 octobre 2026 (l'ancien compte a été fermé par Amazon).
 - Aucun prix affiché sur le site : seul le prix d'Amazon fait foi.
 - **Disponibilité** : `npm run verifier-produits` (sur le Mac, pas sur GitHub ; `-- --ecrire` pour enregistrer, `--lot 30` pour un petit lot) ouvre chaque fiche Amazon.fr dans Chrome et note dans `src/lib/demo/verifications-amazon.json` la date et l'état (bouton « Ajouter au panier » présent ou non) ; une offre indisponible n'est plus affichée et revient d'elle-même quand elle redevient disponible. Premier passage sur tout le catalogue le 28 octobre 2026.
@@ -49,7 +49,7 @@ Données dans `src/lib/demo/top10.ts`, vérifiées par `tests/top10.test.ts`. Ch
 ### Publicité (Google AdSense)
 
 - Compte AdSense `pub-2680784147246798` (comptes de gestion sur `admin@toakeur.com`). Script chargé dans `src/app/layout.tsx`, emplacements « Publicité » (`src/components/ads/AdSlot.tsx`, `src/lib/ads.ts`) et `public/ads.txt` en place.
-- **Examen refusé par Google le 31 octobre 2026** (demande faite le 12 octobre 2026) : Google demande de corriger des problèmes sur le site avant d'y diffuser des annonces (e-mail AdSense du 31 octobre 2026, aucun nouvel e-mail pour keurcook.com au 14 novembre 2026 ; motif lu dans la console, page Sites, le 14 novembre 2026 : « contenu à faible valeur informative »). Aucune annonce ne s'affiche ; il faudra corriger puis redemander l'examen.
+- **Examen refusé par Google le 31 octobre 2026** (demande faite le 12 octobre 2026) : Google demande de corriger des problèmes sur le site avant d'y diffuser des annonces (e-mail AdSense du 31 octobre 2026, aucun nouvel e-mail pour keurcook.com au 15 novembre 2026 ; motif lu dans la console, page Sites, le 15 novembre 2026 : « contenu à faible valeur informative »). Aucune annonce ne s'affiche ; il faudra corriger puis redemander l'examen.
 
 ### Pinterest
 
