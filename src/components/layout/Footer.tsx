@@ -31,6 +31,8 @@ export function Footer() {
         <div>
           <p className="font-semibold text-cream">Informations</p>
           <ul className="mt-3 space-y-2 text-sm">
+            <li><Link prefetch={false} href="/a-propos" className="hover:text-white">À propos</Link></li>
+            <li><Link prefetch={false} href="/contact" className="hover:text-white">Contact</Link></li>
             <li><Link prefetch={false} href="/conditions" className="hover:text-white">Conditions d&apos;utilisation</Link></li>
             <li><Link prefetch={false} href="/mentions-legales" className="hover:text-white">Mentions légales</Link></li>
             <li><Link prefetch={false} href="/confidentialite" className="hover:text-white">Politique de confidentialité</Link></li>

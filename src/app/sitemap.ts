@@ -51,11 +51,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/conseils": latest(conseilsAt),
     // Actus lues en direct depuis la veille (2 passages par jour) : la page change chaque jour.
     "/actus": new Date(),
+    "/a-propos": legal("a-propos"),
+    "/contact": legal("contact"),
     "/conditions": legal("conditions"),
     "/mentions-legales": legal("mentions-legales"),
     "/confidentialite": legal("confidentialite"),
   };
-  const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/actus", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
+  const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/actus", "/a-propos", "/contact", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
     url: `${base}${path}`,
     lastModified: pageUpdated[path],
     changeFrequency: ["", "/recettes", "/boutique", "/actus"].includes(path) ? ("daily" as const) : ["/pays", "/conseils"].includes(path) ? ("weekly" as const) : ("yearly" as const),
