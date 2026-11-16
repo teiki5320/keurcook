@@ -408,7 +408,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Faire revenir les épices quelques instants dans l'huile d'olive avant d'ajouter la tomate, pour libérer leur parfum.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["épices", "Tunisie", "mélange"],
-    amazon: { asin: "B0CKZLHRCM", label: "200 g", priceCents: 1495 },
+    amazon: { asin: "B0HM8B7YBS", label: "100 g", priceCents: 895 },
   },
   {
     slug: "dukkah",
@@ -735,7 +735,7 @@ export const nouveauxProduits: NouveauProduit[] = [
   },
   {
     slug: "saladier-en-bois",
-    name: "Grand saladier en bois d'acacia 26 cm",
+    name: "Grand saladier en bois d'acacia 25 cm",
     category: "ustensiles",
     shortDescription: "Un grand saladier en bois d'acacia pour le service, les salades et le plat commun à partager.",
     description: "Dans de nombreuses cuisines africaines, on partage le repas autour d'un plat commun. Ce grand saladier en acacia s'y prête bien, tout comme au service des salades et des fruits.\n\nIl met en valeur le thiakry, l'attiéké ou une salade d'avocat.",
@@ -746,7 +746,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Servir le plat commun ou une salade ; éviter les liquides très chauds. Laver rapidement à la main, sécher et huiler de temps en temps.",
     conservation: null,
     tags: ["saladier", "bois", "service"],
-    amazon: { asin: "B004IZ20MO", label: "26 cm", priceCents: 3131 },
+    amazon: { asin: "B004NSREQI", label: "25 cm", priceCents: 3248 },
   },
   {
     slug: "bouilloire-emaillee",

@@ -20,7 +20,7 @@
  *   - spatules-en-bois — Ustensiles de cuisine en bois de hêtre (lot de 4)
  *   - brochettes-en-metal — Brochettes en métal 40 cm (lot de 30)
  *   - feuilles-de-bananier-fraiches — Feuilles de bananier fraîches (lot de 100)
- *   - saladier-en-bois — Grand saladier en bois d'acacia 26 cm
+ *   - saladier-en-bois — Grand saladier en bois d'acacia 25 cm
  *   - saladiers-acacia-lot-de-2 — Lot de 2 saladiers en bois d'acacia 20 cm, 760 ml
  *   - plateau-acacia-amazon-basics — Plateau de service en bois d'acacia 43 × 30 cm (Amazon Basics)
  *   - plateau-rond-bambou-40-cm — Plateau de service rond en bambou 40 cm (5five)
@@ -451,7 +451,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     origine:
       "Avant la vaisselle industrielle, la table africaine était faite de calebasses, ces courges séchées et évidées, et de bols taillés dans le bois. On y servait le plat commun que chacun partage, à la main ou à la cuillère, assis autour du même récipient.\n\nCe grand saladier en acacia s'inscrit dans cette tradition. L'acacia est un bois dense, au grain serré et aux veines contrastées, apprécié pour la vaisselle parce qu'il absorbe peu les liquides.",
     choisir:
-      "Avec 26 cm de diamètre, il convient à un plat principal pour quatre à six personnes ou à une grande salade. Pour des portions individuelles, le [lot de deux saladiers de 20 cm](/produit/saladiers-acacia-lot-de-2) est plus adapté. Pour servir des sauces ou des accompagnements en petite quantité, les [bols en manguier](/produit/bols-manguier-lot-de-3) complètent bien la table. Et pour apporter boissons et beignets, pensez au [plateau en acacia](/produit/plateau-acacia-amazon-basics).",
+      "Avec 25 cm de diamètre, il convient à un plat principal pour quatre à six personnes ou à une grande salade. Pour des portions individuelles, le [lot de deux saladiers de 20 cm](/produit/saladiers-acacia-lot-de-2) est plus adapté. Pour servir des sauces ou des accompagnements en petite quantité, les [bols en manguier](/produit/bols-manguier-lot-de-3) complètent bien la table. Et pour apporter boissons et beignets, pensez au [plateau en acacia](/produit/plateau-acacia-amazon-basics).",
     conserver:
       "Si le bois devient terne ou rêche, poncez très légèrement l'intérieur au papier de verre fin, dépoussiérez, puis nourrissez-le avec une huile alimentaire neutre. Laissez pénétrer une nuit et essuyez l'excédent. Rangez-le à l'abri du soleil direct et loin du four : la chaleur sèche peut le fendre. Une petite fente se rebouche rarement, d'où l'intérêt de l'entretenir avant.",
     remplacer:
@@ -475,7 +475,7 @@ export const fiches: Partial<Record<(typeof SLUGS)[number], ProductDetail>> = {
     origine:
       "Manger dans un bol de bois est une habitude ancienne sur tout le continent, des bols sculptés du Sahel aux écuelles des hauts plateaux de l'Est. Le bois isole bien : un plat tiède le reste plus longtemps, et le bol ne brûle pas les doigts.\n\nCes deux bols en acacia sont recouverts d'un revêtement alimentaire qui protège la surface. L'acacia fait partie des bois durs les plus utilisés pour la vaisselle, grâce à sa densité et à son grain serré qui limite les infiltrations.",
     choisir:
-      "Ces bols de taille généreuse servent de bol individuel pour un plat complet : riz et sauce, attiéké et poisson, salade composée. Pour un plat commun posé au centre, le [grand saladier de 26 cm](/produit/saladier-en-bois) convient mieux. Pour les petites portions, sauces ou arachides grillées, regardez les [bols en manguier](/produit/bols-manguier-lot-de-3) ; pour les desserts et les fruits, les [bols en noix de coco](/produit/bols-noix-de-coco-lot-de-2) apportent une touche différente.",
+      "Ces bols de taille généreuse servent de bol individuel pour un plat complet : riz et sauce, attiéké et poisson, salade composée. Pour un plat commun posé au centre, le [grand saladier de 25 cm](/produit/saladier-en-bois) convient mieux. Pour les petites portions, sauces ou arachides grillées, regardez les [bols en manguier](/produit/bols-manguier-lot-de-3) ; pour les desserts et les fruits, les [bols en noix de coco](/produit/bols-noix-de-coco-lot-de-2) apportent une touche différente.",
     conserver:
       "Le revêtement alimentaire protège le bois, mais s'use avec les lavages. Quand l'intérieur paraît sec ou blanchâtre, passez une fine couche d'huile alimentaire neutre avec un chiffon, laissez agir quelques heures, puis essuyez. Ne laissez jamais un bol sale dans l'évier jusqu'au lendemain : l'eau stagnante gonfle les fibres et fait apparaître des fissures.",
     remplacer:
