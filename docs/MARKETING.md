@@ -41,7 +41,7 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Aucun prix
 
 ## Canaux
 
-- **Référencement naturel** : sitemap (recettes, pays, produits, articles publiés, Top 10), données structurées (Recipe, Article, FAQPage, fil d'Ariane), textes alternatifs, titres et descriptions calibrés. Domaine déclaré dans Google Search Console (248 pages indexées sur 259 au relevé du Studio du 27 octobre 2026) ; pages signalées à Bing après chaque publication et chaque lundi et aux autres moteurs par IndexNow ; depuis le 20 octobre 2026, titres, descriptions et FAQ retravaillés page par page d'après Search Console (journal `docs/referencement.md`). ✅
+- **Référencement naturel** : sitemap (recettes, pays, produits, articles publiés, Top 10), données structurées (Recipe, Article, FAQPage, fil d'Ariane), textes alternatifs, titres et descriptions calibrés. Domaine déclaré dans Google Search Console (245 pages indexées sur les 267 envoyées, données du 13 novembre, vérifié dans la console le 16 novembre 2026 ; 248 sur 259 au 27 octobre) ; pages signalées à Bing après chaque publication et chaque lundi et aux autres moteurs par IndexNow ; depuis le 20 octobre 2026, titres, descriptions et FAQ retravaillés page par page d'après Search Console (journal `docs/referencement.md`). ✅
 - **Contenu régulier** : trois articles « Conseils » par semaine (lundi, mercredi, vendredi), publiés automatiquement. ✅
 - **Actus** : depuis le 27 octobre 2026, rubrique « Actus de la cuisine africaine » (`/actus`), bloc sur l'accueil et sur chaque page pays, mis à jour 2 fois par jour par la veille actus ; contenu frais sans reconstruire le site ; depuis le 28 octobre 2026, chaque actu a son article complet sur sa propre page (site reconstruit 2 fois par jour, à 12 h 50 et 19 h 50). ✅
 - **Pinterest** : compte « Keur Cook » branché, site revendiqué, bouton « Épingler » sur chaque recette. 52 recettes épinglées du 2 au 14 octobre 2026 dans les tableaux par région par l'ancienne routine `keurcook-epingles-pinterest` (plus programmée). Publication automatique par l'API (comme Keur Déco, 5 épingles par jour au plus) : clé du compte créée le 23 octobre 2026, les six boissons épinglées le 24 octobre, les 58 recettes sont épinglées. ✅
@@ -52,7 +52,7 @@ Les recettes et les conseils sont gratuits et attirent les visiteurs. Aucun prix
 
 ## Mesures
 
-- **Pages indexées par Google** : 248 sur 259 ; 11 pas encore, dont 7 inconnues de Google et 4 détectées non explorées (relevé du Studio, 27 octobre 2026)
+- **Pages indexées par Google** : 245 sur les 267 envoyées, 22 pas encore (Search Console, données du 13 novembre, vérifié le 16 novembre 2026 ; 248 sur 259 au relevé du Studio du 27 octobre)
 - **Adresses du sitemap** : 274 (16 novembre 2026, dont 49 articles « Conseils », 12 articles d'actus et les pages À propos et Contact ajoutées le 16 novembre ; 270 le 15 novembre ; 269 les 13 et 14 novembre ; 268 les 11 et 12 novembre ; 267 les 9 et 10 novembre ; 266 les 6, 7 et 8 novembre ; 264 le 5 novembre ; 263 le 4 novembre ; 260 le 3 et le 2 novembre ; 258 le 1er et le 31 octobre ; 257 le 30 octobre ; 254 le 29 octobre ; 264 le 28 octobre au matin, avant le retrait des contenus du Maghreb du sitemap le même jour) ; le nombre grandit 2 fois par jour avec les nouveaux articles d'actus
 - **Clics, achats et commissions Amazon** : à vérifier dans la console (partenaires.amazon.fr)
 - **Affichages et revenus des annonces** : aucun, examen AdSense refusé le 31 octobre 2026 pour « contenu à faible valeur informative » (adsense.google.com)
