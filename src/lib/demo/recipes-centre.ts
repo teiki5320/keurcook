@@ -9,7 +9,7 @@ export const recipesAfriqueCentrale: RecipeSeed[] = [
     region: "Douala et Yaoundé",
     course: "mijotes",
     shortDescription: "Poulet doré et plantains mûrs sautés avec carottes, haricots verts et poivrons.",
-    seoTitle: "Poulet DG : recette du Cameroun au plantain",
+    seoTitle: "Poulet DG du Cameroun : recette au plantain mûr",
     seoDescription: "Recette du poulet DG camerounais : poulet doré, plantains mûrs frits, carottes, haricots verts et poivron mijotés ensemble. Le plat de fête de Douala.",
     faq: [
       { question: "Que veut dire « DG » dans poulet DG ?", answer: "DG signifie « directeur général ». Le plat serait né dans les années 1980 dans les restaurants de Douala, où il était, dit-on, réservé aux tables des patrons." },

@@ -1,6 +1,6 @@
 ---
 title: Comment préparer l'ataya, le thé sénégalais en trois services ?
-seoTitle: Ataya : préparer le thé sénégalais en 3 services
+seoTitle: Thé sénégalais (ataya) : le préparer en 3 services
 description: Le thé ataya du Sénégal se prépare avec du thé vert, du sucre et de la menthe, servi en trois tournées. Matériel, étapes et astuces pour la mousse.
 date: 2026-09-28
 theme: cafe-the
@@ -39,5 +39,7 @@ Le premier verre est le plus corsé et le plus amer. Pour le deuxième, on remet
 - Plus vous versez de haut, plus la mousse est abondante. Entraînez-vous au-dessus d'un plateau.
 - Goûtez avant de servir et ajustez le sucre : chaque famille a sa préférence.
 - Rincez les verres entre deux tournées si plusieurs personnes boivent dans les mêmes.
+
+Pour les quantités exactes de thé, de sucre et d'eau à chaque tournée, suivez notre [recette de l'ataya](/recette/ataya).
 
 Si vous aimez les boissons sénégalaises, essayez aussi le [café Touba](/recette/cafe-touba), parfumé au poivre de Selim, ou un [jus de bissap](/recette/jus-de-bissap) bien frais.

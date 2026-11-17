@@ -12,6 +12,13 @@ export const recipesBoissons: RecipeSeed[] = [
     region: "Dakar",
     course: "douceurs",
     shortDescription: "Le thé vert sénégalais, bouilli avec du sucre, longuement moussé puis servi en trois tournées.",
+    seoTitle: "Ataya : recette du thé vert du Sénégal en 3 tournées",
+    seoDescription: "Recette de l'ataya, le thé sénégalais : thé vert gunpowder bouilli avec du sucre, mousse versée de haut, puis trois tournées de plus en plus sucrées.",
+    faq: [
+      { question: "Pourquoi sert-on l'ataya en trois tournées ?", answer: "Les trois verres sont préparés sur les mêmes feuilles : le premier est fort et amer, le deuxième plus doux, souvent parfumé à la menthe, le troisième très sucré. Les Sénégalais parlent des « trois normes » de l'ataya." },
+      { question: "Quel thé utiliser pour l'ataya ?", answer: "Du thé vert de Chine en grains roulés, le [thé vert gunpowder](/produit/the-vert-gunpowder), bouilli dans une théière en métal avec beaucoup de sucre." },
+      { question: "Comment faire mousser le thé sénégalais ?", answer: "En le versant de haut dans un petit verre, puis en le reversant dans la théière, une dizaine de fois. Le matériel et le rituel sont détaillés dans [comment préparer l'ataya, le thé sénégalais](/conseils/comment-preparer-l-ataya)." },
+    ],
     story:
       "Au Sénégal, l'ataya est bien plus qu'une boisson : c'est un moment. On le prépare entre amis, en famille ou entre voisins, souvent après le déjeuner, assis autour d'un petit fourneau à charbon. Celui qui tient la théière prend son temps, et la conversation suit le rythme des tournées.\n\nOn le sert en trois verres successifs, préparés sur les mêmes feuilles. Le premier est fort et amer, le deuxième plus doux, souvent parfumé à la menthe, le troisième très sucré. Les Sénégalais résument souvent ce rituel par une formule : les « trois normes » de l'ataya.",
     prepMinutes: 10,

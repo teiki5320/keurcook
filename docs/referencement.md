@@ -232,3 +232,59 @@ Vérifié le 20/10/2026 (moins de 28 jours) : pas refait. Vitesse sur téléphon
 ### À revoir à partir du 8 décembre 2026
 
 Les 4 pages ci-dessus : noter leur nouvelle place.
+
+## 17 novembre 2026
+
+Chiffres : Search Console, 28 derniers jours (18/10 → 15/11/2026), via le Studio (liste « 2e page » et recherches).
+
+### Pages améliorées
+
+Seules les pages travaillées le 20/10 (28 jours) et les pages jamais travaillées pouvaient être reprises ; les pages des 22 et 27/10, 3 et 10/11 restent intactes. L'alloco (« alloco recette » et « recette alloco » à la 1re place) et la sauce graine (« sauce graine recette » 1re, sortie de la liste « 2e page ») n'avaient pas besoin d'être retouchées.
+
+| Page | Recherches visées | Place et vues au moment du travail | Ancien titre → nouveau titre |
+| --- | --- | --- | --- |
+| /recette/degue | degue, degue au couscous, dessert burkina faso | 10,7, 139 vues (« degue » : 12,5, 80 vues ; « degue au couscous » : 5) | « Dégué (dèguè) : recette du dessert au mil du Burkina » → « Degue (dégué) : recette du dessert au mil du Burkina » |
+| /conseils/comment-preparer-l-ataya | thé sénégalais, ataya thé sénégalais, thé sénégal, l'ataya | 11, 53 vues (« the senegalais » : 10,1 ; « ataya the sénégalais » : 9,4) | « Ataya : préparer le thé sénégalais en 3 services » → « Thé sénégalais (ataya) : le préparer en 3 services » |
+| /recette/poulet-dg | poulet dg cameroun, recette poulet dg cameroun | 9, 23 vues (« poulet dg cameroun » : 17,2) | « Poulet DG : recette du Cameroun au plantain » → « Poulet DG du Cameroun : recette au plantain mûr » |
+| /recette/ataya (jamais travaillée) | ataya sénégal | 14,8, 5 vues (« ataya senegal » : 10,3 ; « ataya sénégal » : 21,5) | « Ataya — recette du Sénégal \| Keur Cook » (titre automatique) → « Ataya : recette du thé vert du Sénégal en 3 tournées » |
+| /conseils/quest-ce-que-le-yaji (jamais travaillée) | yaji | 6, 4 vues | « Qu'est-ce que le yaji (épice à suya) ? » → « Yaji : l'épice à suya du Nigeria, composition et usages » |
+
+- Dégué : la recherche principale s'écrit sans accent (« degue ») ; elle ouvre maintenant le titre. Nouvelle question dans la FAQ visible : « Le degue se fait-il avec du couscous ? » (couscous de mil, deux cuissons à la vapeur : faits déjà dans la recette), avec un lien vers « Cuire le couscous de mil ».
+- Ataya : les deux pages (le conseil et la recette) se partageaient les mêmes recherches sans se relier. Le conseil vise désormais « thé sénégalais » et renvoie à la « recette de l'ataya » ; la recette a enfin un titre, une description et une FAQ visible de trois questions (avec FAQPage : trois tournées et « trois normes », thé vert gunpowder, mousse), écrite avec les faits déjà sur la page, et renvoie au conseil (texte « comment préparer l'ataya, le thé sénégalais »).
+- Poulet DG et yaji : titre pour Google seulement (le h1 contient déjà la recherche).
+
+Liens internes : recette ataya ↔ conseil ataya (nouveaux, dans les deux sens), dégué → « Cuire le couscous de mil ». Le dégué, le poulet DG et le yaji avaient déjà plusieurs liens depuis des pages proches (couscoussier, couscous de mil, page Cameroun, poivre de Penja, suya au four…) : rien ajouté.
+
+### Pages travaillées il y a 28 jours ou plus (travail du 20/10)
+
+| Page | Le 20/10 | Aujourd'hui | Bilan |
+| --- | --- | --- | --- |
+| /recette/degue | 15,1 (168 vues) ; « degue » 12,9 | 10,7 (139 vues) ; « degue » 12,5 | monte (+4 places en moyenne) |
+| /recette/sauce-graine | 6,7 (93 vues) | sortie de la liste « 2e page » : « sauce graine recette » 1re (19 vues), « foutou banane sauce graine » 2,3, « sauce graine » 3,3 | monte (1re page) |
+| /recette/poulet-dg | 12 (82 vues) ; « poulet dg » 12,6 | 9 (23 vues) ; « poulet dg » 2, « recette poulet dg cameroun » 1 | monte, mais moins de vues |
+| /conseils/comment-preparer-l-ataya | 10,3 (76 vues) | 11 (53 vues) | stable, un peu en baisse : retravaillé aujourd'hui |
+| /recette/alloco | 11,5 (61 vues) ; « alloco » 27,2 | 6 (33 vues) ; « alloco recette » et « recette alloco » 1re | monte nettement |
+| /pays/gabon (« plat gabonais ») | 21 vues, nyembwe montré à la 4,3e place | 4 vues, toujours le nyembwe (3,5e place) ; la page Gabon n'apparaît pas | pas de changement visible |
+
+Aucun clic encore sur ces pages dans la période : les vues montent, les clics pas encore.
+
+### Page nouvelle
+
+Aucune créée : les recherches de 15 vues et plus ont toutes leur vraie page. « chocolat indigène » (49 vues) et « chocolat indigène gabon » (50) montrent le poulet à l'odika (6e-7e place), qui parle bien de ce chocolat indigène ; café du Burundi (59,9) et thé du Kenya (43,4) restent loin malgré leurs pages, travaillées il y a moins de 28 jours.
+
+### Fiches enrichies vérifiées le 17/11/2026
+
+- Contrôle de toutes les pages construites (290) : JSON-LD valide partout, aucune FAQPage sans FAQ visible, aucune note inventée (pas d'aggregateRating).
+- Recettes : Recipe complet sur toutes (nom, image, description, ingrédients, étapes, temps, portions, cuisine, catégorie) + BreadcrumbList ; FAQPage là où la FAQ est visible (dégué, ataya…).
+- Conseils : Article + BreadcrumbList (ataya, yaji). Accueil : WebSite + Organization. Fiches produit : BreadcrumbList (+ FAQPage quand la FAQ est visible, ex. fonio).
+- Rien à corriger.
+
+### Socle vérifié le 17/11/2026
+
+- IndexNow : en place (scripts/indexnow.mjs, clé public/1966e925dc52073a412c1203dc2860be.txt, servie en ligne : réponse 200).
+- Discover : « max-image-preview:large » sur toutes les pages construites, image de partage de 1200 px de large (vérifié en ligne sur /recette/degue).
+- Vitesse sur téléphone : PageSpeed refuse encore (quota du jour dépassé, 5e fois) pour l'accueil, /recette/degue et /conseils/comment-preparer-l-ataya. Sans clé PageSpeed gratuite au nom de Jean, cette mesure reste impossible depuis le Mac.
+
+### À revoir à partir du 15 décembre 2026
+
+Les 5 pages ci-dessus : noter leur nouvelle place. Le 19/11 : bilan des 26 pages du 22/10.
