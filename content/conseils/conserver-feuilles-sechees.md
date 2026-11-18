@@ -6,7 +6,7 @@ date: 2026-10-02
 theme: epicerie
 resume: Gardez-les dans un contenant hermétique, au sec, au frais et à l'abri de la lumière. L'humidité est leur principal ennemi, et une odeur de moisi ou des taches suspectes doivent vous faire les jeter.
 recettes: ndole, pondu, ravitoto, waakye
-produits: feuilles-de-ndole, feuilles-de-manioc, feuilles-de-sorgho
+produits: feuilles-de-manioc, feuilles-de-sorgho
 image: /conseils/conserver-feuilles-sechees.webp
 imageAlt: Des feuilles séchées vertes et brunes rangées dans des bocaux en verre fermés.
 imagePrompt: Photographie culinaire, trois bocaux en verre fermés contenant des feuilles séchées vertes et brun rouge, quelques feuilles posées sur une table en bois sombre, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -22,7 +22,7 @@ Les feuilles séchées se conservent longtemps justement parce qu'elles ont perd
 
 ## Selon les feuilles
 
-- **Le ndolé** : les [feuilles de ndolé séchées](/produit/feuilles-de-ndole) sont souvent déjà lavées et coupées. Gardez-les bien fermées pour qu'elles ne prennent pas les odeurs du placard. Avant cuisson, elles se réhydratent et se rincent, ce qui permet aussi de limiter leur amertume (voir [comment enlever l'amertume du ndolé](/conseils/enlever-amertume-du-ndole)).
+- **Le ndolé** : les feuilles de ndolé séchées sont souvent déjà lavées et coupées. Gardez-les bien fermées pour qu'elles ne prennent pas les odeurs du placard. Avant cuisson, elles se réhydratent et se rincent, ce qui permet aussi de limiter leur amertume (voir [comment enlever l'amertume du ndolé](/conseils/enlever-amertume-du-ndole)).
 - **Le manioc** : pour le [pondu](/recette/pondu) ou le [ravitoto malgache](/recette/ravitoto), les [feuilles de manioc](/produit/feuilles-de-manioc) se vendent surtout déjà pilées, en bocal ou en conserve. Suivez les indications de l'étiquette ; une fois ouvert, gardez le reste au réfrigérateur dans un récipient fermé et utilisez-le rapidement. Si vous trouvez des feuilles de manioc séchées, rangez-les comme les autres, dans un bocal bien étanche.
 - **Le sorgho** : les [feuilles de sorgho](/produit/feuilles-de-sorgho) servent surtout à colorer le [waakye du Ghana](/recette/waakye). Elles sont grandes et cassantes : rangez-les à plat ou roulées sans les écraser, dans un sac bien fermé.
 

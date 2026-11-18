@@ -5,14 +5,14 @@ date: 2026-10-02
 theme: remplacer
 resume: Cherchez-les d'abord sous le nom de bitterleaf, séchées ou surgelées. À défaut, des épinards donnent la texture, et un peu de feuilles amères comme la chicorée ou le pissenlit apporte l'amertume qui manque.
 recettes: ndole
-produits: feuilles-de-ndole, feuilles-de-manioc, feuilles-de-moringa
+produits: feuilles-de-manioc, feuilles-de-moringa
 image: /conseils/par-quoi-remplacer-les-feuilles-de-ndole.webp
 imageAlt: Un tas de feuilles vertes hachées dans une passoire, à côté de feuilles de ndolé séchées.
 imagePrompt: Photographie culinaire, passoire remplie d'épinards hachés à côté d'un bol de feuilles de ndolé séchées vert sombre et de quelques feuilles de chicorée, sur une table en bois, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
 ---
 ## D'abord, les chercher sous un autre nom
 
-Le meilleur remplaçant des feuilles de ndolé reste la même plante, vendue sous un autre nom : on la trouve souvent comme « bitterleaf » dans les épiceries africaines, car elle sert aussi dans la cuisine nigériane. Elle existe séchée, surgelée ou parfois fraîche. Les [feuilles de ndolé séchées](/produit/feuilles-de-ndole) se gardent longtemps au placard et se réhydratent facilement.
+Le meilleur remplaçant des feuilles de ndolé reste la même plante, vendue sous un autre nom : on la trouve souvent comme « bitterleaf » dans les épiceries africaines, car elle sert aussi dans la cuisine nigériane. Elle existe séchée, surgelée ou parfois fraîche. Les feuilles de ndolé séchées se gardent longtemps au placard et se réhydratent facilement.
 
 ## Les épinards pour la texture
 

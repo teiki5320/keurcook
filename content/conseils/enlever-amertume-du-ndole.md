@@ -6,7 +6,7 @@ date: 2026-09-07
 theme: sauces
 resume: Faites tremper les feuilles, blanchissez-les dans l'eau bouillante, puis rincez-les et pressez-les plusieurs fois. Plus vous répétez l'opération, moins elles sont amères.
 recettes: ndole
-produits: feuilles-de-ndole, crevettes-sechees
+produits: crevettes-sechees
 image: /conseils/enlever-amertume-du-ndole.webp
 imageAlt: Des feuilles de ndolé pressées en boule dans une passoire, au-dessus d'un saladier.
 imagePrompt: Photographie culinaire, mains pressant une boule de feuilles de ndolé vert foncé au-dessus d'une passoire, saladier d'eau, feuilles séchées dans une coupelle, fond sombre, lumière chaude orangée, sans texte ni logo, format 16:9.
@@ -21,7 +21,7 @@ Le ndolé est souvent présenté comme le plat national du Cameroun. Il vient de
 
 ## Avec des feuilles séchées
 
-1. Faites tremper les [feuilles de ndolé séchées](/produit/feuilles-de-ndole) dans de l'eau tiède pour les réhydrater.
+1. Faites tremper les feuilles de ndolé séchées dans de l'eau tiède pour les réhydrater.
 2. Portez une grande casserole d'eau à ébullition et faites-y bouillir les feuilles.
 3. Égouttez, rincez à l'eau froide et pressez-les fortement entre vos mains.
 4. Goûtez une feuille. Si elle est encore trop amère, recommencez le rinçage et le pressage.
