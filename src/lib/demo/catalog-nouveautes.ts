@@ -176,7 +176,7 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Infuser un sachet dans l'eau chaude, ajouter un trait de citron et du sucre ou du miel selon le goût.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["infusion", "gingembre"],
-    amazon: { asin: "B079VNZ641", label: "25 sachets", priceCents: 999 },
+    amazon: { asin: "B07WNQTRSX", label: "25 sachets", priceCents: 899 },
   },
   {
     slug: "chips-de-plantain",
