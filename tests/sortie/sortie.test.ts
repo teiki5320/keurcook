@@ -116,6 +116,12 @@ describe("Site construit", () => {
     assert.match(html, /<meta name="google-adsense-account" content="ca-pub-\d+"/);
   });
 
+  it("les actus sont hors de Google (noindex, hors plan du site) et le site ne renvoie pas vers les autres sites de la maison", () => {
+    assert.ok(!adresses.some((a) => a.includes("/actus")), "actus dans le plan du site");
+    assert.match(lire("actus.html"), /<meta name="robots" content="noindex, follow/);
+    assert.doesNotMatch(lire("index.html"), /href="https:\/\/(www\.)?(keurbook|keurdeco|keurfoot|keurkado|keurbible|keurdesir|solelis|kultiled|toakeur)\./, "lien vers un autre site");
+  });
+
   it("polices servies par le site : 2 fichiers préchargés, rien chez Google Fonts", () => {
     const html = lire("index.html");
     const polices = new Set(html.match(/<link rel="preload" href="\/_next\/static\/media\/[^"]+\.woff2"/g) ?? []);

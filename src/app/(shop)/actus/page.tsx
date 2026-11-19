@@ -16,6 +16,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Plats, chefs, produits, fêtes et festivals : l'actualité de la cuisine africaine en articles complets, deux fois par jour, avec leurs sources.",
   path: "/actus",
+  noindex: true,
 });
 
 const datePublication = (iso: string) =>

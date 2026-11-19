@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, Search, X } from "lucide-react";
 import { normalizePath } from "./immersive";
 import { TLink } from "./PageTransition";
-import { SitesKeurMenu } from "./SitesKeurMenu";
 
 export interface NavItem {
   href: string;
@@ -136,7 +135,6 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
         </nav>
 
         <div className="flex items-center gap-1">
-          <SitesKeurMenu variant="bureau" />
           <button
             type="button"
             onClick={() => setSearchOpen((o) => !o)}
@@ -203,7 +201,6 @@ export function NuageHeader({ nav }: { nav: NavItem[] }) {
                 </li>
               ))}
             </ul>
-            <SitesKeurMenu variant="mobile" />
           </nav>
         </div>
       )}

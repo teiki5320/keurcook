@@ -1,7 +1,6 @@
 import { execFileSync } from "node:child_process";
 import type { MetadataRoute } from "next";
 import { COUNTRIES } from "@/lib/countries";
-import { getArticles } from "@/lib/data/articles";
 import { getCatalog } from "@/lib/data/catalog";
 import { getConseils } from "@/lib/data/conseils";
 import { getRecipes } from "@/lib/data/recipes";
@@ -9,7 +8,6 @@ import { getTop10s } from "@/lib/data/top10";
 import { getMaintenance } from "@/lib/data/settings";
 import { siteConfig } from "@/lib/config";
 import { NORTH_AFRICAN_SLUGS } from "@/lib/catalog-utils";
-import { estActuMaghreb } from "@/lib/veille-articles";
 
 export const dynamic = "force-static";
 
@@ -49,19 +47,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/pays": latest(recipesAt),
     "/boutique": latest(productsAt),
     "/conseils": latest(conseilsAt),
-    // Actus lues en direct depuis la veille (2 passages par jour) : la page change chaque jour.
-    "/actus": new Date(),
     "/a-propos": legal("a-propos"),
     "/contact": legal("contact"),
     "/conditions": legal("conditions"),
     "/mentions-legales": legal("mentions-legales"),
     "/confidentialite": legal("confidentialite"),
   };
-  const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/actus", "/a-propos", "/contact", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
+  const staticPages = ["", "/recettes", "/pays", "/boutique", "/conseils", "/a-propos", "/contact", "/conditions", "/mentions-legales", "/confidentialite"].map((path) => ({
     url: `${base}${path}`,
     lastModified: pageUpdated[path],
-    changeFrequency: ["", "/recettes", "/boutique", "/actus"].includes(path) ? ("daily" as const) : ["/pays", "/conseils"].includes(path) ? ("weekly" as const) : ("yearly" as const),
-    priority: path === "" ? 1 : ["/recettes", "/boutique"].includes(path) ? 0.9 : ["/pays", "/conseils", "/actus"].includes(path) ? 0.7 : 0.3,
+    changeFrequency: ["", "/recettes", "/boutique"].includes(path) ? ("daily" as const) : ["/pays", "/conseils"].includes(path) ? ("weekly" as const) : ("yearly" as const),
+    priority: path === "" ? 1 : ["/recettes", "/boutique"].includes(path) ? 0.9 : ["/pays", "/conseils"].includes(path) ? 0.7 : 0.3,
   }));
   const entries: MetadataRoute.Sitemap = [
     ...staticPages,
@@ -95,14 +91,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.7,
       images: imgs(...t.items.slice(0, 3).map((it) => products.find((p) => p.slug === it.product)?.images[0])),
-    })),
-    // Articles complets des actus construits au build (la page de secours /actus/article n'est pas listée).
-    ...getArticles().filter((a) => !estActuMaghreb(a)).map((a) => ({
-      url: `${base}/actus/${a.slug}`,
-      lastModified: new Date(a.redige_le),
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-      images: imgs(a.image.url),
     })),
     // Produits d'Afrique du Nord : hors de Google (fiches en noindex), donc hors du sitemap.
     ...products.filter((p) => !NORTH_AFRICAN_SLUGS.has(p.slug)).map((p) => ({

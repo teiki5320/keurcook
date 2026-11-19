@@ -8,7 +8,7 @@ import { getArticleBySlug, getArticles, getAutresActus, getFichesLiees, getSlugs
 import { getMaintenance } from "@/lib/data/settings";
 import { breadcrumbLd, JsonLdScript, newsArticleLd } from "@/lib/json-ld";
 import { pageMetadata } from "@/lib/metadata";
-import { descriptionCourte, estActuMaghreb, lienActu } from "@/lib/veille-articles";
+import { descriptionCourte, lienActu } from "@/lib/veille-articles";
 
 /** Seules les pages construites existent : une actu plus récente s'ouvre sur la page de secours /actus/article?id=… */
 export const dynamicParams = false;
@@ -36,7 +36,8 @@ export async function generateMetadata({ params }: PageProps<"/actus/[slug]">): 
     imageAlt: article.image.alt,
     type: "article",
     publishedTime: article.publie_le,
-    noindex: estActuMaghreb(article),
+    // Actus hors de Google (19 novembre 2026) : pages gardées pour les visiteurs, non indexées.
+    noindex: true,
   });
 }
 

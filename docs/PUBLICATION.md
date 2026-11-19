@@ -41,7 +41,7 @@ Site 100 % statique (Next.js `output: "export"`, dossier `out/`), sans serveur n
 
 - à chaque push sur `main` ;
 - chaque lundi, mercredi et vendredi à 0 h 15, heure de Paris en hiver (1 h 15 en été ; cron), pour publier les articles « Conseils » programmés ;
-- chaque jour à 12 h 50 et 19 h 50, heure de Paris en hiver (13 h 50 et 20 h 50 en été ; cron `50 11,18 * * *`), après la veille actus : chaque nouvel article d'actu devient sa page `/actus/<adresse>` ;
+- chaque jour à 12 h 50 et 19 h 50, heure de Paris en hiver (13 h 50 et 20 h 50 en été ; cron `50 11,18 * * *`), après la veille actus : chaque nouvel article d'actu devient sa page `/actus/<adresse>` (noindex et hors sitemap depuis le 19 novembre 2026) ;
 - à la main (onglet **Actions → Publier le site → Run workflow**) ;
 - après le bouton « Maintenance ».
 
