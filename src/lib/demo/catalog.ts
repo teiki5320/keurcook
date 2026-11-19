@@ -516,12 +516,14 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "attieke-sec": { asin: "B09239KJ74", label: "3 × 500 g", priceCents: 3140 },
   "couscous-de-mil": { asin: "B0DWKQHXLN", label: "500 g", priceCents: 990 },
   "farine-de-teff": { asin: "B0C1TBB24S", label: "1 kg", priceCents: 2496 },
-  "poudre-de-baobab": { asin: "B06Y3L4CP1", label: "500 g", priceCents: 2199 },
+  // 19/11/2026 : B06Y3L4CP1 indisponible ; remplacé par une poudre de baobab bio de 500 g (fiche vérifiée le 19/11/2026).
+  "poudre-de-baobab": { asin: "B097S6N9WT", label: "500 g", priceCents: 2199 },
   "farine-de-foufou": { asin: "B0GBPVP3XM", label: "300 g", priceCents: 1290, name: "Farine de manioc pour foufou" },
   "feuilles-de-ndole": { asin: "B0FQQXJ23P", label: "100 g", priceCents: 1490 },
   "feuilles-de-manioc": { asin: "B092379XP9", label: "3 × 420 g", priceCents: 3299, name: "Feuilles de manioc pilées (pondu, ravitoto)" },
   "fleurs-de-bissap": { asin: "B09LMHFX9T", label: "1 kg", priceCents: 2299 },
-  "gombo-seche": { asin: "B0C66R4FWK", label: "100 g", priceCents: 490 },
+  // 19/11/2026 : B0C66R4FWK disparu d’Amazon.fr ; remplacé par une poudre 100 % gombo de 50 g (fiche vérifiée le 19/11/2026).
+  "gombo-seche": { asin: "B0CVLGHH7C", label: "50 g", priceCents: 999 },
   "feuilles-de-moringa": { asin: "B086JBQJ1J", label: "250 g", priceCents: 999 },
   "feuilles-de-sorgho": { asin: "B0F922WGDC", label: "130 g", priceCents: 1499 },
   // 28/10/2026 : B0BVGJQC39 indisponible ; remplacé par des crevettes entières séchées (fiche vérifiée le 28/10/2026).

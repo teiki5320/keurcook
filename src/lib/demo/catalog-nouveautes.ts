@@ -255,7 +255,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Tremper dans l'eau froide ou chaude jusqu'à ce qu'il gonfle, puis ajouter du lait, du sucre et éventuellement des arachides grillées.",
     conservation: "Au sec, dans un contenant fermé.",
     tags: ["manioc", "dessert"],
-    amazon: { asin: "B0D1P648SL", label: "1 kg", priceCents: 990 },
+    // 19/11/2026 : B0D1P648SL noté sous 4 étoiles ; remplacé par des perles de tapioca de 1 kg (fiche vérifiée le 19/11/2026).
+    amazon: { asin: "B08GDFC1L2", label: "1 kg", priceCents: 1249 },
   },
   {
     slug: "pebe-moulu",
