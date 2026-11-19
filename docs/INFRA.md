@@ -1,6 +1,6 @@
 # INFRA — fiche technique
 
-Mis à jour le 19 novembre 2026 (21 articles « Conseils » programmés dont un Black Friday le 20 novembre et trois articles de Noël ajoutés le 13 novembre : 30 novembre, 4 et 9 décembre ; examen AdSense refusé le 31 octobre 2026 pour « contenu à faible valeur informative », motif revérifié dans la console le 15 novembre, aucun nouvel e-mail AdSense pour keurcook.com au 19 novembre ; 50 articles « Conseils » en ligne ; pages À propos et Contact en ligne depuis le 16 novembre ; sitemap de 275 adresses ; 125 produits en ligne depuis le 18 novembre ; dernière publication le 19 novembre 2026 à 5 h 47) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
+Mis à jour le 19 novembre 2026 (24 articles « Conseils » programmés, dont 3 sur les plats africains, sénégalais et camerounais ajoutés le 19 novembre pour le 23 et le 30 novembre et le 7 décembre ; avant : 21, dont un Black Friday le 20 novembre et trois articles de Noël ajoutés le 13 novembre : 30 novembre, 4 et 9 décembre ; examen AdSense refusé le 31 octobre 2026 pour « contenu à faible valeur informative », motif revérifié dans la console le 15 novembre, aucun nouvel e-mail AdSense pour keurcook.com au 19 novembre ; 50 articles « Conseils » en ligne ; pages À propos et Contact en ligne depuis le 16 novembre ; sitemap de 275 adresses ; 125 produits en ligne depuis le 18 novembre ; dernière publication le 19 novembre 2026 à 5 h 47) ; dernier scan complet du dépôt le 26 octobre 2026. Pour mettre à jour : relancer ce même prompt.
 
 ## En bref
 
@@ -14,7 +14,7 @@ Mis à jour le 19 novembre 2026 (21 articles « Conseils » programmés dont un 
 ## Parcours
 
 - 🌐 **Web** : 🐙 GitHub — main · publication au vert [ok] → ☁️ Hébergement web — Cloudflare Pages, projet keurcook [ok] → 🔗 Nom de domaine — keurcook.com, SSL Cloudflare [ok] → 👥 Visiteurs — site ouvert au public [ok]
-- 📝 **Contenu** : 🐙 GitHub — 21 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 50 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
+- 📝 **Contenu** : 🐙 GitHub — 24 articles programmés [ok] → ⏰ GitHub Actions — publication lun., mer., ven. [ok] → 🌐 keurcook.com — 50 articles en ligne [ok] → ✍️ Réserve — vide le 28 décembre 2026 [à faire]
 - 🛒 **Affiliation** : 🌐 keurcook.com — boutons « Voir sur Amazon » [ok] → 🤝 Affiliation — Amazon Partenaires, tag keurcookfr-21 [ok] → 📦 Amazon.fr — Amazon encaisse et livre [ok]
 - 📰 **Veille actus** : 📡 Tâche de veille — 12 h et 19 h, 15 flux RSS [ok] → 🐙 Dépôt veille — actus/keurcook.json sur GitHub Pages [ok] → 🏗️ Build GitHub Actions — 12 h 50 et 19 h 50, une page /actus/<adresse> par article [ok] → 🌍 keurcook.com — accueil (4), /actus (20), pages pays (3), articles complets [ok]
 - 📢 **Publicité** : 🌐 keurcook.com — six emplacements « Publicité » [ok] → 💰 AdSense (publicité web) — refusé le 31 oct. : contenu à faible valeur [bloquant]

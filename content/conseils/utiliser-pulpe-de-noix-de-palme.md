@@ -37,3 +37,5 @@ Inutile d'ajouter beaucoup de matière grasse : la pulpe contient déjà son hui
 ## Conserver une boîte entamée
 
 Transvasez le reste dans un récipient hermétique et gardez-le au réfrigérateur, en l'utilisant rapidement. Vous pouvez aussi le congeler en portions pour la prochaine sauce.
+
+Pour voir où la pulpe de noix de palme s'inscrit parmi les grands plats du continent, parcourez notre liste des [plats africains à connaître](/conseils/plats-africains-a-connaitre).

@@ -36,3 +36,5 @@ Même rincées, les crevettes séchées apportent du sel à la préparation. Sal
 ## Bien les conserver
 
 Gardez les [crevettes séchées](/produit/crevettes-sechees) dans un bocal hermétique, au sec. Ne rincez que la quantité que vous allez utiliser : une fois mouillées, elles ne se conservent plus comme des produits secs. Pour les règles générales de rangement des produits fumés et séchés, voyez [comment conserver le poisson fumé](/conseils/comment-conserver-le-poisson-fume).
+
+Les crevettes séchées sont un des ingrédients du ndolé : retrouvez ce plat et d'autres dans nos [plats camerounais à connaître](/conseils/plats-camerounais-a-connaitre).

@@ -44,3 +44,5 @@ Suivez les indications de votre recette pour le temps de cuisson.
 ## Les conserver
 
 Gardez les feuilles fraîches au réfrigérateur, enveloppées dans un torchon humide ou un sac, et utilisez-les rapidement. Pour une longue durée, congelez-les à plat, bien emballées. À défaut de feuilles, du papier sulfurisé doublé d'aluminium fonctionne, sans le parfum.
+
+Le koki, gâteau de haricots camerounais, se cuit justement dans ces feuilles : voyez notre sélection de [plats camerounais à goûter](/conseils/plats-camerounais-a-connaitre).

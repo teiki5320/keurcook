@@ -45,3 +45,5 @@ Pour composer tout le repas, reprenez [le menu de réveillon africain](/conseils
 - **Frire une grande quantité d'un coup** : l'huile refroidit et les beignets absorbent le gras. Cuisez par petits lots.
 - **Servir le thiakry tiède** : il perd sa fraîcheur et sa tenue.
 - **Sucrer sans goûter** : le lait concentré sucré donne déjà beaucoup de douceur.
+
+Pour le reste du repas, les [plats sénégalais](/conseils/plats-senegalais-a-connaitre) du thiéboudienne au thiakry forment un menu complet.

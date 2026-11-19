@@ -54,3 +54,5 @@ Pour savoir ce qui se prépare à l'avance ou se congèle, lisez [quels plats se
 - **Multiplier les plats** : un seul plat vedette, bien réussi, vaut mieux que cinq plats pressés.
 - **Tout frire au dernier moment** : limitez les fritures à une ou deux, et sortez-les juste avant de passer à table.
 - **Oublier le piment à part** : servez-le dans un petit bol, chacun dose selon son goût.
+
+Pour piocher d'autres idées de plats, voyez la liste des [plats africains à connaître](/conseils/plats-africains-a-connaitre) et celle des [plats sénégalais](/conseils/plats-senegalais-a-connaitre).
