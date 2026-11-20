@@ -824,6 +824,12 @@ const tops: Top10[] = [
         recettes: [],
       },
       {
+        product: "livre-gouts-d-afrique",
+        pourquoi:
+          "Le chef Anto Cocagne réunit les meilleures recettes du Gabon, du Sénégal, de la Côte d'Ivoire, du Cameroun, du Congo et de l'Éthiopie, avec des recettes inédites. Des portraits de personnalités d'origine africaine racontent leurs souvenirs de cuisine et leurs plats favoris. Un beau livre relié de 208 pages, publié aux éditions Mango.",
+        recettes: [],
+      },
+      {
         product: "livre-grain-d-afrique",
         pourquoi:
           "Aïssatou Mbaye propose plus de 60 recettes du quotidien relevées d'une touche africaine : pancakes à la farine de mil, houmous de niébé et cajou, chips de plantain, madeleines au manioc. Une bonne porte d'entrée pour glisser des saveurs africaines dans les plats de tous les jours. Un broché de 128 pages, publié aux éditions Marie Claire en 2026.",
@@ -845,12 +851,6 @@ const tops: Top10[] = [
         product: "livre-le-meilleur-de-la-cuisine-congolaise",
         pourquoi:
           "Lukusa Jessica présente les plats emblématiques de la cuisine congolaise, de l'accompagnement à la pâtisserie. Chaque recette est accompagnée d'une histoire, d'anecdotes et de conseils de technique, pour les débutants comme pour les cuisiniers aguerris. Un broché de 155 pages, paru en 2025.",
-        recettes: [],
-      },
-      {
-        product: "livre-la-cuisine-congolaise",
-        pourquoi:
-          "Un ouvrage de référence de 216 pages, publié chez L'Harmattan : Fidèle Mialoundama et Isabelle Goma Mouyokani y recensent les recettes les plus courantes de toutes les régions du Congo. Le livre se veut une mémoire des recettes et des aliments traditionnels. Une bonne base pour qui s'intéresse au pays.",
         recettes: [],
       },
       {

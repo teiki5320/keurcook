@@ -914,8 +914,8 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: "Moudre juste avant la préparation pour garder les arômes ; bien refermer le paquet après chaque usage.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["café", "Éthiopie", "bio"],
-    // Masqué le 24/10/2026 : B08ZT3P8TH (500 g grains, 12,33 €) indisponible sur Amazon.fr, sans équivalent bio, équitable et bien noté.
-    amazon: null,
+    // Masqué le 24/10/2026 (indisponible), remis le 20/11/2026 : B08ZT3P8TH de nouveau en vente sur Amazon.fr (Alter Eco, 500 g grains, 4,2/5 sur 136 avis, 11,61 €).
+    amazon: { asin: "B08ZT3P8TH", label: "500 g grains", priceCents: 1161 },
   },
   {
     slug: "cafe-de-tanzanie",
@@ -1346,7 +1346,24 @@ export const nouveauxProduits: NouveauProduit[] = [
     usageTips: null,
     conservation: null,
     tags: ["livre", "Congo"],
-    amazon: { asin: "2747512193", label: "Broché, 216 pages", priceCents: 3300 },
+    // Masqué le 20/11/2026 : 3,0/5 sur 4 avis sur Amazon.fr (règle des 4 étoiles). Remplacé au Top 10 par « Goûts d'Afrique » (livre-gouts-d-afrique).
+    amazon: null,
+  },
+  {
+    slug: "livre-gouts-d-afrique",
+    name: "Goûts d'Afrique, recettes et rencontres (Anto Cocagne)",
+    seoTitle: "Goûts d'Afrique, recettes et rencontres, d'Anto Cocagne",
+    category: "livres",
+    shortDescription: "Les recettes du Gabon, du Sénégal, de la Côte d'Ivoire, du Cameroun, du Congo et de l'Éthiopie, par le chef Anto Cocagne.",
+    description: "Anto Cocagne, chef, réunit les meilleures recettes du Gabon, du Sénégal, de la Côte d'Ivoire, du Cameroun, du Congo et de l'Éthiopie, ainsi que des recettes inédites. Des portraits de personnalités d'origine africaine racontent leurs souvenirs de cuisine et leurs plats favoris.\n\nBeau livre relié de 208 pages, photographies d'Aline Princet, publié aux éditions Mango en 2019.",
+    originCountry: null,
+    originRegion: null,
+    composition: null,
+    allergens: [],
+    usageTips: null,
+    conservation: null,
+    tags: ["livre", "Afrique subsaharienne"],
+    amazon: { asin: "2317022158", label: "Relié, 208 pages", priceCents: 3195 },
   },
   {
     slug: "livre-senegal-cuisine-intime-et-gourmande",

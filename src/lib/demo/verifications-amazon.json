@@ -340,8 +340,8 @@
     "statut": "disponible"
   },
   "huile-de-palme-rouge": {
-    "asin": "B0962X7DNX",
-    "verifieLe": "2026-11-09",
+    "asin": "B0038GXU7S",
+    "verifieLe": "2026-11-20",
     "statut": "disponible"
   },
   "infusion-de-gingembre": {
@@ -386,11 +386,6 @@
   },
   "livre-grain-d-afrique": {
     "asin": "B0FSC4QZRW",
-    "verifieLe": "2026-11-09",
-    "statut": "disponible"
-  },
-  "livre-la-cuisine-congolaise": {
-    "asin": "2747512193",
     "verifieLe": "2026-11-09",
     "statut": "disponible"
   },
@@ -640,8 +635,18 @@
     "statut": "disponible"
   },
   "yaji-suya": {
-    "asin": "B0CTTM79ZR",
-    "verifieLe": "2026-11-14",
+    "asin": "B0FSB4YYKM",
+    "verifieLe": "2026-11-20",
+    "statut": "disponible"
+  },
+  "cafe-d-ethiopie-bio": {
+    "asin": "B08ZT3P8TH",
+    "verifieLe": "2026-11-20",
+    "statut": "disponible"
+  },
+  "livre-gouts-d-afrique": {
+    "asin": "2317022158",
+    "verifieLe": "2026-11-20",
     "statut": "disponible"
   }
 }

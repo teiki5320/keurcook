@@ -528,11 +528,14 @@ const amazonOffers: Record<string, { asin: string; label: string; priceCents: nu
   "feuilles-de-sorgho": { asin: "B0F922WGDC", label: "130 g", priceCents: 1499 },
   // 28/10/2026 : B0BVGJQC39 indisponible ; remplacé par des crevettes entières séchées (fiche vérifiée le 28/10/2026).
   "crevettes-sechees": { asin: "B0GRPL3N51", label: "50 g", priceCents: 990 },
-  "huile-de-palme-rouge": { asin: "B0962X7DNX", label: "75 cl", priceCents: 1499, name: "Huile de palme rouge" },
+  // 20/11/2026 : B0962X7DNX (3,9/5 sur 54 avis, sous la règle des 4 étoiles) remplacée par une huile de palme rouge extra-vierge bio Aman Prana
+  // (B0038GXU7S, en stock, 4,3/5 sur 106 avis, 22,95 €, fiche vérifiée le 20/11/2026).
+  "huile-de-palme-rouge": { asin: "B0038GXU7S", label: "extra-vierge bio", priceCents: 2295, name: "Huile de palme rouge" },
   "pate-d-arachide": { asin: "B07VX8JBYN", label: "425 g", priceCents: 1349, name: "Pâte d'arachide" },
   "pulpe-de-noix-de-palme": { asin: "B07C1KX53F", label: "800 g", priceCents: 1200, name: "Pulpe de noix de palme" },
-  // Masqué le 09/11/2026 (indisponible), remis le 14/11/2026 : B0CTTM79ZR de nouveau en vente sur Amazon.fr (180 g, 24,99 €, 4,4/5).
-  "yaji-suya": { asin: "B0CTTM79ZR", label: "180 g", priceCents: 2499 },
+  // Masqué le 09/11/2026 (indisponible), remis le 14/11/2026, de nouveau indisponible le 20/11/2026 : B0CTTM79ZR (180 g, 24,99 €) remplacé par
+  // l'épice kankan du Cameroun, fumée et légèrement piquante, pour les grillades (B0FSB4YYKM, 100 g, en stock, 4,3/5 sur 10 avis, 13,50 €, fiche vérifiée le 20/11/2026).
+  "yaji-suya": { asin: "B0FSB4YYKM", label: "100 g", priceCents: 1350, name: "Kankan, épice à grillades (cousine du yaji)" },
 };
 
 // Produits ajoutés le 27/09/2026 (catalog-nouveautes.ts), à la suite pour garder les identifiants existants.
