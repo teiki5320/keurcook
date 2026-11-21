@@ -62,7 +62,7 @@ Publication automatique (même système que Keur Déco, depuis le 23 octobre 202
 - **Aucune allégation de santé** : liste de termes à risque (« soigne », « bienfaits », « digestion »… — voir `src/lib/compliance.ts`). Cette liste ne remplace pas une relecture humaine.
 - **Étiquetage alimentaire** : ingrédients, allergènes et conservation sur chaque fiche produit.
 - Pages **conditions d'utilisation** (`/conditions`, CGU ; `/cgv` y redirige), **mentions légales**, **politique de confidentialité** ; consentement aux cookies recueilli par le **message de Google** (Confidentialité et messages, dans AdSense), que le lien « Cookies » du pied de page rouvre (`src/components/compliance/CookieBanner.tsx`). Hébergeur indiqué : Cloudflare, Inc.
-- Données structurées Google **Recipe**, **Article**, fil d'Ariane et listes (pas de **Product** sur les fiches produit), sitemap avec les recettes, les pays, les articles publiés et les articles d'actus (NewsArticle).
+- Données structurées Google **Recipe**, **Article**, fil d'Ariane et listes (pas de **Product** sur les fiches produit), sitemap avec les recettes, les pays, les produits, les articles publiés et les Top 10 (264 adresses au 21 novembre 2026, dont 52 articles « Conseils » ; les articles d'actus, en NewsArticle, en sont sortis le 19 novembre 2026).
 
 > ⚠️ Les textes légaux sont des **modèles** à faire valider.
 
