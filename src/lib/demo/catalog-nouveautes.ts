@@ -124,14 +124,15 @@ export const nouveauxProduits: NouveauProduit[] = [
     category: "epices",
     shortDescription: "Des graines au piquant poivré et aux notes d'agrumes, cousines de la cardamome.",
     description: "La maniguette, ou graine de paradis, pousse en gousses sur l'Aframomum melegueta, une plante des côtes d'Afrique de l'Ouest. Ses petites graines brunes offrent un piquant proche du poivre, avec des notes citronnées et florales.\n\nElle parfume les sauces, les grillades et les bouillons, et se moud comme un poivre.",
-    originCountry: "Ghana",
+    originCountry: "Guinée",
     originRegion: null,
     composition: "Graines de maniguette (Aframomum melegueta).",
     allergens: [],
     usageTips: "Écraser les graines au mortier et les ajouter en fin de cuisson sur les viandes et poissons grillés.",
     conservation: "Au sec, à l'abri de la lumière, dans un contenant fermé.",
     tags: ["poivre", "graines"],
-    amazon: { asin: "B09SFJH3DD", label: "100 g", priceCents: 999 },
+    // 21/11/2026 : Alpi Nature 100 g (B09SFJH3DD) indisponible, remplacé par La Route des Épices 60 g (B01GSF7RYW, 4,5/5 sur 95 avis, 9,50 €, origine Guinée).
+    amazon: { asin: "B01GSF7RYW", label: "60 g", priceCents: 950 },
   },
   {
     slug: "essesse-sassas",
