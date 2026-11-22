@@ -509,7 +509,8 @@ const seeds: ProductSeed[] = [
 const amazonOffers: Record<string, { asin: string; label: string; priceCents: number; name?: string }> = {
   "poivre-de-penja": { asin: "B000PBXHBS", label: "70 g", priceCents: 2105 },
   soumbala: { asin: "B0CQKHMT2Y", label: "50 g", priceCents: 899 },
-  berbere: { asin: "B0B576RTWD", label: "65 g", priceCents: 850 },
+  // 22/11/2026 : B0B576RTWD indisponible ; remplacé par le berbéré Spice Masters de 100 g (fiche vérifiée le 22/11/2026).
+  berbere: { asin: "B086XG3KTN", label: "100 g", priceCents: 899 },
   "poivre-de-selim": { asin: "B0FGDXL99W", label: "50 g", priceCents: 999 },
   "graines-d-egusi": { asin: "B0DLV721PS", label: "50 g", priceCents: 899, name: "Egusi moulu (pistache africaine)" },
   fonio: { asin: "B0862DPW4P", label: "6 × 250 g", priceCents: 2999, name: "Fonio bio Aduna (lavé, cuit en 3 minutes)" },
