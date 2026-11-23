@@ -218,7 +218,11 @@ const tops: Top10[] = [
       },
     ],
     guide: [
-      ["Commencez par une recette simple, comme le mafé ou le poulet yassa : la pâte d'arachide et le poivre de Selim y suffisent pour une bonne partie du goût."],
+      [
+        "Commencez par une recette simple, comme le mafé ou le poulet yassa : la pâte d'arachide et le poivre de Selim y suffisent pour une bonne partie du goût. Pour choisir vos premiers plats, voyez ",
+        { href: "/conseils/plats-africains-a-connaitre", label: "la liste des plats africains à connaître" },
+        ".",
+      ],
       ["Privilégiez les produits qui se gardent longtemps : pâte d'arachide, crevettes séchées, couscous de mil, attiéké déshydraté."],
       [
         "Ajoutez ensuite deux ou trois épices clés. Voir ",
@@ -862,7 +866,11 @@ const tops: Top10[] = [
     ],
     guide: [
       ["Un pays ou toute l'Afrique : les livres sur le Cameroun, le Sénégal ou les deux Congo vont plus loin dans une cuisine ; les livres de Cheikh Niang ou d'Aïssatou Mbaye mêlent l'Afrique et d'autres saveurs."],
-      ["Débutant : préférez les recettes expliquées pas à pas et les plats express ; curieux d'histoire : les livres qui racontent les plats et les familles."],
+      [
+        "Débutant : préférez les recettes expliquées pas à pas et les plats express ; curieux d'histoire : les livres qui racontent les plats et les familles. Pour savoir quels plats chercher dans ces livres, voyez ",
+        { href: "/conseils/plats-africains-a-connaitre", label: "les plats africains à connaître, région par région" },
+        ".",
+      ],
       ["Avant de commander, regardez sur la fiche Amazon le format (broché ou relié), le nombre de pages et l'éditeur."],
     ],
     faq: [
