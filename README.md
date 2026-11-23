@@ -49,7 +49,7 @@ Données dans `src/lib/demo/top10.ts`, vérifiées par `tests/top10.test.ts`. Ch
 ### Publicité (Google AdSense)
 
 - Compte AdSense `pub-2680784147246798` (comptes de gestion sur `admin@toakeur.com`). Script chargé dans `src/app/layout.tsx`, emplacements « Publicité » (`src/components/ads/AdSlot.tsx`, `src/lib/ads.ts`) et `public/ads.txt` en place.
-- **Examen refusé par Google le 31 octobre 2026** (demande faite le 12 octobre 2026) : Google demande de corriger des problèmes sur le site avant d'y diffuser des annonces (e-mail AdSense du 31 octobre 2026, aucun nouvel e-mail pour keurcook.com au 22 novembre 2026 ; motif lu dans la console, page Sites, le 15 novembre 2026 : « contenu à faible valeur informative »). Nouvel examen en cours : la console affiche « En préparation » depuis le 20 novembre 2026 (vérifié le 21 novembre 2026). Aucune annonce ne s'affiche.
+- **Examen refusé par Google le 31 octobre 2026** (demande faite le 12 octobre 2026) : Google demande de corriger des problèmes sur le site avant d'y diffuser des annonces (e-mail AdSense du 31 octobre 2026, aucun nouvel e-mail pour keurcook.com au 23 novembre 2026 ; motif lu dans la console, page Sites, le 15 novembre 2026 : « contenu à faible valeur informative »). Nouvel examen en cours : la console affiche « En préparation » depuis le 20 novembre 2026 (vérifié le 21 novembre 2026). Aucune annonce ne s'affiche.
 
 ### Pinterest
 
@@ -62,7 +62,7 @@ Publication automatique (même système que Keur Déco, depuis le 23 octobre 202
 - **Aucune allégation de santé** : liste de termes à risque (« soigne », « bienfaits », « digestion »… — voir `src/lib/compliance.ts`). Cette liste ne remplace pas une relecture humaine.
 - **Étiquetage alimentaire** : ingrédients, allergènes et conservation sur chaque fiche produit.
 - Pages **conditions d'utilisation** (`/conditions`, CGU ; `/cgv` y redirige), **mentions légales**, **politique de confidentialité** ; consentement aux cookies recueilli par le **message de Google** (Confidentialité et messages, dans AdSense), que le lien « Cookies » du pied de page rouvre (`src/components/compliance/CookieBanner.tsx`). Hébergeur indiqué : Cloudflare, Inc.
-- Données structurées Google **Recipe**, **Article**, fil d'Ariane et listes (pas de **Product** sur les fiches produit), sitemap avec les recettes, les pays, les produits, les articles publiés et les Top 10 (264 adresses au 22 novembre 2026, dont 52 articles « Conseils » ; les articles d'actus, en NewsArticle, en sont sortis le 19 novembre 2026).
+- Données structurées Google **Recipe**, **Article**, fil d'Ariane et listes (pas de **Product** sur les fiches produit), sitemap avec les recettes, les pays, les produits, les articles publiés et les Top 10 (266 adresses au 23 novembre 2026, dont 54 articles « Conseils » ; les articles d'actus, en NewsArticle, en sont sortis le 19 novembre 2026).
 
 > ⚠️ Les textes légaux sont des **modèles** à faire valider.
 
